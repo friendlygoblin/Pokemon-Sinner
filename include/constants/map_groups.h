@@ -63,6 +63,7 @@
 #define MAP_UNDERWATER_ROUTE129 (54 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE105 (55 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
+#define MAP_PRELUDE_TOWN        (57 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -70,6 +71,7 @@
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F        (2 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_MAYS_HOUSE_2F        (3 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB (4 | (1 << 8))
+#define MAP_PORYTILES_TEST_MAP                   (5 | (1 << 8))
 
 // gMapGroup_IndoorOldale
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))
@@ -264,6 +266,7 @@
 #define MAP_EVER_GRANDE_CITY_POKEMON_CENTER_1F (12 | (16 << 8))
 #define MAP_EVER_GRANDE_CITY_POKEMON_CENTER_2F (13 | (16 << 8))
 #define MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_2F (14 | (16 << 8))
+#define MAP_EVER_GRANDE_CITY_DEMO_STARTER      (15 | (16 << 8))
 
 // gMapGroup_IndoorRoute104
 #define MAP_ROUTE104_MR_BRINEYS_HOUSE         (0 | (17 << 8))

@@ -715,6 +715,8 @@
 
 #define BATTLESTRINGS_COUNT                           713
 
+#define STRINGID_BIGDOG                               714
+
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
 // and are instead handled explicitly by BufferStringBattle.

@@ -1,0 +1,248 @@
+raw `
+EverGrandeCity_DemoStarter_MapScripts::
+	.byte 0
+    `
+script Demo_Mart{
+    lock
+    faceplayer
+    addmoney(50000)
+    message(format("Welcome to Amy's Shop, What can I get for you?"))
+    waitmessage
+    pokemart(Demo_MartItems)
+    msgbox("Good Luck Babe!")
+    release
+    end
+}
+
+mart Demo_MartItems{
+    ITEM_PARALYZE_HEAL
+    ITEM_ANTIDOTE
+    ITEM_RARE_CANDY
+    ITEM_HYPER_POTION
+    ITEM_REVIVE
+    ITEM_FULL_RESTORE
+    ITEM_MEGA_RING
+    ITEM_GALLADITE
+}
+script Nurse_EventScript_Demo{
+    lock
+    applymovement(1,Common_Movement_FacePlayer)
+    msgbox(format("Go ahead and choose some pokemon!"))
+    release
+    end
+
+}
+
+script NurseGive_EventScript_Demo1{
+    lockall
+    applymovement(1, NurseGive_1)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, playerFace1)
+    waitmovement(0)
+    msgbox(format("Hey! It's me! Goblin! So your here to challange The Last Dinner Party too? You'll be needing these if you wana take on the band!"))
+    call(GivePlayerGod)
+    msgbox(format("Your all set, go show em who's the real gunslinger!"))
+    applymovement(1, NurseBack_1)
+    waitmovement(0)
+    setvar(VAR_DEMO_STATE, 2)
+    releaseall
+    end
+}
+
+script NurseGive_EventScript_Demo2{
+    lockall
+    applymovement(1, NurseGive_2)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, playerFace1)
+    waitmovement(0)
+    msgbox(format("Hey! It's me! Goblin! So your here to challange The Last Dinner Party too? You'll be needing these if you wana take on the band!"))
+    call(GivePlayerGod)
+    msgbox(format("Your all set, go show em who's the real gunslinger!"))
+    applymovement(1, NurseBack_2)
+    waitmovement(0)
+    setvar(VAR_DEMO_STATE, 2)
+    releaseall
+    end
+}
+movement playerFace1{
+    face_right
+}
+movement playerBack{
+    walk_down
+}
+movement NurseGive_1{
+    face_left
+    
+}
+
+movement NurseGive_2{
+    face_left
+    walk_left
+}
+
+movement NurseBack_1{
+    face_down
+}
+
+movement NurseBack_2{
+    walk_right
+    face_down
+}
+script GivePlayerGod{
+	setflag (FLAG_BADGE01_GET) 
+	setflag (FLAG_BADGE02_GET)
+    setflag (FLAG_BADGE03_GET)
+    setflag (FLAG_BADGE04_GET)
+    setflag (FLAG_BADGE05_GET)
+    setflag (FLAG_BADGE06_GET)
+    setflag (FLAG_BADGE07_GET)
+    setflag (FLAG_BADGE08_GET)
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("Recieved all 8 Gym Badges!")
+    waitmessage
+    msgbox(format("and a few of these couldn't hurt either!"))
+    giveitem(ITEM_MAX_REVIVE, amount = 5)
+    giveitem (ITEM_HYPER_POTION, amount = 10)
+    giveitem (ITEM_FULL_RESTORE, amount = 10)
+}
+
+script NurseStop_EventScript_Demo1{
+    lockall
+    applymovement(1, NurseGive_1)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, playerFace1)
+    waitmovement(0)
+    msgbox(format("You need to pick some Pokemon!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, playerBack)
+    waitmovement(0)
+    applymovement(1, NurseBack_1)
+    waitmovement(0)
+    releaseall
+    end
+}
+script NurseStop_EventScript_Demo2{
+    lockall
+    applymovement(1, NurseGive_2)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, playerFace1)
+    waitmovement(0)
+    msgbox(format("You need to pick some Pokemon!"))
+    applymovement(OBJ_EVENT_ID_PLAYER, playerBack)
+    waitmovement(0)
+    applymovement(1, NurseBack_2)
+    waitmovement(0)
+    releaseall
+    end
+}
+script EverGradeCity_DemoStarter_OnTransition{
+    setrespawn(HEAL_LOCATION_EVERGRANDECITY_DEMOSTARTER)
+    end
+}
+
+script NicknamePartyMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+}
+
+script NicknameBoxMon{
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+        
+    }
+    call(Common_EventScript_TransferredToPC)
+}
+
+script Pokeball_EventScript_Demo1{
+    lockall
+    showmonpic(SPECIES_INFERNAPE, 10,3)
+    msgbox("Do you want to choose Infernape?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_INFERNAPE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_FLARE_BLITZ, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_U_TURN, move4 = MOVE_THUNDER_PUNCH)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Infernape")
+            call(NicknamePartyMon)
+            removeobject(2)
+            setflag(FLAG_POKEBALL_1)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Infernape")
+            call(NicknameBoxMon)
+            removeobject(2)
+            setflag(FLAG_POKEBALL_1)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo2{
+    lockall
+    showmonpic(SPECIES_AZUMARILL, 10,3)
+    msgbox("Do you want to choose Azumarill?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_AZUMARILL, 55, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_LIQUIDATION, move2 = MOVE_PLAY_ROUGH, move3 = MOVE_AQUA_JET, move4 = MOVE_ICE_PUNCH)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Azumarill")
+            call(NicknamePartyMon)
+            removeobject(3)
+            setflag(FLAG_POKEBALL_2)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Azumarill")
+            call(NicknameBoxMon)
+            removeobject(3)
+            setflag(FLAG_POKEBALL_2)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+

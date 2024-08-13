@@ -374,6 +374,12 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_AURORA                  0x1125
+#define OBJ_EVENT_PAL_TAG_EMILY                   0x1126
+#define OBJ_EVENT_PAL_TAG_LIZZIE                   0x1127
+#define OBJ_EVENT_PAL_TAG_GEORGIA                   0x1128
+#define OBJ_EVENT_PAL_TAG_ABIGAIL                   0x1129
+#define OBJ_EVENT_PAL_TAG_GOBLIN                  0x1130
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

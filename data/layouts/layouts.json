@@ -4410,6 +4410,36 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORYTILES_TEST_MAP",
+      "name": "PorytilesTestMap_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_PorytilesPrimaryTest",
+      "secondary_tileset": "gTileset_UnionRoom",
+      "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
+      "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_PRELUDE_TOWN",
+      "name": "PreludeTown_Layout",
+      "width": 20,
+      "height": 25,
+      "primary_tileset": "gTileset_PorytilesPrimaryTest",
+      "secondary_tileset": "gTileset_prelude_town",
+      "border_filepath": "data/layouts/PreludeTown/border.bin",
+      "blockdata_filepath": "data/layouts/PreludeTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_EVER_GRANDE_CITY_DEMO_STARTER",
+      "name": "EverGrandeCity_DemoStarter_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EverGrandeCity_DemoStarter/border.bin",
+      "blockdata_filepath": "data/layouts/EverGrandeCity_DemoStarter/map.bin"
     }
   ]
 }

@@ -207,3 +207,18 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatiles.bin");
+const u16 gMetatileAttributes_PorytilesPrimaryTest[] = INCBIN_U16("data/tilesets/primary/porytiles_primary_test/metatile_attributes.bin");
+
+const u16 gMetatiles_gTileset_PokeCenter[] = INCBIN_U16("data/tilesets/secondary/poke_center/metatiles.bin");
+const u16 gMetatileAttributes_gTileset_PokeCenter[] = INCBIN_U16("data/tilesets/secondary/poke_center/metatile_attributes.bin");
+
+const u16 gMetatiles_PokeCenter[] = INCBIN_U16("data/tilesets/secondary/poke_center/metatiles.bin");
+const u16 gMetatileAttributes_PokeCenter[] = INCBIN_U16("data/tilesets/secondary/poke_center/metatile_attributes.bin");
+
+const u16 gMetatiles_prelude_town[] = INCBIN_U16("data/tilesets/secondary/prelude_town/metatiles.bin");
+const u16 gMetatileAttributes_prelude_town[] = INCBIN_U16("data/tilesets/secondary/prelude_town/metatile_attributes.bin");
+
+const u16 gMetatiles_gPreludeTown[] = INCBIN_U16("data/tilesets/secondary/g_prelude_town/metatiles.bin");
+const u16 gMetatileAttributes_gPreludeTown[] = INCBIN_U16("data/tilesets/secondary/g_prelude_town/metatile_attributes.bin");

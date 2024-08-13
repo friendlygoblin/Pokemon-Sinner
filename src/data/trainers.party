@@ -4585,58 +4585,76 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Roar
 
 === TRAINER_SIDNEY ===
-Name: SIDNEY
+Name: AURORA
 Class: Elite Four
 Pic: Elite Four Sidney
-Gender: Male
+Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn /Ace Pokemon
 Mugshot: Purple
 
-Mightyena
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Roar
-- Double Edge
-- Sand Attack
-- Crunch
+Mawile (F)  
+Ability: Sheer Force  
+Level: 46  
+Adamant Nature  
+- Rock Slide  
+- Play Rough  
+- Sucker Punch  
+- Knock Off  
 
-Shiftry
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Torment
-- Double Team
-- Swagger
-- Extrasensory
+Honchkrow (M)  
+Ability: Moxie  
+Level: 46      
+Jolly Nature  
+- Brave Bird  
+- Sucker Punch  
+- Dark Pulse  
+- Taunt  
 
-Cacturne
-Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Leech Seed
-- Feint Attack
-- Needle Arm
-- Cotton Spore
+Shiinotic (M) 
+Ability: Effect Spore  
+Level: 47   
+Bold Nature  
+- Spore  
+- Strength Sap  
+- Giga Drain  
+- Moonblast  
 
-Crawdaunt
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Surf
-- Swords Dance
-- Strength
-- Facade
+Chandelure (M)  
+Ability: Flame Body  
+Level: 47  
+Timid Nature  
+IVs: 0 Atk  
+- Shadow Ball  
+- Fire Blast  
+- Trick  
+- Memento  
 
-Absol @ Sitrus Berry
-Level: 49
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Rock Slide
-- Swords Dance
-- Slash
+Gengar (M) 
+Ability: Cursed Body  
+Level: 48  
+Timid Nature  
+- Taunt  
+- Destiny Bond  
+- Sludge Wave  
+- Shadow Ball  
+
+Houndoom (F) @ Houndoominite  
+Ability: Flash Fire  
+Level: 49   
+EVs: 100 SpA / 4 SpD / 100 Spe  
+Timid Nature  
+- Nasty Plot  
+- Fire Blast  
+- Dark Pulse  
+- Sludge Bomb  
+
+
 
 === TRAINER_PHOEBE ===
-Name: PHOEBE
+Name: EMILY
 Class: Elite Four
 Pic: Elite Four Phoebe
 Gender: Female
@@ -4644,50 +4662,70 @@ Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
-Mugshot: Green
+Mugshot: Yellow
 
-Dusclops
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Punch
-- Confuse Ray
-- Curse
-- Protect
+Zebstrika (M) 
+Ability: Lightning Rod  
+Level: 48    
+Timid Nature  
+IVs: 29 HP  
+- Thunderbolt  
+- Volt Switch  
+- Overheat  
+- Hidden Power
 
-Banette
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Grudge
-- Will O Wisp
-- Feint Attack
+Clefable (F) @ Leftovers  
+Ability: Unaware  
+Level: 49   
+Bold Nature  
+IVs: 0 Atk  
+- Calm Mind  
+- Moonblast  
+- Wish  
+- Protect  
 
-Sableye
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Double Team
-- Night Shade
-- Feint Attack
+Jolteon (F) 
+Ability: Quick Feet  
+Level: 49  
+Timid Nature  
+- Yawn  
+- Volt Switch  
+- Thunderbolt  
+- Hidden Power
 
-Banette
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Psychic
-- Thunderbolt
-- Facade
+Toxtricity-Low-Key (M)  
+Ability: Punk Rock  
+Level: 49   
+Modest Nature  
+- Boomburst  
+- Hyper Voice  
+- Overdrive  
+- Poison Jab  
 
-Dusclops @ Sitrus Berry
-Level: 51
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
-- Ice Beam
-- Rock Slide
-- Earthquake
+Toxtricity (F) @ Choice Specs  
+Ability: Punk Rock  
+Level: 50  
+Timid Nature  
+IVs: 0 Atk  
+- Boomburst  
+- Overdrive  
+- Volt Switch  
+- Toxic Spikes  
+
+Manectric @ Manectite  
+Ability: Lightning Rod  
+Level: 51   
+EVs: 4 Def / 150 SpA / 50 Spe  
+Timid Nature  
+- Volt Switch  
+- Overheat  
+- Thunderbolt  
+- Hidden Power
+
+
 
 === TRAINER_GLACIA ===
-Name: GLACIA
+Name: LIZZIE
 Class: Elite Four
 Pic: Elite Four Glacia
 Gender: Female
@@ -4695,98 +4733,137 @@ Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
-Mugshot: Pink
+Mugshot: Blue
 
-Sealeo
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Encore
-- Body Slam
-- Hail
-- Ice Ball
+Gliscor (M) @ Toxic Orb  
+Ability: Poison Heal  
+Level: 50   
+Jolly Nature  
+- Earthquake  
+- Stealth Rock  
+- Toxic  
+- Roost  
 
-Glalie
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Light Screen
-- Crunch
-- Icy Wind
-- Ice Beam
+Braviary @ Heavy-Duty Boots  
+Ability: Defiant  
+Level: 50   
+Jolly Nature  
+- Brave Bird  
+- Close Combat  
+- Roost  
+- Bulk Up  
 
-Sealeo
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Attract
-- Double Edge
-- Hail
-- Blizzard
+Skarmory (F) 
+Ability: Sturdy  
+Level: 51  
+Bold Nature  
+- Iron Defense  
+- Body Press  
+- Roost  
+- Spikes  
 
-Glalie
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Shadow Ball
-- Explosion
-- Hail
-- Ice Beam
+Togekiss (F)  
+Ability: Serene Grace  
+Level: 52   
+Timid Nature  
+IVs: 0 Atk  
+- Nasty Plot  
+- Air Slash  
+- Flamethrower  
+- Roost  
 
-Walrein @ Sitrus Berry
-Level: 53
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Body Slam
-- Ice Beam
-- Sheer Cold
+Drifblim (M)   
+Ability: Unburden  
+Level: 52   
+Modest Nature  
+- Calm Mind  
+- Shadow Ball  
+- Strength Sap  
+- Thunderbolt  
+
+Altaria (F) @ Altarianite  
+Ability: Cloud Nine  
+Level: 53   
+Shiny: Yes  
+EVs: 100 Atk / 4 SpD / 50 Spe  
+Adamant Nature  
+- Dragon Dance  
+- Dragon Claw  
+- Earthquake  
+- Play Rough  
+
+
 
 === TRAINER_DRAKE ===
-Name: DRAKE
+Name: GEORGIA
 Class: Elite Four
 Pic: Elite Four Drake
-Gender: Male
+Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Blue
 
-Shelgon
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Rock Tomb
-- Dragon Claw
-- Protect
-- Double Edge
+Politoed (M) @ Chesto Berry  
+Ability: Drizzle  
+Level: 52    
+Calm Nature  
+- Protect  
+- Scald  
+- Metronome  
+- Hydro Pump  
 
-Altaria
-Level: 54
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Double Edge
-- Dragon Breath
-- Dragon Dance
-- Aerial Ace
+Primarina (F)  
+Ability: Torrent  
+Level: 52  
+Modest Nature  
+IVs: 0 Atk  
+- Hydro Pump  
+- Moonblast  
+- Sparkling Aria  
+- Psychic  
 
-Kingdra
-Level: 53
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Smokescreen
-- Dragon Dance
-- Surf
-- Body Slam
+Jellicent (M) @ Colbur Berry  
+Ability: Cursed Body  
+Level: 53    
+Bold Nature  
+IVs: 0 Atk  
+- Hex  
+- Taunt  
+- Will-O-Wisp  
+- Recover  
 
-Flygon
-Level: 53
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Flamethrower
-- Crunch
-- Dragon Breath
-- Earthquake
+Aurorus (F)  
+Ability: Refrigerate  
+Level: 53   
+Modest Nature  
+- Facade  
+- Frost Breath  
+- Giga Impact  
+- Safeguard  
 
-Salamence @ Sitrus Berry
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flamethrower
-- Dragon Claw
-- Rock Slide
-- Crunch
+Dhelmise @ Colbur Berry  
+Ability: Steelworker  
+Level: 52    
+Adamant Nature  
+- Power Whip  
+- Anchor Shot  
+- Rapid Spin  
+- Synthesis  
+
+Gyarados @ Gyaradosite  
+Ability: Intimidate  
+Level: 55  
+Shiny: Yes  
+EVs: 100 Atk / 4 SpD / 200 Spe  
+Jolly Nature  
+- Dragon Dance  
+- Crunch  
+- Waterfall  
+- Earthquake  
+
+
 
 === TRAINER_ROXANNE_1 ===
 Name: ROXANNE
@@ -6241,63 +6318,73 @@ Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALLACE ===
-Name: WALLACE
+Name: ABIGAIL 
 Class: Champion
 Pic: Champion Wallace
-Gender: Male
+Gender: Female
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Yellow
 
-Wailord
-Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Rain Dance
-- Water Spout
-- Double Edge
-- Blizzard
-
-Tentacruel
+Trevenant 
 Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Toxic
-- Hydro Pump
-- Sludge Bomb
-- Ice Beam
-
-Ludicolo
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Giga Drain
-- Surf
-- Leech Seed
-- Double Team
-
-Whiscash
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: Natural Cure
+Jolly Nature
+- Wood Hammer
 - Earthquake
-- Surf
-- Amnesia
-- Hyper Beam
+- Rock Slide
+- Shadow Claw
 
-Gyarados
+Corviknight 
+Level: 55
+Ability: Pressure
+Impish Nature
+- Body Press
+- U-turn
+- Roost
+- Defog
+
+Espeon 
+Ability: Magic Bounce
 Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Dragon Dance
-- Earthquake
-- Hyper Beam
-- Surf
+Timid Nature
+- Calm Mind
+- Psychic
+- Shadow Ball
+- Morning Sun
 
-Milotic @ Sitrus Berry
+Meloetta-Pirouette  
+Ability: Serene Grace  
+Level: 56 
+IVs: 0 Atk  
+- Celebrate  
+- Psychic  
+- Hyper Voice  
+- Focus Blast
+
+Wooper (F) @ Eviolite  
+Ability: Unaware  
+Level: 58  
+Shiny: Yes    
+EVs: 252 HP / 184 Atk / 36 Spe  
+Brave Nature  
+- Aqua Tail  
+- Body Slam  
+- Earthquake  
+- Trailblaze
+
+Gardevoir @ Gardevoirite
+Ability: Trace
 Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Recover
-- Surf
-- Ice Beam
-- Toxic
+Shiny: Yes  
+EVs: 100 HP / 16 Def / 10 Spe
+Timid Nature
+- Hyper Beam
+- Calm Mind
+- Hyper Voice
+- Will-O-Wisp
 
 === TRAINER_ANDREW ===
 Name: ANDREW

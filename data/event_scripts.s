@@ -1074,3 +1074,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/PorytilesTestMap/scripts.inc"
+
+	.include "data/maps/PreludeTown/scripts.inc"
+
+	.include "data/maps/EverGrandeCity_DemoStarter/scripts.inc"

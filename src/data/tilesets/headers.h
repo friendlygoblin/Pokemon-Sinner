@@ -825,3 +825,58 @@ const struct Tileset gTileset_UnionRoom =
     .metatileAttributes = gMetatileAttributes_UnionRoom,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PorytilesPrimaryTest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesPrimaryTest,
+    .palettes = gTilesetPalettes_PorytilesPrimaryTest,
+    .metatiles = gMetatiles_PorytilesPrimaryTest,
+    .metatileAttributes = gMetatileAttributes_PorytilesPrimaryTest,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_gTileset_PokeCenter =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_gTileset_PokeCenter,
+    .palettes = gTilesetPalettes_gTileset_PokeCenter,
+    .metatiles = gMetatiles_gTileset_PokeCenter,
+    .metatileAttributes = gMetatileAttributes_gTileset_PokeCenter,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PokeCenter =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PokeCenter,
+    .palettes = gTilesetPalettes_PokeCenter,
+    .metatiles = gMetatiles_PokeCenter,
+    .metatileAttributes = gMetatileAttributes_PokeCenter,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_prelude_town =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_prelude_town,
+    .palettes = gTilesetPalettes_prelude_town,
+    .metatiles = gMetatiles_prelude_town,
+    .metatileAttributes = gMetatileAttributes_prelude_town,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_gPreludeTown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_gPreludeTown,
+    .palettes = gTilesetPalettes_gPreludeTown,
+    .metatiles = gMetatiles_gPreludeTown,
+    .metatileAttributes = gMetatileAttributes_gPreludeTown,
+    .callback = NULL,
+};
