@@ -37,50 +37,61 @@ EverGrandeCity_PhoebesRoom_EventScript_CloseDoor::
 	call PokemonLeague_EliteFour_EventScript_CloseDoor
 	return
 
-EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
+`
+
+
+script EverGrandeCity_PhoebesRoom_EventScript_Phoebe{
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
-	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
-	msgbox EverGrandeCity_PhoebesRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
-	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
+
+	if(flag(FLAG_DEFEATED_ELITE_4_PHOEBE)){
+		goto(EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech)
+		}
+
+	playbgm(MUS_ENCOUNTER_ELITE_FOUR, FALSE)
+	msgbox(Emily_Text_IntroSpeech, MSGBOX_DEFAULT)		
+	trainerbattle_no_intro(TRAINER_PHOEBE, Emily_Text_Defeat)
+
+	goto(EverGrandeCity_PhoebesRoom_EventScript_Defeated)
 	end
+}
 
-EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech::
-	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
-	release
+script EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech{
+	msgbox(Emily_Text_PostBattleSpeech, MSGBOX_DEFAULT)
+	releaseall
 	end
+}
 
-EverGrandeCity_PhoebesRoom_EventScript_Defeated::
-	setflag FLAG_DEFEATED_ELITE_4_PHOEBE
-	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
-	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
-	release
+script EverGrandeCity_PhoebesRoom_EventScript_Defeated{
+	setflag(FLAG_DEFEATED_ELITE_4_PHOEBE)
+	call(PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles)
+	msgbox(Emily_Text_PostBattleSpeech, MSGBOX_DEFAULT)
+	releaseall
 	end
+}
 
-EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
-	.string "Ahahaha!\p"
-	.string "I'm PHOEBE of the ELITE FOUR.\n"
-	.string "I did my training on MT. PYRE.\p"
-	.string "While I trained, I gained the ability\n"
-	.string "to commune with GHOST-type POKéMON.\p"
-	.string "Yes, the bond I developed with POKéMON\n"
-	.string "is extremely tight.\p"
-	.string "So, come on, just try and see if you can\n"
-	.string "even inflict damage on my POKéMON!$"
+text Emily_Text_IntroSpeech{
+	"EMILY: Hi, I'm Emily. \p"
+	"I'll be the one shredding on\n"
+	"guitar, mandolin and flute.\p"
+	"…\p"
+	"Don't waste my time! \p"
+	"Justice for fat riffs!\p"
+	"$"
+}
 
-EverGrandeCity_PhoebesRoom_Text_Defeat:
-	.string "Oh, darn.\n"
-	.string "I've gone and lost.$"
+text Emily_Text_Defeat{
+	"Second best…$"
+}
 
-EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
-	.string "There's a definite bond between you\n"
-	.string "and your POKéMON, too.\p"
-	.string "I didn't recognize it, so it's only\n"
-	.string "natural that I lost.\p"
-	.string "Yup, I'd like to see how far your bond\n"
-	.string "will carry you.\p"
-	.string "Go ahead, move on to the next room.$"
-
-`
+text Emily_Text_PostBattleSpeech{
+	"EMILY: You know, I hate to lose \n"
+	"but that was fun!\p"
+	"You definitely get the importance of \n"
+	"fat riffs.\p"
+	"With that energy you'll have the \n"
+	"world at your feet.\p"
+	"Go on, I'll see you soon.\p"
+	"You better sing along with every \n"
+	"guitar solo!$"
+}

@@ -4643,7 +4643,7 @@ Timid Nature
 
 Houndoom (F) @ Houndoominite  
 Ability: Flash Fire  
-Level: 49   
+Level: 50   
 EVs: 100 SpA / 4 SpD / 100 Spe  
 Timid Nature  
 - Nasty Plot  
@@ -4661,7 +4661,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Ace Pokemon
 Mugshot: Yellow
 
 Zebstrika (M) 
@@ -4672,7 +4672,7 @@ IVs: 29 HP
 - Thunderbolt  
 - Volt Switch  
 - Overheat  
-- Hidden Power
+- Trailblaze
 
 Clefable (F) @ Leftovers  
 Ability: Unaware  
@@ -4718,9 +4718,9 @@ Level: 51
 EVs: 4 Def / 150 SpA / 50 Spe  
 Timid Nature  
 - Volt Switch  
-- Overheat  
+- Flamethrower 
 - Thunderbolt  
-- Hidden Power
+- Ice Fang
 
 
 
@@ -4732,7 +4732,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Ace Pokemon
 Mugshot: Blue
 
 Gliscor (M) @ Toxic Orb  
@@ -4744,7 +4744,7 @@ Jolly Nature
 - Toxic  
 - Roost  
 
-Braviary @ Heavy-Duty Boots  
+Braviary (M) @ Heavy-Duty Boots  
 Ability: Defiant  
 Level: 50   
 Jolly Nature  
@@ -4767,7 +4767,7 @@ Ability: Serene Grace
 Level: 52   
 Timid Nature  
 IVs: 0 Atk  
-- Nasty Plot  
+- Dazzling Gleam 
 - Air Slash  
 - Flamethrower  
 - Roost  
@@ -4783,8 +4783,7 @@ Modest Nature
 
 Altaria (F) @ Altarianite  
 Ability: Cloud Nine  
-Level: 53   
-Shiny: Yes  
+Level: 53    
 EVs: 100 Atk / 4 SpD / 50 Spe  
 Adamant Nature  
 - Dragon Dance  
@@ -4802,7 +4801,7 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Ace Pokemon
 Mugshot: Blue
 
 Politoed (M) @ Chesto Berry  
@@ -6325,66 +6324,76 @@ Gender: Female
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
-Mugshot: Yellow
+AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Ace Pokemon
+Mugshot: Purple
 
-Trevenant 
-Level: 55
-Ability: Natural Cure
-Jolly Nature
-- Wood Hammer
-- Earthquake
-- Rock Slide
-- Shadow Claw
+Trevenant (M)  
+Ability: Natural Cure  
+Level: 55  
+Tera Type: Ghost  
+EVs: 92 HP / 8 Atk / 40 Def / 152 SpA / 72 SpD / 144 Spe  
+Brave Nature  
+- Dark Pulse  
+- Earthquake  
+- Horn Leech  
+- Destiny Bond  
 
-Corviknight 
-Level: 55
-Ability: Pressure
-Impish Nature
-- Body Press
-- U-turn
-- Roost
-- Defog
+Corviknight (F)  
+Ability: Pressure  
+Level: 55  
+Tera Type: Flying  
+EVs: 112 HP / 112 Atk / 48 Def / 56 SpA / 108 SpD / 68 Spe  
+Impish Nature  
+- Drill Peck  
+- Iron Head  
+- Roost  
+- Body Press  
 
-Espeon 
-Ability: Magic Bounce
-Level: 56
-Timid Nature
-- Calm Mind
-- Psychic
-- Shadow Ball
-- Morning Sun
+Espeon (F)  
+Ability: Synchronize  
+Level: 56  
+Tera Type: Psychic  
+EVs: 116 HP / 4 Atk / 76 Def / 104 SpA / 84 SpD / 120 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Shadow Ball  
+- Alluring Voice  
+- Psychic  
+- Wish  
 
 Meloetta-Pirouette  
 Ability: Serene Grace  
-Level: 56 
-IVs: 0 Atk  
-- Celebrate  
-- Psychic  
-- Hyper Voice  
-- Focus Blast
+Level: 56  
+Tera Type: Normal  
+EVs: 124 Atk / 88 Def / 160 SpD / 132 Spe  
+Jolly Nature  
+- Play Rough  
+- Drain Punch  
+- Perish Song  
+- Thunder Punch  
 
-Wooper (F) @ Eviolite  
-Ability: Unaware  
-Level: 58  
-Shiny: Yes    
-EVs: 252 HP / 184 Atk / 36 Spe  
+Wooper (M) @Eviolite
+Ability: Damp  
+Level: 62  
+Tera Type: Water  
+EVs: 160 HP / 164 Atk / 152 Def / 28 Spe  
 Brave Nature  
-- Aqua Tail  
-- Body Slam  
+- Avalanche  
 - Earthquake  
-- Trailblaze
+- Aqua Tail  
+- Recover  
 
-Gardevoir @ Gardevoirite
-Ability: Trace
-Level: 58
-Shiny: Yes  
-EVs: 100 HP / 16 Def / 10 Spe
-Timid Nature
-- Hyper Beam
-- Calm Mind
-- Hyper Voice
-- Will-O-Wisp
+Gardevoir (F) @ Gardevoirite  
+Ability: Synchronize  
+Level: 60  
+Tera Type: Psychic  
+EVs: 248 HP / 156 Def / 96 SpA / 4 SpD / 4 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Moonblast  
+- Psychic  
+- Wish  
+- Mystical Fire  
 
 === TRAINER_ANDREW ===
 Name: ANDREW
