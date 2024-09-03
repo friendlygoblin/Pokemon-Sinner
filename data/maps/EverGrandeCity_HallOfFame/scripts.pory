@@ -52,7 +52,7 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	end
 
 EverGrandeCity_HallOfFame_EventScript_GameClearMale::
-	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
+	setrespawn HEAL_LOCATION_EVERGRANDECITY_DEMOSTARTER
 	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
 	waitstate
@@ -85,17 +85,24 @@ EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2:
 	step_end
 
 EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
-	.string "WALLACE: This room…\p"
-	.string "This is where we keep records of\n"
-	.string "POKéMON that prevailed through\l"
-	.string "harsh battles.\p"
-	.string "It is here that the LEAGUE CHAMPIONS\n"
-	.string "are honored.$"
+	.string "ABIGAIL: Now…\p"
+	.string "It is here that the SPECIAL GUESTS\n"
+	.string "are recorded.\p"
+	.string "{PLAYER}{KUN}! You've made it!\p"
+	.string "You had the guts to put up a \n"
+	.string "fight!\p"
+	.string "And you believe in justice for\n"
+	.string "fat riffs!\p"
+	.string "You're a sinner just like us!\p"
+	.string "It's time to make it official\n"
+	.string "by adding you to our special\l"
+	.string "DINNER GUEST LIST!$"
 
 EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames:
-	.string "WALLACE: Come on, let's record your\n"
-	.string "name as a TRAINER who triumphed over\l"
-	.string "the POKéMON LEAGUE, and the names of\l"
-	.string "the partners who battled with you.$"
+	.string "ABIGAIL: Come on, let's record your\n"
+	.string "name as a fan who triumphed over us,\l"
+	.string "The Last Dinner Party themselves,\l"
+	.string "as well as the names of the partners\l"
+	.string "who were on your side.$"
 
 `
