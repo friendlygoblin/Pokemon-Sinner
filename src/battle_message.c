@@ -60,7 +60,11 @@ static const u8 sText_Trainer1LoseText[] = _("{B_TRAINER1_LOSE_TEXT}");
 static const u8 sText_PkmnGainedEXP[] = _("{B_BUFF1} gained{B_BUFF2}\n{B_BUFF3} EXP. Points!\p");
 static const u8 sText_EmptyString4[] = _("");
 static const u8 sText_ABoosted[] = _(" a boosted");
-static const u8 sText_BigDog[] = _("I'm a Big Dog!\p");
+static const u8 sText_BigDog[] = _("Let me feed you to my friends!\p");
+static const u8 sText_AintItNice[] = _("Ain't it nice?\p");
+static const u8 sText_SlipsAway[] = _("Time slips away!\p");
+static const u8 sText_BetsOnYou[] = _("I'm putting all my bets on you!\p");
+static const u8 sText_Furge[] = _("Here comes the feminine urge!\p");
 static const u8 sText_PkmnGrewToLv[] = _("{B_BUFF1} grew to\nLV. {B_BUFF2}!{WAIT_SE}\p");
 static const u8 sText_PkmnLearnedMove[] = _("{B_BUFF1} learned\n{B_BUFF2}!{WAIT_SE}\p");
 static const u8 sText_TryToLearnMove1[] = _("{B_BUFF1} is trying to\nlearn {B_BUFF2}.\p");
@@ -4111,6 +4115,34 @@ static const struct TrainerSlide sTrainerSlides[] =
         .trainerId = TRAINER_SIDNEY,
         .isFrontierTrainer = FALSE,
         .msgMegaEvolution = sText_BigDog,
+        
+    },
+
+    {
+        .trainerId = TRAINER_PHOEBE,
+        .isFrontierTrainer = FALSE,
+        .msgMegaEvolution = sText_AintItNice,
+        
+    },
+
+    {
+        .trainerId = TRAINER_GLACIA,
+        .isFrontierTrainer = FALSE,
+        .msgMegaEvolution = sText_SlipsAway,
+        
+    },
+
+    {
+        .trainerId = TRAINER_DRAKE,
+        .isFrontierTrainer = FALSE,
+        .msgMegaEvolution = sText_BetsOnYou,
+        
+    },
+
+    {
+        .trainerId = TRAINER_WALLACE,
+        .isFrontierTrainer = FALSE,
+        .msgMegaEvolution = sText_Furge,
         
     }
 };
