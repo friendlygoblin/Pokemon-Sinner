@@ -79,6 +79,18 @@ script NurseGive_EventScript_Demo2{
     end
 }
 
+script SetFlags_EventScript_Demo{
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+}
+}
+
 text NurseGive_Ready{
     "Are you ready to challenge\n"
     "The Last Dinner Party?\p"
@@ -212,6 +224,7 @@ script Pokeball_EventScript_Demo1{
             call(NicknamePartyMon)
             removeobject(2)
             setflag(FLAG_POKEBALL_1)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -219,6 +232,7 @@ script Pokeball_EventScript_Demo1{
             call(NicknameBoxMon)
             removeobject(2)
             setflag(FLAG_POKEBALL_1)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -231,15 +245,7 @@ script Pokeball_EventScript_Demo1{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+
     releaseall
     end
 }
@@ -256,6 +262,7 @@ script Pokeball_EventScript_Demo2{
             call(NicknamePartyMon)
             removeobject(3)
             setflag(FLAG_POKEBALL_2)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -263,6 +270,7 @@ script Pokeball_EventScript_Demo2{
             call(NicknameBoxMon)
             removeobject(3)
             setflag(FLAG_POKEBALL_2)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -275,15 +283,8 @@ script Pokeball_EventScript_Demo2{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+   
+    
     releaseall
     end
 }
@@ -300,6 +301,7 @@ script Pokeball_EventScript_Demo3{
             call(NicknamePartyMon)
             removeobject(4)
             setflag(FLAG_POKEBALL_3)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -307,6 +309,7 @@ script Pokeball_EventScript_Demo3{
             call(NicknameBoxMon)
             removeobject(4)
             setflag(FLAG_POKEBALL_3)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -319,15 +322,7 @@ script Pokeball_EventScript_Demo3{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+
     releaseall
     end
 }
@@ -344,6 +339,7 @@ script Pokeball_EventScript_Demo4{
             call(NicknamePartyMon)
             removeobject(5)
             setflag(FLAG_POKEBALL_4)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -351,6 +347,7 @@ script Pokeball_EventScript_Demo4{
             call(NicknameBoxMon)
             removeobject(5)
             setflag(FLAG_POKEBALL_4)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -363,15 +360,7 @@ script Pokeball_EventScript_Demo4{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -388,6 +377,7 @@ script Pokeball_EventScript_Demo5{
             call(NicknamePartyMon)
             removeobject(6)
             setflag(FLAG_POKEBALL_5)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -395,6 +385,7 @@ script Pokeball_EventScript_Demo5{
             call(NicknameBoxMon)
             removeobject(6)
             setflag(FLAG_POKEBALL_5)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -407,15 +398,7 @@ script Pokeball_EventScript_Demo5{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -432,6 +415,7 @@ script Pokeball_EventScript_Demo6{
             call(NicknamePartyMon)
             removeobject(7)
             setflag(FLAG_POKEBALL_6)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -439,6 +423,7 @@ script Pokeball_EventScript_Demo6{
             call(NicknameBoxMon)
             removeobject(7)
             setflag(FLAG_POKEBALL_6)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -451,15 +436,7 @@ script Pokeball_EventScript_Demo6{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -476,6 +453,7 @@ script Pokeball_EventScript_Demo7{
             call(NicknamePartyMon)
             removeobject(8)
             setflag(FLAG_POKEBALL_7)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -483,6 +461,7 @@ script Pokeball_EventScript_Demo7{
             call(NicknameBoxMon)
             removeobject(8)
             setflag(FLAG_POKEBALL_7)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -495,15 +474,7 @@ script Pokeball_EventScript_Demo7{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+   
     releaseall
     end
 }
@@ -520,6 +491,7 @@ script Pokeball_EventScript_Demo8{
             call(NicknamePartyMon)
             removeobject(9)
             setflag(FLAG_POKEBALL_8)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -527,6 +499,7 @@ script Pokeball_EventScript_Demo8{
             call(NicknameBoxMon)
             removeobject(9)
             setflag(FLAG_POKEBALL_8)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -539,15 +512,7 @@ script Pokeball_EventScript_Demo8{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+   
     releaseall
     end
 }
@@ -564,6 +529,7 @@ script Pokeball_EventScript_Demo9{
             call(NicknamePartyMon)
             removeobject(10)
             setflag(FLAG_POKEBALL_9)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -571,6 +537,7 @@ script Pokeball_EventScript_Demo9{
             call(NicknameBoxMon)
             removeobject(10)
             setflag(FLAG_POKEBALL_9)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -583,15 +550,7 @@ script Pokeball_EventScript_Demo9{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+   
     releaseall
     end
 }
@@ -608,6 +567,7 @@ script Pokeball_EventScript_Demo10{
             call(NicknamePartyMon)
             removeobject(11)
             setflag(FLAG_POKEBALL_10)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -615,6 +575,7 @@ script Pokeball_EventScript_Demo10{
             call(NicknameBoxMon)
             removeobject(11)
             setflag(FLAG_POKEBALL_10)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -627,15 +588,7 @@ script Pokeball_EventScript_Demo10{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -652,6 +605,7 @@ script Pokeball_EventScript_Demo11{
             call(NicknamePartyMon)
             removeobject(12)
             setflag(FLAG_POKEBALL_11)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -659,6 +613,7 @@ script Pokeball_EventScript_Demo11{
             call(NicknameBoxMon)
             removeobject(12)
             setflag(FLAG_POKEBALL_11)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -671,15 +626,7 @@ script Pokeball_EventScript_Demo11{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -696,6 +643,7 @@ script Pokeball_EventScript_Demo12{
             call(NicknamePartyMon)
             removeobject(13)
             setflag(FLAG_POKEBALL_12)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -703,6 +651,7 @@ script Pokeball_EventScript_Demo12{
             call(NicknameBoxMon)
             removeobject(13)
             setflag(FLAG_POKEBALL_12)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -715,15 +664,7 @@ script Pokeball_EventScript_Demo12{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -740,6 +681,7 @@ script Pokeball_EventScript_Demo13{
             call(NicknamePartyMon)
             removeobject(15)
             setflag(FLAG_POKEBALL_13)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -747,6 +689,7 @@ script Pokeball_EventScript_Demo13{
             call(NicknameBoxMon)
             removeobject(15)
             setflag(FLAG_POKEBALL_13)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -759,15 +702,7 @@ script Pokeball_EventScript_Demo13{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -784,6 +719,7 @@ script Pokeball_EventScript_Demo14{
             call(NicknamePartyMon)
             removeobject(16)
             setflag(FLAG_POKEBALL_14)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -791,6 +727,7 @@ script Pokeball_EventScript_Demo14{
             call(NicknameBoxMon)
             removeobject(16)
             setflag(FLAG_POKEBALL_14)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -803,15 +740,7 @@ script Pokeball_EventScript_Demo14{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -828,6 +757,7 @@ script Pokeball_EventScript_Demo15{
             call(NicknamePartyMon)
             removeobject(17)
             setflag(FLAG_POKEBALL_15)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -835,6 +765,7 @@ script Pokeball_EventScript_Demo15{
             call(NicknameBoxMon)
             removeobject(17)
             setflag(FLAG_POKEBALL_15)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -847,15 +778,7 @@ script Pokeball_EventScript_Demo15{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -872,6 +795,7 @@ script Pokeball_EventScript_Demo16{
             call(NicknamePartyMon)
             removeobject(18)
             setflag(FLAG_POKEBALL_16)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -879,6 +803,7 @@ script Pokeball_EventScript_Demo16{
             call(NicknameBoxMon)
             removeobject(18)
             setflag(FLAG_POKEBALL_16)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -891,15 +816,7 @@ script Pokeball_EventScript_Demo16{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -916,6 +833,7 @@ script Pokeball_EventScript_Demo17{
             call(NicknamePartyMon)
             removeobject(19)
             setflag(FLAG_POKEBALL_17)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -923,6 +841,7 @@ script Pokeball_EventScript_Demo17{
             call(NicknameBoxMon)
             removeobject(19)
             setflag(FLAG_POKEBALL_17)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -935,15 +854,7 @@ script Pokeball_EventScript_Demo17{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -960,6 +871,7 @@ script Pokeball_EventScript_Demo18{
             call(NicknamePartyMon)
             removeobject(20)
             setflag(FLAG_POKEBALL_18)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -967,6 +879,7 @@ script Pokeball_EventScript_Demo18{
             call(NicknameBoxMon)
             removeobject(20)
             setflag(FLAG_POKEBALL_18)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -979,15 +892,7 @@ script Pokeball_EventScript_Demo18{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+   
     releaseall
     end
 }
@@ -1004,6 +909,7 @@ script Pokeball_EventScript_Demo19{
             call(NicknamePartyMon)
             removeobject(21)
             setflag(FLAG_POKEBALL_19)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -1011,6 +917,7 @@ script Pokeball_EventScript_Demo19{
             call(NicknameBoxMon)
             removeobject(21)
             setflag(FLAG_POKEBALL_19)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -1023,15 +930,7 @@ script Pokeball_EventScript_Demo19{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+   
     releaseall
     end
 }
@@ -1048,6 +947,7 @@ script Pokeball_EventScript_Demo20{
             call(NicknamePartyMon)
             removeobject(22)
             setflag(FLAG_POKEBALL_20)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -1055,6 +955,7 @@ script Pokeball_EventScript_Demo20{
             call(NicknameBoxMon)
             removeobject(22)
             setflag(FLAG_POKEBALL_20)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -1067,15 +968,7 @@ script Pokeball_EventScript_Demo20{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -1092,6 +985,7 @@ script Pokeball_EventScript_Demo21{
             call(NicknamePartyMon)
             removeobject(23)
             setflag(FLAG_POKEBALL_21)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -1099,6 +993,7 @@ script Pokeball_EventScript_Demo21{
             call(NicknameBoxMon)
             removeobject(23)
             setflag(FLAG_POKEBALL_21)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -1111,15 +1006,7 @@ script Pokeball_EventScript_Demo21{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -1136,6 +1023,7 @@ script Pokeball_EventScript_Demo22{
             call(NicknamePartyMon)
             removeobject(24)
             setflag(FLAG_POKEBALL_22)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -1143,6 +1031,7 @@ script Pokeball_EventScript_Demo22{
             call(NicknameBoxMon)
             removeobject(24)
             setflag(FLAG_POKEBALL_22)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -1155,15 +1044,7 @@ script Pokeball_EventScript_Demo22{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+   
     releaseall
     end
 }
@@ -1180,6 +1061,7 @@ script Pokeball_EventScript_Demo23{
             call(NicknamePartyMon)
             removeobject(25)
             setflag(FLAG_POKEBALL_23)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -1187,6 +1069,7 @@ script Pokeball_EventScript_Demo23{
             call(NicknameBoxMon)
             removeobject(25)
             setflag(FLAG_POKEBALL_23)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -1199,15 +1082,7 @@ script Pokeball_EventScript_Demo23{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }
@@ -1224,6 +1099,7 @@ script Pokeball_EventScript_Demo24{
             call(NicknamePartyMon)
             removeobject(26)
             setflag(FLAG_POKEBALL_24)
+            call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
@@ -1231,6 +1107,7 @@ script Pokeball_EventScript_Demo24{
             call(NicknameBoxMon)
             removeobject(26)
             setflag(FLAG_POKEBALL_24)
+            call(SetFlags_EventScript_Demo)
         }
         else{
             hidemonpic
@@ -1243,15 +1120,7 @@ script Pokeball_EventScript_Demo24{
         hidemonpic
         
     }
-    setvar(VAR_DEWFORD_TOWN_STATE, 1)
-    if(var(VAR_DEMO_STATE) == 0){
-    setvar(VAR_DEMO_STATE, 1)
-    setflag (FLAG_ADVENTURE_STARTED)
-    setflag (FLAG_SYS_POKEDEX_GET)
-    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
-    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
-    setflag (FLAG_SYS_POKEMON_GET)
-    }
+    
     releaseall
     end
 }

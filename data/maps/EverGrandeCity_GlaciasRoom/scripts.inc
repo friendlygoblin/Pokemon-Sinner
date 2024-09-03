@@ -39,44 +39,52 @@ EverGrandeCity_GlaciasRoom_EventScript_CloseDoor::
 EverGrandeCity_GlaciasRoom_EventScript_Glacia::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
+	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_Glacia_2
+EverGrandeCity_GlaciasRoom_EventScript_Glacia_1:
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_GlaciasRoom_Text_IntroSpeech, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
 	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	end
 
+EverGrandeCity_GlaciasRoom_EventScript_Glacia_2:
+	goto EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
+	goto EverGrandeCity_GlaciasRoom_EventScript_Glacia_1
+
+
 EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech::
 	msgbox EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
-	release
+	releaseall
 	end
+
 
 EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_GLACIA
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
 	msgbox EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
-	release
+	releaseall
 	end
 
-EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
-	.string "Welcome, my name is GLACIA\n"
-	.string "of the ELITE FOUR.\p"
-	.string "I've traveled from afar to HOENN\n"
-	.string "so that I may hone my ice skills.\p"
-	.string "But all I have seen are challenges by\n"
-	.string "weak TRAINERS and their POKéMON.\p"
-	.string "What about you?\p"
-	.string "It would please me to no end if I could\n"
-	.string "go all out against you!$"
 
-EverGrandeCity_GlaciasRoom_Text_Defeat:
-	.string "You and your POKéMON…\n"
-	.string "How hot your spirits burn!\p"
-	.string "The all-consuming heat overwhelms.\p"
-	.string "It's no surprise that my icy skills\n"
-	.string "failed to harm you.$"
+EverGrandeCity_GlaciasRoom_Text_IntroSpeech::
+	.string "LIZZIE: Hey I'm Lizzie, rhythm \n"
+	.string "guitarist, singer, dancer and sinner.\p"
+	.string "Running and spinning on stage is\n"
+	.string "fun but you know what, I'd leave it\l"
+	.string "all for a good battle.\p"
+	.string "You look like a sinner too, in a\n"
+	.string "good way of course.\p"
+	.string "Let's dance, shall we?\n"
+	.string "Turn and face me!$"
 
-EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech:
-	.string "Advance to the next room.\p"
-	.string "And there, confirm the truly fearsome\n"
-	.string "side of the POKéMON LEAGUE.$"
+EverGrandeCity_GlaciasRoom_Text_Defeat::
+	.string "Washed the sin from my back…$"
+
+EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech::
+	.string "LIZZIE: Hey you're pretty good \n"
+	.string "at this!\p"
+	.string "Something tells me your face won't\n"
+	.string "be forgotten.\p"
+	.string "We'll be seeing you around, won't \n"
+	.string "we? \p"
+	.string "Keep it up, see you at the show!$"
