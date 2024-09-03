@@ -5,11 +5,11 @@ EverGrandeCity_DemoStarter_MapScripts::
 script Demo_Mart{
     lock
     faceplayer
-    addmoney(50000)
+    addmoney(10000)
     message(format("Welcome to Amy's Shop, What can I get for you?"))
     waitmessage
     pokemart(Demo_MartItems)
-    msgbox("Good Luck Babe!")
+    msgbox("Good luck, babe!")
     release
     end
 }
@@ -17,20 +17,34 @@ script Demo_Mart{
 mart Demo_MartItems{
     ITEM_PARALYZE_HEAL
     ITEM_ANTIDOTE
+    ITEM_FULL_HEAL
     ITEM_RARE_CANDY
+    ITEM_SUPER_POTION
     ITEM_HYPER_POTION
-    ITEM_REVIVE
+    ITEM_MAX_REVIVE
     ITEM_FULL_RESTORE
     ITEM_MEGA_RING
     ITEM_GALLADITE
+    ITEM_GARCHOMPITE
+    ITEM_TYRANITARITE
+    ITEM_METAGROSSITE
+    ITEM_VENUSAURITE
 }
 script Nurse_EventScript_Demo{
     lock
     applymovement(1,Common_Movement_FacePlayer)
-    msgbox(format("Go ahead and choose some pokemon!"))
+    msgbox(NursePick)
     release
     end
 
+}
+
+text NursePick{
+    "Pick your team out of these guys\n"
+    "over there!\p"
+    "The band are absolute killers,\n"
+    "you're gonna need a whooole lotta\l"
+    "nerve to beat them!$"
 }
 
 script NurseGive_EventScript_Demo1{
@@ -39,9 +53,9 @@ script NurseGive_EventScript_Demo1{
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, playerFace1)
     waitmovement(0)
-    msgbox(format("Hey! It's me! Goblin! So your here to challange The Last Dinner Party too? You'll be needing these if you wana take on the band!"))
+    msgbox(NurseGive_Ready)
     call(GivePlayerGod)
-    msgbox(format("Your all set, go show em who's the real gunslinger!"))
+    msgbox(NurseGive_GoGetem)
     applymovement(1, NurseBack_1)
     waitmovement(0)
     setvar(VAR_DEMO_STATE, 2)
@@ -55,15 +69,32 @@ script NurseGive_EventScript_Demo2{
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, playerFace1)
     waitmovement(0)
-    msgbox(format("Hey! It's me! Goblin! So your here to challange The Last Dinner Party too? You'll be needing these if you wana take on the band!"))
+    msgbox(NurseGive_Ready)
     call(GivePlayerGod)
-    msgbox(format("Your all set, go show em who's the real gunslinger!"))
+    msgbox(NurseGive_GoGetem)
     applymovement(1, NurseBack_2)
     waitmovement(0)
     setvar(VAR_DEMO_STATE, 2)
     releaseall
     end
 }
+
+text NurseGive_Ready{
+    "Are you ready to challenge\n"
+    "The Last Dinner Party?\p"
+    "I heard they'll invite you to their\n"
+    "show if you manage to beat them \l"
+    "all in one go. \p"
+    "I'm Goblin by the way,\n"
+    "I'll be at the show too!\p"
+    "Anyway you'll need these:"
+}
+
+text NurseGive_GoGetem{
+    "You're all set, go show 'em who's\n "
+    "the real gunslinger!$"
+}
+
 movement playerFace1{
     face_right
 }
@@ -98,9 +129,9 @@ script GivePlayerGod{
     setflag (FLAG_BADGE07_GET)
     setflag (FLAG_BADGE08_GET)
     playfanfare(MUS_OBTAIN_ITEM)
-    msgbox("Recieved all 8 Gym Badges!")
+    msgbox("Received all 8 Gym Badges!")
     waitmessage
-    msgbox(format("and a few of these couldn't hurt either!"))
+    msgbox("They don't look as cool as my famous\nGob Pins but they'll come in handy.\pAlso take these: ")
     giveitem(ITEM_MAX_REVIVE, amount = 5)
     giveitem (ITEM_HYPER_POTION, amount = 10)
     giveitem (ITEM_FULL_RESTORE, amount = 10)
@@ -112,7 +143,7 @@ script NurseStop_EventScript_Demo1{
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, playerFace1)
     waitmovement(0)
-    msgbox(format("You need to pick some Pokemon!"))
+    msgbox(NurseStop_Text)
     applymovement(OBJ_EVENT_ID_PLAYER, playerBack)
     waitmovement(0)
     applymovement(1, NurseBack_1)
@@ -120,13 +151,14 @@ script NurseStop_EventScript_Demo1{
     releaseall
     end
 }
+
 script NurseStop_EventScript_Demo2{
     lockall
     applymovement(1, NurseGive_2)
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, playerFace1)
     waitmovement(0)
-    msgbox(format("You need to pick some Pokemon!"))
+    msgbox(NurseStop_Text)
     applymovement(OBJ_EVENT_ID_PLAYER, playerBack)
     waitmovement(0)
     applymovement(1, NurseBack_2)
@@ -134,6 +166,16 @@ script NurseStop_EventScript_Demo2{
     releaseall
     end
 }
+
+text NurseStop_Text{
+    "Are you trying to challenge the band \n"
+    "to POKéMON battles...\l"
+    "without POKéMON? \p"
+    "That won't do!\p"
+    "Go pick your team out of these guys\n"
+    "over there."
+}
+
 script EverGradeCity_DemoStarter_OnTransition{
     setrespawn(HEAL_LOCATION_EVERGRANDECITY_DEMOSTARTER)
     end
@@ -161,19 +203,19 @@ script NicknameBoxMon{
 script Pokeball_EventScript_Demo1{
     lockall
     showmonpic(SPECIES_INFERNAPE, 10,3)
-    msgbox("Do you want to choose Infernape?", MSGBOX_YESNO)
+    msgbox("Do you want to choose \nFire/Fighting type Infernape?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_INFERNAPE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_FLARE_BLITZ, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_U_TURN, move4 = MOVE_THUNDER_PUNCH)
+        givemon(SPECIES_INFERNAPE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_FLAMETHROWER, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_U_TURN, move4 = MOVE_THUNDER_PUNCH)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Infernape")
+            msgbox("Received Infernape!")
             call(NicknamePartyMon)
             removeobject(2)
             setflag(FLAG_POKEBALL_1)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Infernape")
+            msgbox("Received Infernape!")
             call(NicknameBoxMon)
             removeobject(2)
             setflag(FLAG_POKEBALL_1)
@@ -205,19 +247,19 @@ script Pokeball_EventScript_Demo1{
 script Pokeball_EventScript_Demo2{
     lockall
     showmonpic(SPECIES_AZUMARILL, 10,3)
-    msgbox("Do you want to choose Azumarill?", MSGBOX_YESNO)
+    msgbox("Do you want to choose \nWater/Fairy type Azumarill?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_AZUMARILL, 55, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_LIQUIDATION, move2 = MOVE_PLAY_ROUGH, move3 = MOVE_AQUA_JET, move4 = MOVE_ICE_PUNCH)
+        givemon(SPECIES_AZUMARILL, 100, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_LIQUIDATION, move2 = MOVE_PLAY_ROUGH, move3 = MOVE_AQUA_JET, move4 = MOVE_ICE_PUNCH)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Azumarill")
+            msgbox("Received Azumarill!")
             call(NicknamePartyMon)
             removeobject(3)
             setflag(FLAG_POKEBALL_2)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
-            msgbox("Recieved Azumarill")
+            msgbox("Received Azumarill!")
             call(NicknameBoxMon)
             removeobject(3)
             setflag(FLAG_POKEBALL_2)
@@ -246,3 +288,970 @@ script Pokeball_EventScript_Demo2{
     end
 }
 
+script Pokeball_EventScript_Demo3{
+    lockall
+    showmonpic(SPECIES_MAGNEZONE, 10,3)
+    msgbox("Do you want to choose \nElectric/Steel type Magnezone?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_MAGNEZONE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_THUNDERBOLT, move2 = MOVE_BODY_PRESS, move3 = MOVE_FLASH_CANNON, move4 = MOVE_THUNDER_WAVE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Magnezone!")
+            call(NicknamePartyMon)
+            removeobject(4)
+            setflag(FLAG_POKEBALL_3)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Magnezone!")
+            call(NicknameBoxMon)
+            removeobject(4)
+            setflag(FLAG_POKEBALL_3)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo4{
+    lockall
+    showmonpic(SPECIES_METAGROSS, 10,3)
+    msgbox("Do you want to choose \nSteel/Psychic type Metagross?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_METAGROSS, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_BULLET_PUNCH, move2 = MOVE_ZEN_HEADBUTT, move3 = MOVE_REST, move4 = MOVE_ROCK_SLIDE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Metagross!")
+            call(NicknamePartyMon)
+            removeobject(5)
+            setflag(FLAG_POKEBALL_4)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Metagross!")
+            call(NicknameBoxMon)
+            removeobject(5)
+            setflag(FLAG_POKEBALL_4)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo5{
+    lockall
+    showmonpic(SPECIES_UMBREON, 10,3)
+    msgbox("Do you want to choose \nDark type Umbreon?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_UMBREON, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=25 ,move1 = MOVE_THROAT_CHOP, move2 = MOVE_SHADOW_BALL, move3 = MOVE_ALLURING_VOICE, move4 = MOVE_TOXIC)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Umbreon!")
+            call(NicknamePartyMon)
+            removeobject(6)
+            setflag(FLAG_POKEBALL_5)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Umbreon!")
+            call(NicknameBoxMon)
+            removeobject(6)
+            setflag(FLAG_POKEBALL_5)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo6{
+    lockall
+    showmonpic(SPECIES_SCOLIPEDE, 10,3)
+    msgbox("Do you want to choose \nBug/Poison type Scolipede?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SCOLIPEDE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_TOXIC_SPIKES, move2 = MOVE_STOMPING_TANTRUM, move3 = MOVE_X_SCISSOR, move4 = MOVE_SWORDS_DANCE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Scolipede!")
+            call(NicknamePartyMon)
+            removeobject(7)
+            setflag(FLAG_POKEBALL_6)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Scolipede!")
+            call(NicknameBoxMon)
+            removeobject(7)
+            setflag(FLAG_POKEBALL_6)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo7{
+    lockall
+    showmonpic(SPECIES_EMPOLEON, 10,3)
+    msgbox("Do you want to choose \nWater/Steel type Empoleon?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_EMPOLEON, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_ICE_BEAM, move2 = MOVE_SURF, move3 = MOVE_FLASH_CANNON, move4 = MOVE_ROOST)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Empoleon!")
+            call(NicknamePartyMon)
+            removeobject(8)
+            setflag(FLAG_POKEBALL_7)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Empoleon!")
+            call(NicknameBoxMon)
+            removeobject(8)
+            setflag(FLAG_POKEBALL_7)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo8{
+    lockall
+    showmonpic(SPECIES_EELEKTROSS, 10,3)
+    msgbox("Do you want to choose \nElectric type Eelektross?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_EELEKTROSS, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_THUNDER_PUNCH, move2 = MOVE_GIGA_DRAIN, move3 = MOVE_DRAIN_PUNCH, move4 = MOVE_LIQUIDATION)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Eelektross!")
+            call(NicknamePartyMon)
+            removeobject(9)
+            setflag(FLAG_POKEBALL_8)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Eelektross!")
+            call(NicknameBoxMon)
+            removeobject(9)
+            setflag(FLAG_POKEBALL_8)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo9{
+    lockall
+    showmonpic(SPECIES_FERROTHORN, 10,3)
+    msgbox("Do you want to choose \nGrass/Steel type Ferrothorn?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_FERROTHORN, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_LEECH_SEED, move4 = MOVE_POWER_WHIP)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Ferrothorn!")
+            call(NicknamePartyMon)
+            removeobject(10)
+            setflag(FLAG_POKEBALL_9)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Ferrothorn!")
+            call(NicknameBoxMon)
+            removeobject(10)
+            setflag(FLAG_POKEBALL_9)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo10{
+    lockall
+    showmonpic(SPECIES_AEGISLASH, 10,3)
+    msgbox("Do you want to choose \nSteel/Ghost type Aegislash?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_AEGISLASH, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_THUNDER_PUNCH, move2 = MOVE_GIGA_DRAIN, move3 = MOVE_DRAIN_PUNCH, move4 = MOVE_LIQUIDATION)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Aegislash!")
+            call(NicknamePartyMon)
+            removeobject(11)
+            setflag(FLAG_POKEBALL_10)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Aegislash!")
+            call(NicknameBoxMon)
+            removeobject(11)
+            setflag(FLAG_POKEBALL_10)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo11{
+    lockall
+    showmonpic(SPECIES_TALONFLAME, 10,3)
+    msgbox("Do you want to choose \nFire/Flying Talonflame?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_TALONFLAME, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_ACROBATICS, move2 = MOVE_HEAT_WAVE, move3 = MOVE_ROOST, move4 = MOVE_SWORDS_DANCE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Talonflame!")
+            call(NicknamePartyMon)
+            removeobject(12)
+            setflag(FLAG_POKEBALL_11)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Talonflame!")
+            call(NicknameBoxMon)
+            removeobject(12)
+            setflag(FLAG_POKEBALL_11)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo12{
+    lockall
+    showmonpic(SPECIES_GALLADE, 10,3)
+    msgbox("Do you want to choose \nPsychic/Fighting type Gallade ?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_GALLADE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_ICE_PUNCH, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_PSYCHO_CUT, move4 = MOVE_PAIN_SPLIT)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Gallade!")
+            call(NicknamePartyMon)
+            removeobject(13)
+            setflag(FLAG_POKEBALL_12)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Gallade!")
+            call(NicknameBoxMon)
+            removeobject(13)
+            setflag(FLAG_POKEBALL_12)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo13{
+    lockall
+    showmonpic(SPECIES_VENUSAUR, 10,3)
+    msgbox("Do you want to choose \nGrass/Poison type Venusaur?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_VENUSAUR, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_GIGA_DRAIN, move2 = MOVE_SLUDGE_BOMB, move3 = MOVE_EARTH_POWER, move4 = MOVE_TOXIC)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Venusaur!")
+            call(NicknamePartyMon)
+            removeobject(15)
+            setflag(FLAG_POKEBALL_13)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Venusaur!")
+            call(NicknameBoxMon)
+            removeobject(15)
+            setflag(FLAG_POKEBALL_13)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo14{
+    lockall
+    showmonpic(SPECIES_LYCANROC_DUSK, 10,3)
+    msgbox("Do you want to choose \nRock type Lycanroc?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_LYCANROC_DUSK, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_LEAF_BLADE, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_PSYCHO_CUT, move4 = MOVE_PAIN_SPLIT)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Lycanroc!")
+            call(NicknamePartyMon)
+            removeobject(16)
+            setflag(FLAG_POKEBALL_14)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Lycanroc!")
+            call(NicknameBoxMon)
+            removeobject(16)
+            setflag(FLAG_POKEBALL_14)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo15{
+    lockall
+    showmonpic(SPECIES_HATTERENE, 10,3)
+    msgbox("Do you want to choose \nPsychic/Fairy type Hatterene?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_HATTERENE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_DRAINING_KISS, move2 = MOVE_PSYSHOCK, move3 = MOVE_MYSTICAL_FIRE, move4 = MOVE_TRICK_ROOM)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Hatterene!")
+            call(NicknamePartyMon)
+            removeobject(17)
+            setflag(FLAG_POKEBALL_15)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Hatterene!")
+            call(NicknameBoxMon)
+            removeobject(17)
+            setflag(FLAG_POKEBALL_15)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo16{
+    lockall
+    showmonpic(SPECIES_KINGDRA, 10,3)
+    msgbox("Do you want to choose \nWater/Dragon type Kingdra?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_KINGDRA, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_WATERFALL, move2 = MOVE_DRAGON_DANCE, move3 = MOVE_IRON_HEAD, move4 = MOVE_ICE_BEAM)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Kingdra!")
+            call(NicknamePartyMon)
+            removeobject(18)
+            setflag(FLAG_POKEBALL_16)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Kingdra!")
+            call(NicknameBoxMon)
+            removeobject(18)
+            setflag(FLAG_POKEBALL_16)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo17{
+    lockall
+    showmonpic(SPECIES_ARCANINE, 10,3)
+    msgbox("Do you want to choose \nFire type Arcanine ?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_ARCANINE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_EXTREME_SPEED, move2 = MOVE_FLAMETHROWER, move3 = MOVE_CRUNCH, move4 = MOVE_SCORCHING_SANDS)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Arcanine!")
+            call(NicknamePartyMon)
+            removeobject(19)
+            setflag(FLAG_POKEBALL_17)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Arcanine!")
+            call(NicknameBoxMon)
+            removeobject(19)
+            setflag(FLAG_POKEBALL_17)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo18{
+    lockall
+    showmonpic(SPECIES_TYRANITAR, 10,3)
+    msgbox("Do you want to choose \nRock/Dark type Tyranitar ?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_TYRANITAR, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_STEALTH_ROCK, move2 = MOVE_EARTHQUAKE, move3 = MOVE_FOUL_PLAY, move4 = MOVE_STONE_EDGE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Tyranitar!")
+            call(NicknamePartyMon)
+            removeobject(20)
+            setflag(FLAG_POKEBALL_18)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Tyranitar!")
+            call(NicknameBoxMon)
+            removeobject(20)
+            setflag(FLAG_POKEBALL_18)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo19{
+    lockall
+    showmonpic(SPECIES_NIDOQUEEN, 10,3)
+    msgbox("Do you want to choose \nGround/Poison type Nidoqueen?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_NIDOQUEEN, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_EARTHQUAKE, move2 = MOVE_POISON_JAB, move3 = MOVE_CRUNCH, move4 = MOVE_THUNDERBOLT)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Nidoqueen!")
+            call(NicknamePartyMon)
+            removeobject(21)
+            setflag(FLAG_POKEBALL_19)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Nidoqueen!")
+            call(NicknameBoxMon)
+            removeobject(21)
+            setflag(FLAG_POKEBALL_19)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo20{
+    lockall
+    showmonpic(SPECIES_LUXRAY, 10,3)
+    msgbox("Do you want to choose \nElectric type Luxray?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_LUXRAY, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_PLAY_ROUGH, move2 = MOVE_THROAT_CHOP, move3 = MOVE_PSYCHIC_FANGS, move4 = MOVE_THUNDERBOLT)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Luxray!")
+            call(NicknamePartyMon)
+            removeobject(22)
+            setflag(FLAG_POKEBALL_20)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Luxray!")
+            call(NicknameBoxMon)
+            removeobject(22)
+            setflag(FLAG_POKEBALL_20)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo21{
+    lockall
+    showmonpic(SPECIES_HAWLUCHA, 10,3)
+    msgbox("Do you want to choose \nFighting/Flying type Hawlucha ?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_HAWLUCHA, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_ACROBATICS, move2 = MOVE_SWORDS_DANCE, move3 = MOVE_THUNDER_PUNCH, move4 = MOVE_CROSS_CHOP)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Hawlucha!")
+            call(NicknamePartyMon)
+            removeobject(23)
+            setflag(FLAG_POKEBALL_21)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Hawlucha!")
+            call(NicknameBoxMon)
+            removeobject(23)
+            setflag(FLAG_POKEBALL_21)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo22{
+    lockall
+    showmonpic(SPECIES_LANTURN, 10,3)
+    msgbox("Do you want to choose \nWater/Electric type Lanturn ?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_LANTURN, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_THUNDERBOLT, move2 = MOVE_SCALD, move3 = MOVE_AQUA_RING, move4 = MOVE_DAZZLING_GLEAM)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Lanturn!")
+            call(NicknamePartyMon)
+            removeobject(24)
+            setflag(FLAG_POKEBALL_22)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Lanturn!")
+            call(NicknameBoxMon)
+            removeobject(24)
+            setflag(FLAG_POKEBALL_22)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo23{
+    lockall
+    showmonpic(SPECIES_EXEGGUTOR, 10,3)
+    msgbox("Do you want to choose \nGrass/Psychic type Exeggutor ?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_EXEGGUTOR, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_LEECH_SEED, move2 = MOVE_ENERGY_BALL, move3 = MOVE_PSYCHIC, move4 = MOVE_ANCIENT_POWER)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Exeggutor!")
+            call(NicknamePartyMon)
+            removeobject(25)
+            setflag(FLAG_POKEBALL_23)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Exeggutor!")
+            call(NicknameBoxMon)
+            removeobject(25)
+            setflag(FLAG_POKEBALL_23)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_Demo24{
+    lockall
+    showmonpic(SPECIES_GARCHOMP, 10,3)
+    msgbox("Do you want to choose \nDragon/Ground type Garchomp ?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_GARCHOMP, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_DRAGON_CLAW, move2 = MOVE_EARTHQUAKE, move3 = MOVE_IRON_HEAD, move4 = MOVE_FIRE_BLAST)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Garchomp!")
+            call(NicknamePartyMon)
+            removeobject(26)
+            setflag(FLAG_POKEBALL_24)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Garchomp!")
+            call(NicknameBoxMon)
+            removeobject(26)
+            setflag(FLAG_POKEBALL_24)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+
+
+    }
+    else{
+        hidemonpic
+        
+    }
+    setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+    }
+    releaseall
+    end
+}
