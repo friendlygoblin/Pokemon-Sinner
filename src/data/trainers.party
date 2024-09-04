@@ -4598,6 +4598,7 @@ Mugshot: Purple
 Mawile (F)  
 Ability: Sheer Force  
 Level: 46  
+EVs: 92 HP / 252 Atk / 164 Spe
 Adamant Nature  
 - Rock Slide  
 - Play Rough  
@@ -4607,6 +4608,7 @@ Adamant Nature
 Honchkrow (M)  
 Ability: Moxie  
 Level: 46      
+EVs: 252 Atk / 4 Def / 252 Spe
 Jolly Nature  
 - Brave Bird  
 - Sucker Punch  
@@ -4616,6 +4618,7 @@ Jolly Nature
 Shiinotic (M) 
 Ability: Effect Spore  
 Level: 47   
+EVs: 252 HP / 252 Def / 4 SpD
 Bold Nature  
 - Spore  
 - Strength Sap  
@@ -4625,6 +4628,7 @@ Bold Nature
 Chandelure (M)  
 Ability: Flame Body  
 Level: 47  
+EVs: 4 Def / 252 SpA / 252 Spe
 Timid Nature  
 IVs: 0 Atk  
 - Shadow Ball  
@@ -4635,6 +4639,7 @@ IVs: 0 Atk
 Gengar (M) 
 Ability: Cursed Body  
 Level: 48  
+EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature  
 - Taunt  
 - Destiny Bond  
@@ -4644,7 +4649,7 @@ Timid Nature
 Houndoom (F) @ Houndoominite  
 Ability: Flash Fire  
 Level: 50   
-EVs: 100 SpA / 4 SpD / 100 Spe  
+EVs: 252 SpA / 4 SpD / 252 Spe
 Timid Nature  
 - Nasty Plot  
 - Fire Blast  
@@ -4667,6 +4672,7 @@ Mugshot: Yellow
 Zebstrika (M) 
 Ability: Lightning Rod  
 Level: 48    
+EVs: 252 SpA / 4 SpD / 252 Spe  
 Timid Nature  
 IVs: 29 HP  
 - Thunderbolt  
@@ -4677,8 +4683,9 @@ IVs: 29 HP
 Clefable (F) @ Leftovers  
 Ability: Unaware  
 Level: 49   
+EVs: 252 HP / 252 Def / 4 SpD  
 Bold Nature  
-IVs: 0 Atk  
+IVs: 29 Atk  
 - Calm Mind  
 - Moonblast  
 - Wish  
@@ -4688,8 +4695,9 @@ Jolteon (F)
 Ability: Quick Feet  
 Level: 49  
 Timid Nature  
+EVs: 252 SpA / 4 SpD / 252 Spe  
 - Yawn  
-- Volt Switch  
+- Thunder
 - Thunderbolt  
 - Hidden Power
 
@@ -4706,7 +4714,8 @@ Toxtricity (F) @ Choice Specs
 Ability: Punk Rock  
 Level: 50  
 Timid Nature  
-IVs: 0 Atk  
+EVs: 252 HP / 76 SpA / 4 SpD / 92 Spe 
+IVs: 29 Atk  
 - Boomburst  
 - Overdrive  
 - Volt Switch  
@@ -4715,7 +4724,7 @@ IVs: 0 Atk
 Manectric @ Manectite  
 Ability: Lightning Rod  
 Level: 51   
-EVs: 4 Def / 150 SpA / 50 Spe  
+EVs: 4 Def / 252 SpA / 252 Spe   
 Timid Nature  
 - Volt Switch  
 - Flamethrower 
@@ -4738,6 +4747,7 @@ Mugshot: Blue
 Gliscor (M) @ Toxic Orb  
 Ability: Poison Heal  
 Level: 50   
+EVs: 248 HP / 240 SpD / 20 Spe
 Jolly Nature  
 - Earthquake  
 - Stealth Rock  
@@ -4747,6 +4757,7 @@ Jolly Nature
 Braviary (M) @ Heavy-Duty Boots  
 Ability: Defiant  
 Level: 50   
+EVs: 252 Atk / 4 Def / 252 Spe
 Jolly Nature  
 - Brave Bird  
 - Close Combat  
@@ -4756,6 +4767,7 @@ Jolly Nature
 Skarmory (F) 
 Ability: Sturdy  
 Level: 51  
+EVs: 252 HP / 252 Def / 4 SpD
 Bold Nature  
 - Iron Defense  
 - Body Press  
@@ -4765,6 +4777,7 @@ Bold Nature
 Togekiss (F)  
 Ability: Serene Grace  
 Level: 52   
+EVs: 252 HP / 4 SpA / 252 Spe
 Timid Nature  
 IVs: 0 Atk  
 - Dazzling Gleam 
@@ -4775,6 +4788,7 @@ IVs: 0 Atk
 Drifblim (M)   
 Ability: Unburden  
 Level: 52   
+EVs: 12 HP / 252 Atk / 32 Def / 32 SpD / 180 Spe
 Modest Nature  
 - Calm Mind  
 - Shadow Ball  
@@ -4784,7 +4798,7 @@ Modest Nature
 Altaria (F) @ Altarianite  
 Ability: Cloud Nine  
 Level: 53    
-EVs: 100 Atk / 4 SpD / 50 Spe  
+EVs: 252 Atk / 4 SpD / 252 Spe
 Adamant Nature  
 - Dragon Dance  
 - Dragon Claw  
@@ -4807,6 +4821,7 @@ Mugshot: Blue
 Politoed (M) @ Chesto Berry  
 Ability: Drizzle  
 Level: 52    
+EVs: 248 HP / 252 SpD / 8 Spe
 Calm Nature  
 - Protect  
 - Scald  
@@ -4816,6 +4831,7 @@ Calm Nature
 Primarina (F)  
 Ability: Torrent  
 Level: 52  
+EVs: 40 HP / 252 SpA / 216 Spe
 Modest Nature  
 IVs: 0 Atk  
 - Hydro Pump  
@@ -4826,6 +4842,7 @@ IVs: 0 Atk
 Jellicent (M) @ Colbur Berry  
 Ability: Cursed Body  
 Level: 53    
+EVs: 252 HP / 224 Def / 32 Spe
 Bold Nature  
 IVs: 0 Atk  
 - Hex  
@@ -4836,6 +4853,7 @@ IVs: 0 Atk
 Aurorus (F)  
 Ability: Refrigerate  
 Level: 53   
+EVs: 252 SpA / 4 SpD / 252 Spe
 Modest Nature  
 - Facade  
 - Frost Breath  
@@ -4845,6 +4863,7 @@ Modest Nature
 Dhelmise @ Colbur Berry  
 Ability: Steelworker  
 Level: 52    
+EVs: 52 HP / 252 Atk / 204 Spe
 Adamant Nature  
 - Power Whip  
 - Anchor Shot  
@@ -4854,8 +4873,8 @@ Adamant Nature
 Gyarados @ Gyaradosite  
 Ability: Intimidate  
 Level: 55  
+EVs: 252 Atk / 4 SpD / 252 Spe
 Shiny: Yes  
-EVs: 100 Atk / 4 SpD / 200 Spe  
 Jolly Nature  
 - Dragon Dance  
 - Crunch  
@@ -6331,7 +6350,7 @@ Trevenant (M)
 Ability: Natural Cure  
 Level: 55  
 Tera Type: Ghost  
-EVs: 92 HP / 8 Atk / 40 Def / 152 SpA / 72 SpD / 144 Spe  
+EVs: 252 Atk / 4 SpD / 252 Spe 
 Brave Nature  
 - Dark Pulse  
 - Earthquake  
@@ -6351,9 +6370,8 @@ Impish Nature
 
 Espeon (F)  
 Ability: Synchronize  
-Level: 56  
-Tera Type: Psychic  
-EVs: 116 HP / 4 Atk / 76 Def / 104 SpA / 84 SpD / 120 Spe  
+Level: 56   
+EVs: 4 Def / 252 SpA / 252 Spe
 Modest Nature  
 IVs: 0 Atk  
 - Shadow Ball  
@@ -6363,9 +6381,8 @@ IVs: 0 Atk
 
 Meloetta-Pirouette  
 Ability: Serene Grace  
-Level: 56  
-Tera Type: Normal  
-EVs: 124 Atk / 88 Def / 160 SpD / 132 Spe  
+Level: 56   
+EVs: 252 Atk / 4 SpD / 252 Spe
 Jolly Nature  
 - Play Rough  
 - Drain Punch  
@@ -6374,8 +6391,7 @@ Jolly Nature
 
 Wooper (M) @Eviolite
 Ability: Damp  
-Level: 62  
-Tera Type: Water  
+Level: 62    
 EVs: 160 HP / 164 Atk / 152 Def / 28 Spe  
 Brave Nature  
 - Avalanche  
@@ -6386,8 +6402,8 @@ Brave Nature
 Gardevoir (F) @ Gardevoirite  
 Ability: Synchronize  
 Level: 60  
-Tera Type: Psychic  
-EVs: 248 HP / 156 Def / 96 SpA / 4 SpD / 4 Spe  
+Shiny: Yes   
+EVs: 4 Def / 252 SpA / 252 Spe  
 Modest Nature  
 IVs: 0 Atk  
 - Moonblast  
