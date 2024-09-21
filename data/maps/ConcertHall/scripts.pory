@@ -1,0 +1,84 @@
+raw `ConcertHall_MapScripts::
+	.byte 0
+    `
+
+script IntroNPC1_EventScript_ConcertHall{
+    lock
+    applymovement(3,Common_Movement_FacePlayer)
+    msgbox(Intro)
+    release
+    end
+
+}
+
+text Intro{
+    format("Wait..did you just hop off the band truck? How did you even get on there!\p
+    What..? You don't even have a ticket! \p
+    Ohh your one of those Pokemon Trainers, looking to battle the band for a free ticket eh? \p
+    Well good luck to you, I hear their ruthless!")
+}
+movement faceup{
+    face_up
+}
+script IntroSign_ConcertHall{
+    lock
+    msgbox(IntroSign)
+    release
+    end
+}
+text IntroSign{
+    format("Ever Grande City Concert Hall")
+}
+script IntroNPC2_EventScript_ConcertHall{
+    lock
+    applymovement(5,Common_Movement_FacePlayer)
+    msgbox(IntroChild)
+    release
+    end
+
+}
+
+script IntroNPC3_EventScript_ConcertHall{
+    lock
+    applymovement(6,Common_Movement_FacePlayer)
+    msgbox(IntroAdult)
+    release
+    end
+
+}
+
+script IntroNPC4_EventScript_ConcertHall{
+    lock
+    applymovement(4,Common_Movement_FacePlayer)
+    msgbox(IntroFront)
+    release
+    end
+
+}
+
+script IntroChallanger_EventScript_ConcertHall{
+    lock
+    applymovement(7,Common_Movement_FacePlayer)
+    msgbox(IntroChallanger)
+    release
+    end
+
+}
+
+text IntroChild{
+    format("I've been here since 10am! I'm finally getting barricade!")
+}
+
+text IntroAdult{
+    format("If that little kid trys to push infront of me again...")
+}
+
+text IntroFront{
+    format("Hey no cuts! \p
+    Oh you don't have a ticket? Best head inside and try win one then!")
+}
+
+text IntroChallanger{
+    format("Your going to try face the band? \p
+    Watch out for Emily...I got shreded")
+}

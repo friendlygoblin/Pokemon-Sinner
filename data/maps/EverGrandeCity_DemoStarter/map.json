@@ -369,11 +369,18 @@
       "dest_warp_id": "0"
     },
     {
+      "x": 19,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_CONCERT_HALL",
+      "dest_warp_id": "1"
+    },
+    {
       "x": 20,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_EVER_GRANDE_CITY_DEMO_STARTER",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_CONCERT_HALL",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

@@ -59,22 +59,22 @@
       "x": 4,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_EVER_GRANDE_CITY_DEMO_STARTER",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_CONCERT_HALL",
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_EVER_GRANDE_CITY_DEMO_STARTER",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_CONCERT_HALL",
+      "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_EVER_GRANDE_CITY_DEMO_STARTER",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_CONCERT_HALL",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

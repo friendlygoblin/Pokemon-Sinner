@@ -11495,7 +11495,7 @@ F_TRAINER_FEMALE |
 #line 4569
                 MOVE_SHADOW_BALL,
                 MOVE_FIRE_BLAST,
-                MOVE_TRICK,
+                MOVE_SUBSTITUTE,
                 MOVE_MEMENTO,
             },
             },
@@ -11624,7 +11624,7 @@ F_TRAINER_FEMALE |
                 MOVE_CALM_MIND,
                 MOVE_MOONBLAST,
                 MOVE_WISH,
-                MOVE_PROTECT,
+                MOVE_FIRE_BLAST,
             },
             },
             {

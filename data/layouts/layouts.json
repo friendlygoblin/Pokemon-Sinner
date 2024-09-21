@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/EverGrandeCity_DemoStarter/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_DemoStarter/map.bin"
+    },
+    {
+      "id": "LAYOUT_CONCERT_HALL",
+      "name": "ConcertHall_Layout",
+      "width": 40,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_EverGrande",
+      "border_filepath": "data/layouts/ConcertHall/border.bin",
+      "blockdata_filepath": "data/layouts/ConcertHall/map.bin"
     }
   ]
 }

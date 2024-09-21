@@ -1080,3 +1080,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PreludeTown/scripts.inc"
 
 	.include "data/maps/EverGrandeCity_DemoStarter/scripts.inc"
+
+	.include "data/maps/ConcertHall/scripts.inc"
