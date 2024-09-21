@@ -380,6 +380,7 @@
 #define OBJ_EVENT_PAL_TAG_GEORGIA                   0x1128
 #define OBJ_EVENT_PAL_TAG_ABIGAIL                   0x1129
 #define OBJ_EVENT_PAL_TAG_GOBLIN                  0x1130
+#define OBJ_EVENT_PAL_TAG_STEFF                  0x1131
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

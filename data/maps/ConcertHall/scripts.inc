@@ -24,6 +24,8 @@ IntroNPC2_EventScript_ConcertHall::
 	lock
 	applymovement 5, Common_Movement_FacePlayer
 	msgbox IntroChild
+	applymovement 5, lookup
+	waitmovement 0
 	release
 	end
 
@@ -32,17 +34,49 @@ IntroNPC3_EventScript_ConcertHall::
 	lock
 	applymovement 6, Common_Movement_FacePlayer
 	msgbox IntroAdult
+	applymovement 6, lookup
+	waitmovement 0
 	release
 	end
 
 
 IntroNPC4_EventScript_ConcertHall::
 	lock
+	applymovement 4, emote
+	playse SE_PIN
+	waitse
+	waitmovement 0
 	applymovement 4, Common_Movement_FacePlayer
-	msgbox IntroFront
+	waitmovement 0
+	compare VAR_EVER_GRANDE_CITY_STATE, 0
+	goto_if_eq IntroNPC4_EventScript_ConcertHall_2
+	applymovement 4, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox OutroFront
+IntroNPC4_EventScript_ConcertHall_1:
 	release
 	end
 
+IntroNPC4_EventScript_ConcertHall_2:
+	msgbox IntroFront
+	applymovement 4, moveaway
+	waitmovement 0
+	setvar VAR_EVER_GRANDE_CITY_STATE, 1
+	goto IntroNPC4_EventScript_ConcertHall_1
+
+
+emote:
+	emote_exclamation_mark
+	step_end
+
+lookup:
+	face_up
+	step_end
+
+moveaway:
+	walk_left
+	face_right
+	step_end
 
 IntroChallanger_EventScript_ConcertHall::
 	lock
@@ -65,6 +99,10 @@ Intro::
 IntroSign::
 	.string "Ever Grande City Concert Hall$"
 
+OutroFront::
+	.string "What are you doing out here?\p"
+	.string "Show starts soon, get on in!$"
+
 IntroChild::
 	.string "I've been here since 10am! I'm finally\n"
 	.string "getting barricade!$"
@@ -75,8 +113,11 @@ IntroAdult::
 
 IntroFront::
 	.string "Hey no cuts!\p"
-	.string "Oh you don't have a ticket? Best head\n"
-	.string "inside and try win one then!$"
+	.string "Oh you don't have a ticket?\p"
+	.string "Well look, my names Steff, word of\n"
+	.string "advice..\p"
+	.string "You best head inside and try win a\n"
+	.string "ticket, here you can cut infront of me!$"
 
 IntroChallanger::
 	.string "Your going to try face the band?\p"

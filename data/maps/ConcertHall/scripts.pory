@@ -33,6 +33,8 @@ script IntroNPC2_EventScript_ConcertHall{
     lock
     applymovement(5,Common_Movement_FacePlayer)
     msgbox(IntroChild)
+    applymovement(5,lookup)
+    waitmovement(0)
     release
     end
 
@@ -42,6 +44,8 @@ script IntroNPC3_EventScript_ConcertHall{
     lock
     applymovement(6,Common_Movement_FacePlayer)
     msgbox(IntroAdult)
+    applymovement(6,lookup)
+    waitmovement(0)
     release
     end
 
@@ -49,13 +53,37 @@ script IntroNPC3_EventScript_ConcertHall{
 
 script IntroNPC4_EventScript_ConcertHall{
     lock
+    applymovement(4, emote)
+    playse(SE_PIN)
+    waitse
+    waitmovement(0)
     applymovement(4,Common_Movement_FacePlayer)
+    waitmovement(0)
+    if (var(VAR_EVER_GRANDE_CITY_STATE)==0){
     msgbox(IntroFront)
+    applymovement(4,moveaway)
+    waitmovement(0)
+    setvar(VAR_EVER_GRANDE_CITY_STATE, 1)
+    }
+    else {
+    applymovement(4,Common_Movement_FacePlayer)
+    waitmovement(0)
+    msgbox(OutroFront)
+    }
     release
     end
 
 }
-
+movement emote{
+    emote_exclamation_mark
+}
+movement lookup{
+    face_up
+}
+movement moveaway{
+    walk_left
+    face_right
+}
 script IntroChallanger_EventScript_ConcertHall{
     lock
     applymovement(7,Common_Movement_FacePlayer)
@@ -64,7 +92,9 @@ script IntroChallanger_EventScript_ConcertHall{
     end
 
 }
-
+text OutroFront{
+    format("What are you doing out here? \p Show starts soon, get on in!")
+}
 text IntroChild{
     format("I've been here since 10am! I'm finally getting barricade!")
 }
@@ -75,7 +105,8 @@ text IntroAdult{
 
 text IntroFront{
     format("Hey no cuts! \p
-    Oh you don't have a ticket? Best head inside and try win one then!")
+    Oh you don't have a ticket? \p
+    Well look, my names Steff, word of advice.. \p You best head inside and try win a ticket, here you can cut infront of me!")
 }
 
 text IntroChallanger{
