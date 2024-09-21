@@ -4741,11 +4741,11 @@ Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Stall / Ace Pokemon
 Mugshot: Blue
 
-Gliscor (M) @ Toxic Orb  
-Ability: Poison Heal  
+Gliscor (M) 
+Ability: Hyper Cutter 
 Level: 50   
 EVs: 248 HP / 240 SpD / 20 Spe
 Jolly Nature  

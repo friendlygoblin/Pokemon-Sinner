@@ -11745,7 +11745,7 @@ F_TRAINER_FEMALE |
 #line 4678
         .doubleBattle = FALSE,
 #line 4679
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_SETUP_FIRST_TURN | AI_FLAG_ACE_POKEMON,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_SETUP_FIRST_TURN | AI_FLAG_STALL | AI_FLAG_ACE_POKEMON,
 #line 4680
         .mugshotEnabled = TRUE,
         .mugshotColor = MUGSHOT_COLOR_BLUE,
@@ -11757,14 +11757,12 @@ F_TRAINER_FEMALE |
             .species = SPECIES_GLISCOR,
 #line 4682
             .gender = TRAINER_MON_MALE,
-#line 4682
-            .heldItem = ITEM_TOXIC_ORB,
 #line 4685
             .ev = TRAINER_PARTY_EVS(248, 0, 0, 20, 0, 240),
 #line 4687
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 4683
-            .ability = ABILITY_POISON_HEAL,
+            .ability = ABILITY_HYPER_CUTTER,
 #line 4684
             .lvl = 50,
 #line 4686

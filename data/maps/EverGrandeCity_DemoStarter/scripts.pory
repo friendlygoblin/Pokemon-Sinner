@@ -217,7 +217,7 @@ script Pokeball_EventScript_Demo1{
     showmonpic(SPECIES_INFERNAPE, 10,3)
     msgbox("Do you want to choose \nFire/Fighting type Infernape?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_INFERNAPE, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,speedEv = 252,atkEv=256 ,move1 = MOVE_FLAMETHROWER, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_U_TURN, move4 = MOVE_THUNDER_PUNCH)
+        givemon(SPECIES_INFERNAPE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,speedEv = 252,atkEv=256 ,move1 = MOVE_FLAMETHROWER, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_U_TURN, move4 = MOVE_THUNDER_PUNCH)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Infernape!")
@@ -255,11 +255,11 @@ script Pokeball_EventScript_Demo2{
     showmonpic(SPECIES_AZUMARILL, 10,3)
     msgbox("Do you want to choose \nWater/Fairy type Azumarill?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_AZUMARILL, 50, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_LIQUIDATION, move2 = MOVE_PLAY_ROUGH, move3 = MOVE_AQUA_JET, move4 = MOVE_ICE_PUNCH)
+        givemon(SPECIES_AZUMARILL, 55, item = ITEM_NONE, ball = ITEM_POKE_BALL,hpEv=100,atkEv=252,defEv=0,speedEv = 152,spAtkEv=0,spDefEv=0, move1 = MOVE_LIQUIDATION, move2 = MOVE_PLAY_ROUGH, move3 = MOVE_AQUA_JET, move4 = MOVE_ICE_PUNCH)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Azumarill!")
-            call(NicknamePartyMon)
+            call(NicknamePartyMon) 
             removeobject(3)
             setflag(FLAG_POKEBALL_2)
             call(SetFlags_EventScript_Demo)
@@ -294,7 +294,7 @@ script Pokeball_EventScript_Demo3{
     showmonpic(SPECIES_MAGNEZONE, 10,3)
     msgbox("Do you want to choose \nElectric/Steel type Magnezone?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_MAGNEZONE, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_THUNDERBOLT, move2 = MOVE_BODY_PRESS, move3 = MOVE_FLASH_CANNON, move4 = MOVE_THUNDER_WAVE)
+        givemon(SPECIES_MAGNEZONE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=100,atkEv=0,defEv=0,speedEv = 152,spAtkEv=256,spDefEv=0, move1 = MOVE_THUNDERBOLT, move2 = MOVE_BODY_PRESS, move3 = MOVE_FLASH_CANNON, move4 = MOVE_THUNDER_WAVE)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Magnezone!")
@@ -332,7 +332,7 @@ script Pokeball_EventScript_Demo4{
     showmonpic(SPECIES_METAGROSS, 10,3)
     msgbox("Do you want to choose \nSteel/Psychic type Metagross?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_METAGROSS, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_BULLET_PUNCH, move2 = MOVE_ZEN_HEADBUTT, move3 = MOVE_REST, move4 = MOVE_ROCK_SLIDE)
+        givemon(SPECIES_METAGROSS, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=232,atkEv=60,defEv=0,speedEv = 176,spAtkEv=0,spDefEv=40, move1 = MOVE_BULLET_PUNCH, move2 = MOVE_ZEN_HEADBUTT, move3 = MOVE_REST, move4 = MOVE_ROCK_SLIDE)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Metagross!")
@@ -370,7 +370,7 @@ script Pokeball_EventScript_Demo5{
     showmonpic(SPECIES_UMBREON, 10,3)
     msgbox("Do you want to choose \nDark type Umbreon?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_UMBREON, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=25 ,move1 = MOVE_THROAT_CHOP, move2 = MOVE_SHADOW_BALL, move3 = MOVE_ALLURING_VOICE, move4 = MOVE_TOXIC)
+        givemon(SPECIES_UMBREON, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=4,speedEv = 0,spAtkEv=0,spDefEv=252 ,move1 = MOVE_THROAT_CHOP, move2 = MOVE_SHADOW_BALL, move3 = MOVE_ALLURING_VOICE, move4 = MOVE_TOXIC)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Umbreon!")
@@ -408,7 +408,7 @@ script Pokeball_EventScript_Demo6{
     showmonpic(SPECIES_SCOLIPEDE, 10,3)
     msgbox("Do you want to choose \nBug/Poison type Scolipede?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_SCOLIPEDE, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_TOXIC_SPIKES, move2 = MOVE_STOMPING_TANTRUM, move3 = MOVE_X_SCISSOR, move4 = MOVE_SWORDS_DANCE)
+        givemon(SPECIES_SCOLIPEDE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=0,atkEv=252,defEv=4,speedEv = 0,spAtkEv=0,spDefEv=252 ,move1 = MOVE_TOXIC_SPIKES, move2 = MOVE_STOMPING_TANTRUM, move3 = MOVE_X_SCISSOR, move4 = MOVE_SWORDS_DANCE)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Scolipede!")
@@ -446,7 +446,7 @@ script Pokeball_EventScript_Demo7{
     showmonpic(SPECIES_EMPOLEON, 10,3)
     msgbox("Do you want to choose \nWater/Steel type Empoleon?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_EMPOLEON, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_ICE_BEAM, move2 = MOVE_SURF, move3 = MOVE_FLASH_CANNON, move4 = MOVE_ROOST)
+        givemon(SPECIES_EMPOLEON, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=76,speedEv = 180,spAtkEv=0,spDefEv=0 ,move1 = MOVE_ICE_BEAM, move2 = MOVE_SURF, move3 = MOVE_FLASH_CANNON, move4 = MOVE_ROOST)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Empoleon!")
@@ -484,7 +484,7 @@ script Pokeball_EventScript_Demo8{
     showmonpic(SPECIES_EELEKTROSS, 10,3)
     msgbox("Do you want to choose \nElectric type Eelektross?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_EELEKTROSS, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_THUNDER_PUNCH, move2 = MOVE_GIGA_DRAIN, move3 = MOVE_DRAIN_PUNCH, move4 = MOVE_LIQUIDATION)
+        givemon(SPECIES_EELEKTROSS, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=4,defEv=0,speedEv = 0,spAtkEv=252,spDefEv=0 ,move1 = MOVE_THUNDER_PUNCH, move2 = MOVE_GIGA_DRAIN, move3 = MOVE_DRAIN_PUNCH, move4 = MOVE_LIQUIDATION)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Eelektross!")
@@ -522,7 +522,7 @@ script Pokeball_EventScript_Demo9{
     showmonpic(SPECIES_FERROTHORN, 10,3)
     msgbox("Do you want to choose \nGrass/Steel type Ferrothorn?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_FERROTHORN, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_LEECH_SEED, move4 = MOVE_POWER_WHIP)
+        givemon(SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=24,speedEv = 0,spAtkEv=0,spDefEv=232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_LEECH_SEED, move4 = MOVE_POWER_WHIP)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Ferrothorn!")
@@ -560,7 +560,7 @@ script Pokeball_EventScript_Demo10{
     showmonpic(SPECIES_AEGISLASH, 10,3)
     msgbox("Do you want to choose \nSteel/Ghost type Aegislash?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_AEGISLASH, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_FLASH_CANNON, move2 = MOVE_SHADOW_BALL, move3 = MOVE_NIGHT_SLASH, move4 = MOVE_SACRED_SWORD)
+        givemon(SPECIES_AEGISLASH, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=0,speedEv = 0,spAtkEv=4,spDefEv=252 ,move1 = MOVE_FLASH_CANNON, move2 = MOVE_SHADOW_BALL, move3 = MOVE_NIGHT_SLASH, move4 = MOVE_SACRED_SWORD)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Aegislash!")
@@ -598,7 +598,7 @@ script Pokeball_EventScript_Demo11{
     showmonpic(SPECIES_TALONFLAME, 10,3)
     msgbox("Do you want to choose \nFire/Flying type Talonflame?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_TALONFLAME, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_ACROBATICS, move2 = MOVE_HEAT_WAVE, move3 = MOVE_ROOST, move4 = MOVE_SWORDS_DANCE)
+        givemon(SPECIES_TALONFLAME, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=0,speedEv = 252,spAtkEv=4,spDefEv=0 ,move1 = MOVE_ACROBATICS, move2 = MOVE_HEAT_WAVE, move3 = MOVE_ROOST, move4 = MOVE_SWORDS_DANCE)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Talonflame!")
@@ -636,7 +636,7 @@ script Pokeball_EventScript_Demo12{
     showmonpic(SPECIES_GALLADE, 10,3)
     msgbox("Do you want to choose \nPsychic/Fighting type Gallade ?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_GALLADE, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_ICE_PUNCH, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_PSYCHO_CUT, move4 = MOVE_PAIN_SPLIT)
+        givemon(SPECIES_GALLADE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=0,atkEv=252,defEv=4,speedEv = 0,spAtkEv=0,spDefEv=252 ,move1 = MOVE_ICE_PUNCH, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_PSYCHO_CUT, move4 = MOVE_PAIN_SPLIT)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Gallade!")
@@ -674,7 +674,7 @@ script Pokeball_EventScript_Demo13{
     showmonpic(SPECIES_VENUSAUR, 10,3)
     msgbox("Do you want to choose \nGrass/Poison type Venusaur?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_VENUSAUR, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_GIGA_DRAIN, move2 = MOVE_SLUDGE_BOMB, move3 = MOVE_EARTH_POWER, move4 = MOVE_TOXIC)
+        givemon(SPECIES_VENUSAUR, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=100,atkEv=0,defEv=4,speedEv = 152,spAtkEv=252,spDefEv=0 ,move1 = MOVE_GIGA_DRAIN, move2 = MOVE_SLUDGE_BOMB, move3 = MOVE_EARTH_POWER, move4 = MOVE_TOXIC)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Venusaur!")
@@ -712,7 +712,7 @@ script Pokeball_EventScript_Demo14{
     showmonpic(SPECIES_LYCANROC_DUSK, 10,3)
     msgbox("Do you want to choose \nRock type Lycanroc?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_LYCANROC_DUSK, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_DRILL_RUN, move2 = MOVE_ACCELEROCK, move3 = MOVE_PSYCHIC_FANGS, move4 = MOVE_STEALTH_ROCK)
+        givemon(SPECIES_LYCANROC_DUSK, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=0,atkEv=252,defEv=4,speedEv = 252,spAtkEv=0,spDefEv=0 ,move1 = MOVE_DRILL_RUN, move2 = MOVE_ACCELEROCK, move3 = MOVE_PSYCHIC_FANGS, move4 = MOVE_STEALTH_ROCK)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Lycanroc!")
@@ -750,7 +750,7 @@ script Pokeball_EventScript_Demo15{
     showmonpic(SPECIES_HATTERENE, 10,3)
     msgbox("Do you want to choose \nPsychic/Fairy type Hatterene?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_HATTERENE, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_DRAINING_KISS, move2 = MOVE_PSYSHOCK, move3 = MOVE_MYSTICAL_FIRE, move4 = MOVE_TRICK_ROOM)
+        givemon(SPECIES_HATTERENE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=204,speedEv = 52,spAtkEv=0,spDefEv=0 ,move1 = MOVE_DRAINING_KISS, move2 = MOVE_PSYSHOCK, move3 = MOVE_MYSTICAL_FIRE, move4 = MOVE_TRICK_ROOM)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Hatterene!")
@@ -788,7 +788,7 @@ script Pokeball_EventScript_Demo16{
     showmonpic(SPECIES_KINGDRA, 10,3)
     msgbox("Do you want to choose \nWater/Dragon type Kingdra?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_KINGDRA, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_WATERFALL, move2 = MOVE_DRAGON_DANCE, move3 = MOVE_IRON_HEAD, move4 = MOVE_ICE_BEAM)
+        givemon(SPECIES_KINGDRA, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=0,atkEv=0,defEv=0,speedEv = 252,spAtkEv=252,spDefEv=4 ,move1 = MOVE_WATERFALL, move2 = MOVE_DRAGON_DANCE, move3 = MOVE_IRON_HEAD, move4 = MOVE_ICE_BEAM)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Kingdra!")
@@ -826,7 +826,7 @@ script Pokeball_EventScript_Demo17{
     showmonpic(SPECIES_ARCANINE, 10,3)
     msgbox("Do you want to choose \nFire type Arcanine ?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_ARCANINE, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_EXTREME_SPEED, move2 = MOVE_FLAMETHROWER, move3 = MOVE_CRUNCH, move4 = MOVE_SCORCHING_SANDS)
+        givemon(SPECIES_ARCANINE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=160,atkEv=252,defEv=0,speedEv = 96,spAtkEv=0,spDefEv=0 ,move1 = MOVE_EXTREME_SPEED, move2 = MOVE_FLAMETHROWER, move3 = MOVE_CRUNCH, move4 = MOVE_SCORCHING_SANDS)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Arcanine!")
@@ -864,7 +864,7 @@ script Pokeball_EventScript_Demo18{
     showmonpic(SPECIES_TYRANITAR, 10,3)
     msgbox("Do you want to choose \nRock/Dark type Tyranitar ?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_TYRANITAR, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_STEALTH_ROCK, move2 = MOVE_EARTHQUAKE, move3 = MOVE_FOUL_PLAY, move4 = MOVE_STONE_EDGE)
+        givemon(SPECIES_TYRANITAR, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=4,defEv=0,speedEv = 40,spAtkEv=0,spDefEv=212 ,move1 = MOVE_STEALTH_ROCK, move2 = MOVE_EARTHQUAKE, move3 = MOVE_FOUL_PLAY, move4 = MOVE_STONE_EDGE)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Tyranitar!")
@@ -902,7 +902,7 @@ script Pokeball_EventScript_Demo19{
     showmonpic(SPECIES_NIDOQUEEN, 10,3)
     msgbox("Do you want to choose \nGround/Poison type Nidoqueen?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_NIDOQUEEN, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_EARTHQUAKE, move2 = MOVE_POISON_JAB, move3 = MOVE_CRUNCH, move4 = MOVE_ICE_BEAM)
+        givemon(SPECIES_NIDOQUEEN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=248,atkEv=0,defEv=172,speedEv = 88,spAtkEv=0,spDefEv=0 ,move1 = MOVE_EARTHQUAKE, move2 = MOVE_POISON_JAB, move3 = MOVE_CRUNCH, move4 = MOVE_ICE_BEAM)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Nidoqueen!")
@@ -940,7 +940,7 @@ script Pokeball_EventScript_Demo20{
     showmonpic(SPECIES_LUXRAY, 10,3)
     msgbox("Do you want to choose \nElectric type Luxray?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_LUXRAY, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_PLAY_ROUGH, move2 = MOVE_THROAT_CHOP, move3 = MOVE_PSYCHIC_FANGS, move4 = MOVE_THUNDERBOLT)
+        givemon(SPECIES_LUXRAY, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=4,defEv=0,speedEv = 0,spAtkEv=252,spDefEv=0 ,move1 = MOVE_PLAY_ROUGH, move2 = MOVE_THROAT_CHOP, move3 = MOVE_PSYCHIC_FANGS, move4 = MOVE_THUNDERBOLT)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Luxray!")
@@ -978,7 +978,7 @@ script Pokeball_EventScript_Demo21{
     showmonpic(SPECIES_HAWLUCHA, 10,3)
     msgbox("Do you want to choose \nFighting/Flying type Hawlucha ?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_HAWLUCHA, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_ACROBATICS, move2 = MOVE_SWORDS_DANCE, move3 = MOVE_THUNDER_PUNCH, move4 = MOVE_CROSS_CHOP)
+        givemon(SPECIES_HAWLUCHA, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=0,atkEv=252,defEv=0,speedEv = 252,spAtkEv=0,spDefEv=4 ,move1 = MOVE_ACROBATICS, move2 = MOVE_SWORDS_DANCE, move3 = MOVE_THUNDER_PUNCH, move4 = MOVE_CROSS_CHOP)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Hawlucha!")
@@ -1016,13 +1016,13 @@ script Pokeball_EventScript_Demo22{
     showmonpic(SPECIES_LANTURN, 10,3)
     msgbox("Do you want to choose \nWater/Electric type Lanturn ?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_LANTURN, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_THUNDERBOLT, move2 = MOVE_SCALD, move3 = MOVE_AQUA_RING, move4 = MOVE_DAZZLING_GLEAM)
+        givemon(SPECIES_LANTURN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv=252,atkEv=4,defEv=0,speedEv = 0,spAtkEv=252,spDefEv=0 ,move1 = MOVE_THUNDERBOLT, move2 = MOVE_SCALD, move3 = MOVE_AQUA_RING, move4 = MOVE_DAZZLING_GLEAM)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Lanturn!")
             call(NicknamePartyMon)
             removeobject(24)
-            setflag(FLAG_POKEBALL_22)
+            setflag(FLAG_POKEBALL_22) 
             call(SetFlags_EventScript_Demo)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
@@ -1054,7 +1054,7 @@ script Pokeball_EventScript_Demo23{
     showmonpic(SPECIES_EXEGGUTOR, 10,3)
     msgbox("Do you want to choose \nGrass/Psychic type Exeggutor ?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_EXEGGUTOR, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_LEECH_SEED, move2 = MOVE_ENERGY_BALL, move3 = MOVE_PSYCHIC, move4 = MOVE_ANCIENT_POWER)
+        givemon(SPECIES_EXEGGUTOR, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=4,defEv=0,speedEv = 0,spAtkEv=252,spDefEv=0 ,move1 = MOVE_LEECH_SEED, move2 = MOVE_ENERGY_BALL, move3 = MOVE_PSYCHIC, move4 = MOVE_ANCIENT_POWER)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Exeggutor!")
@@ -1092,7 +1092,7 @@ script Pokeball_EventScript_Demo24{
     showmonpic(SPECIES_GARCHOMP, 10,3)
     msgbox("Do you want to choose \nDragon/Ground type Garchomp ?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_GARCHOMP, 50, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv = 20,speedEv = 20,atkEv=20 ,move1 = MOVE_DRAGON_CLAW, move2 = MOVE_EARTHQUAKE, move3 = MOVE_IRON_HEAD, move4 = MOVE_FIRE_BLAST)
+        givemon(SPECIES_GARCHOMP, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=0,atkEv=252,defEv=4,speedEv = 252,spAtkEv=0,spDefEv=0 ,move1 = MOVE_DRAGON_CLAW, move2 = MOVE_EARTHQUAKE, move3 = MOVE_IRON_HEAD, move4 = MOVE_FIRE_BLAST)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Garchomp!")

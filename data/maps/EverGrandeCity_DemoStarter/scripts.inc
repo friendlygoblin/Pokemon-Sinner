@@ -4,7 +4,7 @@ EverGrandeCity_DemoStarter_MapScripts::
 Demo_Mart::
 	lock
 	faceplayer
-	addmoney 10000
+	addmoney 5000
 	message Demo_Mart_Text_0
 	waitmessage
 	pokemart Demo_MartItems
@@ -206,7 +206,7 @@ Pokeball_EventScript_Demo1_1:
 	end
 
 Pokeball_EventScript_Demo1_2:
-	givemon SPECIES_INFERNAPE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_FLAMETHROWER, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_U_TURN, move4 = MOVE_THUNDER_PUNCH
+	givemon SPECIES_INFERNAPE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, speedEv = 252, atkEv = 256, move1 = MOVE_FLAMETHROWER, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_U_TURN, move4 = MOVE_THUNDER_PUNCH
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo1_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -246,7 +246,7 @@ Pokeball_EventScript_Demo2_1:
 	end
 
 Pokeball_EventScript_Demo2_2:
-	givemon SPECIES_AZUMARILL, 100, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_LIQUIDATION, move2 = MOVE_PLAY_ROUGH, move3 = MOVE_AQUA_JET, move4 = MOVE_ICE_PUNCH
+	givemon SPECIES_AZUMARILL, 55, item = ITEM_NONE, ball = ITEM_POKE_BALL, hpEv = 100, atkEv = 252, defEv = 0, speedEv = 152, spAtkEv = 0, spDefEv = 0, move1 = MOVE_LIQUIDATION, move2 = MOVE_PLAY_ROUGH, move3 = MOVE_AQUA_JET, move4 = MOVE_ICE_PUNCH
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo2_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -286,7 +286,7 @@ Pokeball_EventScript_Demo3_1:
 	end
 
 Pokeball_EventScript_Demo3_2:
-	givemon SPECIES_MAGNEZONE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_THUNDERBOLT, move2 = MOVE_BODY_PRESS, move3 = MOVE_FLASH_CANNON, move4 = MOVE_THUNDER_WAVE
+	givemon SPECIES_MAGNEZONE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 100, atkEv = 0, defEv = 0, speedEv = 152, spAtkEv = 256, spDefEv = 0, move1 = MOVE_THUNDERBOLT, move2 = MOVE_BODY_PRESS, move3 = MOVE_FLASH_CANNON, move4 = MOVE_THUNDER_WAVE
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo3_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -326,7 +326,7 @@ Pokeball_EventScript_Demo4_1:
 	end
 
 Pokeball_EventScript_Demo4_2:
-	givemon SPECIES_METAGROSS, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_BULLET_PUNCH, move2 = MOVE_ZEN_HEADBUTT, move3 = MOVE_REST, move4 = MOVE_ROCK_SLIDE
+	givemon SPECIES_METAGROSS, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 232, atkEv = 60, defEv = 0, speedEv = 176, spAtkEv = 0, spDefEv = 40, move1 = MOVE_BULLET_PUNCH, move2 = MOVE_ZEN_HEADBUTT, move3 = MOVE_REST, move4 = MOVE_ROCK_SLIDE
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo4_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -366,7 +366,7 @@ Pokeball_EventScript_Demo5_1:
 	end
 
 Pokeball_EventScript_Demo5_2:
-	givemon SPECIES_UMBREON, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 25, move1 = MOVE_THROAT_CHOP, move2 = MOVE_SHADOW_BALL, move3 = MOVE_ALLURING_VOICE, move4 = MOVE_TOXIC
+	givemon SPECIES_UMBREON, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 4, speedEv = 0, spAtkEv = 0, spDefEv = 252, move1 = MOVE_THROAT_CHOP, move2 = MOVE_SHADOW_BALL, move3 = MOVE_ALLURING_VOICE, move4 = MOVE_TOXIC
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo5_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -406,7 +406,7 @@ Pokeball_EventScript_Demo6_1:
 	end
 
 Pokeball_EventScript_Demo6_2:
-	givemon SPECIES_SCOLIPEDE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_TOXIC_SPIKES, move2 = MOVE_STOMPING_TANTRUM, move3 = MOVE_X_SCISSOR, move4 = MOVE_SWORDS_DANCE
+	givemon SPECIES_SCOLIPEDE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 0, atkEv = 252, defEv = 4, speedEv = 0, spAtkEv = 0, spDefEv = 252, move1 = MOVE_TOXIC_SPIKES, move2 = MOVE_STOMPING_TANTRUM, move3 = MOVE_X_SCISSOR, move4 = MOVE_SWORDS_DANCE
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo6_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -446,7 +446,7 @@ Pokeball_EventScript_Demo7_1:
 	end
 
 Pokeball_EventScript_Demo7_2:
-	givemon SPECIES_EMPOLEON, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_ICE_BEAM, move2 = MOVE_SURF, move3 = MOVE_FLASH_CANNON, move4 = MOVE_ROOST
+	givemon SPECIES_EMPOLEON, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 76, speedEv = 180, spAtkEv = 0, spDefEv = 0, move1 = MOVE_ICE_BEAM, move2 = MOVE_SURF, move3 = MOVE_FLASH_CANNON, move4 = MOVE_ROOST
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo7_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -486,7 +486,7 @@ Pokeball_EventScript_Demo8_1:
 	end
 
 Pokeball_EventScript_Demo8_2:
-	givemon SPECIES_EELEKTROSS, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_THUNDER_PUNCH, move2 = MOVE_GIGA_DRAIN, move3 = MOVE_DRAIN_PUNCH, move4 = MOVE_LIQUIDATION
+	givemon SPECIES_EELEKTROSS, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 4, defEv = 0, speedEv = 0, spAtkEv = 252, spDefEv = 0, move1 = MOVE_THUNDER_PUNCH, move2 = MOVE_GIGA_DRAIN, move3 = MOVE_DRAIN_PUNCH, move4 = MOVE_LIQUIDATION
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo8_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -526,7 +526,7 @@ Pokeball_EventScript_Demo9_1:
 	end
 
 Pokeball_EventScript_Demo9_2:
-	givemon SPECIES_FERROTHORN, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_LEECH_SEED, move4 = MOVE_POWER_WHIP
+	givemon SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 24, speedEv = 0, spAtkEv = 0, spDefEv = 232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_LEECH_SEED, move4 = MOVE_POWER_WHIP
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo9_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -566,7 +566,7 @@ Pokeball_EventScript_Demo10_1:
 	end
 
 Pokeball_EventScript_Demo10_2:
-	givemon SPECIES_AEGISLASH, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_THUNDER_PUNCH, move2 = MOVE_GIGA_DRAIN, move3 = MOVE_DRAIN_PUNCH, move4 = MOVE_LIQUIDATION
+	givemon SPECIES_AEGISLASH, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 0, speedEv = 0, spAtkEv = 4, spDefEv = 252, move1 = MOVE_FLASH_CANNON, move2 = MOVE_SHADOW_BALL, move3 = MOVE_NIGHT_SLASH, move4 = MOVE_SACRED_SWORD
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo10_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -606,7 +606,7 @@ Pokeball_EventScript_Demo11_1:
 	end
 
 Pokeball_EventScript_Demo11_2:
-	givemon SPECIES_TALONFLAME, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_ACROBATICS, move2 = MOVE_HEAT_WAVE, move3 = MOVE_ROOST, move4 = MOVE_SWORDS_DANCE
+	givemon SPECIES_TALONFLAME, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 0, speedEv = 252, spAtkEv = 4, spDefEv = 0, move1 = MOVE_ACROBATICS, move2 = MOVE_HEAT_WAVE, move3 = MOVE_ROOST, move4 = MOVE_SWORDS_DANCE
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo11_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -646,7 +646,7 @@ Pokeball_EventScript_Demo12_1:
 	end
 
 Pokeball_EventScript_Demo12_2:
-	givemon SPECIES_GALLADE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_ICE_PUNCH, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_PSYCHO_CUT, move4 = MOVE_PAIN_SPLIT
+	givemon SPECIES_GALLADE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 0, atkEv = 252, defEv = 4, speedEv = 0, spAtkEv = 0, spDefEv = 252, move1 = MOVE_ICE_PUNCH, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_PSYCHO_CUT, move4 = MOVE_PAIN_SPLIT
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo12_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -686,7 +686,7 @@ Pokeball_EventScript_Demo13_1:
 	end
 
 Pokeball_EventScript_Demo13_2:
-	givemon SPECIES_VENUSAUR, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_GIGA_DRAIN, move2 = MOVE_SLUDGE_BOMB, move3 = MOVE_EARTH_POWER, move4 = MOVE_TOXIC
+	givemon SPECIES_VENUSAUR, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 100, atkEv = 0, defEv = 4, speedEv = 152, spAtkEv = 252, spDefEv = 0, move1 = MOVE_GIGA_DRAIN, move2 = MOVE_SLUDGE_BOMB, move3 = MOVE_EARTH_POWER, move4 = MOVE_TOXIC
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo13_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -726,7 +726,7 @@ Pokeball_EventScript_Demo14_1:
 	end
 
 Pokeball_EventScript_Demo14_2:
-	givemon SPECIES_LYCANROC_DUSK, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_LEAF_BLADE, move2 = MOVE_CLOSE_COMBAT, move3 = MOVE_PSYCHO_CUT, move4 = MOVE_PAIN_SPLIT
+	givemon SPECIES_LYCANROC_DUSK, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 0, atkEv = 252, defEv = 4, speedEv = 252, spAtkEv = 0, spDefEv = 0, move1 = MOVE_DRILL_RUN, move2 = MOVE_ACCELEROCK, move3 = MOVE_PSYCHIC_FANGS, move4 = MOVE_STEALTH_ROCK
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo14_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -766,7 +766,7 @@ Pokeball_EventScript_Demo15_1:
 	end
 
 Pokeball_EventScript_Demo15_2:
-	givemon SPECIES_HATTERENE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_DRAINING_KISS, move2 = MOVE_PSYSHOCK, move3 = MOVE_MYSTICAL_FIRE, move4 = MOVE_TRICK_ROOM
+	givemon SPECIES_HATTERENE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 204, speedEv = 52, spAtkEv = 0, spDefEv = 0, move1 = MOVE_DRAINING_KISS, move2 = MOVE_PSYSHOCK, move3 = MOVE_MYSTICAL_FIRE, move4 = MOVE_TRICK_ROOM
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo15_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -806,7 +806,7 @@ Pokeball_EventScript_Demo16_1:
 	end
 
 Pokeball_EventScript_Demo16_2:
-	givemon SPECIES_KINGDRA, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_WATERFALL, move2 = MOVE_DRAGON_DANCE, move3 = MOVE_IRON_HEAD, move4 = MOVE_ICE_BEAM
+	givemon SPECIES_KINGDRA, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 0, atkEv = 0, defEv = 0, speedEv = 252, spAtkEv = 252, spDefEv = 4, move1 = MOVE_WATERFALL, move2 = MOVE_DRAGON_DANCE, move3 = MOVE_IRON_HEAD, move4 = MOVE_ICE_BEAM
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo16_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -846,7 +846,7 @@ Pokeball_EventScript_Demo17_1:
 	end
 
 Pokeball_EventScript_Demo17_2:
-	givemon SPECIES_ARCANINE, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_EXTREME_SPEED, move2 = MOVE_FLAMETHROWER, move3 = MOVE_CRUNCH, move4 = MOVE_SCORCHING_SANDS
+	givemon SPECIES_ARCANINE, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 160, atkEv = 252, defEv = 0, speedEv = 96, spAtkEv = 0, spDefEv = 0, move1 = MOVE_EXTREME_SPEED, move2 = MOVE_FLAMETHROWER, move3 = MOVE_CRUNCH, move4 = MOVE_SCORCHING_SANDS
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo17_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -886,7 +886,7 @@ Pokeball_EventScript_Demo18_1:
 	end
 
 Pokeball_EventScript_Demo18_2:
-	givemon SPECIES_TYRANITAR, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_STEALTH_ROCK, move2 = MOVE_EARTHQUAKE, move3 = MOVE_FOUL_PLAY, move4 = MOVE_STONE_EDGE
+	givemon SPECIES_TYRANITAR, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 4, defEv = 0, speedEv = 40, spAtkEv = 0, spDefEv = 212, move1 = MOVE_STEALTH_ROCK, move2 = MOVE_EARTHQUAKE, move3 = MOVE_FOUL_PLAY, move4 = MOVE_STONE_EDGE
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo18_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -926,7 +926,7 @@ Pokeball_EventScript_Demo19_1:
 	end
 
 Pokeball_EventScript_Demo19_2:
-	givemon SPECIES_NIDOQUEEN, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_EARTHQUAKE, move2 = MOVE_POISON_JAB, move3 = MOVE_CRUNCH, move4 = MOVE_THUNDERBOLT
+	givemon SPECIES_NIDOQUEEN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 248, atkEv = 0, defEv = 172, speedEv = 88, spAtkEv = 0, spDefEv = 0, move1 = MOVE_EARTHQUAKE, move2 = MOVE_POISON_JAB, move3 = MOVE_CRUNCH, move4 = MOVE_ICE_BEAM
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo19_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -966,7 +966,7 @@ Pokeball_EventScript_Demo20_1:
 	end
 
 Pokeball_EventScript_Demo20_2:
-	givemon SPECIES_LUXRAY, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_PLAY_ROUGH, move2 = MOVE_THROAT_CHOP, move3 = MOVE_PSYCHIC_FANGS, move4 = MOVE_THUNDERBOLT
+	givemon SPECIES_LUXRAY, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 4, defEv = 0, speedEv = 0, spAtkEv = 252, spDefEv = 0, move1 = MOVE_PLAY_ROUGH, move2 = MOVE_THROAT_CHOP, move3 = MOVE_PSYCHIC_FANGS, move4 = MOVE_THUNDERBOLT
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo20_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -1006,7 +1006,7 @@ Pokeball_EventScript_Demo21_1:
 	end
 
 Pokeball_EventScript_Demo21_2:
-	givemon SPECIES_HAWLUCHA, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_ACROBATICS, move2 = MOVE_SWORDS_DANCE, move3 = MOVE_THUNDER_PUNCH, move4 = MOVE_CROSS_CHOP
+	givemon SPECIES_HAWLUCHA, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 0, atkEv = 252, defEv = 0, speedEv = 252, spAtkEv = 0, spDefEv = 4, move1 = MOVE_ACROBATICS, move2 = MOVE_SWORDS_DANCE, move3 = MOVE_THUNDER_PUNCH, move4 = MOVE_CROSS_CHOP
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo21_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -1046,7 +1046,7 @@ Pokeball_EventScript_Demo22_1:
 	end
 
 Pokeball_EventScript_Demo22_2:
-	givemon SPECIES_LANTURN, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_THUNDERBOLT, move2 = MOVE_SCALD, move3 = MOVE_AQUA_RING, move4 = MOVE_DAZZLING_GLEAM
+	givemon SPECIES_LANTURN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 4, defEv = 0, speedEv = 0, spAtkEv = 252, spDefEv = 0, move1 = MOVE_THUNDERBOLT, move2 = MOVE_SCALD, move3 = MOVE_AQUA_RING, move4 = MOVE_DAZZLING_GLEAM
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo22_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -1086,7 +1086,7 @@ Pokeball_EventScript_Demo23_1:
 	end
 
 Pokeball_EventScript_Demo23_2:
-	givemon SPECIES_EXEGGUTOR, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_LEECH_SEED, move2 = MOVE_ENERGY_BALL, move3 = MOVE_PSYCHIC, move4 = MOVE_ANCIENT_POWER
+	givemon SPECIES_EXEGGUTOR, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 4, defEv = 0, speedEv = 0, spAtkEv = 252, spDefEv = 0, move1 = MOVE_LEECH_SEED, move2 = MOVE_ENERGY_BALL, move3 = MOVE_PSYCHIC, move4 = MOVE_ANCIENT_POWER
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo23_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -1126,7 +1126,7 @@ Pokeball_EventScript_Demo24_1:
 	end
 
 Pokeball_EventScript_Demo24_2:
-	givemon SPECIES_GARCHOMP, 100, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 20, speedEv = 20, atkEv = 20, move1 = MOVE_DRAGON_CLAW, move2 = MOVE_EARTHQUAKE, move3 = MOVE_IRON_HEAD, move4 = MOVE_FIRE_BLAST
+	givemon SPECIES_GARCHOMP, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 0, atkEv = 252, defEv = 4, speedEv = 252, spAtkEv = 0, spDefEv = 0, move1 = MOVE_DRAGON_CLAW, move2 = MOVE_EARTHQUAKE, move3 = MOVE_IRON_HEAD, move4 = MOVE_FIRE_BLAST
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo24_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -1234,7 +1234,7 @@ Pokeball_EventScript_Demo10_Text_1:
 	.string "Received Aegislash!$"
 
 Pokeball_EventScript_Demo11_Text_0:
-	.string "Do you want to choose \nFire/Flying Talonflame?$"
+	.string "Do you want to choose \nFire/Flying type Talonflame?$"
 
 Pokeball_EventScript_Demo11_Text_1:
 	.string "Received Talonflame!$"
@@ -1335,7 +1335,7 @@ NurseGive_Ready::
 	.string "Anyway you'll need these:$"
 
 NurseGive_GoGetem::
-	.string "You're all set, go show 'em who's\n "
+	.string "You're all set, go show 'em who's\n"
 	.string "the real gunslinger!$"
 
 NurseStop_Text::
