@@ -4,7 +4,7 @@ EverGrandeCity_DemoStarter_MapScripts::
 Demo_Mart::
 	lock
 	faceplayer
-	addmoney 5000
+	addmoney 500000
 	message Demo_Mart_Text_0
 	waitmessage
 	pokemart Demo_MartItems

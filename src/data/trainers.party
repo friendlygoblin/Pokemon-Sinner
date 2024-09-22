@@ -4798,9 +4798,9 @@ Modest Nature
 Altaria (F) @ Altarianite  
 Ability: Cloud Nine  
 Level: 53    
-EVs: 252 Atk / 4 SpD / 252 Spe
+EVs: 252 Atk / 4 SpD / 200 Spe
 Adamant Nature  
-- Dragon Dance  
+- Draco Meteor 
 - Dragon Claw  
 - Earthquake  
 - Play Rough  
@@ -4846,9 +4846,9 @@ EVs: 252 HP / 224 Def / 32 Spe
 Bold Nature  
 IVs: 0 Atk  
 - Hex  
-- Taunt  
+- Hydro Pump 
 - Will-O-Wisp  
-- Recover  
+- Scald
 
 Aurorus (F)  
 Ability: Refrigerate  
@@ -4876,7 +4876,7 @@ Level: 55
 EVs: 252 Atk / 4 SpD / 252 Spe
 Shiny: Yes  
 Jolly Nature  
-- Dragon Dance  
+- Bounce
 - Crunch  
 - Waterfall  
 - Earthquake  
@@ -6349,7 +6349,6 @@ Mugshot: Purple
 Trevenant (M)  
 Ability: Natural Cure  
 Level: 55  
-Tera Type: Ghost  
 EVs: 252 Atk / 4 SpD / 252 Spe 
 Brave Nature  
 - Dark Pulse  
@@ -6360,7 +6359,6 @@ Brave Nature
 Corviknight (F)  
 Ability: Pressure  
 Level: 55  
-Tera Type: Flying  
 EVs: 112 HP / 112 Atk / 48 Def / 56 SpA / 108 SpD / 68 Spe  
 Impish Nature  
 - Drill Peck  
@@ -6371,13 +6369,14 @@ Impish Nature
 Espeon (F)  
 Ability: Synchronize  
 Level: 56   
+Shiny: Yes   
 EVs: 4 Def / 252 SpA / 252 Spe
 Modest Nature  
 IVs: 0 Atk  
 - Shadow Ball  
 - Alluring Voice  
 - Psychic  
-- Wish  
+- Toxic
 
 Meloetta-Pirouette  
 Ability: Serene Grace  
