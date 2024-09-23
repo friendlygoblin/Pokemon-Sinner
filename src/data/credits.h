@@ -1,27 +1,28 @@
 enum
 {
     PAGE_TITLE,
+    PAGE_SPECIAL_THANKS_1,
     PAGE_DIRECTOR,
-    PAGE_ART_DIRECTOR,
-    PAGE_WORLD_DIRECTOR,
-    PAGE_LEAD_PROGRAMMER,
+    //PAGE_WORLD_DIRECTOR,
+    //PAGE_LEAD_PROGRAMMER,
     PAGE_PROGRAMMERS_1,
-    PAGE_PROGRAMMERS_2,
+    PAGE_LEAD_GRAPHIC_ARTIST,
+    /*PAGE_PROGRAMMERS_2,
     PAGE_PROGRAMMERS_3,
     PAGE_PROGRAMMERS_4,
     PAGE_GRAPHIC_DESIGNERS_1,
     PAGE_GRAPHIC_DESIGNERS_2,
     PAGE_GRAPHIC_DESIGNERS_3,
-    PAGE_MUSIC_COMPOSITION,
     PAGE_SOUND_EFFECTS,
-    PAGE_GAME_DESIGNERS_1,
     PAGE_GAME_DESIGNERS_2,
     PAGE_GAME_DESIGNERS_3,
     PAGE_SCENARIO_PLOT,
     PAGE_SCENARIO,
-    PAGE_SCRIPT_DESIGNERS,
+    PAGE_SCRIPT_DESIGNERS,*/
     PAGE_MAP_DESIGNERS,
-    PAGE_BATTLE_FRONTIER_DATA,
+    PAGE_GAME_DESIGNERS_1,
+    PAGE_MUSIC_COMPOSITION,
+    /*PAGE_BATTLE_FRONTIER_DATA,
     PAGE_PARAMETRIC_DESIGNERS,
     PAGE_POKEDEX_TEXT,
     PAGE_ENVIRONMENT_AND_TOOL_PROGRAMS_1,
@@ -32,7 +33,6 @@ enum
     PAGE_SUPPORT_PROGRAMMERS,
     PAGE_NCL_PRODUCT_TESTING,
     PAGE_PACKAGE_AND_MANUAL,
-    PAGE_SPECIAL_THANKS_1,
     PAGE_SPECIAL_THANKS_2,
     PAGE_SPECIAL_THANKS_3,
     PAGE_SPECIAL_THANKS_4,
@@ -56,40 +56,45 @@ enum
     PAGE_PRODUCERS,
     PAGE_EXECUTIVE_DIRECTOR,
     PAGE_EXECUTIVE_PRODUCERS_1,
-    PAGE_EXECUTIVE_PRODUCERS_2,
+    PAGE_EXECUTIVE_PRODUCERS_2,*/
+    PAGE_TEST_VOLUNTEERS,
+    PAGE_EMOTIONAL_SUPPORT_H1,
+    PAGE_EMOTIONAL_SUPPORT_H2,
+    PAGE_EMOTIONAL_SUPPORT_C1,
+    PAGE_EMOTIONAL_SUPPORT_C2,    
     PAGE_COUNT
 };
 
 #define ENTRIES_PER_PAGE 5
 
 static const u8 sCreditsText_EmptyString[]                    = _("");
-static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("POKéMON EMERALD VERSION");
+static const u8 sCreditsText_PkmnEmeraldVersion[]             = _("POKéMON SINNER VERSION");
 static const u8 sCreditsText_Credits[]                        = _("Credits");
-static const u8 sCreditsText_ExecutiveDirector[]              = _("Executive Director");
-static const u8 sCreditsText_Director[]                       = _("Director");
-static const u8 sCreditsText_ArtDirector[]                    = _("Art Director");
+//static const u8 sCreditsText_ExecutiveDirector[]              = _("Executive Director");
+static const u8 sCreditsText_Director[]                       = _("Directors");
+/*static const u8 sCreditsText_ArtDirector[]                    = _("Art Director");
 static const u8 sCreditsText_BattleDirector[]                 = _("Battle Director");
 static const u8 sCreditsText_MainProgrammer[]                 = _("Main Programmer");
 static const u8 sCreditsText_BattleSystemPgrms[]              = _("Battle System Programmers");
-static const u8 sCreditsText_FieldSystemPgrms[]               = _("Field System Programmer");
+static const u8 sCreditsText_FieldSystemPgrms[]               = _("Field System Programmer");*/
 static const u8 sCreditsText_Programmers[]                    = _("Programmers");
-static const u8 sCreditsText_MainGraphicDesigner[]            = _("Main Graphic Designer");
+/*static const u8 sCreditsText_MainGraphicDesigner[]            = _("Main Graphic Designer");
 static const u8 sCreditsText_GraphicDesigners[]               = _("Graphic Designers");
-static const u8 sCreditsText_PkmnDesigners[]                  = _("POKéMON Designers");
+static const u8 sCreditsText_PkmnDesigners[]                  = _("POKéMON Designers");*/
 static const u8 sCreditsText_MusicComposition[]               = _("Music Composition");
-static const u8 sCreditsText_SoundEffectsAndPkmnVoices[]      = _("Sound Effects & POKéMON Voices");
+//static const u8 sCreditsText_SoundEffectsAndPkmnVoices[]      = _("Sound Effects & POKéMON Voices");
 static const u8 sCreditsText_GameDesigners[]                  = _("Game Designers");
-static const u8 sCreditsText_ScenarioPlot[]                   = _("Scenario Plot");
+/*static const u8 sCreditsText_ScenarioPlot[]                   = _("Scenario Plot");
 static const u8 sCreditsText_Scenario[]                       = _("Scenario");
-static const u8 sCreditsText_ScriptDesigners[]                = _("Script Designers");
+static const u8 sCreditsText_ScriptDesigners[]                = _("Script Designers");*/
 static const u8 sCreditsText_MapDesigners[]                   = _("Map Designers");
-static const u8 sCreditsText_MapDataDesigners[]               = _("Map Data Designers");
+/*static const u8 sCreditsText_MapDataDesigners[]               = _("Map Data Designers");
 static const u8 sCreditsText_ParametricDesigners[]            = _("Parametric Designers");
 static const u8 sCreditsText_PokedexText[]                    = _("POKéDEX Text");
-static const u8 sCreditsText_EnvAndToolPgrms[]                = _("Environment & Tool Programmers");
-static const u8 sCreditsText_NCLProductTesting[]              = _("NCL Product Testing");
+static const u8 sCreditsText_EnvAndToolPgrms[]                = _("Environment & Tool Programmers");*/
+static const u8 sCreditsText_TestVolunteers[]                 = _("Test Volunteers");
 static const u8 sCreditsText_SpecialThanks[]                  = _("Special Thanks");
-static const u8 sCreditsText_Coordinators[]                   = _("Coordinators");
+/*static const u8 sCreditsText_Coordinators[]                   = _("Coordinators");
 static const u8 sCreditsText_Producers[]                      = _("Producers");
 static const u8 sCreditsText_ExecProducers[]                  = _("Executive Producers");
 static const u8 sCreditsText_InfoSupervisors[]                = _("Information Supervisors");
@@ -99,9 +104,30 @@ static const u8 sCreditsText_WorldDirector[]                  = _("World Directo
 static const u8 sCreditsText_BattleFrontierData[]             = _("Battle Frontier Data");
 static const u8 sCreditsText_SupportProgrammers[]             = _("Support Programmers");
 static const u8 sCreditsText_Artwork[]                        = _("Artwork");
-static const u8 sCreditsText_LeadProgrammer[]                 = _("Lead Programmer");
+static const u8 sCreditsText_LeadProgrammer[]                 = _("Lead Programmer");*/
 static const u8 sCreditsText_LeadGraphicArtist[]              = _("Lead Graphic Artist");
-static const u8 sCreditsText_SatoshiTajiri[]                  = _("Satoshi Tajiri");
+static const u8 sCreditsText_EmotionalSupport_H[]             = _("Human Emotional Support");
+static const u8 sCreditsText_EmotionalSupport_C[]             = _("Emotional Support Cats");
+
+static const u8 sCreditsText_TLDP[]                           = _("The Last Dinner Party");
+static const u8 sCreditsText_TheParlour[]                     = _("The Parlour");
+static const u8 sCreditsText_Ace[]                            = _("Ace");
+static const u8 sCreditsText_Aiden[]                          = _("Aiden");
+static const u8 sCreditsText_Amy[]                            = _("Amy");
+static const u8 sCreditsText_Brenae[]                         = _("Brenae");
+static const u8 sCreditsText_Goblin[]                         = _("Goblin");
+static const u8 sCreditsText_Mal[]                            = _("Mal");
+static const u8 sCreditsText_Mavis[]                          = _("Mavis");
+static const u8 sCreditsText_Meinth[]                         = _("Meinth");
+static const u8 sCreditsText_Nina[]                           = _("Nina");
+static const u8 sCreditsText_Ortie[]                          = _("Ortie");
+static const u8 sCreditsText_Rachel[]                         = _("Rachel");
+static const u8 sCreditsText_Steff[]                          = _("Steff");
+static const u8 sCreditsText_Trixie[]                         = _("Trixie");
+static const u8 sCreditsText_Yapgob[]                         = _("Yapgob");
+static const u8 sCreditsText_Zagreus[]                        = _("Zagreus");
+static const u8 sCreditsText_Zuko[]                           = _("Zuko");
+/*static const u8 sCreditsText_SatoshiTajiri[]                  = _("Satoshi Tajiri");
 static const u8 sCreditsText_JunichiMasuda[]                  = _("Junichi Masuda");
 static const u8 sCreditsText_KenSugimori[]                    = _("Ken Sugimori");
 static const u8 sCreditsText_ShigekiMorimoto[]                = _("Shigeki Morimoto");
@@ -220,35 +246,36 @@ static const u8 sCreditsText_RoyalNewZealandFederationBlind[] = _("Royal New Zea
 static const u8 sCreditsText_MotoyasuTojima[]                 = _("Motoyasu Tojima");
 static const u8 sCreditsText_NicolaPrattBarlow[]              = _("Nicola Pratt-Barlow");
 static const u8 sCreditsText_ShellieDow[]                     = _("Shellie Dow");
-static const u8 sCreditsText_ErikJohnson[]                    = _("Erik Johnson");
+static const u8 sCreditsText_ErikJohnson[]                    = _("Erik Johnson");*/
+
 static const struct CreditsEntry sCreditsEntry_EmptyString                      = { 0, FALSE, sCreditsText_EmptyString};
 static const struct CreditsEntry sCreditsEntry_PkmnEmeraldVersion               = { 7,  TRUE, sCreditsText_PkmnEmeraldVersion};
 static const struct CreditsEntry sCreditsEntry_Credits                          = {11,  TRUE, sCreditsText_Credits};
-static const struct CreditsEntry sCreditsEntry_ExecutiveDirector                = { 8,  TRUE, sCreditsText_ExecutiveDirector};
+//static const struct CreditsEntry sCreditsEntry_ExecutiveDirector                = { 8,  TRUE, sCreditsText_ExecutiveDirector};
 static const struct CreditsEntry sCreditsEntry_Director                         = {12,  TRUE, sCreditsText_Director};
-static const struct CreditsEntry sCreditsEntry_ArtDirector                      = {10,  TRUE, sCreditsText_ArtDirector};
+/*static const struct CreditsEntry sCreditsEntry_ArtDirector                      = {10,  TRUE, sCreditsText_ArtDirector};
 static const struct CreditsEntry sCreditsEntry_BattleDirector                   = {10,  TRUE, sCreditsText_BattleDirector};
 static const struct CreditsEntry sCreditsEntry_MainProgrammer                   = {10,  TRUE, sCreditsText_MainProgrammer};
 static const struct CreditsEntry sCreditsEntry_BattleSystemPgrms                = { 8,  TRUE, sCreditsText_BattleSystemPgrms};
-static const struct CreditsEntry sCreditsEntry_FieldSystemPgrms                 = { 7,  TRUE, sCreditsText_FieldSystemPgrms};
+static const struct CreditsEntry sCreditsEntry_FieldSystemPgrms                 = { 7,  TRUE, sCreditsText_FieldSystemPgrms};*/
 static const struct CreditsEntry sCreditsEntry_Programmers                      = {12,  TRUE, sCreditsText_Programmers};
-static const struct CreditsEntry sCreditsEntry_MainGraphicDesigner              = { 7,  TRUE, sCreditsText_MainGraphicDesigner};
+/*static const struct CreditsEntry sCreditsEntry_MainGraphicDesigner              = { 7,  TRUE, sCreditsText_MainGraphicDesigner};
 static const struct CreditsEntry sCreditsEntry_GraphicDesigners                 = { 9,  TRUE, sCreditsText_GraphicDesigners};
-static const struct CreditsEntry sCreditsEntry_PkmnDesigners                    = {10,  TRUE, sCreditsText_PkmnDesigners};
+static const struct CreditsEntry sCreditsEntry_PkmnDesigners                    = {10,  TRUE, sCreditsText_PkmnDesigners};*/
 static const struct CreditsEntry sCreditsEntry_MusicComposition                 = {13,  TRUE, sCreditsText_MusicComposition};
-static const struct CreditsEntry sCreditsEntry_SoundEffectsAndPkmnVoices        = { 4,  TRUE, sCreditsText_SoundEffectsAndPkmnVoices};
+//static const struct CreditsEntry sCreditsEntry_SoundEffectsAndPkmnVoices        = { 4,  TRUE, sCreditsText_SoundEffectsAndPkmnVoices};
 static const struct CreditsEntry sCreditsEntry_GameDesigners                    = {11,  TRUE, sCreditsText_GameDesigners};
-static const struct CreditsEntry sCreditsEntry_ScenarioPlot                     = {11,  TRUE, sCreditsText_ScenarioPlot};
+/*static const struct CreditsEntry sCreditsEntry_ScenarioPlot                     = {11,  TRUE, sCreditsText_ScenarioPlot};
 static const struct CreditsEntry sCreditsEntry_Scenario                         = {13,  TRUE, sCreditsText_Scenario};
-static const struct CreditsEntry sCreditsEntry_ScriptDesigners                  = {10,  TRUE, sCreditsText_ScriptDesigners};
+static const struct CreditsEntry sCreditsEntry_ScriptDesigners                  = {10,  TRUE, sCreditsText_ScriptDesigners};*/
 static const struct CreditsEntry sCreditsEntry_MapDesigners                     = {11,  TRUE, sCreditsText_MapDesigners};
-static const struct CreditsEntry sCreditsEntry_MapDataDesigners                 = { 9,  TRUE, sCreditsText_MapDataDesigners};
+/*static const struct CreditsEntry sCreditsEntry_MapDataDesigners                 = { 9,  TRUE, sCreditsText_MapDataDesigners};
 static const struct CreditsEntry sCreditsEntry_ParametricDesigners              = { 9,  TRUE, sCreditsText_ParametricDesigners};
 static const struct CreditsEntry sCreditsEntry_PokedexText                      = {11,  TRUE, sCreditsText_PokedexText};
-static const struct CreditsEntry sCreditsEntry_EnvAndToolPgrms                  = { 6,  TRUE, sCreditsText_EnvAndToolPgrms};
-static const struct CreditsEntry sCreditsEntry_NCLProductTesting                = {11,  TRUE, sCreditsText_NCLProductTesting};
+static const struct CreditsEntry sCreditsEntry_EnvAndToolPgrms                  = { 6,  TRUE, sCreditsText_EnvAndToolPgrms};*/
+static const struct CreditsEntry sCreditsEntry_TestVolunteers                   = {11,  TRUE, sCreditsText_TestVolunteers};
 static const struct CreditsEntry sCreditsEntry_SpecialThanks                    = {10,  TRUE, sCreditsText_SpecialThanks};
-static const struct CreditsEntry sCreditsEntry_Coordinators                     = {11,  TRUE, sCreditsText_Coordinators};
+/*static const struct CreditsEntry sCreditsEntry_Coordinators                     = {11,  TRUE, sCreditsText_Coordinators};
 static const struct CreditsEntry sCreditsEntry_Producers                        = {11,  TRUE, sCreditsText_Producers};
 static const struct CreditsEntry sCreditsEntry_ExecProducers                    = { 7,  TRUE, sCreditsText_ExecProducers};
 static const struct CreditsEntry sCreditsEntry_InfoSupervisors                  = {10,  TRUE, sCreditsText_InfoSupervisors};
@@ -258,9 +285,30 @@ static const struct CreditsEntry sCreditsEntry_WorldDirector                    
 static const struct CreditsEntry sCreditsEntry_BattleFrontierData               = { 8,  TRUE, sCreditsText_BattleFrontierData};
 static const struct CreditsEntry sCreditsEntry_SupportProgrammers               = {10,  TRUE, sCreditsText_SupportProgrammers};
 static const struct CreditsEntry sCreditsEntry_Artwork                          = {12,  TRUE, sCreditsText_Artwork};
-static const struct CreditsEntry sCreditsEntry_LeadProgrammer                   = {10,  TRUE, sCreditsText_LeadProgrammer};
+static const struct CreditsEntry sCreditsEntry_LeadProgrammer                   = {10,  TRUE, sCreditsText_LeadProgrammer};*/
 static const struct CreditsEntry sCreditsEntry_LeadGraphicArtist                = { 9,  TRUE, sCreditsText_LeadGraphicArtist};
-static const struct CreditsEntry sCreditsEntry_SatoshiTajiri                    = {11, FALSE, sCreditsText_SatoshiTajiri};
+static const struct CreditsEntry sCreditsEntry_EmotionalSupport_H               = { 9,  TRUE, sCreditsText_EmotionalSupport_H};
+static const struct CreditsEntry sCreditsEntry_EmotionalSupport_C               = { 9,  TRUE, sCreditsText_EmotionalSupport_C};
+
+static const struct CreditsEntry sCreditsEntry_TLDP                             = {11, FALSE, sCreditsText_TLDP};
+static const struct CreditsEntry sCreditsEntry_TheParlour                       = {11, FALSE, sCreditsText_TheParlour};
+static const struct CreditsEntry sCreditsEntry_Ace                              = {11, FALSE, sCreditsText_Ace};
+static const struct CreditsEntry sCreditsEntry_Aiden                            = {11, FALSE, sCreditsText_Aiden};
+static const struct CreditsEntry sCreditsEntry_Amy                              = {11, FALSE, sCreditsText_Amy};
+static const struct CreditsEntry sCreditsEntry_Brenae                           = {11, FALSE, sCreditsText_Brenae};
+static const struct CreditsEntry sCreditsEntry_Goblin                           = {11, FALSE, sCreditsText_Goblin};
+static const struct CreditsEntry sCreditsEntry_Mal                              = {11, FALSE, sCreditsText_Mal};
+static const struct CreditsEntry sCreditsEntry_Mavis                            = {11, FALSE, sCreditsText_Mavis};
+static const struct CreditsEntry sCreditsEntry_Meinth                           = {11, FALSE, sCreditsText_Meinth};
+static const struct CreditsEntry sCreditsEntry_Nina                             = {11, FALSE, sCreditsText_Nina};
+static const struct CreditsEntry sCreditsEntry_Ortie                            = {11, FALSE, sCreditsText_Ortie};
+static const struct CreditsEntry sCreditsEntry_Rachel                           = {11, FALSE, sCreditsText_Rachel};
+static const struct CreditsEntry sCreditsEntry_Steff                            = {11, FALSE, sCreditsText_Steff};
+static const struct CreditsEntry sCreditsEntry_Trixie                           = {11, FALSE, sCreditsText_Trixie};
+static const struct CreditsEntry sCreditsEntry_Yapgob                           = {11, FALSE, sCreditsText_Yapgob};
+static const struct CreditsEntry sCreditsEntry_Zagreus                          = {11, FALSE, sCreditsText_Zagreus};
+static const struct CreditsEntry sCreditsEntry_Zuko                             = {11, FALSE, sCreditsText_Zuko};
+/*static const struct CreditsEntry sCreditsEntry_SatoshiTajiri                    = {11, FALSE, sCreditsText_SatoshiTajiri};
 static const struct CreditsEntry sCreditsEntry_JunichiMasuda                    = {11, FALSE, sCreditsText_JunichiMasuda};
 static const struct CreditsEntry sCreditsEntry_KenSugimori                      = {11, FALSE, sCreditsText_KenSugimori};
 static const struct CreditsEntry sCreditsEntry_ShigekiMorimoto                  = {11, FALSE, sCreditsText_ShigekiMorimoto};
@@ -379,7 +427,7 @@ static const struct CreditsEntry sCreditsEntry_RoyalNewZealandFederationBlind   
 static const struct CreditsEntry sCreditsEntry_MotoyasuTojima                   = { 0, FALSE, sCreditsText_MotoyasuTojima};
 static const struct CreditsEntry sCreditsEntry_NicolaPrattBarlow                = { 0, FALSE, sCreditsText_NicolaPrattBarlow};
 static const struct CreditsEntry sCreditsEntry_ShellieDow                       = { 0, FALSE, sCreditsText_ShellieDow};
-static const struct CreditsEntry sCreditsEntry_ErikJohnson                      = { 0, FALSE, sCreditsText_ErikJohnson};
+static const struct CreditsEntry sCreditsEntry_ErikJohnson                      = { 0, FALSE, sCreditsText_ErikJohnson};*/
 
 #define _ &sCreditsEntry_EmptyString
 static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][ENTRIES_PER_PAGE] =
@@ -391,396 +439,88 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
         _
     },
+        [PAGE_SPECIAL_THANKS_1] = {
+        _,
+        &sCreditsEntry_SpecialThanks,
+        &sCreditsEntry_TLDP,
+        &sCreditsEntry_TheParlour,
+        _,
+    },
     [PAGE_DIRECTOR] = {
         _,
         &sCreditsEntry_Director,
-        &sCreditsEntry_ShigekiMorimoto,
-        _,
-        _,
-    },
-    [PAGE_ART_DIRECTOR] = {
-        _,
-        &sCreditsEntry_ArtDirector,
-        &sCreditsEntry_KenSugimori,
-        _,
-        _,
-    },
-    [PAGE_WORLD_DIRECTOR] = {
-        _,
-        &sCreditsEntry_WorldDirector,
-        &sCreditsEntry_JunichiMasuda,
-        _,
-        _,
-    },
-    [PAGE_LEAD_PROGRAMMER] = {
-        &sCreditsEntry_LeadProgrammer,
-        &sCreditsEntry_HisashiSogabe,
-        &sCreditsEntry_LeadGraphicArtist,
-        &sCreditsEntry_MotofumiFujiwara,
-        _,
+        &sCreditsEntry_Amy,
+        &sCreditsEntry_Goblin,
+        _
     },
     [PAGE_PROGRAMMERS_1] = {
+        _,
         &sCreditsEntry_Programmers,
-        &sCreditsEntry_HisashiSogabe,
-        &sCreditsEntry_TomomichiOhta,
-        &sCreditsEntry_NozomuSaito,
+        &sCreditsEntry_Amy,
+        &sCreditsEntry_Goblin,
+        _
+    },
+        [PAGE_LEAD_GRAPHIC_ARTIST] = {
         _,
-    },
-    [PAGE_PROGRAMMERS_2] = {
-        &sCreditsEntry_Programmers,
-        &sCreditsEntry_AkitoMori,
-        &sCreditsEntry_HiroyukiNakamura,
-        &sCreditsEntry_MasaoTaya,
+        &sCreditsEntry_LeadGraphicArtist,
+        &sCreditsEntry_Goblin,
         _,
+        _
     },
-    [PAGE_PROGRAMMERS_3] = {
-        &sCreditsEntry_Programmers,
-        &sCreditsEntry_SatoshiNohara,
-        &sCreditsEntry_MiyukiIwasawa,
-        &sCreditsEntry_YoshinoriMatsuda,
-        &sCreditsEntry_KeitaKagaya,
-    },
-    [PAGE_PROGRAMMERS_4] = {
-        &sCreditsEntry_Programmers,
-        &sCreditsEntry_TetsuyaWatanabe,
-        &sCreditsEntry_SosukeTamada,
-        &sCreditsEntry_TakenoriOhta,
+        [PAGE_MAP_DESIGNERS] = {
         _,
-    },
-    [PAGE_GRAPHIC_DESIGNERS_1] = {
-        _,
-        &sCreditsEntry_GraphicDesigners,
-        &sCreditsEntry_MotofumiFujiwara,
-        &sCreditsEntry_SatoshiOhta,
-        _,
-    },
-    [PAGE_GRAPHIC_DESIGNERS_2] = {
-        &sCreditsEntry_GraphicDesigners,
-        &sCreditsEntry_KenkichiToyama,
-        &sCreditsEntry_AsukaIwashita,
-        &sCreditsEntry_TakaoUnno,
-        _,
-    },
-    [PAGE_GRAPHIC_DESIGNERS_3] = {
-        &sCreditsEntry_GraphicDesigners,
-        &sCreditsEntry_KenSugimori,
-        &sCreditsEntry_HironobuYoshida,
-        &sCreditsEntry_AimiTomita,
-        &sCreditsEntry_KanakoEo,
-    },
-    [PAGE_MUSIC_COMPOSITION] = {
-        &sCreditsEntry_MusicComposition,
-        &sCreditsEntry_GoIchinose,
-        &sCreditsEntry_JunichiMasuda,
-        &sCreditsEntry_MorikazuAoki,
-        &sCreditsEntry_HitomiSato,
-    },
-    [PAGE_SOUND_EFFECTS] = {
-        _,
-        &sCreditsEntry_SoundEffectsAndPkmnVoices,
-        &sCreditsEntry_GoIchinose,
-        &sCreditsEntry_MorikazuAoki,
-        _,
-    },
-    [PAGE_GAME_DESIGNERS_1] = {
-        &sCreditsEntry_GameDesigners,
-        &sCreditsEntry_ShigekiMorimoto,
-        &sCreditsEntry_TeruyukiShimoyamada,
-        &sCreditsEntry_TakeshiKawachimaru,
-        &sCreditsEntry_AkihitoTomisawa,
-    },
-    [PAGE_GAME_DESIGNERS_2] = {
-        &sCreditsEntry_GameDesigners,
-        &sCreditsEntry_SuguruNakatsui,
-        &sCreditsEntry_TetsujiOhta,
-        &sCreditsEntry_HitomiSato,
-        &sCreditsEntry_KenjiMatsushima,
-    },
-    [PAGE_GAME_DESIGNERS_3] = {
-        &sCreditsEntry_GameDesigners,
-        &sCreditsEntry_JunichiMasuda,
-        &sCreditsEntry_KojiNishino,
-        &sCreditsEntry_ShigeruOhmori,
-        &sCreditsEntry_TadashiTakahashi,
-    },
-    [PAGE_SCENARIO_PLOT] = {
-        &sCreditsEntry_ScenarioPlot,
-        &sCreditsEntry_AkihitoTomisawa,
-        &sCreditsEntry_JunichiMasuda,
-        &sCreditsEntry_KojiNishino,
-        _,
-    },
-    [PAGE_SCENARIO] = {
-        &sCreditsEntry_Scenario,
-        &sCreditsEntry_AkihitoTomisawa,
-        &sCreditsEntry_HitomiSato,
-        &sCreditsEntry_ToshinobuMatsumiya,
-        _,
-    },
-    [PAGE_SCRIPT_DESIGNERS] = {
-        &sCreditsEntry_ScriptDesigners,
-        &sCreditsEntry_TomomichiOhta,
-        &sCreditsEntry_SatoshiNohara,
-        _,
-        _,
-    },
-    [PAGE_MAP_DESIGNERS] = {
         &sCreditsEntry_MapDesigners,
-        &sCreditsEntry_SuguruNakatsui,
-        &sCreditsEntry_TeruyukiShimoyamada,
-        &sCreditsEntry_ShigeruOhmori,
-        &sCreditsEntry_TetsujiOhta,
+        &sCreditsEntry_Amy,
+        _,
+        _
     },
-    [PAGE_BATTLE_FRONTIER_DATA] = {
-        _,
-        &sCreditsEntry_BattleFrontierData,
-        &sCreditsEntry_TetsujiOhta,
-        _,
-        _,
+        [PAGE_GAME_DESIGNERS_1] = {
+        &sCreditsEntry_GameDesigners,
+        &sCreditsEntry_Amy,
+        &sCreditsEntry_Goblin,
+        &sCreditsEntry_Nina,
+        _
     },
-    [PAGE_PARAMETRIC_DESIGNERS] = {
-        &sCreditsEntry_ParametricDesigners,
-        &sCreditsEntry_TeruyukiShimoyamada,
-        &sCreditsEntry_ShigekiMorimoto,
-        &sCreditsEntry_TetsujiOhta,
-        &sCreditsEntry_KojiNishino,
+        [PAGE_MUSIC_COMPOSITION] = {
+        &sCreditsEntry_MusicComposition,
+        &sCreditsEntry_Goblin,
+        &sCreditsEntry_Mal,
+        &sCreditsEntry_Meinth,
+        _
     },
-    [PAGE_POKEDEX_TEXT] = {
+        [PAGE_TEST_VOLUNTEERS] = {
         _,
-        &sCreditsEntry_PokedexText,
-        &sCreditsEntry_KenjiMatsushima,
-        _,
-        _,
+        &sCreditsEntry_TestVolunteers,
+        &sCreditsEntry_Ace,
+        &sCreditsEntry_Mal,
+        _
     },
-    [PAGE_ENVIRONMENT_AND_TOOL_PROGRAMS_1] = {
-        &sCreditsEntry_EnvAndToolPgrms,
-        &sCreditsEntry_HisashiSogabe,
-        &sCreditsEntry_SosukeTamada,
-        &sCreditsEntry_HiroyukiNakamura,
-        &sCreditsEntry_AkitoMori,
+        [PAGE_EMOTIONAL_SUPPORT_H1] = {
+        &sCreditsEntry_EmotionalSupport_H,
+        &sCreditsEntry_Aiden,
+        &sCreditsEntry_Brenae,
+        &sCreditsEntry_Mavis,
+        _
     },
-    [PAGE_PKMN_DESIGNERS_1] = {
-        &sCreditsEntry_PkmnDesigners,
-        &sCreditsEntry_KenSugimori,
-        &sCreditsEntry_MotofumiFujiwara,
-        &sCreditsEntry_ShigekiMorimoto,
-        _,
+        [PAGE_EMOTIONAL_SUPPORT_H2] = {
+        &sCreditsEntry_EmotionalSupport_H,
+        &sCreditsEntry_Rachel,
+        &sCreditsEntry_Steff,
+        &sCreditsEntry_Yapgob,
+        _
     },
-    [PAGE_PKMN_DESIGNERS_2] = {
-        &sCreditsEntry_PkmnDesigners,
-        &sCreditsEntry_HironobuYoshida,
-        &sCreditsEntry_SatoshiOhta,
-        &sCreditsEntry_AsukaIwashita,
+        [PAGE_EMOTIONAL_SUPPORT_C1] = {
         _,
+        &sCreditsEntry_EmotionalSupport_C,
+        &sCreditsEntry_Ortie,
+        &sCreditsEntry_Trixie,
+        _
     },
-    [PAGE_PKMN_DESIGNERS_3] = {
-        &sCreditsEntry_PkmnDesigners,
-        &sCreditsEntry_TakaoUnno,
-        &sCreditsEntry_KanakoEo,
-        &sCreditsEntry_AimiTomita,
+        [PAGE_EMOTIONAL_SUPPORT_C2] = {
         _,
-    },
-    [PAGE_PKMN_DESIGNERS_4] = {
-        &sCreditsEntry_PkmnDesigners,
-        &sCreditsEntry_AtsukoNishida,
-        &sCreditsEntry_MuneoSaito,
-        &sCreditsEntry_RenaYoshikawa,
-        &sCreditsEntry_JunOkutani,
-    },
-    [PAGE_SUPPORT_PROGRAMMERS] = {
-        _,
-        &sCreditsEntry_SupportProgrammers,
-        &sCreditsEntry_SatoshiMitsuhara,
-        &sCreditsEntry_DaisukeHoshino,
-        _,
-    },
-    [PAGE_NCL_PRODUCT_TESTING] = {
-        _,
-        &sCreditsEntry_NCLProductTesting,
-        &sCreditsEntry_NCLSuperMarioClub,
-        _,
-        _,
-    },
-    [PAGE_PACKAGE_AND_MANUAL] = {
-        _,
-        &sCreditsEntry_PackageAndManual,
-        &sCreditsEntry_KenSugimori,
-        _,
-        _,
-    },
-    [PAGE_SPECIAL_THANKS_1] = {
-        _,
-        &sCreditsEntry_SpecialThanks,
-        &sCreditsEntry_KenjiTominaga,
-        &sCreditsEntry_HirokiEnomoto,
-        _,
-    },
-    [PAGE_SPECIAL_THANKS_2] = {
-        &sCreditsEntry_SpecialThanks,
-        &sCreditsEntry_KazuyaSuyama,
-        &sCreditsEntry_KenjiroIto,
-        &sCreditsEntry_MichikoTakizawa,
-        &sCreditsEntry_MakikoTakada,
-    },
-    [PAGE_SPECIAL_THANKS_3] = {
-        &sCreditsEntry_SpecialThanks,
-        &sCreditsEntry_MikikoOhhashi,
-        &sCreditsEntry_TakanaoKondo,
-        &sCreditsEntry_RuiKawaguchi,
-        _,
-    },
-    [PAGE_SPECIAL_THANKS_4] = {
-        &sCreditsEntry_SpecialThanks,
-        &sCreditsEntry_TakahiroOhnishi,
-        &sCreditsEntry_NorihideOkamura,
-        &sCreditsEntry_ShunsukeKohori,
-        _,
-    },
-    [PAGE_INFORMATION_SUPERVISORS] = {
-        &sCreditsEntry_InfoSupervisors,
-        &sCreditsEntry_KazuyukiTerada,
-        &sCreditsEntry_YuriSakurai,
-        &sCreditsEntry_YumiFunasaka,
-        &sCreditsEntry_NaokoYanase,
-    },
-    [PAGE_ARTWORK_1] = {
-        _,
-        &sCreditsEntry_Artwork,
-        &sCreditsEntry_SachikoNakamichi,
-        &sCreditsEntry_FujikoNomura,
-        _,
-    },
-    [PAGE_ARTWORK_2] = {
-        _,
-        &sCreditsEntry_Artwork,
-        &sCreditsEntry_HideyukiNakajima,
-        &sCreditsEntry_HidenoriSaeki,
-        _,
-    },
-    [PAGE_ARTWORK_3] = {
-        &sCreditsEntry_Artwork,
-        &sCreditsEntry_YokoWatanabe,
-        &sCreditsEntry_SakaeKimura,
-        &sCreditsEntry_ChiakiShinkai,
-        _,
-    },
-    [PAGE_COORDINATORS] = {
-        &sCreditsEntry_Coordinators,
-        &sCreditsEntry_KazukiYoshihara,
-        &sCreditsEntry_AkiraKinashi,
-        &sCreditsEntry_RetsujiNomoto,
-        _,
-    },
-    [PAGE_ENGLISH_VERSION] = {
-        _,
-        &sCreditsEntry_EnglishVersion,
-        &sCreditsEntry_HiroNakamura,
-        &sCreditsEntry_SethMcMahill,
-        _,
-    },
-    [PAGE_TRANSLATOR] = {
-        _,
-        &sCreditsEntry_Translator,
-        &sCreditsEntry_NobOgasawara,
-        _,
-        _,
-    },
-    [PAGE_TEXT_EDITOR] = {
-        _,
-        &sCreditsEntry_TextEditor,
-        &sCreditsEntry_TeresaLillygren,
-        _,
-        _,
-    },
-    [PAGE_NCL_COORDINATOR] = {
-        _,
-        &sCreditsEntry_NCLCoordinator,
-        &sCreditsEntry_KimikoNakamichi,
-        _,
-        _,
-    },
-    [PAGE_PROGRAMMERS_5] = {
-        &sCreditsEntry_Programmers,
-        &sCreditsEntry_TerukiMurakawa,
-        &sCreditsEntry_SouichiYamamoto,
-        &sCreditsEntry_YuichiroIto,
-        &sCreditsEntry_AkiraKinashi,
-    },
-    [PAGE_GRAPHIC_DESIGNER] = {
-        _,
-        &sCreditsEntry_GraphicDesigner,
-        &sCreditsEntry_AkiraKinashi,
-        _,
-        _,
-    },
-    [PAGE_ENVIRONMENT_AND_TOOL_PROGRAMS_2] = {
-        &sCreditsEntry_EnvAndToolPgrms,
-        &sCreditsEntry_TerukiMurakawa,
-        &sCreditsEntry_SouichiYamamoto,
-        &sCreditsEntry_KimikoNakamichi,
-        _,
-    },
-    [PAGE_NOA_TESTING] = {
-        &sCreditsEntry_NOAProductTesting,
-        &sCreditsEntry_ThomasHertzog,
-        &sCreditsEntry_ErikJohnson,
-        &sCreditsEntry_MikaKurosawa,
-        _,
-    },
-    [PAGE_BRAILLE_CODE_CHECK_1] = {
-        &sCreditsEntry_BrailleCodeCheck,
-        &sCreditsEntry_NationalFederationBlind,
-        &sCreditsEntry_PatriciaAMaurer,
-        &sCreditsEntry_JapanBrailleLibrary,
-        &sCreditsEntry_EuropeanBlindUnion,
-    },
-    [PAGE_BRAILLE_CODE_CHECK_2] = {
-        _,
-        &sCreditsEntry_BrailleCodeCheck,
-        &sCreditsEntry_AustralianBrailleAuthority,
-        &sCreditsEntry_RoyalNewZealandFederationBlind,
-        _,
-    },
-    [PAGE_SPECIAL_THANKS_5] = {
-        &sCreditsEntry_SpecialThanks,
-        &sCreditsEntry_HiroyukiUesugi,
-        &sCreditsEntry_MotoyasuTojima,
-        &sCreditsEntry_NicolaPrattBarlow,
-        &sCreditsEntry_ShellieDow,
-    },
-    [PAGE_TASK_MANAGERS] = {
-        _,
-        &sCreditsEntry_TaskManagers,
-        &sCreditsEntry_AzusaTajima,
-        &sCreditsEntry_ShusakuEgami,
-        _,
-    },
-    [PAGE_PRODUCERS] = {
-        &sCreditsEntry_Producers,
-        &sCreditsEntry_HiroyukiJinnai,
-        &sCreditsEntry_HitoshiYamagami,
-        &sCreditsEntry_GakujiNomoto,
-        &sCreditsEntry_HiroakiTsuru,
-    },
-    [PAGE_EXECUTIVE_DIRECTOR] = {
-        _,
-        &sCreditsEntry_ExecutiveDirector,
-        &sCreditsEntry_SatoshiTajiri,
-        _,
-        _,
-    },
-    [PAGE_EXECUTIVE_PRODUCERS_1] = {
-        _,
-        &sCreditsEntry_ExecProducers,
-        &sCreditsEntry_SatoruIwata,
-        _,
-        _,
-    },
-    [PAGE_EXECUTIVE_PRODUCERS_2] = {
-        _,
-        &sCreditsEntry_ExecProducers,
-        &sCreditsEntry_TsunekazIshihara,
-        _,
+        &sCreditsEntry_EmotionalSupport_C,
+        &sCreditsEntry_Zagreus,
+        &sCreditsEntry_Zuko,
         _,
     },
 };
