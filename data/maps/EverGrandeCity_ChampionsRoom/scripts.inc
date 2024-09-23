@@ -36,6 +36,7 @@ EverGrandeCity_ChampionsRoom_EventScript_EnterRoom::
 	releaseall
 	end
 
+
 EverGrandeCity_ChampionsRoom_Movement_PlayerApproachWallace:
 	walk_up
 	walk_up
@@ -48,6 +49,7 @@ EverGrandeCity_ChampionsRoom_EventScript_Wallace::
 	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
 	end
 
+
 EverGrandeCity_ChampionsRoom_EventScript_Defeated::
 	playse SE_DOOR
 	setmetatile 6, 1, METATILE_EliteFour_OpenDoorChampion_Frame, FALSE
@@ -57,22 +59,37 @@ EverGrandeCity_ChampionsRoom_EventScript_Defeated::
 	closemessage
 	playse SE_DOOR
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, EverGrandeCity_ChampionsRoom_EventScript_PlayMayMusic
-	call_if_eq VAR_RESULT, FEMALE, EverGrandeCity_ChampionsRoom_EventScript_PlayBrendanMusic
+	compare VAR_RESULT, MALE
+	goto_if_eq EverGrandeCity_ChampionsRoom_EventScript_Defeated_2
+	call EverGrandeCity_ChampionsRoom_EventScript_PlayBrendanMusic
+EverGrandeCity_ChampionsRoom_EventScript_Defeated_1:
 	addobject LOCALID_RIVAL
 	call EverGrandeCity_ChampionsRoom_EventScript_RivalApproachPlayer
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_ChampionsRoom_EventScript_MayAdvice
-	goto_if_eq VAR_RESULT, FEMALE, EverGrandeCity_ChampionsRoom_EventScript_BrendanAdvice
+	compare VAR_RESULT, MALE
+	goto_if_eq EverGrandeCity_ChampionsRoom_EventScript_Defeated_6
+	goto EverGrandeCity_ChampionsRoom_EventScript_BrendanAdvice
+EverGrandeCity_ChampionsRoom_EventScript_Defeated_5:
 	end
+
+EverGrandeCity_ChampionsRoom_EventScript_Defeated_2:
+	call EverGrandeCity_ChampionsRoom_EventScript_PlayMayMusic
+	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated_1
+
+EverGrandeCity_ChampionsRoom_EventScript_Defeated_6:
+	goto EverGrandeCity_ChampionsRoom_EventScript_MayAdvice
+	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated_5
+
 
 EverGrandeCity_ChampionsRoom_EventScript_PlayMayMusic::
 	playbgm MUS_ENCOUNTER_MAY, FALSE
 	return
 
+
 EverGrandeCity_ChampionsRoom_EventScript_PlayBrendanMusic::
 	playbgm MUS_ENCOUNTER_BRENDAN, FALSE
 	return
+
 
 EverGrandeCity_ChampionsRoom_EventScript_MayAdvice::
 	msgbox EverGrandeCity_ChampionsRoom_Text_MayAdvice, MSGBOX_DEFAULT
@@ -87,6 +104,7 @@ EverGrandeCity_ChampionsRoom_EventScript_MayAdvice::
 	goto EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF
 	end
 
+
 EverGrandeCity_ChampionsRoom_EventScript_BrendanAdvice::
 	msgbox EverGrandeCity_ChampionsRoom_Text_BrendanAdvice, MSGBOX_DEFAULT
 	delay 40
@@ -100,6 +118,7 @@ EverGrandeCity_ChampionsRoom_EventScript_BrendanAdvice::
 	goto EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF
 	end
 
+
 EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	closemessage
 	addobject LOCALID_BIRCH
@@ -108,7 +127,6 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex, MSGBOX_DEFAULT
-	@call ProfBirch_EventScript_RatePokedex
 	msgbox EverGrandeCity_ChampionsRoom_Text_BirchCongratulations, MSGBOX_DEFAULT
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -128,8 +146,10 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	waitmovement 0
 	msgbox EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside, MSGBOX_DEFAULT
 	checkplayergender
-	call_if_eq VAR_RESULT, MALE, EverGrandeCity_ChampionsRoom_EventScript_MayCongratulations
-	call_if_eq VAR_RESULT, FEMALE, EverGrandeCity_ChampionsRoom_EventScript_BrendanCongratulations
+	compare VAR_RESULT, MALE
+	goto_if_eq EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF_2
+	goto EverGrandeCity_ChampionsRoom_EventScript_BrendanCongratulations
+EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF_1:
 	closemessage
 	applymovement LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceExit
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExit
@@ -140,13 +160,20 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	releaseall
 	end
 
+EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF_2:
+	goto EverGrandeCity_ChampionsRoom_EventScript_MayCongratulations
+	goto EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF_1
+
+
 EverGrandeCity_ChampionsRoom_EventScript_MayCongratulations::
 	msgbox EverGrandeCity_ChampionsRoom_Text_MayCongratulations, MSGBOX_DEFAULT
 	return
 
+
 EverGrandeCity_ChampionsRoom_EventScript_BrendanCongratulations::
 	msgbox EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations, MSGBOX_DEFAULT
 	return
+
 
 EverGrandeCity_ChampionsRoom_EventScript_RivalApproachPlayer::
 	applymovement LOCALID_RIVAL, EverGrandeCity_ChampionsRoom_Movement_RivalApproachPlayer
@@ -155,10 +182,12 @@ EverGrandeCity_ChampionsRoom_EventScript_RivalApproachPlayer::
 	waitmovement 0
 	return
 
+
 EverGrandeCity_ChampionsRoom_EventScript_RivalLookBackAndForth::
 	applymovement LOCALID_RIVAL, EverGrandeCity_ChampionsRoom_Movement_RivalLookBackAndForth
 	waitmovement 0
 	return
+
 
 EverGrandeCity_ChampionsRoom_Movement_PlayerExitStart:
 	walk_up
@@ -223,7 +252,7 @@ EverGrandeCity_ChampionsRoom_Movement_BirchArrives:
 	walk_in_place_faster_left
 	step_end
 
-EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
+EverGrandeCity_ChampionsRoom_Text_IntroSpeech::
 	.string "ABIGAIL: Oh hi angel!\p"
 	.string "You've made it this far,\n"
 	.string "that's so cool!\p"
@@ -240,14 +269,14 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "and commit to the role,\l"
 	.string "fight for that ticket!$"
 
-EverGrandeCity_ChampionsRoom_Text_Defeat:
+EverGrandeCity_ChampionsRoom_Text_Defeat::
 	.string "I can't win them all…\p"
 	.string "…\p"
 	.string "Period! You've just earned\n"
 	.string "yourself a Last Dinner Party\l"
 	.string "ticket, {PLAYER}{KUN}!$"
 
-EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
+EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech::
 	.string "ABIGAIL: Wow that was amazing!\p"
 	.string "I had a feeling you'd be a fucking\n"
 	.string "icon.\p"
@@ -257,29 +286,29 @@ EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 	.string "Now all we need to do is add you\n"
 	.string "to the…$"
 
-EverGrandeCity_ChampionsRoom_Text_MayAdvice:
+EverGrandeCity_ChampionsRoom_Text_MayAdvice::
 	.string "GOBLIN: {PLAYER}{KUN}!\p"
 	.string "Here's some advice before you challenge\n"
 	.string "Abi…$"
 
-EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver:
+EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver::
 	.string "GOBLIN: Huh?\n"
 	.string "What, what, what?\p"
 	.string "{PLAYER}{KUN}…\n"
 	.string "Could it be that…\l"
 	.string "It's already over?$"
 
-EverGrandeCity_ChampionsRoom_Text_BrendanAdvice:
+EverGrandeCity_ChampionsRoom_Text_BrendanAdvice::
 	.string "GOBLIN: {PLAYER}!\p"
 	.string "How would you like some advice before\n"
 	.string "you challenge Abi?…$"
 
-EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon:
+EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon::
 	.string "GOBLIN: {PLAYER}…\p"
 	.string "Are you trying to tell me…\n"
 	.string "You've won already?$"
 
-EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
+EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex::
 	.string "AMY: See?\n"
 	.string "What did I tell you, Goblin?\p"
 	.string "Didn't I tell you that you don't need\n"
@@ -288,25 +317,25 @@ EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
 	.string "{PLAYER}{KUN}, you've really done it!\p"
 	.string "You're seeing The Last Dinner Party!$"
 
-EverGrandeCity_ChampionsRoom_Text_BirchCongratulations:
+EverGrandeCity_ChampionsRoom_Text_BirchCongratulations::
 	.string "AMY: Anyways,\n"
 	.string "congratulations!\p"
 	.string "Now, go proudly into the final room!$"
 
-EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe:
+EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe::
 	.string "ABIGAIL: {PLAYER}{KUN}…\p"
 	.string "No, let me rephrase that properly.\p"
 	.string "Our new SPECIAL DINNER GUEST!\p"
 	.string "Come with me.$"
 
-EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside:
+EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside::
 	.string "ABIGAIL: I'm sorry, but…\p"
 	.string "From here on, only those who have\n"
 	.string "won the challenge may enter.\p"
 	.string "You'll have to wait outside with\n"
 	.string "Amy.$"
 
-EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
+EverGrandeCity_ChampionsRoom_Text_MayCongratulations::
 	.string "GOBLIN: Awh…\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
@@ -318,7 +347,7 @@ EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
 	.string "Honestly, congratulations!\n"
 	.string "See you at the barricade!$"
 
-EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
+EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations::
 	.string "GOBLIN: Whaaaat?! \p"
 	.string "… … … … …\n"
 	.string "… … … … … … … …\p"

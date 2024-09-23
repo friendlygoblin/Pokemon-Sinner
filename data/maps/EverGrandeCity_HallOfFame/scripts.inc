@@ -46,9 +46,16 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	setvar VAR_TEMP_1, 1
 	call EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags
 	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_HallOfFame_EventScript_GameClearMale
-	goto_if_eq VAR_RESULT, FEMALE, EverGrandeCity_HallOfFame_EventScript_GameClearFemale
+	compare VAR_RESULT, MALE
+	goto_if_eq EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame_2
+	goto EverGrandeCity_HallOfFame_EventScript_GameClearFemale
+EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame_1:
 	end
+
+EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame_2:
+	goto EverGrandeCity_HallOfFame_EventScript_GameClearMale
+	goto EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame_1
+
 
 EverGrandeCity_HallOfFame_EventScript_GameClearMale::
 	setrespawn HEAL_LOCATION_EVERGRANDECITY_DEMOSTARTER
@@ -58,6 +65,7 @@ EverGrandeCity_HallOfFame_EventScript_GameClearMale::
 	releaseall
 	end
 
+
 EverGrandeCity_HallOfFame_EventScript_GameClearFemale::
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F
 	fadescreenspeed FADE_TO_BLACK, 24
@@ -65,6 +73,7 @@ EverGrandeCity_HallOfFame_EventScript_GameClearFemale::
 	waitstate
 	releaseall
 	end
+
 
 EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1:
 	walk_up
@@ -83,9 +92,9 @@ EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2:
 	walk_up
 	step_end
 
-EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
+EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions::
 	.string "ABIGAIL: Now…\p"
-	.string "It is here that the SPECIAL GUESTS\n"
+	.string "It is here that our SPECIAL GUESTS\n"
 	.string "are recorded.\p"
 	.string "{PLAYER}{KUN}! You've made it!\p"
 	.string "You had the guts to put up a \n"
@@ -97,7 +106,7 @@ EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
 	.string "by adding you to our special\l"
 	.string "DINNER GUEST LIST!$"
 
-EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames:
+EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames::
 	.string "ABIGAIL: Come on, let's record your\n"
 	.string "name as a fan who triumphed over us,\l"
 	.string "The Last Dinner Party themselves,\l"
