@@ -61,9 +61,9 @@ script IntroNPC4_EventScript_ConcertHall{
     }
     applymovement(3,Common_Movement_FacePlayer)
     waitmovement(0)
-   applymovement(OBJ_EVENT_ID_PLAYER, playerFace)
-    waitmovement(0)
     if (var(VAR_EVER_GRANDE_CITY_STATE)==0){
+    applymovement(OBJ_EVENT_ID_PLAYER, playerFace)
+    waitmovement(0)
     msgbox(IntroFront)
     applymovement(3,moveaway)
     waitmovement(0)

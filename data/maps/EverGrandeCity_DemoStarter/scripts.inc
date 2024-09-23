@@ -40,6 +40,15 @@ Demo_MartItems:
 	.2byte ITEM_VENUSAURITE
 	.2byte ITEM_NONE
 
+Ness_EventScript_Demo::
+	lockall
+	applymovement 27, Common_Movement_FacePlayer
+	msgbox Ness_EventScript_Demo_Text_0
+	waitmessage
+	releaseall
+	end
+
+
 Nurse_EventScript_Demo::
 	lock
 	applymovement 1, Common_Movement_FacePlayer
@@ -1176,6 +1185,13 @@ Demo_Mart_Text_1:
 
 Demo_Mart_Text_2:
 	.string "Good luck, babe!$"
+
+Ness_EventScript_Demo_Text_0:
+	.string "Hi! My names Ness nice to meet you.\p"
+	.string "Your here to take on the band too?\p"
+	.string "I made it all the way to Lizzie but then\n"
+	.string "they stomped me!\p"
+	.string "I gotta rethink my stratagy$"
 
 GivePlayerGod_Text_0:
 	.string "Received all 8 Gym Badges!$"

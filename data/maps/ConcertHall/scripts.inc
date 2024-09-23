@@ -47,8 +47,6 @@ IntroNPC4_EventScript_ConcertHall::
 IntroNPC4_EventScript_ConcertHall_1:
 	applymovement 3, Common_Movement_FacePlayer
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, playerFace
-	waitmovement 0
 	compare VAR_EVER_GRANDE_CITY_STATE, 0
 	goto_if_eq IntroNPC4_EventScript_ConcertHall_5
 	applymovement 3, Common_Movement_FacePlayer
@@ -66,6 +64,8 @@ IntroNPC4_EventScript_ConcertHall_2:
 	goto IntroNPC4_EventScript_ConcertHall_1
 
 IntroNPC4_EventScript_ConcertHall_5:
+	applymovement OBJ_EVENT_ID_PLAYER, playerFace
+	waitmovement 0
 	msgbox IntroFront
 	applymovement 3, moveaway
 	waitmovement 0

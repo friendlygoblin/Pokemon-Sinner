@@ -385,6 +385,7 @@
 #define OBJ_EVENT_PAL_TAG_NORA                  0x1133
 #define OBJ_EVENT_PAL_TAG_AIDEN                  0x1134
 #define OBJ_EVENT_PAL_TAG_NINA                  0x1135
+#define OBJ_EVENT_PAL_TAG_NESS                  0x1136
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

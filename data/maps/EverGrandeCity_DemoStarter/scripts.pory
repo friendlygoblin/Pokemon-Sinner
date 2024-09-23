@@ -38,6 +38,15 @@ mart Demo_MartItems{
     ITEM_METAGROSSITE
     ITEM_VENUSAURITE
 }
+script Ness_EventScript_Demo{
+    lockall
+    applymovement(27,Common_Movement_FacePlayer)
+    msgbox(format("Hi! My names Ness nice to meet you. \p Your here to take on the band too? \p I made
+    it all the way to Lizzie but then they stomped me! \p I gotta rethink my stratagy"))
+    waitmessage
+    releaseall
+    end
+}
 script Nurse_EventScript_Demo{
     lock
     applymovement(1,Common_Movement_FacePlayer)
