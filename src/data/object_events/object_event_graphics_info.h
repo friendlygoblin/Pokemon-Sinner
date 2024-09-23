@@ -190,7 +190,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Girl1 = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boy2 = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .paletteTag = OBJ_EVENT_PAL_TAG_AIDEN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -779,7 +779,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Maniac = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HexManiac = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NINA,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
