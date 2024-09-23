@@ -22,9 +22,9 @@ IntroSign_ConcertHall::
 
 IntroNPC2_EventScript_ConcertHall::
 	lock
-	applymovement 5, Common_Movement_FacePlayer
+	applymovement 4, Common_Movement_FacePlayer
 	msgbox IntroChild
-	applymovement 5, lookup
+	applymovement 4, lookup
 	waitmovement 0
 	release
 	end
@@ -32,9 +32,9 @@ IntroNPC2_EventScript_ConcertHall::
 
 IntroNPC3_EventScript_ConcertHall::
 	lock
-	applymovement 6, Common_Movement_FacePlayer
+	applymovement 5, Common_Movement_FacePlayer
 	msgbox IntroAdult
-	applymovement 6, lookup
+	applymovement 5, lookup
 	waitmovement 0
 	release
 	end
@@ -45,13 +45,13 @@ IntroNPC4_EventScript_ConcertHall::
 	compare VAR_EVER_GRANDE_CITY_STATE, 0
 	goto_if_eq IntroNPC4_EventScript_ConcertHall_2
 IntroNPC4_EventScript_ConcertHall_1:
-	applymovement 4, Common_Movement_FacePlayer
+	applymovement 3, Common_Movement_FacePlayer
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, playerFace
 	waitmovement 0
 	compare VAR_EVER_GRANDE_CITY_STATE, 0
 	goto_if_eq IntroNPC4_EventScript_ConcertHall_5
-	applymovement 4, Common_Movement_FacePlayer
+	applymovement 3, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox OutroFront
 IntroNPC4_EventScript_ConcertHall_4:
@@ -59,7 +59,7 @@ IntroNPC4_EventScript_ConcertHall_4:
 	end
 
 IntroNPC4_EventScript_ConcertHall_2:
-	applymovement 4, emote
+	applymovement 3, emote
 	playse SE_PIN
 	waitse
 	waitmovement 0
@@ -67,7 +67,7 @@ IntroNPC4_EventScript_ConcertHall_2:
 
 IntroNPC4_EventScript_ConcertHall_5:
 	msgbox IntroFront
-	applymovement 4, moveaway
+	applymovement 3, moveaway
 	waitmovement 0
 	setvar VAR_EVER_GRANDE_CITY_STATE, 1
 	goto IntroNPC4_EventScript_ConcertHall_4
@@ -92,11 +92,239 @@ moveaway:
 
 IntroChallanger_EventScript_ConcertHall::
 	lock
-	applymovement 7, Common_Movement_FacePlayer
+	applymovement 6, Common_Movement_FacePlayer
 	msgbox IntroChallanger
 	release
 	end
 
+
+SusBoy_EventScript_ConcertHall::
+	lock
+	applymovement 11, Common_Movement_FacePlayer
+	waitmovement 0
+	compare VAR_MEW, 3
+	goto_if_eq SusBoy_EventScript_ConcertHall_2
+	msgbox SusBoy_EventScript_ConcertHall_Text_1
+	waitmessage
+SusBoy_EventScript_ConcertHall_1:
+	release
+	end
+
+SusBoy_EventScript_ConcertHall_2:
+	msgbox SusBoy_EventScript_ConcertHall_Text_0
+	waitmessage
+	goto SusBoy_EventScript_ConcertHall_1
+
+
+Empty_EventScript_ConcertHall::
+	lockall
+	msgbox Empty_EventScript_ConcertHall_Text_0
+	waitmessage
+	releaseall
+	end
+
+
+NotEmpty_EventScript_ConcertHall::
+	lockall
+	compare VAR_RARE_BOX, 1
+	goto_if_eq NotEmpty_EventScript_ConcertHall_2
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_RARE_CANDY, 1
+	waitmessage
+	setvar VAR_RARE_BOX, 1
+NotEmpty_EventScript_ConcertHall_1:
+	releaseall
+	end
+
+NotEmpty_EventScript_ConcertHall_2:
+	msgbox Empty_EventScript_ConcertHall_Text_0
+	waitmessage
+	goto NotEmpty_EventScript_ConcertHall_1
+
+
+Pokeball_EventScript_ConcertHall::
+	compare VAR_MEW, 2
+	goto_if_eq Pokeball_EventScript_ConcertHall_1
+	msgbox Pokeball_EventScript_ConcertHall_Text_3
+	waitmessage
+	releaseall
+	end
+
+Pokeball_EventScript_ConcertHall_1:
+	lockall
+	msgbox Pokeball_EventScript_ConcertHall_Text_0
+	waitmessage
+	showmonpic SPECIES_MEW, 10, 3
+	playmoncry SPECIES_MEW, CRY_MODE_NORMAL
+	msgbox Pokeball_EventScript_ConcertHall_Text_1
+	waitmessage
+	givemon SPECIES_MEW, 60, item = ITEM_LIFE_ORB, ball = ITEM_CHERISH_BALL, hpEv = 252, atkEv = 0, defEv = 4, speedEv = 252, spAtkEv = 0, spDefEv = 0, move1 = MOVE_AURA_SPHERE, move2 = MOVE_PSYCHIC, move3 = MOVE_TRANSFORM, move4 = MOVE_LIGHT_SCREEN
+	compare VAR_RESULT, MON_GIVEN_TO_PARTY
+	goto_if_eq Pokeball_EventScript_ConcertHall_5
+	compare VAR_RESULT, MON_GIVEN_TO_PC
+	goto_if_eq Pokeball_EventScript_ConcertHall_6
+Pokeball_EventScript_ConcertHall_4:
+	setvar VAR_DEWFORD_TOWN_STATE, 1
+	compare VAR_DEMO_STATE, 0
+	goto_if_eq Pokeball_EventScript_ConcertHall_10
+Pokeball_EventScript_ConcertHall_9:
+	setvar VAR_MEW, 3
+	releaseall
+	end
+
+Pokeball_EventScript_ConcertHall_5:
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Pokeball_EventScript_ConcertHall_Text_2
+	call NicknamePartyMon
+	goto Pokeball_EventScript_ConcertHall_4
+
+Pokeball_EventScript_ConcertHall_6:
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Pokeball_EventScript_ConcertHall_Text_2
+	call NicknameBoxMon
+	goto Pokeball_EventScript_ConcertHall_4
+
+Pokeball_EventScript_ConcertHall_10:
+	setvar VAR_DEMO_STATE, 1
+	setflag FLAG_ADVENTURE_STARTED
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
+	setflag FLAG_SYS_POKEMON_GET
+	goto Pokeball_EventScript_ConcertHall_9
+
+
+Nora_EventScript_ConcertHall::
+	lock
+	getplayerxy VAR_TEMP_2, VAR_TEMP_3
+	applymovement 7, Common_Movement_FacePlayer
+	waitmovement 0
+	compare VAR_MEW, 2
+	goto_if_eq Nora_EventScript_ConcertHall_2
+	compare VAR_MEW, 1
+	goto_if_eq Nora_EventScript_ConcertHall_3
+	compare VAR_MEW, 0
+	goto_if_eq Nora_EventScript_ConcertHall_4
+Nora_EventScript_ConcertHall_1:
+	releaseall
+	end
+
+Nora_EventScript_ConcertHall_2:
+	msgbox Nora_EventScript_ConcertHall_Text_0
+	waitmessage
+	compare VAR_TEMP_3, 11
+	goto_if_eq Nora_EventScript_ConcertHall_9
+	compare VAR_TEMP_3, 10
+	goto_if_eq Nora_EventScript_ConcertHall_10
+	compare VAR_TEMP_3, 9
+	goto_if_eq Nora_EventScript_ConcertHall_11
+Nora_EventScript_ConcertHall_8:
+	waitmovement 0
+	removeobject 7
+	removeobject 12
+	removeobject 13
+	removeobject 14
+	removeobject 15
+	setflag FLAG_MEW
+	goto Nora_EventScript_ConcertHall_1
+
+Nora_EventScript_ConcertHall_3:
+	lock
+	msgbox Nora_EventScript_ConcertHall_Text_1
+	waitmessage
+	goto Nora_EventScript_ConcertHall_1
+
+Nora_EventScript_ConcertHall_4:
+	lock
+	msgbox Nora_EventScript_ConcertHall_Text_2
+	waitmessage
+	setvar VAR_MEW, 1
+	goto Nora_EventScript_ConcertHall_1
+
+Nora_EventScript_ConcertHall_9:
+	applymovement 7, Nora_Run_Right
+	goto Nora_EventScript_ConcertHall_8
+
+Nora_EventScript_ConcertHall_10:
+	applymovement 7, Nora_Run_Down
+	goto Nora_EventScript_ConcertHall_8
+
+Nora_EventScript_ConcertHall_11:
+	applymovement 7, Nora_Run_Down
+	goto Nora_EventScript_ConcertHall_8
+
+
+Nora_Run_Down:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Nora_Run_Right:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+SusBoy_EventScript_ConcertHall_Text_0:
+	.string "Huh?\p"
+	.string "You got a POKEMON from that box??\p"
+	.string "If I knew thats what was in there I\n"
+	.string "wouldn't have tipped you off..$"
+
+SusBoy_EventScript_ConcertHall_Text_1:
+	.string "Hey, I saw the transport crew just go\n"
+	.string "for lunch\p"
+	.string "Looks like a bunch of boxes by the\n"
+	.string "trucks are up for grabs\p"
+	.string "I already swiped some cool stuff out of\n"
+	.string "one of them.\p"
+	.string "I'll leave the rest for others.$"
+
+Empty_EventScript_ConcertHall_Text_0:
+	.string "It's Empty!$"
+
+Pokeball_EventScript_ConcertHall_Text_0:
+	.string "Huh? There's something in this box$"
+
+Pokeball_EventScript_ConcertHall_Text_1:
+	.string "It's a strange Pokémon!$"
+
+Pokeball_EventScript_ConcertHall_Text_2:
+	.string "Received Mew!$"
+
+Pokeball_EventScript_ConcertHall_Text_3:
+	.string "It's empty.$"
+
+Nora_EventScript_ConcertHall_Text_0:
+	.string "Darn they didn't have any?\p"
+	.string "I'll have to go take the truck home real\n"
+	.string "quick then.\p"
+	.string "Thanks anyway's!$"
+
+Nora_EventScript_ConcertHall_Text_1:
+	.string "Thanks for this! I'll wait here!$"
+
+Nora_EventScript_ConcertHall_Text_2:
+	.string "Oh hey! You here for the show? Mind if I\n"
+	.string "grab a quick photo?\p"
+	.string "Oh darn! My camera just died.\p"
+	.string "Hey, do you think you could check the\n"
+	.string "shop if they have any batterys?\p"
+	.string "If not, I'll have to drive my truck back\n"
+	.string "to get one!$"
 
 Intro::
 	.string "Wait..did you just hop off the band\n"

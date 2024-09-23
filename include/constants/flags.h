@@ -66,7 +66,7 @@
 #define FLAG_POKEBALL_22    0x35 // Unused Flag
 #define FLAG_POKEBALL_23    0x36 // Unused Flag
 #define FLAG_POKEBALL_24    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
+#define FLAG_MEW   0x38 // Unused Flag
 #define FLAG_UNUSED_0x039    0x39 // Unused Flag
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag

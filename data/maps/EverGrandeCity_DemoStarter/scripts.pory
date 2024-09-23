@@ -5,11 +5,19 @@ EverGrandeCity_DemoStarter_MapScripts::
 script Demo_Mart{
     lock
     faceplayer
+    if(var(VAR_MEW)==1){
+        msgbox(format("Welcome to Amy's Shop, What can I get for you?\pOh? Nora needs a fresh camera battery? \p
+        Sorry hun, we don't stock them in here!\p You best go tell her we don't have any"))
+        waitmessage
+        setvar(VAR_MEW,2)
+    }
+    else{
     addmoney(500000)
     message(format("Welcome to Amy's Shop, What can I get for you?"))
     waitmessage
     pokemart(Demo_MartItems)
     msgbox("Good luck, babe!")
+    }
     release
     end
 }

@@ -31,9 +31,9 @@ text IntroSign{
 }
 script IntroNPC2_EventScript_ConcertHall{
     lock
-    applymovement(5,Common_Movement_FacePlayer)
+    applymovement(4,Common_Movement_FacePlayer)
     msgbox(IntroChild)
-    applymovement(5,lookup)
+    applymovement(4,lookup)
     waitmovement(0)
     release
     end
@@ -42,9 +42,9 @@ script IntroNPC2_EventScript_ConcertHall{
 
 script IntroNPC3_EventScript_ConcertHall{
     lock
-    applymovement(6,Common_Movement_FacePlayer)
+    applymovement(5,Common_Movement_FacePlayer)
     msgbox(IntroAdult)
-    applymovement(6,lookup)
+    applymovement(5,lookup)
     waitmovement(0)
     release
     end
@@ -54,23 +54,23 @@ script IntroNPC3_EventScript_ConcertHall{
 script IntroNPC4_EventScript_ConcertHall{
     lock
     if (var(VAR_EVER_GRANDE_CITY_STATE)==0){
-    applymovement(4, emote)
+    applymovement(3, emote)
     playse(SE_PIN)
     waitse
     waitmovement(0)
     }
-    applymovement(4,Common_Movement_FacePlayer)
+    applymovement(3,Common_Movement_FacePlayer)
     waitmovement(0)
    applymovement(OBJ_EVENT_ID_PLAYER, playerFace)
     waitmovement(0)
     if (var(VAR_EVER_GRANDE_CITY_STATE)==0){
     msgbox(IntroFront)
-    applymovement(4,moveaway)
+    applymovement(3,moveaway)
     waitmovement(0)
     setvar(VAR_EVER_GRANDE_CITY_STATE, 1)
     }
     else {
-    applymovement(4,Common_Movement_FacePlayer)
+    applymovement(3,Common_Movement_FacePlayer)
     waitmovement(0)
     msgbox(OutroFront)
     }
@@ -93,7 +93,7 @@ movement moveaway{
 }
 script IntroChallanger_EventScript_ConcertHall{
     lock
-    applymovement(7,Common_Movement_FacePlayer)
+    applymovement(6,Common_Movement_FacePlayer)
     msgbox(IntroChallanger)
     release
     end
@@ -119,4 +119,139 @@ text IntroFront{
 text IntroChallanger{
     format("Your going to try face the band? \p
     Watch out for Emily...I got shreded")
+}
+script SusBoy_EventScript_ConcertHall{
+    lock
+    applymovement(11,Common_Movement_FacePlayer)
+    waitmovement(0)
+    if(var(VAR_MEW)==3){
+        msgbox(format("Huh? \p You got a POKEMON from that box?? \p If I knew thats what was in there I wouldn't have tipped you off.."))
+        waitmessage
+    }
+    else{
+    msgbox(format("Hey, I saw the transport crew just go for lunch \p Looks like a bunch of boxes by the trucks
+    are up for grabs \p I already swiped some cool stuff out of one of them. \p I'll leave the rest for others."))
+    waitmessage
+    }
+    release
+    end
+
+}
+script Empty_EventScript_ConcertHall{
+    lockall
+    msgbox(format("It's Empty!"))
+    waitmessage
+    releaseall
+    end
+}
+
+script NotEmpty_EventScript_ConcertHall{
+     lockall
+     if(var(VAR_RARE_BOX)==1){
+        msgbox(format("It's Empty!"))
+        waitmessage
+     }
+     else{
+    playfanfare(MUS_OBTAIN_ITEM)
+    giveitem(ITEM_RARE_CANDY,1)
+    waitmessage
+    setvar(VAR_RARE_BOX,1)
+     }
+    
+    releaseall
+    end
+}
+
+script Pokeball_EventScript_ConcertHall{
+    if(var(VAR_MEW) == 2){
+    lockall
+    msgbox("Huh? There's something in this box")
+    waitmessage
+    showmonpic(SPECIES_MEW, 10,3)
+    playmoncry(SPECIES_MEW, CRY_MODE_NORMAL)
+    msgbox("It's a strange Pokémon!")
+    waitmessage
+   
+        givemon(SPECIES_MEW, 60, item = ITEM_LIFE_ORB, ball = ITEM_CHERISH_BALL,hpEv=252,atkEv=0,defEv=4,speedEv = 252,spAtkEv=0,spDefEv=0 ,move1 = MOVE_AURA_SPHERE, move2 = MOVE_PSYCHIC, move3 = MOVE_TRANSFORM, move4 = MOVE_LIGHT_SCREEN)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Mew!")
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Received Mew!")
+            call(NicknameBoxMon)
+        }
+        setvar(VAR_DEWFORD_TOWN_STATE, 1)
+    if(var(VAR_DEMO_STATE) == 0){
+    setvar(VAR_DEMO_STATE, 1)
+    setflag (FLAG_ADVENTURE_STARTED)
+    setflag (FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setvar(VAR_CABLE_CLUB_TUTORIAL_STATE, 1)
+    setflag (FLAG_SYS_POKEMON_GET)
+}
+        setvar(VAR_MEW, 3)
+        releaseall
+        end
+    }
+    else{
+        msgbox("It's empty.")
+    waitmessage
+    releaseall
+    end
+    }
+    }
+
+script Nora_EventScript_ConcertHall{
+    lock
+    getplayerxy (VAR_TEMP_2,VAR_TEMP_3)
+    applymovement(7,Common_Movement_FacePlayer)
+    waitmovement(0)
+    if(var(VAR_MEW)==2){
+    msgbox(format("Darn they didn't have any?\p I'll have to go take the truck home real quick then. \p
+    Thanks anyway's!"))
+    waitmessage
+    if(var(VAR_TEMP_3)==11){
+    applymovement(7, Nora_Run_Right)
+    }
+    elif(var(VAR_TEMP_3)==10){
+    applymovement(7, Nora_Run_Down) 
+    }
+    elif(var(VAR_TEMP_3)==9){
+    applymovement(7, Nora_Run_Down) 
+    }
+    waitmovement(0)
+    removeobject(7)
+    removeobject(12)
+    removeobject(13)
+    removeobject(14)
+    removeobject(15)
+    setflag(FLAG_MEW)
+    }
+    elif(var(VAR_MEW)==1){
+    lock
+    msgbox(format("Thanks for this! I'll wait here!"))
+    waitmessage
+    }
+    elif(var(VAR_MEW) ==0){
+    lock
+    msgbox(format("Oh hey! You here for the show? Mind if I grab a quick photo? \p
+    Oh darn! My camera just died. \p Hey, do you think you could check the shop if they have any batterys? \p
+    If not, I'll have to drive my truck back to get one!"))
+    waitmessage
+    setvar(VAR_MEW,1)
+    }
+   releaseall
+   end
+}
+    
+    
+movement Nora_Run_Down{
+    walk_fast_down * 8
+}
+movement Nora_Run_Right{
+    walk_fast_right *2
+    walk_fast_down * 8
 }

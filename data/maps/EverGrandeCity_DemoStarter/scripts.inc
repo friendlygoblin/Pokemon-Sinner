@@ -4,13 +4,22 @@ EverGrandeCity_DemoStarter_MapScripts::
 Demo_Mart::
 	lock
 	faceplayer
+	compare VAR_MEW, 1
+	goto_if_eq Demo_Mart_2
 	addmoney 500000
-	message Demo_Mart_Text_0
+	message Demo_Mart_Text_1
 	waitmessage
 	pokemart Demo_MartItems
-	msgbox Demo_Mart_Text_1
+	msgbox Demo_Mart_Text_2
+Demo_Mart_1:
 	release
 	end
+
+Demo_Mart_2:
+	msgbox Demo_Mart_Text_0
+	waitmessage
+	setvar VAR_MEW, 2
+	goto Demo_Mart_1
 
 
 	.align 2
@@ -1156,9 +1165,16 @@ Pokeball_EventScript_Demo24_6:
 
 Demo_Mart_Text_0:
 	.string "Welcome to Amy's Shop, What can I get\n"
-	.string "for you?$"
+	.string "for you?\p"
+	.string "Oh? Nora needs a fresh camera battery?\p"
+	.string "Sorry hun, we don't stock them in here!\p"
+	.string "You best go tell her we don't have any$"
 
 Demo_Mart_Text_1:
+	.string "Welcome to Amy's Shop, What can I get\n"
+	.string "for you?$"
+
+Demo_Mart_Text_2:
 	.string "Good luck, babe!$"
 
 GivePlayerGod_Text_0:
