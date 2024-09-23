@@ -114,6 +114,7 @@ static const u8 sCreditsText_TheParlour[]                     = _("The Parlour")
 static const u8 sCreditsText_Ace[]                            = _("Ace");
 static const u8 sCreditsText_Aiden[]                          = _("Aiden");
 static const u8 sCreditsText_Amy[]                            = _("Amy");
+static const u8 sCreditsText_Anika[]                          = _("Anika");
 static const u8 sCreditsText_Brenae[]                         = _("Brenae");
 static const u8 sCreditsText_Goblin[]                         = _("Goblin");
 static const u8 sCreditsText_Mal[]                            = _("Mal");
@@ -295,6 +296,7 @@ static const struct CreditsEntry sCreditsEntry_TheParlour                       
 static const struct CreditsEntry sCreditsEntry_Ace                              = {11, FALSE, sCreditsText_Ace};
 static const struct CreditsEntry sCreditsEntry_Aiden                            = {11, FALSE, sCreditsText_Aiden};
 static const struct CreditsEntry sCreditsEntry_Amy                              = {11, FALSE, sCreditsText_Amy};
+static const struct CreditsEntry sCreditsEntry_Anika                            = {11, FALSE, sCreditsText_Anika};
 static const struct CreditsEntry sCreditsEntry_Brenae                           = {11, FALSE, sCreditsText_Brenae};
 static const struct CreditsEntry sCreditsEntry_Goblin                           = {11, FALSE, sCreditsText_Goblin};
 static const struct CreditsEntry sCreditsEntry_Mal                              = {11, FALSE, sCreditsText_Mal};
@@ -498,9 +500,10 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         [PAGE_EMOTIONAL_SUPPORT_H1] = {
         &sCreditsEntry_EmotionalSupport_H,
         &sCreditsEntry_Aiden,
+        &sCreditsEntry_Anika,
         &sCreditsEntry_Brenae,
-        &sCreditsEntry_Mavis,
-        _
+        &sCreditsEntry_Mavis
+        
     },
         [PAGE_EMOTIONAL_SUPPORT_H2] = {
         &sCreditsEntry_EmotionalSupport_H,
