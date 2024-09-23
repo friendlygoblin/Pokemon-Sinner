@@ -5,7 +5,7 @@ EverGrandeCity_DemoStarter_MapScripts::
 script Demo_Mart{
     lock
     faceplayer
-    addmoney(5000)
+    addmoney(500000)
     message(format("Welcome to Amy's Shop, What can I get for you?"))
     waitmessage
     pokemart(Demo_MartItems)

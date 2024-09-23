@@ -53,11 +53,15 @@ script IntroNPC3_EventScript_ConcertHall{
 
 script IntroNPC4_EventScript_ConcertHall{
     lock
+    if (var(VAR_EVER_GRANDE_CITY_STATE)==0){
     applymovement(4, emote)
     playse(SE_PIN)
     waitse
     waitmovement(0)
+    }
     applymovement(4,Common_Movement_FacePlayer)
+    waitmovement(0)
+   applymovement(OBJ_EVENT_ID_PLAYER, playerFace)
     waitmovement(0)
     if (var(VAR_EVER_GRANDE_CITY_STATE)==0){
     msgbox(IntroFront)
@@ -73,6 +77,9 @@ script IntroNPC4_EventScript_ConcertHall{
     release
     end
 
+}
+movement playerFace{
+    face_left
 }
 movement emote{
     emote_exclamation_mark

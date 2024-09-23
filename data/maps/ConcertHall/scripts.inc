@@ -42,28 +42,40 @@ IntroNPC3_EventScript_ConcertHall::
 
 IntroNPC4_EventScript_ConcertHall::
 	lock
-	applymovement 4, emote
-	playse SE_PIN
-	waitse
-	waitmovement 0
-	applymovement 4, Common_Movement_FacePlayer
-	waitmovement 0
 	compare VAR_EVER_GRANDE_CITY_STATE, 0
 	goto_if_eq IntroNPC4_EventScript_ConcertHall_2
+IntroNPC4_EventScript_ConcertHall_1:
+	applymovement 4, Common_Movement_FacePlayer
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, playerFace
+	waitmovement 0
+	compare VAR_EVER_GRANDE_CITY_STATE, 0
+	goto_if_eq IntroNPC4_EventScript_ConcertHall_5
 	applymovement 4, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox OutroFront
-IntroNPC4_EventScript_ConcertHall_1:
+IntroNPC4_EventScript_ConcertHall_4:
 	release
 	end
 
 IntroNPC4_EventScript_ConcertHall_2:
+	applymovement 4, emote
+	playse SE_PIN
+	waitse
+	waitmovement 0
+	goto IntroNPC4_EventScript_ConcertHall_1
+
+IntroNPC4_EventScript_ConcertHall_5:
 	msgbox IntroFront
 	applymovement 4, moveaway
 	waitmovement 0
 	setvar VAR_EVER_GRANDE_CITY_STATE, 1
-	goto IntroNPC4_EventScript_ConcertHall_1
+	goto IntroNPC4_EventScript_ConcertHall_4
 
+
+playerFace:
+	face_left
+	step_end
 
 emote:
 	emote_exclamation_mark
