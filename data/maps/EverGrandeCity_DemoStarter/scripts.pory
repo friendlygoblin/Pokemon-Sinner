@@ -6,20 +6,29 @@ script Demo_Mart{
     lock
     faceplayer
     if(var(VAR_MEW)==1){
-        msgbox(format("Welcome to Amy's Shop, What can I get for you?\pOh? Nora needs a fresh camera battery? \p
-        Sorry hun, we don't stock them in here!\p You best go tell her we don't have any"))
+        msgbox(MartBattery)
         waitmessage
         setvar(VAR_MEW,2)
     }
     else{
     addmoney(500000)
-    message(format("Welcome to Amy's Shop, What can I get for you?"))
+    message("AMY: Welcome to Amy's Shop, what can I \nget for you?")
     waitmessage
     pokemart(Demo_MartItems)
     msgbox("Good luck, babe!")
     }
     release
     end
+}
+
+text MartBattery{
+    "AMY: Welcome to Amy's Shop, what can I \n"
+    "get for you?\p"
+    "Oh, Nora needs a fresh camera battery? \p"
+    "Sorry hun, but we don't stock them \n"
+    "in here!\p"
+    "You best go tell her we don't have \n"
+    "any.$"
 }
 
 mart Demo_MartItems{
@@ -38,11 +47,20 @@ mart Demo_MartItems{
     ITEM_METAGROSSITE
     ITEM_VENUSAURITE
 }
+
+text NessStrategy{
+    "NESS: Hi! My name's Ness, nice to \n"
+    "meet you. \p"
+    "You're here to take on the band too? \p"
+    "I made it all the way to Lizzie but \n"
+    "then they stomped me! \p"
+    "I gotta rethink my strategy…$"
+}
+
 script Ness_EventScript_Demo{
     lockall
     applymovement(27,Common_Movement_FacePlayer)
-    msgbox(format("Hi! My names Ness nice to meet you. \p Your here to take on the band too? \p I made
-    it all the way to Lizzie but then they stomped me! \p I gotta rethink my stratagy"))
+    msgbox(NessStrategy)
     waitmessage
     releaseall
     end
@@ -202,7 +220,7 @@ text NurseStop_Text{
     "without POKéMON? \p"
     "That won't do!\p"
     "Go pick your team out of these guys\n"
-    "over there."
+    "over there.$"
 }
 
 script EverGradeCity_DemoStarter_OnTransition{
