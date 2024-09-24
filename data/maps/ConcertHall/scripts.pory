@@ -16,7 +16,7 @@ text Intro{
     "truck? How did you even get on there?\p"
     "… … … What?\p"
     "You don't even have a ticket! \p"
-    "Ohh i see! You're one of those Pokémon \n"
+    "Ohh I see! You're one of those Pokémon \n"
     "Trainers, looking to battle the band \l"
     "for a free ticket eh? \p"
     "Well good luck to you, I hear they're \n"
@@ -262,7 +262,7 @@ script Nora_EventScript_ConcertHall{
     }
     elif(var(VAR_MEW)==1){
     lock
-    msgbox(format("Thanks! I'll wait right here!"))
+    msgbox(format("NORA: Thanks! I'll wait right here!"))
     waitmessage
     }
     elif(var(VAR_MEW) ==0){
@@ -276,8 +276,8 @@ script Nora_EventScript_ConcertHall{
 }
     
 text NoraHelp{
-    "Oh hey! Are you here for the show? \p"
-    "Mind if I grab a quick photo? \p"
+    "NORA: Oh hey! Are you here for the \p"
+    "show? Mind if I grab a quick photo? \p"
     "…\p"
     "Oh darn! My camera just died. \p"
     "Hey, do you think you could check the\n"
@@ -286,7 +286,7 @@ text NoraHelp{
     "back to get one!$"}
 
 text NoraNoBattery{
-    "They didn't have any? \p"
+    "NORA: They didn't have any? \p"
     "I'll have to drive to another store \n"
     "real quick then. \p"
     "Thanks anyways, enjoy the show!$"
