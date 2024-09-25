@@ -12,7 +12,7 @@ script Demo_Mart{
     }
     else{
     addmoney(500000)
-    message("AMY: Welcome to Amy's Shop, what can I \nget for you?")
+    message("AMY: Welcome to the Merch Stand, what \ncan I get for you?")
     waitmessage
     pokemart(Demo_MartItems)
     msgbox("Good luck, babe!")
@@ -22,8 +22,8 @@ script Demo_Mart{
 }
 
 text MartBattery{
-    "AMY: Welcome to Amy's Shop, what can I \n"
-    "get for you?\p"
+    "AMY: Welcome to the Merch Stand, what \n"
+    "can I get for you?\p"
     "Oh, Nora needs a fresh camera battery? \p"
     "Sorry hun, but we don't stock them \n"
     "in here!\p"
