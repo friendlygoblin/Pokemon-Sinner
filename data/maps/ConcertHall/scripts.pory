@@ -276,7 +276,7 @@ script Nora_EventScript_ConcertHall{
 }
     
 text NoraHelp{
-    "NORA: Oh hey! Are you here for the \p"
+    "NORA: Oh hey! Are you here for the \n"
     "show? Mind if I grab a quick photo? \p"
     "…\p"
     "Oh darn! My camera just died. \p"
