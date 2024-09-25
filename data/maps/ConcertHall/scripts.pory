@@ -4,7 +4,7 @@ raw `ConcertHall_MapScripts::
 
 script IntroNPC1_EventScript_ConcertHall{
     lock
-    applymovement(3,Common_Movement_FacePlayer)
+    applymovement(2,Common_Movement_FacePlayer)
     msgbox(Intro)
     release
     end
