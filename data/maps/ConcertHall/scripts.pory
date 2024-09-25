@@ -4,7 +4,7 @@ raw `ConcertHall_MapScripts::
 
 script IntroNPC1_EventScript_ConcertHall{
     lock
-    applymovement(3,Common_Movement_FacePlayer)
+    applymovement(2,Common_Movement_FacePlayer)
     msgbox(Intro)
     release
     end
@@ -12,10 +12,15 @@ script IntroNPC1_EventScript_ConcertHall{
 }
 
 text Intro{
-    format("Wait..did you just hop off the band truck? How did you even get on there!\p
-    What..? You don't even have a ticket! \p
-    Ohh your one of those Pokemon Trainers, looking to battle the band for a free ticket eh? \p
-    Well good luck to you, I hear their ruthless!")
+    "Wait… did you just hop off the band's\n"
+    "truck? How did you even get on there?\p"
+    "… … … What?\p"
+    "You don't even have a ticket! \p"
+    "Ohh I see! You're one of those Pokémon \n"
+    "Trainers, looking to battle the band \l"
+    "for a free ticket eh? \p"
+    "Well good luck to you, I hear they're \n"
+    "ruthless!$"
 }
 movement faceup{
     face_up
@@ -27,7 +32,8 @@ script IntroSign_ConcertHall{
     end
 }
 text IntroSign{
-    format("Ever Grande City Concert Hall")
+    "Ever Grande City Concert Hall\p"
+    "NEXT SHOW: The Last Dinner Party $"
 }
 script IntroNPC2_EventScript_ConcertHall{
     lock
@@ -43,7 +49,7 @@ script IntroNPC2_EventScript_ConcertHall{
 script IntroNPC3_EventScript_ConcertHall{
     lock
     applymovement(5,Common_Movement_FacePlayer)
-    msgbox(IntroAdult)
+    msgbox(IntroBrenae)
     applymovement(5,lookup)
     waitmovement(0)
     release
@@ -106,40 +112,65 @@ text IntroChild{
     format("I've been here since 10am! I'm finally getting barricade!")
 }
 
-text IntroAdult{
-    format("If that little kid trys to push infront of me again...")
+text IntroBrenae{
+    "BRENAE: I bought my ticket months ago!\p"
+    "I'm so nervous, I'm going to throw up…$"
 }
 
 text IntroFront{
-    format("Hey no cuts! \p
-    Oh you don't have a ticket? \p
-    Well look, my names Steff, word of advice.. \p You best head inside and try win a ticket, here you can cut infront of me!")
+    "STEFF: Hey I was here first! \p"
+    "Oh wait, you don't have a ticket? \p"
+    "Ah you're here for the challenge! \p"
+    "Alright then, go ahead! \p"
+    "Good luck!$"
 }
 
 text IntroChallanger{
-    format("Your going to try face the band? \p
-    Watch out for Emily...I got shreded")
+    "NINA: You're going to face the band? \p"
+    "Watch out for Emily… I got shredded…$"
 }
+
 script SusBoy_EventScript_ConcertHall{
     lock
     applymovement(11,Common_Movement_FacePlayer)
     waitmovement(0)
     if(var(VAR_MEW)==3){
-        msgbox(format("Huh? \p You got a POKEMON from that box?? \p If I knew thats what was in there I wouldn't have tipped you off.."))
+        msgbox(Aiden_PokemonBox)
         waitmessage
     }
     else{
-    msgbox(format("Hey, I saw the transport crew just go for lunch \p Looks like a bunch of boxes by the trucks
-    are up for grabs \p I already swiped some cool stuff out of one of them. \p I'll leave the rest for others."))
+    msgbox(Aiden_TruckBoxes)
     waitmessage
     }
     release
     end
-
 }
+
+text Aiden_PokemonBox{
+    "AIDEN: Huh? \p"
+    "You got a POKéMON from that box?? \p"
+    "If I'd known what was in there \n"
+    "I wouldn't have tipped you off…$"
+}
+
+text Aiden_TruckBoxes{
+    "AIDEN: I came all the way from \n"
+    "Finland! \p"
+    "Also, the transport crew just left \n"
+    "for lunch. \p"
+    "Looks like a bunch of boxes by the \n"
+    "trucks are up for grabs. \p"
+    "I already swiped some cool stuff out of \n"
+    "one of them. \p"
+    "There's more I haven't touched, you \n"
+    "should check them out, see if there's \l"
+    "anything left.$"
+}
+
+
 script Empty_EventScript_ConcertHall{
     lockall
-    msgbox(format("It's Empty!"))
+    msgbox(format("It's empty!"))
     waitmessage
     releaseall
     end
@@ -148,7 +179,7 @@ script Empty_EventScript_ConcertHall{
 script NotEmpty_EventScript_ConcertHall{
      lockall
      if(var(VAR_RARE_BOX)==1){
-        msgbox(format("It's Empty!"))
+        msgbox(format("It's empty!"))
         waitmessage
      }
      else{
@@ -210,8 +241,7 @@ script Nora_EventScript_ConcertHall{
     applymovement(7,Common_Movement_FacePlayer)
     waitmovement(0)
     if(var(VAR_MEW)==2){
-    msgbox(format("Darn they didn't have any?\p I'll have to go take the truck home real quick then. \p
-    Thanks anyway's!"))
+    msgbox(NoraNoBattery)
     waitmessage
     if(var(VAR_TEMP_3)==11){
     applymovement(7, Nora_Run_Right)
@@ -232,14 +262,12 @@ script Nora_EventScript_ConcertHall{
     }
     elif(var(VAR_MEW)==1){
     lock
-    msgbox(format("Thanks for this! I'll wait here!"))
+    msgbox(format("NORA: Thanks! I'll wait right here!"))
     waitmessage
     }
     elif(var(VAR_MEW) ==0){
     lock
-    msgbox(format("Oh hey! You here for the show? Mind if I grab a quick photo? \p
-    Oh darn! My camera just died. \p Hey, do you think you could check the shop if they have any batterys? \p
-    If not, I'll have to drive my truck back to get one!"))
+    msgbox(NoraHelp)
     waitmessage
     setvar(VAR_MEW,1)
     }
@@ -247,6 +275,22 @@ script Nora_EventScript_ConcertHall{
    end
 }
     
+text NoraHelp{
+    "NORA: Oh hey! Are you here for the \n"
+    "show? Mind if I grab a quick photo? \p"
+    "…\p"
+    "Oh darn! My camera just died. \p"
+    "Hey, do you think you could check the\n"
+    "shop, ask if they have any batteries? \p"
+    "If not, I'll have to drive my truck \n"
+    "back to get one!$"}
+
+text NoraNoBattery{
+    "NORA: They didn't have any? \p"
+    "I'll have to drive to another store \n"
+    "real quick then. \p"
+    "Thanks anyways, enjoy the show!$"
+    }
     
 movement Nora_Run_Down{
     walk_fast_down * 8
