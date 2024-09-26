@@ -3,7 +3,7 @@ ConcertHall_MapScripts::
 
 IntroNPC1_EventScript_ConcertHall::
 	lock
-	applymovement 3, Common_Movement_FacePlayer
+	applymovement 2, Common_Movement_FacePlayer
 	msgbox Intro
 	release
 	end
@@ -33,7 +33,7 @@ IntroNPC2_EventScript_ConcertHall::
 IntroNPC3_EventScript_ConcertHall::
 	lock
 	applymovement 5, Common_Movement_FacePlayer
-	msgbox IntroAdult
+	msgbox IntroBrenae
 	applymovement 5, lookup
 	waitmovement 0
 	release
@@ -104,14 +104,14 @@ SusBoy_EventScript_ConcertHall::
 	waitmovement 0
 	compare VAR_MEW, 3
 	goto_if_eq SusBoy_EventScript_ConcertHall_2
-	msgbox SusBoy_EventScript_ConcertHall_Text_1
+	msgbox Aiden_TruckBoxes
 	waitmessage
 SusBoy_EventScript_ConcertHall_1:
 	release
 	end
 
 SusBoy_EventScript_ConcertHall_2:
-	msgbox SusBoy_EventScript_ConcertHall_Text_0
+	msgbox Aiden_PokemonBox
 	waitmessage
 	goto SusBoy_EventScript_ConcertHall_1
 
@@ -210,7 +210,7 @@ Nora_EventScript_ConcertHall_1:
 	end
 
 Nora_EventScript_ConcertHall_2:
-	msgbox Nora_EventScript_ConcertHall_Text_0
+	msgbox NoraNoBattery
 	waitmessage
 	compare VAR_TEMP_3, 11
 	goto_if_eq Nora_EventScript_ConcertHall_9
@@ -230,13 +230,13 @@ Nora_EventScript_ConcertHall_8:
 
 Nora_EventScript_ConcertHall_3:
 	lock
-	msgbox Nora_EventScript_ConcertHall_Text_1
+	msgbox Nora_EventScript_ConcertHall_Text_0
 	waitmessage
 	goto Nora_EventScript_ConcertHall_1
 
 Nora_EventScript_ConcertHall_4:
 	lock
-	msgbox Nora_EventScript_ConcertHall_Text_2
+	msgbox NoraHelp
 	waitmessage
 	setvar VAR_MEW, 1
 	goto Nora_EventScript_ConcertHall_1
@@ -278,23 +278,8 @@ Nora_Run_Right:
 	walk_fast_down
 	step_end
 
-SusBoy_EventScript_ConcertHall_Text_0:
-	.string "Huh?\p"
-	.string "You got a POKEMON from that box??\p"
-	.string "If I knew thats what was in there I\n"
-	.string "wouldn't have tipped you off..$"
-
-SusBoy_EventScript_ConcertHall_Text_1:
-	.string "Hey, I saw the transport crew just go\n"
-	.string "for lunch\p"
-	.string "Looks like a bunch of boxes by the\n"
-	.string "trucks are up for grabs\p"
-	.string "I already swiped some cool stuff out of\n"
-	.string "one of them.\p"
-	.string "I'll leave the rest for others.$"
-
 Empty_EventScript_ConcertHall_Text_0:
-	.string "It's Empty!$"
+	.string "It's empty!$"
 
 Pokeball_EventScript_ConcertHall_Text_0:
 	.string "Huh? There's something in this box$"
@@ -309,35 +294,22 @@ Pokeball_EventScript_ConcertHall_Text_3:
 	.string "It's empty.$"
 
 Nora_EventScript_ConcertHall_Text_0:
-	.string "Darn they didn't have any?\p"
-	.string "I'll have to go take the truck home real\n"
-	.string "quick then.\p"
-	.string "Thanks anyway's!$"
-
-Nora_EventScript_ConcertHall_Text_1:
-	.string "Thanks for this! I'll wait here!$"
-
-Nora_EventScript_ConcertHall_Text_2:
-	.string "Oh hey! You here for the show? Mind if I\n"
-	.string "grab a quick photo?\p"
-	.string "Oh darn! My camera just died.\p"
-	.string "Hey, do you think you could check the\n"
-	.string "shop if they have any batterys?\p"
-	.string "If not, I'll have to drive my truck back\n"
-	.string "to get one!$"
+	.string "NORA: Thanks! I'll wait right here!$"
 
 Intro::
-	.string "Wait..did you just hop off the band\n"
-	.string "truck? How did you even get on there!\p"
-	.string "What..? You don't even have a ticket!\p"
-	.string "Ohh your one of those Pokemon Trainers,\n"
-	.string "looking to battle the band for a free\l"
-	.string "ticket eh?\p"
-	.string "Well good luck to you, I hear their\n"
+	.string "Wait… did you just hop off the band's\n"
+	.string "truck? How did you even get on there?\p"
+	.string "… … … What?\p"
+	.string "You don't even have a ticket! \p"
+	.string "Ohh I see! You're one of those Pokémon \n"
+	.string "Trainers, looking to battle the band \l"
+	.string "for a free ticket eh? \p"
+	.string "Well good luck to you, I hear they're \n"
 	.string "ruthless!$"
 
 IntroSign::
-	.string "Ever Grande City Concert Hall$"
+	.string "Ever Grande City Concert Hall\p"
+	.string "NEXT SHOW: The Last Dinner Party $"
 
 OutroFront::
 	.string "What are you doing out here?\p"
@@ -347,18 +319,52 @@ IntroChild::
 	.string "I've been here since 10am! I'm finally\n"
 	.string "getting barricade!$"
 
-IntroAdult::
-	.string "If that little kid trys to push infront\n"
-	.string "of me again...$"
+IntroBrenae::
+	.string "BRENAE: I bought my ticket months ago!\p"
+	.string "I'm so nervous, I'm going to throw up…$"
 
 IntroFront::
-	.string "Hey no cuts!\p"
-	.string "Oh you don't have a ticket?\p"
-	.string "Well look, my names Steff, word of\n"
-	.string "advice..\p"
-	.string "You best head inside and try win a\n"
-	.string "ticket, here you can cut infront of me!$"
+	.string "STEFF: Hey I was here first! \p"
+	.string "Oh wait, you don't have a ticket? \p"
+	.string "Ah you're here for the challenge! \p"
+	.string "Alright then, go ahead! \p"
+	.string "Good luck!$"
 
 IntroChallanger::
-	.string "Your going to try face the band?\p"
-	.string "Watch out for Emily...I got shreded$"
+	.string "NINA: You're going to face the band? \p"
+	.string "Watch out for Emily… I got shredded…$"
+
+Aiden_PokemonBox::
+	.string "AIDEN: Huh? \p"
+	.string "You got a POKéMON from that box?? \p"
+	.string "If I'd known what was in there \n"
+	.string "I wouldn't have tipped you off…$"
+
+Aiden_TruckBoxes::
+	.string "AIDEN: I came all the way from \n"
+	.string "Finland! \p"
+	.string "Also, the transport crew just left \n"
+	.string "for lunch. \p"
+	.string "Looks like a bunch of boxes by the \n"
+	.string "trucks are up for grabs. \p"
+	.string "I already swiped some cool stuff out of \n"
+	.string "one of them. \p"
+	.string "There's more I haven't touched, you \n"
+	.string "should check them out, see if there's \l"
+	.string "anything left.$"
+
+NoraHelp::
+	.string "NORA: Oh hey! Are you here for the \n"
+	.string "show? Mind if I grab a quick photo? \p"
+	.string "…\p"
+	.string "Oh darn! My camera just died. \p"
+	.string "Hey, do you think you could check the\n"
+	.string "shop, ask if they have any batteries? \p"
+	.string "If not, I'll have to drive my truck \n"
+	.string "back to get one!$"
+
+NoraNoBattery::
+	.string "NORA: They didn't have any? \p"
+	.string "I'll have to drive to another store \n"
+	.string "real quick then. \p"
+	.string "Thanks anyways, enjoy the show!$"

@@ -34,6 +34,11 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
+	applymovement 3, Turn_Alter_Left
+	applymovement 4, Turn_Alter_Left
+	applymovement 2, Turn_Alter_Right
+	applymovement 5, Turn_Alter_Right
+	waitmovement 0
 	msgbox EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp
@@ -74,6 +79,14 @@ EverGrandeCity_HallOfFame_EventScript_GameClearFemale::
 	releaseall
 	end
 
+
+Turn_Alter_Left:
+	face_left
+	step_end
+
+Turn_Alter_Right:
+	face_right
+	step_end
 
 EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1:
 	walk_up

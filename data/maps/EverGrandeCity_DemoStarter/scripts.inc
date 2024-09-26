@@ -6,7 +6,9 @@ Demo_Mart::
 	faceplayer
 	compare VAR_MEW, 1
 	goto_if_eq Demo_Mart_2
-	addmoney 500000
+	compare VAR_DEMOSHOP, 0
+	goto_if_eq Demo_Mart_6
+Demo_Mart_5:
 	message Demo_Mart_Text_0
 	waitmessage
 	pokemart Demo_MartItems
@@ -20,6 +22,11 @@ Demo_Mart_2:
 	waitmessage
 	setvar VAR_MEW, 2
 	goto Demo_Mart_1
+
+Demo_Mart_6:
+	addmoney 100000
+	setvar VAR_DEMOSHOP, 1
+	goto Demo_Mart_5
 
 
 	.align 2

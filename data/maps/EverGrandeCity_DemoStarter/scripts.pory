@@ -11,7 +11,10 @@ script Demo_Mart{
         setvar(VAR_MEW,2)
     }
     else{
-    addmoney(500000)
+    if(var(VAR_DEMOSHOP)==0){
+    addmoney(100000)
+    setvar(VAR_DEMOSHOP,1)
+    }
     message("AMY: Welcome to the Merch Stand, what \ncan I get for you?")
     waitmessage
     pokemart(Demo_MartItems)
@@ -20,6 +23,7 @@ script Demo_Mart{
     release
     end
 }
+
 
 text MartBattery{
     "AMY: Welcome to the Merch Stand, what \n"
