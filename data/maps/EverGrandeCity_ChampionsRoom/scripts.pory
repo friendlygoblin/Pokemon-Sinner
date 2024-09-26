@@ -147,10 +147,10 @@ script EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF{
 	msgbox(EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside, MSGBOX_DEFAULT)
 	checkplayergender
 			if(var(VAR_RESULT)==MALE){
-		goto(EverGrandeCity_ChampionsRoom_EventScript_MayCongratulations)
+		call(EverGrandeCity_ChampionsRoom_EventScript_MayCongratulations)
 		}
 	else{
-		goto(EverGrandeCity_ChampionsRoom_EventScript_BrendanCongratulations)
+		call(EverGrandeCity_ChampionsRoom_EventScript_BrendanCongratulations)
 		}
 	closemessage
 	applymovement(LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceExit)
@@ -361,7 +361,7 @@ text EverGrandeCity_ChampionsRoom_Text_MayCongratulations{
 	"I'm just joking! That's okay!\n"
 	"That's the rule!\p"
 	"{PLAYER}{KUN}!\n"
-	"Honestly, congratulations!\n"
+	"Honestly, congratulations!\p"
 	"See you at the barricade!$"
 }
 
