@@ -7,16 +7,16 @@ Demo_Mart::
 	compare VAR_MEW, 1
 	goto_if_eq Demo_Mart_2
 	addmoney 500000
-	message Demo_Mart_Text_1
+	message Demo_Mart_Text_0
 	waitmessage
 	pokemart Demo_MartItems
-	msgbox Demo_Mart_Text_2
+	msgbox Demo_Mart_Text_1
 Demo_Mart_1:
 	release
 	end
 
 Demo_Mart_2:
-	msgbox Demo_Mart_Text_0
+	msgbox MartBattery
 	waitmessage
 	setvar VAR_MEW, 2
 	goto Demo_Mart_1
@@ -43,7 +43,7 @@ Demo_MartItems:
 Ness_EventScript_Demo::
 	lockall
 	applymovement 27, Common_Movement_FacePlayer
-	msgbox Ness_EventScript_Demo_Text_0
+	msgbox NessStrategy
 	waitmessage
 	releaseall
 	end
@@ -1173,25 +1173,10 @@ Pokeball_EventScript_Demo24_6:
 
 
 Demo_Mart_Text_0:
-	.string "Welcome to Amy's Shop, What can I get\n"
-	.string "for you?\p"
-	.string "Oh? Nora needs a fresh camera battery?\p"
-	.string "Sorry hun, we don't stock them in here!\p"
-	.string "You best go tell her we don't have any$"
+	.string "AMY: Welcome to the Merch Stand, what \ncan I get for you?$"
 
 Demo_Mart_Text_1:
-	.string "Welcome to Amy's Shop, What can I get\n"
-	.string "for you?$"
-
-Demo_Mart_Text_2:
 	.string "Good luck, babe!$"
-
-Ness_EventScript_Demo_Text_0:
-	.string "Hi! My names Ness nice to meet you.\p"
-	.string "Your here to take on the band too?\p"
-	.string "I made it all the way to Lizzie but then\n"
-	.string "they stomped me!\p"
-	.string "I gotta rethink my stratagy$"
 
 GivePlayerGod_Text_0:
 	.string "Received all 8 Gym Badges!$"
@@ -1348,6 +1333,23 @@ Pokeball_EventScript_Demo24_Text_0:
 
 Pokeball_EventScript_Demo24_Text_1:
 	.string "Received Garchomp!$"
+
+MartBattery::
+	.string "AMY: Welcome to the Merch Stand, what \n"
+	.string "can I get for you?\p"
+	.string "Oh, Nora needs a fresh camera battery? \p"
+	.string "Sorry hun, but we don't stock them \n"
+	.string "in here!\p"
+	.string "You best go tell her we don't have \n"
+	.string "any.$"
+
+NessStrategy::
+	.string "NESS: Hi! My name's Ness, nice to \n"
+	.string "meet you. \p"
+	.string "You're here to take on the band too? \p"
+	.string "I made it all the way to Lizzie but \n"
+	.string "then they stomped me! \p"
+	.string "I gotta rethink my strategy…$"
 
 NursePick::
 	.string "Pick your team out of these guys\n"
