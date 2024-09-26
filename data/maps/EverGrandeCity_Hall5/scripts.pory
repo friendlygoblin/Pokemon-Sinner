@@ -12,3 +12,8 @@ EverGrandeCity_Hall5_EventScript_TurnPlayerNorth::
 	end
 
 `
+
+script Demo_Mart_Reset{
+    setvar(VAR_DEMOSHOP,0)
+	end
+}

@@ -148,7 +148,7 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	checkplayergender
 	compare VAR_RESULT, MALE
 	goto_if_eq EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF_2
-	goto EverGrandeCity_ChampionsRoom_EventScript_BrendanCongratulations
+	call EverGrandeCity_ChampionsRoom_EventScript_BrendanCongratulations
 EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF_1:
 	closemessage
 	applymovement LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceExit
@@ -161,7 +161,7 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF_1:
 	end
 
 EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF_2:
-	goto EverGrandeCity_ChampionsRoom_EventScript_MayCongratulations
+	call EverGrandeCity_ChampionsRoom_EventScript_MayCongratulations
 	goto EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF_1
 
 
@@ -344,7 +344,7 @@ EverGrandeCity_ChampionsRoom_Text_MayCongratulations::
 	.string "I'm just joking! That's okay!\n"
 	.string "That's the rule!\p"
 	.string "{PLAYER}{KUN}!\n"
-	.string "Honestly, congratulations!\n"
+	.string "Honestly, congratulations!\p"
 	.string "See you at the barricade!$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations::
