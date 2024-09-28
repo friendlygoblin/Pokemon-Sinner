@@ -234,6 +234,19 @@ script Pokeball_EventScript_ConcertHall{
     end
     }
     }
+script Turn_Back_Cave{
+    lock
+    msgbox(format("Maybe I shouldn't wander around without Pokemon"))
+    waitmessage
+    applymovement(OBJ_EVENT_ID_PLAYER, playerBack1)
+    waitmovement(0)
+    release
+    end
+}
+
+movement playerBack1 {
+    walk_down
+}
 
 script Nora_EventScript_ConcertHall{
     lock

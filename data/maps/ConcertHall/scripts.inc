@@ -194,6 +194,20 @@ Pokeball_EventScript_ConcertHall_10:
 	goto Pokeball_EventScript_ConcertHall_9
 
 
+Turn_Back_Cave::
+	lock
+	msgbox Turn_Back_Cave_Text_0
+	waitmessage
+	applymovement OBJ_EVENT_ID_PLAYER, playerBack1
+	waitmovement 0
+	release
+	end
+
+
+playerBack1:
+	walk_down
+	step_end
+
 Nora_EventScript_ConcertHall::
 	lock
 	getplayerxy VAR_TEMP_2, VAR_TEMP_3
@@ -292,6 +306,10 @@ Pokeball_EventScript_ConcertHall_Text_2:
 
 Pokeball_EventScript_ConcertHall_Text_3:
 	.string "It's empty.$"
+
+Turn_Back_Cave_Text_0:
+	.string "Maybe I shouldn't wander around\n"
+	.string "without Pokemon$"
 
 Nora_EventScript_ConcertHall_Text_0:
 	.string "NORA: Thanks! I'll wait right here!$"

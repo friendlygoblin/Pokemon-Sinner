@@ -237,6 +237,13 @@
       "elevation": 0,
       "dest_map": "MAP_EVER_GRANDE_CITY_DEMO_STARTER",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_EVER_GRANDE_CITY_GOBLIN_HIDEOUT",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -248,6 +255,15 @@
       "var": "VAR_EVER_GRANDE_CITY_STATE",
       "var_value": "0",
       "script": "IntroNPC4_EventScript_ConcertHall"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_DEWFORD_TOWN_STATE",
+      "var_value": "0",
+      "script": "Turn_Back_Cave"
     }
   ],
   "bg_events": [

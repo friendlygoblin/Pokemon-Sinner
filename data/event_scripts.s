@@ -1084,3 +1084,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ConcertHall/scripts.inc"
 
 	.include "data/maps/EverGrandeCity_Lounge/scripts.inc"
+
+	.include "data/maps/EverGrandeCity_GoblinHideout/scripts.inc"
