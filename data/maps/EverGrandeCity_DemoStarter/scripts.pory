@@ -12,8 +12,8 @@ script Demo_Mart{
     }
     else{
     if(var(VAR_DEMOSHOP)==0){
-    addmoney(100000)
-    setvar(VAR_DEMOSHOP,1)
+        addmoney(15000)
+        setvar(VAR_DEMOSHOP,1)
     }
     message("AMY: Welcome to the Merch Stand, what \ncan I get for you?")
     waitmessage
@@ -24,6 +24,13 @@ script Demo_Mart{
     end
 }
 
+script Demo_Sign{
+    lock
+    msgbox(format("Rewards Preview \pAurora: 10,000\pEmily: 12,000\pLizzie: 15,000\pGeorgia: 18,000\pAbigail: Dinner Guest List!"))
+    waitmessage
+    release
+    end
+}
 
 text MartBattery{
     "AMY: Welcome to the Merch Stand, what \n"
@@ -39,9 +46,13 @@ mart Demo_MartItems{
     ITEM_PARALYZE_HEAL
     ITEM_ANTIDOTE
     ITEM_FULL_HEAL
+    ITEM_ETHER
+    ITEM_MAX_ETHER
+    ITEM_MAX_ELIXER
     ITEM_RARE_CANDY
     ITEM_SUPER_POTION
     ITEM_HYPER_POTION
+    ITEM_REVIVE
     ITEM_MAX_REVIVE
     ITEM_FULL_RESTORE
     ITEM_MEGA_RING
@@ -561,7 +572,7 @@ script Pokeball_EventScript_Demo9{
     showmonpic(SPECIES_FERROTHORN, 10,3)
     msgbox("Do you want to choose \nGrass/Steel type Ferrothorn?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=24,speedEv = 0,spAtkEv=0,spDefEv=232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_LEECH_SEED, move4 = MOVE_POWER_WHIP)
+        givemon(SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=24,speedEv = 0,spAtkEv=0,spDefEv=232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_RAPID_SPIN, move4 = MOVE_POWER_WHIP)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Ferrothorn!")

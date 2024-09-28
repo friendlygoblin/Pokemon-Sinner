@@ -58,6 +58,10 @@ script EverGrandeCity_PhoebesRoom_EventScript_Phoebe{
 
 script EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech{
 	msgbox(Emily_Text_PostBattleSpeech, MSGBOX_DEFAULT)
+	addmoney(12000)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(format("Player received 12,000"))
+	waitmessage
 	releaseall
 	end
 }

@@ -71,6 +71,10 @@ script EverGrandeCity_SidneysRoom_EventScript_Defeated{
 	setflag(FLAG_DEFEATED_ELITE_4_SIDNEY)
 	call(PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles)
 	msgbox(Aurora_Text_PostBattleSpeech)
+	addmoney(10000)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(format("Player received 10,000"))
+	waitmessage
 	releaseall
 	end
 }

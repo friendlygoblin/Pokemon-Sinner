@@ -24,9 +24,17 @@ Demo_Mart_2:
 	goto Demo_Mart_1
 
 Demo_Mart_6:
-	addmoney 100000
+	addmoney 15000
 	setvar VAR_DEMOSHOP, 1
 	goto Demo_Mart_5
+
+
+Demo_Sign::
+	lock
+	msgbox Demo_Sign_Text_0
+	waitmessage
+	release
+	end
 
 
 	.align 2
@@ -34,9 +42,13 @@ Demo_MartItems:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_ETHER
+	.2byte ITEM_MAX_ETHER
+	.2byte ITEM_MAX_ELIXER
 	.2byte ITEM_RARE_CANDY
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REVIVE
 	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_MEGA_RING
@@ -551,7 +563,7 @@ Pokeball_EventScript_Demo9_1:
 	end
 
 Pokeball_EventScript_Demo9_2:
-	givemon SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 24, speedEv = 0, spAtkEv = 0, spDefEv = 232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_LEECH_SEED, move4 = MOVE_POWER_WHIP
+	givemon SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 24, speedEv = 0, spAtkEv = 0, spDefEv = 232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_RAPID_SPIN, move4 = MOVE_POWER_WHIP
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo9_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -1184,6 +1196,14 @@ Demo_Mart_Text_0:
 
 Demo_Mart_Text_1:
 	.string "Good luck, babe!$"
+
+Demo_Sign_Text_0:
+	.string "Rewards Preview\p"
+	.string "Aurora: 10,000\p"
+	.string "Emily: 12,000\p"
+	.string "Lizzie: 15,000\p"
+	.string "Georgia: 18,000\p"
+	.string "Abigail: Dinner Guest List!$"
 
 GivePlayerGod_Text_0:
 	.string "Received all 8 Gym Badges!$"

@@ -56,6 +56,10 @@ script EverGrandeCity_GlaciasRoom_EventScript_Glacia{
 
 script EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech{
 	msgbox(EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT)
+	addmoney(15000)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(format("Player received 15,000"))
+	waitmessage
 	releaseall
 	end
 }
