@@ -268,6 +268,7 @@
 #define MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_2F (14 | (16 << 8))
 #define MAP_EVER_GRANDE_CITY_DEMO_STARTER      (15 | (16 << 8))
 #define MAP_CONCERT_HALL                       (16 | (16 << 8))
+#define MAP_EVER_GRANDE_CITY_LOUNGE            (17 | (16 << 8))
 
 // gMapGroup_IndoorRoute104
 #define MAP_ROUTE104_MR_BRINEYS_HOUSE         (0 | (17 << 8))

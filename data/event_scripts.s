@@ -1082,3 +1082,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/EverGrandeCity_DemoStarter/scripts.inc"
 
 	.include "data/maps/ConcertHall/scripts.inc"
+
+	.include "data/maps/EverGrandeCity_Lounge/scripts.inc"

@@ -46,6 +46,7 @@ mart Demo_MartItems{
     ITEM_PARALYZE_HEAL
     ITEM_ANTIDOTE
     ITEM_FULL_HEAL
+    ITEM_AWAKENING
     ITEM_ETHER
     ITEM_MAX_ETHER
     ITEM_MAX_ELIXER
@@ -260,6 +261,14 @@ script NicknameBoxMon{
         
     }
     call(Common_EventScript_TransferredToPC)
+}
+
+script EventScript_VipRoom{
+    lockall
+    msgbox(format("Sorry pal, only VIP's allowed in the lounge area."))
+    waitmessage
+    releaseall
+    end
 }
 
 script Pokeball_EventScript_Demo1{

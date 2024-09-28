@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_EverGrande",
       "border_filepath": "data/layouts/ConcertHall/border.bin",
       "blockdata_filepath": "data/layouts/ConcertHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_EVER_GRANDE_CITY_LOUNGE",
+      "name": "EverGrandeCity_Lounge_Layout",
+      "width": 22,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MauvilleGameCorner",
+      "border_filepath": "data/layouts/EverGrandeCity_Lounge/border.bin",
+      "blockdata_filepath": "data/layouts/EverGrandeCity_Lounge/map.bin"
     }
   ]
 }

@@ -42,6 +42,7 @@ Demo_MartItems:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_AWAKENING
 	.2byte ITEM_ETHER
 	.2byte ITEM_MAX_ETHER
 	.2byte ITEM_MAX_ELIXER
@@ -229,6 +230,14 @@ NicknameBoxMon_1:
 NicknameBoxMon_2:
 	call Common_EventScript_NameReceivedBoxMon
 	goto NicknameBoxMon_1
+
+
+EventScript_VipRoom::
+	lockall
+	msgbox EventScript_VipRoom_Text_0
+	waitmessage
+	releaseall
+	end
 
 
 Pokeball_EventScript_Demo1::
@@ -1213,6 +1222,10 @@ GivePlayerGod_Text_1:
 
 NicknamePartyMon_Text_0:
 	.string "Give it a nickname?$"
+
+EventScript_VipRoom_Text_0:
+	.string "Sorry pal, only VIP's allowed in the\n"
+	.string "lounge area.$"
 
 Pokeball_EventScript_Demo1_Text_0:
 	.string "Do you want to choose \nFire/Fighting type Infernape?$"
