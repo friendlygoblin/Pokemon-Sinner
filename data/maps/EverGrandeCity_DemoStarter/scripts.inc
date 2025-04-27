@@ -6,20 +6,35 @@ Demo_Mart::
 	faceplayer
 	compare VAR_MEW, 1
 	goto_if_eq Demo_Mart_2
-	addmoney 500000
-	message Demo_Mart_Text_1
+	compare VAR_DEMOSHOP, 0
+	goto_if_eq Demo_Mart_6
+Demo_Mart_5:
+	message Demo_Mart_Text_0
 	waitmessage
 	pokemart Demo_MartItems
-	msgbox Demo_Mart_Text_2
+	msgbox Demo_Mart_Text_1
 Demo_Mart_1:
 	release
 	end
 
 Demo_Mart_2:
-	msgbox Demo_Mart_Text_0
+	msgbox MartBattery
 	waitmessage
 	setvar VAR_MEW, 2
 	goto Demo_Mart_1
+
+Demo_Mart_6:
+	addmoney 150000
+	setvar VAR_DEMOSHOP, 1
+	goto Demo_Mart_5
+
+
+Demo_Sign::
+	lock
+	msgbox Demo_Sign_Text_0
+	waitmessage
+	release
+	end
 
 
 	.align 2
@@ -27,9 +42,14 @@ Demo_MartItems:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_ANTIDOTE
 	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_AWAKENING
+	.2byte ITEM_ETHER
+	.2byte ITEM_MAX_ETHER
+	.2byte ITEM_MAX_ELIXER
 	.2byte ITEM_RARE_CANDY
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_REVIVE
 	.2byte ITEM_MAX_REVIVE
 	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_MEGA_RING
@@ -43,7 +63,7 @@ Demo_MartItems:
 Ness_EventScript_Demo::
 	lockall
 	applymovement 27, Common_Movement_FacePlayer
-	msgbox Ness_EventScript_Demo_Text_0
+	msgbox NessStrategy
 	waitmessage
 	releaseall
 	end
@@ -210,6 +230,14 @@ NicknameBoxMon_1:
 NicknameBoxMon_2:
 	call Common_EventScript_NameReceivedBoxMon
 	goto NicknameBoxMon_1
+
+
+EventScript_VipRoom::
+	lockall
+	msgbox EventScript_VipRoom_Text_0
+	waitmessage
+	releaseall
+	end
 
 
 Pokeball_EventScript_Demo1::
@@ -544,7 +572,7 @@ Pokeball_EventScript_Demo9_1:
 	end
 
 Pokeball_EventScript_Demo9_2:
-	givemon SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 24, speedEv = 0, spAtkEv = 0, spDefEv = 232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_LEECH_SEED, move4 = MOVE_POWER_WHIP
+	givemon SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL, hpEv = 252, atkEv = 0, defEv = 24, speedEv = 0, spAtkEv = 0, spDefEv = 232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_RAPID_SPIN, move4 = MOVE_POWER_WHIP
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq Pokeball_EventScript_Demo9_5
 	compare VAR_RESULT, MON_GIVEN_TO_PC
@@ -1173,25 +1201,18 @@ Pokeball_EventScript_Demo24_6:
 
 
 Demo_Mart_Text_0:
-	.string "Welcome to Amy's Shop, What can I get\n"
-	.string "for you?\p"
-	.string "Oh? Nora needs a fresh camera battery?\p"
-	.string "Sorry hun, we don't stock them in here!\p"
-	.string "You best go tell her we don't have any$"
+	.string "AMY: Welcome to the Merch Stand, what \ncan I get for you?$"
 
 Demo_Mart_Text_1:
-	.string "Welcome to Amy's Shop, What can I get\n"
-	.string "for you?$"
-
-Demo_Mart_Text_2:
 	.string "Good luck, babe!$"
 
-Ness_EventScript_Demo_Text_0:
-	.string "Hi! My names Ness nice to meet you.\p"
-	.string "Your here to take on the band too?\p"
-	.string "I made it all the way to Lizzie but then\n"
-	.string "they stomped me!\p"
-	.string "I gotta rethink my stratagy$"
+Demo_Sign_Text_0:
+	.string "Rewards Preview\p"
+	.string "Aurora: 100,000\p"
+	.string "Emily: 120,000\p"
+	.string "Lizzie: 150,000\p"
+	.string "Georgia: 180,000\p"
+	.string "Abigail: Dinner Guest List!$"
 
 GivePlayerGod_Text_0:
 	.string "Received all 8 Gym Badges!$"
@@ -1201,6 +1222,10 @@ GivePlayerGod_Text_1:
 
 NicknamePartyMon_Text_0:
 	.string "Give it a nickname?$"
+
+EventScript_VipRoom_Text_0:
+	.string "Sorry pal, only VIP's allowed in the\n"
+	.string "lounge area.$"
 
 Pokeball_EventScript_Demo1_Text_0:
 	.string "Do you want to choose \nFire/Fighting type Infernape?$"
@@ -1349,15 +1374,32 @@ Pokeball_EventScript_Demo24_Text_0:
 Pokeball_EventScript_Demo24_Text_1:
 	.string "Received Garchomp!$"
 
+MartBattery::
+	.string "AMY: Welcome to the Merch Stand, what \n"
+	.string "can I get for you?\p"
+	.string "Oh, Nora needs a fresh camera battery? \p"
+	.string "Sorry hun, but we don't stock them \n"
+	.string "in here!\p"
+	.string "You best go tell her we don't have \n"
+	.string "any.$"
+
+NessStrategy::
+	.string "NESS: Hi! My name's Ness, nice to \n"
+	.string "meet you. \p"
+	.string "You're here to take on the band too? \p"
+	.string "I made it all the way to Lizzie but \n"
+	.string "then they stomped me! \p"
+	.string "I gotta rethink my strategy…$"
+
 NursePick::
-	.string "Pick your team out of these guys\n"
-	.string "over there!\p"
+	.string "GOBLIN: Pick your team out of these \n"
+	.string "guys over there!\p"
 	.string "The band are absolute killers,\n"
 	.string "you're gonna need a whooole lotta\l"
 	.string "nerve to beat them!$"
 
 NurseGive_Ready::
-	.string "Are you ready to challenge\n"
+	.string "GOBLIN: Are you ready to challenge\n"
 	.string "The Last Dinner Party?\p"
 	.string "I heard they'll invite you to their\n"
 	.string "show if you manage to beat them \l"
@@ -1371,8 +1413,8 @@ NurseGive_GoGetem::
 	.string "the real gunslinger!$"
 
 NurseStop_Text::
-	.string "Are you trying to challenge the band \n"
-	.string "to POKéMON battles...\l"
+	.string "GOBLIN: Are you trying to challenge \n"
+	.string "the band to POKéMON battles…\l"
 	.string "without POKéMON? \p"
 	.string "That won't do!\p"
 	.string "Go pick your team out of these guys\n"

@@ -297,7 +297,9 @@
     "EverGrandeCity_PokemonCenter_2F",
     "EverGrandeCity_PokemonLeague_2F",
     "EverGrandeCity_DemoStarter",
-    "ConcertHall"
+    "ConcertHall",
+    "EverGrandeCity_Lounge",
+    "EverGrandeCity_GoblinHideout"
   ],
   "gMapGroup_IndoorRoute104": [
     "Route104_MrBrineysHouse",

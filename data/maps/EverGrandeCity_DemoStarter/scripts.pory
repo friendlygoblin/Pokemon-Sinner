@@ -13,6 +13,11 @@ script Demo_Mart{
     else{
     addmoney(500000)
     message("AMY: Welcome to Amy's Shop, what can I \nget for you?")
+    if(var(VAR_DEMOSHOP)==0){
+        addmoney(150000)
+        setvar(VAR_DEMOSHOP,1)
+    }
+    message("AMY: Welcome to the Merch Stand, what \ncan I get for you?")
     waitmessage
     pokemart(Demo_MartItems)
     msgbox("Good luck, babe!")
@@ -24,6 +29,17 @@ script Demo_Mart{
 text MartBattery{
     "AMY: Welcome to Amy's Shop, what can I \n"
     "get for you?\p"
+script Demo_Sign{
+    lock
+    msgbox(format("Rewards Preview \pAurora: 100,000\pEmily: 120,000\pLizzie: 150,000\pGeorgia: 180,000\pAbigail: Dinner Guest List!"))
+    waitmessage
+    release
+    end
+}
+
+text MartBattery{
+    "AMY: Welcome to the Merch Stand, what \n"
+    "can I get for you?\p"
     "Oh, Nora needs a fresh camera battery? \p"
     "Sorry hun, but we don't stock them \n"
     "in here!\p"
@@ -35,9 +51,14 @@ mart Demo_MartItems{
     ITEM_PARALYZE_HEAL
     ITEM_ANTIDOTE
     ITEM_FULL_HEAL
+    ITEM_AWAKENING
+    ITEM_ETHER
+    ITEM_MAX_ETHER
+    ITEM_MAX_ELIXER
     ITEM_RARE_CANDY
     ITEM_SUPER_POTION
     ITEM_HYPER_POTION
+    ITEM_REVIVE
     ITEM_MAX_REVIVE
     ITEM_FULL_RESTORE
     ITEM_MEGA_RING
@@ -75,8 +96,8 @@ script Nurse_EventScript_Demo{
 }
 
 text NursePick{
-    "Pick your team out of these guys\n"
-    "over there!\p"
+    "GOBLIN: Pick your team out of these \n"
+    "guys over there!\p"
     "The band are absolute killers,\n"
     "you're gonna need a whooole lotta\l"
     "nerve to beat them!$"
@@ -127,7 +148,7 @@ script SetFlags_EventScript_Demo{
 }
 
 text NurseGive_Ready{
-    "Are you ready to challenge\n"
+    "GOBLIN: Are you ready to challenge\n"
     "The Last Dinner Party?\p"
     "I heard they'll invite you to their\n"
     "show if you manage to beat them \l"
@@ -215,12 +236,12 @@ script NurseStop_EventScript_Demo2{
 }
 
 text NurseStop_Text{
-    "Are you trying to challenge the band \n"
-    "to POKéMON battles...\l"
+    "GOBLIN: Are you trying to challenge \n"
+    "the band to POKéMON battles…\l"
     "without POKéMON? \p"
     "That won't do!\p"
     "Go pick your team out of these guys\n"
-    "over there."
+    "over there.$"
 }
 
 script EverGradeCity_DemoStarter_OnTransition{
@@ -245,6 +266,14 @@ script NicknameBoxMon{
         
     }
     call(Common_EventScript_TransferredToPC)
+}
+
+script EventScript_VipRoom{
+    lockall
+    msgbox(format("Sorry pal, only VIP's allowed in the lounge area."))
+    waitmessage
+    releaseall
+    end
 }
 
 script Pokeball_EventScript_Demo1{
@@ -557,7 +586,7 @@ script Pokeball_EventScript_Demo9{
     showmonpic(SPECIES_FERROTHORN, 10,3)
     msgbox("Do you want to choose \nGrass/Steel type Ferrothorn?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){
-        givemon(SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=24,speedEv = 0,spAtkEv=0,spDefEv=232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_LEECH_SEED, move4 = MOVE_POWER_WHIP)
+        givemon(SPECIES_FERROTHORN, 55, item = ITEM_NONE, ball = ITEM_MASTER_BALL,hpEv=252,atkEv=0,defEv=24,speedEv = 0,spAtkEv=0,spDefEv=232, move1 = MOVE_GYRO_BALL, move2 = MOVE_SPIKES, move3 = MOVE_RAPID_SPIN, move4 = MOVE_POWER_WHIP)
         if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Received Ferrothorn!")

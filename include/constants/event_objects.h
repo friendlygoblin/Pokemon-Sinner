@@ -386,6 +386,9 @@
 #define OBJ_EVENT_PAL_TAG_AIDEN                  0x1134
 #define OBJ_EVENT_PAL_TAG_NINA                  0x1135
 #define OBJ_EVENT_PAL_TAG_NESS                  0x1136
+#define OBJ_EVENT_PAL_TAG_YAP                 0x1137
+#define OBJ_EVENT_PAL_TAG_RACHEL                0x1138
+
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

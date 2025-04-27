@@ -1,0 +1,38 @@
+mapscripts EverGrandeCity_GoblinHideout_MapScripts {
+    
+    MAP_SCRIPT_ON_TRANSITION: HideGob
+    
+    
+}
+
+
+
+script EventScript_GoblinHideout_GoblinEncounter{
+    lock
+    clearflag(FLAG_GOBLINCAVE)
+    addobject(1)
+    playse(SE_DOOR)
+    waitse
+    applymovement(1,gobemote)
+    playse(SE_PIN)
+    waitse
+    applymovement(1,GoblinArrive)
+    waitmovement(0)
+    release
+    end
+
+}
+script HideGob{
+    removeobject(1)
+    setflag(FLAG_GOBLINCAVE)
+    end
+}
+
+movement GoblinArrive {
+    walk_up * 2
+    
+}
+
+movement gobemote{
+    emote_exclamation_mark
+}
