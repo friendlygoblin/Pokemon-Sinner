@@ -11,11 +11,14 @@ RustboroCity_Flat2_3F_EventScript_Woman::
 	end
 
 RustboroCity_Flat2_3F_Text_PresidentCollectsRareStones:
-	.string "DEVON's PRESIDENT likes to collect\n"
-	.string "rare stones.$"
+	.string "I was expecting the challenge to\n"
+	.string "cause a mess in town, with all those \l"
+	.string "trainers coming to try their luck. \p"
+	.string "But in the end it's nice, everyone \n"
+	.string "is friendly and respectful!$"
 
 RustboroCity_Flat2_3F_Text_PresidentsSonAlsoCollectsRareStones:
-	.string "I think the PRESIDENT's son also\n"
-	.string "collects rare stones.$"
+	.string "Hozier is such a nice person!\p"
+	.string "I see him sometimes when I go shopping.$"
 
 `

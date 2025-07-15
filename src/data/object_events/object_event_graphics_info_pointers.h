@@ -3,6 +3,11 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMach
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanFieldMove;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_QuintyPlump;
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jay;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ann;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wren;
+
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NinjaBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Twin;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Boy1;
@@ -254,6 +259,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_BRENDAN_SURFING] =          &gObjectEventGraphicsInfo_BrendanSurfing,
     [OBJ_EVENT_GFX_BRENDAN_FIELD_MOVE] =       &gObjectEventGraphicsInfo_BrendanFieldMove,
     [OBJ_EVENT_GFX_QUINTY_PLUMP] =             &gObjectEventGraphicsInfo_QuintyPlump,
+
+    [OBJ_EVENT_GFX_JAY] =                      &gObjectEventGraphicsInfo_Jay,
+    [OBJ_EVENT_GFX_ANN] =                      &gObjectEventGraphicsInfo_Ann,
+    [OBJ_EVENT_GFX_WREN] =                      &gObjectEventGraphicsInfo_Wren,
+
     [OBJ_EVENT_GFX_NINJA_BOY] =                &gObjectEventGraphicsInfo_NinjaBoy,
     [OBJ_EVENT_GFX_TWIN] =                     &gObjectEventGraphicsInfo_Twin,
     [OBJ_EVENT_GFX_BOY_1] =                    &gObjectEventGraphicsInfo_Boy1,

@@ -63,7 +63,6 @@
 #define MAP_UNDERWATER_ROUTE129 (54 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE105 (55 | (0 << 8))
 #define MAP_UNDERWATER_ROUTE125 (56 | (0 << 8))
-#define MAP_PRELUDE_TOWN        (57 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))
@@ -597,6 +596,37 @@
 // gMapGroup_IndoorRoute124
 #define MAP_ROUTE124_DIVING_TREASURE_HUNTERS_HOUSE (0 | (33 << 8))
 
-#define MAP_GROUPS_COUNT 34
+// gMapGroup_PreludeRegion_Outdoors
+#define MAP_PRELUDE_TOWN         (0 | (34 << 8))
+#define MAP_START_TOWN           (1 | (34 << 8))
+#define MAP_ROUTE1               (2 | (34 << 8))
+#define MAP_ROUTE1_BIS           (3 | (34 << 8))
+#define MAP_ECSTASY_TOWN         (4 | (34 << 8))
+#define MAP_ROUTE2               (5 | (34 << 8))
+#define MAP_RIB_CAVE_1F          (6 | (34 << 8))
+#define MAP_RIB_CAVE_2F          (7 | (34 << 8))
+#define MAP_RIB_CAVE_3F          (8 | (34 << 8))
+#define MAP_RIB_CAVE_SECRET_ROOM (9 | (34 << 8))
+#define MAP_CANDLEWAX_CITY       (10 | (34 << 8))
+#define MAP_CAESAR_TUNNEL        (11 | (34 << 8))
+#define MAP_ROUTE3               (12 | (34 << 8))
+#define MAP_FURGE_TOWN           (13 | (34 << 8))
+#define MAP_OLIVE_MOUNT          (14 | (34 << 8))
+#define MAP_ROUTE4               (15 | (34 << 8))
+#define MAP_BEAUTIFUL_PORT       (16 | (34 << 8))
+
+// gMapGroup_PreludeRegion_Indoors
+#define MAP_START_TOWN_PLAYER_HOUSE           (0 | (35 << 8))
+#define MAP_START_TOWN_PUB                    (1 | (35 << 8))
+#define MAP_START_TOWN_OTHER_HOUSE            (2 | (35 << 8))
+#define MAP_START_TOWN_SHELTER                (3 | (35 << 8))
+#define MAP_ECSTASY_TOWN_BIG_HOUSE            (4 | (35 << 8))
+#define MAP_ECSTASY_TOWN_LITTLE_HOUSE         (5 | (35 << 8))
+#define MAP_CANDLEWAX_CITY_CONCERT_HALL       (6 | (35 << 8))
+#define MAP_CANDLEWAX_CITY_CONCERT_HALL_LOBBY (7 | (35 << 8))
+#define MAP_FURGE_TOWN_SHOP                   (8 | (35 << 8))
+#define MAP_FURGE_TOWN_CLEARING               (9 | (35 << 8))
+
+#define MAP_GROUPS_COUNT 36
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

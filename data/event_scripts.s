@@ -1086,3 +1086,56 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/EverGrandeCity_Lounge/scripts.inc"
 
 	.include "data/maps/EverGrandeCity_GoblinHideout/scripts.inc"
+
+	.include "data/maps/StartTown/scripts.inc"
+
+	.include "data/maps/StartTown_PlayerHouse/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/StartTown_Pub/scripts.inc"
+
+	.include "data/maps/StartTown_OtherHouse/scripts.inc"
+
+	.include "data/maps/StartTown_Shelter/scripts.inc"
+
+	.include "data/maps/EcstasyTown/scripts.inc"
+
+	.include "data/maps/Route1_Bis/scripts.inc"
+
+	.include "data/maps/EcstasyTown_BigHouse/scripts.inc"
+
+	.include "data/maps/EcstasyTown_LittleHouse/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"
+
+	.include "data/maps/RibCave_1F/scripts.inc"
+
+	.include "data/maps/RibCave_2F/scripts.inc"
+
+	.include "data/maps/RibCave_3F/scripts.inc"
+
+	.include "data/maps/CandlewaxCity/scripts.inc"
+
+	.include "data/maps/RibCave_SecretRoom/scripts.inc"
+
+	.include "data/maps/CandlewaxCity_ConcertHall/scripts.inc"
+
+	.include "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.inc"
+
+	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/Caesar_Tunnel/scripts.inc"
+
+
+	.include "data/maps/FurgeTown/scripts.inc"
+
+	.include "data/maps/FurgeTown_Shop/scripts.inc"
+
+	.include "data/maps/FurgeTown_Clearing/scripts.inc"
+
+	.include "data/maps/OliveMount/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/BeautifulPort/scripts.inc"

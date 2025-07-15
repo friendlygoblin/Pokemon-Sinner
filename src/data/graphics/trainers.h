@@ -292,6 +292,27 @@ const u8 gTrainerBackPic_Steven[] = INCBIN_U8("graphics/trainers/back_pics/steve
 const u32 gTrainerBackPicPalette_Red[] = INCBIN_U32("graphics/trainers/back_pics/red.gbapal.lz");
 const u32 gTrainerBackPicPalette_Leaf[] = INCBIN_U32("graphics/trainers/back_pics/leaf.gbapal.lz");
 
+const u32 gTrainerFrontPic_Grace[] = INCBIN_U32("graphics/trainers/front_pics/grace.4bpp.lz");
+const u32 gTrainerPalette_Grace[] = INCBIN_U32("graphics/trainers/front_pics/grace.gbapal.lz");
+
+const u32 gTrainerFrontPic_Jay[] = INCBIN_U32("graphics/trainers/front_pics/jay.4bpp.lz");
+const u32 gTrainerPalette_Jay[] = INCBIN_U32("graphics/trainers/front_pics/jay.gbapal.lz");
+
+const u32 gTrainerFrontPic_Nina[] = INCBIN_U32("graphics/trainers/front_pics/nina.4bpp.lz");
+const u32 gTrainerPalette_Nina[] = INCBIN_U32("graphics/trainers/front_pics/nina.gbapal.lz");
+
+const u32 gTrainerFrontPic_Steff[] = INCBIN_U32("graphics/trainers/front_pics/steff.4bpp.lz");
+const u32 gTrainerPalette_Steff[] = INCBIN_U32("graphics/trainers/front_pics/steff.gbapal.lz");
+
+const u32 gTrainerFrontPic_Wren[] = INCBIN_U32("graphics/trainers/front_pics/wren.4bpp.lz");
+const u32 gTrainerPalette_Wren[] = INCBIN_U32("graphics/trainers/front_pics/wren.gbapal.lz");
+
+const u32 gTrainerFrontPic_Goblin[] = INCBIN_U32("graphics/trainers/front_pics/goblin.4bpp.lz");
+const u32 gTrainerPalette_Goblin[] = INCBIN_U32("graphics/trainers/front_pics/goblin.gbapal.lz");
+
+const u32 gTrainerFrontPic_Amy[] = INCBIN_U32("graphics/trainers/front_pics/amy.4bpp.lz");
+const u32 gTrainerPalette_Amy[] = INCBIN_U32("graphics/trainers/front_pics/amy.gbapal.lz");
+
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
 // gTrainerFrontPic/gTrainerPalette pointers, (e.g "gTrainerFrontPic_Hiker" and "gTrainerPalette_Hiker").
@@ -401,6 +422,13 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(LEAF, Leaf),
     TRAINER_SPRITE(RS_BRENDAN, RubySapphireBrendan),
     TRAINER_SPRITE(RS_MAY, RubySapphireMay),
+    TRAINER_SPRITE(GRACE, Grace),
+    TRAINER_SPRITE(JAY, Jay),
+    TRAINER_SPRITE(NINA, Nina),
+    TRAINER_SPRITE(STEFF, Steff),
+    TRAINER_SPRITE(WREN, Wren),
+    TRAINER_SPRITE(GOBLIN, Goblin),
+    TRAINER_SPRITE(AMY, Amy),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
