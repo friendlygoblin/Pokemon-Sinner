@@ -1,0 +1,40 @@
+mapscripts RibCave_2F_MapScripts {}
+
+script RibCave2F_Hiker {
+    trainerbattle_single(TRAINER_MARC, RibCave2F_Hiker_BattleIntro, RibCave2F_Hiker_Defeated)
+	msgbox(RibCave2F_Hiker_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text RibCave2F_Hiker_BattleIntro {
+    "It's dark in here…\p"
+    "I thought you were a wild POKéMON!$"
+}
+
+text RibCave2F_Hiker_Defeated{
+    "Damn…$"
+}
+
+text RibCave2F_Hiker_PostBattle{
+    "I like caves more than cities.\p"
+    "People rarely hang out there.$"
+}
+
+script RibCave2F_SchoolKid {
+    trainerbattle_single(TRAINER_JERRY_1, RibCave2F_SchoolKid_BattleIntro, RibCave2F_SchoolKid_Defeated)
+	msgbox(RibCave2F_SchoolKid_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text RibCave2F_SchoolKid_BattleIntro {
+    "I'm here for a school project!\p"
+    "I'll take notes during our battle!$"
+}
+
+text RibCave2F_SchoolKid_Defeated{
+    "Maybe I was too focused on my notes…$"
+}
+
+text RibCave2F_SchoolKid_PostBattle{
+    "I'm studying the POKéMON in this cave.\p"
+    "It's still nice to see other trainers \n"
+    "from time to time.$"
+}

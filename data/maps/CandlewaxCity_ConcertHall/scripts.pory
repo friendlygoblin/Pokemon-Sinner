@@ -1,0 +1,67 @@
+mapscripts CandlewaxCity_ConcertHall_MapScripts {}
+
+script HozierBattle{
+    lock
+    if(defeated(TRAINER_HOZIER)){
+        msgbox(HozierBadgePerks_Independent, MSGBOX_DEFAULT)
+        }
+    else{
+        trainerbattle_single(TRAINER_HOZIER, Hozier_BattleIntro, Hozier_DefeatedText, Hozier_DefeatedScript, NO_MUSIC)         
+    }
+	release
+	end
+}
+
+script Hozier_DefeatedScript{
+    msgbox(HozierGiveBadge, MSGBOX_AUTOCLOSE)
+    message(format("Received the WASTELAND BADGE from HOZIER!"))
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    setflag(FLAG_BADGE01_GET)
+    setflag(FLAG_DEFEATED_RUSTBORO_GYM)
+    clearflag(FLAG_JAY_HOZIER_HALL)
+    setvar(VAR_CANDLEWAX_CITY_TRIGGER, 2)
+    msgbox(HozierBadgePerks, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text Hozier_BattleIntro{
+    "HOZIER: Welcome, I am Hozier. \p"
+    "I heard about your exploits in the \n"
+    "Rib Cave. \p"
+    "I admire your courage, now I'd like \n"
+    "to witness it firsthand if you'll \l"
+    "let me. $"
+}
+
+text Hozier_DefeatedText{
+    "All things end…$"
+}
+
+text HozierGiveBadge{
+    "HOZIER: Not bad, not bad at all! \p"
+    "Young friend, you have earned this \n"
+    "very special badge.\p"
+    "Wear it and you will be granted free\n"
+    "access to all of my future shows.$"
+}
+
+text HozierBadgePerks{
+    "This will also ensure your POKéMON \n"
+    "listen to you until they reach level 20. \p"
+    "Maybe I will see you again, until then \n"
+    "keep on fighting for what you think is \l"
+    "right. \p"
+    "Good luck for whatever awaits you. $"
+}
+
+text HozierBadgePerks_Independent{
+    "HOZIER: My WASTELAND BADGE ensure your \n"
+    "POKéMON listen to you until they reach \l"
+    "level 20. \p"
+    "Maybe I will see you again, until then \n"
+    "keep on fighting for what you think is \l"
+    "right. \p"
+    "Good luck for whatever awaits you. $"
+}

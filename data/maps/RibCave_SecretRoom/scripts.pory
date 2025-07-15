@@ -1,0 +1,196 @@
+mapscripts RibCave_SecretRoom_MapScripts {
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE : RibCave_BadGuysArguing
+}
+
+const LeftGuy = 3
+const RightGuy = 1
+const Pokeball = 2
+
+script RibCave_BadGuysArguing{
+    lock
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, PanCameraUp)
+    waitmovement(0)
+    special(RemoveCameraObject)
+
+    applymovement(RightGuy, RightGuySpeaks)
+    waitmovement(0)
+    msgbox(WhyAreYouNotOutside, MSGBOX_AUTOCLOSE)
+
+    applymovement(LeftGuy, LeftGuySpeaks)
+    waitmovement(0)
+    msgbox(YourTurnOutside, MSGBOX_AUTOCLOSE)
+
+    applymovement(RightGuy, RightGuySpeaks)
+    waitmovement(0)
+    msgbox(GuardingThePokemon, MSGBOX_AUTOCLOSE)
+
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, PanCameraDown)
+    waitmovement(0)
+    special(RemoveCameraObject)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerWalksUp)
+    waitmovement(0)
+
+    applymovement(RightGuy, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(RightGuy, Common_Movement_FaceDown)
+    waitmovement(0)
+    msgbox(NotSupposedToBeHere, MSGBOX_AUTOCLOSE)
+
+    applymovement(LeftGuy, LeftGuyRunsToPlayer)
+    waitmovement(0)
+    msgbox(NotGettingBack, MSGBOX_AUTOCLOSE)
+    trainerbattle_no_intro(TRAINER_GRUNT_PETALBURG_WOODS, CantBeatUsBoth)
+
+    applymovement(RightGuy, RightGuySpeaks)
+    waitmovement(0)
+    msgbox(OutOfTheWay, MSGBOX_AUTOCLOSE)
+    applymovement(LeftGuy, LeftGuyOutOfTheWay)
+    waitmovement(0)
+    applymovement(RightGuy, RightGuyGoesToPlayer)
+    waitmovement(0)
+    msgbox(MindYourBusiness, MSGBOX_AUTOCLOSE)
+    trainerbattle_no_intro(TRAINER_GRUNT_PETALBURG_WOODS, LetsGetOutOfHere)
+
+    msgbox(ForgetThePkmn, MSGBOX_AUTOCLOSE)
+    applymovement(RightGuy,RightGuyRunsAway)
+    waitmovement(0)
+    removeobject(RightGuy)
+    setflag(FLAG_RIGHTGUY_RIBCAVE)
+
+    applymovement(LeftGuy, LeftGuyRunsAway)
+    waitmovement(0)
+    removeobject(LeftGuy)
+    setflag(FLAG_LEFTGUY_RIBCAVE)
+
+    setvar(VAR_CANDLEWAX_CITY_JAY, 3)
+
+    releaseall
+    end
+}
+
+
+movement PanCameraUp{
+    walk_up * 6
+    step_end
+}
+
+movement PanCameraDown{
+    walk_fast_down *6
+    step_end
+}
+
+movement LeftGuySpeaks{
+    walk_in_place_fast_right * 2 
+    step_end
+}
+
+movement RightGuySpeaks{
+    walk_in_place_fast_left * 2 
+    step_end
+}
+
+movement PlayerWalksUp{
+    walk_up * 4
+    step_end
+}
+
+movement LeftGuyRunsToPlayer{
+    walk_fast_right
+    face_down
+    step_end
+}
+
+movement RightGuyGoesToPlayer{
+    walk_left
+    face_down
+    step_end
+}
+
+movement LeftGuyOutOfTheWay{
+    walk_left
+    face_right
+    step_end
+}
+
+movement RightGuyRunsAway{
+    walk_fast_right
+    walk_fast_down * 5
+    walk_fast_left
+    walk_fast_down
+    step_end
+}
+
+movement LeftGuyRunsAway{
+    walk_fast_down * 5
+    walk_fast_right
+    walk_fast_down
+    step_end
+}
+
+text WhyAreYouNotOutside{
+    "What are you doing here, go back \n"
+    "to the entrance!$"
+}
+
+text YourTurnOutside{
+    "I've been there for hours, why don't \n"
+    "you go for a bit?$"
+}
+
+text GuardingThePokemon{
+    "Because I'm guarding the POKéMON, and \n"
+    "you're guarding the cave! \p"
+    "We've been over this!$"
+}
+
+text NotSupposedToBeHere{
+    "Hey! We don't know you!\p"
+    "You're not supposed to be here!$"
+}
+
+text NotGettingBack{
+    "You're not getting that POKéMON\n"
+    "back!$"
+}
+
+text CantBeatUsBoth{
+    "Well, you can't beat us both!$"
+}
+
+text OutOfTheWay{
+    "Ugh just get out of my way… $"
+}
+
+text MindYourBusiness{
+    "You, mind your own business and go \n"
+    "away!$"
+}
+
+text LetsGetOutOfHere{
+    "Whatever, let's get out of here… $"
+}
+
+text ForgetThePkmn{
+    "Argh forget about the POKéMON, it's \n"
+    "not worth it! $"
+}
+
+script RibCave_Pokeball{
+    lock
+    msgbox(JaysPkmn, MSGBOX_AUTOCLOSE)
+    removeobject(Pokeball)
+    setflag(FLAG_POKEBALL_RIBCAVE)
+    setvar(VAR_CANDLEWAX_CITY_JAY, 2)
+    releaseall
+    end
+}
+
+text JaysPkmn{
+    "It's Jay's POKéMON! \p"
+    "He'll be thrilled to have it back. \p"
+    "He's waiting outside of the cave, in \n"
+    "Candlewax City. $"
+}

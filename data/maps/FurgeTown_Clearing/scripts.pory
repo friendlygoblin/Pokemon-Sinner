@@ -1,0 +1,118 @@
+mapscripts FurgeTown_Clearing_MapScripts {}
+
+const Grace = 1
+const Florence = 2
+
+script FlorenceHall_GraceBattle{
+    lock
+    faceplayer
+
+    if(defeated(TRAINER_FLORENCE)){  
+        msgbox(FlorenceHall_GracePostBattle_AfterFlorence, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        trainerbattle_single(TRAINER_GRACE_2,FlorenceHall_GraceBattleIntro, FlorenceHall_GraceLostBattle)
+        msgbox(FlorenceHall_GracePostBattle_BeforeFlorence, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text FlorenceHall_GraceBattleIntro{
+    "GRACE: {PLAYER}! It's been a while, what \n"
+    "have you been up to? \p"
+    "… … …\p"
+    "Won against Hozier? \p"
+    "I knew you'd be good at this whole \n"
+    "POKéMON Trainer thing! \p"
+    "Well, if you'll allow me I'd like to \n"
+    "see how much you've progressed.\p"
+    "I'm not gonna hold back as much this \n"
+    "time, I'll show you what it means to \l"
+    "battle! $"
+}
+
+text FlorenceHall_GraceLostBattle{
+    "You're definitely stronger than last \n"
+    "time!$"
+}
+
+text FlorenceHall_GracePostBattle_BeforeFlorence{
+    "GRACE: I maintain what I said after \n"
+    "our first battle.\p" 
+    "You're a natural at this.\p"
+    "Florence will be really tough to beat, \n"
+    "though. $"
+}
+
+text FlorenceHall_GracePostBattle_AfterFlorence{
+    "GRACE: I maintain what I said after \n"
+    "our first battle. \p"
+    "You're a natural at this.\p"
+    "Good luck for the next challenge! $"
+}
+
+script FlorenceHall_FlorenceBattle{
+    lock
+    faceplayer
+
+    if(defeated(TRAINER_FLORENCE)){  
+        msgbox(Florence_WordAboutTLDP, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        trainerbattle_single(TRAINER_FLORENCE,FlorenceHall_FlorenceeBattleIntro, FlorenceHall_FlorenceLostBattle, FlorenceGiveBadge, NO_MUSIC)
+        }
+    releaseall
+    end
+}
+
+text FlorenceHall_FlorenceeBattleIntro{
+    "FLORENCE: There you are! \p"
+    "I was waiting for you. \p"
+    "Thank you for visiting my humble \n"
+    "forest. \p"
+    "I know you've come to challenge me, so \n"
+    "let's see what you can do shall we?$"
+}
+
+text FlorenceHall_FlorenceLostBattle{
+    "How beautiful…$"
+}
+
+text FlorenceHall_FlorenceGiveBadge{
+    "FLORENCE: What a beautiful display \n"
+    "of skill! \p"
+    "Yes, you definitely deserve this.$"
+}
+
+text FlorenceBadgePerks{
+    "With this badge, your companions will \n"
+    "listen to you until they reach the \l"
+    "level 30.\p"
+    "Keep this up, and you will reach great \n"
+    "heights.\p"
+    "I know you can!$"
+}
+
+text Florence_WordAboutTLDP{
+    "FLORENCE: So your true goal is to win \n"
+    "against The Last Dinner Party?\p"
+    "I think you have the potential to succeed.\p"
+    "I'm quite fond of them, and I know they \n"
+    "are not to be underestimated.\p"
+    "Keep this up, and you will reach great \n"
+    "heights.\p"
+    "I know you can!$"
+}
+
+script FlorenceGiveBadge{
+    msgbox(FlorenceHall_FlorenceGiveBadge, MSGBOX_AUTOCLOSE)
+    message(format("Received the SPECTRUM BADGE from FLORENCE WELCH!"))
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    setflag(FLAG_BADGE02_GET)
+    setflag(FLAG_DEFEATED_DEWFORD_GYM)
+    msgbox(FlorenceBadgePerks, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}

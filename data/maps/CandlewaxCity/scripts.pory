@@ -1,0 +1,284 @@
+mapscripts CandlewaxCity_MapScripts {}
+
+//Hozier gym leader, mostly Ground Type
+
+const Jay1 = 1
+const Jay2 = 2
+
+script PlaceJay{
+    lock
+    if (var(VAR_CANDLEWAX_CITY_JAY) == 0){
+        goto(JayHelpPlease)
+    }
+    elif (var(VAR_CANDLEWAX_CITY_JAY) == 2) {
+        goto(JayPkmnRescued)
+    }
+    else{
+        goto(JayNotYetRescued)
+    }
+
+    releaseall
+    end
+}
+
+script JayPkmnRescued{
+    lock
+    applymovement(Jay1, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(20)
+    applymovement(Jay1, JayRunsToPlayer)
+    waitmovement(0)
+    msgbox(JayMadeIt, MSGBOX_AUTOCLOSE)
+    applymovement(Jay1, JayLeaves)
+    waitmovement(0)
+    removeobject(Jay1)
+    setflag(FLAG_JAY_CANDLEWAXCITY)
+    setflag(FLAG_JAY_HOZIER_HALL)
+    setvar(VAR_CANDLEWAX_CITY_TRIGGER, 1)
+    releaseall
+    end
+}
+
+script CandlewaxCity_Jay {
+    lock 
+    faceplayer
+    msgbox(JayDescribesBadGuys)
+    releaseall
+    end
+}
+
+script JayHelpPlease{
+    lock
+    applymovement(Jay1, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(20)
+    applymovement(Jay1, JayRunsToPlayer)
+    waitmovement(0)
+    msgbox(JayStolenPokemon, MSGBOX_AUTOCLOSE)
+    applymovement(Jay1, JayRunsInPlace)
+    waitmovement(0)
+    fadescreen(FADE_TO_BLACK)
+    playfanfare(MUS_HEAL)
+    waitfanfare
+    special(HealPlayerParty)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox(JayDescribesBadGuys)
+    setvar(VAR_CANDLEWAX_CITY_JAY, 1)
+    setflag(FLAG_GUARD_RIBCAVE)
+    setobjectxy(Jay1,18,6)
+    releaseall
+    end
+}
+
+script JayNotYetRescued{
+    lock
+    msgbox(JayWhatAboutPokemon, MSGBOX_AUTOCLOSE)
+    applymovement(Jay1, JayRunsInPlace)
+    waitmovement(0)    
+    fadescreen(FADE_TO_BLACK)
+    playfanfare(MUS_HEAL)
+    waitfanfare
+    special(HealPlayerParty)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox(JayDescribesBadGuys)
+    setvar(VAR_CANDLEWAX_CITY_JAY, 1)
+    setflag(FLAG_GUARD_RIBCAVE)
+    setobjectxy(Jay1,18,6)
+    releaseall
+    end
+}
+
+text JayMadeIt{
+    "JAY: {PLAYER}! You're okay! \p"
+    "My POKéMON… \p"
+    "You did it?!\p"
+    "Oh {PLAYER}! \p"
+    "Thank you thank you thank you! \p"
+    "I don't know what to say… \p"
+    "I'd better go to the POKéMON \n"
+    "Center now.\p"
+    "Thank you again, I owe you one!$"
+}
+
+text JayStolenPokemon{
+    "JAY: {PLAYER}! \p"
+    "Oh, {PLAYER} I need your help! \p"
+    "I was making my way through the cave \n"
+    "when I got attacked!\p"
+    "There were two of them, they took my \n"
+    "POKéMON, please help me!\p"
+}
+
+text JayDescribesBadGuys{
+    "They were dressed like pirates, they \n"
+    "ran away before I could do anything!\p"
+    "My poor POKéMON, please if anyone can \n"
+    "rescue it, it's you {PLAYER}!\p"
+    "Here, I'll heal your team so you \n"
+    "have all your chances. $"
+}
+
+text JayWhatAboutPokemon{
+    "JAY: {PLAYER}! Did you get my POKéMON \n"
+    "back? \p"
+    "Not yet? \p"
+    "It's okay, I'll heal your team so you \n"
+    "have all your chances. $"
+}
+
+movement JayLeaves{
+    walk_down * 7
+    step_end
+}
+
+movement JayRunsToPlayer{
+    walk_fast_right * 3
+    walk_fast_up * 3
+    step_end
+}
+
+movement JayRunsInPlace{
+    walk_in_place_fast_up * 2
+    step_end
+}
+
+script PlaceJay_HozierHall_1{
+    lock
+    applymovement(Jay2, JayGoesToPlayer_HozierHall1)
+    goto(JayGivesShoes)
+}
+
+script PlaceJay_HozierHall_2{
+    lock
+    applymovement(Jay2, JayGoesToPlayer_HozierHall2)
+    goto(JayGivesShoes)
+}
+
+script JayGivesShoes{
+    msgbox(Jay_SeeHozier, MSGBOX_AUTOCLOSE)
+    applymovement(Jay2, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(20)
+    msgbox(Jay_WonAgainstHozier, MSGBOX_AUTOCLOSE)
+    playfanfare(MUS_OBTAIN_ITEM)
+    message(format("Jay gave {PLAYER} the RUNNING SHOES!"))
+    waitfanfare
+    setflag(FLAG_RECEIVED_RUNNING_SHOES)
+    setflag(FLAG_SYS_B_DASH)
+    msgbox(Jay_ExplainRunningShoes, MSGBOX_AUTOCLOSE)
+    applymovement(Jay2, JayLeaves)
+    waitmovement(0)
+    removeobject(Jay2)
+    setflag(FLAG_JAY_HOZIER_HALL)
+    setflag(FLAG_ROUTE3_GOBLIN)
+    releaseall
+    end
+
+}
+
+text Jay_SeeHozier{
+    "JAY: {PLAYER}! \p"
+    "Did you get to see Hozier? \p"
+    "… … … \p"
+    "Oh no, you missed the show? \p"
+    "I'm sorry I made you go back into \n"
+    "the cave, it must have delayed you. $"
+}
+
+text Jay_WonAgainstHozier{
+    "What? You challenged him anyway? \p"
+    "And won??\p"
+    "Wow, {PLAYER}! \p"
+    "If you keep that up you'll soon be \n"
+    "strong enough to beat The Last Dinner \l"
+    "Party! \p"
+    "I still feel bad about making you miss \n"
+    "the show…\p"
+    "I know! \p"
+    "Here, take these! $"
+}
+
+text Jay_ExplainRunningShoes{
+    "These are brand new RUNNING SHOES! \p"
+    "I accidentally ordered the wrong size \n"
+    "but you're lucky, it looks like they \l"
+    "fit you perfectly! \p"
+    "They'll allow you to move super fast, \n"
+    "just equip them and keep the B button \l"
+    "pressed while moving. \p"
+}
+
+movement JayGoesToPlayer_HozierHall1{
+    emote_exclamation_mark
+    delay_16
+    walk_right * 3
+    step_end
+}
+
+movement JayGoesToPlayer_HozierHall2{
+    emote_exclamation_mark
+    delay_16
+    walk_down
+    walk_right * 3
+    step_end
+}
+
+script CandlewaxCity_HallSign{
+    lock
+    msgbox(format("CANDLEWAX CITY CONCERT HALL \p HOZIER CHALLENGE IS ON"))
+    releaseall
+    end
+}
+
+script CandlewaxCity_RibCaveSign{
+    lock
+    msgbox(format("{UP_ARROW} Rib Cave\p Gateway to Ecstasy Town."))
+    releaseall
+    end
+}
+
+script CandlewaxCity_CitySign{
+    lock
+    msgbox(format("Welcome to Candlewax City!\p A lively city with the prettiest pavement in the world."))
+    releaseall
+    end
+}
+
+script CandlewaxCity_TunnelSign{
+    lock
+    msgbox(format("{DOWN_ARROW}: Caesar Tunnel\p To Route 3 and Furge Town."))
+    releaseall
+    end
+}
+
+script CandlewaxCity_Girl{
+    lock
+    faceplayer
+    msgbox(format("The pattern on the pavement is the pride of Candlewax City!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script CandlewaxCity_KirliaGirl{
+    lock
+    faceplayer
+    msgbox(format("I'm so glad Concert Halls allow POKéMON!\pI couldn't imagine seeing my favourite artists without Kirlia!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script CandlewaxCity_Kirlia{
+    lock
+    faceplayer
+    msgbox(format("Krrrr!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script CandlewaxCity_Hiker{
+    lock
+    faceplayer
+    msgbox(format("Route 3 is on the other side of that tunnel.\p It's more of a forest path actually,\n I almost got lost.\pI don't like forests."))
+    releaseall
+    end
+}

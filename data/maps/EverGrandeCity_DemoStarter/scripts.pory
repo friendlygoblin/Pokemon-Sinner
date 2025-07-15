@@ -11,8 +11,6 @@ script Demo_Mart{
         setvar(VAR_MEW,2)
     }
     else{
-    addmoney(500000)
-    message("AMY: Welcome to Amy's Shop, what can I \nget for you?")
     if(var(VAR_DEMOSHOP)==0){
         addmoney(150000)
         setvar(VAR_DEMOSHOP,1)
@@ -26,9 +24,6 @@ script Demo_Mart{
     end
 }
 
-text MartBattery{
-    "AMY: Welcome to Amy's Shop, what can I \n"
-    "get for you?\p"
 script Demo_Sign{
     lock
     msgbox(format("Rewards Preview \pAurora: 100,000\pEmily: 120,000\pLizzie: 150,000\pGeorgia: 180,000\pAbigail: Dinner Guest List!"))
@@ -70,7 +65,7 @@ mart Demo_MartItems{
 }
 
 text NessStrategy{
-    "NESS: Hi! My names Ness, nice to \n"
+    "NESS: Hi! My name's Ness, nice to \n"
     "meet you. \p"
     "You're here to take on the band too? \p"
     "I made it all the way to Lizzie but \n"

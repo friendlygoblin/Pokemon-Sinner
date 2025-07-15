@@ -1,0 +1,256 @@
+mapscripts StartTown_MapScripts {
+
+    MAP_SCRIPT_ON_TRANSITION: HidePokeballs
+}
+
+const Grace = 2
+const Zig = 1
+const Staff = 4
+const Pooch = 3
+
+script HidePokeballs{
+    setflag(FLAG_POKEBALL_1)
+    setflag(FLAG_POKEBALL_2)
+    setflag(FLAG_POKEBALL_3)
+    end
+}
+
+script PubSign{
+    lock
+    msgbox(PubSignText)
+    release
+    end
+}
+
+script WalkBack{
+    lock
+    msgbox(format("It's best not to go out there without a POKéMON."))
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerWalkDown)
+    waitmovement(0)
+    release
+    end
+}
+
+script GraceScript{
+    lock
+    faceplayer
+    if (var(VAR_LITTLEROOT_INTRO_STATE)==0){
+        msgbox(GraceBeforeStarter)
+    }
+    else{
+        msgbox(GraceAfterStarter)
+    }
+    applymovement(Grace, Common_Movement_FaceLeft)
+    waitmovement(0)
+    release
+    end
+}
+
+script GraceBattle{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+    waitmovement(0)
+    addobject(Grace)
+    applymovement(Grace, GraceWalkToPlayer)
+    waitmovement(0)
+    applymovement(Zig, ZigFollowGraceToPlayer)
+    waitmovement(0)
+    msgbox(GraceSeesPokemon)
+    delay(20)
+    applymovement(Grace, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(20)
+    msgbox(GraceBeforeBattle, MSGBOX_YESNO)
+    if (var(VAR_RESULT)==YES){
+        msgbox(Grace_PlayerKnowsBattle) 
+        }
+    else {
+        msgbox(Grace_PlayerNoBattle)
+        }
+    trainerbattle_no_intro(TRAINER_GRACE, GraceDefeat)
+    msgbox(GraceAfterBattle)
+    fadescreen(FADE_TO_BLACK)
+    playfanfare(MUS_HEAL)
+    waitfanfare
+    special(HealPlayerParty)
+    setrespawn(HEAL_LOCATION_START_TOWN)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox(GraceDoneHealing)
+    applymovement(Grace, GraceGoesBackToWhereSheWas)
+    waitmovement(0)
+    applymovement(Zig, ZigFollowsGraceBack)
+    waitmovement(0)
+    setvar(VAR_LITTLEROOT_INTRO_STATE, 2)
+    release
+    end
+}
+
+script ShelterStaff{
+    lock
+    applymovement(Staff, Common_Movement_FacePlayer)
+    msgbox(format("Working at the shelter is great, but it's tiring.\p Grace gives me a hand though, and that's nice!$"))
+    release
+    end
+}
+
+script Poochyena{
+    lock
+    applymovement(Pooch, Common_Movement_FacePlayer)
+    msgbox(format("POOCHYENA: bark!"))
+    release
+    end
+}
+
+movement GraceWalkToPlayer{
+    walk_up
+    walk_left * 4
+    step_end
+}
+
+movement GraceGoesBackToWhereSheWas{
+    walk_down
+    walk_right * 4
+    face_left
+    step_end
+}
+
+movement ZigFollowsGraceBack{
+    walk_left
+    delay_16
+    walk_in_place_left
+    delay_16
+    walk_fast_down
+    walk_fast_right * 3
+    face_right
+    step_end
+}
+
+movement ZigFollowGraceToPlayer{
+    walk_fast_up
+    walk_fast_left * 2
+    step_end
+}
+
+text GraceSeesPokemon{
+    "GRACE: {PLAYER}{KUN}!\p"
+    "How was the band ? Did you get to \n"
+    "meet them?$"
+}
+
+text GraceBeforeBattle{
+    "Where's that POKéMON from?\p"
+    "What?\p"
+    "Abigail gave it to you?\p"
+    "{PLAYER}{KUN} that's so cool!\p"
+    "She also told you about the Guest \n"
+    "List challenge?\p"
+    "That's so exciting!\p"
+    "You'll need training a lot though, do \n"
+    "you know how POKéMON battles work?$"
+}
+
+text Grace_PlayerKnowsBattle{
+    "Perfect! \p"
+    "Let's see what you can do, then!$"
+}
+
+text Grace_PlayerNoBattle{
+    "Oh that's okay, you have plenty \n"
+    "of time to learn! \p"
+    "The best way to learn is to practice! \p"
+    "Like this!$"
+}
+
+text GraceDefeat{
+    "You're a natural!$"
+}
+
+text GraceAfterBattle{
+    "You really got the hang of it quickly!\p"
+    "It's still super early but I have a \n"
+    "feeling you might have a chance at \l"
+    "the challenge. \p"
+    "You'll need to train really hard of \n"
+    "course, The Last Dinner Party are the \l"
+    "best POKéMON trainers in the region.\p"
+    "And they're the best band in the world!\p"
+    "I know of a few other artists who are \n"
+    "doing something similar. \p"
+    "Seems to be a new trend… \p"
+    "TLDP are by far the strongest though, \n"
+    "so maybe you should visit these other \l"
+    "artists before challenging them. \p"
+    "Now, let me heal your POKéMON, that was \n"
+    "a lot of effort. $"
+}
+
+text GraceDoneHealing{
+    "GRACE: All done!\p"
+    "Well, good luck for whatever's next!\p"
+    "You're going to try your luck in \n"
+    "Candlewax City, right?\p"
+    "Good luck with that!\p"
+    "See you later! $"
+}
+
+text GraceBeforeStarter{
+    "GRACE: Hi {PLAYER}{KUN}!\p"
+    "The Last Dinner Party are in the\n"
+    "pub!\p"
+    "I wish I could go see them but I have \n"
+    "to keep an eye on this little guy…\p"
+    "He'll cause chaos if I leave him out \n"
+    "of my sight.\p"
+    "You should go take a look though, and \n"
+    "tell me all about it!$"
+
+}
+
+text GraceAfterStarter{
+    "GRACE: I can't believe you got your\n"
+    "first ever POKéMON from Abigail!\p"
+    "I have a feeling you'll do great \n"
+    "things, that POKéMON and you!$"
+}
+
+movement PlayerWalkDown{
+    walk_down
+    step_end
+}
+
+script Route1Sign{
+    lock
+    msgbox(Route1SignText)
+    release
+    end
+}
+
+script ShelterSign{
+    lock
+    msgbox(ShelterSignText)
+    release
+    end
+}
+
+script Zigzagoon{
+    lock
+    faceplayer
+    msgbox(format("ZIGZAGOON: … … grr?"))
+    release
+    end
+}
+
+text PubSignText{
+    "The Two-Legged Dog \p"
+    "Fresh Drinks and Fresher Music!$"
+}
+
+text Route1SignText{
+    "{UP_ARROW} Route 1 \p"
+    "Beware of the wild POKéMON!$"
+}
+
+text ShelterSignText{
+    "Prelude Town POKéMON Shelter $"
+}
+

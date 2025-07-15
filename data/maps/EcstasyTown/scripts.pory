@@ -1,0 +1,64 @@
+mapscripts EcstasyTown_MapScripts {}
+
+script EcstasyRoute1Sign{
+    lock
+    msgbox(format("{RIGHT_ARROW} : Route 1"))
+    releaseall
+    end
+}
+
+script EcstasyTownSign{
+    lock
+    msgbox(format("Welcome to Ecstasy Town! \pA quiet town with friendly neighbours!"))
+    releaseall
+    end
+}
+
+script PokecentreBoy{
+    lock
+    faceplayer
+    msgbox(PokecenterBoy_Text)
+    releaseall
+    end
+}
+
+script ClosedHouseSign{
+    lock 
+    msgbox(format("It's closed.\p It seems that the person who lived there moved away.$"))
+    releaseall
+    end
+}
+
+text PokecenterBoy_Text{
+    "Our town is pretty small, but we\n"
+    "have everything we need!\p"
+    "The POKéMON Center is the best part!$"
+}
+
+script MartGirl{
+    lock
+    faceplayer
+    msgbox(MartGirl_Text)
+    releaseall
+    end
+}
+
+text MartGirl_Text{
+    "I'm so glad we have a shop here.$"
+}
+
+script George{
+    lock
+    faceplayer
+    msgbox(George_Text)
+    releaseall
+    end
+}
+
+text George_Text{
+    "GEORGE: My neighbour moved away…\p"
+    "I miss annoying her by pretending \n"
+    "to throw bricks at her house.\p"
+    "I never actually did it!\p"
+    "I hope she didn't move because of me…$"
+}
