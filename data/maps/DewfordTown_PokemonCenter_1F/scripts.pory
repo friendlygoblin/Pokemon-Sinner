@@ -7,7 +7,7 @@ DewfordTown_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 DewfordTown_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_DEWFORD_TOWN
+	setrespawn HEAL_LOCATION_FURGE_TOWN
 	call Common_EventScript_UpdateBrineyLocation
 	end
 
@@ -28,10 +28,11 @@ DewfordTown_PokemonCenter_1F_EventScript_Man::
 	end
 
 DewfordTown_PokemonCenter_1F_Text_StoneCavern:
-	.string "There's a stone cavern at the edge\n"
-	.string "of town.\p"
-	.string "I've heard you can find rare stones\n"
-	.string "there.$"
+	.string "We don't have a Concert Hall here.\p"
+	.string "Instead, we arranged the clearing \n"
+	.string "to the north of the town to welcome \l"
+	.string "artists.\p"
+	.string "It's more respectful of the forest!$"
 
 DewfordTown_PokemonCenter_1F_Text_FaintedMonCanUseHM:
 	.string "Even if a POKéMON faints and can't\n"

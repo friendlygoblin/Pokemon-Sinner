@@ -59,21 +59,21 @@
       "x": 4,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_CONCERT_HALL",
+      "dest_map": "MAP_START_TOWN",
       "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_CONCERT_HALL",
+      "dest_map": "MAP_START_TOWN",
       "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_CONCERT_HALL",
+      "dest_map": "MAP_START_TOWN",
       "dest_warp_id": "0"
     }
   ],

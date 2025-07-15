@@ -50,7 +50,7 @@
 #define VAR_RECYCLE_GOODS                                0x4020
 #define VAR_REPEL_STEP_COUNT                             0x4021
 #define VAR_ICE_STEP_COUNT                               0x4022
-#define VAR_STARTER_MON                                  0x4023 // 0=Treecko, 1=Torchic, 2=Mudkip
+#define VAR_STARTER_MON                             0x4023 // 0=Cyndaquil, 1=Chespin, 2=Mudkip
 #define VAR_MIRAGE_RND_H                                 0x4024
 #define VAR_MIRAGE_RND_L                                 0x4025
 #define VAR_SECRET_BASE_MAP                              0x4026
@@ -95,32 +95,45 @@
 #define VAR_POKELOT_RND1                                 0x404B
 #define VAR_POKELOT_RND2                                 0x404C
 #define VAR_POKELOT_PRIZE_PLACE                          0x404D
-#define VAR_DEMO_STATE                               0x404E // Unused Var
+#define VAR_DEMO_STATE                               0x404E 
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_LITTLEROOT_TOWN_STATE                        0x4050
 #define VAR_OLDALE_TOWN_STATE                            0x4051
-#define VAR_DEWFORD_TOWN_STATE                           0x4052 // Unused Var
+#define VAR_DEWFORD_TOWN_STATE                       0x4052 
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Unused Var
-#define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
+
+#define VAR_OK_TO_LEAVE_PUB                          0x4055 
+#define VAR_CATCHING_TUTORIAL                        0x4056
+
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
-#define VAR_MAUVILLE_CITY_STATE                          0x4059 // Unused Var
+
+#define VAR_CANDLEWAX_CITY_JAY                       0x4059 // 0 = side quest not started, 1 = pokemon not yet rescued, 2 = pokemon rescued, 3 = pokemon being rescued (so the secret room cutscene won't play again)
+
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
-#define VAR_FORTREE_CITY_STATE                           0x405B // Unused Var
-#define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
+
+#define VAR_CANDLEWAX_CITY_TRIGGER                   0x405B 
+#define VAR_RORA_HOZIER_HALL                         0x405C 
+
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
-#define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
+
+#define VAR_ROUTE3_GOBLIN                            0x405F 
 #define VAR_ROUTE101_STATE                               0x4060
-#define VAR_ROUTE102_STATE                               0x4061 // Unused Var
-#define VAR_ROUTE103_STATE                               0x4062 // Unused Var
+
+#define VAR_EVER_GRANDE_CITY_STATE                        0x4061
+
+#define VAR_ROUTE3_AMY                               0x4062  //0 = not started, 1 = started, 2 = notes found, 3 = finished
+#define VAR_ROUTE3_AMY_TRIGGER                       0x4064
+
 #define VAR_ROUTE104_STATE                               0x4063
-#define VAR_ROUTE105_STATE                               0x4064 // Unused Var
-#define VAR_ROUTE106_STATE                               0x4065 // Unused Var
-#define VAR_ROUTE107_STATE                               0x4066 // Unused Var
-#define VAR_ROUTE108_STATE                               0x4067 // Unused Var
+
+#define VAR_FURGETOWN_HONEY                          0x4065 
+#define VAR_FLORENCE_GEORGIA_SCENE                   0x4066 
+
+#define VAR_OLIVEMOUNT_OLDMAN_EGG                    0x4067
+
 #define VAR_ROUTE109_STATE                               0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                               0x4069
 #define VAR_ROUTE111_STATE                               0x406A // Unused Var

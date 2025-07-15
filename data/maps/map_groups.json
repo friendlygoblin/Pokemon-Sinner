@@ -33,7 +33,9 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_PreludeRegion_Outdoors",
+    "gMapGroup_PreludeRegion_Indoors"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -92,8 +94,7 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125",
-    "PreludeTown"
+    "Underwater_Route125"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -626,5 +627,36 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_PreludeRegion_Outdoors": [
+    "PreludeTown",
+    "StartTown",
+    "Route1",
+    "Route1_Bis",
+    "EcstasyTown",
+    "Route2",
+    "RibCave_1F",
+    "RibCave_2F",
+    "RibCave_3F",
+    "RibCave_SecretRoom",
+    "CandlewaxCity",
+    "Caesar_Tunnel",
+    "Route3",
+    "FurgeTown",
+    "OliveMount",
+    "Route4",
+    "BeautifulPort"
+  ],
+  "gMapGroup_PreludeRegion_Indoors": [
+    "StartTown_PlayerHouse",
+    "StartTown_Pub",
+    "StartTown_OtherHouse",
+    "StartTown_Shelter",
+    "EcstasyTown_BigHouse",
+    "EcstasyTown_LittleHouse",
+    "CandlewaxCity_ConcertHall",
+    "CandlewaxCity_ConcertHall_Lobby",
+    "FurgeTown_Shop",
+    "FurgeTown_Clearing"
   ]
 }

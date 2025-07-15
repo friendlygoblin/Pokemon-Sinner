@@ -4470,6 +4470,266 @@
       "secondary_tileset": "gTileset_SecretBaseBrownCave",
       "border_filepath": "data/layouts/EverGrandeCity_GoblinHideout/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_GoblinHideout/map.bin"
+    },
+    {
+      "id": "LAYOUT_START_TOWN",
+      "name": "StartTown_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/StartTown/border.bin",
+      "blockdata_filepath": "data/layouts/StartTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_START_TOWN_PLAYER_HOUSE",
+      "name": "StartTown_PlayerHouse_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/StartTown_PlayerHouse/border.bin",
+      "blockdata_filepath": "data/layouts/StartTown_PlayerHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1",
+      "name": "Route1_Layout",
+      "width": 16,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route1/border.bin",
+      "blockdata_filepath": "data/layouts/Route1/map.bin"
+    },
+    {
+      "id": "LAYOUT_START_TOWN_PUB",
+      "name": "StartTown_Pub_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/StartTown_Pub/border.bin",
+      "blockdata_filepath": "data/layouts/StartTown_Pub/map.bin"
+    },
+    {
+      "id": "LAYOUT_START_TOWN_OTHER_HOUSE",
+      "name": "StartTown_OtherHouse_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/StartTown_OtherHouse/border.bin",
+      "blockdata_filepath": "data/layouts/StartTown_OtherHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_START_TOWN_SHELTER",
+      "name": "StartTown_Shelter_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonDayCare",
+      "border_filepath": "data/layouts/StartTown_Shelter/border.bin",
+      "blockdata_filepath": "data/layouts/StartTown_Shelter/map.bin"
+    },
+    {
+      "id": "LAYOUT_ECSTASY_TOWN",
+      "name": "EcstasyTown_Layout",
+      "width": 26,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/EcstasyTown/border.bin",
+      "blockdata_filepath": "data/layouts/EcstasyTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1_BIS",
+      "name": "Route1_Bis_Layout",
+      "width": 14,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Route1_Bis/border.bin",
+      "blockdata_filepath": "data/layouts/Route1_Bis/map.bin"
+    },
+    {
+      "id": "LAYOUT_ECSTASY_TOWN_BIG_HOUSE",
+      "name": "EcstasyTown_BigHouse_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/EcstasyTown_BigHouse/border.bin",
+      "blockdata_filepath": "data/layouts/EcstasyTown_BigHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_ECSTASY_TOWN_LITTLE_HOUSE",
+      "name": "EcstasyTown_LittleHouse_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/EcstasyTown_LittleHouse/border.bin",
+      "blockdata_filepath": "data/layouts/EcstasyTown_LittleHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2",
+      "name": "Route2_Layout",
+      "width": 38,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Route2/border.bin",
+      "blockdata_filepath": "data/layouts/Route2/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIB_CAVE_1F",
+      "name": "RibCave_1F_Layout",
+      "width": 35,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/RibCave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/RibCave_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIB_CAVE_2F",
+      "name": "RibCave_2F_Layout",
+      "width": 35,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/RibCave_2F/border.bin",
+      "blockdata_filepath": "data/layouts/RibCave_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIB_CAVE_3F",
+      "name": "RibCave_3F_Layout",
+      "width": 35,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/RibCave_3F/border.bin",
+      "blockdata_filepath": "data/layouts/RibCave_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CANDLEWAX_CITY",
+      "name": "CandlewaxCity_Layout",
+      "width": 41,
+      "height": 65,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/CandlewaxCity/border.bin",
+      "blockdata_filepath": "data/layouts/CandlewaxCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_RIB_CAVE_SECRET_ROOM",
+      "name": "RibCave_SecretRoom_Layout",
+      "width": 21,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/RibCave_SecretRoom/border.bin",
+      "blockdata_filepath": "data/layouts/RibCave_SecretRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_CANDLEWAX_CITY_CONCERT_HALL",
+      "name": "CandlewaxCity_ConcertHall_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/CandlewaxCity_ConcertHall/border.bin",
+      "blockdata_filepath": "data/layouts/CandlewaxCity_ConcertHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_CANDLEWAX_CITY_CONCERT_HALL_LOBBY",
+      "name": "CandlewaxCity_ConcertHall_Lobby_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/CandlewaxCity_ConcertHall_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/CandlewaxCity_ConcertHall_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_CAESAR_TUNNEL",
+      "name": "Caesar_Tunnel_Layout",
+      "width": 20,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Caesar_Tunnel/border.bin",
+      "blockdata_filepath": "data/layouts/Caesar_Tunnel/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3",
+      "name": "Route3_Layout",
+      "width": 60,
+      "height": 22,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_prelude_town",
+      "border_filepath": "data/layouts/Route3/border.bin",
+      "blockdata_filepath": "data/layouts/Route3/map.bin"
+    },
+    {
+      "id": "LAYOUT_FURGE_TOWN",
+      "name": "FurgeTown_Layout",
+      "width": 38,
+      "height": 32,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_prelude_town",
+      "border_filepath": "data/layouts/FurgeTown/border.bin",
+      "blockdata_filepath": "data/layouts/FurgeTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_FURGE_TOWN_SHOP",
+      "name": "FurgeTown_Shop_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleArena",
+      "border_filepath": "data/layouts/FurgeTown_Shop/border.bin",
+      "blockdata_filepath": "data/layouts/FurgeTown_Shop/map.bin"
+    },
+    {
+      "id": "LAYOUT_FURGE_TOWN_CLEARING",
+      "name": "FurgeTown_Clearing_Layout",
+      "width": 22,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_prelude_town",
+      "border_filepath": "data/layouts/FurgeTown_Clearing/border.bin",
+      "blockdata_filepath": "data/layouts/FurgeTown_Clearing/map.bin"
+    },
+    {
+      "id": "LAYOUT_OLIVE_MOUNT",
+      "name": "OliveMount_Layout",
+      "width": 51,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/OliveMount/border.bin",
+      "blockdata_filepath": "data/layouts/OliveMount/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4",
+      "name": "Route4_Layout",
+      "width": 50,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route4/border.bin",
+      "blockdata_filepath": "data/layouts/Route4/map.bin"
+    },
+    {
+      "id": "LAYOUT_BEAUTIFUL_PORT",
+      "name": "BeautifulPort_Layout",
+      "width": 54,
+      "height": 46,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/BeautifulPort/border.bin",
+      "blockdata_filepath": "data/layouts/BeautifulPort/map.bin"
     }
   ]
 }
