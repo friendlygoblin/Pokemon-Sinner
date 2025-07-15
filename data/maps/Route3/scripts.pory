@@ -1,0 +1,286 @@
+mapscripts Route3_MapScripts {}
+
+const Goblin = 2
+const Oran = 1
+const Shroom = 3
+const Amy = 7
+
+script PlaceGoblin1 {
+    lock
+    addobject(Goblin)
+    clearflag(FLAG_ROUTE3_GOBLIN)
+    msgbox("GOBLIN: {PLAYER}! $", MSGBOX_AUTOCLOSE)
+    closemessage
+    applymovement(Goblin,GoblinCatchUp1)
+    waitmovement(0)
+    call(GoblinBattle)
+    applymovement(Goblin,GoblinGoAway1)
+    waitmovement(0)
+    removeobject(Goblin)
+    setflag(FLAG_ROUTE3_GOBLIN)
+    releaseall
+    end
+}
+
+script PlaceGoblin2 {
+    lock
+    addobject(Goblin)
+    clearflag(FLAG_ROUTE3_GOBLIN)
+    msgbox("GOBLIN: {PLAYER}! $")
+    closemessage
+    applymovement(Goblin,GoblinCatchUp2)
+    waitmovement(0)
+    call(GoblinBattle)
+    applymovement(Goblin,GoblinGoAway2)
+    waitmovement(0)
+    removeobject(Goblin)
+    setflag(FLAG_ROUTE3_GOBLIN)
+    releaseall
+    end
+}
+
+script GoblinBattle{
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+    waitmovement(0)
+    msgbox(GoblinRecognisePlayer)
+    trainerbattle_no_intro(TRAINER_GOBLIN_ROUTE_3, GoblinLoseBattle)
+    msgbox(GoblinPostBattle)
+    fadescreen(FADE_TO_BLACK)
+    playfanfare(MUS_HEAL)
+    waitfanfare
+    special(HealPlayerParty)
+    fadescreen(FADE_FROM_BLACK)
+    setvar(VAR_ROUTE3_GOBLIN, 1)
+    msgbox(GoodToGo, MSGBOX_AUTOCLOSE)
+
+}
+
+movement GoblinCatchUp1 {
+    walk_down * 5
+    walk_right * 3
+    step_end
+}
+
+movement GoblinCatchUp2 { 
+    walk_down * 6
+    walk_right * 3
+    step_end
+}
+
+movement GoblinGoAway1{
+    walk_down
+    walk_right * 9
+    step_end
+}
+
+movement GoblinGoAway2{
+    walk_up
+    walk_right * 9
+    step_end
+}
+
+text GoblinRecognisePlayer {
+    "GOBLIN: Thought it might be you!\p"
+    "I'm here to catch new POKéMON! \p"
+    "Have you caught any since the last \n"
+    "time we spoke? \p"
+    "Wait no don't tell me, just show me!$"
+}
+
+text GoblinLoseBattle {
+    "Woah, cool!$"
+}
+
+text GoblinPostBattle {
+    "GOBLIN: Woah you've really put those \n"
+    "Poké Balls to good use! \p"
+    "Hozier must have been impressed when \n"
+    "you won against him! \p"
+    "Now, let me heal your team before I go. $"
+}
+
+text GoodToGo {
+    "All good to go! \p"
+    "Now, I'm gonna go ahead see if there \n"
+    "are any more interesting POKéMON to \l"
+    "catch. \p"
+    "I heard there was another artist \n"
+    "challenge in Furge Town. \p"
+    "It's deeper in the forest, you can't \n" 
+    "miss it. \p"
+    "Well, good luck for whatever you're \n"
+    "gonna do next!\p"
+    "See ya!$"
+}
+
+script Route3_FindOranBerry{
+    lock
+    giveitem(ITEM_ORAN_BERRY)
+    hideobjectat(Oran, 0)
+    removeobject(Oran)
+    setflag(FLAG_ORAN_ROUTE3)
+    release
+    end
+}
+
+script Route3_FindShroom{
+    lock
+    giveitem(ITEM_TINY_MUSHROOM)
+    hideobjectat(Shroom, 0)
+    removeobject(Shroom)
+    setflag(FLAG_SHROOM_ROUTE3)
+    release
+    end
+}
+
+script Route3_BugCatcher{
+    trainerbattle_single(TRAINER_DAVIS, format("I love forests!\pThere are plenty of cool bugs to catch!"), format("My cool bugs!"))
+    msgbox(format("If you like bugs, you gotta love hanging out in the woods!"), MSGBOX_AUTOCLOSE)
+}
+
+script Route3_BugManiac{
+    trainerbattle_single(TRAINER_ANGELO, format("These woods are full of critters.\pLet me show you the ones I've found!"), format("Aren't they beautiful?"))
+    msgbox(format("So many critters everywhere…"), MSGBOX_AUTOCLOSE)
+}
+
+script Route3_Picknicker{
+    trainerbattle_single(TRAINER_AUTUMN, format("This place is perfect for a picnic!\pI like to grab what I need from the shop in Furge Town and enjoy it here with \nmy POKéMON!"), format("Oh, I'm out of sandwiches…"))
+    msgbox(format("It's so peaceful here.\pIt's a bit dark but I'm not scared as long as I have my POKéMON with me."), MSGBOX_AUTOCLOSE)
+}
+
+script Route3_PlaceAmy1{
+    lock
+    applymovement(Amy, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(20)
+    applymovement(OBJ_EVENT_ID_PLAYER, Route3_PlayerFaceUp)
+    waitmovement(0)
+    call(Route3_AmyQuest)
+}
+
+script CallAmyQuest{
+    lock
+    faceplayer
+    call(Route3_AmyQuest)
+    releaseall
+    end
+}
+
+script Route3_AmyQuest{
+    switch (var(VAR_ROUTE3_AMY)) {
+    case 0:
+        msgbox(AmyNeedHelpLong, MSGBOX_AUTOCLOSE)
+        setvar(VAR_ROUTE3_AMY, 1)
+        applymovement(OBJ_EVENT_ID_PLAYER, Route3_PlayerWalkBack)
+    case 1:
+        msgbox(AmyNeedHelpShort, MSGBOX_AUTOCLOSE)
+        applymovement(OBJ_EVENT_ID_PLAYER, Route3_PlayerWalkBack)
+    case 2:
+        msgbox(AmyFoundNotes, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_AMY_ROUTE3, "Our readers are gonna love you!$")
+        msgbox(AmyPostBattle, MSGBOX_AUTOCLOSE)
+        applymovement(Amy, AmyGoAway)
+        waitmovement(0)
+        removeobject(Amy)
+        setflag(FLAG_AMY_ROUTE3)
+        setvar(VAR_ROUTE3_AMY, 3)
+        setvar(VAR_ROUTE3_AMY_TRIGGER, 1)
+    default:
+        msgbox(AmyNeedHelpShort, MSGBOX_AUTOCLOSE)
+    }
+}
+
+movement Route3_PlayerFaceUp{
+    face_up
+}
+
+movement Route3_PlayerWalkBack{
+    walk_left
+    step_end
+}
+
+movement AmyGoAway{
+    walk_right *9
+    step_end
+}
+
+text AmyNeedHelpLong{
+    "???: You! I need your help!\p"
+    "AMY: I'm Amy, editor at ParlourZine. \p"
+    "I'm writing a piece about all those \n"
+    "artist challenges, but I lost part of \l"
+    "my notes in the woods. \p"
+    "I dropped my notebook and the wind \n"
+    "blew some pages away.\p"
+    "That'll teach me to use old supplies… \p"
+    "Anyway, I got most of it back but \n"
+    "there's one page I still can't find. \p"
+    "Please, if you can help me I'll write a \n"
+    "piece about you! \p"
+    "I think some POKéMON took the page \n"
+    "away, and it went to hide in its den \l"
+    "under a dead tree.$"
+}
+
+text AmyNeedHelpShort{
+    "AMY: Please, if you can help me I'll \n"
+    "write a piece about you! \p"
+    "I saw some POKéMON take the page away, \n"
+    "and it went to hide in its den under a \l"
+    "dead tree.$"
+}
+
+text AmyFoundNotes{
+    "AMY: Did you find my notes?\p"
+    "… … …\p"
+    "Amazing thank you! \p"
+    "By the way what's your name? \p"
+    "{PLAYER}?\p"
+    "Well {PLAYER}, you just saved the next \n"
+    "issue of the ParlourZine! \p"
+    "I told you I'd write something about \n"
+    "you and guess what, there's nothing \l"
+    "like a POKéMON battle to get to know \l"
+    "someone! \p"
+    "En garde!$"
+}
+
+text AmyPostBattle{
+    "Wow, that was great! \p"
+    "I'm gonna get to work on that article, \n"
+    "our readers are gonna love this! \p"
+    "Thanks again for your help, you're \n"
+    "gonna challenge Florence in Furge \l"
+    "Town aren't you? \p"
+    "… … … \p"
+    "Good luck, then! \p"
+    "I have a feeling I'll see you again. $"
+}
+
+script RightDeadTree{
+    lock
+    if (var(VAR_ROUTE3_AMY) == 1){
+        msgbox(format("It's a dead tree. \pThere's a POKéMON hiding under it!"), MSGBOX_AUTOCLOSE)
+        setwildbattle(SPECIES_NICKIT, 12)
+        dowildbattle
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox(format("{PLAYER} retrieved the missing page from the POKéMON."), MSGBOX_AUTOCLOSE)
+        setvar(VAR_ROUTE3_AMY, 2)
+        closemessage
+    }
+    else{
+        msgbox("It's a dead tree.$", MSGBOX_AUTOCLOSE)
+        closemessage
+    }
+    releaseall
+    end
+}
+
+script WrongDeadTree{
+    lock 
+    msgbox("It's a dead tree.$", MSGBOX_AUTOCLOSE)
+    closemessage
+    releaseall
+    end
+}
+

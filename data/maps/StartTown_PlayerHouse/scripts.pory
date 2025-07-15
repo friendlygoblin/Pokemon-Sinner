@@ -1,0 +1,37 @@
+mapscripts StartTown_PlayerHouse_MapScripts {}
+
+script Bed{
+    lock
+    msgbox("This is your bed.\pDo you want to take a nap?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        applymovement(OBJ_EVENT_ID_PLAYER, GetIntoBed)
+        waitmovement(0)
+        msgbox(format("It's comfy! Your eyes are closing themselves…"))
+        fadescreen(FADE_TO_BLACK)
+        playfanfare(MUS_HEAL)
+	    waitfanfare
+        special(HealPlayerParty)
+        setrespawn(HEAL_LOCATION_START_TOWN)
+        fadescreen(FADE_FROM_BLACK)
+        applymovement(OBJ_EVENT_ID_PLAYER, GetOutOfBed)
+        waitmovement(0)
+        msgbox(format("You and your POKéMON wake up well rested!"))
+    }
+    else{
+        release
+        end
+    }
+    release
+    end
+}
+
+movement GetIntoBed{
+    walk_right
+    face_down
+    step_end
+}
+
+movement GetOutOfBed{
+    walk_left
+    step_end
+}

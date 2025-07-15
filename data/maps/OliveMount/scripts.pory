@@ -1,0 +1,111 @@
+mapscripts OliveMount_MapScripts {}
+
+script OliveMount_Youngster{
+    trainerbattle_single(TRAINER_JOEY, format("I just picked up my POKéMON from the Day Care!\pLook how strong it is now!"), format("Well, it might be a little bit out of practice…"))
+    msgbox(format("The Day Care people can take care of your POKéMON for you!\pWhen you come back, they're even stronger than before!"), MSGBOX_AUTOCLOSE)
+}
+
+script OliveMount_Picnicker{
+    trainerbattle_single(TRAINER_HEIDI, format("The Day Care?\pOh no, I'm just here to admire the scenery!"), format("Oh no, I must have been distracted…"))
+    msgbox(format("It's so pretty here!\pI wish it weren't raining all the time, though…"), MSGBOX_AUTOCLOSE)
+}
+
+script DayCareSign{
+    lock
+    msgbox(format("POKéMON Day Care\pWe take care of your POKéMON for you!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script OliveMount_Fisherman{
+    lock
+    faceplayer
+    if(flag(FLAG_RECEIVED_OLD_ROD)){
+        msgbox(ExplainFishing)
+    }
+    else{
+        msgbox(format("If you win, I'll give you something super cool!"))
+        trainerbattle_no_intro(TRAINER_ANDREW, format("Alright, alright you win…"))
+        goto(GiveFishingRod)
+    }
+    releaseall
+    end
+}
+
+script GiveFishingRod{
+    msgbox(format("You won, so here you go:"), MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_OLD_ROD)
+    setflag(FLAG_RECEIVED_OLD_ROD)
+    msgbox(ExplainFishing, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text ExplainFishing{
+    "Fishing is simple: just find some \n"
+    "water, cast your line, and wait for \l"
+    "a POKéMON to bite!\p"
+    "Don't wait too long though, or it might\n"
+    "get away…$"
+}
+
+script OliveMount_OldMan{
+    lock
+    faceplayer
+    if(var(VAR_OLIVEMOUNT_OLDMAN_EGG)== 0){
+        msgbox(OldMan_AreYouATrainer, MSGBOX_YESNO)
+        if(var(VAR_RESULT)==YES){
+            msgbox("Brilliant!", MSGBOX_AUTOCLOSE)
+            specialvar(VAR_RESULT, CalculatePlayerPartyCount)
+            if(var(VAR_RESULT)==PARTY_SIZE){
+                msgbox(format("Oh, uh…\pIt looks like your party's full.\pCome back when you've made room, please."))
+            }
+            else{
+                giveegg(SPECIES_EEVEE)
+                playfanfare(MUS_OBTAIN_ITEM)
+                message("Obtained EGG from the old man!$")
+                waitmessage
+                msgbox(OldMan_AcceptEgg, MSGBOX_AUTOCLOSE)
+                setvar(VAR_OLIVEMOUNT_OLDMAN_EGG, 1)
+            }
+        }
+        else{
+            msgbox(format("Oh, alright…\pWell come back if you change your mind."), MSGBOX_AUTOCLOSE)
+            releaseall
+            end
+        }
+    }
+    else{
+        msgbox(OldMan_HowIsMyEgg, MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+    end
+}
+
+text OldMan_AreYouATrainer{
+    "Hello, are you a POKéMON trainer?\p"
+    "… … …\p"
+    "Ah perfect! \p"
+    "You see, I left my POKéMON at the Day \n"
+    "Care while I was gone on holidays and \l"
+    "when I came back, the Day Care Lady \l"
+    "gave me an Egg! \p"
+    "I'm too old to raise a baby POKéMON… \p"
+    "Would you take care of it for me?$"
+}
+
+text OldMan_AcceptEgg{
+    "Here you go! \p"
+    "I heard eggs hatch after spending some \n"
+    "time with a loving trainer and healthy  \l"
+    "POKéMON.\p"
+    "I trust you to take good care of it!$"
+}
+
+text OldMan_HowIsMyEgg{
+    "Hello! \p"
+    "How is the egg doing?\p"
+    "… … …\p"
+    "Wonderful! I knew you would be a good \n"
+    "caretaker!$"
+}

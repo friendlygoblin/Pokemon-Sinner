@@ -1,0 +1,169 @@
+mapscripts FurgeTown_MapScripts {}
+
+const LineBoy = 1
+const LineGirl = 2
+const Georgia = 3
+const Florence = 4
+
+script FurgeTown_Sign{
+    lock
+    msgbox(format("Welcome to Furge Town!\pEnjoy the peace of the forest!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script FurgeTown_ShopSign{
+    lock
+    msgbox(format("Granny's medicinal herbs\pNature knows best!"),MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script FurgeTown_CampSign{
+    lock
+    msgbox(format("Furge Town Campsite\pPlease make sure your campfires are fully out before leaving."), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script FurgeTown_FlorenceSign{
+    lock
+    msgbox(format("FURGE TOWN CONCERT CLEARING\pCURRENT RESIDENT: FLORENCE WELCH\p(not done yet)"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script FurgeTown_BoyInLine{
+    lock
+    faceplayer
+    msgbox(format("We're waiting for the concert to start!"), MSGBOX_AUTOCLOSE)
+    applymovement(LineBoy, Common_Movement_FaceUp)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+script FurgeTown_GirlInLine{
+    lock
+    faceplayer
+    msgbox(format("I can't wait to see Florence!"), MSGBOX_AUTOCLOSE)
+    applymovement(LineGirl, Common_Movement_FaceUp)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+script Florence_Georgia_Scene{
+    lock
+//player walks in on the conversation
+    applymovement(Florence, Common_Movement_WalkInPlaceRight)
+    waitmovement(0)
+    msgbox("???: … Mirror City? How impressive!$", MSGBOX_AUTOCLOSE)
+    applymovement(Florence, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(20)
+    applymovement(Florence, FlorenceLookAround)
+    waitmovement(0)
+    msgbox(Florence_DutyCalls, MSGBOX_AUTOCLOSE)
+    applymovement(Georgia, Common_Movement_WalkInPlaceLeft)
+    waitmovement(0)
+    msgbox(Georgia_ByeFlorence, MSGBOX_AUTOCLOSE)
+
+//Florence comes up to player and leaves
+    applymovement(Florence, Florence_ComesToPlayer)
+    waitmovement(0)
+    msgbox(Florence_WillBeWaiting, MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerOutOfTheWay)
+    waitmovement(0)
+    applymovement(Florence, FlorenceLeaves)
+    waitmovement(0)
+    removeobject(Florence)
+
+//Georgia says a word to player and leaves
+    applymovement(Georgia, Georgia_ComesToPlayer)
+    waitmovement(0)
+    msgbox(Georgia_WordToPlayer, MSGBOX_AUTOCLOSE)
+    applymovement(Georgia, FurgeTown_GeorgiaLeaves)
+    waitmovement(0)
+    removeobject(Georgia)
+//set flag, var, and end
+    setflag(FLAG_FURGETOWN_LINE)
+    setvar(VAR_FLORENCE_GEORGIA_SCENE,1)
+    releaseall
+    end
+}
+
+movement FlorenceLookAround{
+    walk_in_place_left
+    delay_16
+    delay_16
+    walk_in_place_right
+    delay_16
+    delay_16
+    walk_in_place_right
+    step_end
+}
+
+movement Florence_ComesToPlayer{
+    walk_down
+    walk_left
+    step_end
+}
+
+movement PlayerOutOfTheWay{
+    walk_left
+    walk_down
+    face_up
+    step_end
+}
+
+movement FlorenceLeaves{
+    walk_left * 5
+    walk_up * 6
+    step_end
+}
+
+movement Georgia_ComesToPlayer{
+    walk_down
+    walk_left *4
+    face_down
+    step_end
+}
+
+movement FurgeTown_GeorgiaLeaves{
+    walk_left * 3
+    walk_up * 6
+    step_end
+}
+
+text Florence_DutyCalls{
+    "???: Oh, it looks like duty is calling. \p"
+    "Well, dear Georgia, it was a pleasure \n"
+    "to have a chat with you. \p"
+    "I will see you again another time.$"
+}
+
+text Georgia_ByeFlorence{
+    "GEORGIA: Goodbye, Florence!$"
+}
+
+text Florence_WillBeWaiting{
+    "FLORENCE: A visitor! \p"
+    "What is your name? \p"
+    "… … …\p"
+    "Well I will be waiting for you in the \n"
+    "clearing, {PLAYER}.$"
+}
+
+text Georgia_WordToPlayer{
+    "GEORGIA: Hello! \p"
+    "You're the one Abi gave a POKéMON to, \n"
+    "right? \p"
+    "And you're here to challenge Florence? \p"
+    "Well, good luck! \p"
+    "I've had a chance to spar with her a bit, \n"
+    "she's super talented. \p"
+    "She's a huge inspiration for us, both as \n"
+    "an artist and as a POKéMON trainer! \p"
+    "I should go now, I'll see you around! $"
+}

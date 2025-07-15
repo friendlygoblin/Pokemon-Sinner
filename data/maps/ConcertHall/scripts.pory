@@ -61,27 +61,11 @@ script IntroNPC3_EventScript_ConcertHall{
 
 script IntroNPC4_EventScript_ConcertHall{
     lock
-    if (var(VAR_EVER_GRANDE_CITY_STATE)==0){
-    applymovement(3, emote)
-    playse(SE_PIN)
-    waitse
-    waitmovement(0)
-    }
-    applymovement(3,Common_Movement_FacePlayer)
-    waitmovement(0)
-    if (var(VAR_EVER_GRANDE_CITY_STATE)==0){
-    applymovement(OBJ_EVENT_ID_PLAYER, playerFace)
-    waitmovement(0)
-    msgbox(IntroFront)
-    applymovement(3,moveaway)
-    waitmovement(0)
-    setvar(VAR_EVER_GRANDE_CITY_STATE, 1)
-    }
-    else {
+
     applymovement(3,Common_Movement_FacePlayer)
     waitmovement(0)
     msgbox(OutroFront)
-    }
+    
     release
     end
 

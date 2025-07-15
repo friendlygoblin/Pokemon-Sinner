@@ -49,7 +49,8 @@ gText_Birch_YourePlayer::
 	.string "Ah, okay!\p"
 	.string "You're the {PLAYER}{KUN} who's been a fan\n"
 	.string "for a while.\p"
-	.string "I get it now!$"
+	.string "I get it now!\p"
+	.string "$"
 
 
 gText_Birch_AreYouReady::
