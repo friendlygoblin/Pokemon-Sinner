@@ -4725,7 +4725,7 @@
       "id": "LAYOUT_BEAUTIFUL_PORT",
       "name": "BeautifulPort_Layout",
       "width": 54,
-      "height": 46,
+      "height": 48,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/BeautifulPort/border.bin",

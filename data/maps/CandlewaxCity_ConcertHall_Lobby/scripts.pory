@@ -1,0 +1,189 @@
+mapscripts CandlewaxCity_ConcertHall_Lobby_MapScripts {}
+
+const Rora = 3
+
+script HozierHall_PlaceRora1{
+    lock
+    applymovement(Rora, PlaceRora1)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+    goto(HozierHall_Rora)
+}
+
+script HozierHall_PlaceRora2{
+    lock
+    applymovement(Rora, PlaceRora2)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+    goto(HozierHall_Rora)
+}
+
+script HozierHall_Rora{
+    msgbox(RoraRecognisesPlayer, MSGBOX_AUTOCLOSE)
+    delay(30)
+    applymovement(Rora, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(30)
+    msgbox(RoraStolenPokemon, MSGBOX_AUTOCLOSE)
+    applymovement(Rora,RoraLeavesHozierHall)
+    waitmovement(0)
+    removeobject(Rora)
+    setflag(FLAG_RORA_HOZIER_HALL)
+    setvar(VAR_RORA_HOZIER_HALL, 1)
+    releaseall
+    end
+}
+
+script WarpToHozierRoom{
+    lock
+    msgbox("Proceed to the challenge room?", MSGBOX_YESNO)
+    if (var(VAR_RESULT)==YES){
+        warp(MAP_CANDLEWAX_CITY_CONCERT_HALL, 7, 11)
+    }
+    else{
+        applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
+        waitmovement(0)
+    }
+	releaseall
+    end
+}
+
+movement PlaceRora1{
+    walk_right
+    walk_down * 7
+    face_player
+    step_end
+}
+
+movement PlaceRora2{
+    walk_down * 7
+    face_player
+    step_end
+}
+
+movement RoraLeavesHozierHall{
+    walk_down
+    step_end
+}
+
+text RoraRecognisesPlayer{
+    "???: Hey! I recognise you! \p"
+    "You were at the Two-Legged Dog, back \n"
+    "in Prelude Town, right? \p"
+    "AURORA: Sorry, I'm Aurora, I play the \n"
+    "keys for The Last Dinner Party. \p"
+    "We opened tonight's show for Hozier, \n"
+    "I'm surprised we didn't see you there. $"
+}
+
+text RoraStolenPokemon{
+    "…\p"
+    "A stolen POKéMON? \p"
+    "I see, well that was very brave of you \n"
+    "to go rescue it by yourself! \p"
+    "I think I see what Abi saw in you.\p"
+    "We're not accepting any more challenges \n"
+    "tonight, but I think Hozier is. \p"
+    "If what you told me is true, then I think \n"
+    "you have your chances. \p"
+    "You could train with the other trainers \n"
+    "in here, if you don't feel ready yet. \p"
+    "Good luck!$"
+}
+
+
+script HozierHall_Nina{
+    lock
+    faceplayer
+    if(defeated(TRAINER_HOZIER)){
+        msgbox(NinaPostBattle_Hozier)
+        }
+    else{
+        trainerbattle_single(TRAINER_NINA, NinaIntro_Hozier, NinaDefeated_Hozier)
+        msgbox(NinaPostBattle_Hozier)
+        }
+    
+    releaseall
+    end
+}
+
+text NinaIntro_Hozier {
+    "NINA: The Last Dinner Party were so \n"
+    "good! \p"
+    "They were the best openers Hozier could \n"
+    "ask for!$"
+}
+
+text NinaDefeated_Hozier{
+    "It's already over?$"
+}
+
+text NinaPostBattle_Hozier{
+    "NINA: I'm sad Hozier didn't play \n"
+    "NFWMB. \p"
+    "It's my favourite song of his! \p"
+    "I know he never plays it but still…$"
+}
+
+script HozierHall_Steff{
+    lock
+    faceplayer
+    if(defeated(TRAINER_HOZIER)){
+        msgbox(SteffPostBattle_Hozier)
+        }
+    else{
+        trainerbattle_single(TRAINER_NINA, SteffIntro_Hozier, SteffDefeated_Hozier)
+        msgbox(SteffPostBattle_Hozier)
+        }
+    releaseall
+    end
+}
+
+text SteffIntro_Hozier {
+    "STEFF: The show was so good, I sang so\n"
+    "loud I almost passed out… \p"
+    "But I would do it again! $"
+}
+
+text SteffDefeated_Hozier{
+    "Put me back in it…$"
+}
+
+text SteffPostBattle_Hozier{
+    "STEFF: I don't want to leave just yet. \p"
+    "If I leave it'll be over for real.$"
+}
+
+script HozierHall_Wren{
+    lock
+    faceplayer
+    if(defeated(TRAINER_HOZIER)){
+        msgbox(WrenPostBattle_Hozier)
+        }
+    else{
+        trainerbattle_single(TRAINER_NINA, WrenIntro_Hozier, WrenDefeated_Hozier)
+        msgbox(WrenPostBattle_Hozier)
+        }
+    releaseall
+    end
+}
+
+text WrenIntro_Hozier {
+    "WREN: Oh the show was so magical!\p"
+    "I got to see two of my favourite \n"
+    "artists in one night! \p"
+    "I'm floating like a feather on \n"
+    "the sea! $"
+}
+
+text WrenDefeated_Hozier{
+    "Now I'm feeling as heavy as the world…$"
+}
+
+text WrenPostBattle_Hozier{
+    "WREN: Hozier played my favourite \n"
+    "song! \p"
+    "I feel lighter than I have in so much \n"
+    "time!$"
+}
+

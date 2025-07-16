@@ -1,0 +1,148 @@
+mapscripts Route1_MapScripts {}
+
+const Goblin = 1
+
+const Potion = 3
+const Berry = 4
+
+script Route1_GoblinScript{
+    lock
+    applymovement(Goblin, Common_Movement_FacePlayer)
+    msgbox(GobTips)
+    release
+    end
+}
+
+script GobGreets1{
+    lock
+    applymovement(Goblin, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(40)
+    applymovement(Goblin, GobGoToPlayer1)
+    waitmovement(0)
+    goto(GobTeach)
+}
+
+script GobGreets2{
+    lock
+    applymovement(Goblin, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(40)
+    applymovement(Goblin, GobGoToPlayer2)
+    waitmovement(0)
+    goto(GobTeach)
+}
+
+script GobTeach{
+    msgbox(GobTeachIntro, MSGBOX_YESNO)
+    if (var(VAR_RESULT)==NO){
+        msgbox(TeachHowToCatch)
+    }
+    else{
+        msgbox("Great!$")
+    }
+    applymovement(Goblin, Common_Movement_WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(GivePokeballs)
+    giveitem(ITEM_POKE_BALL, amount = 10)
+    msgbox(GobGoodLuck)
+    closemessage
+    applymovement(Goblin,GobGoBack)
+    waitmovement(0)
+    setvar(VAR_CATCHING_TUTORIAL, 1)
+    setflag(FLAG_ADVENTURE_STARTED)
+    release
+    end
+}
+
+script Route1_Youngster{
+	trainerbattle_single(TRAINER_ALLEN, Route102_Text_AllenIntro, Route102_Text_AllenDefeated)
+	msgbox(Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE)
+}
+
+script Route1_FindPotion{
+    lock
+    giveitem(ITEM_POTION)
+    hideobjectat(Potion, 0)
+    removeobject(Potion)
+    setflag(FLAG_POTION_ROUTE1)
+    release
+    end
+}
+
+script Route1_FindBerry{
+    lock
+    giveitem(ITEM_ORAN_BERRY)
+    hideobjectat(Potion, 0)
+    removeobject(Berry)
+    setflag(FLAG_BERRY_ROUTE1)
+    release
+    end
+}
+
+text GobTeachIntro{
+    "GOBLIN: {PLAYER}{KUN}!\p"
+    "What are you doing here?\p"
+    "…\p"
+    "What? A POKéMON? From Abigail?\p"
+    "Cool!\p"
+    "Oh! And that's a POKéDEX! \p"
+    "Wow {PLAYER}{KUN}! Look at you, you're\n"
+    "becoming a real POKéMON trainer!\p"
+    "Me? \p"
+    "Oh I'm just trying to catch some new \n"
+    "POKéMON.\p"
+    "I can teach you if you want, since \n"
+    "you're really doing this.\p"
+    "Do you know how to catch POKéMON?$"
+}
+
+text TeachHowToCatch{
+    "Okay it's not that hard I promise! \p"
+    "When you encounter a wild POKéMON, \n"
+    "tire it out a bit by lowering its \l"
+    "HP, and then throw a Poké Ball at it! \p"
+    "Some POKéMON are harder to catch than \n"
+    "others, but some Poké Balls are more \l"
+    "effective than others too. \p"
+    "I'm sure you'll get it quickly!$"
+}
+
+text GivePokeballs{
+    "Here, you can use these to get started!\p"
+    "You can buy more from shops.$"
+}
+
+text GobGoodLuck{
+    "Well, have fun on your POKéMON \n"
+    "catching adventures, and good \l"
+    "luck for the challenge!\p"
+    "I think I'll try it too, but I'm \n"
+    "nowhere near ready yet…$"
+}
+
+text GobTips{
+    "GOBLIN: Weakened POKéMON are easier\n"
+    "to catch.\p"
+    "Oh, and if your own POKéMON get tired,\n"
+    "a nap in your bed or a drink from the \l"
+    "Two Legged Dog will definitely help!$"
+}
+
+movement GobGoToPlayer1{
+    walk_right * 1
+    walk_down * 3
+    step_end
+}
+
+movement GobGoToPlayer2{
+    walk_right * 2
+    walk_down * 3
+    step_end
+}
+
+movement GobGoBack{
+    walk_up * 3
+    walk_left * 1
+    step_end
+}

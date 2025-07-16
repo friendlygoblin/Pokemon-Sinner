@@ -41,6 +41,6 @@ SlateportCity_House_Text_MustBeGoingToBattleTent:
 # 21 "data/maps/SlateportCity_House/scripts.pory"
 	.string "You're a TRAINER, aren't you?\p"
 # 22 "data/maps/SlateportCity_House/scripts.pory"
-	.string "Since you came to SLATEPORT CITY,\n"
+	.string "I have a tip for you: POKéMON can hold\n"
 # 23 "data/maps/SlateportCity_House/scripts.pory"
-	.string "you must be going to the BATTLE TENT.$"
+	.string "items, and it can help in battle!$"

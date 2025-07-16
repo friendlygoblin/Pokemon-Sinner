@@ -1,0 +1,43 @@
+mapscripts FurgeTown_Shop_MapScripts {}
+
+script FurgeTown_ShopGirl{
+    lock
+    faceplayer
+    msgbox(format("Granny's herbal remedies are very effective, you know.\pBut they taste bad, so POKéMON dislike them.\pThey might be annoyed at you when you use them."), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script FurgeTown_House1_EventScript_Kecleon{
+	lock
+	faceplayer
+	waitse
+	playmoncry(SPECIES_KECLEON, CRY_MODE_NORMAL)
+	msgbox("KECLEON: Kleeee!$", MSGBOX_DEFAULT)
+	waitmoncry
+	release
+	end}
+
+script FurgeTown_Granny{
+    lock
+    message(format("I sell organic medicine straight from the forest. What do you want?"))
+    waitmessage
+    pokemart(GrannyMart)
+    msgbox(GrannyThanks)
+    release
+    end
+}
+
+mart GrannyMart{
+    ITEM_BERRY_JUICE
+    ITEM_SITRUS_BERRY
+    ITEM_LUM_BERRY    
+    ITEM_ENERGY_POWDER
+    ITEM_HEAL_POWDER
+    ITEM_REVIVAL_HERB
+}
+
+text GrannyThanks{
+    "Here you go.\p"
+    "Come back soon.$"
+}

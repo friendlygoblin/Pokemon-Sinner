@@ -1,0 +1,509 @@
+mapscripts StartTown_Pub_MapScripts {}
+
+raw `
+.set Pokeball1, 8
+.set Pokeball2, 9
+.set Pokeball3, 10
+`
+
+const Aurora = 4
+const Emily = 3
+const Lizzie = 6
+const Georgia = 5
+const Abi = 2
+const Nora = 7
+
+script GoToStage_1{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerWalkToStage1)
+    waitmovement(0)
+    goto(MissedTheGig)
+}
+
+script GoToStage_2{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerWalkToStage2)
+    waitmovement(0)
+    goto(MissedTheGig)
+}
+
+script MissedTheGig{
+
+    applymovement(Abi, Common_Movement_WalkInPlaceDown)
+    waitmovement(0)
+    msgbox("???: And thank you for coming!")
+    closemessage
+
+//Band starts to leave
+    applymovement(Aurora, AuroraLeaves)
+    waitmovement(0)
+    setflag(FLAG_INTRO_RORA)
+    removeobject(Aurora)
+    applymovement(Emily, EmilyLeaves)
+    waitmovement(0)
+    removeobject(Emily)
+    setflag(FLAG_INTRO_EMILY)
+    applymovement(Lizzie, LizzieLeaves)
+    waitmovement(0)
+    removeobject(Lizzie)
+    setflag(FLAG_INTRO_LIZZIE)
+    applymovement(Georgia, GeorgiaLeaves)
+    waitmovement(0)
+    removeobject(Georgia) 
+    setflag(FLAG_INTRO_GEORGIA)
+    applymovement(Nora, NoraStartsToLeave)
+    waitmovement(0)
+    setobjectxy(Nora,12,12)
+    setobjectmovementtype(Nora, MOVEMENT_TYPE_FACE_LEFT)
+    
+
+//Abi notices player
+    applymovement(Abi, AbiStartsToLeave)
+    waitmovement(0)
+    delay(20)
+    applymovement(Abi, AbiGoesToPlayer)
+    waitmovement(0)
+    msgbox(YouJustGotHere)
+    closemessage
+    delay(20)
+    applymovement(Abi, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(20)
+    msgbox(OhYouKnew)
+    closemessage
+    applymovement(Abi, Thinks)
+    waitmovement(0)
+    msgbox(WeAreOnTour)
+    closemessage
+    delay(20)
+    applymovement(Abi, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(20)
+    msgbox(NoPokemon)
+    closemessage
+
+//Abi goes to set up the pokeballs
+    applymovement(Abi, AbiPokeball1)
+    waitmovement(0)
+    addobject(Pokeball3)
+    clearflag(FLAG_POKEBALL_3)
+    delay(20)
+    applymovement(Abi, AbiNextPokeball)
+    waitmovement(0)
+    addobject(Pokeball2)
+    clearflag(FLAG_POKEBALL_2)
+    delay(20)
+    applymovement(Abi, AbiNextPokeball)
+    waitmovement(0)
+    addobject(Pokeball1)
+    clearflag(FLAG_POKEBALL_1)
+    delay(20)
+    applymovement(Abi, AbiBackToPlayer)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+    msgbox(ChooseOne)
+    closemessage
+    delay(20)
+    
+//Abi leaves
+    applymovement(Abi, AbiLeaves)
+    waitmovement(0)
+    removeobject(Abi)
+    setflag(FLAG_INTRO_ABI)
+
+    release
+    end
+}
+
+script DontLeaveYet1{
+    lock
+    if (var(VAR_LITTLEROOT_INTRO_STATE)==1) {
+    applymovement(Nora, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    msgbox("???: Wait!")
+    applymovement(Nora, NoraGivePokedex)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+    waitmovement(0)
+    goto(NoraGiveDex)}
+    else{
+        msgbox(format("Abigail is counting on you to take care of a POKéMON!$"))
+        closemessage
+        applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+        waitmovement(0)
+        release
+        end
+    }
+    end
+}
+
+script DontLeaveYet2{
+    lock
+    if (var(VAR_LITTLEROOT_INTRO_STATE)==1) {
+    applymovement(Nora, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    msgbox("???: Wait!")
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerStepBack)
+    waitmovement(0)
+    applymovement(Nora, NoraGivePokedex)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+    waitmovement(0)
+    goto(NoraGiveDex)
+    }
+    else{
+        msgbox(format("Abigail is counting on you to take care of a POKéMON!$"))
+        closemessage
+        applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp)
+        waitmovement(0)
+        release
+        end
+    }
+    end
+}
+
+script NoraBusy{
+    lock
+    msgbox(format("She's busy sorting photos on her camera…"))
+    releaseall
+    end
+}
+
+movement PlayerStepBack{
+    walk_left
+    face_right
+}
+
+script NoraGiveDex{
+    msgbox(NoraDex)
+    playfanfare(MUS_OBTAIN_ITEM)
+	msgbox(format("Obtained POKéDEX from Nora!"))
+	waitfanfare
+    closemessage
+	setflag(FLAG_SYS_POKEDEX_GET)
+    setflag(FLAG_SYS_NATIONAL_DEX)
+	special(SetUnlockedPokedexFlags)
+	setflag(FLAG_RECEIVED_POKEDEX_FROM_BIRCH)
+    setflag(FLAG_INTRO_NORA)
+    setvar(VAR_OK_TO_LEAVE_PUB, 1)
+    setvar(VAR_CATCHING_TUTORIAL, 0)
+    applymovement(Nora, NoraLeaves)
+    waitmovement(0)
+    removeobject(Nora)
+    setrespawn(HEAL_LOCATION_START_TOWN_PUB)
+    release
+    end
+}
+
+movement NoraGivePokedex{
+    walk_left * 3
+    step_end
+}
+
+movement NoraLeaves{
+    walk_down * 2
+    step_end
+}
+
+movement PlayerWalkToStage1{
+    walk_up * 4
+    walk_right * 6
+    walk_up * 3
+    step_end
+}
+
+movement PlayerWalkToStage2{
+    walk_up * 4
+    walk_right * 5
+    walk_up * 3
+    step_end
+}
+
+movement AuroraLeaves{
+    walk_in_place_fast_down
+    walk_down
+    walk_left * 2
+    walk_down
+    walk_left * 2
+    step_end
+}
+
+movement EmilyLeaves{
+    walk_in_place_fast_down
+    walk_left * 3
+    walk_down
+    walk_left * 2
+    step_end
+}
+
+movement LizzieLeaves{
+    walk_in_place_fast_down
+    walk_up
+    walk_left * 5
+    walk_down
+    walk_left * 2
+    walk_down
+    walk_left * 3
+    step_end
+}
+
+movement GeorgiaLeaves{
+    walk_in_place_fast_down
+    walk_left * 6
+    walk_down
+    walk_left * 2
+    walk_down
+    walk_left * 3
+    step_end
+}
+
+movement NoraStartsToLeave{
+    walk_down * 6
+    face_left
+    step_end
+}
+
+movement AbiStartsToLeave{
+    walk_in_place_fast_down
+    walk_left * 2
+    delay_16
+    emote_exclamation_mark
+    delay_16
+    step_end
+}
+
+movement AbiGoesToPlayer{
+    walk_in_place_down
+    walk_right * 3
+    walk_down * 2
+    delay_16
+    walk_in_place_down
+    step_end
+}
+
+movement AbiPokeball1{
+    walk_up 
+    delay_16
+    walk_in_place_up
+    step_end
+}
+
+movement AbiNextPokeball{
+    walk_left
+    face_up
+    delay_16
+    walk_in_place_up
+    step_end
+}
+
+movement AbiBackToPlayer{
+    walk_down *2
+    walk_right
+    face_right
+    step_end
+}
+
+movement AbiLeaves{
+    walk_down * 8
+    step_end
+}
+
+movement Thinks{
+    emote_question_mark
+}
+
+text YouJustGotHere{
+    "???: You just got here, didn't you?\p"
+    "… \p"
+    "???: We were just rehearsing, don't \n"
+    "worry you didn't miss anything.\p"
+    "ABIGAIL: I'm Abigail by the way, but \n"
+    "my friends call me Abi.\p"
+    "I'm The Last Dinner Party's lead singer!$"
+}
+
+text OhYouKnew{
+    "You knew?\p"
+    "Oh you're a fan!\p"
+    "What's your name?\p"
+    "…\p"
+    "Well nice to meet you, {PLAYER}{KUN}!\p"
+    "Will we be seeing you in Mirror City? $"
+}
+
+text WeAreOnTour{
+    "What do you mean you didn't know about\n"
+    "our residency?\p"
+    "Well, we scored a permanent spot at the\n"
+    "Mirror City concert hall!\p"
+    "We even have a special challenge: \n"
+    "if you can beat all five of us in \l"
+    "POKéMON battle, we're adding you \l"
+    "to the guest list!\p"
+    "Forever! \p"
+    "Maybe you should try it!$"
+}
+
+text NoPokemon{
+    "You… don't have any POKéMON?\p"
+    "At all??\p"
+    "Oh…\p"
+    "Hum…\p"
+    "Okay, I'm not supposed to do that but…$"
+}
+
+text ChooseOne{
+    "I've been trying to find a home for\n"
+    "these little ones for ages.\p"
+    "Grace and the shelter staff agreed\n"
+    "to take care of them here, but I \l"
+    "don't see why you couldn't take \l"
+    "one under your wing…\p"
+    "Well, I love chatting but I don't want \n"
+    "the others to leave without me.\p"
+    "We have a show in Candlewax City, we're\n"
+    "opening for someone very special before \l"
+    "settling down at our new spot. \p"
+    "See you there!$"
+}
+
+text NoraDex{
+    "NORA: Hey! I'm Nora, the band's\n"
+    "photographer.\p"
+    "I see that you're giving Abi a \n"
+    "hand with those POKéMON, that's \l"
+    "really nice of you! \p"
+    "Look, I'm working on a project, aside\n"
+    "from concert photography. \p"
+    "Well, I was… but being on tour takes\n"
+    "lots of time and effort.\p"
+    "I like to take pictures of POKéMON\n"
+    "when I catch them.\p"
+    "I don't know if that's something \n"
+    "you'd like to do, but I don't have \l"
+    "time to use my special POKéMON \l"
+    "camera anymore.\p"
+    "If Abi trusts you with a POKéMON, I \n"
+    "trust you with my precious POKéDEX! \p"
+    "You don't have to use it if you don't \n"
+    "want to, but here, take good care of it!$"
+}
+
+script PickStarter_2{
+    lockall
+    if(var(VAR_LITTLEROOT_INTRO_STATE)==0){
+    showmonpic(SPECIES_CYNDAQUIL, 10,3)
+    msgbox("Do you want to choose \nFire type Cyndaquil?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon(SPECIES_CYNDAQUIL, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_TACKLE, move2 = MOVE_LEER)
+
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Received Cyndaquil!")
+                call(NicknamePartyMon)
+                removeobject(Pokeball2)
+                setflag(FLAG_POKEBALL_1)
+                setflag(FLAG_POKEBALL_2)
+                setflag(FLAG_POKEBALL_3)
+                setflag (FLAG_SYS_POKEMON_GET)
+                setvar(VAR_LITTLEROOT_INTRO_STATE, 1)
+                setvar(VAR_STARTER_MON, 0)
+                
+            }
+            
+        else{
+            hidemonpic   
+            }
+        }
+    else{
+        msgbox(format("Abigail said to pick one POKéMON. \pLet's not be greedy."))
+    }
+    releaseall
+    end
+}
+
+script PickStarter_3{
+    lockall
+    if(var(VAR_LITTLEROOT_INTRO_STATE)==0){
+    showmonpic(SPECIES_MUDKIP, 10,3)
+    msgbox("Do you want to choose \nWater type Mudkip?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon(SPECIES_MUDKIP, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_TACKLE, move2 = MOVE_GROWL)
+
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Received Mudkip!")
+                call(NicknamePartyMon)
+                removeobject(Pokeball3)
+                setflag(FLAG_POKEBALL_1)
+                setflag(FLAG_POKEBALL_2)
+                setflag(FLAG_POKEBALL_3)
+                setflag (FLAG_SYS_POKEMON_GET)
+                setvar(VAR_LITTLEROOT_INTRO_STATE, 1)
+                setvar(VAR_STARTER_MON, 2)
+            }
+            
+        else{
+            hidemonpic   
+            }
+        }
+    else{
+        msgbox(format("Abigail said to pick one POKéMON. \pLet's not be greedy."))
+    }
+    releaseall
+    end
+}
+
+script PickStarter_1{
+    lockall
+    if(var(VAR_LITTLEROOT_INTRO_STATE)==0){
+    showmonpic(SPECIES_CHESPIN, 10,3)
+    msgbox("Do you want to choose \nGrass type Chespin?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            givemon(SPECIES_CHESPIN, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL)
+
+                playfanfare(MUS_OBTAIN_ITEM)
+                msgbox("Received Chespin!")
+                call(NicknamePartyMon)
+                removeobject(Pokeball1)
+                setflag(FLAG_POKEBALL_1)
+                setflag(FLAG_POKEBALL_2)
+                setflag(FLAG_POKEBALL_3)
+                setflag (FLAG_SYS_POKEMON_GET)
+                setvar(VAR_LITTLEROOT_INTRO_STATE, 1)
+                setvar(VAR_STARTER_MON, 1)
+                
+            }
+            
+        else{
+            hidemonpic   
+            }
+        }
+    else{
+        msgbox(format("Abigail said to pick one POKéMON. \pLet's not be greedy."))
+    }
+    releaseall
+    end
+}
+
+script Barista{
+    lock
+    message("Welcome to the Two Legged Dog, what \ncan I get for you?")
+    waitmessage
+    pokemart(MartBar)
+    msgbox(BaristaThanks)
+    release
+    end
+}
+
+mart MartBar{
+    ITEM_BERRY_JUICE
+    ITEM_FRESH_WATER
+    ITEM_SODA_POP
+    ITEM_LEMONADE
+}
+
+text BaristaThanks{
+    "Alright!\p"
+    "Oh, and thanks for taking care of\n"
+    "one of the POKéMON, it makes it \l"
+    "easier for the shelter's staff!$"
+}

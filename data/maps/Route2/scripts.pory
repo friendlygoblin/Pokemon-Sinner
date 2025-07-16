@@ -1,0 +1,71 @@
+mapscripts Route2_MapScripts {}
+
+const Jay = 1
+
+script Route2_Jay{
+	trainerbattle_single(TRAINER_SAWYER_1, Jay_BattleIntro, Jay_Defeated, Route2_Jay_PostBattle)
+	goto(Route2_Jay_PostBattle)
+}
+
+script Route2_Jay_PostBattle{
+    msgbox(Jay_PostBattle)
+    delay(40)
+    applymovement(Jay, JayLeaves_Route2)
+    waitmovement(0)
+    removeobject(Jay)
+    setflag(FLAG_JAY_ROUTE2)
+    release
+    end
+}
+
+text Jay_BattleIntro{
+    "JAY: Hey you!\p"
+    "I'm training for the TLDP challenge! \p"
+    "Train with me!$"
+}
+
+text Jay_Defeated{
+    "Guess I need to train more…$"
+}
+
+text Jay_PostBattle{
+    "JAY: Well, it looks like you're closer \n"
+    "to being ready for this than I am.\p"
+    "I'm gonna train a bit further, I've \n"
+    "heard there are strong trainers on \l"
+    "the other side of the Rib Cave.$"
+}
+
+movement JayLeaves_Route2 {
+    walk_down * 6
+    step_end
+}
+
+script Route2_Hiker {
+    trainerbattle_single(TRAINER_TOMMY, Route2_Hiker_BattleIntro, Route2_Hiker_Defeated)
+    msgbox(Route2_Hiker_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Route2_Hiker_BattleIntro {
+    "I was just taking a break from walking, \n"
+    "but I always have energy for a POKéMON \l"
+    "battle!$"
+}
+
+text Route2_Hiker_Defeated{
+    "I need to sit down again…$"
+}
+
+text Route2_Hiker_PostBattle{
+    "I like to find cosy little spots to \n"
+    "take naps in. \p"
+    "Too bad I have to walk so much to get \n"
+    "there.$"
+}
+
+script RibCave_Sign{
+    lock
+    msgbox(format("{UP_ARROW} Rib Cave.\pGateway to Candlewax City."))
+    releaseall
+    end
+}

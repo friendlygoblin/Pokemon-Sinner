@@ -1,0 +1,18 @@
+mapscripts RibCave_1F_MapScripts {}
+
+script RibCave_Guard{
+    lock
+    faceplayer
+    msgbox(Guard_GoAway, MSGBOX_AUTOCLOSE)
+    applymovement(4, Common_Movement_FaceDown)
+    waitmovement(0)
+    releaseall
+    end
+    
+}
+
+text Guard_GoAway{
+    "Who are you? \p"
+    "There's nothing to see here,\n"
+    "go away!$"
+}

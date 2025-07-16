@@ -143,13 +143,13 @@ RustboroCity_Mart_EventScript_BugCatcher::
 # 72 "data/maps/RustboroCity_Mart/scripts.pory"
 RustboroCity_Mart_Text_BuyingHealsInCaseOfShroomish:
 # 73 "data/maps/RustboroCity_Mart/scripts.pory"
-	.string "I'm buying some PARLYZ HEALS and\n"
+	.string "I'm buying some Paralyz Heals and\n"
 # 74 "data/maps/RustboroCity_Mart/scripts.pory"
-	.string "ANTIDOTES.\p"
+	.string "Antidotes.\p"
 # 75 "data/maps/RustboroCity_Mart/scripts.pory"
-	.string "Just in case I run into SHROOMISH\n"
+	.string "Potions can't heal Paralysis and\n"
 # 76 "data/maps/RustboroCity_Mart/scripts.pory"
-	.string "in PETALBURG WOODS.$"
+	.string "Poison.$"
 # 77 "data/maps/RustboroCity_Mart/scripts.pory"
 
 # 78 "data/maps/RustboroCity_Mart/scripts.pory"

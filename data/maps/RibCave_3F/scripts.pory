@@ -1,0 +1,55 @@
+mapscripts RibCave_3F_MapScripts {}
+
+const Potion = 6
+
+script RibCave3F_Hiker {
+    trainerbattle_single(TRAINER_ELI, RibCave3F_Hiker_BattleIntro, RibCave3F_Hiker_Defeated)
+	msgbox(RibCave3F_Hiker_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text RibCave3F_Hiker_BattleIntro {
+    "I love exploring caves!\p"
+    "It's not dangerous if you have \n"
+    "your POKéMON to protect you!$"
+}
+
+text RibCave3F_Hiker_Defeated{
+    "Well you're definitely safe…$"
+}
+
+text RibCave3F_Hiker_PostBattle{
+    "People often come to train in caves.\p"
+    "So you have to look out for trainers\n"
+    "as well as wild POKéMON!$"
+}
+
+script RibCave3F_CoolTrainer {
+    trainerbattle_single(TRAINER_MARY, RibCave3F_CoolTrainer_BattleIntro, RibCave3F_CoolTrainer_Defeated)
+	msgbox(RibCave3F_CoolTrainer_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text RibCave3F_CoolTrainer_BattleIntro {
+    "The way out is just over there!\p"
+    "But before you get to Candlewax City,\n"
+    "I challenge you to a POKéMON battle!$"
+}
+
+text RibCave3F_CoolTrainer_Defeated{
+    "Awh I really thought I'd win…$"
+}
+
+text RibCave3F_CoolTrainer_PostBattle{
+    "Trainers are more fun to battle than\n"
+    "wild POKéMON.$"
+}
+
+
+script RibCave_FindPotion{
+    lock
+    giveitem(ITEM_POTION)
+    hideobjectat(Potion, 0)
+    removeobject(Potion)
+    setflag(FLAG_POTION_RIBCAVE)
+    release
+    end
+}
