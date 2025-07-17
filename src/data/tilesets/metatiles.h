@@ -222,3 +222,15 @@ const u16 gMetatileAttributes_prelude_town[] = INCBIN_U16("data/tilesets/seconda
 
 const u16 gMetatiles_gPreludeTown[] = INCBIN_U16("data/tilesets/secondary/g_prelude_town/metatiles.bin");
 const u16 gMetatileAttributes_gPreludeTown[] = INCBIN_U16("data/tilesets/secondary/g_prelude_town/metatile_attributes.bin");
+
+const u16 gMetatiles_PreludeTownTest[] = INCBIN_U16("data/tilesets/primary/prelude_town_test/metatiles.bin");
+const u16 gMetatileAttributes_PreludeTownTest[] = INCBIN_U16("data/tilesets/primary/prelude_town_test/metatile_attributes.bin");
+
+const u16 gMetatiles_PreludeTown_Secondary[] = INCBIN_U16("data/tilesets/secondary/prelude_town_secondary/metatiles.bin");
+const u16 gMetatileAttributes_PreludeTown_Secondary[] = INCBIN_U16("data/tilesets/secondary/prelude_town_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_Caves_Primary[] = INCBIN_U16("data/tilesets/primary/caves_primary/metatiles.bin");
+const u16 gMetatileAttributes_Caves_Primary[] = INCBIN_U16("data/tilesets/primary/caves_primary/metatile_attributes.bin");
+
+const u16 gMetatiles_Caves_Secondary[] = INCBIN_U16("data/tilesets/secondary/caves_secondary/metatiles.bin");
+const u16 gMetatileAttributes_Caves_Secondary[] = INCBIN_U16("data/tilesets/secondary/caves_secondary/metatile_attributes.bin");
