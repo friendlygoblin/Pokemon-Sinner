@@ -638,10 +638,10 @@ PickStarter_2::
 # 394 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_LITTLEROOT_INTRO_STATE, 0
 	goto_if_eq PickStarter_2_2
-# 418 "data/maps/StartTown_Pub/scripts.pory"
+# 419 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_2_Text_2
 PickStarter_2_1:
-# 420 "data/maps/StartTown_Pub/scripts.pory"
+# 421 "data/maps/StartTown_Pub/scripts.pory"
 	releaseall
 	end
 
@@ -649,168 +649,174 @@ PickStarter_2_2:
 # 395 "data/maps/StartTown_Pub/scripts.pory"
 	showmonpic SPECIES_CYNDAQUIL, 10, 3
 # 396 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_2_Text_0, MSGBOX_YESNO
+	playmoncry SPECIES_CYNDAQUIL, CRY_MODE_NORMAL
 # 397 "data/maps/StartTown_Pub/scripts.pory"
+	msgbox PickStarter_2_Text_0, MSGBOX_YESNO
+# 398 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PickStarter_2_5
-# 414 "data/maps/StartTown_Pub/scripts.pory"
+# 415 "data/maps/StartTown_Pub/scripts.pory"
 	hidemonpic
 	goto PickStarter_2_1
 
 PickStarter_2_5:
-# 398 "data/maps/StartTown_Pub/scripts.pory"
+# 399 "data/maps/StartTown_Pub/scripts.pory"
 	givemon SPECIES_CYNDAQUIL, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_LEER
-# 400 "data/maps/StartTown_Pub/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 401 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_2_Text_1
+	playfanfare MUS_OBTAIN_ITEM
 # 402 "data/maps/StartTown_Pub/scripts.pory"
-	call NicknamePartyMon
+	msgbox PickStarter_2_Text_1
 # 403 "data/maps/StartTown_Pub/scripts.pory"
-	removeobject Pokeball2
+	call NicknamePartyMon
 # 404 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_1
+	removeobject Pokeball2
 # 405 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_2
+	setflag FLAG_POKEBALL_1
 # 406 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_3
+	setflag FLAG_POKEBALL_2
 # 407 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_POKEBALL_3
 # 408 "data/maps/StartTown_Pub/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+	setflag FLAG_SYS_POKEMON_GET
 # 409 "data/maps/StartTown_Pub/scripts.pory"
+	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+# 410 "data/maps/StartTown_Pub/scripts.pory"
 	setvar VAR_STARTER_MON, 0
 	goto PickStarter_2_1
 
 
 PickStarter_3::
-# 425 "data/maps/StartTown_Pub/scripts.pory"
-	lockall
 # 426 "data/maps/StartTown_Pub/scripts.pory"
+	lockall
+# 427 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_LITTLEROOT_INTRO_STATE, 0
 	goto_if_eq PickStarter_3_2
-# 449 "data/maps/StartTown_Pub/scripts.pory"
+# 451 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_2_Text_2
 PickStarter_3_1:
-# 451 "data/maps/StartTown_Pub/scripts.pory"
+# 453 "data/maps/StartTown_Pub/scripts.pory"
 	releaseall
 	end
 
 PickStarter_3_2:
-# 427 "data/maps/StartTown_Pub/scripts.pory"
-	showmonpic SPECIES_MUDKIP, 10, 3
 # 428 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_3_Text_0, MSGBOX_YESNO
+	showmonpic SPECIES_MUDKIP, 10, 3
 # 429 "data/maps/StartTown_Pub/scripts.pory"
+	playmoncry SPECIES_MUDKIP, CRY_MODE_NORMAL
+# 430 "data/maps/StartTown_Pub/scripts.pory"
+	msgbox PickStarter_3_Text_0, MSGBOX_YESNO
+# 431 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PickStarter_3_5
-# 445 "data/maps/StartTown_Pub/scripts.pory"
+# 447 "data/maps/StartTown_Pub/scripts.pory"
 	hidemonpic
 	goto PickStarter_3_1
 
 PickStarter_3_5:
-# 430 "data/maps/StartTown_Pub/scripts.pory"
-	givemon SPECIES_MUDKIP, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_GROWL
 # 432 "data/maps/StartTown_Pub/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 433 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_3_Text_1
+	givemon SPECIES_MUDKIP, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_GROWL
 # 434 "data/maps/StartTown_Pub/scripts.pory"
-	call NicknamePartyMon
+	playfanfare MUS_OBTAIN_ITEM
 # 435 "data/maps/StartTown_Pub/scripts.pory"
-	removeobject Pokeball3
+	msgbox PickStarter_3_Text_1
 # 436 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_1
+	call NicknamePartyMon
 # 437 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_2
+	removeobject Pokeball3
 # 438 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_3
+	setflag FLAG_POKEBALL_1
 # 439 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_POKEBALL_2
 # 440 "data/maps/StartTown_Pub/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+	setflag FLAG_POKEBALL_3
 # 441 "data/maps/StartTown_Pub/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 442 "data/maps/StartTown_Pub/scripts.pory"
+	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+# 443 "data/maps/StartTown_Pub/scripts.pory"
 	setvar VAR_STARTER_MON, 2
 	goto PickStarter_3_1
 
 
 PickStarter_1::
-# 456 "data/maps/StartTown_Pub/scripts.pory"
+# 458 "data/maps/StartTown_Pub/scripts.pory"
 	lockall
-# 457 "data/maps/StartTown_Pub/scripts.pory"
+# 459 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_LITTLEROOT_INTRO_STATE, 0
 	goto_if_eq PickStarter_1_2
-# 481 "data/maps/StartTown_Pub/scripts.pory"
+# 484 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_2_Text_2
 PickStarter_1_1:
-# 483 "data/maps/StartTown_Pub/scripts.pory"
+# 486 "data/maps/StartTown_Pub/scripts.pory"
 	releaseall
 	end
 
 PickStarter_1_2:
-# 458 "data/maps/StartTown_Pub/scripts.pory"
-	showmonpic SPECIES_CHESPIN, 10, 3
-# 459 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_1_Text_0, MSGBOX_YESNO
 # 460 "data/maps/StartTown_Pub/scripts.pory"
+	showmonpic SPECIES_CHESPIN, 10, 3
+# 461 "data/maps/StartTown_Pub/scripts.pory"
+	playmoncry SPECIES_CHESPIN, CRY_MODE_NORMAL
+# 462 "data/maps/StartTown_Pub/scripts.pory"
+	msgbox PickStarter_1_Text_0, MSGBOX_YESNO
+# 463 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PickStarter_1_5
-# 477 "data/maps/StartTown_Pub/scripts.pory"
+# 480 "data/maps/StartTown_Pub/scripts.pory"
 	hidemonpic
 	goto PickStarter_1_1
 
 PickStarter_1_5:
-# 461 "data/maps/StartTown_Pub/scripts.pory"
-	givemon SPECIES_CHESPIN, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL
-# 463 "data/maps/StartTown_Pub/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
 # 464 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_1_Text_1
-# 465 "data/maps/StartTown_Pub/scripts.pory"
-	call NicknamePartyMon
+	givemon SPECIES_CHESPIN, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL
 # 466 "data/maps/StartTown_Pub/scripts.pory"
-	removeobject Pokeball1
+	playfanfare MUS_OBTAIN_ITEM
 # 467 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_1
+	msgbox PickStarter_1_Text_1
 # 468 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_2
+	call NicknamePartyMon
 # 469 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_3
+	removeobject Pokeball1
 # 470 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_POKEBALL_1
 # 471 "data/maps/StartTown_Pub/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+	setflag FLAG_POKEBALL_2
 # 472 "data/maps/StartTown_Pub/scripts.pory"
+	setflag FLAG_POKEBALL_3
+# 473 "data/maps/StartTown_Pub/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 474 "data/maps/StartTown_Pub/scripts.pory"
+	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+# 475 "data/maps/StartTown_Pub/scripts.pory"
 	setvar VAR_STARTER_MON, 1
 	goto PickStarter_1_1
 
 
 Barista::
-# 488 "data/maps/StartTown_Pub/scripts.pory"
-	lock
-# 489 "data/maps/StartTown_Pub/scripts.pory"
-	message Barista_Text_0
-# 490 "data/maps/StartTown_Pub/scripts.pory"
-	waitmessage
 # 491 "data/maps/StartTown_Pub/scripts.pory"
-	pokemart MartBar
+	lock
 # 492 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox BaristaThanks
+	message Barista_Text_0
 # 493 "data/maps/StartTown_Pub/scripts.pory"
+	waitmessage
+# 494 "data/maps/StartTown_Pub/scripts.pory"
+	pokemart MartBar
+# 495 "data/maps/StartTown_Pub/scripts.pory"
+	msgbox BaristaThanks
+# 496 "data/maps/StartTown_Pub/scripts.pory"
 	release
 	end
 
 
 	.align 2
-# 497 "data/maps/StartTown_Pub/scripts.pory"
-MartBar:
-# 498 "data/maps/StartTown_Pub/scripts.pory"
-	.2byte ITEM_BERRY_JUICE
-# 499 "data/maps/StartTown_Pub/scripts.pory"
-	.2byte ITEM_FRESH_WATER
 # 500 "data/maps/StartTown_Pub/scripts.pory"
-	.2byte ITEM_SODA_POP
+MartBar:
 # 501 "data/maps/StartTown_Pub/scripts.pory"
+	.2byte ITEM_BERRY_JUICE
+# 502 "data/maps/StartTown_Pub/scripts.pory"
+	.2byte ITEM_FRESH_WATER
+# 503 "data/maps/StartTown_Pub/scripts.pory"
+	.2byte ITEM_SODA_POP
+# 504 "data/maps/StartTown_Pub/scripts.pory"
 	.2byte ITEM_LEMONADE
 	.2byte ITEM_NONE
 
@@ -837,36 +843,36 @@ NoraGiveDex_Text_0:
 	.string "Obtained POKéDEX from Nora!$"
 
 PickStarter_2_Text_0:
-# 396 "data/maps/StartTown_Pub/scripts.pory"
+# 397 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Do you want to choose \nFire type Cyndaquil?$"
 
 PickStarter_2_Text_1:
-# 401 "data/maps/StartTown_Pub/scripts.pory"
+# 402 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Received Cyndaquil!$"
 
 PickStarter_2_Text_2:
-# 418 "data/maps/StartTown_Pub/scripts.pory"
+# 419 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Abigail said to pick one POKéMON.\p"
 	.string "Let's not be greedy.$"
 
 PickStarter_3_Text_0:
-# 428 "data/maps/StartTown_Pub/scripts.pory"
+# 430 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Do you want to choose \nWater type Mudkip?$"
 
 PickStarter_3_Text_1:
-# 433 "data/maps/StartTown_Pub/scripts.pory"
+# 435 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Received Mudkip!$"
 
 PickStarter_1_Text_0:
-# 459 "data/maps/StartTown_Pub/scripts.pory"
+# 462 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Do you want to choose \nGrass type Chespin?$"
 
 PickStarter_1_Text_1:
-# 464 "data/maps/StartTown_Pub/scripts.pory"
+# 467 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Received Chespin!$"
 
 Barista_Text_0:
-# 489 "data/maps/StartTown_Pub/scripts.pory"
+# 492 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Welcome to the Two Legged Dog, what \ncan I get for you?$"
 
 YouJustGotHere::
@@ -947,7 +953,7 @@ NoraDex::
 	.string "want to, but here, take good care of it!$"
 
 BaristaThanks::
-# 504 "data/maps/StartTown_Pub/scripts.pory"
+# 507 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Alright!\p"
 	.string "Oh, and thanks for taking care of\n"
 	.string "one of the POKéMON, it makes it \l"

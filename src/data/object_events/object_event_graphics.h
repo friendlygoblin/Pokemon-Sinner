@@ -82,6 +82,7 @@ const u16 gObjectEventPal_Jay[] = INCBIN_U16("graphics/object_events/palettes/ja
 const u16 gObjectEventPal_George[] = INCBIN_U16("graphics/object_events/palettes/george.gbapal");
 const u16 gObjectEventPal_Hozier[] = INCBIN_U16("graphics/object_events/palettes/hozier.gbapal");
 const u16 gObjectEventPal_Wren[] = INCBIN_U16("graphics/object_events/palettes/wren.gbapal");
+const u16 gObjectEventPal_Julie[] = INCBIN_U16("graphics/object_events/palettes/julie.gbapal");
 const u16 gObjectEventPal_Florence[] = INCBIN_U16("graphics/object_events/palettes/florence.gbapal");
 
 const u16 gObjectEventPal_Npc1Reflection[] = INCBIN_U16("graphics/object_events/palettes/npc_1_reflection.gbapal");
@@ -92,6 +93,7 @@ const u16 gObjectEventPal_Npc4Reflection[] = INCBIN_U16("graphics/object_events/
 const u32 gObjectEventPic_Jay[] = INCBIN_U32("graphics/object_events/pics/people/jay.4bpp");
 const u32 gObjectEventPic_Ann[] = INCBIN_U32("graphics/object_events/pics/people/ann.4bpp");
 const u32 gObjectEventPic_Wren[] = INCBIN_U32("graphics/object_events/pics/people/wren.4bpp");
+const u32 gObjectEventPic_Julie[] = INCBIN_U32("graphics/object_events/pics/people/julie.4bpp");
 
 const u32 gObjectEventPic_NinjaBoy[] = INCBIN_U32("graphics/object_events/pics/people/ninja_boy.4bpp");
 const u32 gObjectEventPic_Twin[] = INCBIN_U32("graphics/object_events/pics/people/twin.4bpp");

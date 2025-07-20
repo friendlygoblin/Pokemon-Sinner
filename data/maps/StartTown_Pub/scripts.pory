@@ -393,6 +393,7 @@ script PickStarter_2{
     lockall
     if(var(VAR_LITTLEROOT_INTRO_STATE)==0){
     showmonpic(SPECIES_CYNDAQUIL, 10,3)
+    playmoncry(SPECIES_CYNDAQUIL, CRY_MODE_NORMAL)
     msgbox("Do you want to choose \nFire type Cyndaquil?", MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_CYNDAQUIL, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_TACKLE, move2 = MOVE_LEER)
@@ -425,6 +426,7 @@ script PickStarter_3{
     lockall
     if(var(VAR_LITTLEROOT_INTRO_STATE)==0){
     showmonpic(SPECIES_MUDKIP, 10,3)
+    playmoncry(SPECIES_MUDKIP, CRY_MODE_NORMAL)
     msgbox("Do you want to choose \nWater type Mudkip?", MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_MUDKIP, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_TACKLE, move2 = MOVE_GROWL)
@@ -456,6 +458,7 @@ script PickStarter_1{
     lockall
     if(var(VAR_LITTLEROOT_INTRO_STATE)==0){
     showmonpic(SPECIES_CHESPIN, 10,3)
+    playmoncry(SPECIES_CHESPIN, CRY_MODE_NORMAL)
     msgbox("Do you want to choose \nGrass type Chespin?", MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_CHESPIN, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL)

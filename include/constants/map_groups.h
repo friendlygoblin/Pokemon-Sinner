@@ -614,6 +614,8 @@
 #define MAP_OLIVE_MOUNT          (14 | (34 << 8))
 #define MAP_ROUTE4               (15 | (34 << 8))
 #define MAP_BEAUTIFUL_PORT       (16 | (34 << 8))
+#define MAP_GODZILLAND           (17 | (34 << 8))
+#define MAP_ROUTE5               (18 | (34 << 8))
 
 // gMapGroup_PreludeRegion_Indoors
 #define MAP_START_TOWN_PLAYER_HOUSE           (0 | (35 << 8))
@@ -626,6 +628,10 @@
 #define MAP_CANDLEWAX_CITY_CONCERT_HALL_LOBBY (7 | (35 << 8))
 #define MAP_FURGE_TOWN_SHOP                   (8 | (35 << 8))
 #define MAP_FURGE_TOWN_CLEARING               (9 | (35 << 8))
+#define MAP_BEAUTIFUL_PORT_HARBOUR_LOBBY      (10 | (35 << 8))
+#define MAP_GODZILLAND_HARBOUR_LOBBY          (11 | (35 << 8))
+#define MAP_GODZILLAND_CONCERT_HALL           (12 | (35 << 8))
+#define MAP_GODZILLAND_CONCERT_HALL_LOBBY     (13 | (35 << 8))
 
 #define MAP_GROUPS_COUNT 36
 

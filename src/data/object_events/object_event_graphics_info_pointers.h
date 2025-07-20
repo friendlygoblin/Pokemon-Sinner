@@ -7,6 +7,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_QuintyPlump
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jay;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ann;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wren;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Julie;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NinjaBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Twin;
@@ -262,7 +263,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 
     [OBJ_EVENT_GFX_JAY] =                      &gObjectEventGraphicsInfo_Jay,
     [OBJ_EVENT_GFX_ANN] =                      &gObjectEventGraphicsInfo_Ann,
-    [OBJ_EVENT_GFX_WREN] =                      &gObjectEventGraphicsInfo_Wren,
+    [OBJ_EVENT_GFX_WREN] =                     &gObjectEventGraphicsInfo_Wren,
+    [OBJ_EVENT_GFX_JULIE] =                    &gObjectEventGraphicsInfo_Julie,
 
     [OBJ_EVENT_GFX_NINJA_BOY] =                &gObjectEventGraphicsInfo_NinjaBoy,
     [OBJ_EVENT_GFX_TWIN] =                     &gObjectEventGraphicsInfo_Twin,

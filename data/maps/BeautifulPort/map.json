@@ -2,8 +2,8 @@
   "id": "MAP_BEAUTIFUL_PORT",
   "name": "BeautifulPort",
   "layout": "LAYOUT_BEAUTIFUL_PORT",
-  "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "music": "MUS_SLATEPORT",
+  "region_map_section": "MAPSEC_SLATEPORT_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
@@ -173,7 +173,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 25,
+      "x": 29,
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_MART",
@@ -191,6 +191,13 @@
       "y": 19,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_BEAUTIFUL_PORT_HARBOUR_LOBBY",
       "dest_warp_id": "0"
     }
   ],

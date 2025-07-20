@@ -243,6 +243,9 @@ $(OBJEVENTGFXDIR)/people/ann.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/wren.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/julie.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 $(OBJEVENTGFXDIR)/people/ninja_boy.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 2
 

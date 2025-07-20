@@ -1139,3 +1139,15 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route4/scripts.inc"
 
 	.include "data/maps/BeautifulPort/scripts.inc"
+
+	.include "data/maps/BeautifulPort_HarbourLobby/scripts.inc"
+
+	.include "data/maps/Godzilland/scripts.inc"
+
+	.include "data/maps/Godzilland_HarbourLobby/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"
+
+	.include "data/maps/Godzilland_ConcertHall/scripts.inc"
+
+	.include "data/maps/Godzilland_ConcertHall_Lobby/scripts.inc"

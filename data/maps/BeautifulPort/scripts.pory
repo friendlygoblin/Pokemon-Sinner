@@ -63,7 +63,9 @@ script BeautifulPort_BeachGirl{
 script BeautifulPort_Wingull{
     lock
     faceplayer
+    playmoncry(SPECIES_WINGULL, CRY_MODE_NORMAL)
     msgbox(format("WINGULL: Eeeeee!"), MSGBOX_AUTOCLOSE)
+    waitmoncry
     releaseall
     end
 }

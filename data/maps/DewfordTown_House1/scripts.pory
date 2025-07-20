@@ -22,7 +22,6 @@ script FurgeTown_House1_EventScript_Woman{
 script FurgeTown_House1_EventScript_Zigzagoon{
 	lock
 	faceplayer
-	waitse
 	playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
 	msgbox( FurgeTown_House1_Text_Zigzagoon, MSGBOX_DEFAULT)
 	waitmoncry

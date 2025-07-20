@@ -96,127 +96,131 @@ BeautifulPort_Wingull::
 # 65 "data/maps/BeautifulPort/scripts.pory"
 	faceplayer
 # 66 "data/maps/BeautifulPort/scripts.pory"
-	msgbox BeautifulPort_Wingull_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
 # 67 "data/maps/BeautifulPort/scripts.pory"
+	msgbox BeautifulPort_Wingull_Text_0, MSGBOX_AUTOCLOSE
+# 68 "data/maps/BeautifulPort/scripts.pory"
+	waitmoncry
+# 69 "data/maps/BeautifulPort/scripts.pory"
 	releaseall
 	end
 
 
 BeautifulPort_Boatbuilder::
-# 72 "data/maps/BeautifulPort/scripts.pory"
-	lock
-# 73 "data/maps/BeautifulPort/scripts.pory"
-	faceplayer
 # 74 "data/maps/BeautifulPort/scripts.pory"
-	msgbox BeautifulPort_Boatbuilder_Text_0, MSGBOX_AUTOCLOSE
+	lock
 # 75 "data/maps/BeautifulPort/scripts.pory"
+	faceplayer
+# 76 "data/maps/BeautifulPort/scripts.pory"
+	msgbox BeautifulPort_Boatbuilder_Text_0, MSGBOX_AUTOCLOSE
+# 77 "data/maps/BeautifulPort/scripts.pory"
 	releaseall
 	end
 
 
 BeautifulPort_Sailor::
-# 80 "data/maps/BeautifulPort/scripts.pory"
-	lock
-# 81 "data/maps/BeautifulPort/scripts.pory"
-	faceplayer
 # 82 "data/maps/BeautifulPort/scripts.pory"
-	msgbox BeautifulPort_Sailor_Text_0, MSGBOX_AUTOCLOSE
+	lock
 # 83 "data/maps/BeautifulPort/scripts.pory"
+	faceplayer
+# 84 "data/maps/BeautifulPort/scripts.pory"
+	msgbox BeautifulPort_Sailor_Text_0, MSGBOX_AUTOCLOSE
+# 85 "data/maps/BeautifulPort/scripts.pory"
 	releaseall
 	end
 
 
 	.align 2
-# 87 "data/maps/BeautifulPort/scripts.pory"
-BeautifulPort_SouvenirShop:
-# 88 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_FRESH_WATER
 # 89 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_SOFT_SAND
+BeautifulPort_SouvenirShop:
 # 90 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_UTILITY_UMBRELLA
+	.2byte ITEM_FRESH_WATER
 # 91 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_MYSTIC_WATER
+	.2byte ITEM_SOFT_SAND
 # 92 "data/maps/BeautifulPort/scripts.pory"
+	.2byte ITEM_UTILITY_UMBRELLA
+# 93 "data/maps/BeautifulPort/scripts.pory"
+	.2byte ITEM_MYSTIC_WATER
+# 94 "data/maps/BeautifulPort/scripts.pory"
 	.2byte ITEM_AIR_BALLOON
 	.2byte ITEM_NONE
 
 	.align 2
-# 95 "data/maps/BeautifulPort/scripts.pory"
-BeautifulPort_PokeballShop:
-# 96 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_QUICK_BALL
 # 97 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_DUSK_BALL
+BeautifulPort_PokeballShop:
 # 98 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_QUICK_BALL
 # 99 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_NET_BALL
+	.2byte ITEM_DUSK_BALL
 # 100 "data/maps/BeautifulPort/scripts.pory"
+	.2byte ITEM_DIVE_BALL
+# 101 "data/maps/BeautifulPort/scripts.pory"
+	.2byte ITEM_NET_BALL
+# 102 "data/maps/BeautifulPort/scripts.pory"
 	.2byte ITEM_HEAVY_BALL
 	.2byte ITEM_NONE
 
 	.align 2
-# 103 "data/maps/BeautifulPort/scripts.pory"
-BeautifulPort_MoveShop:
-# 104 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_TM06
 # 105 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_TM09
+BeautifulPort_MoveShop:
 # 106 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_TM39
+	.2byte ITEM_TM06
 # 107 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_TM42
+	.2byte ITEM_TM09
 # 108 "data/maps/BeautifulPort/scripts.pory"
-	.2byte ITEM_TM45
+	.2byte ITEM_TM39
 # 109 "data/maps/BeautifulPort/scripts.pory"
+	.2byte ITEM_TM42
+# 110 "data/maps/BeautifulPort/scripts.pory"
+	.2byte ITEM_TM45
+# 111 "data/maps/BeautifulPort/scripts.pory"
 	.2byte ITEM_TM46
 	.2byte ITEM_NONE
 
 BeautifulPort_SouvenirVendor::
-# 113 "data/maps/BeautifulPort/scripts.pory"
-	lock
-# 114 "data/maps/BeautifulPort/scripts.pory"
-	message BeautifulPort_SouvenirVendor_Text_0
 # 115 "data/maps/BeautifulPort/scripts.pory"
-	waitmessage
+	lock
 # 116 "data/maps/BeautifulPort/scripts.pory"
-	pokemart BeautifulPort_SouvenirShop
+	message BeautifulPort_SouvenirVendor_Text_0
 # 117 "data/maps/BeautifulPort/scripts.pory"
-	msgbox BeautifulPort_SouvenirVendor_Text_1
+	waitmessage
 # 118 "data/maps/BeautifulPort/scripts.pory"
+	pokemart BeautifulPort_SouvenirShop
+# 119 "data/maps/BeautifulPort/scripts.pory"
+	msgbox BeautifulPort_SouvenirVendor_Text_1
+# 120 "data/maps/BeautifulPort/scripts.pory"
 	release
 	end
 
 
 BeautifulPort_PokeballVendor::
-# 123 "data/maps/BeautifulPort/scripts.pory"
-	lock
-# 124 "data/maps/BeautifulPort/scripts.pory"
-	message BeautifulPort_PokeballVendor_Text_0
 # 125 "data/maps/BeautifulPort/scripts.pory"
-	waitmessage
+	lock
 # 126 "data/maps/BeautifulPort/scripts.pory"
-	pokemart BeautifulPort_PokeballShop
+	message BeautifulPort_PokeballVendor_Text_0
 # 127 "data/maps/BeautifulPort/scripts.pory"
-	msgbox BeautifulPort_PokeballVendor_Text_1
+	waitmessage
 # 128 "data/maps/BeautifulPort/scripts.pory"
+	pokemart BeautifulPort_PokeballShop
+# 129 "data/maps/BeautifulPort/scripts.pory"
+	msgbox BeautifulPort_PokeballVendor_Text_1
+# 130 "data/maps/BeautifulPort/scripts.pory"
 	release
 	end
 
 
 BeautifulPort_MoveVendor::
-# 133 "data/maps/BeautifulPort/scripts.pory"
-	lock
-# 134 "data/maps/BeautifulPort/scripts.pory"
-	message BeautifulPort_MoveVendor_Text_0
 # 135 "data/maps/BeautifulPort/scripts.pory"
-	waitmessage
+	lock
 # 136 "data/maps/BeautifulPort/scripts.pory"
-	pokemart BeautifulPort_MoveShop
+	message BeautifulPort_MoveVendor_Text_0
 # 137 "data/maps/BeautifulPort/scripts.pory"
-	msgbox BeautifulPort_MoveVendor_Text_1
+	waitmessage
 # 138 "data/maps/BeautifulPort/scripts.pory"
+	pokemart BeautifulPort_MoveShop
+# 139 "data/maps/BeautifulPort/scripts.pory"
+	msgbox BeautifulPort_MoveVendor_Text_1
+# 140 "data/maps/BeautifulPort/scripts.pory"
 	release
 	end
 
@@ -265,48 +269,48 @@ BeautifulPort_BeachGirl_Text_0:
 	.string "look around.$"
 
 BeautifulPort_Wingull_Text_0:
-# 66 "data/maps/BeautifulPort/scripts.pory"
+# 67 "data/maps/BeautifulPort/scripts.pory"
 	.string "WINGULL: Eeeeee!$"
 
 BeautifulPort_Boatbuilder_Text_0:
-# 74 "data/maps/BeautifulPort/scripts.pory"
+# 76 "data/maps/BeautifulPort/scripts.pory"
 	.string "I'm a boat builder.\p"
 	.string "I build boats.\p"
 	.string "I fix boats.\p"
 	.string "I love boats!$"
 
 BeautifulPort_Sailor_Text_0:
-# 82 "data/maps/BeautifulPort/scripts.pory"
+# 84 "data/maps/BeautifulPort/scripts.pory"
 	.string "I went to Godzilland to challenge an\n"
 	.string "artist I love.\p"
 	.string "I lost, she was too strong for me…$"
 
 BeautifulPort_SouvenirVendor_Text_0:
-# 114 "data/maps/BeautifulPort/scripts.pory"
+# 116 "data/maps/BeautifulPort/scripts.pory"
 	.string "Visiting Beautiful Port? Why not get a\n"
 	.string "souvenir?$"
 
 BeautifulPort_SouvenirVendor_Text_1:
-# 117 "data/maps/BeautifulPort/scripts.pory"
+# 119 "data/maps/BeautifulPort/scripts.pory"
 	.string "Enjoy your stay and come back soon!$"
 
 BeautifulPort_PokeballVendor_Text_0:
-# 124 "data/maps/BeautifulPort/scripts.pory"
+# 126 "data/maps/BeautifulPort/scripts.pory"
 	.string "Standard Poké Balls aren't the only way\n"
 	.string "to catch POKéMON, you know!\p"
 	.string "Check these out!$"
 
 BeautifulPort_PokeballVendor_Text_1:
-# 127 "data/maps/BeautifulPort/scripts.pory"
+# 129 "data/maps/BeautifulPort/scripts.pory"
 	.string "Have fun catching POKéMON!$"
 
 BeautifulPort_MoveVendor_Text_0:
-# 134 "data/maps/BeautifulPort/scripts.pory"
+# 136 "data/maps/BeautifulPort/scripts.pory"
 	.string "You, Trainer!\p"
 	.string "I have some TMs, you can use them to\n"
 	.string "teach moves to your POKéMON.\p"
 	.string "Have a look!$"
 
 BeautifulPort_MoveVendor_Text_1:
-# 137 "data/maps/BeautifulPort/scripts.pory"
+# 139 "data/maps/BeautifulPort/scripts.pory"
 	.string "Come back soon!$"
