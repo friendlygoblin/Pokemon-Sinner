@@ -4476,7 +4476,7 @@
       "name": "StartTown_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/StartTown/border.bin",
       "blockdata_filepath": "data/layouts/StartTown/map.bin"
@@ -4496,7 +4496,7 @@
       "name": "Route1_Layout",
       "width": 16,
       "height": 20,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route1/border.bin",
       "blockdata_filepath": "data/layouts/Route1/map.bin"
@@ -4536,8 +4536,8 @@
       "name": "EcstasyTown_Layout",
       "width": 26,
       "height": 26,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_PreludeTown_Secondary",
       "border_filepath": "data/layouts/EcstasyTown/border.bin",
       "blockdata_filepath": "data/layouts/EcstasyTown/map.bin"
     },
@@ -4546,8 +4546,8 @@
       "name": "Route1_Bis_Layout",
       "width": 14,
       "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_PreludeTown_Secondary",
       "border_filepath": "data/layouts/Route1_Bis/border.bin",
       "blockdata_filepath": "data/layouts/Route1_Bis/map.bin"
     },
@@ -4576,8 +4576,8 @@
       "name": "Route2_Layout",
       "width": 38,
       "height": 30,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_PreludeTown_Secondary",
       "border_filepath": "data/layouts/Route2/border.bin",
       "blockdata_filepath": "data/layouts/Route2/map.bin"
     },
@@ -4586,8 +4586,8 @@
       "name": "RibCave_1F_Layout",
       "width": 35,
       "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
       "border_filepath": "data/layouts/RibCave_1F/border.bin",
       "blockdata_filepath": "data/layouts/RibCave_1F/map.bin"
     },
@@ -4596,7 +4596,7 @@
       "name": "RibCave_2F_Layout",
       "width": 35,
       "height": 25,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Caves_Primary",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/RibCave_2F/border.bin",
       "blockdata_filepath": "data/layouts/RibCave_2F/map.bin"
@@ -4606,8 +4606,8 @@
       "name": "RibCave_3F_Layout",
       "width": 35,
       "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
       "border_filepath": "data/layouts/RibCave_3F/border.bin",
       "blockdata_filepath": "data/layouts/RibCave_3F/map.bin"
     },
@@ -4616,7 +4616,7 @@
       "name": "CandlewaxCity_Layout",
       "width": 41,
       "height": 65,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/CandlewaxCity/border.bin",
       "blockdata_filepath": "data/layouts/CandlewaxCity/map.bin"
@@ -4626,8 +4626,8 @@
       "name": "RibCave_SecretRoom_Layout",
       "width": 21,
       "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
       "border_filepath": "data/layouts/RibCave_SecretRoom/border.bin",
       "blockdata_filepath": "data/layouts/RibCave_SecretRoom/map.bin"
     },
@@ -4656,8 +4656,8 @@
       "name": "Caesar_Tunnel_Layout",
       "width": 20,
       "height": 28,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
       "border_filepath": "data/layouts/Caesar_Tunnel/border.bin",
       "blockdata_filepath": "data/layouts/Caesar_Tunnel/map.bin"
     },
@@ -4666,7 +4666,7 @@
       "name": "Route3_Layout",
       "width": 60,
       "height": 22,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_prelude_town",
       "border_filepath": "data/layouts/Route3/border.bin",
       "blockdata_filepath": "data/layouts/Route3/map.bin"
@@ -4706,7 +4706,7 @@
       "name": "OliveMount_Layout",
       "width": 51,
       "height": 60,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/OliveMount/border.bin",
       "blockdata_filepath": "data/layouts/OliveMount/map.bin"
