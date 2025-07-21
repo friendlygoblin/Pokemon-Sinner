@@ -4,347 +4,296 @@
 SSTidalRooms_MapScripts::
 # 3 "data/maps/SSTidalRooms/scripts.pory"
 	.byte 0
-# 4 "data/maps/SSTidalRooms/scripts.pory"
 
-# 5 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_SnatchGiver::
+ShipRoomsSnatchGiver::
 # 6 "data/maps/SSTidalRooms/scripts.pory"
 	lock
 # 7 "data/maps/SSTidalRooms/scripts.pory"
 	faceplayer
 # 8 "data/maps/SSTidalRooms/scripts.pory"
-	goto_if_set FLAG_RECEIVED_TM_SNATCH, SSTidalRooms_EventScript_ExplainSnatch
-# 9 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_NotSuspiciousTakeThis, MSGBOX_DEFAULT
-# 10 "data/maps/SSTidalRooms/scripts.pory"
-	giveitem ITEM_TM_SNATCH
-# 11 "data/maps/SSTidalRooms/scripts.pory"
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	goto_if_set FLAG_RECEIVED_TM_SNATCH, ShipRoomsSnatchGiver_2
 # 12 "data/maps/SSTidalRooms/scripts.pory"
-	setflag FLAG_RECEIVED_TM_SNATCH
+	msgbox NotSuspiciousTakeThis, MSGBOX_DEFAULT
 # 13 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_ExplainSnatch, MSGBOX_DEFAULT
+	checkitemspace ITEM_TM_SNATCH
 # 14 "data/maps/SSTidalRooms/scripts.pory"
-	release
-# 15 "data/maps/SSTidalRooms/scripts.pory"
-	end
-# 16 "data/maps/SSTidalRooms/scripts.pory"
-
-# 17 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_ExplainSnatch::
-# 18 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_ExplainSnatch, MSGBOX_DEFAULT
-# 19 "data/maps/SSTidalRooms/scripts.pory"
-	release
+	compare VAR_RESULT, TRUE
+	goto_if_eq ShipRoomsSnatchGiver_5
+ShipRoomsSnatchGiver_1:
 # 20 "data/maps/SSTidalRooms/scripts.pory"
+	release
 	end
-# 21 "data/maps/SSTidalRooms/scripts.pory"
 
-# 22 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_Bed::
-# 23 "data/maps/SSTidalRooms/scripts.pory"
-	lockall
+ShipRoomsSnatchGiver_2:
+# 9 "data/maps/SSTidalRooms/scripts.pory"
+	goto ShipRoomsExplainSnatch
+	goto ShipRoomsSnatchGiver_1
+
+ShipRoomsSnatchGiver_5:
+# 15 "data/maps/SSTidalRooms/scripts.pory"
+	giveitem ITEM_TM_SNATCH
+# 16 "data/maps/SSTidalRooms/scripts.pory"
+	setflag FLAG_RECEIVED_TM_SNATCH
+# 17 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox ExplainSnatch, MSGBOX_DEFAULT
+	goto ShipRoomsSnatchGiver_1
+
+
+ShipRoomsExplainSnatch::
 # 24 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_TakeRestOnBed, MSGBOX_DEFAULT
+	msgbox ExplainSnatch, MSGBOX_DEFAULT
 # 25 "data/maps/SSTidalRooms/scripts.pory"
-	closemessage
-# 26 "data/maps/SSTidalRooms/scripts.pory"
-	call Common_EventScript_OutOfCenterPartyHeal
-# 27 "data/maps/SSTidalRooms/scripts.pory"
-	call SSTidalRooms_EventScript_ProgessCruiseAfterBed
-# 28 "data/maps/SSTidalRooms/scripts.pory"
-	releaseall
+	release
+	end
+
+
+ShipRoomsBed::
 # 29 "data/maps/SSTidalRooms/scripts.pory"
-	end
+	lockall
 # 30 "data/maps/SSTidalRooms/scripts.pory"
-
+	msgbox TakeRestOnBed, MSGBOX_DEFAULT
 # 31 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_Colton::
+	closemessage
 # 32 "data/maps/SSTidalRooms/scripts.pory"
-	trainerbattle_single TRAINER_COLTON, SSTidalRooms_Text_ColtonIntro, SSTidalRooms_Text_ColtonDefeat
+	fadescreen FADE_TO_BLACK
 # 33 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_ColtonPostBattle, MSGBOX_AUTOCLOSE
+	playfanfare MUS_HEAL
 # 34 "data/maps/SSTidalRooms/scripts.pory"
-	end
+	waitfanfare
 # 35 "data/maps/SSTidalRooms/scripts.pory"
-
+	special HealPlayerParty
 # 36 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_Micah::
+	fadescreen FADE_FROM_BLACK
 # 37 "data/maps/SSTidalRooms/scripts.pory"
-	trainerbattle_single TRAINER_MICAH, SSTidalRooms_Text_MicahIntro, SSTidalRooms_Text_MicahDefeat
-# 38 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_MicahPostBattle, MSGBOX_AUTOCLOSE
-# 39 "data/maps/SSTidalRooms/scripts.pory"
-	end
-# 40 "data/maps/SSTidalRooms/scripts.pory"
-
-# 41 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_Thomas::
-# 42 "data/maps/SSTidalRooms/scripts.pory"
-	trainerbattle_single TRAINER_THOMAS, SSTidalRooms_Text_ThomasIntro, SSTidalRooms_Text_ThomasDefeat
+	compare VAR_SS_TIDAL_STATE, 0
+	goto_if_eq ShipRoomsBed_2
 # 43 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_ThomasPostBattle, MSGBOX_AUTOCLOSE
-# 44 "data/maps/SSTidalRooms/scripts.pory"
-	end
-# 45 "data/maps/SSTidalRooms/scripts.pory"
-
-# 46 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_Jed::
-# 47 "data/maps/SSTidalRooms/scripts.pory"
-	trainerbattle_double TRAINER_LEA_AND_JED, SSTidalRooms_Text_JedIntro, SSTidalRooms_Text_JedDefeat, SSTidalRooms_Text_JedNotEnoughMons
-# 48 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_JedPostBattle, MSGBOX_AUTOCLOSE
+	compare VAR_SS_TIDAL_STATE, 2
+	goto_if_eq ShipRoomsBed_3
+ShipRoomsBed_1:
 # 49 "data/maps/SSTidalRooms/scripts.pory"
+	releaseall
 	end
-# 50 "data/maps/SSTidalRooms/scripts.pory"
 
-# 51 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_Lea::
-# 52 "data/maps/SSTidalRooms/scripts.pory"
-	trainerbattle_double TRAINER_LEA_AND_JED, SSTidalRooms_Text_LeaIntro, SSTidalRooms_Text_LeaDefeat, SSTidalRooms_Text_LeaNotEnoughMons
+ShipRoomsBed_2:
+# 38 "data/maps/SSTidalRooms/scripts.pory"
+	setvar VAR_SS_TIDAL_STATE, 1
+# 39 "data/maps/SSTidalRooms/scripts.pory"
+	playse SE_DING_DONG
+# 40 "data/maps/SSTidalRooms/scripts.pory"
+	waitse
+# 41 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox WeveArrived, MSGBOX_AUTOCLOSE
+	goto ShipRoomsBed_1
+
+ShipRoomsBed_3:
+# 44 "data/maps/SSTidalRooms/scripts.pory"
+	setvar VAR_SS_TIDAL_STATE, 3
+# 45 "data/maps/SSTidalRooms/scripts.pory"
+	playse SE_DING_DONG
+# 46 "data/maps/SSTidalRooms/scripts.pory"
+	waitse
+# 47 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox WeveArrived, MSGBOX_AUTOCLOSE
+	goto ShipRoomsBed_1
+
+
+ShipRoomsMeinth::
 # 53 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_LeaPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_COLTON, MeinthIntro, MeinthDefeat
 # 54 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox MeinthPostBattle, MSGBOX_AUTOCLOSE
 	end
-# 55 "data/maps/SSTidalRooms/scripts.pory"
 
-# 56 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_Garret::
-# 57 "data/maps/SSTidalRooms/scripts.pory"
-	trainerbattle_single TRAINER_GARRET, SSTidalRooms_Text_GarretIntro, SSTidalRooms_Text_GarretDefeat
+
+ShipRoomsMicah::
 # 58 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_GarretPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_MICAH, MicahIntro, MicahDefeat
 # 59 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox MicahPostBattle, MSGBOX_AUTOCLOSE
 	end
-# 60 "data/maps/SSTidalRooms/scripts.pory"
 
-# 61 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_EventScript_Naomi::
-# 62 "data/maps/SSTidalRooms/scripts.pory"
-	trainerbattle_single TRAINER_NAOMI, SSTidalRooms_Text_NaomiIntro, SSTidalRooms_Text_NaomiDefeat
+
+ShipRoomsGeorge::
 # 63 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox SSTidalRooms_Text_NaomiPostBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_THOMAS, GeorgeIntro, GeorgeDefeat
 # 64 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox GeorgePostBattle, MSGBOX_AUTOCLOSE
 	end
-# 65 "data/maps/SSTidalRooms/scripts.pory"
 
-# 66 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_TakeRestOnBed:
-# 67 "data/maps/SSTidalRooms/scripts.pory"
-	.string "There's a bed…\n"
+
+ShipRoomsJed::
 # 68 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Let's take a rest.$"
+	trainerbattle_double TRAINER_LEA_AND_JED, JedIntro, JedDefeat, JedNotEnoughMons
 # 69 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox JedPostBattle, MSGBOX_AUTOCLOSE
+	end
 
-# 70 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_ColtonIntro:
-# 71 "data/maps/SSTidalRooms/scripts.pory"
-	.string "I often sail to LILYCOVE CITY.\p"
-# 72 "data/maps/SSTidalRooms/scripts.pory"
-	.string "I enjoy attending CONTESTS,\n"
+
+ShipRoomsLea::
 # 73 "data/maps/SSTidalRooms/scripts.pory"
-	.string "you see.$"
+	trainerbattle_double TRAINER_LEA_AND_JED, LeaIntro, LeaDefeat, LeaNotEnoughMons
 # 74 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox LeaPostBattle, MSGBOX_AUTOCLOSE
+	end
 
-# 75 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_ColtonDefeat:
-# 76 "data/maps/SSTidalRooms/scripts.pory"
-	.string "That was an enjoyable match!$"
-# 77 "data/maps/SSTidalRooms/scripts.pory"
 
+ShipRoomsGarret::
 # 78 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_ColtonPostBattle:
+	trainerbattle_single TRAINER_GARRET, GarretIntro, GarretDefeat
 # 79 "data/maps/SSTidalRooms/scripts.pory"
-	.string "I get so excited imagining what kinds\n"
-# 80 "data/maps/SSTidalRooms/scripts.pory"
-	.string "of POKéMON I'll get to see in the next\l"
-# 81 "data/maps/SSTidalRooms/scripts.pory"
-	.string "CONTEST. The anticipation of it thrills!$"
-# 82 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox GarretPostBattle, MSGBOX_AUTOCLOSE
+	end
 
+
+ShipRoomsNaomi::
 # 83 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_MicahIntro:
+	trainerbattle_single TRAINER_NAOMI, NaomiIntro, NaomiDefeat
 # 84 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Are your friends strong?$"
-# 85 "data/maps/SSTidalRooms/scripts.pory"
+	msgbox NaomiPostBattle, MSGBOX_AUTOCLOSE
+	end
 
-# 86 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_MicahDefeat:
+
+TakeRestOnBed::
 # 87 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Your friends are, indeed, strong.$"
-# 88 "data/maps/SSTidalRooms/scripts.pory"
+	.string "There's a bed…\n"
+	.string "Let's take a rest.$"
 
-# 89 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_MicahPostBattle:
-# 90 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Friends need not be human.\n"
-# 91 "data/maps/SSTidalRooms/scripts.pory"
-	.string "For me, POKéMON are treasured friends!$"
+WeveArrived::
 # 92 "data/maps/SSTidalRooms/scripts.pory"
+	.string "We've arrived!$"
 
-# 93 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_ThomasIntro:
-# 94 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Child…\n"
-# 95 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Did you knock on the door?$"
+MeinthIntro::
 # 96 "data/maps/SSTidalRooms/scripts.pory"
+	.string "I often sail to Godzilland.\p"
+	.string "I enjoy attending St Vincent's,\n"
+	.string "shows you see.$"
 
-# 97 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_ThomasDefeat:
-# 98 "data/maps/SSTidalRooms/scripts.pory"
-	.string "A loss is to be accepted without haste\n"
-# 99 "data/maps/SSTidalRooms/scripts.pory"
-	.string "or panic.$"
-# 100 "data/maps/SSTidalRooms/scripts.pory"
-
-# 101 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_ThomasPostBattle:
+MeinthDefeat::
 # 102 "data/maps/SSTidalRooms/scripts.pory"
-	.string "To be never ruffled in any situation is\n"
-# 103 "data/maps/SSTidalRooms/scripts.pory"
-	.string "the GENTLEMAN's code of conduct.$"
-# 104 "data/maps/SSTidalRooms/scripts.pory"
+	.string "That was an enjoyable match!$"
 
-# 105 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_JedIntro:
+MeinthPostBattle::
 # 106 "data/maps/SSTidalRooms/scripts.pory"
-	.string "JED: I feel a little shy about this, but…\n"
-# 107 "data/maps/SSTidalRooms/scripts.pory"
-	.string "We'll show you our lovey-dovey power!$"
-# 108 "data/maps/SSTidalRooms/scripts.pory"
+	.string "I get so excited imagining what kinds\n"
+	.string "of POKéMON I'll get to see in the next\l"
+	.string "show. The anticipation of it thrills!$"
 
-# 109 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_JedDefeat:
-# 110 "data/maps/SSTidalRooms/scripts.pory"
-	.string "JED: Sigh…$"
-# 111 "data/maps/SSTidalRooms/scripts.pory"
-
+MicahIntro::
 # 112 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_JedPostBattle:
-# 113 "data/maps/SSTidalRooms/scripts.pory"
-	.string "JED: It's the first time that our lovey-\n"
-# 114 "data/maps/SSTidalRooms/scripts.pory"
-	.string "dovey power couldn't prevail!\l"
-# 115 "data/maps/SSTidalRooms/scripts.pory"
-	.string "You must be an awesome TRAINER!$"
+	.string "Are your friends strong?$"
+
+MicahDefeat::
 # 116 "data/maps/SSTidalRooms/scripts.pory"
+	.string "Your friends are, indeed, strong.$"
 
-# 117 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_JedNotEnoughMons:
-# 118 "data/maps/SSTidalRooms/scripts.pory"
-	.string "JED: You only have one POKéMON?\n"
-# 119 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Isn't that just too lonesome?$"
+MicahPostBattle::
 # 120 "data/maps/SSTidalRooms/scripts.pory"
+	.string "Friends need not be human.\n"
+	.string "For me, POKéMON are treasured friends!$"
 
-# 121 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_LeaIntro:
-# 122 "data/maps/SSTidalRooms/scripts.pory"
-	.string "LEA: I feel a little silly, but…\n"
-# 123 "data/maps/SSTidalRooms/scripts.pory"
-	.string "We'll show you our lovey-dovey power!$"
-# 124 "data/maps/SSTidalRooms/scripts.pory"
-
+GeorgeIntro::
 # 125 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_LeaDefeat:
-# 126 "data/maps/SSTidalRooms/scripts.pory"
-	.string "LEA: Oh, boo!$"
-# 127 "data/maps/SSTidalRooms/scripts.pory"
+	.string "GEORGE: Oh hi again!\p"
+	.string "I'm going to Godzilland to find my \n"
+	.string "neighbour!$"
 
-# 128 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_LeaPostBattle:
-# 129 "data/maps/SSTidalRooms/scripts.pory"
-	.string "LEA: I can't believe it!\n"
-# 130 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Our lovey-dovey power failed…\l"
+GeorgeDefeat::
 # 131 "data/maps/SSTidalRooms/scripts.pory"
-	.string "You must be an awesome TRAINER!$"
-# 132 "data/maps/SSTidalRooms/scripts.pory"
+	.string "I promise I won't throw a brick at"
+	.string "her!$"
 
-# 133 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_LeaNotEnoughMons:
-# 134 "data/maps/SSTidalRooms/scripts.pory"
-	.string "LEA: I wanted to battle…\n"
-# 135 "data/maps/SSTidalRooms/scripts.pory"
-	.string "But you don't even have two POKéMON…$"
+GeorgePostBattle::
 # 136 "data/maps/SSTidalRooms/scripts.pory"
+	.string "GEORGE: I know I sound like I have\n"
+	.string "a problem with bricks but I promise \l"
+	.string "it's not serious!\p"
+	.string "I think… $"
 
-# 137 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_GarretIntro:
-# 138 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Ah, you've come just in time.\p"
-# 139 "data/maps/SSTidalRooms/scripts.pory"
-	.string "I'm bored, you see.\n"
-# 140 "data/maps/SSTidalRooms/scripts.pory"
-	.string "You may entertain me.$"
-# 141 "data/maps/SSTidalRooms/scripts.pory"
-
-# 142 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_GarretDefeat:
+JedIntro::
 # 143 "data/maps/SSTidalRooms/scripts.pory"
-	.string "…That will do.$"
-# 144 "data/maps/SSTidalRooms/scripts.pory"
+	.string "JED: I feel a little shy about this, but…\n"
+	.string "We'll show you our lovey-dovey power!$"
 
-# 145 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_GarretPostBattle:
-# 146 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Perhaps I shall get Father to acquire\n"
-# 147 "data/maps/SSTidalRooms/scripts.pory"
-	.string "a yacht for me.\l"
+JedDefeat::
 # 148 "data/maps/SSTidalRooms/scripts.pory"
-	.string "A yacht for me and POKéMON!$"
-# 149 "data/maps/SSTidalRooms/scripts.pory"
+	.string "JED: Sigh…$"
 
-# 150 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_NaomiIntro:
-# 151 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Oh, you're such an adorable TRAINER.\n"
+JedPostBattle::
 # 152 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Would you like to have tea?\l"
-# 153 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Or would you rather battle?$"
-# 154 "data/maps/SSTidalRooms/scripts.pory"
+	.string "JED: It's the first time that our lovey-\n"
+	.string "dovey power couldn't prevail!\l"
+	.string "You must be an awesome TRAINER!$"
 
-# 155 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_NaomiDefeat:
-# 156 "data/maps/SSTidalRooms/scripts.pory"
-	.string "I see.\n"
-# 157 "data/maps/SSTidalRooms/scripts.pory"
-	.string "You're the active sort.$"
+JedNotEnoughMons::
 # 158 "data/maps/SSTidalRooms/scripts.pory"
+	.string "JED: You only have one POKéMON?\n"
+	.string "Isn't that just too lonesome?$"
 
-# 159 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_NaomiPostBattle:
-# 160 "data/maps/SSTidalRooms/scripts.pory"
-	.string "A world cruise on a luxury liner has its\n"
-# 161 "data/maps/SSTidalRooms/scripts.pory"
-	.string "charms, I must say…\p"
-# 162 "data/maps/SSTidalRooms/scripts.pory"
-	.string "But, I will admit there is an appealing\n"
+LeaIntro::
 # 163 "data/maps/SSTidalRooms/scripts.pory"
-	.string "side to touring HOENN by ferry.$"
-# 164 "data/maps/SSTidalRooms/scripts.pory"
+	.string "LEA: I feel a little silly, but…\n"
+	.string "We'll show you our lovey-dovey power!$"
 
-# 165 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_NotSuspiciousTakeThis:
-# 166 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Uh… Hi! I… I'm not acting suspicious!\n"
-# 167 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Uh… You can have this! For free!\p"
+LeaDefeat::
 # 168 "data/maps/SSTidalRooms/scripts.pory"
-	.string "It… Honestly, I didn't SNATCH it from\n"
-# 169 "data/maps/SSTidalRooms/scripts.pory"
-	.string "someone! I'd never do such a thing!\l"
-# 170 "data/maps/SSTidalRooms/scripts.pory"
-	.string "It's clean! You can use it!$"
-# 171 "data/maps/SSTidalRooms/scripts.pory"
+	.string "LEA: Oh, boo!$"
 
+LeaPostBattle::
 # 172 "data/maps/SSTidalRooms/scripts.pory"
-SSTidalRooms_Text_ExplainSnatch:
-# 173 "data/maps/SSTidalRooms/scripts.pory"
+	.string "LEA: I can't believe it!\n"
+	.string "Our lovey-dovey power failed…\l"
+	.string "You must be an awesome TRAINER!$"
+
+LeaNotEnoughMons::
+# 178 "data/maps/SSTidalRooms/scripts.pory"
+	.string "LEA: I wanted to battle…\n"
+	.string "But you don't even have two POKéMON…$"
+
+GarretIntro::
+# 183 "data/maps/SSTidalRooms/scripts.pory"
+	.string "Ah, you've come just in time.\p"
+	.string "I'm bored, you see.\n"
+	.string "You may entertain me.$"
+
+GarretDefeat::
+# 189 "data/maps/SSTidalRooms/scripts.pory"
+	.string "…That will do.$"
+
+GarretPostBattle::
+# 193 "data/maps/SSTidalRooms/scripts.pory"
+	.string "Perhaps I shall get Father to acquire\n"
+	.string "a yacht for me.\l"
+	.string "A yacht for me and POKéMON!$"
+
+NaomiIntro::
+# 199 "data/maps/SSTidalRooms/scripts.pory"
+	.string "Oh, you're such an adorable TRAINER.\n"
+	.string "Would you like to have tea?\l"
+	.string "Or would you rather battle?$"
+
+NaomiDefeat::
+# 205 "data/maps/SSTidalRooms/scripts.pory"
+	.string "I see.\n"
+	.string "You're the active sort.$"
+
+NaomiPostBattle::
+# 210 "data/maps/SSTidalRooms/scripts.pory"
+	.string "A world cruise on a luxury liner has its\n"
+	.string "charms, I must say…\p"
+	.string "But, I will admit there is an appealing\n"
+	.string "side to touring HOENN by ferry.$"
+
+NotSuspiciousTakeThis::
+# 217 "data/maps/SSTidalRooms/scripts.pory"
+	.string "Uh… Hi! I… I'm not acting suspicious!\n"
+	.string "Uh… You can have this! For free!\p"
+	.string "It… Honestly, I didn't SNATCH it from\n"
+	.string "someone! I'd never do such a thing!\l"
+	.string "It's clean! You can use it!$"
+
+ExplainSnatch::
+# 225 "data/maps/SSTidalRooms/scripts.pory"
 	.string "SNATCH steals the beneficial effects\n"
-# 174 "data/maps/SSTidalRooms/scripts.pory"
 	.string "of certain moves before they can be\l"
-# 175 "data/maps/SSTidalRooms/scripts.pory"
 	.string "used by a foe or ally.$"

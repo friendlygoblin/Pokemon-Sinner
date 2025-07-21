@@ -1,0 +1,36 @@
+mapscripts Godzilland_HarbourLobby_MapScripts {}
+
+script Godzilland_Lobby_Sailor{
+    lock
+    msgbox(Godzilland_WelcomeToHarbour, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        playse(SE_SHOP)
+        msgbox(Godzilland_YesTicket, MSGBOX_AUTOCLOSE)
+        removemoney(100)
+        warp(MAP_SS_TIDAL_CORRIDOR, 7, 10)
+        setvar(VAR_SS_TIDAL_STATE, 2)
+        releaseall
+        end
+    }
+    else{
+        msgbox(Godzilland_NoTicket, MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+    end
+}
+
+text Godzilland_WelcomeToHarbour{
+    "Oh hi there!\p"
+    "You're just in time for the next ferry \n"
+    "to Beautiful Port!\p"
+    "Tickets are ¥100, do you want one?$"
+}
+
+text Godzilland_YesTicket{
+    "Alright then, enjoy the trip!$"
+}
+
+text Godzilland_NoTicket{
+    "Oh, alright.\p"
+    "Come back soon!$"
+}

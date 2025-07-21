@@ -313,6 +313,9 @@ const u32 gTrainerPalette_Goblin[] = INCBIN_U32("graphics/trainers/front_pics/go
 const u32 gTrainerFrontPic_Amy[] = INCBIN_U32("graphics/trainers/front_pics/amy.4bpp.lz");
 const u32 gTrainerPalette_Amy[] = INCBIN_U32("graphics/trainers/front_pics/amy.gbapal.lz");
 
+const u32 gTrainerFrontPic_Julie[] = INCBIN_U32("graphics/trainers/front_pics/julie.4bpp.lz");
+const u32 gTrainerPalette_Julie[] = INCBIN_U32("graphics/trainers/front_pics/julie.gbapal.lz");
+
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
 // gTrainerFrontPic/gTrainerPalette pointers, (e.g "gTrainerFrontPic_Hiker" and "gTrainerPalette_Hiker").
@@ -429,6 +432,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(WREN, Wren),
     TRAINER_SPRITE(GOBLIN, Goblin),
     TRAINER_SPRITE(AMY, Amy),
+    TRAINER_SPRITE(JULIE, Julie),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

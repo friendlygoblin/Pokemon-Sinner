@@ -52,6 +52,35 @@ text FlorenceHall_GracePostBattle_AfterFlorence{
     "Good luck for the next challenge! $"
 }
 
+script FlorenceHall_JulieBattle{
+    lock
+    faceplayer
+
+    if(defeated(TRAINER_FLORENCE)){  
+        msgbox(FlorenceHall_JuliePostBattle, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        trainerbattle_single(TRAINER_JULIE,FlorenceHall_JulieBattleIntro, FlorenceHall_JulieLostBattle)
+        msgbox(FlorenceHall_JuliePostBattle, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text FlorenceHall_JulieBattleIntro{
+    "JULIE: I came to Furge Town just \n"
+    "to see Florence!$"
+}
+
+text FlorenceHall_JulieLostBattle{
+    "You too?$"
+}
+
+text FlorenceHall_JuliePostBattle{
+    "JULIE: This place is so perfect for \n"
+    "Florence's vibe.$"
+}
+
 script FlorenceHall_FlorenceBattle{
     lock
     faceplayer
@@ -60,13 +89,13 @@ script FlorenceHall_FlorenceBattle{
         msgbox(Florence_WordAboutTLDP, MSGBOX_AUTOCLOSE)
         }
     else{
-        trainerbattle_single(TRAINER_FLORENCE,FlorenceHall_FlorenceeBattleIntro, FlorenceHall_FlorenceLostBattle, FlorenceGiveBadge, NO_MUSIC)
+        trainerbattle_single(TRAINER_FLORENCE,FlorenceHall_FlorenceBattleIntro, FlorenceHall_FlorenceLostBattle, FlorenceGiveBadge, NO_MUSIC)
         }
     releaseall
     end
 }
 
-text FlorenceHall_FlorenceeBattleIntro{
+text FlorenceHall_FlorenceBattleIntro{
     "FLORENCE: There you are! \p"
     "I was waiting for you. \p"
     "Thank you for visiting my humble \n"

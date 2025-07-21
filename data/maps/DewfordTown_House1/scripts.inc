@@ -40,27 +40,25 @@ FurgeTown_House1_EventScript_Zigzagoon::
 # 24 "data/maps/DewfordTown_House1/scripts.pory"
 	faceplayer
 # 25 "data/maps/DewfordTown_House1/scripts.pory"
-	waitse
-# 26 "data/maps/DewfordTown_House1/scripts.pory"
 	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
-# 27 "data/maps/DewfordTown_House1/scripts.pory"
+# 26 "data/maps/DewfordTown_House1/scripts.pory"
 	msgbox FurgeTown_House1_Text_Zigzagoon, MSGBOX_DEFAULT
-# 28 "data/maps/DewfordTown_House1/scripts.pory"
+# 27 "data/maps/DewfordTown_House1/scripts.pory"
 	waitmoncry
-# 29 "data/maps/DewfordTown_House1/scripts.pory"
+# 28 "data/maps/DewfordTown_House1/scripts.pory"
 	release
 	end
 
 
 FurgeTown_House1_GiveHoney::
-# 32 "data/maps/DewfordTown_House1/scripts.pory"
+# 31 "data/maps/DewfordTown_House1/scripts.pory"
 	.string "I make my own Honey, with the help \n"
 	.string "of the Combees that live in the hive \l"
 	.string "just outside.\p"
 	.string "Here, have a jar, as a welcome gift! $"
 
 FurgeTown_House1_HoneyGiven::
-# 39 "data/maps/DewfordTown_House1/scripts.pory"
+# 38 "data/maps/DewfordTown_House1/scripts.pory"
 	.string "It's 100% organic, and made with love by\n"
 	.string "the Combees.\p"
 	.string "I give them shelter, they give me Honey!\p"
@@ -69,12 +67,12 @@ FurgeTown_House1_HoneyGiven::
 	.string "you can use it to make new friends!$"
 
 FurgeTown_House1_Text_LifeGoesSlowlyOnIsland::
-# 49 "data/maps/DewfordTown_House1/scripts.pory"
+# 48 "data/maps/DewfordTown_House1/scripts.pory"
 	.string "Life goes by slowly in this little\n"
 	.string "town.\p"
 	.string "But being surrounded by the trees, \n"
 	.string "that's happiness too.$"
 
 FurgeTown_House1_Text_Zigzagoon::
-# 56 "data/maps/DewfordTown_House1/scripts.pory"
+# 55 "data/maps/DewfordTown_House1/scripts.pory"
 	.string "ZIGZAGOON: Guguuh!$"

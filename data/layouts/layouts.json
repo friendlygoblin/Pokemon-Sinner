@@ -4725,11 +4725,71 @@
       "id": "LAYOUT_BEAUTIFUL_PORT",
       "name": "BeautifulPort_Layout",
       "width": 54,
-      "height": 46,
+      "height": 48,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/BeautifulPort/border.bin",
       "blockdata_filepath": "data/layouts/BeautifulPort/map.bin"
+    },
+    {
+      "id": "LAYOUT_BEAUTIFUL_PORT_HARBOUR_LOBBY",
+      "name": "BeautifulPort_HarbourLobby_Layout",
+      "width": 16,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_OceanicMuseum",
+      "border_filepath": "data/layouts/BeautifulPort_HarbourLobby/border.bin",
+      "blockdata_filepath": "data/layouts/BeautifulPort_HarbourLobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_GODZILLAND",
+      "name": "Godzilland_Layout",
+      "width": 55,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Godzilland/border.bin",
+      "blockdata_filepath": "data/layouts/Godzilland/map.bin"
+    },
+    {
+      "id": "LAYOUT_GODZILLAND_HARBOUR_LOBBY",
+      "name": "Godzilland_HarbourLobby_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SeashoreHouse",
+      "border_filepath": "data/layouts/Godzilland_HarbourLobby/border.bin",
+      "blockdata_filepath": "data/layouts/Godzilland_HarbourLobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5",
+      "name": "Route5_Layout",
+      "width": 50,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/Route5/border.bin",
+      "blockdata_filepath": "data/layouts/Route5/map.bin"
+    },
+    {
+      "id": "LAYOUT_GODZILLAND_CONCERT_HALL",
+      "name": "Godzilland_ConcertHall_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/Godzilland_ConcertHall/border.bin",
+      "blockdata_filepath": "data/layouts/Godzilland_ConcertHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_GODZILLAND_CONCERT_HALL_LOBBY",
+      "name": "Godzilland_ConcertHall_Lobby_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/Godzilland_ConcertHall_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/Godzilland_ConcertHall_Lobby/map.bin"
     }
   ]
 }

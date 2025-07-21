@@ -1,1 +1,142 @@
 mapscripts BeautifulPort_MapScripts {}
+
+script BeautifulPort_CitySign{
+    lock
+    msgbox(format("Welcome to Beautiful Port!\pFrom where ships sail to safety!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script BeautifulPort_MarketSign{
+    lock
+    msgbox(format("Beautiful Port Marketplace\pShop and enjoy the beach!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script BeautifulPort_PortSign{
+    lock
+    msgbox(format("Beautiful Port Harbour\pNext departure: Godzilland"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script BeautifulPort_LighthouseSign{
+    lock
+    msgbox(format("Lighthouse \pLight up the rocky land's end!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script BeautifulPort_BeachMan{
+    lock
+    faceplayer
+    msgbox(format("I'm so glad I moved here, I love being able to go to the beach every day!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script BeautifulPort_BeachFisherman{
+    lock
+    faceplayer
+    msgbox(format("If you fish in different places, you can catch different POKéMON! \pMakes you wanna travel doesn't it?"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script BeautifulPort_BeachLittleGirl{
+    lock
+    faceplayer
+    msgbox(format("I'm learning to swim!\pI wanna be able to swim like a Milotic!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script BeautifulPort_BeachGirl{
+    lock
+    faceplayer
+    msgbox(format("Every time I come to Beautiful Port, I go visit the marketplace.\pI don't always buy things, but I like to look around."), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script BeautifulPort_Wingull{
+    lock
+    faceplayer
+    playmoncry(SPECIES_WINGULL, CRY_MODE_NORMAL)
+    msgbox(format("WINGULL: Eeeeee!"), MSGBOX_AUTOCLOSE)
+    waitmoncry
+    releaseall
+    end
+}
+
+script BeautifulPort_Boatbuilder{
+    lock
+    faceplayer
+    msgbox(format("I'm a boat builder. \pI build boats. \pI fix boats.\pI love boats!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script BeautifulPort_Sailor{
+    lock
+    faceplayer
+    msgbox(format("I went to Godzilland to challenge an artist I love. \pI lost, she was too strong for me…"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+mart BeautifulPort_SouvenirShop{
+    ITEM_FRESH_WATER
+    ITEM_SOFT_SAND
+    ITEM_UTILITY_UMBRELLA
+    ITEM_MYSTIC_WATER
+    ITEM_AIR_BALLOON
+}
+
+mart BeautifulPort_PokeballShop{
+    ITEM_QUICK_BALL
+    ITEM_DUSK_BALL
+    ITEM_DIVE_BALL
+    ITEM_NET_BALL
+    ITEM_HEAVY_BALL
+}
+
+mart BeautifulPort_MoveShop{
+    ITEM_TM06
+    ITEM_TM09
+    ITEM_TM39
+    ITEM_TM42
+    ITEM_TM45
+    ITEM_TM46
+}
+
+script BeautifulPort_SouvenirVendor{
+    lock
+    message(format("Visiting Beautiful Port? Why not get a souvenir?"))
+    waitmessage
+    pokemart(BeautifulPort_SouvenirShop)
+    msgbox(format("Enjoy your stay and come back soon!"))
+    release
+    end
+}
+
+script BeautifulPort_PokeballVendor{
+    lock
+    message(format("Standard Poké Balls aren't the only way to catch POKéMON, you know! \pCheck these out!"))
+    waitmessage
+    pokemart(BeautifulPort_PokeballShop)
+    msgbox(format("Have fun catching POKéMON!"))
+    release
+    end
+}
+
+script BeautifulPort_MoveVendor{
+    lock
+    message(format("You, Trainer! \pI have some TMs, you can use them to teach moves to your POKéMON.\pHave a look!"))
+    waitmessage
+    pokemart(BeautifulPort_MoveShop)
+    msgbox(format("Come back soon!"))
+    release
+    end
+}

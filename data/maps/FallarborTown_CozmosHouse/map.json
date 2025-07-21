@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": 0,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
@@ -24,11 +24,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_CozmosHouse_EventScript_ProfCozmo",
+      "script": "Godzilland_House1_Scientist",
       "flag": "FLAG_HIDE_FALLARBOR_HOUSE_PROF_COZMO"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
       "x": 5,
       "y": 6,
       "elevation": 3,
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FallarborTown_CozmosHouse_EventScript_CozmosWife",
+      "script": "Godzilland_House1_ScientistHusband",
       "flag": "0"
     }
   ],
@@ -46,17 +46,21 @@
       "x": 3,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_map": "MAP_GODZILLAND",
       "dest_warp_id": "3"
     },
     {
       "x": 4,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_FALLARBOR_TOWN",
+      "dest_map": "MAP_GODZILLAND",
       "dest_warp_id": "3"
     }
   ],
-  "coord_events": [],
-  "bg_events": []
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

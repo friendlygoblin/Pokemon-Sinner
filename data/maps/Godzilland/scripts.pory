@@ -1,0 +1,29 @@
+mapscripts Godzilland_MapScripts {}
+
+script Godzilland_CitySign{
+    lock
+    msgbox(format("Welcome to Godzilland!\pGateway to the unreleased archipelago!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script Godzilland_Route5Sign{
+    lock
+    msgbox(format("{DOWN_ARROW}: Route 5."), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script Godzilland_HarbourSign{
+    lock
+    msgbox(format("Godzilland Harbour.\pNext departure: Beautiful Port."), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script Godzilland_ConcertHallSign{
+    lock
+    msgbox(format("GODZILLAND CONCERT HALL\pCURRENT RESIDENT: ST.VINCENT"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}

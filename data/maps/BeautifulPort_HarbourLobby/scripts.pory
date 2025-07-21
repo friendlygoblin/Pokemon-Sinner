@@ -1,0 +1,38 @@
+mapscripts BeautifulPort_HarbourLobby_MapScripts {}
+
+script BP_Lobby_Sailor{
+    lock
+    msgbox(BP_WelcomeToBPHarbour, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        playse(SE_SHOP)
+        msgbox(BP_YesTicket, MSGBOX_AUTOCLOSE)
+        removemoney(100)
+        warp(MAP_SS_TIDAL_CORRIDOR, 7, 10)
+        setvar(VAR_SS_TIDAL_STATE, 0)
+        releaseall
+        end
+    }
+    else{
+        msgbox(BP_NoTicket, MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+    end
+}
+
+text BP_WelcomeToBPHarbour{
+    "Welcome to Beautiful Port Harbour!\p"
+    "The next boat will soon depart for \n"
+    "Godzilland.\p"
+    "There are a few tickets left, for a \n"
+    "price of ¥100.\p"
+    "Would you like to buy one?$"
+}
+
+text BP_YesTicket{
+    "Alright, here you go!\p"
+    "Bon voyage!$"
+}
+
+text BP_NoTicket{
+    "Perhaps another time, then. $"
+}

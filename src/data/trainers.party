@@ -1878,24 +1878,19 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JULIE ===
 Name: JULIE
-Class: Cooltrainer
-Pic: Cooltrainer F
+Class: Picnicker
+Pic: Julie
 Gender: Female
-Music: Cool
-Items: Full Restore
+Music: Female
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint
 
-Sandslash
-Level: 42
+Morelull
+Level: 14
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Ninetales
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Tropius
-Level: 42
+Mimikyu
+Level: 15
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BROOKE_2 ===
@@ -2237,7 +2232,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Roselia @ Nugget
-Level: 45
+Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_CINDY_3 ===
@@ -2576,12 +2571,11 @@ Class: Rich Boy
 Pic: Rich Boy
 Gender: Male
 Music: Rich
-Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
 Azumarill @ Nugget
-Level: 45
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WINSTON_2 ===
@@ -4495,11 +4489,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Manectric
-Level: 44
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Manectric
-Level: 44
+Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_THOMAS ===
@@ -4512,7 +4506,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Zangoose
-Level: 45
+Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALTER_2 ===
@@ -5623,47 +5617,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Skitty @ Oran Berry
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
-
-Skitty @ Oran Berry
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
-
-Skitty @ Oran Berry
-Level: 40
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
-
-Skitty @ Oran Berry
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
-
-Skitty @ Oran Berry
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Assist
-- Charm
-- Feint Attack
-- Heal Bell
-
-Delcatty @ Oran Berry
-Level: 42
+Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Assist
 - Charm
@@ -9141,11 +9095,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Tentacruel
-Level: 44
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Machoke
-Level: 44
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LEONARD ===
@@ -9158,15 +9112,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Machop
-Level: 43
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Pelipper
-Level: 43
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Machoke
-Level: 43
+Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DUNCAN ===
@@ -11885,11 +11839,11 @@ Double Battle: Yes
 AI: Check Bad Move
 
 Luvdisc
-Level: 45
+Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Luvdisc
-Level: 45
+Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_KIRA_AND_DAN_1 ===

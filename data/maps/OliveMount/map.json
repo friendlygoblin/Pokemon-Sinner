@@ -2,7 +2,7 @@
   "id": "MAP_OLIVE_MOUNT",
   "name": "OliveMount",
   "layout": "LAYOUT_OLIVE_MOUNT",
-  "music": "MUS_DUMMY",
+  "music": "MUS_LILYCOVE_MUSEUM",
   "region_map_section": "MAPSEC_MT_CHIMNEY",
   "requires_flash": false,
   "weather": "WEATHER_RAIN",
@@ -112,7 +112,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "graphics_id": "OBJ_EVENT_GFX_SPENSER",
       "x": 41,
       "y": 24,
       "elevation": 0,

@@ -645,7 +645,9 @@
     "FurgeTown",
     "OliveMount",
     "Route4",
-    "BeautifulPort"
+    "BeautifulPort",
+    "Godzilland",
+    "Route5"
   ],
   "gMapGroup_PreludeRegion_Indoors": [
     "StartTown_PlayerHouse",
@@ -657,6 +659,10 @@
     "CandlewaxCity_ConcertHall",
     "CandlewaxCity_ConcertHall_Lobby",
     "FurgeTown_Shop",
-    "FurgeTown_Clearing"
+    "FurgeTown_Clearing",
+    "BeautifulPort_HarbourLobby",
+    "Godzilland_HarbourLobby",
+    "Godzilland_ConcertHall",
+    "Godzilland_ConcertHall_Lobby"
   ]
 }

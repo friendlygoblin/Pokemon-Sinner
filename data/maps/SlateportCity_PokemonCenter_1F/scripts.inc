@@ -17,7 +17,7 @@ SlateportCity_PokemonCenter_1F_MapScripts::
 # 9 "data/maps/SlateportCity_PokemonCenter_1F/scripts.pory"
 SlateportCity_PokemonCenter_1F_OnTransition:
 # 10 "data/maps/SlateportCity_PokemonCenter_1F/scripts.pory"
-	setrespawn HEAL_LOCATION_SLATEPORT_CITY
+	setrespawn HEAL_LOCATION_BEAUTIFUL_PORT
 # 11 "data/maps/SlateportCity_PokemonCenter_1F/scripts.pory"
 	call Common_EventScript_UpdateBrineyLocation
 # 12 "data/maps/SlateportCity_PokemonCenter_1F/scripts.pory"
