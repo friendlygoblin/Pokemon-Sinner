@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_START_TOWN",
-      "offset": 0,
+      "offset": 14,
       "direction": "down"
     },
     {
@@ -27,12 +27,17 @@
       "map": "MAP_ROUTE1_BIS",
       "offset": 0,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ECSTASY_TOWN",
+      "offset": -6,
+      "direction": "left"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 9,
+      "x": 23,
       "y": 14,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -45,7 +50,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 15,
+      "x": 29,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -58,8 +63,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 1,
-      "y": 17,
+      "x": 15,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -71,7 +76,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 4,
+      "x": 18,
       "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -81,6 +86,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route1_FindBerry",
       "flag": "FLAG_BERRY_ROUTE1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 8,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Route1_BugCatcher",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -89,7 +107,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 10,
+      "x": 24,
       "y": 18,
       "elevation": 0,
       "var": "VAR_CATCHING_TUTORIAL",
@@ -98,7 +116,7 @@
     },
     {
       "type": "trigger",
-      "x": 11,
+      "x": 25,
       "y": 18,
       "elevation": 0,
       "var": "VAR_CATCHING_TUTORIAL",

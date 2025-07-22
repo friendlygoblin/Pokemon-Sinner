@@ -146,3 +146,9 @@ movement GobGoBack{
     walk_left * 1
     step_end
 }
+
+script Route1_BugCatcher{
+	trainerbattle_single(TRAINER_RICK, Route102_Text_RickIntro, Route102_Text_RickDefeated)
+	msgbox(Route102_Text_RickPostBattle, MSGBOX_AUTOCLOSE)
+	end
+}

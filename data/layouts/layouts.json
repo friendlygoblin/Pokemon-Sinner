@@ -4494,7 +4494,7 @@
     {
       "id": "LAYOUT_ROUTE1",
       "name": "Route1_Layout",
-      "width": 16,
+      "width": 30,
       "height": 20,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Rustboro",
@@ -4534,7 +4534,7 @@
     {
       "id": "LAYOUT_ECSTASY_TOWN",
       "name": "EcstasyTown_Layout",
-      "width": 26,
+      "width": 30,
       "height": 26,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_PreludeTown_Secondary",
@@ -4716,7 +4716,7 @@
       "name": "Route4_Layout",
       "width": 50,
       "height": 40,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route4/border.bin",
       "blockdata_filepath": "data/layouts/Route4/map.bin"
@@ -4726,7 +4726,7 @@
       "name": "BeautifulPort_Layout",
       "width": 54,
       "height": 48,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/BeautifulPort/border.bin",
       "blockdata_filepath": "data/layouts/BeautifulPort/map.bin"
@@ -4746,7 +4746,7 @@
       "name": "Godzilland_Layout",
       "width": 55,
       "height": 50,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/Godzilland/border.bin",
       "blockdata_filepath": "data/layouts/Godzilland/map.bin"
@@ -4766,7 +4766,7 @@
       "name": "Route5_Layout",
       "width": 50,
       "height": 25,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/Route5/border.bin",
       "blockdata_filepath": "data/layouts/Route5/map.bin"
