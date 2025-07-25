@@ -102,7 +102,8 @@
 
 #define FLAG_GODZILLANDHALL_EMILY       0x54 
 
-#define FLAG_UNUSED_0x055    0x55 // Unused Flag
+#define FLAG_SBI_RACHEL                 0x55 // Unused Flag
+
 #define FLAG_UNUSED_0x068    0x68 // Unused Flag
 #define FLAG_UNUSED_0x96     0x96 // Unused, leftover from R/S
 #define FLAG_UNUSED_0x0E9    0xE9 // Unused Flag

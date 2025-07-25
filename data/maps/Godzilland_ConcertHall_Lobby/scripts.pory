@@ -6,3 +6,36 @@ mapscripts Godzilland_ConcertHall_Lobby_MapScripts {
 script Godzilland_SetEmilyFlag{
     setflag(FLAG_GODZILLANDHALL_EMILY)
     }
+
+script StVincentHall_Wren{
+    lock
+    faceplayer
+    if(defeated(TRAINER_STVINCENT)){
+        msgbox(WrenPostBattle_StVincent)
+        }
+    else{
+        trainerbattle_single(TRAINER_WREN_2, WrenIntro_StVincent, WrenDefeated_StVincent)
+        msgbox(WrenPostBattle_StVincent)
+        }
+    releaseall
+    end
+}
+
+text WrenIntro_StVincent {
+    "WREN: {PLAYER}!\p"
+    "Are you here to challenge St.Vincent? \p"
+    "I'm sure you got this, but I gotta \n"
+    "you, she's super strong! \p"
+    "How about you warm up with me? $"
+}
+
+text WrenDefeated_StVincent{
+    "Now I'm feeling as heavy as the world… $"
+}
+
+text WrenPostBattle_StVincent{
+    "WREN: StVincent played my favourite \n"
+    "song! \p"
+    "I feel lighter than I have in so much \n"
+    "time!$"
+}

@@ -4,10 +4,15 @@ script GiveSurf{
     lock
     faceplayer
     if(flag(FLAG_BADGE03_GET)){
-        msgbox(SurfStory_GiveSurf, MSGBOX_AUTOCLOSE)
-        giveitem(ITEM_HM03)
-        setflag(FLAG_RECEIVED_HM_SURF)
-        msgbox(ExplainSurf, MSGBOX_AUTOCLOSE)
+        if(flag(FLAG_RECEIVED_HM_SURF)){
+            msgbox(SurfStory_GiveSurf, MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_HM03)
+            setflag(FLAG_RECEIVED_HM_SURF)
+            msgbox(ExplainSurf, MSGBOX_AUTOCLOSE)
+            }
+        else{
+            msgbox(ExplainSurf, MSGBOX_AUTOCLOSE)
+        }
     }
     else{
         msgbox(SurfStory_CantSurfYet, MSGBOX_AUTOCLOSE)
