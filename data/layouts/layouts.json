@@ -4764,7 +4764,7 @@
     {
       "id": "LAYOUT_ROUTE5",
       "name": "Route5_Layout",
-      "width": 50,
+      "width": 60,
       "height": 25,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Dewford",
@@ -4790,6 +4790,16 @@
       "secondary_tileset": "gTileset_BattleDome",
       "border_filepath": "data/layouts/Godzilland_ConcertHall_Lobby/border.bin",
       "blockdata_filepath": "data/layouts/Godzilland_ConcertHall_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_SECOND_BEST_ISLAND",
+      "name": "SecondBestIsland_Layout",
+      "width": 30,
+      "height": 35,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/SecondBestIsland/border.bin",
+      "blockdata_filepath": "data/layouts/SecondBestIsland/map.bin"
     }
   ]
 }

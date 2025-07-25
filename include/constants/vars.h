@@ -134,7 +134,7 @@
 
 #define VAR_OLIVEMOUNT_OLDMAN_EGG                    0x4067
 
-#define VAR_ROUTE109_STATE                               0x4068 // Unused Var
+#define VAR_GODZILLANDHALL_EMILY                     0x4068 
 #define VAR_ROUTE110_STATE                               0x4069
 #define VAR_ROUTE111_STATE                               0x406A // Unused Var
 #define VAR_ROUTE112_STATE                               0x406B // Unused Var

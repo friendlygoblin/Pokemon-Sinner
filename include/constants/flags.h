@@ -100,7 +100,8 @@
 
 #define FLAG_FURGETOWN_LINE             0x4F
 
-#define FLAG_UNUSED_0x054    0x54 // Unused Flag
+#define FLAG_GODZILLANDHALL_EMILY       0x54 
+
 #define FLAG_UNUSED_0x055    0x55 // Unused Flag
 #define FLAG_UNUSED_0x068    0x68 // Unused Flag
 #define FLAG_UNUSED_0x96     0x96 // Unused, leftover from R/S
@@ -1322,8 +1323,8 @@
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0 //First Gym, Hozier
-#define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1
-#define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2
+#define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1 //Second Gym, Florence
+#define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2 //Third Gym, St.Vincent
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5

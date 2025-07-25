@@ -268,7 +268,7 @@
 #define TRAINER_PHOEBE                      262
 #define TRAINER_GLACIA                      263
 #define TRAINER_DRAKE                       264
-#define TRAINER_ROXANNE_1                   265
+#define TRAINER_STVINCENT                   265
 #define TRAINER_HOZIER                      266
 #define TRAINER_WATTSON_1                   267
 #define TRAINER_FLORENCE                    268

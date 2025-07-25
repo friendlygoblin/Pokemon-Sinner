@@ -21,5 +21,4 @@ SlateportCity_House_Text_MustBeGoingToBattleTent:
 	.string "You're a TRAINER, aren't you?\p"
 	.string "I have a tip for you: POKéMON can hold\n"
 	.string "items, and it can help in battle!$"
-
 `

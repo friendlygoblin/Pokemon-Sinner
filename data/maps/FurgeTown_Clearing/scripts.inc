@@ -70,27 +70,27 @@ FlorenceHall_FlorenceBattle_2:
 
 
 FlorenceGiveBadge::
-# 138 "data/maps/FurgeTown_Clearing/scripts.pory"
-	msgbox FlorenceHall_FlorenceGiveBadge, MSGBOX_AUTOCLOSE
-# 139 "data/maps/FurgeTown_Clearing/scripts.pory"
-	message FlorenceGiveBadge_Text_0
 # 140 "data/maps/FurgeTown_Clearing/scripts.pory"
-	waitmessage
+	msgbox FlorenceHall_FlorenceGiveBadge, MSGBOX_AUTOCLOSE
 # 141 "data/maps/FurgeTown_Clearing/scripts.pory"
-	call Common_EventScript_PlayGymBadgeFanfare
+	message FlorenceGiveBadge_Text_0
 # 142 "data/maps/FurgeTown_Clearing/scripts.pory"
-	setflag FLAG_BADGE02_GET
+	waitmessage
 # 143 "data/maps/FurgeTown_Clearing/scripts.pory"
-	setflag FLAG_DEFEATED_DEWFORD_GYM
+	call Common_EventScript_PlayGymBadgeFanfare
 # 144 "data/maps/FurgeTown_Clearing/scripts.pory"
-	msgbox FlorenceBadgePerks, MSGBOX_AUTOCLOSE
+	setflag FLAG_BADGE02_GET
 # 145 "data/maps/FurgeTown_Clearing/scripts.pory"
+	setflag FLAG_DEFEATED_DEWFORD_GYM
+# 146 "data/maps/FurgeTown_Clearing/scripts.pory"
+	msgbox FlorenceBadgePerks, MSGBOX_AUTOCLOSE
+# 147 "data/maps/FurgeTown_Clearing/scripts.pory"
 	releaseall
 	end
 
 
 FlorenceGiveBadge_Text_0:
-# 139 "data/maps/FurgeTown_Clearing/scripts.pory"
+# 141 "data/maps/FurgeTown_Clearing/scripts.pory"
 	.string "Received the SPECTRUM BADGE from\n"
 	.string "FLORENCE WELCH!$"
 
@@ -166,12 +166,14 @@ FlorenceBadgePerks::
 	.string "With this badge, your companions will \n"
 	.string "listen to you until they reach the \l"
 	.string "level 30.\p"
+	.string "You will also have free access to my \n"
+	.string "shows from now on. \p"
 	.string "Keep this up, and you will reach great \n"
 	.string "heights.\p"
 	.string "I know you can!$"
 
 Florence_WordAboutTLDP::
-# 126 "data/maps/FurgeTown_Clearing/scripts.pory"
+# 128 "data/maps/FurgeTown_Clearing/scripts.pory"
 	.string "FLORENCE: So your true goal is to win \n"
 	.string "against The Last Dinner Party?\p"
 	.string "I think you have the potential to succeed.\p"

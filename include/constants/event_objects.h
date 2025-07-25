@@ -401,6 +401,7 @@
 #define OBJ_EVENT_PAL_TAG_WREN                0x1137
 #define OBJ_EVENT_PAL_TAG_FLORENCE            0x1138
 #define OBJ_EVENT_PAL_TAG_JULIE               0x1139
+#define OBJ_EVENT_PAL_TAG_STVINCENT               0x1140
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

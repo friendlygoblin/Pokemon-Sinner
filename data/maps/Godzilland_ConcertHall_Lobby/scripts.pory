@@ -1,1 +1,8 @@
-mapscripts Godzilland_ConcertHall_Lobby_MapScripts {}
+mapscripts Godzilland_ConcertHall_Lobby_MapScripts {
+    MAP_SCRIPT_ON_LOAD : Godzilland_SetEmilyFlag
+    
+}
+
+script Godzilland_SetEmilyFlag{
+    setflag(FLAG_GODZILLANDHALL_EMILY)
+    }

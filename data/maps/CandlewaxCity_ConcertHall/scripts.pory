@@ -3,7 +3,7 @@ mapscripts CandlewaxCity_ConcertHall_MapScripts {}
 script HozierBattle{
     lock
     if(defeated(TRAINER_HOZIER)){
-        msgbox(HozierBadgePerks_Independent, MSGBOX_DEFAULT)
+        msgbox(Hozier_WordAboutTLDP, MSGBOX_DEFAULT)
         }
     else{
         trainerbattle_single(TRAINER_HOZIER, Hozier_BattleIntro, Hozier_DefeatedText, Hozier_DefeatedScript, NO_MUSIC)         
@@ -48,20 +48,17 @@ text HozierGiveBadge{
 }
 
 text HozierBadgePerks{
-    "This will also ensure your POKéMON \n"
-    "listen to you until they reach level 20. \p"
     "Maybe I will see you again, until then \n"
     "keep on fighting for what you think is \l"
     "right. \p"
     "Good luck for whatever awaits you. $"
 }
 
-text HozierBadgePerks_Independent{
-    "HOZIER: My WASTELAND BADGE ensure your \n"
-    "POKéMON listen to you until they reach \l"
-    "level 20. \p"
-    "Maybe I will see you again, until then \n"
-    "keep on fighting for what you think is \l"
-    "right. \p"
+text Hozier_WordAboutTLDP{
+    "HOZIER: You want to challenge The Last \n"
+    "Dinner Party? \p"
+    "It was an honour to tour with them, \n"
+    "they're such a fun group of people. \p"
+    "And very impressive artists as well.\p"
     "Good luck for whatever awaits you. $"
 }

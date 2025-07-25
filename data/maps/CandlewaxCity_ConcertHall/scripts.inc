@@ -17,7 +17,7 @@ HozierBattle_1:
 
 HozierBattle_2:
 # 6 "data/maps/CandlewaxCity_ConcertHall/scripts.pory"
-	msgbox HozierBadgePerks_Independent, MSGBOX_DEFAULT
+	msgbox Hozier_WordAboutTLDP, MSGBOX_DEFAULT
 	goto HozierBattle_1
 
 
@@ -73,19 +73,16 @@ HozierGiveBadge::
 
 HozierBadgePerks::
 # 50 "data/maps/CandlewaxCity_ConcertHall/scripts.pory"
-	.string "This will also ensure your POKéMON \n"
-	.string "listen to you until they reach level 20. \p"
 	.string "Maybe I will see you again, until then \n"
 	.string "keep on fighting for what you think is \l"
 	.string "right. \p"
 	.string "Good luck for whatever awaits you. $"
 
-HozierBadgePerks_Independent::
-# 59 "data/maps/CandlewaxCity_ConcertHall/scripts.pory"
-	.string "HOZIER: My WASTELAND BADGE ensure your \n"
-	.string "POKéMON listen to you until they reach \l"
-	.string "level 20. \p"
-	.string "Maybe I will see you again, until then \n"
-	.string "keep on fighting for what you think is \l"
-	.string "right. \p"
+Hozier_WordAboutTLDP::
+# 57 "data/maps/CandlewaxCity_ConcertHall/scripts.pory"
+	.string "HOZIER: You want to challenge The Last \n"
+	.string "Dinner Party? \p"
+	.string "It was an honour to tour with them, \n"
+	.string "they're such a fun group of people. \p"
+	.string "And very impressive artists as well.\p"
 	.string "Good luck for whatever awaits you. $"

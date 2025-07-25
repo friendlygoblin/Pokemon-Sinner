@@ -84,6 +84,7 @@ const u16 gObjectEventPal_Hozier[] = INCBIN_U16("graphics/object_events/palettes
 const u16 gObjectEventPal_Wren[] = INCBIN_U16("graphics/object_events/palettes/wren.gbapal");
 const u16 gObjectEventPal_Julie[] = INCBIN_U16("graphics/object_events/palettes/julie.gbapal");
 const u16 gObjectEventPal_Florence[] = INCBIN_U16("graphics/object_events/palettes/florence.gbapal");
+const u16 gObjectEventPal_StVincent[] = INCBIN_U16("graphics/object_events/palettes/stvincent.gbapal");
 
 const u16 gObjectEventPal_Npc1Reflection[] = INCBIN_U16("graphics/object_events/palettes/npc_1_reflection.gbapal");
 const u16 gObjectEventPal_Npc2Reflection[] = INCBIN_U16("graphics/object_events/palettes/npc_2_reflection.gbapal");
@@ -171,7 +172,7 @@ const u32 gObjectEventPic_Sidney[] = INCBIN_U32("graphics/object_events/pics/peo
 const u32 gObjectEventPic_Phoebe[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/phoebe.4bpp"); //Emily
 const u32 gObjectEventPic_Glacia[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/glacia.4bpp"); //Lizzie
 const u32 gObjectEventPic_Drake[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/drake.4bpp");   //Georgia
-const u32 gObjectEventPic_Roxanne[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/roxanne.4bpp");
+const u32 gObjectEventPic_Roxanne[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/roxanne.4bpp"); //St Vincent
 const u32 gObjectEventPic_Brawly[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/brawly.4bpp"); //Hozier
 const u32 gObjectEventPic_Wattson[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/wattson.4bpp");
 const u32 gObjectEventPic_Flannery[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/flannery.4bpp"); //Florence Welch

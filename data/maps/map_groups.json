@@ -647,7 +647,8 @@
     "Route4",
     "BeautifulPort",
     "Godzilland",
-    "Route5"
+    "Route5",
+    "SecondBestIsland"
   ],
   "gMapGroup_PreludeRegion_Indoors": [
     "StartTown_PlayerHouse",

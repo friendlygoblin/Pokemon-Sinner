@@ -4903,39 +4903,31 @@ Jolly Nature
 
 
 
-=== TRAINER_ROXANNE_1 ===
-Name: ROXANNE
+=== TRAINER_STVINCENT ===
+Name: ST.VINCENT
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
-Items: Potion / Potion
+Items: Super Potion / Super Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Geodude
-Level: 12
+Skorupi
+Level: 21
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
 
-Geodude
-Level: 12
+Nidorina
+Level: 21
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
 
-Nosepass @ Oran Berry
-Level: 15
+Noibat
+Level: 21
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Seviper @ Sitrus Berry
+Level: 23
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
-- Harden
-- Tackle
-- Rock Tomb
 
 === TRAINER_HOZIER ===
 Name: HOZIER
