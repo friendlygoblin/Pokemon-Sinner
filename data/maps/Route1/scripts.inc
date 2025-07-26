@@ -170,6 +170,14 @@ GobGoBack:
 # 147 "data/maps/Route1/scripts.pory"
 	step_end
 
+Route1_BugCatcher::
+# 151 "data/maps/Route1/scripts.pory"
+	trainerbattle_single TRAINER_RICK, Route102_Text_RickIntro, Route102_Text_RickDefeated
+# 152 "data/maps/Route1/scripts.pory"
+	msgbox Route102_Text_RickPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
 GobTeach_Text_0:
 # 42 "data/maps/Route1/scripts.pory"
 	.string "Great!$"

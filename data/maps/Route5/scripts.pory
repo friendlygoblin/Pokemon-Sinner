@@ -1,1 +1,52 @@
 mapscripts Route5_MapScripts {}
+
+script GiveSurf{
+    lock
+    faceplayer
+    if(flag(FLAG_BADGE03_GET)){
+        if(flag(FLAG_RECEIVED_HM_SURF)){
+            msgbox(SurfStory_GiveSurf, MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_HM03)
+            setflag(FLAG_RECEIVED_HM_SURF)
+            msgbox(ExplainSurf, MSGBOX_AUTOCLOSE)
+            }
+        else{
+            msgbox(ExplainSurf, MSGBOX_AUTOCLOSE)
+        }
+    }
+    else{
+        msgbox(SurfStory_CantSurfYet, MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+    end
+}
+
+text SurfStory_GiveSurf{
+    "Have you ever been on a sinking \n"
+    "ship? \p"
+    "I have, and let me tell you, I wouldn't \n"
+    "be here if it weren't for my POKéMON. \p"
+    "I'd recently taught it the move Surf and \n"
+    "it saved my life! \p"
+    "So here, take this! I'll help you I'm sure!$"
+}
+
+text SurfStory_CantSurfYet{
+    "Have you ever been on a sinking \n"
+    "ship? \p"
+    "I have, and let me tell you, I wouldn't \n"
+    "be here if it weren't for my POKéMON. \p"
+    "I'd recently taught it the move Surf \n"
+    "and it saved my life! \p"
+    "Hmm, you need a certain level of skill \n"
+    "to be able to use this move. \p"
+    "Come back when you have a third artist \n"
+    "badge! $"
+}
+
+text ExplainSurf{
+    "The move Surf will allow one of your \n"
+    "POKéMON to carry you across water. \p"
+    "It's really useful to travel without a \n"
+    "boat, just watch out for wild POKéMON! $"
+}

@@ -1,0 +1,185 @@
+mapscripts SecondBestIsland_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : SBI_ResetRachel
+}
+
+const Rachel = 1
+const Piplup = 2 
+
+script SBI_ResetRachel {
+    clearflag(FLAG_SBI_RACHEL)
+}
+
+script SBI_Rachel{
+    lock
+    faceplayer
+    msgbox(SBI_RachelWannaBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_single(TRAINER_RACHEL, SBI_RachelYesBattle, "Ain't it nice?$", SBI_RachelPostBattle)
+    }
+    else{
+        msgbox(SBI_RachelNoBattle)
+    }
+    release
+    end
+}
+
+script SBI_RachelPostBattle{
+    msgbox(SBI_RachelPostBattleText, MSGBOX_AUTOCLOSE)
+    applymovement(Piplup, PiplupJump)
+    playmoncry(SPECIES_PIPLUP, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("PIPLUP: Pip!"))
+    setflag(FLAG_SBI_RACHEL)
+    release
+    end
+}
+
+script SBI_Piplup{
+    lock
+    faceplayer
+    playmoncry(SPECIES_PIPLUP, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("PIPLUP: Pipip!"))
+    release
+    end
+}
+
+text SBI_RachelWannaBattle{
+    "RACHEL: Oh hi! \p"
+    "Welcome to Second Best Island! \p"
+    "Did you know The Last Dinner Party wrote \n"
+    "Second Best after visiting this place? \p"
+    "Naturally I had to move here when I \n"
+    "found out. \p"
+    "I really like it here, but it gets a bit \n"
+    "lonely. \p"
+    "It's just me and my POKéMON… \p"
+    "Wait you're a POKéMON Trainer! \p"
+    "Can we spar? Please? $"
+}
+
+text SBI_RachelYesBattle{
+    "Yay! Let's do this!$"
+}
+
+text SBI_RachelNoBattle{
+    "Awh that's okay… \p"
+    "I'll just listen to Second Best in my \n"
+    "corner. \p"
+    "Come back if you change your mind!$"
+}
+
+text SBI_RachelPostBattleText{
+    "RACHEL: That was fun! \p"
+    "Almost as fun as Second Best! \p"
+    "Feel free to look around here and \n"
+    "enjoy the island!$"
+}
+
+movement PiplupJump{
+    jump_in_place_right *2
+    step_end
+}
+
+script SBI_Sign{
+    lock
+    msgbox(SBI_LyricsIntro)
+    msgbox(SBI_LyricsVerse1)
+    msgbox(SBI_LyricsChorus)
+    msgbox(SBI_LyricsVerse2)
+    msgbox(SBI_LyricsChorus)
+    msgbox(SBI_LyricsOutro)
+    msgbox(SBI_LyricsChorus, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text SBI_LyricsIntro{
+    "SECOND BEST \p"
+    "Now the days grow long \n"
+    "And your hands and tears \l"
+    "Are lost…\l"
+    "To the wind.\p"
+    "Take me back, \n"
+    "Take me back! \p"
+    "Let us walk by the shore. \p"
+    "By the hand, by the hair, \n"
+    "I don't care anymore. \p"
+    "Put the world at your feet, \n"
+    "Leave footprints on my back, \l"
+    "I'll be first, I'll be last \l"
+    "Don't want to need to go back! $"}
+
+text SBI_LyricsVerse1{
+    "Chewing gum and white wine, \n"
+    "Your cold answer's mine… \p"
+    "I'm wasting my time. \p"
+    "You know I hate to lose, \n"
+    "And maybe that's why \l"
+    "I've left you behind. \p"
+    "I feel like I've left you behind. $"}
+
+text SBI_LyricsChorus{
+    "Ain't it nice? \p"
+    "Second best! \p"
+    "Ain't it good? \p"
+    "Second best! \p"
+    "Ain't it nice? \p"
+    "Second best! \p"
+    "Ain't it good? \p"
+    "Second best! $"
+}
+
+
+text SBI_LyricsVerse2{
+    "Oh against your bathroom tiles \n"
+    "Your back goes on for miles… \p"
+    "I'm losing my mind! \p"
+    "Babe! Ya know it ain't faiyuh! \p"
+    "You leave me again! \p"
+    "He's waiting downstairs… \p"
+    "There's always somebody down… \p"
+    "… \p"
+    "… staaairs! $"    
+}
+
+
+text SBI_LyricsOutro{
+    "What do I do to be better for you? \p"
+    "What do I do to be better for you? \p"
+    "What do I do to be better for you? \p"
+    "What do I do to be better for you? \p"
+    "What do I do to be better for you? \n"
+    "Take me back, take me back! Let us \l"
+    "walk by the shore! \p"
+    "What do I do to be better for you? \n"
+    "By the hand, by the hair I don't care \l"
+    "anymore! \p"
+    "What do I do to be better for you? \n"
+    "Put the world at your feet, leave \l"
+    "footprints on my back, \p"
+    "I'll be first, I'll be last! \n"
+    "Don't want to need to go back! $"
+}
+
+script SBI_ChaiseLongue{
+    lock
+    msgbox(SBI_TakeABreak, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        fadescreen(FADE_TO_BLACK)
+        playfanfare(MUS_HEAL)
+        waitfanfare
+        special(HealPlayerParty)
+        fadescreen(FADE_FROM_BLACK)
+        setrespawn(HEAL_LOCATION_SECOND_BEST_ISLAND)
+        msgbox(format("You and your POKéMON wake up feeling well rested."), MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+    end
+}
+
+text SBI_TakeABreak{
+    "This looks like a nice spot to take \n"
+    "a break. \p"
+    "Would you like to take a nap?$"
+}

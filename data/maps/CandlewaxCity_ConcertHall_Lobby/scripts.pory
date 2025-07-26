@@ -161,7 +161,7 @@ script HozierHall_Wren{
         msgbox(WrenPostBattle_Hozier)
         }
     else{
-        trainerbattle_single(TRAINER_NINA, WrenIntro_Hozier, WrenDefeated_Hozier)
+        trainerbattle_single(TRAINER_WREN, WrenIntro_Hozier, WrenDefeated_Hozier)
         msgbox(WrenPostBattle_Hozier)
         }
     releaseall

@@ -1,8 +1,2 @@
 mapscripts Route1_Bis_MapScripts {}
 
-script Route1_BugCatcher{
-	trainerbattle_single(TRAINER_RICK, Route102_Text_RickIntro, Route102_Text_RickDefeated)
-	msgbox(Route102_Text_RickPostBattle, MSGBOX_AUTOCLOSE)
-	end
-}
-

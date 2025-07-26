@@ -1,1 +1,176 @@
 mapscripts Godzilland_ConcertHall_MapScripts {}
+
+const StVincent = 1
+const Emily = 2
+
+script StVincentHall_StVincentBattle{
+    lock
+    faceplayer
+
+    if(defeated(TRAINER_STVINCENT)){  
+        msgbox(StVincent_WordAboutTLDP, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        trainerbattle_single(TRAINER_STVINCENT,StVincentHall_StVincentBattleIntro, StVincentHall_StVincentLostBattle, StVincentGiveBadge, NO_MUSIC)
+        }
+    releaseall
+    end
+}
+
+text StVincentHall_StVincentBattleIntro{
+    "ST.VINCENT: Sorry I kept you waiting. \p"
+    "I'd been hoping Emily would stop by, \n"
+    "I had this guitar made just for her. \p"
+    "I know why you're here.\p"
+    "Let's have a bit of fun!$"
+}
+
+text StVincentHall_StVincentLostBattle{
+    "You're a natural, baby!"
+}
+
+script StVincentGiveBadge{
+    msgbox(StVincentHall_StVincentGiveBadge, MSGBOX_AUTOCLOSE)
+    message(format("Received the MARROW BADGE from ST.VINCENT!"))
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    setflag(FLAG_BADGE03_GET)
+    setflag(FLAG_DEFEATED_MAUVILLE_GYM)
+    msgbox(StVincentBadgePerks, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text StVincentHall_StVincentGiveBadge{
+    "ST.VINCENT: Not bad at all!\p"
+    "Here, I you won this fair and square!$"
+}
+
+text StVincentBadgePerks{
+    "I hope you'll come to more shows, since \n"
+    "you'll be allowed in for free! \p"
+    "This badge also allows you to use the \n"
+    "move Surf outside of battles. \p"
+    "It's really handy when you need to \n"
+    "travel on water. $"
+}
+
+text StVincent_WordAboutTLDP{
+    "ST.VINCENT: The Last Dinner Party? \p"
+    "I really like them, and am proud to be \n"
+    "one of their inspirations. \p"
+    "They're really talented, you're gonna \n"
+    "need a lot of training to win against \l"
+    "them. \p"
+    "I believe you can do it though, I'll \n"
+    "be cheering for you! $"
+
+}
+
+script StVincent_EmilyCutscene{
+    lock
+//Emily walks in
+    addobject(Emily)
+    applymovement(Emily, EmilyWalksToStVincent)
+    waitmovement(0)
+    applymovement(StVincent, Common_Movement_FaceRight)
+
+//Conversation between St.Vincent and Emily
+    waitmovement(0)
+    msgbox(StVincent_EmilyYoureHere, MSGBOX_AUTOCLOSE)
+    applymovement(Emily, Common_Movement_WalkInPlaceLeft)
+    waitmovement(0)
+    delay(20)
+    msgbox(Emily_WasInTheArea, MSGBOX_AUTOCLOSE)
+    applymovement(StVincent, Common_Movement_WalkInPlaceRight)
+    waitmovement(0)
+    delay(20)
+    msgbox(StVincent_GotSomethingForYou, MSGBOX_AUTOCLOSE)
+    applymovement(Emily, ExcitedEmily)
+    waitmovement(0)
+    delay(20)
+    msgbox(Emily_ThatsBeautiful, MSGBOX_AUTOCLOSE)
+    applymovement(StVincent, Common_Movement_WalkInPlaceRight)
+    waitmovement(0)
+    delay(20)
+    msgbox(StVincent_AllYours, MSGBOX_AUTOCLOSE)
+    applymovement(Emily, ExcitedEmily_NoEmote)
+    waitmovement(0)
+    delay(20)
+    msgbox(Emily_ThankYouSoMuch, MSGBOX_AUTOCLOSE)
+    applymovement(StVincent, Common_Movement_WalkInPlaceRight)
+    waitmovement(0)
+    delay(20)
+    msgbox(StVincent_ByeEmily, MSGBOX_AUTOCLOSE)
+    delay(20)
+
+//Emily leaves
+    applymovement(Emily, EmilyLeaves_Godzilland)
+    waitmovement(0)
+    removeobject(Emily)
+    setvar(VAR_GODZILLANDHALL_EMILY, 1)
+
+    releaseall
+    end
+}
+
+movement EmilyWalksToStVincent{
+    walk_left * 3
+    step_end
+}
+
+movement ExcitedEmily{
+    emote_exclamation_mark
+    delay_16 * 2
+    walk_in_place_fast_left *3
+    step_end
+}
+movement ExcitedEmily_NoEmote{
+    walk_in_place_fast_left *2
+    step_end
+}
+
+movement EmilyLeaves_Godzilland{
+    walk_right * 4
+    step_end
+}
+
+text StVincent_EmilyYoureHere{
+    "ST.VINCENT: Emily hi!\p"
+    "I didn't know you were visiting! $"
+}
+
+text Emily_WasInTheArea{
+    "EMILY: Well, I was in the area so I \n"
+    "thought I'd come say hi. $"
+}
+
+text StVincent_GotSomethingForYou{
+    "ST.VINCENT: Perfect timing, I've just \n"
+    "received this for you. \p"
+    "Thought you'd like it in this colour! $"
+}
+
+text Emily_ThatsBeautiful{
+    "EMILY: What?? \p"
+    "It's so beautiful I don't know what\n"
+    "to say! \p"
+    "I've seen beautiful guitars before \n"
+    "but this… $"
+}
+
+text StVincent_AllYours{
+    "ST.VINCENT: It's all yours! \p"
+    "Have fun with it, I know you'll turn it\n"
+    "into a legendary instrument!$"
+}
+
+text Emily_ThankYouSoMuch{
+    "EMILY: I sure will! \p"
+    "Thank you so much, I should go now but \n"
+    "I hope I'll see you again soon! $"
+}
+
+text StVincent_ByeEmily{
+    "ST.VINCENT: I hope so too, goodbye Emily!$"
+}

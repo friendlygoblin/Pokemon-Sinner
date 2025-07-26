@@ -1151,3 +1151,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Godzilland_ConcertHall/scripts.inc"
 
 	.include "data/maps/Godzilland_ConcertHall_Lobby/scripts.inc"
+
+	.include "data/maps/SecondBestIsland/scripts.inc"
+
+	.include "data/maps/BigDogIsland/scripts.inc"

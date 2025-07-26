@@ -1,1 +1,55 @@
-mapscripts Godzilland_ConcertHall_Lobby_MapScripts {}
+mapscripts Godzilland_ConcertHall_Lobby_MapScripts {
+    MAP_SCRIPT_ON_LOAD : Godzilland_SetEmilyFlag
+    
+}
+
+script Godzilland_SetEmilyFlag{
+    setflag(FLAG_GODZILLANDHALL_EMILY)
+    }
+
+script StVincentHall_Wren{
+    lock
+    faceplayer
+    if(defeated(TRAINER_STVINCENT)){
+        msgbox(WrenPostBattle_StVincent, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        trainerbattle_single(TRAINER_WREN_2, WrenIntro_StVincent, WrenDefeated_StVincent)
+        msgbox(WrenPostBattle_StVincent, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text WrenIntro_StVincent {
+    "WREN: {PLAYER}!\p"
+    "Are you here to challenge St.Vincent? \p"
+    "I'm sure you got this, but I gotta \n"
+    "you, she's super strong! \p"
+    "How about you warm up with me? $"
+}
+
+text WrenDefeated_StVincent{
+    "There's no going back… $"
+}
+
+text WrenPostBattle_StVincent{
+    "WREN: I was so happy to find out \n"
+    "St.Vincent had a challenge! \p"
+    "I'll definitely come see you battle \n"
+    "with her!$"
+}
+
+script StVincentHall_Receptionist{
+    lock
+    msgbox(format("Hi, there's no show planned for today.\pSt.Vincent is accepting challenges though, good luck!"))
+    release
+    end
+}
+
+script StVincentHall_Natalie{
+    lock
+    msgbox(format("NATALIE: I'm not a trainer, but I "))
+    release
+    end
+}
