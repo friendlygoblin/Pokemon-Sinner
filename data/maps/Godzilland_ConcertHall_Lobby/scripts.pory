@@ -11,11 +11,11 @@ script StVincentHall_Wren{
     lock
     faceplayer
     if(defeated(TRAINER_STVINCENT)){
-        msgbox(WrenPostBattle_StVincent)
+        msgbox(WrenPostBattle_StVincent, MSGBOX_AUTOCLOSE)
         }
     else{
         trainerbattle_single(TRAINER_WREN_2, WrenIntro_StVincent, WrenDefeated_StVincent)
-        msgbox(WrenPostBattle_StVincent)
+        msgbox(WrenPostBattle_StVincent, MSGBOX_AUTOCLOSE)
         }
     releaseall
     end
@@ -30,12 +30,26 @@ text WrenIntro_StVincent {
 }
 
 text WrenDefeated_StVincent{
-    "Now I'm feeling as heavy as the world… $"
+    "There's no going back… $"
 }
 
 text WrenPostBattle_StVincent{
-    "WREN: StVincent played my favourite \n"
-    "song! \p"
-    "I feel lighter than I have in so much \n"
-    "time!$"
+    "WREN: I was so happy to find out \n"
+    "St.Vincent had a challenge! \p"
+    "I'll definitely come see you battle \n"
+    "with her!$"
+}
+
+script StVincentHall_Receptionist{
+    lock
+    msgbox(format("Hi, there's no show planned for today.\pSt.Vincent is accepting challenges though, good luck!"))
+    release
+    end
+}
+
+script StVincentHall_Natalie{
+    lock
+    msgbox(format("NATALIE: I'm not a trainer, but I "))
+    release
+    end
 }

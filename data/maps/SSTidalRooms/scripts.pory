@@ -60,9 +60,12 @@ script ShipRoomsMicah{
 	end}
 
 script ShipRoomsGeorge{
-	trainerbattle_single(TRAINER_THOMAS, GeorgeIntro, GeorgeDefeat)
-	msgbox(GeorgePostBattle, MSGBOX_AUTOCLOSE)
-	end}
+	lock
+	faceplayer
+	msgbox(GeorgeIntro, MSGBOX_AUTOCLOSE)
+	release
+	end
+	}
 
 script ShipRoomsJed{
 	trainerbattle_double(TRAINER_LEA_AND_JED, JedIntro, JedDefeat, JedNotEnoughMons)

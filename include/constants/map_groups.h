@@ -617,6 +617,7 @@
 #define MAP_GODZILLAND           (17 | (34 << 8))
 #define MAP_ROUTE5               (18 | (34 << 8))
 #define MAP_SECOND_BEST_ISLAND   (19 | (34 << 8))
+#define MAP_BIG_DOG_ISLAND       (20 | (34 << 8))
 
 // gMapGroup_PreludeRegion_Indoors
 #define MAP_START_TOWN_PLAYER_HOUSE           (0 | (35 << 8))

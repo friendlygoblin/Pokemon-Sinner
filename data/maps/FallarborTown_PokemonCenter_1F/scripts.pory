@@ -28,9 +28,9 @@ FallarborTown_PokemonCenter_1F_EventScript_ExpertM::
 
 FallarborTown_PokemonCenter_1F_Text_FossilManiacEdgeOfTown:
 	.string "I wonder what POKéMON looked like\n"
-	.string "long, long ago?\p"
-	.string "Maybe the Fossil Guy at the edge\n"
-	.string "of town will know.$"
+	.string "long, long ago… \p"
+	.string "There's a museum dedicated to fossils\n"
+	.string "in Crystal Stream City.$"
 
 FallarborTown_PokemonCenter_1F_Text_PlantHardyTrees:
 	.string "Sometimes, tourists think big scary\n"
