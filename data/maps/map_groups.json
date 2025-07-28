@@ -649,7 +649,8 @@
     "Godzilland",
     "Route5",
     "SecondBestIsland",
-    "BigDogIsland"
+    "BigDogIsland",
+    "CrystalStreamCity"
   ],
   "gMapGroup_PreludeRegion_Indoors": [
     "StartTown_PlayerHouse",
@@ -665,6 +666,12 @@
     "BeautifulPort_HarbourLobby",
     "Godzilland_HarbourLobby",
     "Godzilland_ConcertHall",
-    "Godzilland_ConcertHall_Lobby"
+    "Godzilland_ConcertHall_Lobby",
+    "BigDogIsland_Cave",
+    "BigDogIsland_Cave_2F",
+    "BigDogIsland_Cave_3F",
+    "BigDogIsland_HiddenHouse",
+    "CrystalStreamCity_Museum",
+    "CrystalStreamCity_Museum_2F"
   ]
 }

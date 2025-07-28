@@ -432,7 +432,7 @@ script PickStarter_3{
             givemon(SPECIES_MUDKIP, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_TACKLE, move2 = MOVE_GROWL)
 
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("Received Mudkip!")
+                msgbox("Received Mudkip!$")
                 call(NicknamePartyMon)
                 removeobject(Pokeball3)
                 setflag(FLAG_POKEBALL_1)
@@ -464,7 +464,7 @@ script PickStarter_1{
             givemon(SPECIES_CHESPIN, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL)
 
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("Received Chespin!")
+                msgbox("Received Chespin!$")
                 call(NicknamePartyMon)
                 removeobject(Pokeball1)
                 setflag(FLAG_POKEBALL_1)

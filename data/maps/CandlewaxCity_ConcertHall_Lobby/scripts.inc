@@ -187,7 +187,7 @@ HozierHall_Wren::
 	checktrainerflag TRAINER_HOZIER
 	goto_if 1, HozierHall_Wren_2
 # 164 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_single TRAINER_NINA, WrenIntro_Hozier, WrenDefeated_Hozier
+	trainerbattle_single TRAINER_WREN, WrenIntro_Hozier, WrenDefeated_Hozier
 # 165 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	msgbox WrenPostBattle_Hozier
 HozierHall_Wren_1:

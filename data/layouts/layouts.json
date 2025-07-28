@@ -4805,11 +4805,81 @@
       "id": "LAYOUT_BIG_DOG_ISLAND",
       "name": "BigDogIsland_Layout",
       "width": 50,
-      "height": 30,
+      "height": 45,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/BigDogIsland/border.bin",
       "blockdata_filepath": "data/layouts/BigDogIsland/map.bin"
+    },
+    {
+      "id": "LAYOUT_BIG_DOG_ISLAND_CAVE",
+      "name": "BigDogIsland_Cave_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/BigDogIsland_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/BigDogIsland_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_BIG_DOG_ISLAND_CAVE_2F",
+      "name": "BigDogIsland_Cave_2F_Layout",
+      "width": 26,
+      "height": 25,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/BigDogIsland_Cave_2F/border.bin",
+      "blockdata_filepath": "data/layouts/BigDogIsland_Cave_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_BIG_DOG_ISLAND_CAVE_3F",
+      "name": "BigDogIsland_Cave_3F_Layout",
+      "width": 17,
+      "height": 15,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/BigDogIsland_Cave_3F/border.bin",
+      "blockdata_filepath": "data/layouts/BigDogIsland_Cave_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_BIG_DOG_ISLAND_HIDDEN_HOUSE",
+      "name": "BigDogIsland_HiddenHouse_Layout",
+      "width": 30,
+      "height": 15,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/BigDogIsland_HiddenHouse/border.bin",
+      "blockdata_filepath": "data/layouts/BigDogIsland_HiddenHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_CRYSTAL_STREAM_CITY",
+      "name": "CrystalStreamCity_Layout",
+      "width": 60,
+      "height": 60,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/CrystalStreamCity/border.bin",
+      "blockdata_filepath": "data/layouts/CrystalStreamCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_CRYSTAL_STREAM_CITY_MUSEUM",
+      "name": "CrystalStreamCity_Museum_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "border_filepath": "data/layouts/CrystalStreamCity_Museum/border.bin",
+      "blockdata_filepath": "data/layouts/CrystalStreamCity_Museum/map.bin"
+    },
+    {
+      "id": "LAYOUT_CRYSTAL_STREAM_CITY_MUSEUM_2F",
+      "name": "CrystalStreamCity_Museum_2F_Layout",
+      "width": 16,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "border_filepath": "data/layouts/CrystalStreamCity_Museum_2F/border.bin",
+      "blockdata_filepath": "data/layouts/CrystalStreamCity_Museum_2F/map.bin"
     }
   ]
 }

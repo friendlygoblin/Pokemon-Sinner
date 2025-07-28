@@ -1155,3 +1155,17 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SecondBestIsland/scripts.inc"
 
 	.include "data/maps/BigDogIsland/scripts.inc"
+
+	.include "data/maps/BigDogIsland_Cave/scripts.inc"
+
+	.include "data/maps/BigDogIsland_Cave_2F/scripts.inc"
+
+	.include "data/maps/BigDogIsland_Cave_3F/scripts.inc"
+
+	.include "data/maps/BigDogIsland_HiddenHouse/scripts.inc"
+
+	.include "data/maps/CrystalStreamCity/scripts.inc"
+
+	.include "data/maps/CrystalStreamCity_Museum/scripts.inc"
+
+	.include "data/maps/CrystalStreamCity_Museum_2F/scripts.inc"

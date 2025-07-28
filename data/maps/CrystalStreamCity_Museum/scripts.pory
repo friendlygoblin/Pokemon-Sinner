@@ -1,0 +1,7 @@
+mapscripts CrystalStreamCity_Museum_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : CSCM_BringBackScientist
+}
+
+script CSCM_BringBackScientist{
+    clearflag(FLAG_UNUSED_0x0E9)
+}

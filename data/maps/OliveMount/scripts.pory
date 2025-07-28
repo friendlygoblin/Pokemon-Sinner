@@ -20,7 +20,7 @@ script DayCareSign{
 script OliveMount_Fisherman{
     lock
     faceplayer
-    if(flag(FLAG_RECEIVED_OLD_ROD)){
+    if(flag(FLAG_RECEIVED_SUPER_ROD)){
         msgbox(ExplainFishing)
     }
     else{
@@ -34,8 +34,8 @@ script OliveMount_Fisherman{
 
 script GiveFishingRod{
     msgbox(format("You won, so here you go:"), MSGBOX_AUTOCLOSE)
-    giveitem(ITEM_OLD_ROD)
-    setflag(FLAG_RECEIVED_OLD_ROD)
+    giveitem(ITEM_SUPER_ROD)
+    setflag(FLAG_RECEIVED_SUPER_ROD)
     msgbox(ExplainFishing, MSGBOX_AUTOCLOSE)
     releaseall
     end

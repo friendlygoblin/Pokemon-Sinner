@@ -1,1 +1,7 @@
-mapscripts BigDogIsland_MapScripts {}
+mapscripts BigDogIsland_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : ClearKatieFlag
+}
+
+script ClearKatieFlag{
+    clearflag(FLAG_BDI_KATIE)
+    }

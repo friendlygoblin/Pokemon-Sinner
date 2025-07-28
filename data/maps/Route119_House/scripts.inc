@@ -37,18 +37,22 @@ Route119_House_EventScript_Wingull::
 # 19 "data/maps/Route119_House/scripts.pory"
 Route119_House_Text_RumorAboutCaveOfOrigin:
 # 20 "data/maps/Route119_House/scripts.pory"
-	.string "I heard about a cave called the CAVE\n"
+	.string "I used to live in Crystal Stream \n"
 # 21 "data/maps/Route119_House/scripts.pory"
-	.string "OF ORIGIN.\p"
+	.string "City.\p"
 # 22 "data/maps/Route119_House/scripts.pory"
-	.string "People rumor that the spirits of\n"
+	.string "It was getting too busy because of\n"
 # 23 "data/maps/Route119_House/scripts.pory"
-	.string "POKéMON are revived there. Could\l"
+	.string "the artist challenge. \p"
 # 24 "data/maps/Route119_House/scripts.pory"
-	.string "something like that really happen?$"
+	.string "It's nice that musicians do this \n"
 # 25 "data/maps/Route119_House/scripts.pory"
-
+	.string "kind of thing, but I like a calm \l"
 # 26 "data/maps/Route119_House/scripts.pory"
-Route119_House_Text_Wingull:
+	.string "environment better.$"
 # 27 "data/maps/Route119_House/scripts.pory"
+
+# 28 "data/maps/Route119_House/scripts.pory"
+Route119_House_Text_Wingull:
+# 29 "data/maps/Route119_House/scripts.pory"
 	.string "WINGULL: Pihyoh!$"

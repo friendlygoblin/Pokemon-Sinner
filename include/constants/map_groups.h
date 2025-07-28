@@ -618,6 +618,7 @@
 #define MAP_ROUTE5               (18 | (34 << 8))
 #define MAP_SECOND_BEST_ISLAND   (19 | (34 << 8))
 #define MAP_BIG_DOG_ISLAND       (20 | (34 << 8))
+#define MAP_CRYSTAL_STREAM_CITY  (21 | (34 << 8))
 
 // gMapGroup_PreludeRegion_Indoors
 #define MAP_START_TOWN_PLAYER_HOUSE           (0 | (35 << 8))
@@ -634,6 +635,12 @@
 #define MAP_GODZILLAND_HARBOUR_LOBBY          (11 | (35 << 8))
 #define MAP_GODZILLAND_CONCERT_HALL           (12 | (35 << 8))
 #define MAP_GODZILLAND_CONCERT_HALL_LOBBY     (13 | (35 << 8))
+#define MAP_BIG_DOG_ISLAND_CAVE               (14 | (35 << 8))
+#define MAP_BIG_DOG_ISLAND_CAVE_2F            (15 | (35 << 8))
+#define MAP_BIG_DOG_ISLAND_CAVE_3F            (16 | (35 << 8))
+#define MAP_BIG_DOG_ISLAND_HIDDEN_HOUSE       (17 | (35 << 8))
+#define MAP_CRYSTAL_STREAM_CITY_MUSEUM        (18 | (35 << 8))
+#define MAP_CRYSTAL_STREAM_CITY_MUSEUM_2F     (19 | (35 << 8))
 
 #define MAP_GROUPS_COUNT 36
 

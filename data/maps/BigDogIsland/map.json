@@ -15,20 +15,52 @@
   "connections": [
     {
       "map": "MAP_SECOND_BEST_ISLAND",
-      "offset": -2,
+      "offset": 7,
       "direction": "right"
+    },
+    {
+      "map": "MAP_CRYSTAL_STREAM_CITY",
+      "offset": -5,
+      "direction": "left"
     }
   ],
   "object_events": [
 
   ],
   "warp_events": [
-
+    {
+      "x": 20,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_BIG_DOG_ISLAND_CAVE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE119_HOUSE",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "NULL"
+    }
   ]
 }

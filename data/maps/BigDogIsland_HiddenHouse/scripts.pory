@@ -1,0 +1,55 @@
+mapscripts BigDogIsland_HiddenHouse_MapScripts {}
+
+const Katie = 1
+const Milly = 2
+
+script BDI_Katie{
+    lock
+    faceplayer
+    if(flag(FLAG_BDI_KATIE)){
+        msgbox(BDI_KatiePostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(BDI_KatieBattleIntro, MSGBOX_AUTOCLOSE)
+        applymovement(Milly, ExcitedMillyJump)
+        waitmovement(0)
+        playmoncry(SPECIES_ROCKRUFF, CRY_MODE_NORMAL)
+        msgbox(format("MILLY: Bark!"), MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_KATIE, "That will do!$")
+        msgbox(BDI_KatiePostBattle, MSGBOX_AUTOCLOSE)
+        setflag(FLAG_BDI_KATIE)
+    }
+    release
+    end
+}
+
+movement ExcitedMillyJump {
+    jump_in_place_left * 2
+    step_end
+}
+
+text BDI_KatiePostBattle{
+    "KATIE: Thanks for playing with Milly! \p"
+    "I like how quiet it is here, but it's \n"
+    "still nice to have visitors from time to \l"
+    "time.$"
+}
+
+text BDI_KatieBattleIntro{
+    "KATIE: Oh, a visitor! \p"
+    "Hi, I'm Katie and this is Milly. \p"
+    "We don't see many people on our side \n"
+    "of the island. \p"
+    "Wanna play with us? $"
+}
+
+script BDI_Milly{
+    lock
+    faceplayer
+    playmoncry(SPECIES_ROCKRUFF, CRY_MODE_NORMAL)
+    msgbox(format("MILLY: Bark!"), MSGBOX_AUTOCLOSE)
+    waitmoncry
+    release
+    end
+    
+}

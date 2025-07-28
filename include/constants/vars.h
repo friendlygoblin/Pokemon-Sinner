@@ -226,8 +226,8 @@
 #define VAR_TRICK_HOUSE_PRIZE_PICKUP                     0x40C1
 #define VAR_PACIFIDLOG_TM_RECEIVED_DAY                   0x40C2
 #define VAR_VICTORY_ROAD_1F_STATE                        0x40C3
-#define VAR_FOSSIL_RESURRECTION_STATE                    0x40C4
-#define VAR_WHICH_FOSSIL_REVIVED                         0x40C5
+#define VAR_FOSSIL_RESURRECTION_STATE                    0x40C4 // 0 = no fossil given, 1 = fossil given, 2 = ready
+#define VAR_WHICH_FOSSIL_REVIVED                         0x40C5 // 0 = No fossil given, 1 = Root (Lileep), 2 = Claw (Anorith), 3 = Skull (Cranidos), 4 = Armor (Shieldon), 5 = Cover (Tirtouga), 6 = Plume (Archen), 7 = Jaw (Tyrunt), 8 = Sail (Amaura), 9 = Old Amber (Aerodactyl)
 #define VAR_STEVENS_HOUSE_STATE                          0x40C6
 #define VAR_OLDALE_RIVAL_STATE                           0x40C7
 #define VAR_JAGGED_PASS_STATE                            0x40C8

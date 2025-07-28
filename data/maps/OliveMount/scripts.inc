@@ -34,7 +34,7 @@ OliveMount_Fisherman::
 # 22 "data/maps/OliveMount/scripts.pory"
 	faceplayer
 # 23 "data/maps/OliveMount/scripts.pory"
-	goto_if_set FLAG_RECEIVED_OLD_ROD, OliveMount_Fisherman_2
+	goto_if_set FLAG_RECEIVED_SUPER_ROD, OliveMount_Fisherman_2
 # 27 "data/maps/OliveMount/scripts.pory"
 	msgbox OliveMount_Fisherman_Text_0
 # 28 "data/maps/OliveMount/scripts.pory"
@@ -56,9 +56,9 @@ GiveFishingRod::
 # 36 "data/maps/OliveMount/scripts.pory"
 	msgbox GiveFishingRod_Text_0, MSGBOX_AUTOCLOSE
 # 37 "data/maps/OliveMount/scripts.pory"
-	giveitem ITEM_OLD_ROD
+	giveitem ITEM_SUPER_ROD
 # 38 "data/maps/OliveMount/scripts.pory"
-	setflag FLAG_RECEIVED_OLD_ROD
+	setflag FLAG_RECEIVED_SUPER_ROD
 # 39 "data/maps/OliveMount/scripts.pory"
 	msgbox ExplainFishing, MSGBOX_AUTOCLOSE
 # 40 "data/maps/OliveMount/scripts.pory"

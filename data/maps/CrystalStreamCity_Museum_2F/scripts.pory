@@ -1,0 +1,241 @@
+mapscripts CrystalStreamCity_Museum_2F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : CSCM_MakeFossilReady
+}
+
+script CSCM_MakeFossilReady{
+    if(var(VAR_FOSSIL_RESURRECTION_STATE)==1){
+        setvar(VAR_FOSSIL_RESURRECTION_STATE, 2)
+    }
+    end
+}
+
+script CSCM_ChooseFossil{
+    if(checkitem(ITEM_ROOT_FOSSIL)||checkitem(ITEM_CLAW_FOSSIL)||checkitem(ITEM_SKULL_FOSSIL)||checkitem(ITEM_ARMOR_FOSSIL)||checkitem(ITEM_COVER_FOSSIL)||checkitem(ITEM_PLUME_FOSSIL)||checkitem(ITEM_JAW_FOSSIL)||checkitem(ITEM_SAIL_FOSSIL)||checkitem(ITEM_OLD_AMBER)){
+//add the fossil options
+        if(checkitem(ITEM_ROOT_FOSSIL)){
+            dynmultipush("Root Fossil", ITEM_ROOT_FOSSIL)
+        }
+        if(checkitem(ITEM_CLAW_FOSSIL)){
+            dynmultipush("Claw Fossil", ITEM_CLAW_FOSSIL)
+        }
+        if(checkitem(ITEM_SKULL_FOSSIL)){
+            dynmultipush("Skull Fossil", ITEM_SKULL_FOSSIL)
+        }
+        if(checkitem(ITEM_ARMOR_FOSSIL)){
+            dynmultipush("Armor Fossil", ITEM_ARMOR_FOSSIL)
+        }
+        if(checkitem(ITEM_COVER_FOSSIL)){
+            dynmultipush("Cover Fossil", ITEM_COVER_FOSSIL)
+        }     
+        if(checkitem(ITEM_PLUME_FOSSIL)){
+            dynmultipush("Plume Fossil", ITEM_PLUME_FOSSIL)
+        } 
+        if(checkitem(ITEM_JAW_FOSSIL)){
+            dynmultipush("Jaw Fossil", ITEM_JAW_FOSSIL)
+        }
+        if(checkitem(ITEM_SAIL_FOSSIL)){
+            dynmultipush("Sail Fossil", ITEM_SAIL_FOSSIL)
+        }      
+        if(checkitem(ITEM_OLD_AMBER)){
+            dynmultipush("Old Amber", ITEM_OLD_AMBER)
+        }
+        dynmultipush("Cancel", ITEM_NONE)
+        dynmultistack(0, 0, FALSE, 6, FALSE, 3, DYN_MULTICHOICE_CB_NONE)
+//choose the fossil
+        switch(var(VAR_RESULT)){
+            case ITEM_ROOT_FOSSIL:
+                setvar(VAR_WHICH_FOSSIL_REVIVED, 1)
+            case ITEM_CLAW_FOSSIL:
+                setvar(VAR_WHICH_FOSSIL_REVIVED, 2)
+            case ITEM_SKULL_FOSSIL:
+                setvar(VAR_WHICH_FOSSIL_REVIVED, 3)
+            case ITEM_ARMOR_FOSSIL:
+                setvar(VAR_WHICH_FOSSIL_REVIVED, 4)
+            case ITEM_COVER_FOSSIL:
+                setvar(VAR_WHICH_FOSSIL_REVIVED, 5)
+            case ITEM_PLUME_FOSSIL:
+                setvar(VAR_WHICH_FOSSIL_REVIVED, 6)           
+            case ITEM_JAW_FOSSIL:
+                setvar(VAR_WHICH_FOSSIL_REVIVED, 7)  
+            case ITEM_SAIL_FOSSIL:
+                setvar(VAR_WHICH_FOSSIL_REVIVED, 8)      
+            case ITEM_OLD_AMBER:
+                setvar(VAR_WHICH_FOSSIL_REVIVED, 9)
+            case ITEM_NONE:
+                msgbox(CSCM_NoFossilGiven, MSGBOX_AUTOCLOSE)
+                releaseall
+                end
+            default:
+                msgbox(CSCM_NoFossilGiven, MSGBOX_AUTOCLOSE)
+                releaseall
+                end                    
+        }
+//scientist starts working on it
+        setvar(VAR_FOSSIL_RESURRECTION_STATE, 1)
+        msgbox(CSCM_JustGaveFossil, MSGBOX_AUTOCLOSE)
+        applymovement(1, CSCM_ScientistLeaves)
+        waitmovement(0)
+        removeobject(1)
+        setflag(FLAG_UNUSED_0x0E9)
+    }
+
+    else{
+        msgbox(CSCM_NoFossils)
+        }
+}
+
+script CSCM_GiveFossil{
+    msgbox(CSCM_FinishedYourFossil)
+    specialvar(VAR_RESULT, CalculatePlayerPartyCount)
+    if(var(VAR_RESULT)==PARTY_SIZE){
+        msgbox(format("Ah, you don't have enough space! \pI'll keep the POKéMON here for you while you make space."))
+    }
+    else{
+        switch (var(VAR_WHICH_FOSSIL_REVIVED)){
+            case 1:
+                playmoncry(SPECIES_LILEEP,CRY_MODE_NORMAL)
+                showmonpic(SPECIES_LILEEP,10,3)
+                waitmoncry
+                givemon(SPECIES_LILEEP, 20)
+                msgbox("Received Lileep!$")
+                removeitem(ITEM_ROOT_FOSSIL)
+            case 2:
+                playmoncry(SPECIES_ANORITH,CRY_MODE_NORMAL)
+                showmonpic(SPECIES_ANORITH,10,3)
+                waitmoncry
+                givemon(SPECIES_ANORITH, 20)
+                msgbox("Received Anorith!$")
+                removeitem(ITEM_CLAW_FOSSIL)
+            case 3:
+                playmoncry(SPECIES_CRANIDOS,CRY_MODE_NORMAL)
+                showmonpic(SPECIES_CRANIDOS,10,3)
+                waitmoncry
+                givemon(SPECIES_CRANIDOS, 20)
+                msgbox("Received Cranidos!$")
+                removeitem(ITEM_SKULL_FOSSIL)
+            case 4:
+                playmoncry(SPECIES_SHIELDON,CRY_MODE_NORMAL)
+                showmonpic(SPECIES_SHIELDON,10,3)
+                waitmoncry
+                givemon(SPECIES_SHIELDON, 20)
+                msgbox("Received Shieldon!$")
+                removeitem(ITEM_ARMOR_FOSSIL)
+            case 5:
+                playmoncry(SPECIES_TIRTOUGA,CRY_MODE_NORMAL)
+                showmonpic(SPECIES_TIRTOUGA,10,3)
+                waitmoncry
+                givemon(SPECIES_TIRTOUGA, 20)
+                msgbox("Received Tirtouga!$")
+                removeitem(ITEM_COVER_FOSSIL)
+            case 6:
+                playmoncry(SPECIES_ARCHEN,CRY_MODE_NORMAL)
+                showmonpic(SPECIES_ARCHEN,10,3)
+                waitmoncry
+                givemon(SPECIES_ARCHEN, 20)
+                msgbox("Received Archen!$")
+                removeitem(ITEM_PLUME_FOSSIL)
+            case 7:
+                playmoncry(SPECIES_TYRUNT,CRY_MODE_NORMAL)
+                showmonpic(SPECIES_TYRUNT,10,3)
+                waitmoncry
+                givemon(SPECIES_TYRUNT, 20)
+                msgbox("Received Tyrunt!$")
+                removeitem(ITEM_JAW_FOSSIL)
+            case 8:
+                playmoncry(SPECIES_AMAURA,CRY_MODE_NORMAL)
+                showmonpic(SPECIES_AMAURA,10,3)
+                waitmoncry
+                givemon(SPECIES_AMAURA, 20)
+                msgbox("Received Amaura!$")
+                removeitem(ITEM_SAIL_FOSSIL)
+            case 9:
+                playmoncry(SPECIES_AERODACTYL,CRY_MODE_NORMAL)
+                showmonpic(SPECIES_AERODACTYL,10,3)
+                waitmoncry
+                givemon(SPECIES_AERODACTYL, 20)
+                msgbox("Received Aerodactyl!$")
+                removeitem(ITEM_OLD_AMBER)
+        }
+        hidemonpic
+        call(NicknamePartyMon)
+        msgbox(format("Come back if you find more fossils!"))
+        setvar(VAR_FOSSIL_RESURRECTION_STATE, 0)
+        setvar(VAR_WHICH_FOSSIL_REVIVED, 0)
+    }
+}
+
+script CSCM_FossilScientist{
+    lock
+    faceplayer
+    switch(var(VAR_FOSSIL_RESURRECTION_STATE)){
+        case 0:
+            msgbox(CSCM_WelcomeToHistoryFloor)
+            call(CSCM_ChooseFossil)
+        case 1:
+            msgbox(CSCM_AlreadyWorkingOnFossil, MSGBOX_AUTOCLOSE)
+        case 2:
+            call(CSCM_GiveFossil)
+    }
+    release
+    end
+}
+
+text CSCM_WelcomeToHistoryFloor{
+    "Hi, welcome to the second floor of \n"
+    "the Crystal Stream City Museum! \p"
+    "This floor is dedicated to history. \p"
+    "And I am in charge of our very special \n"
+    "fossil resurection program! \p"
+    "If you a fossil, I can study it and \n"
+    "turn it back into a POKéMON for you!$"
+}
+
+text CSCM_NoFossils{
+    "Oh, it doesn't look like you have any \n"
+    "fossils. \p"
+    "Come back another time!$"
+}
+
+text CSCM_JustGaveFossil{
+    "Oooh what a pretty fossil! \p"
+    "I'll go take care of it right away! \p"
+    "Come back later! $"
+}
+
+text CSCM_NoFossilGiven{
+    "Oh, okay, no fossil for today then. \p"
+    "Come back when you change your mind!$"
+}
+
+text CSCM_AlreadyWorkingOnFossil{
+    "I'm working on your fossil! \p"
+    "I'll be done soon but not yet. \p"
+    "Come back later!$"
+}
+
+text CSCM_FinishedYourFossil{
+    "I finished restoring your fossil! \p"
+    "Here, a beautiful and healthy POKéMON \n"
+    "for you! $"
+}
+
+movement CSCM_ScientistLeaves{
+    walk_up * 2
+    step_end
+}
+
+script DebugFossils{
+    lock
+    giveitem(ITEM_ROOT_FOSSIL)
+    giveitem(ITEM_CLAW_FOSSIL)
+    giveitem(ITEM_SKULL_FOSSIL)
+    giveitem(ITEM_ARMOR_FOSSIL)
+    giveitem(ITEM_COVER_FOSSIL)
+    giveitem(ITEM_PLUME_FOSSIL)
+    giveitem(ITEM_JAW_FOSSIL)
+    giveitem(ITEM_SAIL_FOSSIL)
+    giveitem(ITEM_OLD_AMBER)
+    setflag(FLAG_UNUSED_0x96)
+    release
+    end
+}
