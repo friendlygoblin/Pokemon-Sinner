@@ -193,7 +193,7 @@ CSCM_ChooseFossil_47:
 # 78 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	removeobject 1
 # 79 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	setflag FLAG_UNUSED_0x0E9
+	setflag FLAG_CSC_MUSEUM_SCIENTIST
 	return
 
 CSCM_ChooseFossil_49:
@@ -475,34 +475,6 @@ CSCM_ScientistLeaves:
 	walk_up
 # 224 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	step_end
-
-DebugFossils::
-# 228 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	lock
-# 229 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	giveitem ITEM_ROOT_FOSSIL
-# 230 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	giveitem ITEM_CLAW_FOSSIL
-# 231 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	giveitem ITEM_SKULL_FOSSIL
-# 232 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	giveitem ITEM_ARMOR_FOSSIL
-# 233 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	giveitem ITEM_COVER_FOSSIL
-# 234 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	giveitem ITEM_PLUME_FOSSIL
-# 235 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	giveitem ITEM_JAW_FOSSIL
-# 236 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	giveitem ITEM_SAIL_FOSSIL
-# 237 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	giveitem ITEM_OLD_AMBER
-# 238 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	setflag FLAG_UNUSED_0x96
-# 239 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	release
-	end
-
 
 CSCM_ChooseFossil_Text_0:
 # 16 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"

@@ -1,0 +1,31 @@
+mapscripts Route7_MapScripts {}
+
+script Route7_Goblin{
+    trainerbattle_single(TRAINER_GOBLIN_ROUTE_6, Route7_Goblin_BattleIntro, Route7_Goblin_Defeated)
+    msgbox(Route7_Goblin_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Route7_Goblin_BattleIntro {
+    "GOBLIN: {PLAYER}, wait! \p"
+    "What are you doing here? We're super \n"
+    "far from Prelude Town! \p"
+    "… … … \p"
+    "Defeated Chappell Roan?? \p"
+    "No way! \p"
+    "You gotta show me how you did that! $"
+}
+
+text Route7_Goblin_Defeated{
+    "Woah I see! $"
+}
+
+text Route7_Goblin_PostBattle{
+    "GOBLIN: That's crazy, {PLAYER}! \p"
+    "You've come such a long way in such \n"
+    "a short amount of time! \p"
+    "I'm still searching for new POKéMON, \n"
+    "it's so cool to see how different \l"
+    "species live in different places. \p"
+    "Well I'm gonna go now, I'll see you \n"
+    "later! $"
+}

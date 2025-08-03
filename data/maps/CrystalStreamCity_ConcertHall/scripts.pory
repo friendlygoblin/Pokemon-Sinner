@@ -1,0 +1,175 @@
+mapscripts CrystalStreamCity_ConcertHall_MapScripts {}
+
+const Chappell = 1
+const Lizzie = 2
+
+script ChappellBattle{
+    lock
+    if(defeated(TRAINER_CHAPPELL)){
+        msgbox(Chappell_WordAboutTLDP, MSGBOX_DEFAULT)
+        }
+    else{
+        trainerbattle_single(TRAINER_CHAPPELL, Chappell_BattleIntro, Chappell_DefeatedText, Chappell_DefeatedScript, NO_MUSIC)         
+    }
+	release
+	end
+}
+
+script Chappell_DefeatedScript{
+    msgbox(ChappellGiveBadge, MSGBOX_AUTOCLOSE)
+    message(format("Received the CASUAL BADGE from CHAPPELL ROAN!"))
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    setflag(FLAG_BADGE04_GET)
+    setflag(FLAG_DEFEATED_LAVARIDGE_GYM)
+    msgbox(ChappellBadgePerks, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text Chappell_BattleIntro{
+    "CHAPPELL: Now that our Impidimp problem \n"
+    "is solved, let's finally get to what \l"
+    "you're here for! \p"
+    "I'm your favourite artist's favourite \n"
+    "artist, you think you can win against \l"
+    "me? \p"
+    "I'm gonna serve exactly what you are…\p"
+    "Cunt! $"
+}
+
+text Chappell_DefeatedText{
+    "You certainly get the job done…$"
+}
+
+text ChappellGiveBadge{
+    "CHAPPELL: Wow you're one badass bitch! \p"
+    "You totally deserve this cunty badge! $"
+}
+
+text ChappellBadgePerks{
+    "This thing will make your POKéMON listen \n"
+    "to you until they reach level 50. \p"
+    "Well now I guess I have to add you to \n"
+    "my forever guest list.  $"
+}
+
+text Chappell_WordAboutTLDP{
+    "CHAPPELL: The Last Dinner Party? \p"
+    "Yeah they slay, they're like really \n"
+    "cool. \p"
+    "You won't stand a chance against them \n"
+    "if you don't train super hard. \p"
+    "Good luck with that, babe. $"
+}
+
+script CSCCH_LizzieChappellConvo_Trigger1{
+    lock
+    call(CSCCH_LizzieChappellConvo_Part1)
+    applymovement(Lizzie, Walk_Down)
+    waitmovement(0)
+    call(CSCCH_LizzieChappellConvo_Part2)
+    applymovement(Lizzie, CSCCH_LizzieLeave1)
+    waitmovement(0)
+    removeobject(Lizzie)
+    setflag(FLAG_CHAPPELLHALL_LIZZIE)
+    setvar(VAR_CSCCH_TRIGGER, 1)
+    release
+    end
+
+}
+
+script CSCCH_LizzieChappellConvo_Trigger2{
+    lock
+    call(CSCCH_LizzieChappellConvo_Part1)
+    applymovement(Lizzie, CSCCH_PlaceLizzieTrigger2)
+    waitmovement(0)
+    call(CSCCH_LizzieChappellConvo_Part2)
+    applymovement(Lizzie, CSCCH_LizzieLeave2)
+    waitmovement(0)
+    removeobject(Lizzie)
+    setflag(FLAG_CHAPPELLHALL_LIZZIE)
+    setvar(VAR_CSCCH_TRIGGER, 1)
+    release
+    end
+
+}
+
+script CSCCH_LizzieChappellConvo_Part1{
+    applymovement(Lizzie, WalkInPlaceUp)
+    waitmovement(0)
+    msgbox(CSCCH_LizzieShortVisit, MSGBOX_AUTOCLOSE)
+    delay(20)
+    applymovement(Chappell, WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(CSCCH_ChappellYeahDefinitely, MSGBOX_AUTOCLOSE)
+}
+
+script CSCCH_LizzieChappellConvo_Part2{
+    msgbox(CSCCH_LizzieImAHugeFanToo, MSGBOX_AUTOCLOSE)
+    applymovement(Lizzie, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    delay(20)
+    msgbox(CSCCH_SeeYouLater, MSGBOX_AUTOCLOSE)    
+}
+
+movement Walk_Down{
+    walk_down
+    step_end
+}
+
+movement WalkInPlaceDown{
+    walk_in_place_down
+    step_end
+}
+
+movement WalkInPlaceUp{
+    walk_in_place_up
+    step_end
+}
+
+movement CSCCH_PlaceLizzieTrigger2 {
+    walk_down *2
+    face_player
+    step_end
+}
+
+movement CSCCH_LizzieLeave2{
+    walk_down * 3
+    step_end
+}
+
+movement CSCCH_LizzieLeave1{
+    walk_right
+    walk_down * 4
+    step_end
+}
+
+text CSCCH_LizzieShortVisit {
+    "LIZZIE: It was so lovely to meet you, \n"
+    "Chappell! \p"
+    "Hopefully next time I can stay a bit \n"
+    "longer.$"
+}
+
+text CSCCH_ChappellYeahDefinitely{
+    "CHAPPELL: Yeah, and I'd love to visit \n"
+    "you and the band in Mirror City!$"
+}
+
+text CSCCH_LizzieImAHugeFanToo{
+    "LIZZIE: Ah, there you are! \p"
+    "Thanks for your help earlier! \p"
+    "… … … \p"
+    "You look familiar, have we met before?\n"
+    "Before Route 6, I mean.$"
+}
+
+text CSCCH_SeeYouLater{
+    "Right! The Two-Legged Dog! \p"
+    "Yeah, Abi told me she gave a POKéMON to \n"
+    "a fan! \p"
+    "I'm not gonna hold you back any longer, \n"
+    "good luck against Chappell and see you \l"
+    "in Mirror City! $"
+}

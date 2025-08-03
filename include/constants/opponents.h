@@ -6,7 +6,7 @@
 #define TRAINER_NONE                          0
 #define TRAINER_SAWYER_1                      1
 #define TRAINER_GOBLIN_ROUTE_3                2
-#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
+#define TRAINER_GOBLIN_ROUTE_6                3
 #define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
 #define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
 #define TRAINER_AMY_ROUTE3                    6
@@ -274,7 +274,7 @@
 #define TRAINER_FLORENCE                    268
 #define TRAINER_NORMAN_1                    269
 #define TRAINER_WINONA_1                    270
-#define TRAINER_TATE_AND_LIZA_1             271
+#define TRAINER_CHAPPELL                    271
 #define TRAINER_JUAN_1                      272
 #define TRAINER_JERRY_1                     273
 #define TRAINER_TED                         274

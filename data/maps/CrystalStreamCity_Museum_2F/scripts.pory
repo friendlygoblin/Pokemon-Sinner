@@ -76,7 +76,7 @@ script CSCM_ChooseFossil{
         applymovement(1, CSCM_ScientistLeaves)
         waitmovement(0)
         removeobject(1)
-        setflag(FLAG_UNUSED_0x0E9)
+        setflag(FLAG_CSC_MUSEUM_SCIENTIST)
     }
 
     else{
@@ -222,20 +222,4 @@ text CSCM_FinishedYourFossil{
 movement CSCM_ScientistLeaves{
     walk_up * 2
     step_end
-}
-
-script DebugFossils{
-    lock
-    giveitem(ITEM_ROOT_FOSSIL)
-    giveitem(ITEM_CLAW_FOSSIL)
-    giveitem(ITEM_SKULL_FOSSIL)
-    giveitem(ITEM_ARMOR_FOSSIL)
-    giveitem(ITEM_COVER_FOSSIL)
-    giveitem(ITEM_PLUME_FOSSIL)
-    giveitem(ITEM_JAW_FOSSIL)
-    giveitem(ITEM_SAIL_FOSSIL)
-    giveitem(ITEM_OLD_AMBER)
-    setflag(FLAG_UNUSED_0x96)
-    release
-    end
 }

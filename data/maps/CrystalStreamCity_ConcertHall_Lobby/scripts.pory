@@ -1,0 +1,21 @@
+mapscripts CrystalStreamCity_ConcertHall_Lobby_MapScripts {}
+
+script CSCCH_ChappellNotHere{
+    lock
+    faceplayer
+    msgbox(CSCCH_ExplainChappellNotHere, MSGBOX_AUTOCLOSE)
+    applymovement(1, Common_Movement_FaceDown)
+    releaseall
+    end
+}
+
+text CSCCH_ExplainChappellNotHere{
+    "Hi, if you're here to challenge Chappell \n"
+    "Roan, I'm afraid she's unavailable at \l"
+    "the moment. \p"
+    "I'm sure why, she said something about\n"
+    "investigating the Crystal Stream issue. \p"
+    "She was headed to the Sunday Cave, to \n"
+    "the north of Route 6 if you want to \l"
+    "find her.$"
+}

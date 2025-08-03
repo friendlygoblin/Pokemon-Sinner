@@ -3,5 +3,5 @@ mapscripts CrystalStreamCity_Museum_MapScripts {
 }
 
 script CSCM_BringBackScientist{
-    clearflag(FLAG_UNUSED_0x0E9)
+    clearflag(FLAG_CSC_MUSEUM_SCIENTIST)
 }

@@ -1,0 +1,115 @@
+mapscripts Route6_MapScripts {}
+
+const Lizzie = 1
+
+script Route6_LizzieCatchUp{
+    lock
+    clearflag(FLAG_LIZZIE_ROUTE6)
+    addobject(Lizzie)
+    applymovement(Lizzie, Route6_LizzieCatchUpToPlayer)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
+    msgbox(Route6_LizzieExplainWhyTheyreHere, MSGBOX_AUTOCLOSE)
+    setvar(VAR_SUNDAYCAVE_STATE, 1)
+    releaseall
+    end
+}
+
+script Route6_Lizzie{
+    lock
+    faceplayer
+    msgbox(Route6_LizzieBlockWayBack, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text Route6_LizzieExplainWhyTheyreHere{
+    "???: Hey! \p"
+    "LIZZIE: I'm Lizzie, I'm looking for \n"
+    "Chappell Roan. \p"
+    "You too? \p"
+    "Great, let's look for her together! \p"
+    "Oh, I'm not here to challenge her, \n"
+    "I'm just here for a friendly visit. \p"
+    "Anyway, how about you go first, I'll \n"
+    "wait a bit in case she comes back. $"
+}
+
+text Route6_LizzieBlockWayBack{
+    "LIZZIE: How about you go first, I'll \n"
+    "wait a bit in case she comes back. $"
+}
+
+movement Route6_LizzieCatchUpToPlayer{
+    walk_up * 4
+    walk_right * 2
+    walk_up
+    step_end
+}
+
+script Route6_Picnicker {
+    trainerbattle_single(TRAINER_CAROL, Route6_Picnicker_BattleIntro, Route6_Picnicker_Defeated)
+    msgbox(Route6_Picnicker_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Route6_Picnicker_BattleIntro {
+    "The Crystal Stream is so relaxing to, \n"
+    "look at! \p"
+    "I'm in the mood for a POKéMON battle!$"
+}
+
+text Route6_Picnicker_Defeated{
+    "I'll go back to relaxing… $"
+}
+
+text Route6_Picnicker_PostBattle{
+    "I don't like swimmming but a lot of \n"
+    "people and POKéMON enjoy the pools. $"
+}
+
+script Route6_BugCatcher {
+    trainerbattle_single(TRAINER_LYLE, Route6_BugCatcher_BattleIntro, Route6_BugCatcher_Defeated)
+    msgbox(Route6_BugCatcher_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Route6_BugCatcher_BattleIntro {
+    "There are so many species of bugs, \n"
+    "it's fascinating! $"
+}
+
+text Route6_BugCatcher_Defeated{
+    "So many bugs I don't know…$"
+}
+
+text Route6_BugCatcher_PostBattle{
+    "There are bugs of so many types, in \n"
+    "so many different places… $"
+}
+
+script Route6_Youngster {
+    trainerbattle_single(TRAINER_CALVIN_1, Route6_Youngster_BattleIntro, Route6_Youngster_Defeated)
+    msgbox(Route6_Youngster_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text Route6_Youngster_BattleIntro {
+    "I live in Crystal Stream City but I, \n"
+    "come here to pretend I'm a traveller. \p"
+    "Let me show you how strong my POKéMON \n"
+    "is! $"
+}
+
+text Route6_Youngster_Defeated{
+    "I guess you're even stronger…$"
+}
+
+text Route6_Youngster_PostBattle{
+    "When I'm older I'll travel the world \n"
+    "like you! $"
+}
+
+script PoolSign{
+    lock
+    msgbox(format("Public Pools \pSoak in the Crystal Stream!"))
+    releaseall
+    end
+}

@@ -70,27 +70,27 @@ FlorenceHall_FlorenceBattle_2:
 
 
 FlorenceGiveBadge::
-# 140 "data/maps/FurgeTown_Clearing/scripts.pory"
-	msgbox FlorenceHall_FlorenceGiveBadge, MSGBOX_AUTOCLOSE
 # 141 "data/maps/FurgeTown_Clearing/scripts.pory"
-	message FlorenceGiveBadge_Text_0
+	msgbox FlorenceHall_FlorenceGiveBadge, MSGBOX_AUTOCLOSE
 # 142 "data/maps/FurgeTown_Clearing/scripts.pory"
-	waitmessage
+	message FlorenceGiveBadge_Text_0
 # 143 "data/maps/FurgeTown_Clearing/scripts.pory"
-	call Common_EventScript_PlayGymBadgeFanfare
+	waitmessage
 # 144 "data/maps/FurgeTown_Clearing/scripts.pory"
-	setflag FLAG_BADGE02_GET
+	call Common_EventScript_PlayGymBadgeFanfare
 # 145 "data/maps/FurgeTown_Clearing/scripts.pory"
-	setflag FLAG_DEFEATED_DEWFORD_GYM
+	setflag FLAG_BADGE02_GET
 # 146 "data/maps/FurgeTown_Clearing/scripts.pory"
-	msgbox FlorenceBadgePerks, MSGBOX_AUTOCLOSE
+	setflag FLAG_DEFEATED_DEWFORD_GYM
 # 147 "data/maps/FurgeTown_Clearing/scripts.pory"
+	msgbox FlorenceBadgePerks, MSGBOX_AUTOCLOSE
+# 148 "data/maps/FurgeTown_Clearing/scripts.pory"
 	releaseall
 	end
 
 
 FlorenceGiveBadge_Text_0:
-# 141 "data/maps/FurgeTown_Clearing/scripts.pory"
+# 142 "data/maps/FurgeTown_Clearing/scripts.pory"
 	.string "Received the SPECTRUM BADGE from\n"
 	.string "FLORENCE WELCH!$"
 
@@ -176,7 +176,8 @@ Florence_WordAboutTLDP::
 # 128 "data/maps/FurgeTown_Clearing/scripts.pory"
 	.string "FLORENCE: So your true goal is to win \n"
 	.string "against The Last Dinner Party?\p"
-	.string "I think you have the potential to succeed.\p"
+	.string "I think you have the potential to \n"
+	.string "succeed.\p"
 	.string "I'm quite fond of them, and I know they \n"
 	.string "are not to be underestimated.\p"
 	.string "Keep this up, and you will reach great \n"

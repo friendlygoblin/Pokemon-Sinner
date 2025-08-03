@@ -106,15 +106,19 @@
 
 #define FLAG_BDI_KATIE                  0x68
 
-#define FLAG_UNUSED_0x96     0x96 // Unused, leftover from R/S
-#define FLAG_UNUSED_0x0E9    0xE9 // Unused Flag
-#define FLAG_UNUSED_0x1AA    0x1AA // Unused Flag
-#define FLAG_UNUSED_0x1AB    0x1AB // Unused Flag
-#define FLAG_UNUSED_0x1DE    0x1DE // Unused Flag
-#define FLAG_UNUSED_0x1DF    0x1DF // Unused Flag
-#define FLAG_UNUSED_0x1E0    0x1E0 // Unused Flag
-#define FLAG_UNUSED_0x1E1    0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2    0x1E2 // Unused Flag
+#define FLAG_CHAPPELLHALL_LIZZIE        0x96 
+
+#define FLAG_CSC_MUSEUM_SCIENTIST       0xE9
+
+#define FLAG_CSCCH_CHAPPELLDOOR         0x1AA
+#define FLAG_LIZZIE_ROUTE6              0x1AB 
+
+#define FLAG_SCB_IMPIDIMP_1             0x1DE 
+#define FLAG_SCB_IMPIDIMP_2             0x1DF 
+#define FLAG_SCB_IMPIDIMP_3             0x1E0 
+#define FLAG_SCB_IMPIDIMP_4             0x1E1 
+#define FLAG_SCB_CHAPPELL               0x1E2
+
 #define FLAG_UNUSED_0x1E3    0x1E3 // Unused Flag
 #define FLAG_UNUSED_0x1DA    0x1DA // Unused Flag
 #define FLAG_UNUSED_0x264    0x264 // Unused Flag
@@ -1327,7 +1331,7 @@
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0 //First Gym, Hozier
 #define FLAG_DEFEATED_DEWFORD_GYM                                   0x4F1 //Second Gym, Florence
 #define FLAG_DEFEATED_MAUVILLE_GYM                                  0x4F2 //Third Gym, St.Vincent
-#define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3
+#define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3 //Fourth Gym, Chappell
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5
 #define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6

@@ -88,6 +88,8 @@ const u16 gObjectEventPal_StVincent[] = INCBIN_U16("graphics/object_events/palet
 const u16 gObjectEventPal_Katie[] = INCBIN_U16("graphics/object_events/palettes/katie.gbapal");
 const u16 gObjectEventPal_Piplup[] = INCBIN_U16("graphics/object_events/palettes/piplup.gbapal");
 const u16 gObjectEventPal_Rockruff[] = INCBIN_U16("graphics/object_events/palettes/rockruff.gbapal");
+const u16 gObjectEventPal_Impidimp[] = INCBIN_U16("graphics/object_events/palettes/impidimp.gbapal");
+const u16 gObjectEventPal_Chappell[] = INCBIN_U16("graphics/object_events/palettes/chappell.gbapal");
 
 const u16 gObjectEventPal_Npc1Reflection[] = INCBIN_U16("graphics/object_events/palettes/npc_1_reflection.gbapal");
 const u16 gObjectEventPal_Npc2Reflection[] = INCBIN_U16("graphics/object_events/palettes/npc_2_reflection.gbapal");
@@ -102,6 +104,7 @@ const u32 gObjectEventPic_Katie[] = INCBIN_U32("graphics/object_events/pics/peop
 
 const u32 gObjectEventPic_RachelPiplup[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/piplup.4bpp");
 const u32 gObjectEventPic_Milly[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/rockruff.4bpp");
+const u32 gObjectEventPic_Imp[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/impidimp.4bpp");
 
 const u32 gObjectEventPic_NinjaBoy[] = INCBIN_U32("graphics/object_events/pics/people/ninja_boy.4bpp");
 const u32 gObjectEventPic_Twin[] = INCBIN_U32("graphics/object_events/pics/people/twin.4bpp");
@@ -185,7 +188,7 @@ const u32 gObjectEventPic_Wattson[] = INCBIN_U32("graphics/object_events/pics/pe
 const u32 gObjectEventPic_Flannery[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/flannery.4bpp"); //Florence Welch
 const u32 gObjectEventPic_Norman[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/norman.4bpp");
 const u32 gObjectEventPic_Winona[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/winona.4bpp");
-const u32 gObjectEventPic_Liza[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/liza.4bpp");
+const u32 gObjectEventPic_Liza[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/liza.4bpp");//Chappell Roan
 const u32 gObjectEventPic_Tate[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/tate.4bpp");
 const u32 gObjectEventPic_Wallace[] = INCBIN_U32("graphics/object_events/pics/people/wallace.4bpp"); //Abigail
 const u32 gObjectEventPic_Steven[] = INCBIN_U32("graphics/object_events/pics/people/steven.4bpp");

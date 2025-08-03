@@ -103,30 +103,38 @@ Music: Cool
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Shroomish
+Shroomish (M)
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Cyndaquil
+Cyndaquil (M)
 Level: 13
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_GOBLIN_ROUTE_6 ===
+Name: GOBLIN
+Class: TLDP Fan
+Pic: Goblin
 Gender: Male
-Music: Aqua
+Music: Cool
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
-Zubat
-Level: 31
+Shroomish (M)
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Carvanha
-Level: 31
+Swablu (F)
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Larvitar (F)
+Level: 24
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Quilava (M)
+Level: 26
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
 Name: GRUNT
@@ -3827,7 +3835,7 @@ Taillow
 Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_AUTUMN ===
+=== TRAINER_AUTUMN === /*Used on Route 3*/
 Name: AUTUMN
 Class: Camper
 Pic: Picnicker
@@ -4680,8 +4688,6 @@ Timid Nature
 - Dark Pulse  
 - Sludge Bomb  
 
-
-
 === TRAINER_PHOEBE ===
 Name: EMILY
 Class: Elite Four
@@ -4755,8 +4761,6 @@ Timid Nature
 - Thunderbolt  
 - Ice Fang
 
-
-
 === TRAINER_GLACIA ===
 Name: LIZZIE
 Class: Elite Four
@@ -4828,8 +4832,6 @@ Adamant Nature
 - Dragon Claw  
 - Earthquake  
 - Play Rough  
-
-
 
 === TRAINER_DRAKE ===
 Name: GEORGIA
@@ -4904,8 +4906,6 @@ Jolly Nature
 - Crunch  
 - Waterfall  
 - Earthquake  
-
-
 
 === TRAINER_STVINCENT ===
 Name: ST.VINCENT
@@ -4998,7 +4998,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Howl
 
 === TRAINER_FLORENCE ===
-Name: FLORENCE 
+Name: FLORENCE
 Class: Leader
 Pic: Leader Flannery
 Gender: Female
@@ -5119,47 +5119,31 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Dance
 - Aerial Ace
 
-=== TRAINER_TATE_AND_LIZA_1 ===
-Name: TATE&LIZA
+=== TRAINER_CHAPPELL ===
+Name: CHAPPELL 
 Class: Leader
 Pic: Leader Tate And Liza
-Gender: Male
+Gender: Female
 Music: Female
-Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
-Double Battle: Yes
+Items: Hyper Potion / Hyper Potion 
+Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Claydol
-Level: 41
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Earthquake
-- Ancient Power
-- Psychic
-- Light Screen
-
-Xatu
-Level: 41
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Psychic
-- Sunny Day
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Sitrus Berry
-Level: 42
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Light Screen
-- Psychic
-- Hypnosis
-- Calm Mind
-
-Solrock @ Sitrus Berry
-Level: 42
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Sunny Day
-- Solar Beam
-- Psychic
+Hatenna
+Level: 24
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+- Wish
+- Play Rough
+- Confusion
 - Flamethrower
+
+Tinkatuff
+Level: 24
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Ponyta-Galar
+Level: 26
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JUAN_1 ===
 Name: JUAN
@@ -5987,7 +5971,7 @@ Hariyama
 Level: 39
 IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
 
-=== TRAINER_CALVIN_1 ===
+=== TRAINER_CALVIN_1 === /*Used on Route6*/
 Name: CALVIN
 Class: Youngster
 Pic: Youngster
@@ -5996,8 +5980,8 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Poochyena
-Level: 5
+Houndour
+Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BILLY ===
@@ -6031,7 +6015,7 @@ Level: 10
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Tackle
 
-=== TRAINER_TOMMY ===
+=== TRAINER_TOMMY === /*Used on Route 2*/
 Name: TOMMY
 Class: Hiker
 Pic: Hiker
@@ -6250,7 +6234,7 @@ Zigzagoon
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ALLEN ===
+=== TRAINER_ALLEN === /* Used on Route 1 */
 Name: ALLEN
 Class: Youngster
 Pic: Youngster
@@ -8646,9 +8630,9 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tail Whip
 - Defense Curl
 
-=== TRAINER_CAROL ===
+=== TRAINER_CAROL === /*Used on Route 6*/
 Name: CAROL
-Class: Picnicker
+Class: Camper
 Pic: Picnicker
 Gender: Female
 Music: Girl
@@ -8656,11 +8640,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Taillow
-Level: 17
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Lombre
-Level: 17
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NANCY ===
@@ -9941,7 +9925,7 @@ Makuhita
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DAVIS ===
+=== TRAINER_DAVIS === /*Used on Route 3*/
 Name: DAVIS
 Class: Bug Catcher
 Pic: Bug Catcher
@@ -11325,7 +11309,7 @@ Wailmer
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_RICK ===
+=== TRAINER_RICK === /*Used on Route 1*/
 Name: RICK
 Class: Bug Catcher
 Pic: Bug Catcher
@@ -11342,7 +11326,7 @@ Wurmple
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LYLE ===
+=== TRAINER_LYLE === /*Used on Route 6*/
 Name: LYLE
 Class: Bug Catcher
 Pic: Bug Catcher
@@ -11351,20 +11335,16 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wurmple
-Level: 3
+Kricketot
+Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wurmple
-Level: 3
+Dewpider
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Wurmple
-Level: 3
+Swadloon
+Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSE ===
@@ -15907,7 +15887,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 - Rest
 
-=== TRAINER_ANGELO ===
+=== TRAINER_ANGELO === /*Used on Route 3*/
 Name: ANGELO
 Class: Bug Maniac
 Pic: Bug Maniac

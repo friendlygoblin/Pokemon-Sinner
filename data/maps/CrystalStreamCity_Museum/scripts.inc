@@ -6,6 +6,6 @@ CrystalStreamCity_Museum_MapScripts::
 
 CSCM_BringBackScientist::
 # 6 "data/maps/CrystalStreamCity_Museum/scripts.pory"
-	clearflag FLAG_UNUSED_0x0E9
+	clearflag FLAG_CSC_MUSEUM_SCIENTIST
 	return
 

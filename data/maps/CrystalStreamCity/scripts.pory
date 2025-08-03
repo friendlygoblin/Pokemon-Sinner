@@ -1,1 +1,31 @@
-mapscripts CrystalStreamCity_MapScripts {}
+mapscripts CrystalStreamCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : CSCCH_FlagStuff
+}
+
+script CSCCH_FlagStuff{
+    setflag(FLAG_LIZZIE_ROUTE6)
+    if(var(VAR_SUNDAYCAVE_STATE)==0){
+        setflag(FLAG_CSCCH_CHAPPELLDOOR)
+    }
+}
+
+script CrystalStreamCity_Sign{
+    lock
+    msgbox(format("Welcome to Crystal Stream City! \pRefresh yourself in the stream and enjoy the Museum!"))
+    releaseall
+    end
+}
+
+script CSCCH_Sign{
+    lock
+    msgbox(format("CRYSTAL STREAM CITY CONCERT HALL \pCOME CHALLENGE CHAPPELL ROAN"))
+    releaseall
+    end
+}
+
+script MuseumSign{
+    lock
+    msgbox(format("Sinner Museum \pArt and history all in one place!"))
+    releaseall
+    end
+}

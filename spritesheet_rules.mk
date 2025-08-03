@@ -443,6 +443,9 @@ $(OBJEVENTGFXDIR)/pokemon_old/piplup.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/pokemon_old/rockruff.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/pokemon_old/impidimp.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 $(OBJEVENTGFXDIR)/pokemon_old/groudon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 

@@ -1,0 +1,143 @@
+mapscripts SundayCave_Basement_MapScripts {}
+
+const Chappell = 1
+const Imp1 = 2
+const Imp2 = 3
+const Imp3 = 4
+const Imp4 = 5
+
+script SCB_ChappellAskForHelp{
+    lock
+    faceplayer
+    if(var(VAR_SUNDAYCAVE_STATE)==1){
+        msgbox(CantTakeCareOfThatAlone, MSGBOX_AUTOCLOSE)
+    }
+    elif(var(VAR_SUNDAYCAVE_STATE)==2){
+        msgbox(GoodJobImGoingBack,MSGBOX_AUTOCLOSE)
+        fadescreen(FADE_TO_BLACK)
+        setflag(FLAG_SCB_CHAPPELL)
+        setflag(FLAG_CSCCH_CHAPPELLDOOR)
+        setflag(FLAG_LIZZIE_ROUTE6)
+        removeobject(Chappell)
+        fadescreen(FADE_FROM_BLACK)
+    }
+    
+    releaseall
+    end
+}
+
+text CantTakeCareOfThatAlone{
+    "CHAPPELL: Who are you? \p"
+    "Ah, the challenge? \p"
+    "It's gonna have to wait, as you can \n"
+    "see we have a bit of a … problem right \l"
+    "now. \p"
+    "I can't take care of all of them alone, \n"
+    "but if you help we should be okay. \p"
+    "Take two and I'll take the other two. \p"
+    "Just find a way to get rid of them, catch \n"
+    "them or knock them out I don't care.$"
+}
+
+text GoodJobImGoingBack{
+    "CHAPPELL: That should do, they're all \n"
+    "gone. \p"
+    "Thanks for your help. \p"
+    "You might be wondering why I'm here and \n"
+    "not at the Concert Hall. \p"
+    "The thing is we artists have to be good \n"
+    "at POKéMON battles if we want the \l"
+    "challenges to work. \p"
+    "So then people call us when no one else\n"
+    "can help. \p"
+    "I'm going back, see you at the Concert \n"
+    "Hall.$"
+}
+
+script SCB_Impidimp1{
+    lock
+    faceplayer
+    playmoncry(SPECIES_IMPIDIMP, CRY_MODE_NORMAL)
+    msgbox(format("IMPIDIMP: Iiiiiiimp!"), MSGBOX_AUTOCLOSE)
+    waitmoncry
+    setwildbattle(SPECIES_IMPIDIMP, 22)
+    dowildbattle
+    setflag(FLAG_SCB_IMPIDIMP_1)
+    removeobject(Imp1)
+    setflag(FLAG_SCB_IMPIDIMP_2)
+    removeobject(Imp2)
+    if(var(VAR_SUNDAYCAVE_STATE)==1){
+        setvar(VAR_SUNDAYCAVE_STATE, 2)
+    }
+    elif(var(VAR_SUNDAYCAVE_STATE)==2){
+        setvar(VAR_SUNDAYCAVE_STATE, 2)
+    }
+    releaseall
+    end
+}
+
+script SCB_Impidimp2{
+    lock
+    faceplayer
+    playmoncry(SPECIES_IMPIDIMP, CRY_MODE_NORMAL)
+    msgbox(format("IMPIDIMP: Iiiiiiimp!"), MSGBOX_AUTOCLOSE)
+    waitmoncry
+    setwildbattle(SPECIES_IMPIDIMP, 22)
+    dowildbattle
+    setflag(FLAG_SCB_IMPIDIMP_1)
+    removeobject(Imp1)
+    setflag(FLAG_SCB_IMPIDIMP_2)
+    removeobject(Imp2)
+    if(var(VAR_SUNDAYCAVE_STATE)==1){
+        setvar(VAR_SUNDAYCAVE_STATE, 2)
+    }
+    elif(var(VAR_SUNDAYCAVE_STATE)==2){
+        setvar(VAR_SUNDAYCAVE_STATE, 2)
+    }
+    releaseall
+    end
+}
+
+script SCB_Impidimp3{
+    lock
+    faceplayer
+    playmoncry(SPECIES_IMPIDIMP, CRY_MODE_NORMAL)
+    msgbox(format("IMPIDIMP: Iiiiiiimp!"), MSGBOX_AUTOCLOSE)
+    waitmoncry
+    setwildbattle(SPECIES_IMPIDIMP, 22)
+    dowildbattle
+    setflag(FLAG_SCB_IMPIDIMP_3)
+    removeobject(Imp3)
+    setflag(FLAG_SCB_IMPIDIMP_4)
+    removeobject(Imp4)
+    if(var(VAR_SUNDAYCAVE_STATE)==1){
+        setvar(VAR_SUNDAYCAVE_STATE, 2)
+    }
+    elif(var(VAR_SUNDAYCAVE_STATE)==2){
+        setvar(VAR_SUNDAYCAVE_STATE, 2)
+    }
+    releaseall
+    end
+}
+
+script SCB_Impidimp4{
+    lock
+    faceplayer
+    playmoncry(SPECIES_IMPIDIMP, CRY_MODE_NORMAL)
+    msgbox(format("IMPIDIMP: Iiiiiiimp!"), MSGBOX_AUTOCLOSE)
+    waitmoncry
+    setwildbattle(SPECIES_IMPIDIMP, 22)
+    dowildbattle
+    setflag(FLAG_SCB_IMPIDIMP_3)
+    removeobject(Imp3)
+    setflag(FLAG_SCB_IMPIDIMP_4)
+    removeobject(Imp4)
+    if(var(VAR_SUNDAYCAVE_STATE)==1){
+        setvar(VAR_SUNDAYCAVE_STATE, 2)
+    }
+    elif(var(VAR_SUNDAYCAVE_STATE)==2){
+        setvar(VAR_SUNDAYCAVE_STATE, 2)
+    }
+    releaseall
+    end
+}

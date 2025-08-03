@@ -128,7 +128,8 @@ text FlorenceBadgePerks{
 text Florence_WordAboutTLDP{
     "FLORENCE: So your true goal is to win \n"
     "against The Last Dinner Party?\p"
-    "I think you have the potential to succeed.\p"
+    "I think you have the potential to \n"
+    "succeed.\p"
     "I'm quite fond of them, and I know they \n"
     "are not to be underestimated.\p"
     "Keep this up, and you will reach great \n"

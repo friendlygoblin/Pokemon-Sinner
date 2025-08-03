@@ -3,7 +3,7 @@
   "name": "CrystalStreamCity_Museum",
   "layout": "LAYOUT_CRYSTAL_STREAM_CITY_MUSEUM",
   "music": "MUS_OCEANIC_MUSEUM",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

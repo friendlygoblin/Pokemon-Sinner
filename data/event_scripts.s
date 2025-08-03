@@ -381,9 +381,6 @@ gStdScripts_End::
 	.include "data/maps/SeafloorCavern_Room9/scripts.inc"
 	.include "data/maps/CaveOfOrigin_Entrance/scripts.inc"
 	.include "data/maps/CaveOfOrigin_1F/scripts.inc"
-	.include "data/maps/CaveOfOrigin_UnusedRubySapphireMap1/scripts.inc"
-	.include "data/maps/CaveOfOrigin_UnusedRubySapphireMap2/scripts.inc"
-	.include "data/maps/CaveOfOrigin_UnusedRubySapphireMap3/scripts.inc"
 	.include "data/maps/CaveOfOrigin_B1F/scripts.inc"
 	.include "data/maps/VictoryRoad_1F/scripts.inc"
 	.include "data/maps/VictoryRoad_B1F/scripts.inc"
@@ -416,9 +413,6 @@ gStdScripts_End::
 	.include "data/maps/SealedChamber_OuterRoom/scripts.inc"
 	.include "data/maps/SealedChamber_InnerRoom/scripts.inc"
 	.include "data/maps/ScorchedSlab/scripts.inc"
-	.include "data/maps/AquaHideout_UnusedRubyMap1/scripts.inc"
-	.include "data/maps/AquaHideout_UnusedRubyMap2/scripts.inc"
-	.include "data/maps/AquaHideout_UnusedRubyMap3/scripts.inc"
 	.include "data/maps/SkyPillar_Entrance/scripts.inc"
 	.include "data/maps/SkyPillar_Outside/scripts.inc"
 	.include "data/maps/SkyPillar_1F/scripts.inc"
@@ -1169,3 +1163,25 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/CrystalStreamCity_Museum/scripts.inc"
 
 	.include "data/maps/CrystalStreamCity_Museum_2F/scripts.inc"
+
+	.include "data/maps/CrystalStreamCity_ConcertHall/scripts.inc"
+
+	.include "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.inc"
+
+	.include "data/maps/Route6/scripts.inc"
+
+	.include "data/maps/SundayCave/scripts.inc"
+
+	.include "data/maps/SundayCave_Exit/scripts.inc"
+
+	.include "data/maps/SundayCave_Basement/scripts.inc"
+
+	.include "data/maps/Route7/scripts.inc"
+
+	.include "data/maps/CrystalStreamCity_BikeShop/scripts.inc"
+
+	.include "data/maps/MercyTown/scripts.inc"
+
+	.include "data/maps/MercyTown_ConcertHall/scripts.inc"
+
+	.include "data/maps/MercyTown_ConcertHall_Lobby/scripts.inc"

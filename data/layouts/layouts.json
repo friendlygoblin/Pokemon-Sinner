@@ -742,16 +742,6 @@
       "blockdata_filepath": "data/layouts/LilycoveCity_House2/map.bin"
     },
     {
-      "id": "LAYOUT_UNUSED_CONTEST_ROOM1",
-      "name": "UnusedContestRoom1_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/UnusedContestRoom1/border.bin",
-      "blockdata_filepath": "data/layouts/UnusedContestRoom1/map.bin"
-    },
-    {
       "id": "LAYOUT_VERDANTURF_TOWN_WANDAS_HOUSE",
       "name": "VerdanturfTown_WandasHouse_Layout",
       "width": 17,
@@ -820,26 +810,6 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/SlateportCity_SternsShipyard_2F/border.bin",
       "blockdata_filepath": "data/layouts/SlateportCity_SternsShipyard_2F/map.bin"
-    },
-    {
-      "id": "LAYOUT_UNUSED_CONTEST_ROOM2",
-      "name": "UnusedContestRoom2_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/UnusedContestRoom2/border.bin",
-      "blockdata_filepath": "data/layouts/UnusedContestRoom2/map.bin"
-    },
-    {
-      "id": "LAYOUT_UNUSED_CONTEST_ROOM3",
-      "name": "UnusedContestRoom3_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/UnusedContestRoom3/border.bin",
-      "blockdata_filepath": "data/layouts/UnusedContestRoom3/map.bin"
     },
     {
       "id": "LAYOUT_SLATEPORT_CITY_POKEMON_FAN_CLUB",
@@ -1582,36 +1552,6 @@
       "blockdata_filepath": "data/layouts/CaveOfOrigin_1F/map.bin"
     },
     {
-      "id": "LAYOUT_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP1",
-      "name": "CaveOfOrigin_UnusedRubySapphireMap1_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap1/border.bin",
-      "blockdata_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap1/map.bin"
-    },
-    {
-      "id": "LAYOUT_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP2",
-      "name": "CaveOfOrigin_UnusedRubySapphireMap2_Layout",
-      "width": 21,
-      "height": 21,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap2/border.bin",
-      "blockdata_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap2/map.bin"
-    },
-    {
-      "id": "LAYOUT_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3",
-      "name": "CaveOfOrigin_UnusedRubySapphireMap3_Layout",
-      "width": 19,
-      "height": 21,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap3/border.bin",
-      "blockdata_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap3/map.bin"
-    },
-    {
       "id": "LAYOUT_CAVE_OF_ORIGIN_B1F",
       "name": "CaveOfOrigin_B1F_Layout",
       "width": 19,
@@ -2250,66 +2190,6 @@
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/ContestHall/border.bin",
       "blockdata_filepath": "data/layouts/ContestHall/map.bin"
-    },
-    {
-      "id": "LAYOUT_UNUSED_CONTEST_HALL1",
-      "name": "UnusedContestHall1_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/UnusedContestHall1/border.bin",
-      "blockdata_filepath": "data/layouts/UnusedContestHall1/map.bin"
-    },
-    {
-      "id": "LAYOUT_UNUSED_CONTEST_HALL2",
-      "name": "UnusedContestHall2_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/UnusedContestHall2/border.bin",
-      "blockdata_filepath": "data/layouts/UnusedContestHall2/map.bin"
-    },
-    {
-      "id": "LAYOUT_UNUSED_CONTEST_HALL3",
-      "name": "UnusedContestHall3_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/UnusedContestHall3/border.bin",
-      "blockdata_filepath": "data/layouts/UnusedContestHall3/map.bin"
-    },
-    {
-      "id": "LAYOUT_UNUSED_CONTEST_HALL4",
-      "name": "UnusedContestHall4_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/UnusedContestHall4/border.bin",
-      "blockdata_filepath": "data/layouts/UnusedContestHall4/map.bin"
-    },
-    {
-      "id": "LAYOUT_UNUSED_CONTEST_HALL5",
-      "name": "UnusedContestHall5_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/UnusedContestHall5/border.bin",
-      "blockdata_filepath": "data/layouts/UnusedContestHall5/map.bin"
-    },
-    {
-      "id": "LAYOUT_UNUSED_CONTEST_HALL6",
-      "name": "UnusedContestHall6_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Contest",
-      "border_filepath": "data/layouts/UnusedContestHall6/border.bin",
-      "blockdata_filepath": "data/layouts/UnusedContestHall6/map.bin"
     },
     {
       "id": "LAYOUT_CONTEST_HALL_BEAUTY",
@@ -3150,36 +3030,6 @@
       "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/EverGrandeCity_Hall4/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_Hall4/map.bin"
-    },
-    {
-      "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP1",
-      "name": "AquaHideout_UnusedRubyMap1_Layout",
-      "width": 28,
-      "height": 30,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AquaHideout_UnusedRubyMap1/border.bin",
-      "blockdata_filepath": "data/layouts/AquaHideout_UnusedRubyMap1/map.bin"
-    },
-    {
-      "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP2",
-      "name": "AquaHideout_UnusedRubyMap2_Layout",
-      "width": 62,
-      "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AquaHideout_UnusedRubyMap2/border.bin",
-      "blockdata_filepath": "data/layouts/AquaHideout_UnusedRubyMap2/map.bin"
-    },
-    {
-      "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP3",
-      "name": "AquaHideout_UnusedRubyMap3_Layout",
-      "width": 34,
-      "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AquaHideout_UnusedRubyMap3/border.bin",
-      "blockdata_filepath": "data/layouts/AquaHideout_UnusedRubyMap3/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE131_SKY_PILLAR",
@@ -4854,7 +4704,7 @@
     {
       "id": "LAYOUT_CRYSTAL_STREAM_CITY",
       "name": "CrystalStreamCity_Layout",
-      "width": 60,
+      "width": 65,
       "height": 60,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Lilycove",
@@ -4880,6 +4730,116 @@
       "secondary_tileset": "gTileset_LilycoveMuseum",
       "border_filepath": "data/layouts/CrystalStreamCity_Museum_2F/border.bin",
       "blockdata_filepath": "data/layouts/CrystalStreamCity_Museum_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CRYSTAL_STREAM_CITY_CONCERT_HALL",
+      "name": "CrystalStreamCity_ConcertHall_Layout",
+      "width": 13,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePike",
+      "border_filepath": "data/layouts/CrystalStreamCity_ConcertHall/border.bin",
+      "blockdata_filepath": "data/layouts/CrystalStreamCity_ConcertHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_CRYSTAL_STREAM_CITY_CONCERT_HALL_LOBBY",
+      "name": "CrystalStreamCity_ConcertHall_Lobby_Layout",
+      "width": 19,
+      "height": 15,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_BattlePalace",
+      "border_filepath": "data/layouts/CrystalStreamCity_ConcertHall_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/CrystalStreamCity_ConcertHall_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE6",
+      "name": "Route6_Layout",
+      "width": 32,
+      "height": 60,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/Route6/border.bin",
+      "blockdata_filepath": "data/layouts/Route6/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNDAY_CAVE",
+      "name": "SundayCave_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/SundayCave/border.bin",
+      "blockdata_filepath": "data/layouts/SundayCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNDAY_CAVE_EXIT",
+      "name": "SundayCave_Exit_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/SundayCave_Exit/border.bin",
+      "blockdata_filepath": "data/layouts/SundayCave_Exit/map.bin"
+    },
+    {
+      "id": "LAYOUT_SUNDAY_CAVE_BASEMENT",
+      "name": "SundayCave_Basement_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/SundayCave_Basement/border.bin",
+      "blockdata_filepath": "data/layouts/SundayCave_Basement/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE7",
+      "name": "Route7_Layout",
+      "width": 41,
+      "height": 50,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Route7/border.bin",
+      "blockdata_filepath": "data/layouts/Route7/map.bin"
+    },
+    {
+      "id": "LAYOUT_CRYSTAL_STREAM_CITY_BIKE_SHOP",
+      "name": "CrystalStreamCity_BikeShop_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/CrystalStreamCity_BikeShop/border.bin",
+      "blockdata_filepath": "data/layouts/CrystalStreamCity_BikeShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_MERCY_TOWN",
+      "name": "MercyTown_Layout",
+      "width": 30,
+      "height": 26,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/MercyTown/border.bin",
+      "blockdata_filepath": "data/layouts/MercyTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_MERCY_TOWN_CONCERT_HALL",
+      "name": "MercyTown_ConcertHall_Layout",
+      "width": 14,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_LavaridgeGym",
+      "border_filepath": "data/layouts/MercyTown_ConcertHall/border.bin",
+      "blockdata_filepath": "data/layouts/MercyTown_ConcertHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_MERCY_TOWN_CONCERT_HALL_LOBBY",
+      "name": "MercyTown_ConcertHall_Lobby_Layout",
+      "width": 14,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/MercyTown_ConcertHall_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/MercyTown_ConcertHall_Lobby/map.bin"
     }
   ]
 }
