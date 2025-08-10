@@ -3,7 +3,7 @@
   "name": "MercyTown",
   "layout": "LAYOUT_MERCY_TOWN",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",
@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE7",
       "offset": -1,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE8",
+      "offset": -48,
+      "direction": "right"
     }
   ],
   "object_events": [
@@ -36,6 +41,13 @@
       "elevation": 0,
       "dest_map": "MAP_MERCY_TOWN_CONCERT_HALL_LOBBY",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_MERCY_TOWN_ROCK_SHOP",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -44,19 +56,35 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 7,
-      "y": 10,
+      "x": 18,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "NULL"
+      "script": "MercyTown_WelcomeToMercyTownSign"
     },
     {
       "type": "sign",
-      "x": 18,
+      "x": 14,
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "NULL"
+      "script": "MercyTown_ConcertHallSign"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MercyTown_Route7Sign"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MercyTown_Route8Sign"
     }
   ]
 }

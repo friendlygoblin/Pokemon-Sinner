@@ -7,7 +7,7 @@ FortreeCity_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 FortreeCity_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_FORTREE_CITY
+	setrespawn HEAL_LOCATION_MERCY_TOWN
 	end
 
 FortreeCity_PokemonCenter_1F_EventScript_Nurse::
@@ -18,31 +18,9 @@ FortreeCity_PokemonCenter_1F_EventScript_Nurse::
 	release
 	end
 
-FortreeCity_PokemonCenter_1F_EventScript_Gentleman::
-	msgbox FortreeCity_PokemonCenter_1F_Text_GoToSafariZone, MSGBOX_NPC
-	end
-
-FortreeCity_PokemonCenter_1F_EventScript_Man::
-	msgbox FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat, MSGBOX_NPC
-	end
-
 FortreeCity_PokemonCenter_1F_EventScript_Boy::
 	msgbox FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav, MSGBOX_NPC
 	end
-
-FortreeCity_PokemonCenter_1F_Text_GoToSafariZone:
-	.string "Listen, kid, are you working\n"
-	.string "on a POKéDEX?\p"
-	.string "Hmm… Go to the SAFARI ZONE.\n"
-	.string "That's my suggestion.$"
-
-FortreeCity_PokemonCenter_1F_Text_RecordCornerIsNeat:
-	.string "Have you done anything at\n"
-	.string "the RECORD CORNER?\p"
-	.string "It's pretty neat. It mixes and matches\n"
-	.string "the records of TRAINERS.\p"
-	.string "I don't know quite how it works,\n"
-	.string "but it's cool. It's exciting, even!$"
 
 FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav:
 	.string "GEORGE: I still haven't found my\n"

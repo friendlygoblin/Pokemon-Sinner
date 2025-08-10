@@ -240,164 +240,172 @@ Route3_Picknicker::
 	return
 
 
-Route3_PlaceAmy1::
+Route3_SchoolKid::
 # 152 "data/maps/Route3/scripts.pory"
-	lock
+	trainerbattle_single TRAINER_JERRY_1, Route3_SchoolKid_Text_0, Route3_SchoolKid_Text_1
 # 153 "data/maps/Route3/scripts.pory"
-	applymovement 7, Common_Movement_ExclamationMark
-# 154 "data/maps/Route3/scripts.pory"
-	waitmovement 0
-# 155 "data/maps/Route3/scripts.pory"
-	delay 20
-# 156 "data/maps/Route3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route3_PlayerFaceUp
+	msgbox Route3_SchoolKid_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
+Route3_PlaceAmy1::
 # 157 "data/maps/Route3/scripts.pory"
-	waitmovement 0
+	lock
 # 158 "data/maps/Route3/scripts.pory"
+	applymovement 7, Common_Movement_ExclamationMark
+# 159 "data/maps/Route3/scripts.pory"
+	waitmovement 0
+# 160 "data/maps/Route3/scripts.pory"
+	delay 20
+# 161 "data/maps/Route3/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Route3_PlayerFaceUp
+# 162 "data/maps/Route3/scripts.pory"
+	waitmovement 0
+# 163 "data/maps/Route3/scripts.pory"
 	call Route3_AmyQuest
 	return
 
 
 CallAmyQuest::
-# 162 "data/maps/Route3/scripts.pory"
+# 167 "data/maps/Route3/scripts.pory"
 	lock
-# 163 "data/maps/Route3/scripts.pory"
+# 168 "data/maps/Route3/scripts.pory"
 	faceplayer
-# 164 "data/maps/Route3/scripts.pory"
+# 169 "data/maps/Route3/scripts.pory"
 	call Route3_AmyQuest
-# 165 "data/maps/Route3/scripts.pory"
+# 170 "data/maps/Route3/scripts.pory"
 	releaseall
 	end
 
 
 Route3_AmyQuest::
-# 170 "data/maps/Route3/scripts.pory"
-	switch VAR_ROUTE3_AMY
-# 171 "data/maps/Route3/scripts.pory"
-	case 0, Route3_AmyQuest_2
 # 175 "data/maps/Route3/scripts.pory"
+	switch VAR_ROUTE3_AMY
+# 176 "data/maps/Route3/scripts.pory"
+	case 0, Route3_AmyQuest_2
+# 180 "data/maps/Route3/scripts.pory"
 	case 1, Route3_AmyQuest_3
-# 178 "data/maps/Route3/scripts.pory"
+# 183 "data/maps/Route3/scripts.pory"
 	case 2, Route3_AmyQuest_4
-# 189 "data/maps/Route3/scripts.pory"
+# 194 "data/maps/Route3/scripts.pory"
 	msgbox AmyNeedHelpShort, MSGBOX_AUTOCLOSE
 	return
 
 Route3_AmyQuest_2:
-# 172 "data/maps/Route3/scripts.pory"
+# 177 "data/maps/Route3/scripts.pory"
 	msgbox AmyNeedHelpLong, MSGBOX_AUTOCLOSE
-# 173 "data/maps/Route3/scripts.pory"
+# 178 "data/maps/Route3/scripts.pory"
 	setvar VAR_ROUTE3_AMY, 1
-# 174 "data/maps/Route3/scripts.pory"
+# 179 "data/maps/Route3/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Route3_PlayerWalkBack
 	return
 
 Route3_AmyQuest_3:
-# 176 "data/maps/Route3/scripts.pory"
+# 181 "data/maps/Route3/scripts.pory"
 	msgbox AmyNeedHelpShort, MSGBOX_AUTOCLOSE
-# 177 "data/maps/Route3/scripts.pory"
+# 182 "data/maps/Route3/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Route3_PlayerWalkBack
 	return
 
 Route3_AmyQuest_4:
-# 179 "data/maps/Route3/scripts.pory"
-	msgbox AmyFoundNotes, MSGBOX_AUTOCLOSE
-# 180 "data/maps/Route3/scripts.pory"
-	trainerbattle_no_intro TRAINER_AMY_ROUTE3, Route3_AmyQuest_Text_0
-# 181 "data/maps/Route3/scripts.pory"
-	msgbox AmyPostBattle, MSGBOX_AUTOCLOSE
-# 182 "data/maps/Route3/scripts.pory"
-	applymovement 7, AmyGoAway
-# 183 "data/maps/Route3/scripts.pory"
-	waitmovement 0
 # 184 "data/maps/Route3/scripts.pory"
-	removeobject 7
+	msgbox AmyFoundNotes, MSGBOX_AUTOCLOSE
 # 185 "data/maps/Route3/scripts.pory"
-	setflag FLAG_AMY_ROUTE3
+	trainerbattle_no_intro TRAINER_AMY_ROUTE3, Route3_AmyQuest_Text_0
 # 186 "data/maps/Route3/scripts.pory"
-	setvar VAR_ROUTE3_AMY, 3
+	msgbox AmyPostBattle, MSGBOX_AUTOCLOSE
 # 187 "data/maps/Route3/scripts.pory"
+	applymovement 7, AmyGoAway
+# 188 "data/maps/Route3/scripts.pory"
+	waitmovement 0
+# 189 "data/maps/Route3/scripts.pory"
+	removeobject 7
+# 190 "data/maps/Route3/scripts.pory"
+	setflag FLAG_AMY_ROUTE3
+# 191 "data/maps/Route3/scripts.pory"
+	setvar VAR_ROUTE3_AMY, 3
+# 192 "data/maps/Route3/scripts.pory"
 	setvar VAR_ROUTE3_AMY_TRIGGER, 1
 	return
 
 
-# 193 "data/maps/Route3/scripts.pory"
+# 198 "data/maps/Route3/scripts.pory"
 Route3_PlayerFaceUp:
-# 194 "data/maps/Route3/scripts.pory"
+# 199 "data/maps/Route3/scripts.pory"
 	face_up
 	step_end
 
-# 197 "data/maps/Route3/scripts.pory"
-Route3_PlayerWalkBack:
-# 198 "data/maps/Route3/scripts.pory"
-	walk_left
-# 199 "data/maps/Route3/scripts.pory"
-	step_end
-
 # 202 "data/maps/Route3/scripts.pory"
-AmyGoAway:
+Route3_PlayerWalkBack:
 # 203 "data/maps/Route3/scripts.pory"
-	walk_right
-# 203 "data/maps/Route3/scripts.pory"
-	walk_right
-# 203 "data/maps/Route3/scripts.pory"
-	walk_right
-# 203 "data/maps/Route3/scripts.pory"
-	walk_right
-# 203 "data/maps/Route3/scripts.pory"
-	walk_right
-# 203 "data/maps/Route3/scripts.pory"
-	walk_right
-# 203 "data/maps/Route3/scripts.pory"
-	walk_right
-# 203 "data/maps/Route3/scripts.pory"
-	walk_right
-# 203 "data/maps/Route3/scripts.pory"
-	walk_right
+	walk_left
 # 204 "data/maps/Route3/scripts.pory"
 	step_end
 
+# 207 "data/maps/Route3/scripts.pory"
+AmyGoAway:
+# 208 "data/maps/Route3/scripts.pory"
+	walk_right
+# 208 "data/maps/Route3/scripts.pory"
+	walk_right
+# 208 "data/maps/Route3/scripts.pory"
+	walk_right
+# 208 "data/maps/Route3/scripts.pory"
+	walk_right
+# 208 "data/maps/Route3/scripts.pory"
+	walk_right
+# 208 "data/maps/Route3/scripts.pory"
+	walk_right
+# 208 "data/maps/Route3/scripts.pory"
+	walk_right
+# 208 "data/maps/Route3/scripts.pory"
+	walk_right
+# 208 "data/maps/Route3/scripts.pory"
+	walk_right
+# 209 "data/maps/Route3/scripts.pory"
+	step_end
+
 RightDeadTree::
-# 261 "data/maps/Route3/scripts.pory"
+# 266 "data/maps/Route3/scripts.pory"
 	lock
-# 262 "data/maps/Route3/scripts.pory"
+# 267 "data/maps/Route3/scripts.pory"
 	compare VAR_ROUTE3_AMY, 1
 	goto_if_eq RightDeadTree_2
-# 272 "data/maps/Route3/scripts.pory"
+# 277 "data/maps/Route3/scripts.pory"
 	msgbox RightDeadTree_Text_2, MSGBOX_AUTOCLOSE
-# 273 "data/maps/Route3/scripts.pory"
+# 278 "data/maps/Route3/scripts.pory"
 	closemessage
 RightDeadTree_1:
-# 275 "data/maps/Route3/scripts.pory"
+# 280 "data/maps/Route3/scripts.pory"
 	releaseall
 	end
 
 RightDeadTree_2:
-# 263 "data/maps/Route3/scripts.pory"
-	msgbox RightDeadTree_Text_0, MSGBOX_AUTOCLOSE
-# 264 "data/maps/Route3/scripts.pory"
-	setwildbattle SPECIES_NICKIT, 12
-# 265 "data/maps/Route3/scripts.pory"
-	dowildbattle
-# 266 "data/maps/Route3/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 267 "data/maps/Route3/scripts.pory"
-	msgbox RightDeadTree_Text_1, MSGBOX_AUTOCLOSE
 # 268 "data/maps/Route3/scripts.pory"
-	setvar VAR_ROUTE3_AMY, 2
+	msgbox RightDeadTree_Text_0, MSGBOX_AUTOCLOSE
 # 269 "data/maps/Route3/scripts.pory"
+	setwildbattle SPECIES_NICKIT, 12
+# 270 "data/maps/Route3/scripts.pory"
+	dowildbattle
+# 271 "data/maps/Route3/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 272 "data/maps/Route3/scripts.pory"
+	msgbox RightDeadTree_Text_1, MSGBOX_AUTOCLOSE
+# 273 "data/maps/Route3/scripts.pory"
+	setvar VAR_ROUTE3_AMY, 2
+# 274 "data/maps/Route3/scripts.pory"
 	closemessage
 	goto RightDeadTree_1
 
 
 WrongDeadTree::
-# 280 "data/maps/Route3/scripts.pory"
+# 285 "data/maps/Route3/scripts.pory"
 	lock
-# 281 "data/maps/Route3/scripts.pory"
+# 286 "data/maps/Route3/scripts.pory"
 	msgbox RightDeadTree_Text_2, MSGBOX_AUTOCLOSE
-# 282 "data/maps/Route3/scripts.pory"
+# 287 "data/maps/Route3/scripts.pory"
 	closemessage
-# 283 "data/maps/Route3/scripts.pory"
+# 288 "data/maps/Route3/scripts.pory"
 	releaseall
 	end
 
@@ -450,22 +458,39 @@ Route3_Picknicker_Text_2:
 	.string "It's a bit dark but I'm not scared as\n"
 	.string "long as I have my POKéMON with me.$"
 
+Route3_SchoolKid_Text_0:
+# 152 "data/maps/Route3/scripts.pory"
+	.string "I learn better in the forest than at\n"
+	.string "school!\p"
+	.string "Look at what I can do!$"
+
+Route3_SchoolKid_Text_1:
+# 152 "data/maps/Route3/scripts.pory"
+	.string "You must have trained a lot in the\n"
+	.string "forest…$"
+
+Route3_SchoolKid_Text_2:
+# 153 "data/maps/Route3/scripts.pory"
+	.string "The woods help you learn better\n"
+	.string "because you get to practice things.\p"
+	.string "I don't like sitting behind a desk…$"
+
 Route3_AmyQuest_Text_0:
-# 180 "data/maps/Route3/scripts.pory"
+# 185 "data/maps/Route3/scripts.pory"
 	.string "Our readers are gonna love you!$"
 
 RightDeadTree_Text_0:
-# 263 "data/maps/Route3/scripts.pory"
+# 268 "data/maps/Route3/scripts.pory"
 	.string "It's a dead tree.\p"
 	.string "There's a POKéMON hiding under it!$"
 
 RightDeadTree_Text_1:
-# 267 "data/maps/Route3/scripts.pory"
+# 272 "data/maps/Route3/scripts.pory"
 	.string "{PLAYER} retrieved the missing page\n"
 	.string "from the POKéMON.$"
 
 RightDeadTree_Text_2:
-# 272 "data/maps/Route3/scripts.pory"
+# 277 "data/maps/Route3/scripts.pory"
 	.string "It's a dead tree.$"
 
 GoblinRecognisePlayer::
@@ -503,7 +528,7 @@ GoodToGo::
 	.string "See ya!$"
 
 AmyNeedHelpLong::
-# 207 "data/maps/Route3/scripts.pory"
+# 212 "data/maps/Route3/scripts.pory"
 	.string "???: You! I need your help!\p"
 	.string "AMY: I'm Amy, editor at ParlourZine. \p"
 	.string "I'm writing a piece about all those \n"
@@ -521,7 +546,7 @@ AmyNeedHelpLong::
 	.string "under a dead tree.$"
 
 AmyNeedHelpShort::
-# 225 "data/maps/Route3/scripts.pory"
+# 230 "data/maps/Route3/scripts.pory"
 	.string "AMY: Please, if you can help me I'll \n"
 	.string "write a piece about you! \p"
 	.string "I saw some POKéMON take the page away, \n"
@@ -529,7 +554,7 @@ AmyNeedHelpShort::
 	.string "dead tree.$"
 
 AmyFoundNotes::
-# 233 "data/maps/Route3/scripts.pory"
+# 238 "data/maps/Route3/scripts.pory"
 	.string "AMY: Did you find my notes?\p"
 	.string "… … …\p"
 	.string "Amazing thank you! \p"
@@ -544,7 +569,7 @@ AmyFoundNotes::
 	.string "En garde!$"
 
 AmyPostBattle::
-# 248 "data/maps/Route3/scripts.pory"
+# 253 "data/maps/Route3/scripts.pory"
 	.string "Wow, that was great! \p"
 	.string "I'm gonna get to work on that article, \n"
 	.string "our readers are gonna love this! \p"

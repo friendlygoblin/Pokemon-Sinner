@@ -1,1 +1,11 @@
 mapscripts Route4_MapScripts {}
+
+script Route4_Picnicker{
+    trainerbattle_single(TRAINER_NANCY, format("This route is pretty empty, I can get some quality time with my POKéMON!"), format("This is why I like empty places…"))
+    msgbox(format("Not many people come around here, I'm not sure why but I like that."), MSGBOX_AUTOCLOSE)
+}
+
+script Route4_Youngster{
+    trainerbattle_single(TRAINER_BILLY, format("Should I…\nOr shouldn't I?\pOkay, sure, I will battle!$"), format("So I shouldn't have battled…"))
+    msgbox(format("You're a lot stronger than you look, you know."), MSGBOX_AUTOCLOSE)
+}

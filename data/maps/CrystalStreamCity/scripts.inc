@@ -48,6 +48,14 @@ MuseumSign::
 	end
 
 
+CSC_Swimmer::
+# 34 "data/maps/CrystalStreamCity/scripts.pory"
+	trainerbattle_single TRAINER_DAVID, CSC_Swimmer_BattleIntro, CSC_Swimmer_Defeated
+# 35 "data/maps/CrystalStreamCity/scripts.pory"
+	msgbox CSC_Swimmer_PostBattle, MSGBOX_AUTOCLOSE
+	return
+
+
 CrystalStreamCity_Sign_Text_0:
 # 14 "data/maps/CrystalStreamCity/scripts.pory"
 	.string "Welcome to Crystal Stream City!\p"
@@ -63,3 +71,18 @@ MuseumSign_Text_0:
 # 28 "data/maps/CrystalStreamCity/scripts.pory"
 	.string "Sinner Museum\p"
 	.string "Art and history all in one place!$"
+
+CSC_Swimmer_BattleIntro::
+# 38 "data/maps/CrystalStreamCity/scripts.pory"
+	.string "Ahoy, there! Did you visit Big\n"
+	.string "Dog Island, too?$"
+
+CSC_Swimmer_Defeated::
+# 43 "data/maps/CrystalStreamCity/scripts.pory"
+	.string "I'm sinking!\n"
+	.string "Glub… Glub…$"
+
+CSC_Swimmer_PostBattle::
+# 48 "data/maps/CrystalStreamCity/scripts.pory"
+	.string "Some people even go inside that\n"
+	.string "cave on Big Dog Island.$"

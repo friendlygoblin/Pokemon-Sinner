@@ -1,0 +1,273 @@
+mapscripts Route8_MapScripts {}
+
+const Camera1 = 1
+const Camera2 = 2
+const Ella = 3
+const Katherine = 4
+const Harv = 5
+const Man = 6
+
+script Route8_MusicVideo{
+    lock
+
+//actor runs away
+    applymovement(Man, Route8_ManRunAway1)
+    applymovement(Harv, Common_Movement_FaceLeft)
+    waitmovement(Man)
+    delay(20)
+    applymovement(OBJ_EVENT_ID_PLAYER, Route8_PlayerMoveAside)
+    waitmovement(0)
+    applymovement(Harv, Common_Movement_FaceDown)
+    applymovement(Man, Route8_ManRunAway2)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
+    waitmovement(0)
+    delay(20)
+    removeobject(Man)
+    setflag(FLAG_ROUTE8_ACTOR)
+
+//Harv Frost grabs player
+    applymovement(Harv, Route8_HarvNoticesPlayer)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    msgbox(Route8_HarvAreYouTrainer, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        specialvar(VAR_RESULT, CalculatePlayerPartyCount)
+        if(var(VAR_RESULT)==1){
+            msgbox(Route8_HarvNotEnoughPkmn, MSGBOX_AUTOCLOSE)
+        }
+        else{
+            msgbox(Route8_HarvBattleTest, MSGBOX_AUTOCLOSE)
+            trainerbattle_no_intro(TRAINER_HARVFROST, format("Yes, that'll look great!"))
+            special(HealPlayerParty)
+            call(PictureParlourBattle)   
+        }
+    }
+    else{
+        msgbox(Route8_HarvRefusedBattle, MSGBOX_AUTOCLOSE)
+    }
+    setvar(VAR_ROUTE8_MUSICVIDEO, 1)
+    releaseall
+    end
+}
+
+script PictureParlourBattle{//Don't forget to change levels back to 27
+    msgbox(Route8_HarvAcceptedBattle, MSGBOX_AUTOCLOSE)
+    applymovement(Harv,Route8_HarvGoBackToInitial)
+    applymovement(OBJ_EVENT_ID_PLAYER, Route8_PlayerGetIntoPosition)
+    waitmovement(0)
+    msgbox(Route8_HarvAction, MSGBOX_AUTOCLOSE)
+    trainerbattle_double(TRAINER_PICTURE_PARLOUR, format("KATHERINE: Thanks for helping us out!\pELLA: We'll definitely owe you one!"), format("KATHERINE: What Lumiere had in mind was you! \pELLA: Yeah, that was a real motion picture!"), Route8_HarvNotEnoughPkmn, PostPictureParlourBattle)
+    setvar(VAR_ROUTE8_MUSICVIDEO, 2)
+}
+
+script PostPictureParlourBattle{
+    applymovement(Katherine, WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(Route8_KatherinePostBattle,MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_BLACK_GLASSES)
+    applymovement(Ella, WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(Route8_EllaPostBattle,MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_METRONOME)
+}
+
+script Route8_Harv{
+    lock
+    faceplayer
+    if(var(VAR_ROUTE8_MUSICVIDEO)!=2){
+        msgbox(Route8_HarvPlayerCameBack, MSGBOX_YESNO)
+        if (var(VAR_RESULT)==YES){
+            if (var(VAR_ROUTE8_MUSICVIDEO)==1){
+                msgbox(Route8_HarvBattleTest, MSGBOX_AUTOCLOSE)
+                trainerbattle_no_intro(TRAINER_HARVFROST, format("Yes, that'll look great!"))
+                special(HealPlayerParty)   
+
+            }
+            fadescreen(FADE_TO_BLACK)
+            setobjectxy(OBJ_EVENT_ID_PLAYER, 13, 24)
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+            waitmovement(0)
+            fadescreen(FADE_FROM_BLACK)
+            msgbox(Route8_HarvAction, MSGBOX_AUTOCLOSE)
+            trainerbattle_double(TRAINER_PICTURE_PARLOUR, format("KATHERINE: Thanks for helping us out!\pELLA: We'll definitely owe you one!"), format("KATHERINE: What Lumiere had in mind was you! \pELLA: Yeah, that was a real motion picture!"), Route8_HarvNotEnoughPkmn, PostPictureParlourBattle)
+            setvar(VAR_ROUTE8_MUSICVIDEO, 2)
+            }
+        else{
+            msgbox(Route8_HarvRefusedBattle, MSGBOX_AUTOCLOSE)
+        }
+    }
+    else{
+        msgbox(format("HARV FROST: Thank you so much for your help, you were fantastic!"))
+    }
+    release
+    end
+}
+
+script Route8_Katherine{ 
+    lock
+    faceplayer
+    if(var(VAR_ROUTE8_MUSICVIDEO)!=2){
+        msgbox(format("KATHERINE: Are you here to help with the music video? If yes, you should go tell Harv you're ready to shoot."))
+    }
+    else{
+        msgbox(format("KATHERINE: Thanks again for joining us on such short notice!\pMaybe you should consider an acting career."))
+    }
+    release
+    end
+}
+
+script Route8_Ella{ 
+    lock
+    faceplayer
+    if(var(VAR_ROUTE8_MUSICVIDEO)!=2){
+        msgbox(format("ELLA: The actor who was supposed to shoot with us isn't available anymore… \pIf you wanna help us out, go tell our director Harv, she'll tell you what to do."))
+    }
+    else{
+        msgbox(format("ELLA: This might be our best music video yet, thanks to you. Good luck with whatever you're planning next!"))
+    }
+    release
+    end
+}
+
+movement Route8_ManRunAway1{
+    walk_fast_down * 6
+    walk_in_place_fast_right * 2
+    step_end
+}
+
+movement Route8_PlayerMoveAside{
+    face_left
+    delay_8
+    walk_up
+    face_down
+    step_end
+}
+
+movement Route8_ManRunAway2{
+    walk_fast_right
+    walk_fast_down * 6
+    step_end
+}
+
+movement Route8_HarvNoticesPlayer{
+    face_left
+    emote_exclamation_mark
+    delay_16
+    walk_fast_left * 4
+    walk_fast_down * 2
+    step_end
+}
+
+movement Route8_HarvGoBackToInitial{
+    walk_up *2
+    walk_right *3
+    face_up
+    step_end
+}
+
+movement Route8_PlayerGetIntoPosition{
+    walk_up * 3
+    walk_right *3
+    walk_up
+    step_end
+}
+
+text Route8_HarvAreYouTrainer{
+    "???: You! \p"
+    "Are you a POKéMON trainer?\p"
+    "… … … \p"
+    "HARV FROST: Sorry, my name is Harv \n"
+    "Frost, I'm a film director. \p"
+    "The man who just ran away is one of my \n"
+    "actors, he had a personal emergency. \p"
+    "He won't be available for a while, but \n"
+    "I still have a music video to direct! \p"
+    "I need someone to have a double battle \n"
+    "with Katherine and Ella from the band \l"
+    "Picture Parlour, will you help?$"
+}
+
+text Route8_HarvBattleTest{
+    "Oh perfect, let's do a quick battle \n"
+    "test so I get an idea of what you \l"
+    "look like in battle.$"
+}
+
+text Route8_HarvNotEnoughPkmn{
+    "HARV FROST: Wait, you don't have \n"
+    "enough POKéMON… \p"
+    "It's a double battle so you'll need \l"
+    "at least two. \p"
+    "Come back when you have more than one \n"
+    "POKéMON, we'll wait here.$"
+}
+
+text Route8_HarvAcceptedBattle{
+    "Perfect! \p"
+    "Oh, what's your name?\p"
+    "… … … \p"
+    "Alright, {PLAYER} let's get you into \n"
+    "position!$"
+}
+
+text Route8_HarvRefusedBattle{
+    "Oh… \p"
+    "Hum, I hope I can find someone soon, \n"
+    "then… \p"
+    "Come back if you change your mind! $"
+}
+
+text Route8_HarvAction{
+    "HARV FROST: And… ACTION!$"
+}
+
+text Route8_HarvPlayerCameBack{
+    "HARV FROST: You came back! \p"
+    "Are you ready to star in a Picture \n"
+    "Parlour music video?$"
+}
+
+text Route8_KatherinePostBattle{
+    "KATHERINE: Woah that was great! \p"
+    "Thanks for giving us a hand, you're \n"
+    "really a lifesaver. \p"
+    "Here's a little something for you, it's \n"
+    "not much but I want you to have it.$"
+}
+
+text Route8_EllaPostBattle{
+    "ELLA: I also have a thank you gift. \p"
+    "Hope we'll see you around!$"
+}
+
+script Route8_Psychic {
+    trainerbattle_single(TRAINER_CEDRIC, format("I'm gonna read your mind!"), format("Uh I still need practice… "))
+    msgbox(format("One day I'll be strong enough to read everyone's minds."), MSGBOX_AUTOCLOSE)
+}
+
+script Route8_DragonTamer {
+    trainerbattle_single(TRAINER_AARON, format("Behold! My mighty dragons!"), format("My dragons!"))
+    msgbox(format("There are dragons in Portrait Town, I love going there."), MSGBOX_AUTOCLOSE)
+}
+
+script Route8_Camera1 {
+    trainerbattle_single(TRAINER_BECK, format("That camera is a bit heavy, I could use a break."), format("Ah, break is over… "))
+    msgbox(format("Harv is a great director, I don't mind carrying that heavy camera when I'm working with her."), MSGBOX_AUTOCLOSE)
+}
+
+script Route8_Camera2 {
+    trainerbattle_single(TRAINER_LAO_1, format("Filming requires patience and precision."), format("Mmh we'll need another take… "))
+    msgbox(format("I love working on music videos, I get to meet cool artists."), MSGBOX_AUTOCLOSE)
+}
+
+script Route8_BirdKeeper {
+    trainerbattle_single(TRAINER_ALBERTO, format("Look at me! \nI can fly like a bird!."), format("Ouch, landing is rough… "))
+    msgbox(format("What I love most about Flying POKéMON is how free they are.\pI wish I could grow wings."), MSGBOX_AUTOCLOSE)
+}
+
+script Route8_SchoolBoy {
+    trainerbattle_single(TRAINER_TED, format("I'm the best of my class!"), format("You're even better than me… "))
+    msgbox(format("You're even stronger than I am, that means if you came to my school I'd be second best… "), MSGBOX_AUTOCLOSE)
+}

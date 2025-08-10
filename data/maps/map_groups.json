@@ -644,7 +644,9 @@
     "SundayCave_Exit",
     "SundayCave_Basement",
     "Route7",
-    "MercyTown"
+    "MercyTown",
+    "Route8",
+    "PortraitTown"
   ],
   "gMapGroup_PreludeRegion_Indoors": [
     "StartTown_PlayerHouse",
@@ -671,6 +673,9 @@
     "CrystalStreamCity_ConcertHall_Lobby",
     "CrystalStreamCity_BikeShop",
     "MercyTown_ConcertHall",
-    "MercyTown_ConcertHall_Lobby"
+    "MercyTown_ConcertHall_Lobby",
+    "MercyTown_RockShop",
+    "PortraitTown_ConcertHall",
+    "PortraitTown_ConcertHall_Lobby"
   ]
 }

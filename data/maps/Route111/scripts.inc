@@ -909,550 +909,548 @@ Route111_EventScript_Beau::
 # 455 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Becky::
 # 456 "data/maps/Route111/scripts.pory"
-	trainerbattle_single TRAINER_BECKY, Route111_Text_BeckyIntro, Route111_Text_BeckyDefeat
-# 457 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_BeckyPostBattle, MSGBOX_AUTOCLOSE
+# 457 "data/maps/Route111/scripts.pory"
+	end
 # 458 "data/maps/Route111/scripts.pory"
-	end
+
 # 459 "data/maps/Route111/scripts.pory"
-
-# 460 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Dusty::
-# 461 "data/maps/Route111/scripts.pory"
+# 460 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_DUSTY_1, Route111_Text_DustyIntro, Route111_Text_DustyDefeat, Route111_EventScript_RegisterDusty
+# 461 "data/maps/Route111/scripts.pory"
+	specialvar VAR_RESULT, ShouldTryRematchBattle
 # 462 "data/maps/Route111/scripts.pory"
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-# 463 "data/maps/Route111/scripts.pory"
 	goto_if_eq VAR_RESULT, TRUE, Route111_EventScript_RematchDusty
-# 464 "data/maps/Route111/scripts.pory"
+# 463 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_DustyPostBattle, MSGBOX_DEFAULT
+# 464 "data/maps/Route111/scripts.pory"
+	release
 # 465 "data/maps/Route111/scripts.pory"
-	release
+	end
 # 466 "data/maps/Route111/scripts.pory"
-	end
+
 # 467 "data/maps/Route111/scripts.pory"
-
-# 468 "data/maps/Route111/scripts.pory"
 Route111_EventScript_RegisterDusty::
+# 468 "data/maps/Route111/scripts.pory"
+	special PlayerFaceTrainerAfterBattle
 # 469 "data/maps/Route111/scripts.pory"
-	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
 # 470 "data/maps/Route111/scripts.pory"
-	waitmovement 0
-# 471 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_DustyRegister, MSGBOX_DEFAULT
-# 472 "data/maps/Route111/scripts.pory"
+# 471 "data/maps/Route111/scripts.pory"
 	register_matchcall TRAINER_DUSTY_1
+# 472 "data/maps/Route111/scripts.pory"
+	release
 # 473 "data/maps/Route111/scripts.pory"
-	release
+	end
 # 474 "data/maps/Route111/scripts.pory"
-	end
+
 # 475 "data/maps/Route111/scripts.pory"
-
-# 476 "data/maps/Route111/scripts.pory"
 Route111_EventScript_RematchDusty::
-# 477 "data/maps/Route111/scripts.pory"
+# 476 "data/maps/Route111/scripts.pory"
 	trainerbattle_rematch TRAINER_DUSTY_1, Route111_Text_DustyRematchIntro, Route111_Text_DustyRematchDefeat
-# 478 "data/maps/Route111/scripts.pory"
+# 477 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_DustyPostRematch, MSGBOX_AUTOCLOSE
+# 478 "data/maps/Route111/scripts.pory"
+	end
 # 479 "data/maps/Route111/scripts.pory"
-	end
+
 # 480 "data/maps/Route111/scripts.pory"
-
-# 481 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Travis::
-# 482 "data/maps/Route111/scripts.pory"
+# 481 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_TRAVIS, Route111_Text_TravisIntro, Route111_Text_TravisDefeat
-# 483 "data/maps/Route111/scripts.pory"
+# 482 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_TravisPostBattle, MSGBOX_AUTOCLOSE
+# 483 "data/maps/Route111/scripts.pory"
+	end
 # 484 "data/maps/Route111/scripts.pory"
-	end
+
 # 485 "data/maps/Route111/scripts.pory"
-
-# 486 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Irene::
-# 487 "data/maps/Route111/scripts.pory"
+# 486 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_IRENE, Route111_Text_IreneIntro, Route111_Text_IreneDefeat
-# 488 "data/maps/Route111/scripts.pory"
+# 487 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_IrenePostBattle, MSGBOX_AUTOCLOSE
+# 488 "data/maps/Route111/scripts.pory"
+	end
 # 489 "data/maps/Route111/scripts.pory"
-	end
+
 # 490 "data/maps/Route111/scripts.pory"
-
-# 491 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Daisuke::
-# 492 "data/maps/Route111/scripts.pory"
+# 491 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_DAISUKE, Route111_Text_DaisukeIntro, Route111_Text_DaisukeDefeat
-# 493 "data/maps/Route111/scripts.pory"
+# 492 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_DaisukePostBattle, MSGBOX_AUTOCLOSE
+# 493 "data/maps/Route111/scripts.pory"
+	end
 # 494 "data/maps/Route111/scripts.pory"
-	end
+
 # 495 "data/maps/Route111/scripts.pory"
-
-# 496 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Wilton::
-# 497 "data/maps/Route111/scripts.pory"
+# 496 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_WILTON_1, Route111_Text_WiltonIntro, Route111_Text_WiltonDefeat, Route111_EventScript_RegisterWilton
+# 497 "data/maps/Route111/scripts.pory"
+	specialvar VAR_RESULT, ShouldTryRematchBattle
 # 498 "data/maps/Route111/scripts.pory"
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-# 499 "data/maps/Route111/scripts.pory"
 	goto_if_eq VAR_RESULT, TRUE, Route111_EventScript_RematchWilton
-# 500 "data/maps/Route111/scripts.pory"
+# 499 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_WiltonPostBattle, MSGBOX_DEFAULT
+# 500 "data/maps/Route111/scripts.pory"
+	release
 # 501 "data/maps/Route111/scripts.pory"
-	release
+	end
 # 502 "data/maps/Route111/scripts.pory"
-	end
+
 # 503 "data/maps/Route111/scripts.pory"
-
-# 504 "data/maps/Route111/scripts.pory"
 Route111_EventScript_RegisterWilton::
+# 504 "data/maps/Route111/scripts.pory"
+	special PlayerFaceTrainerAfterBattle
 # 505 "data/maps/Route111/scripts.pory"
-	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
 # 506 "data/maps/Route111/scripts.pory"
-	waitmovement 0
-# 507 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_WiltonRegister, MSGBOX_DEFAULT
-# 508 "data/maps/Route111/scripts.pory"
+# 507 "data/maps/Route111/scripts.pory"
 	register_matchcall TRAINER_WILTON_1
+# 508 "data/maps/Route111/scripts.pory"
+	release
 # 509 "data/maps/Route111/scripts.pory"
-	release
+	end
 # 510 "data/maps/Route111/scripts.pory"
-	end
+
 # 511 "data/maps/Route111/scripts.pory"
-
-# 512 "data/maps/Route111/scripts.pory"
 Route111_EventScript_RematchWilton::
-# 513 "data/maps/Route111/scripts.pory"
+# 512 "data/maps/Route111/scripts.pory"
 	trainerbattle_rematch TRAINER_WILTON_1, Route111_Text_WiltonRematchIntro, Route111_Text_WiltonRematchDefeat
-# 514 "data/maps/Route111/scripts.pory"
+# 513 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_WiltonPostRematch, MSGBOX_AUTOCLOSE
+# 514 "data/maps/Route111/scripts.pory"
+	end
 # 515 "data/maps/Route111/scripts.pory"
-	end
+
 # 516 "data/maps/Route111/scripts.pory"
-
-# 517 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Brooke::
-# 518 "data/maps/Route111/scripts.pory"
+# 517 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_BROOKE_1, Route111_Text_BrookeIntro, Route111_Text_BrookeDefeat, Route111_EventScript_RegisterBrooke
-# 519 "data/maps/Route111/scripts.pory"
+# 518 "data/maps/Route111/scripts.pory"
 	specialvar VAR_RESULT, ShouldTryRematchBattle
-# 520 "data/maps/Route111/scripts.pory"
+# 519 "data/maps/Route111/scripts.pory"
 	goto_if_eq VAR_RESULT, TRUE, Route111_EventScript_RematchBrooke
-# 521 "data/maps/Route111/scripts.pory"
+# 520 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_BrookePostBattle, MSGBOX_DEFAULT
+# 521 "data/maps/Route111/scripts.pory"
+	release
 # 522 "data/maps/Route111/scripts.pory"
-	release
+	end
 # 523 "data/maps/Route111/scripts.pory"
-	end
+
 # 524 "data/maps/Route111/scripts.pory"
-
-# 525 "data/maps/Route111/scripts.pory"
 Route111_EventScript_RegisterBrooke::
-# 526 "data/maps/Route111/scripts.pory"
+# 525 "data/maps/Route111/scripts.pory"
 	special PlayerFaceTrainerAfterBattle
-# 527 "data/maps/Route111/scripts.pory"
+# 526 "data/maps/Route111/scripts.pory"
 	waitmovement 0
-# 528 "data/maps/Route111/scripts.pory"
+# 527 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_BrookeRegister, MSGBOX_DEFAULT
-# 529 "data/maps/Route111/scripts.pory"
+# 528 "data/maps/Route111/scripts.pory"
 	register_matchcall TRAINER_BROOKE_1
-# 530 "data/maps/Route111/scripts.pory"
+# 529 "data/maps/Route111/scripts.pory"
 	release
+# 530 "data/maps/Route111/scripts.pory"
+	end
 # 531 "data/maps/Route111/scripts.pory"
-	end
+
 # 532 "data/maps/Route111/scripts.pory"
-
-# 533 "data/maps/Route111/scripts.pory"
 Route111_EventScript_RematchBrooke::
-# 534 "data/maps/Route111/scripts.pory"
+# 533 "data/maps/Route111/scripts.pory"
 	trainerbattle_rematch TRAINER_BROOKE_1, Route111_Text_BrookeRematchIntro, Route111_Text_BrookeRematchDefeat
-# 535 "data/maps/Route111/scripts.pory"
+# 534 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_BrookePostRematch, MSGBOX_AUTOCLOSE
+# 535 "data/maps/Route111/scripts.pory"
+	end
 # 536 "data/maps/Route111/scripts.pory"
-	end
+
 # 537 "data/maps/Route111/scripts.pory"
-
-# 538 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Hayden::
-# 539 "data/maps/Route111/scripts.pory"
+# 538 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_HAYDEN, Route111_Text_HaydenIntro, Route111_Text_HaydenDefeat
-# 540 "data/maps/Route111/scripts.pory"
+# 539 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_HaydenPostBattle, MSGBOX_AUTOCLOSE
+# 540 "data/maps/Route111/scripts.pory"
+	end
 # 541 "data/maps/Route111/scripts.pory"
-	end
+
 # 542 "data/maps/Route111/scripts.pory"
-
-# 543 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Bianca::
-# 544 "data/maps/Route111/scripts.pory"
+# 543 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_BIANCA, Route111_Text_BiancaIntro, Route111_Text_BiancaDefeat
-# 545 "data/maps/Route111/scripts.pory"
+# 544 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_BiancaPostBattle, MSGBOX_AUTOCLOSE
+# 545 "data/maps/Route111/scripts.pory"
+	end
 # 546 "data/maps/Route111/scripts.pory"
-	end
+
 # 547 "data/maps/Route111/scripts.pory"
-
-# 548 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Tyron::
-# 549 "data/maps/Route111/scripts.pory"
+# 548 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_TYRON, Route111_Text_TyronIntro, Route111_Text_TyronDefeat
-# 550 "data/maps/Route111/scripts.pory"
+# 549 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_TyronPostBattle, MSGBOX_AUTOCLOSE
+# 550 "data/maps/Route111/scripts.pory"
+	end
 # 551 "data/maps/Route111/scripts.pory"
-	end
+
 # 552 "data/maps/Route111/scripts.pory"
-
-# 553 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Celina::
-# 554 "data/maps/Route111/scripts.pory"
+# 553 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_CELINA, Route111_Text_CelinaIntro, Route111_Text_CelinaDefeat
-# 555 "data/maps/Route111/scripts.pory"
+# 554 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_CelinaPostBattle, MSGBOX_AUTOCLOSE
+# 555 "data/maps/Route111/scripts.pory"
+	end
 # 556 "data/maps/Route111/scripts.pory"
-	end
+
 # 557 "data/maps/Route111/scripts.pory"
-
-# 558 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Celia::
-# 559 "data/maps/Route111/scripts.pory"
+# 558 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_CELIA, Route111_Text_CeliaIntro, Route111_Text_CeliaDefeat
-# 560 "data/maps/Route111/scripts.pory"
+# 559 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_CeliaPostBattle, MSGBOX_AUTOCLOSE
+# 560 "data/maps/Route111/scripts.pory"
+	end
 # 561 "data/maps/Route111/scripts.pory"
-	end
+
 # 562 "data/maps/Route111/scripts.pory"
-
-# 563 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Bryan::
-# 564 "data/maps/Route111/scripts.pory"
+# 563 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_BRYAN, Route111_Text_BryanIntro, Route111_Text_BryanDefeat
-# 565 "data/maps/Route111/scripts.pory"
+# 564 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_BryanPostBattle, MSGBOX_AUTOCLOSE
+# 565 "data/maps/Route111/scripts.pory"
+	end
 # 566 "data/maps/Route111/scripts.pory"
-	end
+
 # 567 "data/maps/Route111/scripts.pory"
-
-# 568 "data/maps/Route111/scripts.pory"
 Route111_EventScript_Branden::
-# 569 "data/maps/Route111/scripts.pory"
+# 568 "data/maps/Route111/scripts.pory"
 	trainerbattle_single TRAINER_BRANDEN, Route111_Text_BrandenIntro, Route111_Text_BrandenDefeat
-# 570 "data/maps/Route111/scripts.pory"
+# 569 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_BrandenPostBattle, MSGBOX_AUTOCLOSE
+# 570 "data/maps/Route111/scripts.pory"
+	end
 # 571 "data/maps/Route111/scripts.pory"
-	end
+
 # 572 "data/maps/Route111/scripts.pory"
-
-# 573 "data/maps/Route111/scripts.pory"
 Route111_EventScript_TrainerHillSign::
-# 574 "data/maps/Route111/scripts.pory"
+# 573 "data/maps/Route111/scripts.pory"
 	msgbox Route111_Text_TrainerHillSign, MSGBOX_SIGN
-# 575 "data/maps/Route111/scripts.pory"
+# 574 "data/maps/Route111/scripts.pory"
 	end
+# 575 "data/maps/Route111/scripts.pory"
+
 # 576 "data/maps/Route111/scripts.pory"
-
-# 577 "data/maps/Route111/scripts.pory"
 Route111_Text_BattleOurFamily:
-# 578 "data/maps/Route111/scripts.pory"
+# 577 "data/maps/Route111/scripts.pory"
 	.string "Hello! I take it you're a traveler.\p"
-# 579 "data/maps/Route111/scripts.pory"
+# 578 "data/maps/Route111/scripts.pory"
 	.string "How's this? What do you say to taking\n"
-# 580 "data/maps/Route111/scripts.pory"
+# 579 "data/maps/Route111/scripts.pory"
 	.string "on our family of four in a series of\l"
-# 581 "data/maps/Route111/scripts.pory"
+# 580 "data/maps/Route111/scripts.pory"
 	.string "POKéMON battles?$"
+# 581 "data/maps/Route111/scripts.pory"
+
 # 582 "data/maps/Route111/scripts.pory"
-
-# 583 "data/maps/Route111/scripts.pory"
 Route111_Text_IsThatSo:
-# 584 "data/maps/Route111/scripts.pory"
+# 583 "data/maps/Route111/scripts.pory"
 	.string "Is that so?\n"
-# 585 "data/maps/Route111/scripts.pory"
+# 584 "data/maps/Route111/scripts.pory"
 	.string "Drop in, if you change your mind!$"
+# 585 "data/maps/Route111/scripts.pory"
+
 # 586 "data/maps/Route111/scripts.pory"
-
-# 587 "data/maps/Route111/scripts.pory"
 Route111_Text_VictorIntro:
-# 588 "data/maps/Route111/scripts.pory"
+# 587 "data/maps/Route111/scripts.pory"
 	.string "That's the spirit! I like you!$"
+# 588 "data/maps/Route111/scripts.pory"
+
 # 589 "data/maps/Route111/scripts.pory"
-
-# 590 "data/maps/Route111/scripts.pory"
 Route111_Text_VictorDefeat:
-# 591 "data/maps/Route111/scripts.pory"
+# 590 "data/maps/Route111/scripts.pory"
 	.string "Aiyah!\n"
-# 592 "data/maps/Route111/scripts.pory"
+# 591 "data/maps/Route111/scripts.pory"
 	.string "You're a lot tougher than I expected!$"
+# 592 "data/maps/Route111/scripts.pory"
+
 # 593 "data/maps/Route111/scripts.pory"
-
-# 594 "data/maps/Route111/scripts.pory"
 Route111_Text_VictorPostBattle:
-# 595 "data/maps/Route111/scripts.pory"
+# 594 "data/maps/Route111/scripts.pory"
 	.string "Hey, all!\n"
-# 596 "data/maps/Route111/scripts.pory"
+# 595 "data/maps/Route111/scripts.pory"
 	.string "I've found a pretty strong TRAINER!$"
+# 596 "data/maps/Route111/scripts.pory"
+
 # 597 "data/maps/Route111/scripts.pory"
-
-# 598 "data/maps/Route111/scripts.pory"
 Route111_Text_VictoriaIntro:
-# 599 "data/maps/Route111/scripts.pory"
+# 598 "data/maps/Route111/scripts.pory"
 	.string "Oh, my goodness! Aren't you young?\p"
-# 600 "data/maps/Route111/scripts.pory"
+# 599 "data/maps/Route111/scripts.pory"
 	.string "You must be quite the TRAINER to beat\n"
-# 601 "data/maps/Route111/scripts.pory"
+# 600 "data/maps/Route111/scripts.pory"
 	.string "my husband, though.\p"
-# 602 "data/maps/Route111/scripts.pory"
+# 601 "data/maps/Route111/scripts.pory"
 	.string "It's my turn to battle now!$"
+# 602 "data/maps/Route111/scripts.pory"
+
 # 603 "data/maps/Route111/scripts.pory"
-
-# 604 "data/maps/Route111/scripts.pory"
 Route111_Text_VictoriaDefeat:
-# 605 "data/maps/Route111/scripts.pory"
+# 604 "data/maps/Route111/scripts.pory"
 	.string "Oh, gosh!\n"
-# 606 "data/maps/Route111/scripts.pory"
+# 605 "data/maps/Route111/scripts.pory"
 	.string "I can't get over how strong you are!$"
+# 606 "data/maps/Route111/scripts.pory"
+
 # 607 "data/maps/Route111/scripts.pory"
-
-# 608 "data/maps/Route111/scripts.pory"
 Route111_Text_VictoriaPostBattle:
-# 609 "data/maps/Route111/scripts.pory"
+# 608 "data/maps/Route111/scripts.pory"
 	.string "There's a strong TRAINER here!\n"
-# 610 "data/maps/Route111/scripts.pory"
+# 609 "data/maps/Route111/scripts.pory"
 	.string "This one's really strong!$"
+# 610 "data/maps/Route111/scripts.pory"
+
 # 611 "data/maps/Route111/scripts.pory"
-
-# 612 "data/maps/Route111/scripts.pory"
 Route111_Text_ViviIntro:
-# 613 "data/maps/Route111/scripts.pory"
+# 612 "data/maps/Route111/scripts.pory"
 	.string "You're stronger than Mommy? Wow!\p"
-# 614 "data/maps/Route111/scripts.pory"
+# 613 "data/maps/Route111/scripts.pory"
 	.string "But I'm strong, too!\n"
-# 615 "data/maps/Route111/scripts.pory"
+# 614 "data/maps/Route111/scripts.pory"
 	.string "Really! Honestly!$"
+# 615 "data/maps/Route111/scripts.pory"
+
 # 616 "data/maps/Route111/scripts.pory"
-
-# 617 "data/maps/Route111/scripts.pory"
 Route111_Text_ViviDefeat:
-# 618 "data/maps/Route111/scripts.pory"
+# 617 "data/maps/Route111/scripts.pory"
 	.string "Huh? Did I just lose?$"
+# 618 "data/maps/Route111/scripts.pory"
+
 # 619 "data/maps/Route111/scripts.pory"
-
-# 620 "data/maps/Route111/scripts.pory"
 Route111_Text_ViviPostBattle:
-# 621 "data/maps/Route111/scripts.pory"
+# 620 "data/maps/Route111/scripts.pory"
 	.string "This stinks…\p"
-# 622 "data/maps/Route111/scripts.pory"
+# 621 "data/maps/Route111/scripts.pory"
 	.string "…Snivel… Grandma!$"
+# 622 "data/maps/Route111/scripts.pory"
+
 # 623 "data/maps/Route111/scripts.pory"
-
-# 624 "data/maps/Route111/scripts.pory"
 Route111_Text_VickyIntro:
-# 625 "data/maps/Route111/scripts.pory"
+# 624 "data/maps/Route111/scripts.pory"
 	.string "How dare you make my granddaughter\n"
-# 626 "data/maps/Route111/scripts.pory"
+# 625 "data/maps/Route111/scripts.pory"
 	.string "cry!\p"
-# 627 "data/maps/Route111/scripts.pory"
+# 626 "data/maps/Route111/scripts.pory"
 	.string "For that, I'm going to smack you!\n"
-# 628 "data/maps/Route111/scripts.pory"
+# 627 "data/maps/Route111/scripts.pory"
 	.string "Prepare to lose!$"
+# 628 "data/maps/Route111/scripts.pory"
+
 # 629 "data/maps/Route111/scripts.pory"
-
-# 630 "data/maps/Route111/scripts.pory"
 Route111_Text_VickyDefeat:
-# 631 "data/maps/Route111/scripts.pory"
+# 630 "data/maps/Route111/scripts.pory"
 	.string "Kwah! You are strong…\n"
-# 632 "data/maps/Route111/scripts.pory"
+# 631 "data/maps/Route111/scripts.pory"
 	.string "My granddaughter was right…$"
+# 632 "data/maps/Route111/scripts.pory"
+
 # 633 "data/maps/Route111/scripts.pory"
-
-# 634 "data/maps/Route111/scripts.pory"
 Route111_Text_VickyPostBattle:
-# 635 "data/maps/Route111/scripts.pory"
+# 634 "data/maps/Route111/scripts.pory"
 	.string "If you're not in any hurry,\n"
-# 636 "data/maps/Route111/scripts.pory"
+# 635 "data/maps/Route111/scripts.pory"
 	.string "visit with us awhile.$"
+# 636 "data/maps/Route111/scripts.pory"
+
 # 637 "data/maps/Route111/scripts.pory"
-
-# 638 "data/maps/Route111/scripts.pory"
 Route111_Text_ToughToKeepWinningUpTheRanks:
-# 639 "data/maps/Route111/scripts.pory"
+# 638 "data/maps/Route111/scripts.pory"
 	.string "If you don't raise your POKéMON some\n"
-# 640 "data/maps/Route111/scripts.pory"
+# 639 "data/maps/Route111/scripts.pory"
 	.string "more, it could be tough to keep winning\l"
-# 641 "data/maps/Route111/scripts.pory"
+# 640 "data/maps/Route111/scripts.pory"
 	.string "up through the ranks.\p"
-# 642 "data/maps/Route111/scripts.pory"
+# 641 "data/maps/Route111/scripts.pory"
 	.string "I've heard the POKéMON LEAGUE's\n"
-# 643 "data/maps/Route111/scripts.pory"
+# 642 "data/maps/Route111/scripts.pory"
 	.string "ELITE FOUR are far stronger than\l"
-# 644 "data/maps/Route111/scripts.pory"
+# 643 "data/maps/Route111/scripts.pory"
 	.string "any GYM LEADER.$"
+# 644 "data/maps/Route111/scripts.pory"
+
 # 645 "data/maps/Route111/scripts.pory"
-
-# 646 "data/maps/Route111/scripts.pory"
 Route111_Text_WinstrateFamilyDestroyedMe:
-# 647 "data/maps/Route111/scripts.pory"
+# 646 "data/maps/Route111/scripts.pory"
 	.string "I challenged the WINSTRATE family,\n"
-# 648 "data/maps/Route111/scripts.pory"
+# 647 "data/maps/Route111/scripts.pory"
 	.string "but four matches in a row is tough\l"
-# 649 "data/maps/Route111/scripts.pory"
+# 648 "data/maps/Route111/scripts.pory"
 	.string "going… They destroyed me.$"
+# 649 "data/maps/Route111/scripts.pory"
+
 # 650 "data/maps/Route111/scripts.pory"
-
-# 651 "data/maps/Route111/scripts.pory"
 Route111_Text_RouteSignMauville:
+# 651 "data/maps/Route111/scripts.pory"
+	.string "ROUTE 111\n"
 # 652 "data/maps/Route111/scripts.pory"
-	.string "ROUTE 111\n"
-# 653 "data/maps/Route111/scripts.pory"
 	.string "{DOWN_ARROW} MAUVILLE CITY$"
+# 653 "data/maps/Route111/scripts.pory"
+
 # 654 "data/maps/Route111/scripts.pory"
-
-# 655 "data/maps/Route111/scripts.pory"
 Route111_Text_WinstrateHouseSign:
-# 656 "data/maps/Route111/scripts.pory"
+# 655 "data/maps/Route111/scripts.pory"
 	.string "“Our family's hearts beat as one!”\n"
-# 657 "data/maps/Route111/scripts.pory"
+# 656 "data/maps/Route111/scripts.pory"
 	.string "THE WINSTRATE'S HOUSE$"
+# 657 "data/maps/Route111/scripts.pory"
+
 # 658 "data/maps/Route111/scripts.pory"
-
-# 659 "data/maps/Route111/scripts.pory"
 Route111_Text_RouteSign112:
+# 659 "data/maps/Route111/scripts.pory"
+	.string "ROUTE 111\n"
 # 660 "data/maps/Route111/scripts.pory"
-	.string "ROUTE 111\n"
-# 661 "data/maps/Route111/scripts.pory"
 	.string "{LEFT_ARROW} ROUTE 112$"
+# 661 "data/maps/Route111/scripts.pory"
+
 # 662 "data/maps/Route111/scripts.pory"
-
-# 663 "data/maps/Route111/scripts.pory"
 Route111_Text_RouteSign113:
-# 664 "data/maps/Route111/scripts.pory"
+# 663 "data/maps/Route111/scripts.pory"
 	.string "ROUTE 111\n"
-# 665 "data/maps/Route111/scripts.pory"
+# 664 "data/maps/Route111/scripts.pory"
 	.string "{LEFT_ARROW} ROUTE 113$"
+# 665 "data/maps/Route111/scripts.pory"
+
 # 666 "data/maps/Route111/scripts.pory"
-
-# 667 "data/maps/Route111/scripts.pory"
 Route111_Text_OldLadysRestStopSign:
-# 668 "data/maps/Route111/scripts.pory"
+# 667 "data/maps/Route111/scripts.pory"
 	.string "OLD LADY'S REST STOP\n"
-# 669 "data/maps/Route111/scripts.pory"
+# 668 "data/maps/Route111/scripts.pory"
 	.string "“Come in and rest your tired bones.”$"
+# 669 "data/maps/Route111/scripts.pory"
+
 # 670 "data/maps/Route111/scripts.pory"
-
-# 671 "data/maps/Route111/scripts.pory"
 Route111_Text_TrainerTipsSpAtkSpDef:
-# 672 "data/maps/Route111/scripts.pory"
+# 671 "data/maps/Route111/scripts.pory"
 	.string "TRAINER TIPS\p"
-# 673 "data/maps/Route111/scripts.pory"
+# 672 "data/maps/Route111/scripts.pory"
 	.string "One of the indicators of a POKéMON's\n"
-# 674 "data/maps/Route111/scripts.pory"
+# 673 "data/maps/Route111/scripts.pory"
 	.string "powerfulness is SP. ATK. It stands for\l"
-# 675 "data/maps/Route111/scripts.pory"
+# 674 "data/maps/Route111/scripts.pory"
 	.string "“SPECIAL ATTACK.”\p"
-# 676 "data/maps/Route111/scripts.pory"
+# 675 "data/maps/Route111/scripts.pory"
 	.string "Likewise, SP. DEF stands for “SPECIAL\n"
-# 677 "data/maps/Route111/scripts.pory"
+# 676 "data/maps/Route111/scripts.pory"
 	.string "DEFENSE.”$"
+# 677 "data/maps/Route111/scripts.pory"
+
 # 678 "data/maps/Route111/scripts.pory"
-
-# 679 "data/maps/Route111/scripts.pory"
 Route111_Text_ShouldBeMirageTowerAroundHere:
-# 680 "data/maps/Route111/scripts.pory"
+# 679 "data/maps/Route111/scripts.pory"
 	.string "There should be a tower made of sand\n"
-# 681 "data/maps/Route111/scripts.pory"
+# 680 "data/maps/Route111/scripts.pory"
 	.string "around here somewhere.\p"
-# 682 "data/maps/Route111/scripts.pory"
+# 681 "data/maps/Route111/scripts.pory"
 	.string "But for some reason, it can be seen\n"
-# 683 "data/maps/Route111/scripts.pory"
+# 682 "data/maps/Route111/scripts.pory"
 	.string "sometimes, and sometimes not.\p"
-# 684 "data/maps/Route111/scripts.pory"
+# 683 "data/maps/Route111/scripts.pory"
 	.string "That's why I call it the MIRAGE TOWER.$"
+# 684 "data/maps/Route111/scripts.pory"
+
 # 685 "data/maps/Route111/scripts.pory"
-
-# 686 "data/maps/Route111/scripts.pory"
 Route111_Text_MirageTowerClearlyVisible:
-# 687 "data/maps/Route111/scripts.pory"
+# 686 "data/maps/Route111/scripts.pory"
 	.string "I see it!\n"
-# 688 "data/maps/Route111/scripts.pory"
+# 687 "data/maps/Route111/scripts.pory"
 	.string "The tower of sand!\p"
-# 689 "data/maps/Route111/scripts.pory"
+# 688 "data/maps/Route111/scripts.pory"
 	.string "The sand tower they called a mirage\n"
-# 690 "data/maps/Route111/scripts.pory"
+# 689 "data/maps/Route111/scripts.pory"
 	.string "is clearly visible!\p"
-# 691 "data/maps/Route111/scripts.pory"
+# 690 "data/maps/Route111/scripts.pory"
 	.string "But it looks so fragile…\n"
-# 692 "data/maps/Route111/scripts.pory"
+# 691 "data/maps/Route111/scripts.pory"
 	.string "It could crumble away anytime…\p"
-# 693 "data/maps/Route111/scripts.pory"
+# 692 "data/maps/Route111/scripts.pory"
 	.string "I want to go inside it, but I can't\n"
-# 694 "data/maps/Route111/scripts.pory"
+# 693 "data/maps/Route111/scripts.pory"
 	.string "get my courage up for it…$"
+# 694 "data/maps/Route111/scripts.pory"
+
 # 695 "data/maps/Route111/scripts.pory"
-
-# 696 "data/maps/Route111/scripts.pory"
 Route111_Text_ThatWasShockingSandRainedDown:
-# 697 "data/maps/Route111/scripts.pory"
+# 696 "data/maps/Route111/scripts.pory"
 	.string "Whoa…\n"
-# 698 "data/maps/Route111/scripts.pory"
+# 697 "data/maps/Route111/scripts.pory"
 	.string "That was shocking.\p"
-# 699 "data/maps/Route111/scripts.pory"
+# 698 "data/maps/Route111/scripts.pory"
 	.string "Sand rained down in chunks all of\n"
-# 700 "data/maps/Route111/scripts.pory"
+# 699 "data/maps/Route111/scripts.pory"
 	.string "a sudden.\p"
-# 701 "data/maps/Route111/scripts.pory"
+# 700 "data/maps/Route111/scripts.pory"
 	.string "What was it like inside?\n"
-# 702 "data/maps/Route111/scripts.pory"
+# 701 "data/maps/Route111/scripts.pory"
 	.string "Were there sandy ghosts and such?$"
+# 702 "data/maps/Route111/scripts.pory"
+
 # 703 "data/maps/Route111/scripts.pory"
-
-# 704 "data/maps/Route111/scripts.pory"
 Route111_Text_MirageTowerHasntBeenSeenSince:
-# 705 "data/maps/Route111/scripts.pory"
+# 704 "data/maps/Route111/scripts.pory"
 	.string "Since I spoke to you, the tower of sand\n"
-# 706 "data/maps/Route111/scripts.pory"
+# 705 "data/maps/Route111/scripts.pory"
 	.string "hasn't been seen.\p"
-# 707 "data/maps/Route111/scripts.pory"
+# 706 "data/maps/Route111/scripts.pory"
 	.string "Perhaps it really was\n"
-# 708 "data/maps/Route111/scripts.pory"
+# 707 "data/maps/Route111/scripts.pory"
 	.string "the MIRAGE TOWER…$"
+# 708 "data/maps/Route111/scripts.pory"
+
 # 709 "data/maps/Route111/scripts.pory"
-
-# 710 "data/maps/Route111/scripts.pory"
 Route111_Text_ClawFossilDisappeared:
-# 711 "data/maps/Route111/scripts.pory"
+# 710 "data/maps/Route111/scripts.pory"
 	.string "The CLAW FOSSIL disappeared into\n"
+# 711 "data/maps/Route111/scripts.pory"
+	.string "the sand…$"
 # 712 "data/maps/Route111/scripts.pory"
-	.string "the sand…$"
+
 # 713 "data/maps/Route111/scripts.pory"
-
-# 714 "data/maps/Route111/scripts.pory"
 Route111_Text_RootFossilDisappeared:
-# 715 "data/maps/Route111/scripts.pory"
+# 714 "data/maps/Route111/scripts.pory"
 	.string "The ROOT FOSSIL disappeared into\n"
-# 716 "data/maps/Route111/scripts.pory"
+# 715 "data/maps/Route111/scripts.pory"
 	.string "the sand…$"
+# 716 "data/maps/Route111/scripts.pory"
+
 # 717 "data/maps/Route111/scripts.pory"
-
-# 718 "data/maps/Route111/scripts.pory"
 Route111_Text_MauvilleUncleToldMeToTakeRockSmash:
-# 719 "data/maps/Route111/scripts.pory"
+# 718 "data/maps/Route111/scripts.pory"
 	.string "Oh, no!\p"
-# 720 "data/maps/Route111/scripts.pory"
+# 719 "data/maps/Route111/scripts.pory"
 	.string "My uncle in MAUVILLE told me to take\n"
-# 721 "data/maps/Route111/scripts.pory"
+# 720 "data/maps/Route111/scripts.pory"
 	.string "ROCK SMASH with me if I was going to\l"
-# 722 "data/maps/Route111/scripts.pory"
+# 721 "data/maps/Route111/scripts.pory"
 	.string "ROUTE 111!\p"
-# 723 "data/maps/Route111/scripts.pory"
+# 722 "data/maps/Route111/scripts.pory"
 	.string "My uncle? He lives across from\n"
-# 724 "data/maps/Route111/scripts.pory"
+# 723 "data/maps/Route111/scripts.pory"
 	.string "the bike shop in MAUVILLE.$"
-# 725 "data/maps/Route111/scripts.pory"
+# 724 "data/maps/Route111/scripts.pory"
 
-# 726 "data/maps/Route111/scripts.pory"
+# 725 "data/maps/Route111/scripts.pory"
 Route111_Text_TrainerHillSign:
-# 727 "data/maps/Route111/scripts.pory"
+# 726 "data/maps/Route111/scripts.pory"
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
-# 728 "data/maps/Route111/scripts.pory"
+# 727 "data/maps/Route111/scripts.pory"
 	.string "“Scale the heights, you hot-blooded\n"
-# 729 "data/maps/Route111/scripts.pory"
+# 728 "data/maps/Route111/scripts.pory"
 	.string "TRAINERS!”$"

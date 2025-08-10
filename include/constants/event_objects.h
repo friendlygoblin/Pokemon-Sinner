@@ -251,11 +251,15 @@
 #define OBJ_EVENT_GFX_KATIE                   246
 #define OBJ_EVENT_GFX_ROCKRUFF                247
 #define OBJ_EVENT_GFX_IMPIDIMP                248
+#define OBJ_EVENT_GFX_SPRAGGY                 249
+#define OBJ_EVENT_GFX_PPELLA                  250
+#define OBJ_EVENT_GFX_PPKATHERINE             251
+#define OBJ_EVENT_GFX_HARVFROST               252
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        249
+#define NUM_OBJ_EVENT_GFX                        253
 
 
 // These are dynamic object gfx ids.
@@ -405,12 +409,17 @@
 #define OBJ_EVENT_PAL_TAG_WREN                0x1137
 #define OBJ_EVENT_PAL_TAG_FLORENCE            0x1138
 #define OBJ_EVENT_PAL_TAG_JULIE               0x1139
-#define OBJ_EVENT_PAL_TAG_STVINCENT           0x114A
-#define OBJ_EVENT_PAL_TAG_PIPLUP              0x114B
-#define OBJ_EVENT_PAL_TAG_KATIE               0x114C
-#define OBJ_EVENT_PAL_TAG_ROCKRUFF            0x114D
-#define OBJ_EVENT_PAL_TAG_CHAPPELL            0x114E
-#define OBJ_EVENT_PAL_TAG_IMPIDIMP            0x114F
+#define OBJ_EVENT_PAL_TAG_STVINCENT           0x113A
+#define OBJ_EVENT_PAL_TAG_PIPLUP              0x113B
+#define OBJ_EVENT_PAL_TAG_KATIE               0x113C
+#define OBJ_EVENT_PAL_TAG_ROCKRUFF            0x113D
+#define OBJ_EVENT_PAL_TAG_CHAPPELL            0x113E
+#define OBJ_EVENT_PAL_TAG_IMPIDIMP            0x113F
+#define OBJ_EVENT_PAL_TAG_MARINA              0x1140
+#define OBJ_EVENT_PAL_TAG_SPRAGGY             0x1141
+#define OBJ_EVENT_PAL_TAG_PICTUREPARLOUR      0x1142
+#define OBJ_EVENT_PAL_TAG_HARVFROST           0x1143
+
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

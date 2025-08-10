@@ -29,3 +29,23 @@ script MuseumSign{
     releaseall
     end
 }
+
+script CSC_Swimmer {
+    trainerbattle_single(TRAINER_DAVID, CSC_Swimmer_BattleIntro, CSC_Swimmer_Defeated)
+    msgbox(CSC_Swimmer_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text CSC_Swimmer_BattleIntro{
+    "Ahoy, there! Did you visit Big\n"
+    "Dog Island, too?$"
+    }
+
+text CSC_Swimmer_Defeated{
+    "I'm sinking!\n"
+    "Glub… Glub…$"
+    }
+
+text CSC_Swimmer_PostBattle{
+    "Some people even go inside that\n"
+    "cave on Big Dog Island.$"
+    }

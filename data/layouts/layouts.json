@@ -4824,8 +4824,8 @@
     {
       "id": "LAYOUT_MERCY_TOWN_CONCERT_HALL",
       "name": "MercyTown_ConcertHall_Layout",
-      "width": 14,
-      "height": 10,
+      "width": 15,
+      "height": 12,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_LavaridgeGym",
       "border_filepath": "data/layouts/MercyTown_ConcertHall/border.bin",
@@ -4840,6 +4840,56 @@
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/MercyTown_ConcertHall_Lobby/border.bin",
       "blockdata_filepath": "data/layouts/MercyTown_ConcertHall_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE8",
+      "name": "Route8_Layout",
+      "width": 31,
+      "height": 70,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Fallarbor",
+      "border_filepath": "data/layouts/Route8/border.bin",
+      "blockdata_filepath": "data/layouts/Route8/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORTRAIT_TOWN",
+      "name": "PortraitTown_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Sootopolis",
+      "border_filepath": "data/layouts/PortraitTown/border.bin",
+      "blockdata_filepath": "data/layouts/PortraitTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORTRAIT_TOWN_CONCERT_HALL",
+      "name": "PortraitTown_ConcertHall_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/PortraitTown_ConcertHall/border.bin",
+      "blockdata_filepath": "data/layouts/PortraitTown_ConcertHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_MERCY_TOWN_ROCK_SHOP",
+      "name": "MercyTown_RockShop_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/MercyTown_RockShop/border.bin",
+      "blockdata_filepath": "data/layouts/MercyTown_RockShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORTRAIT_TOWN_CONCERT_HALL_LOBBY",
+      "name": "PortraitTown_ConcertHall_Lobby_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/PortraitTown_ConcertHall_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/PortraitTown_ConcertHall_Lobby/map.bin"
     }
   ]
 }

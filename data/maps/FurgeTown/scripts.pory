@@ -36,7 +36,7 @@ script FurgeTown_FlorenceSign{
 script FurgeTown_BoyInLine{
     lock
     faceplayer
-    msgbox(format("We're waiting for the concert to start!"), MSGBOX_AUTOCLOSE)
+    msgbox(format("GRACE: Hi, {PLAYER}!\pWe're waiting for the concert to start!"), MSGBOX_AUTOCLOSE)
     applymovement(LineBoy, Common_Movement_FaceUp)
     waitmovement(0)
     releaseall
@@ -46,7 +46,7 @@ script FurgeTown_BoyInLine{
 script FurgeTown_GirlInLine{
     lock
     faceplayer
-    msgbox(format("I can't wait to see Florence!"), MSGBOX_AUTOCLOSE)
+    msgbox(format("JULIE: I can't wait to see Florence!"), MSGBOX_AUTOCLOSE)
     applymovement(LineGirl, Common_Movement_FaceUp)
     waitmovement(0)
     releaseall

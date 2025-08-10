@@ -1,1 +1,209 @@
 mapscripts MercyTown_ConcertHall_MapScripts {}
+
+const CMAT = 1
+const Amy = 2
+const Abi = 3
+const Georgia = 4
+
+script CMATHall_CMATBattle{
+    lock
+    faceplayer
+
+    if(defeated(TRAINER_CMAT)){  
+        msgbox(CMAT_WordAboutTLDP, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        trainerbattle_single(TRAINER_CMAT,CMATHall_CMATBattleIntro, CMATHall_CMATLostBattle, CMATGiveBadge, NO_MUSIC)
+        }
+    releaseall
+    end
+}
+
+text CMATHall_CMATBattleIntro{
+    "CMAT: Haha sorry you had to see that. \p"
+    "Well, I don't want a deep, long chatter \n"
+    "so let's just get this over with! $"
+}
+
+text CMATHall_CMATLostBattle{
+    "I'm tryna have a good time… $"
+}
+
+script CMATGiveBadge{
+    msgbox(CMATHall_CMATGiveBadge, MSGBOX_AUTOCLOSE)
+    message(format("Received the GROUNDHOG BADGE from CMAT!"))
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    setflag(FLAG_BADGE05_GET)
+    setflag(FLAG_DEFEATED_PETALBURG_GYM)
+    msgbox(CMATBadgePerks, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text CMATHall_CMATGiveBadge{
+    "CMAT: You won, you get this thing! \n"
+    "That's the rule!$"
+}
+
+text CMATBadgePerks{
+    "Show this at the doors when you decide \n"
+    "to attend a show of mine, they'll let \l"
+    "you in. \p"
+    "Say hi to TLDP for me when you challenge \n"
+    "them!$"
+}
+
+text CMAT_WordAboutTLDP{
+    "CMAT: The Last Dinner Party? \p"
+    "They're good friends of mine, love these \n"
+    "people. \p"
+    "Say hi to them for me next time you see \n"
+    "them. $"
+}
+
+script CMATHall_TriggerLeft{
+    lock 
+    applymovement(OBJ_EVENT_ID_PLAYER, MovePlayerRight)
+    call(CMATHall_Interview)
+    release
+    end
+}
+
+script CMATHall_TriggerRight{
+    lock 
+    applymovement(OBJ_EVENT_ID_PLAYER, MovePlayerLeft)
+    call(CMATHall_Interview)
+    release
+    end
+}
+
+script CMATHall_TriggerMiddle{
+    lock 
+    call(CMATHall_Interview)
+    release
+    end
+}
+
+movement MovePlayerRight{
+    walk_right
+    face_up
+    step_end
+}
+
+movement MovePlayerLeft{
+    walk_left
+    face_up
+    step_end
+}
+
+script CMATHall_Interview{
+    lock
+
+//Interview starts as normal
+    applymovement(Amy, WalkInPlaceUp)
+    waitmovement(0)
+    msgbox(CMATHall_InterviewConclusionAmy, MSGBOX_AUTOCLOSE)
+    applymovement(CMAT, WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(CMATHall_InterviewConclusionCMAT)
+
+//Interruption
+    addobject(Georgia)
+    addobject(Abi)
+    applymovement(Georgia, AbiGeorgiaWalkIn)
+    waitmovement(0)
+    msgbox(CMATHall_GeorgiaInterruption, MSGBOX_AUTOCLOSE)
+    applymovement(Abi, AbiGeorgiaWalkIn)
+    waitmovement(0)
+    msgbox(CMATHall_AbiInterruption, MSGBOX_AUTOCLOSE)
+    applymovement(Georgia, Common_Movement_FaceLeft)
+    applymovement(Abi, Common_Movement_FaceRight)
+    waitmovement(0)
+    delay(30)
+    applymovement(Georgia, Common_Movement_FaceDown)
+    applymovement(Abi, Common_Movement_FaceDown)
+    waitmovement(0)
+    delay(30)
+    msgbox(CMATHall_AbiGeorgiaInterruption,MSGBOX_AUTOCLOSE)
+    msgbox("Hehehehehehe$")
+    applymovement(Georgia, AbiGeorgiaWalkOut)
+    applymovement(Abi, AbiGeorgiaWalkOut)
+    closemessage
+    waitmovement(0)
+    removeobject(Georgia)
+    removeobject(Abi)
+
+//End of the interview
+    applymovement(CMAT, WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(CMATHall_PostInterruptionCMAT, MSGBOX_AUTOCLOSE)
+    applymovement(Amy, WalkInPlaceUp)
+    waitmovement(0)
+    msgbox(CMATHall_PostInterruptionAmy, MSGBOX_AUTOCLOSE)
+    applymovement(Amy, Common_Movement_FaceDown)
+    waitmovement(0)
+    msgbox(CMATHall_AmyHiPlayer, MSGBOX_AUTOCLOSE)
+    applymovement(Amy, CMATHall_AmyLeaves)
+    waitmovement(0)
+    removeobject(Amy)
+    setflag(FLAG_CMATHALL_AMY)
+    setvar(VAR_CMATHALL_INTERVIEW,1)
+}
+
+text CMATHall_InterviewConclusionAmy{
+    "AMY: So CMAT, is there anything you'd\n"
+    "like to tell our readers at Parlour \l"
+    "Zine to end our interview?$"
+}
+
+text CMATHall_InterviewConclusionCMAT{
+    "CMAT: Well, I'd like to- $"
+}
+
+text CMATHall_GeorgiaInterruption{
+    "GEORGIA: We have something to say!$"
+}
+
+text CMATHall_AbiInterruption{
+    "ABIGAIL: Yeah!$"
+}
+
+text CMATHall_AbiGeorgiaInterruption{
+    "ABIGAIL & GEORGIA: CMAT is GAY!$"
+}
+
+text CMATHall_PostInterruptionCMAT{
+    "CMAT: Uh well… I guess you can conclude \n"
+    "your article with that, Amy.$"
+}
+
+text CMATHall_PostInterruptionAmy{
+    "AMY: I… guess I will, thank you for \n"
+    "taking the time to answer Parlour \l"
+    "Zine's questions!$"
+}
+
+text CMATHall_AmyHiPlayer{
+    "AMY: Oh, hi {PLAYER}! \p"
+    "I was just interviewing CMAT but we're \n"
+    "done now. \p"
+    "Good luck for the challenge!$"
+}
+
+movement AbiGeorgiaWalkIn{
+    walk_fast_up * 8
+    face_down
+    step_end
+}
+
+movement AbiGeorgiaWalkOut{
+    walk_fast_down * 8
+    step_end
+}
+
+movement CMATHall_AmyLeaves{
+    walk_right
+    walk_down * 7
+    step_end
+}

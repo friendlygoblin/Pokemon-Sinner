@@ -613,6 +613,8 @@
 #define MAP_SUNDAY_CAVE_BASEMENT (25 | (34 << 8))
 #define MAP_ROUTE7               (26 | (34 << 8))
 #define MAP_MERCY_TOWN           (27 | (34 << 8))
+#define MAP_ROUTE8               (28 | (34 << 8))
+#define MAP_PORTRAIT_TOWN        (29 | (34 << 8))
 
 // gMapGroup_PreludeRegion_Indoors
 #define MAP_START_TOWN_PLAYER_HOUSE                (0 | (35 << 8))
@@ -640,6 +642,9 @@
 #define MAP_CRYSTAL_STREAM_CITY_BIKE_SHOP          (22 | (35 << 8))
 #define MAP_MERCY_TOWN_CONCERT_HALL                (23 | (35 << 8))
 #define MAP_MERCY_TOWN_CONCERT_HALL_LOBBY          (24 | (35 << 8))
+#define MAP_MERCY_TOWN_ROCK_SHOP                   (25 | (35 << 8))
+#define MAP_PORTRAIT_TOWN_CONCERT_HALL             (26 | (35 << 8))
+#define MAP_PORTRAIT_TOWN_CONCERT_HALL_LOBBY       (27 | (35 << 8))
 
 #define MAP_GROUPS_COUNT 36
 

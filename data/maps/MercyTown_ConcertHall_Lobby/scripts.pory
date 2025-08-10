@@ -1,1 +1,42 @@
-mapscripts MercyTown_ConcertHall_Lobby_MapScripts {}
+mapscripts MercyTown_ConcertHall_Lobby_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : HideCMATInterview
+}
+
+script HideCMATInterview{
+    setflag(FLAG_CMATHALL_INTERVIEW)
+    if(var(VAR_CMATHALL_INTERVIEW)==0){
+        clearflag(FLAG_CMATHALL_AMY)
+    }
+}
+
+script CMATHall_Spraggy{
+    lock
+    faceplayer
+    if(defeated(TRAINER_CMAT)){
+        msgbox(SpraggyPostBattle_CMAT, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        trainerbattle_single(TRAINER_SPRAGGY, SpraggyIntro_CMAT, SpraggyDefeated_CMAT)
+        msgbox(SpraggyPostBattle_CMAT, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text SpraggyIntro_CMAT {
+    "SPRAGGY: CMAT?\p"
+    "No, that's not me, I'm just dressed \n"
+    "up as her! \p"
+    "Let me show you my costume! $"
+}
+
+text SpraggyDefeated_CMAT{
+    "We look alike, don't we? $"
+}
+
+text SpraggyPostBattle_CMAT{
+    "SPRAGGY: I'm flattered that you think \n"
+    "I look like CMAT! \p"
+    "I'm a huge fan of hers so I'm really \n"
+    "happy to be here!$"
+}

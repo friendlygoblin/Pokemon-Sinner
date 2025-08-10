@@ -1185,3 +1185,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MercyTown_ConcertHall/scripts.inc"
 
 	.include "data/maps/MercyTown_ConcertHall_Lobby/scripts.inc"
+
+	.include "data/maps/Route8/scripts.inc"
+
+	.include "data/maps/PortraitTown/scripts.inc"
+
+	.include "data/maps/PortraitTown_ConcertHall/scripts.inc"
+
+	.include "data/maps/MercyTown_RockShop/scripts.inc"
+
+	.include "data/maps/PortraitTown_ConcertHall_Lobby/scripts.inc"

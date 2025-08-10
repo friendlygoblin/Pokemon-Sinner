@@ -5,3 +5,42 @@ mapscripts BigDogIsland_MapScripts {
 script ClearKatieFlag{
     clearflag(FLAG_BDI_KATIE)
     }
+
+script BDI_Fisherman {
+    trainerbattle_single(TRAINER_IVAN, BDI_Fisherman_BattleIntro, BDI_Fisherman_Defeated)
+    msgbox(BDI_Fisherman_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text BDI_Fisherman_BattleIntro{
+    "I know this place is famous for the\n"
+    "dog POKéMON but I prefer fishing! $"
+    }
+
+text BDI_Fisherman_Defeated{
+    "I'm good at catching POKéMON, not \n"
+    "training them…$"
+    }
+
+text BDI_Fisherman_PostBattle{
+    "No one really knows why the POKéMON\n"
+    "here are all canines.$"
+    }
+
+script BDI_TuberGirl {
+    trainerbattle_single(TRAINER_LOLA_1, BDI_TuberGirl_BattleIntro, BDI_TuberGirl_Defeated)
+    msgbox(BDI_TuberGirl_PostBattle, MSGBOX_AUTOCLOSE)
+}
+
+text BDI_TuberGirl_BattleIntro{
+    "I love swimming here with my friends!\n"
+    "Come join us!$"
+    }
+
+text BDI_TuberGirl_Defeated{
+    "That was fun but I'm a little tired…$"
+    }
+
+text BDI_TuberGirl_PostBattle{
+    "Living on an island is so cool, I can\n"
+    "go swimming every day!$"
+    }

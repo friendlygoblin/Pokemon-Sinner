@@ -10,6 +10,16 @@ script OliveMount_Picnicker{
     msgbox(format("It's so pretty here!\pI wish it weren't raining all the time, though…"), MSGBOX_AUTOCLOSE)
 }
 
+script OliveMount_Psychic{
+    trainerbattle_single(TRAINER_EDWARD, format("The rain won't break my concentration!\pI have laser like focus!"), format("But I was fully focused…"))
+    msgbox(format("I train my mind in harsh conditions so I'm stronger the rest of the time."), MSGBOX_AUTOCLOSE)
+}
+
+script OliveMount_SchoolGirl{
+    trainerbattle_single(TRAINER_TIANA, format("I like the rain, and so do my POKéMON!"), format("I might be catching a cold…"))
+    msgbox(format("My friends from school don't like the rain so they don't come hang out here…\p But I still have my POKéMON with me!"), MSGBOX_AUTOCLOSE)
+}
+
 script DayCareSign{
     lock
     msgbox(format("POKéMON Day Care\pWe take care of your POKéMON for you!"), MSGBOX_AUTOCLOSE)

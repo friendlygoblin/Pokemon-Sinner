@@ -1,1 +1,29 @@
 mapscripts MercyTown_MapScripts {}
+
+script MercyTown_Route7Sign{
+    lock
+    msgbox(format("{DOWN_ARROW}: Route 7\pTo Sunday Cave and Crystal Stream City."), MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script MercyTown_Route8Sign{
+    lock
+    msgbox(format("{RIGHT_ARROW}: Route 8\pTo Portrait Town."), MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script MercyTown_ConcertHallSign{
+    lock
+    msgbox(format("MERCY TOWN CONCERT HALL\pCMAT IS WAITING FOR YOU!"), MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script MercyTown_WelcomeToMercyTownSign{
+    lock
+    msgbox(format("Welcome to Mercy Town!\pA stop on the road, take a break and rest your feet."), MSGBOX_AUTOCLOSE)
+    release
+    end
+}

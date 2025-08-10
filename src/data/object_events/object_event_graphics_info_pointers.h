@@ -12,6 +12,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Piplup;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Katie;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rockruff;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Impidimp;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spraggy;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PPElla;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PPKatherine;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HarvFrost;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NinjaBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Twin;
@@ -273,6 +277,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_KATIE] =                    &gObjectEventGraphicsInfo_Katie,
     [OBJ_EVENT_GFX_ROCKRUFF] =                 &gObjectEventGraphicsInfo_Rockruff,
     [OBJ_EVENT_GFX_IMPIDIMP] =                 &gObjectEventGraphicsInfo_Impidimp,
+    [OBJ_EVENT_GFX_SPRAGGY] =                  &gObjectEventGraphicsInfo_Spraggy,
+    [OBJ_EVENT_GFX_PPELLA] =                   &gObjectEventGraphicsInfo_PPElla,
+    [OBJ_EVENT_GFX_PPKATHERINE] =              &gObjectEventGraphicsInfo_PPKatherine,
+    [OBJ_EVENT_GFX_HARVFROST] =                &gObjectEventGraphicsInfo_HarvFrost,
 
     [OBJ_EVENT_GFX_NINJA_BOY] =                &gObjectEventGraphicsInfo_NinjaBoy,
     [OBJ_EVENT_GFX_TWIN] =                     &gObjectEventGraphicsInfo_Twin,

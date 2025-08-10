@@ -148,6 +148,11 @@ script Route3_Picknicker{
     msgbox(format("It's so peaceful here.\pIt's a bit dark but I'm not scared as long as I have my POKéMON with me."), MSGBOX_AUTOCLOSE)
 }
 
+script Route3_SchoolKid{
+    trainerbattle_single(TRAINER_JERRY_1, format("I learn better in the forest than at school!\pLook at what I can do!"), format("You must have trained a lot in the forest…"))
+    msgbox(format("The woods help you learn better because you get to practice things.\pI don't like sitting behind a desk… "), MSGBOX_AUTOCLOSE)
+}
+
 script Route3_PlaceAmy1{
     lock
     applymovement(Amy, Common_Movement_ExclamationMark)

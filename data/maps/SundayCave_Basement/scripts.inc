@@ -11,7 +11,7 @@ SCB_ChappellAskForHelp::
 	compare VAR_SUNDAYCAVE_STATE, 1
 	goto_if_eq SCB_ChappellAskForHelp_2
 # 15 "data/maps/SundayCave_Basement/scripts.pory"
-	compare VAR_SUNDAYCAVE_STATE, 2
+	compare VAR_SUNDAYCAVE_STATE, 3
 	goto_if_eq SCB_ChappellAskForHelp_3
 SCB_ChappellAskForHelp_1:
 # 25 "data/maps/SundayCave_Basement/scripts.pory"
@@ -82,7 +82,7 @@ SCB_Impidimp1_2:
 
 SCB_Impidimp1_3:
 # 73 "data/maps/SundayCave_Basement/scripts.pory"
-	setvar VAR_SUNDAYCAVE_STATE, 2
+	setvar VAR_SUNDAYCAVE_STATE, 3
 	goto SCB_Impidimp1_1
 
 
@@ -127,7 +127,7 @@ SCB_Impidimp2_2:
 
 SCB_Impidimp2_3:
 # 95 "data/maps/SundayCave_Basement/scripts.pory"
-	setvar VAR_SUNDAYCAVE_STATE, 2
+	setvar VAR_SUNDAYCAVE_STATE, 3
 	goto SCB_Impidimp2_1
 
 
@@ -172,7 +172,7 @@ SCB_Impidimp3_2:
 
 SCB_Impidimp3_3:
 # 117 "data/maps/SundayCave_Basement/scripts.pory"
-	setvar VAR_SUNDAYCAVE_STATE, 2
+	setvar VAR_SUNDAYCAVE_STATE, 3
 	goto SCB_Impidimp3_1
 
 
@@ -217,7 +217,7 @@ SCB_Impidimp4_2:
 
 SCB_Impidimp4_3:
 # 139 "data/maps/SundayCave_Basement/scripts.pory"
-	setvar VAR_SUNDAYCAVE_STATE, 2
+	setvar VAR_SUNDAYCAVE_STATE, 3
 	goto SCB_Impidimp4_1
 
 

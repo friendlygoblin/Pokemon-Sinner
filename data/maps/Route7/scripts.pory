@@ -1,8 +1,20 @@
 mapscripts Route7_MapScripts {}
 
+const Goblin = 1
+
 script Route7_Goblin{
-    trainerbattle_single(TRAINER_GOBLIN_ROUTE_6, Route7_Goblin_BattleIntro, Route7_Goblin_Defeated)
+    trainerbattle_single(TRAINER_GOBLIN_ROUTE_7, Route7_Goblin_BattleIntro, Route7_Goblin_Defeated, Route7_GoblinLeaves)
+}
+
+script Route7_GoblinLeaves {
+    lock
     msgbox(Route7_Goblin_PostBattle, MSGBOX_AUTOCLOSE)
+    applymovement(Goblin, Route7_GobLeaves)
+    waitmovement(0)
+    removeobject(Goblin)
+    setflag(FLAG_ROUTE7_GOBLIN)
+    releaseall
+    end
 }
 
 text Route7_Goblin_BattleIntro {
@@ -22,10 +34,52 @@ text Route7_Goblin_Defeated{
 text Route7_Goblin_PostBattle{
     "GOBLIN: That's crazy, {PLAYER}! \p"
     "You've come such a long way in such \n"
-    "a short amount of time! \p"
+    "a short amount of time. \p"
+    "The Last Dinner Party better get ready \n"
+    "for you! \p"
     "I'm still searching for new POKéMON, \n"
     "it's so cool to see how different \l"
     "species live in different places. \p"
+    "Some are rarer than others too so\n"
+    "take your time if you don't wanna \l"
+    "miss any!\p"
     "Well I'm gonna go now, I'll see you \n"
     "later! $"
 }
+
+movement Route7_GobLeaves {
+    walk_right * 4
+    walk_up * 7
+    step_end
+}
+
+script Route7_Cooltrainer1 {
+    trainerbattle_single(TRAINER_ALEXIA, format("We should have a slow and methodical match."), format("You didn't give me the chance to do any strategising."))
+    msgbox(format("Sometimes, it's better to take your time and prepare a strategy than to start attacking right away… "), MSGBOX_AUTOCLOSE)
+}
+
+script Route7_Cooltrainer2 {
+    trainerbattle_single(TRAINER_JODY, format("It's so sunny and dry here… It forges character!"), format("I feel dehydrated… "))
+    msgbox(format("Weather affects battles, you know. \pFor example, Fire POKéMON like this sunny weather because it makes them stronger! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route7_Hiker {
+    trainerbattle_single(TRAINER_DUSTY_1, format("I travel a lot! \pI've seen a lot of different places!"), format("And I've met a lot of people too… "))
+    msgbox(format("I like discovering new places and making new friends. \pIt helps you grow as a person! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route7_Cyclist {
+    trainerbattle_single(TRAINER_JULIO, format("Sports help me let my energy out! \pBut so do POKéMON battles!"), format("Maybe I pushed too hard… "))
+    msgbox(format("I have a pretty boring job, so cycling helps keeping my life exciting."), MSGBOX_AUTOCLOSE)
+}
+
+script Route7_BlackBelt {
+    trainerbattle_single(TRAINER_KOJI_1, format("Patience, focus, discipline… \pI can't lose!"), format("Huh? "))
+    msgbox(format("Training against different opponents makes you stronger! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route7_Picnicker {
+    trainerbattle_single(TRAINER_MARTHA, format("My favourite thing about travelling is seeing all the pretty POKéMON everywhere!"), format("Ohh your POKéMON are so pretty!"))
+    msgbox(format("My POKéMON are the prettiest, but I love discovering new ones."), MSGBOX_AUTOCLOSE)
+}
+

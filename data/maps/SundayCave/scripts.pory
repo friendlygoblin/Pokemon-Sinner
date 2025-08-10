@@ -1,1 +1,152 @@
 mapscripts SundayCave_MapScripts {}
+
+script SundayCave_Scientist1 {
+    lock
+    faceplayer    
+    if(var(VAR_SUNDAYCAVE_STATE)==3){
+        trainerbattle_single(TRAINER_JASMINE, SundayCave_Scientist1_BattleIntro, SundayCave_Scientist1_Defeated)
+        msgbox(SundayCave_Scientist1_PostBattle, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(SundayCave_Scientist1_PleaseHelp, MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+    end
+}
+
+text SundayCave_Scientist1_BattleIntro{
+    "I need a break from digging all day.$"
+    }
+
+text SundayCave_Scientist1_Defeated{
+    "Time to get back to work…$"
+    }
+
+text SundayCave_Scientist1_PostBattle{
+    "This cave is full of fossils for some\n"
+    "reason. \p"
+    "That's very convenient for the Crystal \n"
+    "Stream City Museum's research program. $"
+    }
+
+text SundayCave_Scientist1_PleaseHelp{
+    "We're having technical issues with \n"
+    "our equipments on the lower level! \p"
+    "Some POKéMON are messing with it, \n"
+    "we called Chappell for help but there \l"
+    "are too many of them. \p"
+    "Please go help her if you can, we can't \n"
+    "work without our machines!$"
+}
+
+script SundayCave_Scientist2 {
+    lock
+    faceplayer    
+    if(var(VAR_SUNDAYCAVE_STATE)==3){
+        trainerbattle_single(TRAINER_TAYLOR, SundayCave_Scientist2_BattleIntro, SundayCave_Scientist2_Defeated)
+        msgbox(SundayCave_Scientist2_PostBattle, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(SundayCave_Scientist2_PleaseHelp, MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+    end
+}
+
+text SundayCave_Scientist2_BattleIntro{
+    "We use our drills to excavate fossils. \p"
+    "Then we bring them back to the museum \n"
+    "to study them! \p"
+    "It's a whole process!$"
+    }
+
+text SundayCave_Scientist2_Defeated{
+    "I suppose battles are also a whole \n"
+    "process…$"
+    }
+
+text SundayCave_Scientist2_PostBattle{
+    "The fossils in good condition can be\n"
+    "brought back to life at the Crystal \l"
+    "Stream City Museum! \p"
+    "It's a marvel of science that allows us \n"
+    "to learn a lot about ancient POKéMON. $"
+    }
+
+text SundayCave_Scientist2_PleaseHelp{
+    "We need our machines for our research! \p"
+    "POKéMON often mess with them but this \n"
+    "time is worse than usual. \p"
+    "You're a POKéMON trainer, please help \n"
+    "us! $"
+}
+
+script SundayCave_MachineGuy {
+    lock
+    faceplayer    
+    if(var(VAR_SUNDAYCAVE_STATE)==3){
+        if(var(VAR_SUNDAYCAVE_MACHINEGUY)==0){
+        msgbox(SundayCave_MachineGuy_ImpidimpsCleared)
+
+            dynmultipush("Jaw Fossil", ITEM_JAW_FOSSIL)
+            dynmultipush("Sail Fossil", ITEM_SAIL_FOSSIL)
+            dynmultipush("None, thanks!", ITEM_NONE)
+            dynmultistack(0, 0, FALSE, 6, FALSE, 3, DYN_MULTICHOICE_CB_NONE)
+            
+            switch(var(VAR_RESULT)){
+                case ITEM_JAW_FOSSIL:
+                    giveitem(ITEM_JAW_FOSSIL)
+                    msgbox(SundayCave_MachineGuy_ExplainFossil, MSGBOX_AUTOCLOSE)
+                    setvar(VAR_SUNDAYCAVE_MACHINEGUY, 1)
+                case ITEM_SAIL_FOSSIL:
+                    giveitem(ITEM_SAIL_FOSSIL)
+                    msgbox(SundayCave_MachineGuy_ExplainFossil, MSGBOX_AUTOCLOSE)
+                    setvar(VAR_SUNDAYCAVE_MACHINEGUY, 1)
+                case ITEM_NONE:
+                    msgbox(format("Oh okay, come back later if you change your mind!"), MSGBOX_AUTOCLOSE)
+                default:
+                    msgbox(format("Oh okay, come back later if you change your mind!"), MSGBOX_AUTOCLOSE)
+            }
+        }
+        else{
+            msgbox(SundayCave_MachineGuy_FindFossils, MSGBOX_AUTOCLOSE)
+        }
+    }
+        
+    else{
+            msgbox(SundayCave_MachineGuy_ImpidimpsHere, MSGBOX_AUTOCLOSE)       
+        }
+    releaseall
+    end
+}
+
+text SundayCave_MachineGuy_ImpidimpsHere{
+    "We're having big technical difficulties\n"
+    "right now! \p"
+    "We asked Chappell Roan to help us with \n"
+    "the POKéMON on the lower level but I think \l"
+    "she needs help! $"
+    }
+
+text SundayCave_MachineGuy_ImpidimpsCleared{
+    "Thank you so much for your help! \p"
+    "As a thank you gift, please accept one of \n"
+    "these fossils. \p"
+    "We found them last year but already got\n"
+    "all the data we need from them! $"
+    }
+
+text SundayCave_MachineGuy_ExplainFossil{
+    "Here you go!\p"
+    "Again, thank you so much for your help! \p"
+    "You can bring this fossil to the Crystal \n"
+    "Stream City Museum if you want it to be \l"
+    "turned back into a POKéMON!$"
+}
+
+text SundayCave_MachineGuy_FindFossils{
+    "We find fossils thanks to our drills. \p"
+    "But not only that, we also sometimes \n"
+    "find more things like strange stones \l"
+    "that have different effects on POKéMON.$"
+    }

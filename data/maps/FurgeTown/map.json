@@ -21,7 +21,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
       "x": 20,
       "y": 6,
       "elevation": 0,
@@ -34,7 +34,7 @@
       "flag": "FLAG_FURGETOWN_LINE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_JULIE",
       "x": 20,
       "y": 7,
       "elevation": 0,

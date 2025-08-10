@@ -268,11 +268,12 @@ FurgeTown_FlorenceSign_Text_0:
 
 FurgeTown_BoyInLine_Text_0:
 # 39 "data/maps/FurgeTown/scripts.pory"
+	.string "GRACE: Hi, {PLAYER}!\p"
 	.string "We're waiting for the concert to start!$"
 
 FurgeTown_GirlInLine_Text_0:
 # 49 "data/maps/FurgeTown/scripts.pory"
-	.string "I can't wait to see Florence!$"
+	.string "JULIE: I can't wait to see Florence!$"
 
 Florence_Georgia_Scene_Text_0:
 # 61 "data/maps/FurgeTown/scripts.pory"

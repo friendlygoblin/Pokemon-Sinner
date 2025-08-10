@@ -1,0 +1,55 @@
+mapscripts PortraitTown_ConcertHall_MapScripts {}
+
+script MarinaHall_MarinaBattle{
+    lock
+    faceplayer
+
+    if(defeated(TRAINER_MARINA)){  
+        msgbox(Marina_WordAboutTLDP, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        trainerbattle_single(TRAINER_MARINA,MarinaHall_MarinaBattleIntro, MarinaHall_MarinaLostBattle, MarinaGiveBadge, NO_MUSIC)
+        }
+    releaseall
+    end
+}
+
+script MarinaGiveBadge{
+    msgbox(MarinaHall_MarinaGiveBadge, MSGBOX_AUTOCLOSE)
+    message(format("Received the BUBBLEGUM BADGE from MARINA!"))
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    setflag(FLAG_BADGE06_GET)
+    setflag(FLAG_DEFEATED_PETALBURG_GYM)
+    msgbox(MarinaBadgePerks, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text MarinaHall_MarinaBattleIntro{
+    "MARINA: I'll chew you up and spit you \n"
+    "out!$"
+}
+
+text MarinaHall_MarinaLostBattle{
+    "Are you satisfied?$"
+}
+
+text Marina_WordAboutTLDP{
+    "MARINA: It's really an honour inspire \n"
+    "young talented artists like The Last \l"
+    "Dinner Party. \p"
+    "They're real icons!$"
+}
+
+text MarinaHall_MarinaGiveBadge{
+    "MARINA: That was super impressive!\p"
+    "Here, let me give you this as a reward.$"
+}
+
+text MarinaBadgePerks{
+    "You're now on my guest list forever!\p"
+    "Also, it will make your POKéMON listen \n"
+    "to you until the level 70 because \l"
+    "they'll know you're cuntissimo.$"
+}

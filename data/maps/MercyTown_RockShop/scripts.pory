@@ -1,0 +1,54 @@
+mapscripts MercyTown_RockShop_MapScripts {}
+
+mart RockMart{
+    ITEM_KINGS_ROCK
+    ITEM_EVIOLITE
+    ITEM_EVERSTONE
+    ITEM_WATER_STONE
+    ITEM_SUN_STONE
+    ITEM_LEAF_STONE
+    ITEM_MOON_STONE
+    ITEM_THUNDER_STONE
+}
+
+text SellRocks{
+    "Hello! \p"
+    "I sell rocks! \p"
+    "Have a look, they all have cool \n"
+    "effects!$"
+}
+
+text ExplainRocks{
+    "Alright! \p"
+    "Rocks are fascinating, some make POKéMON \n"
+    "stronger, others make them evolve… \p"
+    "Come back"
+}
+
+script RockSellerDude{
+    lock 
+    faceplayer
+    message(SellRocks)
+    waitmessage
+    pokemart(RockMart)
+    msgbox(ExplainRocks, MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script RockShop_LittleGirl{
+    lock
+    faceplayer
+    msgbox(DadSellsRocks, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text DadSellsRocks{
+    "My dad loves rocks so much. \p"
+    "He finds most of them in the Sunday \n"
+    "Cave. \p"
+    "Maybe you'll find some too if you go \n"
+    "there… \p"
+    "Or you can just buy from him!$"
+}

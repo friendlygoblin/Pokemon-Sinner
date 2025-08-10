@@ -6,7 +6,7 @@
 #define TRAINER_NONE                          0
 #define TRAINER_SAWYER_1                      1
 #define TRAINER_GOBLIN_ROUTE_3                2
-#define TRAINER_GOBLIN_ROUTE_6                3
+#define TRAINER_GOBLIN_ROUTE_7                3
 #define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
 #define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
 #define TRAINER_AMY_ROUTE3                    6
@@ -33,7 +33,7 @@
 #define TRAINER_GRUNT_AQUA_HIDEOUT_5         27
 #define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
 #define TRAINER_FREDRICK                     29
-#define TRAINER_MATT                         30
+#define TRAINER_HARVFROST                    30
 #define TRAINER_ZANDER                       31
 #define TRAINER_SHELLY_WEATHER_INSTITUTE     32
 #define TRAINER_SHELLY_SEAFLOOR_CAVERN       33
@@ -54,7 +54,7 @@
 #define TRAINER_DUSTY_3                      48
 #define TRAINER_DUSTY_4                      49
 #define TRAINER_DUSTY_5                      50
-#define TRAINER_GABBY_AND_TY_1               51
+#define TRAINER_PICTURE_PARLOUR              51
 #define TRAINER_GABBY_AND_TY_2               52
 #define TRAINER_GABBY_AND_TY_3               53
 #define TRAINER_GABBY_AND_TY_4               54
@@ -272,8 +272,8 @@
 #define TRAINER_HOZIER                      266
 #define TRAINER_WATTSON_1                   267
 #define TRAINER_FLORENCE                    268
-#define TRAINER_NORMAN_1                    269
-#define TRAINER_WINONA_1                    270
+#define TRAINER_MARINA                      269
+#define TRAINER_CMAT                        270
 #define TRAINER_CHAPPELL                    271
 #define TRAINER_JUAN_1                      272
 #define TRAINER_JERRY_1                     273
@@ -473,7 +473,7 @@
 #define TRAINER_JENNY_4                     467
 #define TRAINER_JENNY_5                     468
 #define TRAINER_HEIDI                       469
-#define TRAINER_BECKY                       470
+#define TRAINER_SPRAGGY                     470
 #define TRAINER_CAROL                       471
 #define TRAINER_NANCY                       472
 #define TRAINER_MARTHA                      473

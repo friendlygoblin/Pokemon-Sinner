@@ -111,26 +111,27 @@ Cyndaquil (M)
 Level: 13
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_GOBLIN_ROUTE_6 ===
+=== TRAINER_GOBLIN_ROUTE_7 ===
 Name: GOBLIN
 Class: TLDP Fan
 Pic: Goblin
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Shroomish (M)
 Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Swablu (F)
 Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Larvitar (F)
 Level: 24
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Quilava (M)
 Level: 26
@@ -278,13 +279,13 @@ Music: Cool
 Double Battle: No
 AI: Check Bad Move
 
-Pelipper
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pidgeotto
+Level: 26
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-Xatu
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Staravia
+Level: 26
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_ED ===
 Name: ED
@@ -539,22 +540,18 @@ Machoke
 Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MATT ===
-Name: MATT
-Class: Aqua Admin
-Pic: Aqua Admin M
-Gender: Male
-Music: Aqua
+=== TRAINER_HARVFROST ===
+Name: HARV FROST
+Class: Pike Queen
+Pic: Harv Frost
+Gender: Female
+Music: Female
 Items: Super Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Mightyena
-Level: 34
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Golbat
-Level: 34
+Smeargle
+Level: 27
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_ZANDER ===
@@ -626,7 +623,7 @@ Sharpedo
 Level: 43
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_NINA ===
+=== TRAINER_NINA === /*Used in Hozier Hall*/
 Name: NINA
 Class: Picnicker
 Pic: Nina
@@ -648,7 +645,7 @@ Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 
-=== TRAINER_STEFF ===
+=== TRAINER_STEFF === /*Used in Hozier Hall*/
 Name: STEFF
 Class: Picnicker
 Pic: Steff
@@ -691,7 +688,7 @@ Roselia
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WREN ===
+=== TRAINER_WREN === /*Used in Hozier Hall*/
 Name: WREN
 Class: Picnicker
 Pic: Wren
@@ -708,7 +705,7 @@ Skiddo (F)
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WREN_2 ===
+=== TRAINER_WREN_2 === /*Used in St.Vincent Hall*/
 Name: WREN
 Class: Picnicker
 Pic: Wren
@@ -809,10 +806,10 @@ Roselia
 Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_DUSTY_1 ===
+=== TRAINER_DUSTY_1 === /*Used on Route 7*/
 Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
+Class: Hiker
+Pic: Hiker
 Gender: Male
 Music: Hiker
 Double Battle: No
@@ -821,10 +818,10 @@ AI: Check Bad Move
 Sandslash
 Level: 23
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
+
+Bouffalant
+Level: 22
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
 === TRAINER_CHIP ===
 Name: CHIP
@@ -952,22 +949,22 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_GABBY_AND_TY_1 ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
-Gender: Male
-Music: Interviewer
+=== TRAINER_PICTURE_PARLOUR ===
+Name: PARLOUR
+Class: Pyramid King
+Pic: Picture Parlour
+Gender: Female
+Music: Cool
 Double Battle: Yes
 AI: Check Bad Move
 
-Magnemite
-Level: 17
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Krokorok
+Level: 22
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Whismur
-Level: 17
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Whimsicott
+Level: 22
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_GABBY_AND_TY_2 ===
 Name: GABBY & TY
@@ -1072,12 +1069,12 @@ Double Battle: No
 AI: Check Bad Move
 
 Azurill
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Level: 20
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
-Azurill
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Lillipup
+Level: 21
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
 === TRAINER_AUSTINA ===
 Name: AUSTINA
@@ -1679,7 +1676,7 @@ Ludicolo
 Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MARY ===
+=== TRAINER_MARY === /*Used in Rib Cave*/
 Name: MARY
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1700,7 +1697,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tackle
 - Tail Whip
 
-=== TRAINER_ALEXIA ===
+=== TRAINER_ALEXIA === /*Used on Route 7*/
 Name: ALEXIA
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1708,16 +1705,17 @@ Gender: Female
 Music: Cool
 Items: Hyper Potion
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn
 
 Wigglytuff
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Defense Curl
-- Double Edge
-- Shadow Ball
+Level: 24
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
-=== TRAINER_JODY ===
+Zangoose
+Level: 23
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
+
+=== TRAINER_JODY === /*Used on Route 7*/
 Name: JODY
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1727,11 +1725,17 @@ Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Setup First Turn
 
-Zangoose
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Slash
+Ponyta
+Level: 22
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
+
+Numel
+Level: 22
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
+
+Growlithe
+Level: 22
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
 === TRAINER_WENDY ===
 Name: WENDY
@@ -1888,7 +1892,7 @@ Sableye
 Level: 43
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_JULIE ===
+=== TRAINER_JULIE === /*Used in Florence Hall*/
 Name: JULIE
 Class: Picnicker
 Pic: Julie
@@ -2873,7 +2877,7 @@ Carvanha
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DAVID ===
+=== TRAINER_DAVID === /*Used in Crystal Stream City*/
 Name: DAVID
 Class: Swimmer M
 Pic: Swimmer M
@@ -2883,11 +2887,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Tentacool
-Level: 25
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Carvanha
-Level: 25
+Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SPENCER ===
@@ -3975,25 +3979,25 @@ Beautifly
 Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_TAYLOR ===
+=== TRAINER_TAYLOR === /*Used in Sunday Cave*/
 Name: TAYLOR
-Class: Bug Maniac
-Pic: Bug Maniac
+Class: Factory Head
+Pic: Factory Head Noland
 Gender: Male
 Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
-Wurmple
-Level: 27
+Noibat
+Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Cascoon
-Level: 27
+Klink
+Level: 22
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Dustox
-Level: 27
+Gible
+Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JEFFREY_1 ===
@@ -4130,7 +4134,7 @@ Beautifly
 Level: 38
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_EDWARD ===
+=== TRAINER_EDWARD === /*Used on Olive Mount*/
 Name: EDWARD
 Class: Psychic
 Pic: Psychic M
@@ -4918,19 +4922,19 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Skorupi
-Level: 21
+Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Nidorina
-Level: 21
+Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Noibat
-Level: 21
+Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Seviper @ Sitrus Berry
-Level: 23
+Level: 22
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_HOZIER ===
@@ -5008,11 +5012,11 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Litwick
-Level: 17
+Level: 16
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Misdreavus
-Level: 17
+Level: 16
 IVs: 15 HP / 10 Atk / 12 Def / 12 SpA / 10 SpD / 10 Spe
 - Astonish
 - Confusion
@@ -5020,104 +5024,64 @@ IVs: 15 HP / 10 Atk / 12 Def / 12 SpA / 10 SpD / 10 Spe
 - Spite
 
 Frillish (F)
-Level: 17
+Level: 16
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Greavard @ Sitrus Berry
-Level: 19
+Level: 18
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_NORMAN_1 ===
-Name: NORMAN
+=== TRAINER_MARINA ===
+Name: MARINA
 Class: Leader
 Pic: Leader Norman
-Gender: Male
-Music: Male
+Gender: Female
+Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Spinda
-Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Teeter Dance
-- Psybeam
-- Facade
-- Encore
-
-Vigoroth
-Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Facade
-- Encore
-- Feint Attack
-
-Linoone
-Level: 29
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Belly Drum
-- Facade
-- Headbutt
-
-Slaking @ Sitrus Berry
+Dolliv
 Level: 31
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Counter
-- Yawn
-- Facade
-- Feint Attack
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-=== TRAINER_WINONA_1 ===
-Name: WINONA
+Steenee
+Level: 31
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+Carbink
+Level: 31
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+Dragonair @ Sitrus Berry
+Level: 33
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+=== TRAINER_CMAT ===
+Name: CMAT
 Class: Leader
 Pic: Leader Winona
 Gender: Female
 Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability / Risky
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Swablu
-Level: 29
+Mudbray
+Level: 27
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Perish Song
-- Mirror Move
-- Safeguard
-- Aerial Ace
 
-Tropius
-Level: 29
+Pawmo
+Level: 27
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
-- Synthesis
 
-Pelipper
-Level: 30
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Water Gun
-- Supersonic
-- Protect
-- Aerial Ace
-
-Skarmory
-Level: 31
+Squawkabilly
+Level: 27
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Sand Attack
-- Fury Attack
-- Steel Wing
-- Aerial Ace
 
-Altaria @ Oran Berry
-Level: 33
+Arcanine
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Dragon Breath
-- Dragon Dance
-- Aerial Ace
 
 === TRAINER_CHAPPELL ===
 Name: CHAPPELL 
@@ -5127,7 +5091,7 @@ Gender: Female
 Music: Female
 Items: Hyper Potion / Hyper Potion 
 Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon
 
 Hatenna
 Level: 24
@@ -5195,7 +5159,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Ice Beam
 - Rest
 
-=== TRAINER_JERRY_1 ===
+=== TRAINER_JERRY_1 === /*Used on Route 3*/
 Name: JERRY
 Class: School Kid
 Pic: School Kid M
@@ -5204,11 +5168,15 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Ralts
-Level: 9
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Seedot
+Level: 12
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 
-=== TRAINER_TED ===
+Teddiursa
+Level: 12
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
+
+=== TRAINER_TED === /*Used on Route 8*/
 Name: TED
 Class: School Kid
 Pic: School Kid M
@@ -5217,9 +5185,13 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Ralts
-Level: 17
+Mankey
+Level: 25
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Metang
+Level: 26
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
 === TRAINER_PAUL ===
 Name: PAUL
@@ -5984,7 +5956,7 @@ Houndour
 Level: 23
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_BILLY ===
+=== TRAINER_BILLY === /*Used o Route 4*/
 Name: BILLY
 Class: Youngster
 Pic: Youngster
@@ -5994,11 +5966,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Zigzagoon
-Level: 5
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Seedot
-Level: 7
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSH ===
@@ -6029,7 +6001,7 @@ Level: 7
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
 
-=== TRAINER_JOEY ===
+=== TRAINER_JOEY === /*Used on Olive Mount*/
 Name: JOEY
 Class: Youngster
 Pic: Youngster
@@ -6345,7 +6317,7 @@ IVs: 0 Atk
 - Wish  
 - Mystical Fire  
 
-=== TRAINER_ANDREW ===
+=== TRAINER_ANDREW === /*Used on Olive Mount*/
 Name: ANDREW
 Class: Fisherman
 Pic: Fisherman
@@ -6366,7 +6338,7 @@ Magikarp
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_IVAN ===
+=== TRAINER_IVAN === /*Used on Big Dog Island*/
 Name: IVAN
 Class: Fisherman
 Pic: Fisherman
@@ -6375,17 +6347,17 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magikarp
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sharpedo
+Level: 21
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Magikarp
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level:23
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-Magikarp
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Barboach
+Level: 23
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_CLAUDE ===
 Name: CLAUDE
@@ -6772,26 +6744,26 @@ Magnemite
 Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_JASMINE ===
+=== TRAINER_JASMINE === /*Used in Sunday Cave*/
 Name: JASMINE
-Class: Triathlete
-Pic: Cycling Triathlete F
+Class: Factory Head
+Pic: Pike Queen Lucy
 Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
 
 Magnemite
-Level: 14
+Level: 22
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Magnemite
-Level: 14
+Archen
+Level: 22
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Voltorb
-Level: 6
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Beldum
+Level: 20
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_ABIGAIL_2 ===
 Name: ABIGAIL
@@ -7336,12 +7308,16 @@ Double Battle: No
 AI: Check Bad Move
 
 Bagon
-Level: 34
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Dragon Breath
-- Headbutt
-- Focus Energy
-- Ember
+Level: 26
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
+
+Dratini
+Level: 26
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
+
+Frigibax
+Level: 26
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
 === TRAINER_PERRY ===
 Name: PERRY
@@ -7607,18 +7583,22 @@ Swellow
 Level: 33
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_BECK ===
+=== TRAINER_BECK === /*Used on Route 8*/
 Name: BECK
-Class: Bird Keeper
-Pic: Bird Keeper
+Class: Arena Tycoon
+Pic: Cameraman
 Gender: Male
-Music: Cool
+Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
 
 Tropius
-Level: 34
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Grafaiai
+Level: 28
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_YASU ===
 Name: YASU
@@ -7683,37 +7663,21 @@ Marill
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LAO_1 ===
+=== TRAINER_LAO_1 === /*Used on Route 8*/
 Name: LAO
-Class: Ninja Boy
-Pic: Ninja Boy
+Class: Arena Tycoon
+Pic: Cameraman
 Gender: Male
 Music: Suspicious
 Double Battle: No
 
-Koffing
-Level: 17
+Golett
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Smog
-- Self Destruct
 
-Koffing
-Level: 17
+Elekid
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Smog
-- Self Destruct
-
-Koffing
-Level: 17
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Poison Gas
-- Tackle
-- Sludge
-- Self Destruct
 
 === TRAINER_LUNG ===
 Name: LUNG
@@ -8302,7 +8266,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Tail Whip
 
 
-=== TRAINER_GRACE_2 ===
+=== TRAINER_GRACE_2 === /*Used in Florence Hall*/
 Name: GRACE
 Class: Picnicker
 Pic: Grace
@@ -8580,7 +8544,7 @@ Starmie
 Level: 45
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_HEIDI ===
+=== TRAINER_HEIDI === /*Used on Olive Mount*/
 Name: HEIDI
 Class: Camper
 Pic: Picnicker
@@ -8605,30 +8569,26 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Psybeam
 - Rock Tomb
 
-=== TRAINER_BECKY ===
-Name: BECKY
+=== TRAINER_SPRAGGY === /*Used in CMAT Hall*/
+Name: SPRAGGY
 Class: Picnicker
-Pic: Picnicker
+Pic: Spraggy
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Sandshrew
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Sand Attack
-- Poison Sting
-- Slash
-- Dig
+Wooper
+Level: 26
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
-Marill
-Level: 22
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Rollout
-- Bubble Beam
-- Tail Whip
-- Defense Curl
+Phanpy
+Level: 26
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+
+Scraggy
+Level: 26
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_CAROL === /*Used on Route 6*/
 Name: CAROL
@@ -8647,9 +8607,9 @@ Lombre
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_NANCY ===
+=== TRAINER_NANCY === /*Used on Route 4*/
 Name: NANCY
-Class: Picnicker
+Class: Camper
 Pic: Picnicker
 Gender: Female
 Music: Girl
@@ -8657,16 +8617,16 @@ Double Battle: No
 AI: Check Bad Move
 
 Marill
-Level: 18
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lombre
-Level: 18
+Rookidee
+Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MARTHA ===
+=== TRAINER_MARTHA === /*Used on Route 7*/
 Name: MARTHA
-Class: Picnicker
+Class: Camper
 Pic: Picnicker
 Gender: Female
 Music: Girl
@@ -8674,11 +8634,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Skitty
-Level: 23
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Swablu
-Level: 23
+Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_DIANA_1 ===
@@ -8712,12 +8672,12 @@ Double Battle: No
 AI: Check Bad Move
 
 Wobbuffet
-Level: 32
+Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Destiny Bond
-- Safeguard
-- Counter
-- Mirror Coat
+
+Meditite
+Level: 26
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
 === TRAINER_IRENE ===
 Name: IRENE
@@ -9200,7 +9160,7 @@ Tentacruel
 Level: 45
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_ELI ===
+=== TRAINER_ELI === /*Used in Rib Cave*/
 Name: ELI
 Class: Hiker
 Pic: Hiker
@@ -10540,17 +10500,17 @@ Level: 39
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_JULIO ===
-Name: JULIO
+Name: JULES
 Class: Triathlete
-Pic: Cycling Triathlete M
-Gender: Male
-Music: Male
+Pic: Cycling Triathlete F
+Gender: Female
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Magnemite
-Level: 21
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Lycanroc
+Level: 25
+IVs: 5 HP / 5 Atk / 5 Def / 5 SpA / 5 SpD / 5 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_5 ===
 Name: GRUNT
@@ -11109,18 +11069,22 @@ Camerupt
 Level: 25
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_TIANA ===
+=== TRAINER_TIANA === /*Used on Olive Mount*/
 Name: TIANA
-Class: Lass
-Pic: Lass
+Class: School Kid
+Pic: School Kid F
 Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Shroomish
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Tympole
+Level: 14
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+
+Skiddo
+Level: 14
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
 === TRAINER_HALEY_1 ===
 Name: HALEY
@@ -12556,9 +12520,13 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Machoke
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Machop
+Level: 24
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
+
+Pawmo
+Level: 24
+IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
 === TRAINER_WAYNE ===
 Name: WAYNE
