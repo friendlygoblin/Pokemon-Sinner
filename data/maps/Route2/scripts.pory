@@ -42,25 +42,13 @@ movement JayLeaves_Route2 {
 }
 
 script Route2_Hiker {
-    trainerbattle_single(TRAINER_TOMMY, Route2_Hiker_BattleIntro, Route2_Hiker_Defeated)
-    msgbox(Route2_Hiker_PostBattle, MSGBOX_AUTOCLOSE)
+    trainerbattle_single(TRAINER_TOMMY, format("I was just taking a break from walking, but I always have energy for a POKéMON battle!$"), format("I need to sit down again…$"))
+    msgbox(format("I like to find cosy little spots to take naps in. \pToo bad I have to walk so much to get there.$"), MSGBOX_AUTOCLOSE)
 }
 
-text Route2_Hiker_BattleIntro {
-    "I was just taking a break from walking, \n"
-    "but I always have energy for a POKéMON \l"
-    "battle!$"
-}
-
-text Route2_Hiker_Defeated{
-    "I need to sit down again…$"
-}
-
-text Route2_Hiker_PostBattle{
-    "I like to find cosy little spots to \n"
-    "take naps in. \p"
-    "Too bad I have to walk so much to get \n"
-    "there.$"
+script Route2_SchoolGirl {
+    trainerbattle_single(TRAINER_KAREN_1, format("I did my school presentation about my POKéMON!"), format("But I got a good grade… "))
+    msgbox(format("Munchlax helped me prepare my presentation!\pHe's my best friend!"), MSGBOX_AUTOCLOSE)
 }
 
 script RibCave_Sign{

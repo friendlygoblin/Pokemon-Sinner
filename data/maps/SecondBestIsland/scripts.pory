@@ -130,7 +130,6 @@ text SBI_LyricsChorus{
     "Second best! $"
 }
 
-
 text SBI_LyricsVerse2{
     "Oh against your bathroom tiles \n"
     "Your back goes on for miles… \p"
@@ -142,7 +141,6 @@ text SBI_LyricsVerse2{
     "… \p"
     "… staaairs! $"    
 }
-
 
 text SBI_LyricsOutro{
     "What do I do to be better for you? \p"
@@ -182,4 +180,14 @@ text SBI_TakeABreak{
     "This looks like a nice spot to take \n"
     "a break. \p"
     "Would you like to take a nap?$"
+}
+
+script SBI_Swimmer1 {
+    trainerbattle_single(TRAINER_BEVERLY, format("Of course I know there's an island over there!\pBut I'm training to swim faster!"), format("Time for a little break… "))
+    msgbox(format("I'm jealous of Water Type POKéMON, swimming is so easy for them… "), MSGBOX_AUTOCLOSE)
+}
+
+script SBI_Swimmer2 {
+    trainerbattle_single(TRAINER_IMANI, format("I'm gonna swim across the ocean!"), format("Maybe I'll start with a shorter distance… "))
+    msgbox(format("You should learn to swim, in case your POKéMON can't carry you. "), MSGBOX_AUTOCLOSE)
 }

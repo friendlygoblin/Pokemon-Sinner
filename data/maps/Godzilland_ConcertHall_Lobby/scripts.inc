@@ -47,8 +47,10 @@ StVincentHall_Natalie::
 # 51 "data/maps/Godzilland_ConcertHall_Lobby/scripts.pory"
 	lock
 # 52 "data/maps/Godzilland_ConcertHall_Lobby/scripts.pory"
-	msgbox StVincentHall_Natalie_Text_0
+	faceplayer
 # 53 "data/maps/Godzilland_ConcertHall_Lobby/scripts.pory"
+	msgbox StVincentHall_Natalie_Text_0
+# 54 "data/maps/Godzilland_ConcertHall_Lobby/scripts.pory"
 	release
 	end
 
@@ -60,8 +62,10 @@ StVincentHall_Receptionist_Text_0:
 	.string "though, good luck!$"
 
 StVincentHall_Natalie_Text_0:
-# 52 "data/maps/Godzilland_ConcertHall_Lobby/scripts.pory"
-	.string "NATALIE: I'm not a trainer, but I$"
+# 53 "data/maps/Godzilland_ConcertHall_Lobby/scripts.pory"
+	.string "NATALIE: I'm not a trainer, but I still\n"
+	.string "hang out here to encourage\l"
+	.string "challengers!$"
 
 WrenIntro_StVincent::
 # 24 "data/maps/Godzilland_ConcertHall_Lobby/scripts.pory"

@@ -37,12 +37,71 @@
       "elevation": 0,
       "dest_map": "MAP_PORTRAIT_TOWN_CONCERT_HALL_LOBBY",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_VERDANTURF_TOWN_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_MT_CHIMNEY_CABLE_CAR_STATION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_SOOTOPOLIS_CITY_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 32,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_SOOTOPOLIS_CITY_HOUSE2",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 35,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "PortraitTown_Route8Sign"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "PortraitTown_CitySign"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "PortraitTown_ConcertHallSign"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "PortraitTown_CableCarSign"
+    }
   ]
 }

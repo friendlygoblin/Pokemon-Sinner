@@ -19,3 +19,59 @@ text CSCCH_ExplainChappellNotHere{
     "the north of Route 6 if you want to \l"
     "find her.$"
 }
+
+script ChappellHall_Steff{
+    lock
+    faceplayer
+    if(defeated(TRAINER_CHAPPELL)){
+        msgbox(SteffPostBattle_Chappell, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(SteffIntro_Chappell, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_STEFF_2, format("How exciting!"))
+        msgbox(SteffPostBattle_Chappell, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text SteffIntro_Chappell {
+    "STEFF: Oh, {PLAYER}! \p"
+    "I managed to get a ticket to see  \n"
+    "Chappell Roan! \p"
+    "How have you been since you challenged \n"
+    "Hozier? \p"
+    "Let's catch up over a battle! $"
+    }
+
+text SteffPostBattle_Chappell{
+    "STEFF: I'm so excited to see Chappell!\n"
+    "Roan! \p"
+    "I hope she plays Hot To Go! $"
+}
+
+script ChappellHall_Norah{
+    lock
+    faceplayer
+    if(defeated(TRAINER_CHAPPELL)){
+        msgbox(format("NORAH: You won against Chappell Roan??\pWow, you really slay!$"), MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(NorahIntro_Chappell, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_NORAH, format("Is the show starting yet?"))
+        msgbox(NorahPostBattle_Chappell, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text NorahIntro_Chappell {
+    "NORAH: I can't wait to see Chappell! \p"
+    "I travelled from pretty far away to \n"
+    "see her! $"
+    }
+
+text NorahPostBattle_Chappell{
+    "NORAH: I'm so impatient, I just know\n"
+    "the show's gonna be insane! $"
+}

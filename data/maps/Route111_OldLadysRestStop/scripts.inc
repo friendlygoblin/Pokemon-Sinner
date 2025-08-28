@@ -98,3 +98,38 @@ Route111_OldLadysRestStop_Text_DontNeedToBeShy:
 	.string "Is that so?\n"
 # 50 "data/maps/Route111_OldLadysRestStop/scripts.pory"
 	.string "You don't need to be shy about it.$"
+
+OldLadysRestStop_Girl::
+# 54 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	lock
+# 55 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	faceplayer
+# 56 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	goto_if_set FLAG_DEFEATED_SOOTOPOLIS_GYM, OldLadysRestStop_Girl_2
+# 60 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	msgbox ItWasDavidBowie, MSGBOX_AUTOCLOSE
+OldLadysRestStop_Girl_1:
+# 62 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	release
+	end
+
+OldLadysRestStop_Girl_2:
+# 57 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	msgbox StrangeNoises, MSGBOX_AUTOCLOSE
+	goto OldLadysRestStop_Girl_1
+
+
+StrangeNoises::
+# 66 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	.string "We've been hearing weird noises around \n"
+	.string "here. \p"
+	.string "No idea where they're from, but it \n"
+	.string "almost sounds like music if you listen \l"
+	.string "closely… $"
+
+ItWasDavidBowie::
+# 74 "data/maps/Route111_OldLadysRestStop/scripts.pory"
+	.string "The noises stopped… \p"
+	.string "What? You figured it out? \p"
+	.string "A musician under the waterfall? \p"
+	.string "This place is so strange… $"

@@ -1,0 +1,34 @@
+mapscripts MirrorLake_Cave_Entrance_MapScripts {}
+
+script BowieHall_Katie{
+    lock
+    faceplayer
+    if(defeated(TRAINER_BOWIE)){
+        msgbox(KatiePostBattle_Bowie, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        trainerbattle_single(TRAINER_KATIE_2, KatieIntro_Bowie, KatieDefeated_Bowie)
+        msgbox(KatiePostBattle_Bowie, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text KatieIntro_Bowie {
+    "KATIE: I was on my way to Mirror City \n"
+    "when I heard music coming from behind \l"
+    "the waterfall. \p"
+    "I had to investigate, is that why \n"
+    "you're here too? $"
+}
+
+text KatieDefeated_Bowie{
+    "Oh… well I hope you have better luck \n"
+    "in your investigations than me… $"
+}
+
+text KatiePostBattle_Bowie{
+    "KATIE: I think it's coming from the other  \n"
+    "room, but I can't get past that big \l"
+    "rock blocking the way.$"
+}

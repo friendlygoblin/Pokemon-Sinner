@@ -80,16 +80,17 @@ script EverGrandeCity_SidneysRoom_EventScript_Defeated{
 }
 
 text Aurora_Text_IntroSpeech{
-	"AURORA: Hey there! I'm Aurora of\n"
-	"The Last Dinner Party!\p"
+	"AURORA: Hey! So you finally made it \n"
+    "here!\p"
+    "You already know that but I'm Aurora \n"
+	"of The Last Dinner Party!\p"
 	"I'll be on vocals and keys tonight. \p"
 	"You look like you really want that\n"
-	"free ticket huh?\p"
-	"Well, you'll have to show us that\n"
-	"you have the guts to handle\l"
-	"our show!\p"
+	"lifetime guestlist spot!\p"
+	"Well, you'll have to show us that you \n"
+	"have the guts to handle our show!\p"
 	"So put up a fight!$"
-}
+    }
 
 text Aurora_Text_Defeat{
 	"Give me the strength…$"
@@ -97,14 +98,13 @@ text Aurora_Text_Defeat{
 
 text Aurora_Text_PostBattleSpeech{
 	"AURORA: That was something!\p"
-	"If anyone could win this thing,\n"
-	"it probably would be you!\p"
-	"Go ahead, go meet the others,\n"
-	"though I have to warn you.\p"
-	"One wrong move and they'll\n"
-	"tear you apart.\p"
+	"If anyone could win this thing, it \n"
+	"probably would be you!\p"
+	"Go ahead, face the others, though \n"
+	"I have to warn you.\p"
+	"One wrong move and they'll tear \n"
+	"you apart.\p"
 	"Good luck!$"
 }
-
 
 

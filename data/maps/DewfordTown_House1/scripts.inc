@@ -11,8 +11,7 @@ FurgeTown_House1_EventScript_Man::
 # 8 "data/maps/DewfordTown_House1/scripts.pory"
 	faceplayer
 # 9 "data/maps/DewfordTown_House1/scripts.pory"
-	compare VAR_FURGETOWN_HONEY, 0
-	goto_if_eq FurgeTown_House1_EventScript_Man_2
+	goto_if_unset FLAG_FURGETOWN_HONEY, FurgeTown_House1_EventScript_Man_2
 FurgeTown_House1_EventScript_Man_1:
 # 14 "data/maps/DewfordTown_House1/scripts.pory"
 	msgbox FurgeTown_House1_HoneyGiven, MSGBOX_AUTOCLOSE
@@ -24,7 +23,7 @@ FurgeTown_House1_EventScript_Man_2:
 # 11 "data/maps/DewfordTown_House1/scripts.pory"
 	giveitem ITEM_HONEY
 # 12 "data/maps/DewfordTown_House1/scripts.pory"
-	setvar VAR_FURGETOWN_HONEY, 1
+	setflag FLAG_FURGETOWN_HONEY
 	goto FurgeTown_House1_EventScript_Man_1
 
 

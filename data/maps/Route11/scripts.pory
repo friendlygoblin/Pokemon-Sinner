@@ -1,0 +1,80 @@
+mapscripts Route11_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : Route11_HideGoblin
+}
+
+const Goblin = 1
+const Snorlax = 2
+
+script Route11_HideGoblin{
+    setflag(FLAG_ROUTE11_GOBLIN)
+}
+
+script Route11_Snorlax{
+    lock
+    msgbox(format("There is a big sleeping POKéMON blocking the way.\pDo you want to wake it up?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        applymovement(OBJ_EVENT_ID_PLAYER, WalkInPlaceUp)
+        waitmovement(0)
+        msgbox(format("You poke at the POKéMON's belly."), MSGBOX_AUTOCLOSE)
+        playmoncry(SPECIES_SNORLAX, CRY_MODE_NORMAL)
+        waitmoncry
+        msgbox(format("The POKéMON woke up!"), MSGBOX_AUTOCLOSE)
+        setwildbattle(SPECIES_SNORLAX, 30)
+        dowildbattle
+        removeobject(Snorlax)
+        setflag(FLAG_ROUTE11_SNORLAX)
+    }
+    release
+    end
+}
+
+script Route11_Goblin{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
+    waitmovement(0)
+    addobject(Goblin)
+    applymovement(Goblin, Route11_GobWalksToPlayer)
+    msgbox(Route11_GoblinInvestigating)
+    applymovement(OBJ_EVENT_ID_PLAYER, Route11_PlayerMoveAside)
+    waitmovement(0)
+    applymovement(Goblin, Route11_GoblinLeaves)
+    waitmovement(0)
+    removeobject(Goblin)
+    setvar(VAR_ROUTE11_GOBLIN, 1)
+    release
+    end   
+}
+
+movement Route11_GobWalksToPlayer{
+    walk_up * 4
+    walk_left
+    walk_up * 2
+    step_end
+}
+
+movement Route11_PlayerMoveAside{
+    walk_up
+    walk_left
+    face_right
+    step_end
+}
+
+movement Route11_GoblinLeaves{
+    walk_up * 7
+    step_end
+}
+
+text Route11_GoblinInvestigating{
+    "GOBLIN: Oh, {PLAYER}! \p"
+    "Are you here to investigate Mirror \n"
+    "Lake? \p"
+    "… … … \p"
+    "Oh, basically people have been talking \n"
+    "about hearing strange noises coming \l"
+    "from the lake area. \p"
+    "I thought I'd look around, maybe it's \n"
+    "a rare POKéMON acting up… \p"
+    "I'd love to stay and spar, but I'm \n"
+    "really excited about this mystery. \p"
+    "Another time, for sure! $"
+}

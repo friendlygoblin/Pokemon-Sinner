@@ -1,0 +1,37 @@
+mapscripts NightingaleCity_Pub_MapScripts {}
+
+const Emily = 1
+
+script NCPub_Emily{
+    lock
+    faceplayer
+    msgbox(NCPub_EmilyGreetsPlayer, MSGBOX_AUTOCLOSE)
+    applymovement(Emily, NCPub_EmilyGoesToBackRoom)
+    waitmovement(0)
+    removeobject(Emily)
+    setflag(FLAG_NIGHTINGALECITY_PUB_EMILY)
+    release
+    end
+    
+}
+
+text NCPub_EmilyGreetsPlayer{
+    "EMILY: Hello! \p"
+    "Have we met before? \p"
+    "… … … \p"
+    "Oh I see, we never talked but we did \n"
+    "cross paths a few times. \p"
+    "Well I'm Emily, and you are? \p"
+    "… … … \p"
+    "Nice to meet you, {PLAYER}. \p"
+    "I'm here to invite someone very special \n"
+    "to our first show in Mirror City. \p"
+    "He's in the other room, I was thinking \n"
+    "of the best way to invite him. \p"
+    "I think I'm ready now, wish me luck!$"
+}
+
+movement NCPub_EmilyGoesToBackRoom{
+    walk_up * 2
+    step_end
+}

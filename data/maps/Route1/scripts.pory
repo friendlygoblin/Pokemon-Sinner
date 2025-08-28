@@ -60,26 +60,6 @@ script Route1_Youngster{
 	msgbox(Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE)
 }
 
-script Route1_FindPotion{
-    lock
-    giveitem(ITEM_POTION)
-    hideobjectat(Potion, 0)
-    removeobject(Potion)
-    setflag(FLAG_POTION_ROUTE1)
-    release
-    end
-}
-
-script Route1_FindBerry{
-    lock
-    giveitem(ITEM_ORAN_BERRY)
-    hideobjectat(Potion, 0)
-    removeobject(Berry)
-    setflag(FLAG_BERRY_ROUTE1)
-    release
-    end
-}
-
 text GobTeachIntro{
     "GOBLIN: {PLAYER}{KUN}!\p"
     "What are you doing here?\p"

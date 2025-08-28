@@ -195,7 +195,7 @@ Route110_TrickHousePuzzle2_EventScript_Paul::
 # 98 "data/maps/Route110_TrickHousePuzzle2/scripts.pory"
 Route110_TrickHousePuzzle2_EventScript_Georgia::
 # 99 "data/maps/Route110_TrickHousePuzzle2/scripts.pory"
-	trainerbattle_single TRAINER_GEORGIA, Route110_TrickHousePuzzle2_Text_GeorgiaIntro, Route110_TrickHousePuzzle2_Text_GeorgiaDefeat
+	trainerbattle_single TRAINER_GEORGIE, Route110_TrickHousePuzzle2_Text_GeorgiaIntro, Route110_TrickHousePuzzle2_Text_GeorgiaDefeat
 # 100 "data/maps/Route110_TrickHousePuzzle2/scripts.pory"
 	msgbox Route110_TrickHousePuzzle2_Text_GeorgiaPostBattle, MSGBOX_AUTOCLOSE
 # 101 "data/maps/Route110_TrickHousePuzzle2/scripts.pory"

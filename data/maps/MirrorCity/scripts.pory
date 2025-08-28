@@ -1,0 +1,15 @@
+mapscripts MirrorCity_MapScripts {}
+
+script MirrorCity_CitySign{
+    lock
+    msgbox(format("Welcome to Mirror City!\pThe city worth climbing a mountain for!"))
+    release
+    end
+}
+
+script MirrorCity_ConcertHallSign{
+    lock
+    msgbox(format("MIRROR CITY CONCERT HALL\p CURRENT RESIDENT: THE LAST DINNER PARTY"))
+    release
+    end
+}

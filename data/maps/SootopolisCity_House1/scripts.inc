@@ -65,7 +65,7 @@ SootopolisCity_House1_Text_DevelopedThisTM:
 # 33 "data/maps/SootopolisCity_House1/scripts.pory"
 	.string "For thirty years I've remained in\n"
 # 34 "data/maps/SootopolisCity_House1/scripts.pory"
-	.string "SOOTOPOLIS honing my skills.\p"
+	.string "Portrait Town honing my skills.\p"
 # 35 "data/maps/SootopolisCity_House1/scripts.pory"
 	.string "I developed a shattering TM.\n"
 # 36 "data/maps/SootopolisCity_House1/scripts.pory"

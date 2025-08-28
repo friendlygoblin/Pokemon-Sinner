@@ -1,0 +1,371 @@
+mapscripts MirrorCity_ConcertHall_MapScripts {}
+
+const Rora = 1
+const Emily = 2
+const Lizzie = 3
+const Georgia = 4
+const Abi = 5
+
+const Goblin = 6
+const Amy = 7
+
+script ResetBattles{
+    setobjectxy(Rora, 12, 8)
+    setobjectxy(Emily, 7, 4)
+    setobjectxy(Abi, 8, 4)
+    setobjectxy(Lizzie, 9, 4)
+    setobjectxy(Georgia, 10, 4)
+
+    setobjectmovementtype(Rora, MOVEMENT_TYPE_FACE_LEFT)
+    setobjectmovementtype(Emily, MOVEMENT_TYPE_FACE_DOWN)
+    setobjectmovementtype(Abi, MOVEMENT_TYPE_FACE_DOWN)
+    setobjectmovementtype(Lizzie, MOVEMENT_TYPE_FACE_DOWN)
+    setobjectmovementtype(Georgia, MOVEMENT_TYPE_FACE_DOWN)
+
+    setvar(VAR_MIRROR_CITY_TLDP_PROGRESS, 0)
+}
+
+script MCCH_TLDPTriggerBattles{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, PlayerGetIntoPosition)
+    waitmovement(0)
+    call(MCCH_TLDPBattles)
+    release
+    end
+}
+
+script MCCH_TLDPBattles{
+    switch (var(VAR_MIRROR_CITY_TLDP_PROGRESS)){
+        case 0:
+            playbgm(MUS_ENCOUNTER_ELITE_FOUR, FALSE)
+            applymovement(Rora, BandMemberGetIntoPosition)
+            waitmovement(0)
+            msgbox(MCCH_Aurora_IntroSpeech, MSGBOX_DEFAULT)		  
+            trainerbattle_no_intro(TRAINER_SIDNEY, MCCH_Aurora_Defeat)
+            msgbox(MCCH_Aurora_PostBattleSpeech, MSGBOX_AUTOCLOSE)
+
+            applymovement(OBJ_EVENT_ID_PLAYER, PlayerGoBackToSide)
+            waitmovement(0)
+            fadescreen(FADE_TO_BLACK)
+            setobjectxy(Rora, 6, 4)
+            applymovement(Rora, Common_Movement_FaceDown)
+            waitmovement(0)
+            setobjectmovementtype(Rora, MOVEMENT_TYPE_FACE_DOWN)
+            setobjectxy(Emily, 12, 8)
+            applymovement(Emily, Common_Movement_WalkInPlaceLeft)
+            waitmovement(0)
+            setvar(VAR_MIRROR_CITY_TLDP_PROGRESS, 1)
+            fadescreen(FADE_FROM_BLACK)
+
+        case 1:
+            playbgm(MUS_ENCOUNTER_ELITE_FOUR, FALSE)
+            applymovement(Emily, BandMemberGetIntoPosition)
+            waitmovement(0)
+            msgbox(MCCH_Emily_IntroSpeech, MSGBOX_DEFAULT)		  
+            trainerbattle_no_intro(TRAINER_PHOEBE, MCCH_Emily_Defeat)
+            msgbox(MCCH_Emily_PostBattleSpeech, MSGBOX_AUTOCLOSE)
+
+            applymovement(OBJ_EVENT_ID_PLAYER, PlayerGoBackToSide)
+            waitmovement(0)
+            fadescreen(FADE_TO_BLACK)
+            setobjectxy(Emily, 7, 4)
+            applymovement(Emily, Common_Movement_FaceDown)
+            waitmovement(0)
+            setobjectmovementtype(Emily, MOVEMENT_TYPE_FACE_DOWN)
+            setobjectxy(Lizzie, 12, 8)
+            applymovement(Lizzie, Common_Movement_WalkInPlaceLeft)
+            waitmovement(0)
+            setvar(VAR_MIRROR_CITY_TLDP_PROGRESS, 2)
+            fadescreen(FADE_FROM_BLACK)
+
+        case 2:
+            playbgm(MUS_ENCOUNTER_ELITE_FOUR, FALSE)
+            applymovement(Lizzie, BandMemberGetIntoPosition)
+            waitmovement(0)
+            msgbox(MCCH_Lizzie_IntroSpeech, MSGBOX_DEFAULT)		  
+            trainerbattle_no_intro(TRAINER_GLACIA, MCCH_Lizzie_Defeat)
+            msgbox(MCCH_Lizzie_PostBattleSpeech, MSGBOX_AUTOCLOSE)
+
+            applymovement(OBJ_EVENT_ID_PLAYER, PlayerGoBackToSide)
+            waitmovement(0)
+            fadescreen(FADE_TO_BLACK)
+            setobjectxy(Lizzie, 9, 4)
+            applymovement(Lizzie, Common_Movement_FaceDown)
+            waitmovement(0)
+            setobjectmovementtype(Lizzie, MOVEMENT_TYPE_FACE_DOWN)
+            setobjectxy(Georgia, 12, 8)
+            applymovement(Georgia, Common_Movement_WalkInPlaceLeft)
+            waitmovement(0)
+            setvar(VAR_MIRROR_CITY_TLDP_PROGRESS, 3)
+            fadescreen(FADE_FROM_BLACK)
+
+        case 3:
+            playbgm(MUS_ENCOUNTER_ELITE_FOUR, FALSE)
+            applymovement(Georgia, BandMemberGetIntoPosition)
+            waitmovement(0)
+            msgbox(MCCH_Georgia_IntroSpeech, MSGBOX_DEFAULT)		  
+            trainerbattle_no_intro(TRAINER_WALLACE, MCCH_Georgia_Defeat)
+            msgbox(MCCH_Georgia_PostBattleSpeech, MSGBOX_AUTOCLOSE)
+
+            applymovement(OBJ_EVENT_ID_PLAYER, PlayerGoBackToSide)
+            waitmovement(0)
+            fadescreen(FADE_TO_BLACK)
+            setobjectxy(Georgia, 10, 4)
+            applymovement(Georgia, Common_Movement_FaceDown)
+            waitmovement(0)
+            setobjectmovementtype(Georgia, MOVEMENT_TYPE_FACE_DOWN)
+            setobjectxy(Abi, 12, 8)
+            applymovement(Abi, Common_Movement_WalkInPlaceLeft)
+            waitmovement(0)
+            setvar(VAR_MIRROR_CITY_TLDP_PROGRESS, 4)
+            fadescreen(FADE_FROM_BLACK)
+
+        case 4:
+            playbgm(MUS_ENCOUNTER_ELITE_FOUR, FALSE)
+            applymovement(Abi, BandMemberGetIntoPosition)
+            waitmovement(0)
+            msgbox(MCCH_Abi_IntroSpeech, MSGBOX_DEFAULT)		  
+            trainerbattle_no_intro(TRAINER_DRAKE, MCCH_Abi_Defeat)
+            msgbox(MCCH_Abi_PostBattleSpeech, MSGBOX_AUTOCLOSE)
+
+            call(MCCH_GoblinShowsUp)
+            call(MCCH_MoveOnToHOF)
+    
+    }
+
+}
+
+
+text MCCH_Aurora_IntroSpeech{
+	"AURORA: Hey! So you finally made it \n"
+    "here!\p"
+    "The challenge starts with me! \p"
+	"Also, I'll be on vocals and keys \n"
+    "tonight. \p"
+	"You look like you really want that\n"
+	"lifetime guestlist spot!\p"
+	"Well, you'll have to show us that you \n"
+	"have the guts to handle our show!\p"
+	"So put up a fight!$"
+    }
+
+text MCCH_Aurora_Defeat{
+	"Give me the strength…$"
+    }
+
+text MCCH_Aurora_PostBattleSpeech{
+	"AURORA: That was something!\p"
+	"If anyone could win this thing, it \n"
+	"probably would be you!\p"
+	"Go ahead, face the others, though \n"
+	"I have to warn you.\p"
+	"One wrong move and they'll tear \n"
+	"you apart.\p"
+	"Good luck!$"
+}
+
+text MCCH_Emily_IntroSpeech{
+	"EMILY: Hi, {PLAYER}. \p"
+    "It's my turn! \p"
+	"I'll be the one shredding on\n"
+	"guitar, mandolin and flute.\p"
+	"… \p"
+	"Don't waste my time! \p"
+	"Justice for fat riffs!$"
+    }
+
+text MCCH_Emily_Defeat{
+	"Second best…$"
+    }
+
+text MCCH_Emily_PostBattleSpeech{
+	"EMILY: You know, I hate to lose \n"
+	"but that was fun!\p"
+	"You definitely get the importance of \n"
+	"fat riffs.\p"
+	"With that energy you'll have the \n"
+	"world at your feet.\p"
+	"Go on, I'll see you soon.\p"
+	"You better sing along with every \n"
+	"guitar solo!$"
+}
+
+text MCCH_Lizzie_IntroSpeech{
+	"LIZZIE: {PLAYER}, hi!\p"
+    "I knew we'd be seeing you here \n"
+    "eventually! \p"
+	"Running and spinning on stage is\n"
+	"fun but you know what, I'd leave it\l"
+	"all for a good battle.\p"
+	"Let's dance, shall we?\n"
+	"Turn and face me!$"
+    }
+
+text MCCH_Lizzie_Defeat{
+	"Washed the sin from my back…$"
+    }
+
+text MCCH_Lizzie_PostBattleSpeech{
+	"LIZZIE: Hey you're pretty good \n"
+	"at this!\p"
+	"Something tells me your face won't\n"
+	"be forgotten.\p"
+	"We'll be seeing you around, won't \n"
+	"we? \p"
+	"Keep it up, see you at the show!$"
+}
+
+text MCCH_Georgia_IntroSpeech{
+	"GEORGIA: Hey love, good to see you \n"
+    "again! \p"
+	"I'll be playing killer basslines later.\p"
+	"But you knew that already, didn't\n"
+	"you?\p"
+	"Now show me, are you more of a sailor\n"
+	"or a nightingale?\p"
+	"Let's find out!$"
+    }
+
+text MCCH_Georgia_Defeat{
+	"Nothing matters…$"
+    }
+
+text MCCH_Georgia_PostBattleSpeech{
+	"GEORGIA: Oh my god that was so good!\n"
+	"You sure seem to understand us.\p"
+	"One more and we're away, Abi is \n"
+    "waiting!$"
+}
+
+text MCCH_Abi_IntroSpeech{
+	"ABIGAIL: Hi angel!\p"
+	"You've made it this far, that's so \n"
+	"cool!\p"
+	"I guess we'll be seeing you at the \n"
+	"show later.\p"
+	"Well, I'm sure you slay but you know, \n"
+	"I have to make sure that you're\l"
+	"not just here for entertainment.\p"
+	"So pull your boots up,\n"
+	"and commit to the role,\l"
+	"fight for that guestlist!$"
+    }
+
+text MCCH_Abi_Defeat{
+	"I can't win them all…\p"
+	"…\p"
+	"Period! You've just earned yourself a \n"
+	"permanent spot on The Last Dinner \l"
+	"Party's guest list, {PLAYER}!$"
+    }
+
+text MCCH_Abi_PostBattleSpeech{
+	"ABIGAIL: Wow that was amazing!\p"
+	"I had a feeling you'd be a fucking\n"
+	"icon.\p"
+    "I knew when we first met in Prelude \n"
+    "Town that you'd be one of the greats! \p"
+	"You've totally earned your spot on our \n"
+	"guestlist, I can't wait to see you on \l"
+	"the front row!\p"
+	"Now all we need to do is add you\n"
+	"to the…$"
+}
+
+movement PlayerGetIntoPosition{
+    walk_right * 2
+    step_end
+    }
+
+movement PlayerGoBackToSide{
+    walk_left * 4
+    face_right
+    step_end
+    }
+
+movement BandMemberGetIntoPosition{
+    walk_left * 4
+    step_end
+}
+
+script MCCH_GoblinShowsUp{
+    addobject(Goblin)
+    playse(SE_EXIT)
+    waitse
+    applymovement(Goblin, GoblinInterruptsAbi)
+    waitmovement(0)
+    applymovement(Abi, Common_Movement_FaceUp)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    waitmovement(0)
+    delay(20)
+    applymovement(Goblin, ExcitedGoblin)
+    waitmovement(0)
+    msgbox(Goblin_SomeAdvice, MSGBOX_AUTOCLOSE)
+    applymovement(Goblin, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    applymovement(Goblin, ExcitedGoblin)
+    waitmovement(0)
+    msgbox(Goblin_ItsAlreadyOver, MSGBOX_AUTOCLOSE)
+}
+
+
+movement GoblinInterruptsAbi{
+    walk_fast_right * 7
+    face_down
+    step_end
+    }
+
+movement ExcitedGoblin{
+    walk_in_place_fast_down * 3
+    step_end
+}
+
+text Goblin_SomeAdvice{
+	"GOBLIN: {PLAYER}!\p"
+	"Here's some advice before you challenge\n"
+	"the band…$"
+    }
+
+text Goblin_ItsAlreadyOver{
+	"GOBLIN: Huh?\n"
+	"What, what, what?\p"
+	"What do you mean it's over? \p"
+    "You've already won ?! \p"
+    "{PLAYER}, that's amazing! \p"
+    "I knew you could do it, I'm so happy \n"
+    "for you! \p"
+    "I'm right behind you though, I'll win \n"
+    "the challenge too!$"
+}
+
+script MCCH_MoveOnToHOF{
+    applymovement(Abi, WalkInPlaceUp)
+    waitmovement(0)
+    msgbox(format("ABIGAIL: Aw, that's sweet, Goblin.\pStart warming up!"), MSGBOX_AUTOCLOSE)
+    applymovement(Abi, Common_Movement_WalkInPlaceLeft)
+    waitmovement(0)
+    msgbox(format("ABIGAIL: {PLAYER}… "), MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+    waitmovement(0)
+    delay(20)
+    msgbox(Abi_LetsMoveOn, MSGBOX_AUTOCLOSE)
+    applymovement(Abi, MCCH_StartToLeave)
+    applymovement(OBJ_EVENT_ID_PLAYER, MCCH_StartToLeave)
+    delay(40)
+    warp(MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16)
+    
+
+}
+
+movement MCCH_StartToLeave{
+    walk_right * 4
+    walk_down * 3
+    walk_right * 3
+    step_end
+}
+
+text Abi_LetsMoveOn{
+    "ABIGAIL: You've officially won the \n"
+    "TLDP challenge! \p"
+    "Follow me… $"
+}

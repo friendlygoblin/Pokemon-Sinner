@@ -19,16 +19,6 @@
       "direction": "down"
     },
     {
-      "map": "MAP_ROUTE1_BIS",
-      "offset": 0,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_ROUTE1_BIS",
-      "offset": 0,
-      "direction": "left"
-    },
-    {
       "map": "MAP_ECSTASY_TOWN",
       "offset": -6,
       "direction": "left"
@@ -70,8 +60,8 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route1_FindPotion",
+      "trainer_sight_or_berry_tree_id": "ITEM_POTION",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_POTION_ROUTE1"
     },
     {
@@ -83,8 +73,8 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route1_FindBerry",
+      "trainer_sight_or_berry_tree_id": "ITEM_ORAN_BERRY",
+      "script": "Common_EventScript_FindItem",
       "flag": "FLAG_BERRY_ROUTE1"
     },
     {

@@ -50,3 +50,18 @@ text ExplainSurf{
     "It's really useful to travel without a \n"
     "boat, just watch out for wild POKéMON! $"
 }
+
+script Route5_SwimmerF {
+    trainerbattle_single(TRAINER_KYLA, format("The sea is so refreshing!"), format("I'm getting a bit chilly… "))
+    msgbox(format("The water isn't that cold if you keep moving… "), MSGBOX_AUTOCLOSE)
+}
+
+script Route5_SwimmerM {
+    trainerbattle_single(TRAINER_DECLAN, format("I'm the fastest in the water!"), format("I didn't say I was the strongest… "))
+    msgbox(format("You must be travelling so fast on your POKéMON's back! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route5_Runner {
+    trainerbattle_single(TRAINER_MARIA_1, format("Hey, you're in my way!"), format("Ugh, just move aside please… "))
+    msgbox(format("I'm training for a marathon, I can't be interrupted."), MSGBOX_AUTOCLOSE)
+}

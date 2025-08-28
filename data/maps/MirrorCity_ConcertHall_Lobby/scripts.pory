@@ -1,0 +1,56 @@
+mapscripts MirrorCity_ConcertHall_Lobby_MapScripts {}
+
+script MCCH_LobbyMan{
+    lock
+    faceplayer
+    msgbox(MCCH_ReadyForChallenge, MSGBOX_YESNO)
+    if (var(VAR_RESULT)==YES){
+        setflag(FLAG_MCCH_GOBLIN)
+        msgbox(format("Very well, good luck!"), MSGBOX_AUTOCLOSE)
+        warp(MAP_MIRROR_CITY_CONCERT_HALL, 3, 8)
+        waitstate
+    }
+    else{
+        msgbox(format("Of course, take your time.\pCome back here when you're ready."), MSGBOX_AUTOCLOSE)
+        applymovement(1, Common_Movement_FaceDown)
+    }
+    release
+    end
+}
+
+text MCCH_ReadyForChallenge{
+    "The Last Dinner Party are waiting for \n"
+    "you in the concert hall. \p"
+    "You will be facing every band member \n"
+    "one after the other. \p"
+    "If you go in now, you won't be able \n"
+    "come back here until you win or lose. \p"
+    "Are you ready? $"
+}
+
+mart MCCH_MerchStand_Items{
+    ITEM_HYPER_POTION
+    ITEM_MAX_POTION
+    ITEM_FULL_HEAL
+    ITEM_FULL_RESTORE
+    ITEM_MAX_REVIVE
+    ITEM_ELIXIR
+}
+
+script MCCH_MerchStand{
+    lock
+    faceplayer
+    message(format("Welcome to the Merch Stand, what can I get for you?"))
+    waitmessage
+    pokemart(MCCH_MerchStand_Items)
+    msgbox("Good luck!")
+    release
+    end
+}
+
+script MCCH_Sign{
+    lock
+    msgbox(format("MIRROR CITY CONCERT HALL\p{LEFT_ARROW}{RIGHT_ARROW}: VIP Lounges\p{UP_ARROW}: Concert Hall"))
+    release
+    end
+}

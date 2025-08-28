@@ -77,13 +77,8 @@
 #define FLAG_INTRO_ABI          0x3E 
 #define FLAG_INTRO_NORA         0x3F 
 
-#define FLAG_POTION_ROUTE1              0x40 
-#define FLAG_BERRY_ROUTE1               0x41 
-
 #define FLAG_JAY_ROUTE2                 0x42 
 
-#define FLAG_POTION_RIBCAVE             0x43
- 
 #define FLAG_JAY_CANDLEWAXCITY          0x44 
 #define FLAG_GUARD_RIBCAVE              0x45 
 #define FLAG_RIGHTGUY_RIBCAVE           0x46 
@@ -94,12 +89,12 @@
 #define FLAG_JAY_HOZIER_HALL            0x4A 
 
 #define FLAG_ROUTE3_GOBLIN              0x4B 
-#define FLAG_ORAN_ROUTE3                0x4C
-#define FLAG_SHROOM_ROUTE3              0x4D 
 #define FLAG_AMY_ROUTE3                 0x4E 
 
+#define FLAG_FURGETOWN_HONEY            0x266
 #define FLAG_FURGETOWN_LINE             0x4F
 
+#define FLAG_GODZILLAND_ITEM_FINDER     0x26F
 #define FLAG_GODZILLANDHALL_EMILY       0x54 
 
 #define FLAG_SBI_RACHEL                 0x55
@@ -125,17 +120,20 @@
 
 #define FLAG_ROUTE8_ACTOR               0x265
 
-#define FLAG_UNUSED_0x266    0x266 // Unused Flag
-#define FLAG_UNUSED_0x267    0x267 // Unused Flag
-#define FLAG_UNUSED_0x268    0x268 // Unused Flag
-#define FLAG_UNUSED_0x269    0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A    0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B    0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C    0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D    0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E    0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F    0x26F // Unused Flag
-#define FLAG_UNUSED_0x270    0x270 // Unused Flag
+#define FLAG_MARINAHALL_ABI             0x267
+
+#define FLAG_SAILORTOWN_LENS            0x26D 
+
+#define FLAG_NIGHTINGALECITY_PUB_EMILY  0x268 
+#define FLAG_NIGHTINGALECITY_BACK_EMILY 0x269 
+
+#define FLAG_ROUTE11_SNORLAX            0x26B
+#define FLAG_ROUTE11_GOBLIN             0x26C
+
+#define FLAG_MIRROR_CAVE_ROCK           0x26E
+
+#define FLAG_MCCH_GOBLIN                0x270 // Unused Flag
+
 #define FLAG_UNUSED_0x271    0x271 // Unused Flag
 #define FLAG_UNUSED_0x272    0x272 // Unused Flag
 #define FLAG_UNUSED_0x273    0x273 // Unused Flag
@@ -211,8 +209,16 @@
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
 #define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
+
+//items
+#define FLAG_POTION_ROUTE1              0x40 
+#define FLAG_BERRY_ROUTE1               0x41 
+#define FLAG_POTION_RIBCAVE             0x43
+#define FLAG_LAGGING_TAIL_RIBCAVE       0x26A
+#define FLAG_ORAN_ROUTE3                0x4C
+#define FLAG_SHROOM_ROUTE3              0x4D 
+#define FLAG_TM09_OLIVE_MOUNT           0x493
+#define FLAG_SHARP_BEAK_ROUTE4          0x494
 #define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
@@ -1339,8 +1345,8 @@
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3 //Fourth Gym, Chappell
 #define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4 //Fifth Gym, CMAT
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5 //Sixth Gym, Marina
-#define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6
-#define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
+#define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6 //Seventh Gym, Brian May
+#define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7 //Eighth Gym, David Bowie
 
 #define FLAG_DEFEATED_METEOR_FALLS_STEVEN                           0x4F8
 

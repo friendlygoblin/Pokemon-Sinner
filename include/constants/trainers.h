@@ -122,8 +122,17 @@
 #define TRAINER_PIC_PICTURE_PARLOUR    104
 #define TRAINER_PIC_HARV_FROST         105
 #define TRAINER_PIC_CAMERAMAN          106
+#define TRAINER_PIC_ANN                107
+#define TRAINER_PIC_AUX                108
+#define TRAINER_PIC_SCIENTIST_F        109
+#define TRAINER_PIC_SCIENTIST_M        110
+#define TRAINER_PIC_NORA               111
+#define TRAINER_PIC_NORAH              112
+#define TRAINER_PIC_BEAR               113
+#define TRAINER_PIC_AIDEN              114
+#define TRAINER_PIC_Q                  115
 
-#define TRAINER_PIC_COUNT                 107
+#define TRAINER_PIC_COUNT                 116
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

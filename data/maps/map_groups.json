@@ -620,7 +620,6 @@
     "PreludeTown",
     "StartTown",
     "Route1",
-    "Route1_Bis",
     "EcstasyTown",
     "Route2",
     "RibCave_1F",
@@ -646,7 +645,19 @@
     "Route7",
     "MercyTown",
     "Route8",
-    "PortraitTown"
+    "PortraitTown",
+    "Route9",
+    "SailorTown",
+    "Route10",
+    "NightingaleCity",
+    "Route11",
+    "MirrorLake",
+    "Route12",
+    "VictoryRoad_1",
+    "VictoryRoad_2",
+    "VictoryRoad_3",
+    "VictoryRoad_4",
+    "MirrorCity"
   ],
   "gMapGroup_PreludeRegion_Indoors": [
     "StartTown_PlayerHouse",
@@ -676,6 +687,15 @@
     "MercyTown_ConcertHall_Lobby",
     "MercyTown_RockShop",
     "PortraitTown_ConcertHall",
-    "PortraitTown_ConcertHall_Lobby"
+    "PortraitTown_ConcertHall_Lobby",
+    "NightingaleCity_Pub",
+    "NightingaleCity_Pub_Back",
+    "MirrorLake_Cave",
+    "MirrorLake_Cave_Entrance",
+    "VictoryRoad_Gate",
+    "MirrorCity_ConcertHall",
+    "MirrorCity_ConcertHall_Lobby",
+    "MirrorCity_ConcertHall_Lounge1",
+    "MirrorCity_ConcertHall_Lounge2"
   ]
 }

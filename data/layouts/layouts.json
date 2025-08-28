@@ -4392,16 +4392,6 @@
       "blockdata_filepath": "data/layouts/EcstasyTown/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE1_BIS",
-      "name": "Route1_Bis_Layout",
-      "width": 14,
-      "height": 20,
-      "primary_tileset": "gTileset_PreludeTownTest",
-      "secondary_tileset": "gTileset_PreludeTown_Secondary",
-      "border_filepath": "data/layouts/Route1_Bis/border.bin",
-      "blockdata_filepath": "data/layouts/Route1_Bis/map.bin"
-    },
-    {
       "id": "LAYOUT_ECSTASY_TOWN_BIG_HOUSE",
       "name": "EcstasyTown_BigHouse_Layout",
       "width": 15,
@@ -4494,8 +4484,8 @@
     {
       "id": "LAYOUT_CANDLEWAX_CITY_CONCERT_HALL_LOBBY",
       "name": "CandlewaxCity_ConcertHall_Lobby_Layout",
-      "width": 20,
-      "height": 15,
+      "width": 16,
+      "height": 12,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PetalburgGym",
       "border_filepath": "data/layouts/CandlewaxCity_ConcertHall_Lobby/border.bin",
@@ -4567,7 +4557,7 @@
       "width": 50,
       "height": 40,
       "primary_tileset": "gTileset_PreludeTownTest",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route4/border.bin",
       "blockdata_filepath": "data/layouts/Route4/map.bin"
     },
@@ -4594,8 +4584,8 @@
     {
       "id": "LAYOUT_GODZILLAND",
       "name": "Godzilland_Layout",
-      "width": 55,
-      "height": 50,
+      "width": 52,
+      "height": 45,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Dewford",
       "border_filepath": "data/layouts/Godzilland/border.bin",
@@ -4624,7 +4614,7 @@
     {
       "id": "LAYOUT_GODZILLAND_CONCERT_HALL",
       "name": "Godzilland_ConcertHall_Layout",
-      "width": 20,
+      "width": 16,
       "height": 15,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleDome",
@@ -4744,8 +4734,8 @@
     {
       "id": "LAYOUT_CRYSTAL_STREAM_CITY_CONCERT_HALL_LOBBY",
       "name": "CrystalStreamCity_ConcertHall_Lobby_Layout",
-      "width": 19,
-      "height": 15,
+      "width": 15,
+      "height": 14,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_BattlePalace",
       "border_filepath": "data/layouts/CrystalStreamCity_ConcertHall_Lobby/border.bin",
@@ -4890,6 +4880,216 @@
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/PortraitTown_ConcertHall_Lobby/border.bin",
       "blockdata_filepath": "data/layouts/PortraitTown_ConcertHall_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE9",
+      "name": "Route9_Layout",
+      "width": 70,
+      "height": 30,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/Route9/border.bin",
+      "blockdata_filepath": "data/layouts/Route9/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAILOR_TOWN",
+      "name": "SailorTown_Layout",
+      "width": 45,
+      "height": 40,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/SailorTown/border.bin",
+      "blockdata_filepath": "data/layouts/SailorTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE10",
+      "name": "Route10_Layout",
+      "width": 30,
+      "height": 60,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Pacifidlog",
+      "border_filepath": "data/layouts/Route10/border.bin",
+      "blockdata_filepath": "data/layouts/Route10/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTINGALE_CITY",
+      "name": "NightingaleCity_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/NightingaleCity/border.bin",
+      "blockdata_filepath": "data/layouts/NightingaleCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE11",
+      "name": "Route11_Layout",
+      "width": 22,
+      "height": 45,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_prelude_town",
+      "border_filepath": "data/layouts/Route11/border.bin",
+      "blockdata_filepath": "data/layouts/Route11/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTINGALE_CITY_PUB",
+      "name": "NightingaleCity_Pub_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MossdeepGameCorner",
+      "border_filepath": "data/layouts/NightingaleCity_Pub/border.bin",
+      "blockdata_filepath": "data/layouts/NightingaleCity_Pub/map.bin"
+    },
+    {
+      "id": "LAYOUT_NIGHTINGALE_CITY_PUB_BACK",
+      "name": "NightingaleCity_Pub_Back_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MossdeepGameCorner",
+      "border_filepath": "data/layouts/NightingaleCity_Pub_Back/border.bin",
+      "blockdata_filepath": "data/layouts/NightingaleCity_Pub_Back/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRROR_LAKE",
+      "name": "MirrorLake_Layout",
+      "width": 50,
+      "height": 42,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_prelude_town",
+      "border_filepath": "data/layouts/MirrorLake/border.bin",
+      "blockdata_filepath": "data/layouts/MirrorLake/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRROR_LAKE_CAVE",
+      "name": "MirrorLake_Cave_Layout",
+      "width": 13,
+      "height": 11,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/MirrorLake_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/MirrorLake_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRROR_LAKE_CAVE_ENTRANCE",
+      "name": "MirrorLake_Cave_Entrance_Layout",
+      "width": 15,
+      "height": 13,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/MirrorLake_Cave_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/MirrorLake_Cave_Entrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE12",
+      "name": "Route12_Layout",
+      "width": 30,
+      "height": 60,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Route12/border.bin",
+      "blockdata_filepath": "data/layouts/Route12/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_GATE",
+      "name": "VictoryRoad_Gate_Layout",
+      "width": 10,
+      "height": 14,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/VictoryRoad_Gate/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_Gate/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_1",
+      "name": "VictoryRoad_1_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/VictoryRoad_1/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_1/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_2",
+      "name": "VictoryRoad_2_Layout",
+      "width": 30,
+      "height": 50,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Lavaridge",
+      "border_filepath": "data/layouts/VictoryRoad_2/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_3",
+      "name": "VictoryRoad_3_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/VictoryRoad_3/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_3/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_4",
+      "name": "VictoryRoad_4_Layout",
+      "width": 20,
+      "height": 30,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/VictoryRoad_4/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_4/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRROR_CITY",
+      "name": "MirrorCity_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_PreludeTownTest",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/MirrorCity/border.bin",
+      "blockdata_filepath": "data/layouts/MirrorCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRROR_CITY_CONCERT_HALL",
+      "name": "MirrorCity_ConcertHall_Layout",
+      "width": 16,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/MirrorCity_ConcertHall/border.bin",
+      "blockdata_filepath": "data/layouts/MirrorCity_ConcertHall/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRROR_CITY_CONCERT_HALL_LOBBY",
+      "name": "MirrorCity_ConcertHall_Lobby_Layout",
+      "width": 15,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePalace",
+      "border_filepath": "data/layouts/MirrorCity_ConcertHall_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/MirrorCity_ConcertHall_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRROR_CITY_CONCERT_HALL_LOUNGE1",
+      "name": "MirrorCity_ConcertHall_Lounge1_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/MirrorCity_ConcertHall_Lounge1/border.bin",
+      "blockdata_filepath": "data/layouts/MirrorCity_ConcertHall_Lounge1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MIRROR_CITY_CONCERT_HALL_LOUNGE2",
+      "name": "MirrorCity_ConcertHall_Lounge2_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/MirrorCity_ConcertHall_Lounge2/border.bin",
+      "blockdata_filepath": "data/layouts/MirrorCity_ConcertHall_Lounge2/map.bin"
     }
   ]
 }

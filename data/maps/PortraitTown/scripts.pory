@@ -1,1 +1,29 @@
 mapscripts PortraitTown_MapScripts {}
+
+script PortraitTown_ConcertHallSign{
+    lock
+    msgbox(format("PORTRAIT TOWN CONCERT HALL\p MARINA IS WAITING FOR YOU"))
+    release
+    end
+}
+
+script PortraitTown_CitySign{
+    lock
+    msgbox(format("Welcome to Portrait Town!\p So lovely you'll want to visit over and over again!"))
+    release
+    end
+}
+
+script PortraitTown_CableCarSign{
+    lock
+    msgbox(format("{UP_ARROW}: Cable Car station\pRide the Cable Car down to Route 9!"))
+    release
+    end
+}
+
+script PortraitTown_Route8Sign{
+    lock
+    msgbox(format("{DOWN_ARROW}: Route 8, to Mercy Town."))
+    release
+    end
+}

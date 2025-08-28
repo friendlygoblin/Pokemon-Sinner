@@ -71,7 +71,6 @@ script RibCave_BadGuysArguing{
     end
 }
 
-
 movement PanCameraUp{
     walk_up * 6
     step_end
@@ -194,3 +193,4 @@ text JaysPkmn{
     "He's waiting outside of the cave, in \n"
     "Candlewax City. $"
 }
+

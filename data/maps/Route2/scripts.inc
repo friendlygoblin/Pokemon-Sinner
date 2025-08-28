@@ -47,24 +47,64 @@ JayLeaves_Route2:
 
 Route2_Hiker::
 # 45 "data/maps/Route2/scripts.pory"
-	trainerbattle_single TRAINER_TOMMY, Route2_Hiker_BattleIntro, Route2_Hiker_Defeated
+	trainerbattle_single TRAINER_TOMMY, Route2_Hiker_Text_0, Route2_Hiker_Text_1
 # 46 "data/maps/Route2/scripts.pory"
-	msgbox Route2_Hiker_PostBattle, MSGBOX_AUTOCLOSE
+	msgbox Route2_Hiker_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
+Route2_SchoolGirl::
+# 50 "data/maps/Route2/scripts.pory"
+	trainerbattle_single TRAINER_KAREN_1, Route2_SchoolGirl_Text_0, Route2_SchoolGirl_Text_1
+# 51 "data/maps/Route2/scripts.pory"
+	msgbox Route2_SchoolGirl_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 RibCave_Sign::
-# 67 "data/maps/Route2/scripts.pory"
+# 55 "data/maps/Route2/scripts.pory"
 	lock
-# 68 "data/maps/Route2/scripts.pory"
+# 56 "data/maps/Route2/scripts.pory"
 	msgbox RibCave_Sign_Text_0
-# 69 "data/maps/Route2/scripts.pory"
+# 57 "data/maps/Route2/scripts.pory"
 	releaseall
 	end
 
 
+Route2_Hiker_Text_0:
+# 45 "data/maps/Route2/scripts.pory"
+	.string "I was just taking a break from walking,\n"
+	.string "but I always have energy for a POKéMON\l"
+	.string "battle!$"
+
+Route2_Hiker_Text_1:
+# 45 "data/maps/Route2/scripts.pory"
+	.string "I need to sit down again…$"
+
+Route2_Hiker_Text_2:
+# 46 "data/maps/Route2/scripts.pory"
+	.string "I like to find cosy little spots to take\n"
+	.string "naps in.\p"
+	.string "Too bad I have to walk so much to get\n"
+	.string "there.$"
+
+Route2_SchoolGirl_Text_0:
+# 50 "data/maps/Route2/scripts.pory"
+	.string "I did my school presentation about my\n"
+	.string "POKéMON!$"
+
+Route2_SchoolGirl_Text_1:
+# 50 "data/maps/Route2/scripts.pory"
+	.string "But I got a good grade…$"
+
+Route2_SchoolGirl_Text_2:
+# 51 "data/maps/Route2/scripts.pory"
+	.string "Munchlax helped me prepare my\n"
+	.string "presentation!\p"
+	.string "He's my best friend!$"
+
 RibCave_Sign_Text_0:
-# 68 "data/maps/Route2/scripts.pory"
+# 56 "data/maps/Route2/scripts.pory"
 	.string "{UP_ARROW} Rib Cave.\p"
 	.string "Gateway to Candlewax City.$"
 
@@ -85,20 +125,3 @@ Jay_PostBattle::
 	.string "I'm gonna train a bit further, I've \n"
 	.string "heard there are strong trainers on \l"
 	.string "the other side of the Rib Cave.$"
-
-Route2_Hiker_BattleIntro::
-# 49 "data/maps/Route2/scripts.pory"
-	.string "I was just taking a break from walking, \n"
-	.string "but I always have energy for a POKéMON \l"
-	.string "battle!$"
-
-Route2_Hiker_Defeated::
-# 55 "data/maps/Route2/scripts.pory"
-	.string "I need to sit down again…$"
-
-Route2_Hiker_PostBattle::
-# 59 "data/maps/Route2/scripts.pory"
-	.string "I like to find cosy little spots to \n"
-	.string "take naps in. \p"
-	.string "Too bad I have to walk so much to get \n"
-	.string "there.$"

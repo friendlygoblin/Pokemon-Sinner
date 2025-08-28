@@ -7,40 +7,21 @@ script ClearKatieFlag{
     }
 
 script BDI_Fisherman {
-    trainerbattle_single(TRAINER_IVAN, BDI_Fisherman_BattleIntro, BDI_Fisherman_Defeated)
-    msgbox(BDI_Fisherman_PostBattle, MSGBOX_AUTOCLOSE)
+    trainerbattle_single(TRAINER_IVAN, format("I know this place is famous for the dog POKéMON but I prefer fishing! $"), format("I'm good at catching POKéMON, not training them…$"))
+    msgbox(format("No one really knows why the POKéMON here are all canines.$"), MSGBOX_AUTOCLOSE)
 }
-
-text BDI_Fisherman_BattleIntro{
-    "I know this place is famous for the\n"
-    "dog POKéMON but I prefer fishing! $"
-    }
-
-text BDI_Fisherman_Defeated{
-    "I'm good at catching POKéMON, not \n"
-    "training them…$"
-    }
-
-text BDI_Fisherman_PostBattle{
-    "No one really knows why the POKéMON\n"
-    "here are all canines.$"
-    }
 
 script BDI_TuberGirl {
-    trainerbattle_single(TRAINER_LOLA_1, BDI_TuberGirl_BattleIntro, BDI_TuberGirl_Defeated)
-    msgbox(BDI_TuberGirl_PostBattle, MSGBOX_AUTOCLOSE)
+    trainerbattle_single(TRAINER_LOLA_1, format("I love swimming here with my friends!\nCome join us!$"), format("That was fun but I'm a little tired…$"))
+    msgbox(format("Living on an island is so cool, I can go swimming every day!$"), MSGBOX_AUTOCLOSE)
 }
 
-text BDI_TuberGirl_BattleIntro{
-    "I love swimming here with my friends!\n"
-    "Come join us!$"
-    }
+script BDI_Birdkeeper{
+    trainerbattle_single(TRAINER_PERRY, format("The canine POKéMON always scare the birds away…"), format("My birds…"))
+    msgbox(format("I wish there were more birds on this island."), MSGBOX_AUTOCLOSE)
+}
 
-text BDI_TuberGirl_Defeated{
-    "That was fun but I'm a little tired…$"
-    }
-
-text BDI_TuberGirl_PostBattle{
-    "Living on an island is so cool, I can\n"
-    "go swimming every day!$"
-    }
+script BDI_BattleGirl{
+    trainerbattle_single(TRAINER_JOCELYN, format("My team and I train hard in the cave!$"), format("I guess we need more training…"))
+    msgbox(format("I came to this island to focus on myself and my POKéMON."), MSGBOX_AUTOCLOSE)
+}

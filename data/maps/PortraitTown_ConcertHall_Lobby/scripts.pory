@@ -1,1 +1,66 @@
 mapscripts PortraitTown_ConcertHall_Lobby_MapScripts {}
+
+const Abi = 2
+
+script MarinaHall_Ann{
+    lock
+    faceplayer
+    if(defeated(TRAINER_MARINA)){
+        msgbox(format("ANN: You won against Marina?\pNo way!"), MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(format("ANN: I'll win this for Cowboy Lizzie!"),MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_ANN,  format("Cowboy Lizzie lives on… even without me."))
+        msgbox(format("ANN: I thought you couldn't break a diamond… but you've done it!"), MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+script MarinaHall_Abi{
+    lock
+    applymovement(Abi, MarinaHall_AbiWalkToPlayer)
+    waitmovement(0)
+    msgbox(MarinaHall_AbiTalkToPlayer, MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, MarinaHall_PlayerMoveAside)
+    waitmovement(0)
+    applymovement(Abi, MarinaHall_AbiLeaves)
+    waitmovement(0)
+    removeobject(Abi)
+    setflag(FLAG_MARINAHALL_ABI)
+    setvar(VAR_MARINAHALL_ABI,1)
+    release
+    end
+}
+
+movement MarinaHall_AbiWalkToPlayer{
+    walk_down *5
+    step_end
+}
+
+movement MarinaHall_AbiLeaves{
+    walk_down *2
+    step_end
+}
+
+movement MarinaHall_PlayerMoveAside{
+    walk_right
+    face_left
+    step_end
+}
+
+text MarinaHall_AbiTalkToPlayer{
+    "ABIGAIL: {PLAYER}! \p"
+    "What are you doing here? \p"
+    "… … … \p"
+    "Challenging Marina? \p"
+    "Wow, you've really come a long way! \p"
+    "I knew you'd do great things with that \n"
+    "POKéMON I gave you. \p"
+    "Me? Oh, I was just visiting. \p"
+    "Marina was a huge influence when I was \n"
+    "learning to sing. \p"
+    "Well, I'm gonna go now. \p"
+    "It was nice running into you, see you \n"
+    "later!$"
+}

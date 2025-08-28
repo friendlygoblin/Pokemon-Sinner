@@ -27,3 +27,42 @@ script Godzilland_ConcertHallSign{
     releaseall
     end
 }
+
+script Godzilland_GiveItemFinder{
+    lock
+    faceplayer
+    if (flag(FLAG_GODZILLAND_ITEM_FINDER)){
+        msgbox(FindAnyTreasures, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(ExplainHiddenItems)
+        giveitem(ITEM_ITEMFINDER)
+        msgbox(ExplainItemFinder)
+    }
+    release
+    end
+}
+
+text ExplainHiddenItems{
+    "Hey you! \p"
+    "Do you like treasure hunting? \p"
+    "No don't say anything, everyone loves \n"
+    "treasure hunting! \p"
+    "So here, take this! $"
+}
+
+text ExplainItemFinder{
+    "It's an Item Finder! \p"
+    "Some treasures are invisible to the \n"
+    "naked eye, but this baby can find! \l"
+    "them for you! \p"
+    "It emits a sound when you're close \n"
+    "to a hidden item! \p"
+    "Have fun treasure hunting! $"
+}
+
+text FindAnyTreasures{
+    "So, how's the treasure hunting going? \p"
+    "I hope you're finding a lot of cool \n"
+    "items!$"
+}

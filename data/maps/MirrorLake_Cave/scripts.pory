@@ -1,0 +1,50 @@
+mapscripts MirrorLake_Cave_MapScripts {}
+
+script BowieHall_BowieBattle{
+    lock
+    faceplayer
+    trainerbattle_single(TRAINER_BOWIE,BowieHall_BowieBattleIntro, BowieHall_BowieLostBattle, BowieGiveBadge)
+    releaseall
+    end
+}
+
+script BowieGiveBadge{
+    removeobject(1)
+    msgbox(format("The mysterious musician disappeared… "), MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+    waitmovement(0)
+    msgbox(format("It looks like he left something behind… \pIt's a badge!"))
+    message(format("Received the STARMAN BADGE from DAVID BOWIE!"))
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    setflag(FLAG_BADGE08_GET)
+    setflag(FLAG_DEFEATED_SOOTOPOLIS_GYM)
+    msgbox(BowieBadgePerks, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text BowieHall_BowieBattleIntro{
+    "???: … … … \p"
+    "Who are you, and why are you here? \p"
+    "… … … \p"
+    "I see… \p"
+    "You can tell the worried folks around \n"
+    "here that it's only me, enjoying the \l"
+    "acoustics of this cave. \p"
+    "Why don't you let me show you what I \n"
+    "mean? $"
+}
+
+text BowieHall_BowieLostBattle{
+    "It ain't easy to get to heaven… $"
+}
+
+text BowieBadgePerks{
+    "This badge makes you feel stronger \n"
+    "somehow. \p"
+    "You feel like any POKéMON could listen \n"
+    "to you. \p"
+    "Perhaps part of David Bowie's energy is \n"
+    "doing that through the badge… $"
+}

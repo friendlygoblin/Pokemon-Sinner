@@ -49,7 +49,8 @@ script StVincentHall_Receptionist{
 
 script StVincentHall_Natalie{
     lock
-    msgbox(format("NATALIE: I'm not a trainer, but I "))
+    faceplayer
+    msgbox(format("NATALIE: I'm not a trainer, but I still hang out here to encourage challengers!"))
     release
     end
 }

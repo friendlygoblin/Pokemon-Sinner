@@ -109,23 +109,23 @@
 #define VAR_CANDLEWAX_CITY_TRIGGER                   0x405B 
 #define VAR_RORA_HOZIER_HALL                         0x405C 
 #define VAR_ROUTE3_GOBLIN                            0x405F 
-#define VAR_ROUTE3_AMY                               0x4062  //0 = not started, 1 = started, 2 = notes found, 3 = finished
+#define VAR_ROUTE3_AMY                               0x4062 //0 = not started, 1 = started, 2 = notes found, 3 = finished
 #define VAR_ROUTE3_AMY_TRIGGER                       0x4064
-#define VAR_FURGETOWN_HONEY                          0x4065 
 #define VAR_FLORENCE_GEORGIA_SCENE                   0x4066 
 #define VAR_OLIVEMOUNT_OLDMAN_EGG                    0x4067
 #define VAR_GODZILLANDHALL_EMILY                     0x4068 
 #define VAR_CSCCH_TRIGGER                            0x406A
-#define VAR_SUNDAYCAVE_STATE                         0x406B  //0 = not started, 1 = started, 2 = took down one Impidimp, 3 = took down two Impidimps 
+#define VAR_SUNDAYCAVE_STATE                         0x406B //0 = not started, 1 = started, 2 = took down one Impidimp, 3 = took down two Impidimps 
 #define VAR_SUNDAYCAVE_MACHINEGUY                    0x406C 
 #define VAR_CMATHALL_INTERVIEW                       0x406D 
-#define VAR_ROUTE8_MUSICVIDEO                        0x406E
+#define VAR_ROUTE8_MUSICVIDEO                        0x406E //0 = not started, 1 = talked to Harv Frost, 2 = completed
+#define VAR_MARINAHALL_ABI                           0x4070 
+#define VAR_NIGHTINGALECITY_PUB                      0x4065 
+#define VAR_SAILORTOWN_NORA                          0x4073 //0 = not started, 1 = picked up the lens, 2 = gave it back to Nora, 3 = rock seller guy gave info
+#define VAR_ROUTE11_GOBLIN                           0x4075 
+#define VAR_MIRROR_CITY_TLDP_PROGRESS                0x4076 //0 = not started, 1 = beat Rora, 2 = beat Emily, 3 = beat Lizzie, 4 = beat Georgia
+#define VAR_MIRROR_CITY_TLDP_TRIGGER                 0x4077 // Always 0, used to trigger the battles
 
-#define VAR_ROUTE117_STATE                               0x4070 // Unused Var
-#define VAR_ROUTE120_STATE                               0x4073 // Unused Var
-#define VAR_ROUTE122_STATE                               0x4075 // Unused Var
-#define VAR_ROUTE123_STATE                               0x4076 // Unused Var
-#define VAR_ROUTE124_STATE                               0x4077 // Unused Var
 #define VAR_ROUTE125_STATE                               0x4078 // Unused Var
 #define VAR_ROUTE126_STATE                               0x4079 // Unused Var
 #define VAR_ROUTE127_STATE                               0x407A // Unused Var
@@ -147,6 +147,12 @@
 #define VAR_UNUSED_0x40DB                                0x40DB // Unused Var
 #define VAR_UNUSED_0x40DC                                0x40DC // Unused Var
 #define VAR_UNUSED_0x40E5                                0x40E5 // Unused Var
+#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
+#define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
+#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
+#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
+#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
+#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
@@ -276,12 +282,6 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
-#define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_DEMOSHOP                               0x40FD // Unused Var
 #define VAR_RARE_BOX                                0x40FE // Unused Var
 #define VAR_MEW                                0x40FF // Unused Var

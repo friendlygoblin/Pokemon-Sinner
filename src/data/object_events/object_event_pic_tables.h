@@ -89,6 +89,26 @@ static const struct SpriteFrameImage sPicTable_HarvFrost[] = {
     overworld_ascending_frames(gObjectEventPic_HarvFrost, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_Aux[] = {
+    overworld_ascending_frames(gObjectEventPic_Aux, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Elle[] = {
+    overworld_ascending_frames(gObjectEventPic_Elle, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Norah[] = {
+    overworld_ascending_frames(gObjectEventPic_Norah, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Bear[] = {
+    overworld_ascending_frames(gObjectEventPic_Bear, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_Talia[] = {
+    overworld_ascending_frames(gObjectEventPic_Talia, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_Boy1[] = {
     overworld_ascending_frames(gObjectEventPic_Boy1, 2, 4),
 };

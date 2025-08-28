@@ -27,11 +27,13 @@ CMATHall_Spraggy::
 	checktrainerflag TRAINER_CMAT
 	goto_if 1, CMATHall_Spraggy_2
 # 19 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_single TRAINER_SPRAGGY, SpraggyIntro_CMAT, SpraggyDefeated_CMAT
+	msgbox SpraggyIntro_CMAT, MSGBOX_AUTOCLOSE
 # 20 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
+	trainerbattle_no_intro TRAINER_SPRAGGY, CMATHall_Spraggy_Text_0
+# 21 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
 	msgbox SpraggyPostBattle_CMAT, MSGBOX_AUTOCLOSE
 CMATHall_Spraggy_1:
-# 22 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
+# 23 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
 	releaseall
 	end
 
@@ -41,19 +43,19 @@ CMATHall_Spraggy_2:
 	goto CMATHall_Spraggy_1
 
 
+CMATHall_Spraggy_Text_0:
+# 20 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
+	.string "We look alike, don't we?$"
+
 SpraggyIntro_CMAT::
-# 26 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
+# 27 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
 	.string "SPRAGGY: CMAT?\p"
 	.string "No, that's not me, I'm just dressed \n"
 	.string "up as her! \p"
 	.string "Let me show you my costume! $"
 
-SpraggyDefeated_CMAT::
-# 33 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
-	.string "We look alike, don't we? $"
-
 SpraggyPostBattle_CMAT::
-# 37 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
+# 34 "data/maps/MercyTown_ConcertHall_Lobby/scripts.pory"
 	.string "SPRAGGY: I'm flattered that you think \n"
 	.string "I look like CMAT! \p"
 	.string "I'm a huge fan of hers so I'm really \n"

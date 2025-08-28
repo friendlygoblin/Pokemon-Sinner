@@ -35,6 +35,69 @@ GiveSurf_5:
 	goto GiveSurf_1
 
 
+Route5_SwimmerF::
+# 55 "data/maps/Route5/scripts.pory"
+	trainerbattle_single TRAINER_KYLA, Route5_SwimmerF_Text_0, Route5_SwimmerF_Text_1
+# 56 "data/maps/Route5/scripts.pory"
+	msgbox Route5_SwimmerF_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
+Route5_SwimmerM::
+# 60 "data/maps/Route5/scripts.pory"
+	trainerbattle_single TRAINER_DECLAN, Route5_SwimmerM_Text_0, Route5_SwimmerM_Text_1
+# 61 "data/maps/Route5/scripts.pory"
+	msgbox Route5_SwimmerM_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
+Route5_Runner::
+# 65 "data/maps/Route5/scripts.pory"
+	trainerbattle_single TRAINER_MARIA_1, Route5_Runner_Text_0, Route5_Runner_Text_1
+# 66 "data/maps/Route5/scripts.pory"
+	msgbox Route5_Runner_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
+Route5_SwimmerF_Text_0:
+# 55 "data/maps/Route5/scripts.pory"
+	.string "The sea is so refreshing!$"
+
+Route5_SwimmerF_Text_1:
+# 55 "data/maps/Route5/scripts.pory"
+	.string "I'm getting a bit chilly…$"
+
+Route5_SwimmerF_Text_2:
+# 56 "data/maps/Route5/scripts.pory"
+	.string "The water isn't that cold if you keep\n"
+	.string "moving…$"
+
+Route5_SwimmerM_Text_0:
+# 60 "data/maps/Route5/scripts.pory"
+	.string "I'm the fastest in the water!$"
+
+Route5_SwimmerM_Text_1:
+# 60 "data/maps/Route5/scripts.pory"
+	.string "I didn't say I was the strongest…$"
+
+Route5_SwimmerM_Text_2:
+# 61 "data/maps/Route5/scripts.pory"
+	.string "You must be travelling so fast on your\n"
+	.string "POKéMON's back!$"
+
+Route5_Runner_Text_0:
+# 65 "data/maps/Route5/scripts.pory"
+	.string "Hey, you're in my way!$"
+
+Route5_Runner_Text_1:
+# 65 "data/maps/Route5/scripts.pory"
+	.string "Ugh, just move aside please…$"
+
+Route5_Runner_Text_2:
+# 66 "data/maps/Route5/scripts.pory"
+	.string "I'm training for a marathon, I can't be\n"
+	.string "interrupted.$"
+
 SurfStory_GiveSurf::
 # 24 "data/maps/Route5/scripts.pory"
 	.string "Have you ever been on a sinking \n"

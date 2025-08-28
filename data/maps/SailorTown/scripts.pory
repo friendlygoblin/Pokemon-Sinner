@@ -1,0 +1,105 @@
+mapscripts SailorTown_MapScripts {}
+
+script SailorTown_SwimmerF {
+    trainerbattle_single(TRAINER_LUIS, format("I can hold my breath for a minute!"), format("Gasp! "))
+    msgbox(format("The longest I've held my breath is a minute and six seconds! "), MSGBOX_AUTOCLOSE)
+}
+
+script SailorTown_Nora{
+    lock
+    faceplayer
+    switch(var(VAR_SAILORTOWN_NORA)){
+        case 0:
+            call(NoraAskForHelp)
+        case 1:
+            call(NoraMegaRing)
+        case 2:
+            msgbox(format("NORA: Thank you so much for getting my lens back!\pHave fun with the Mega-Ring!"))
+    }
+    release
+    end
+}
+
+script NoraAskForHelp{
+    msgbox(SailorTown_NoraHi, MSGBOX_AUTOCLOSE)
+
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, SailorTown_CameraToLens)
+    waitmovement(0)
+    special(RemoveCameraObject)
+
+    msgbox(SailorTown_NoraLookOverThere, MSGBOX_AUTOCLOSE)
+
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, SailorTown_CameraBack)
+    waitmovement(0)
+    special(RemoveCameraObject)
+
+    msgbox(SailorTown_NoraHelp, MSGBOX_AUTOCLOSE)
+}
+
+script NoraMegaRing{
+    msgbox(SailorTown_NoraThankyou)
+    giveitem(ITEM_MEGA_RING)
+    msgbox(SailorTown_NoraThisIsMegaRing, MSGBOX_AUTOCLOSE)
+}
+
+text SailorTown_NoraHi{
+    "NORA: Oh, {PLAYER}!"
+    "I wasn't expecting to see you here, \n"
+    "what have you been up to? \p"
+    "… … … \p"
+    "Oh wow, you've really won six artist \n"
+    "challenges? \p"
+    "Me? Oh, well actually I'm in a bit of \n"
+    "a tricky situation. $"
+}
+
+text SailorTown_NoraLookOverThere{
+    "See over there? \n"
+    "That's one of my camera lenses. \p"
+    "I accidentally dropped it in the water \n"
+    "and the currents carried it away. \p"
+}
+
+text SailorTown_NoraHelp{
+    "I can't figure out how to get to it, I \n"
+    "keep getting washed away. \p"
+    "Do you think you could help me? \n"
+    "I'll uh… give you something cool in \l"
+    "exchange.$"
+}
+
+text SailorTown_NoraThankyou{
+    "NORA: My lens! You got it! \p"
+    "Thank you so much !\p"
+    "I promised you something cool, here \n"
+    "you go!$"
+}
+
+text SailorTown_NoraThisIsMegaRing{
+    "This is a Mega-Ring, it allows you to \n"
+    "Mega-Evolve your POKéMON. \p"
+    "Basically they'll take a new temporary \n"
+    "form that makes them stronger.\p"
+    "They need to hold a Mega-Stone that's \n"
+    "specific to their species, though. $"
+    "The stones are pretty rare, you kind \n"
+    "of have to look around to find them. \p"
+    "I heard of a guy who sells rocks in \n"
+    "Mercy Town, maybe he'll know something.\p"
+    "Thanks again for your help, have fun with \n"
+    "the Mega-Ring!$"
+}
+
+movement SailorTown_CameraToLens{
+    walk_fast_left * 10
+    walk_diag_southwest * 7
+    step_end
+}
+
+movement SailorTown_CameraBack{
+    walk_diag_northeast * 7
+    walk_fast_right * 10
+    step_end
+}

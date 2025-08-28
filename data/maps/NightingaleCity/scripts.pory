@@ -1,0 +1,8 @@
+mapscripts NightingaleCity_MapScripts {}
+
+script NightingaleCity_PubSign{
+    lock
+    msgbox(format("The Nightingale Pub \pFresh drinks and good vibes!"))
+    release
+    end
+}

@@ -18,6 +18,22 @@ Route4_Youngster::
 	return
 
 
+Route4_Fisherman::
+# 14 "data/maps/Route4/scripts.pory"
+	trainerbattle_single TRAINER_CLAUDE, Route4_Fisherman_Text_0, Route4_Fisherman_Text_1
+# 15 "data/maps/Route4/scripts.pory"
+	msgbox Route4_Fisherman_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
+Route4_Collector::
+# 19 "data/maps/Route4/scripts.pory"
+	trainerbattle_single TRAINER_ED, Route4_Collector_Text_0, Route4_Collector_Text_1
+# 20 "data/maps/Route4/scripts.pory"
+	msgbox Route4_Collector_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
 Route4_Picnicker_Text_0:
 # 4 "data/maps/Route4/scripts.pory"
 	.string "This route is pretty empty, I can get\n"
@@ -46,3 +62,30 @@ Route4_Youngster_Text_2:
 # 10 "data/maps/Route4/scripts.pory"
 	.string "You're a lot stronger than you look, you\n"
 	.string "know.$"
+
+Route4_Fisherman_Text_0:
+# 14 "data/maps/Route4/scripts.pory"
+	.string "Shhhhh, I'm fishing! $"
+
+Route4_Fisherman_Text_1:
+# 14 "data/maps/Route4/scripts.pory"
+	.string "My catch got away…$"
+
+Route4_Fisherman_Text_2:
+# 15 "data/maps/Route4/scripts.pory"
+	.string "You have to be really patient and quiet\n"
+	.string "when you're fishing.$"
+
+Route4_Collector_Text_0:
+# 19 "data/maps/Route4/scripts.pory"
+	.string "I only collect cool POKéMON.$"
+
+Route4_Collector_Text_1:
+# 19 "data/maps/Route4/scripts.pory"
+	.string "Ah! My precious POKéMON!$"
+
+Route4_Collector_Text_2:
+# 20 "data/maps/Route4/scripts.pory"
+	.string "You travel a lot, you must see a lot of\n"
+	.string "cool POKéMON.\p"
+	.string "I'm jealous.$"

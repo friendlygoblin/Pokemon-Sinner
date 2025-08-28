@@ -14,7 +14,6 @@ script Route8_MusicVideo{
     applymovement(Man, Route8_ManRunAway1)
     applymovement(Harv, Common_Movement_FaceLeft)
     waitmovement(Man)
-    delay(20)
     applymovement(OBJ_EVENT_ID_PLAYER, Route8_PlayerMoveAside)
     waitmovement(0)
     applymovement(Harv, Common_Movement_FaceDown)
@@ -36,16 +35,23 @@ script Route8_MusicVideo{
         specialvar(VAR_RESULT, CalculatePlayerPartyCount)
         if(var(VAR_RESULT)==1){
             msgbox(Route8_HarvNotEnoughPkmn, MSGBOX_AUTOCLOSE)
+            applymovement(Harv,Route8_HarvGoBackToInitial)
+            waitmovement(0)
         }
         else{
             msgbox(Route8_HarvBattleTest, MSGBOX_AUTOCLOSE)
             trainerbattle_no_intro(TRAINER_HARVFROST, format("Yes, that'll look great!"))
             special(HealPlayerParty)
-            call(PictureParlourBattle)   
+            applymovement(Harv,Route8_HarvGoBackToInitial)
+            applymovement(OBJ_EVENT_ID_PLAYER, Route8_PlayerGetIntoPosition)
+            waitmovement(0)
+            call(PictureParlourBattle)
         }
     }
     else{
         msgbox(Route8_HarvRefusedBattle, MSGBOX_AUTOCLOSE)
+        applymovement(Harv,Route8_HarvGoBackToInitial)
+        waitmovement(0)
     }
     setvar(VAR_ROUTE8_MUSICVIDEO, 1)
     releaseall
@@ -53,53 +59,53 @@ script Route8_MusicVideo{
 }
 
 script PictureParlourBattle{//Don't forget to change levels back to 27
-    msgbox(Route8_HarvAcceptedBattle, MSGBOX_AUTOCLOSE)
-    applymovement(Harv,Route8_HarvGoBackToInitial)
-    applymovement(OBJ_EVENT_ID_PLAYER, Route8_PlayerGetIntoPosition)
-    waitmovement(0)
+    lockall
     msgbox(Route8_HarvAction, MSGBOX_AUTOCLOSE)
-    trainerbattle_double(TRAINER_PICTURE_PARLOUR, format("KATHERINE: Thanks for helping us out!\pELLA: We'll definitely owe you one!"), format("KATHERINE: What Lumiere had in mind was you! \pELLA: Yeah, that was a real motion picture!"), Route8_HarvNotEnoughPkmn, PostPictureParlourBattle)
+    trainerbattle_double(TRAINER_PICTURE_PARLOUR, format("KATHERINE: Thanks for helping us out!\pELLA: We definitely owe you one!"), format("KATHERINE: What Lumiere had in mind was you! \pELLA: Yeah, that was a real motion picture!"), Route8_HarvNotEnoughPkmn, PostPictureParlourBattle)
     setvar(VAR_ROUTE8_MUSICVIDEO, 2)
 }
 
 script PostPictureParlourBattle{
     applymovement(Katherine, WalkInPlaceDown)
     waitmovement(0)
-    msgbox(Route8_KatherinePostBattle,MSGBOX_AUTOCLOSE)
+    msgbox(Route8_KatherinePostBattle)
     giveitem(ITEM_BLACK_GLASSES)
     applymovement(Ella, WalkInPlaceDown)
     waitmovement(0)
-    msgbox(Route8_EllaPostBattle,MSGBOX_AUTOCLOSE)
+    msgbox(Route8_EllaPostBattle)
     giveitem(ITEM_METRONOME)
 }
 
 script Route8_Harv{
     lock
     faceplayer
-    if(var(VAR_ROUTE8_MUSICVIDEO)!=2){
+    if(var(VAR_ROUTE8_MUSICVIDEO)==2){
+        msgbox(format("HARV FROST: Thank you so much for your help, you were fantastic!"))
+    }
+    else{
         msgbox(Route8_HarvPlayerCameBack, MSGBOX_YESNO)
         if (var(VAR_RESULT)==YES){
             if (var(VAR_ROUTE8_MUSICVIDEO)==1){
                 msgbox(Route8_HarvBattleTest, MSGBOX_AUTOCLOSE)
                 trainerbattle_no_intro(TRAINER_HARVFROST, format("Yes, that'll look great!"))
                 special(HealPlayerParty)   
-
+                msgbox(Route8_HarvAcceptedBattle, MSGBOX_AUTOCLOSE)
             }
             fadescreen(FADE_TO_BLACK)
             setobjectxy(OBJ_EVENT_ID_PLAYER, 13, 24)
+            setobjectxy(OBJ_EVENT_ID_FOLLOWER, 14, 24)
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+            applymovement(OBJ_EVENT_ID_FOLLOWER, Common_Movement_FaceUp)
+            applymovement(Katherine, Common_Movement_FaceDown)
+            applymovement(Ella, Common_Movement_FaceDown)
+            applymovement(Harv, Common_Movement_FaceUp)
             waitmovement(0)
             fadescreen(FADE_FROM_BLACK)
-            msgbox(Route8_HarvAction, MSGBOX_AUTOCLOSE)
-            trainerbattle_double(TRAINER_PICTURE_PARLOUR, format("KATHERINE: Thanks for helping us out!\pELLA: We'll definitely owe you one!"), format("KATHERINE: What Lumiere had in mind was you! \pELLA: Yeah, that was a real motion picture!"), Route8_HarvNotEnoughPkmn, PostPictureParlourBattle)
-            setvar(VAR_ROUTE8_MUSICVIDEO, 2)
+            call(PictureParlourBattle)
             }
         else{
             msgbox(Route8_HarvRefusedBattle, MSGBOX_AUTOCLOSE)
         }
-    }
-    else{
-        msgbox(format("HARV FROST: Thank you so much for your help, you were fantastic!"))
     }
     release
     end
@@ -108,11 +114,11 @@ script Route8_Harv{
 script Route8_Katherine{ 
     lock
     faceplayer
-    if(var(VAR_ROUTE8_MUSICVIDEO)!=2){
-        msgbox(format("KATHERINE: Are you here to help with the music video? If yes, you should go tell Harv you're ready to shoot."))
+    if(var(VAR_ROUTE8_MUSICVIDEO)==2){
+        msgbox(format("KATHERINE: Thanks again for joining us on such short notice!\pMaybe you should consider an acting career."))
     }
     else{
-        msgbox(format("KATHERINE: Thanks again for joining us on such short notice!\pMaybe you should consider an acting career."))
+        msgbox(format("KATHERINE: Are you here to help with the music video? If yes, you should go tell Harv you're ready to shoot."))
     }
     release
     end
@@ -121,11 +127,11 @@ script Route8_Katherine{
 script Route8_Ella{ 
     lock
     faceplayer
-    if(var(VAR_ROUTE8_MUSICVIDEO)!=2){
-        msgbox(format("ELLA: The actor who was supposed to shoot with us isn't available anymore… \pIf you wanna help us out, go tell our director Harv, she'll tell you what to do."))
+    if(var(VAR_ROUTE8_MUSICVIDEO)==2){
+        msgbox(format("ELLA: This might be our best music video yet, thanks to you. Good luck with whatever you're planning next!"))
     }
     else{
-        msgbox(format("ELLA: This might be our best music video yet, thanks to you. Good luck with whatever you're planning next!"))
+        msgbox(format("ELLA: The actor who was supposed to shoot with us isn't available anymore… \pIf you wanna help us out, go tell our director Harv, she'll tell you what to do."))
     }
     release
     end
@@ -139,7 +145,7 @@ movement Route8_ManRunAway1{
 
 movement Route8_PlayerMoveAside{
     face_left
-    delay_8
+    delay_16
     walk_up
     face_down
     step_end
@@ -162,7 +168,7 @@ movement Route8_HarvNoticesPlayer{
 
 movement Route8_HarvGoBackToInitial{
     walk_up *2
-    walk_right *3
+    walk_right *4
     face_up
     step_end
 }

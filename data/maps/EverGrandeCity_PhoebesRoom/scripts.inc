@@ -138,15 +138,14 @@ Emily_Text_IntroSpeech::
 	.string "guitar, mandolin and flute.\p"
 	.string "…\p"
 	.string "Don't waste my time! \p"
-	.string "Justice for fat riffs!\p"
-	.string "$"
+	.string "Justice for fat riffs!$"
 
 Emily_Text_Defeat::
-# 87 "data/maps/EverGrandeCity_PhoebesRoom/scripts.pory"
+# 86 "data/maps/EverGrandeCity_PhoebesRoom/scripts.pory"
 	.string "Second best…$"
 
 Emily_Text_PostBattleSpeech::
-# 91 "data/maps/EverGrandeCity_PhoebesRoom/scripts.pory"
+# 90 "data/maps/EverGrandeCity_PhoebesRoom/scripts.pory"
 	.string "EMILY: You know, I hate to lose \n"
 	.string "but that was fun!\p"
 	.string "You definitely get the importance of \n"

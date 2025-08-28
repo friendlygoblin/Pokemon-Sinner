@@ -85,6 +85,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MercyTown_Route8Sign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 8,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_SKULL_FOSSIL",
+      "flag": "FLAG_TEMP_1"
     }
   ]
 }

@@ -80,8 +80,7 @@ text Emily_Text_IntroSpeech{
 	"guitar, mandolin and flute.\p"
 	"…\p"
 	"Don't waste my time! \p"
-	"Justice for fat riffs!\p"
-	"$"
+	"Justice for fat riffs!$"
 }
 
 text Emily_Text_Defeat{

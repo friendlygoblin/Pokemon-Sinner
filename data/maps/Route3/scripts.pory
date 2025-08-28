@@ -113,26 +113,6 @@ text GoodToGo {
     "See ya!$"
 }
 
-script Route3_FindOranBerry{
-    lock
-    giveitem(ITEM_ORAN_BERRY)
-    hideobjectat(Oran, 0)
-    removeobject(Oran)
-    setflag(FLAG_ORAN_ROUTE3)
-    release
-    end
-}
-
-script Route3_FindShroom{
-    lock
-    giveitem(ITEM_TINY_MUSHROOM)
-    hideobjectat(Shroom, 0)
-    removeobject(Shroom)
-    setflag(FLAG_SHROOM_ROUTE3)
-    release
-    end
-}
-
 script Route3_BugCatcher{
     trainerbattle_single(TRAINER_DAVIS, format("I love forests!\pThere are plenty of cool bugs to catch!"), format("My cool bugs!"))
     msgbox(format("If you like bugs, you gotta love hanging out in the woods!"), MSGBOX_AUTOCLOSE)
@@ -183,6 +163,8 @@ script Route3_AmyQuest{
     case 2:
         msgbox(AmyFoundNotes, MSGBOX_AUTOCLOSE)
         trainerbattle_no_intro(TRAINER_AMY_ROUTE3, "Our readers are gonna love you!$")
+        msgbox(AmyGiveReward, MSGBOX_AUTOCLOSE)
+        giveitem(ITEM_EXP_SHARE)
         msgbox(AmyPostBattle, MSGBOX_AUTOCLOSE)
         applymovement(Amy, AmyGoAway)
         waitmovement(0)
@@ -250,8 +232,17 @@ text AmyFoundNotes{
     "En garde!$"
 }
 
-text AmyPostBattle{
+text AmyGiveReward{
     "Wow, that was great! \p"
+    "You know what, I want you to have \n"
+    "this.$"
+}
+
+text AmyPostBattle{
+    "I found it while working on another \n"
+    "story, it allows the POKéMON that holds \l"
+    "it to gain experience even if it didn't \l"
+    "battle!$"
     "I'm gonna get to work on that article, \n"
     "our readers are gonna love this! \p"
     "Thanks again for your help, you're \n"

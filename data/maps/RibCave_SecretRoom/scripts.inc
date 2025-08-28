@@ -106,204 +106,204 @@ RibCave_BadGuysArguing::
 	end
 
 
-# 75 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 74 "data/maps/RibCave_SecretRoom/scripts.pory"
 PanCameraUp:
-# 76 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 75 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_up
+# 75 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_up
+# 75 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_up
+# 75 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_up
+# 75 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_up
+# 75 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_up
 # 76 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_up
-# 76 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_up
-# 76 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_up
-# 76 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_up
-# 76 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_up
-# 77 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
-# 80 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 79 "data/maps/RibCave_SecretRoom/scripts.pory"
 PanCameraDown:
-# 81 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 80 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 80 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 80 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 80 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 80 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 80 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_fast_down
 # 81 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 81 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 81 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 81 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 81 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 82 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
-# 85 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 84 "data/maps/RibCave_SecretRoom/scripts.pory"
 LeftGuySpeaks:
-# 86 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 85 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_in_place_fast_right
+# 85 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_in_place_fast_right
 # 86 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_in_place_fast_right
-# 87 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
-# 90 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 89 "data/maps/RibCave_SecretRoom/scripts.pory"
 RightGuySpeaks:
-# 91 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 90 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_in_place_fast_left
+# 90 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_in_place_fast_left
 # 91 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_in_place_fast_left
-# 92 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
-# 95 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 94 "data/maps/RibCave_SecretRoom/scripts.pory"
 PlayerWalksUp:
-# 96 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 95 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_up
+# 95 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_up
+# 95 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_up
+# 95 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_up
 # 96 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_up
-# 96 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_up
-# 96 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_up
-# 97 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
-# 100 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 99 "data/maps/RibCave_SecretRoom/scripts.pory"
 LeftGuyRunsToPlayer:
+# 100 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_right
 # 101 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_right
+	face_down
 # 102 "data/maps/RibCave_SecretRoom/scripts.pory"
-	face_down
-# 103 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
-# 106 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 105 "data/maps/RibCave_SecretRoom/scripts.pory"
 RightGuyGoesToPlayer:
+# 106 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_left
 # 107 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_left
-# 108 "data/maps/RibCave_SecretRoom/scripts.pory"
 	face_down
-# 109 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 108 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
-# 112 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 111 "data/maps/RibCave_SecretRoom/scripts.pory"
 LeftGuyOutOfTheWay:
-# 113 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 112 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_left
-# 114 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 113 "data/maps/RibCave_SecretRoom/scripts.pory"
 	face_right
-# 115 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 114 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
-# 118 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 117 "data/maps/RibCave_SecretRoom/scripts.pory"
 RightGuyRunsAway:
-# 119 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 118 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_fast_right
-# 120 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 119 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 119 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 119 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 119 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 119 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_fast_down
 # 120 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 120 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 120 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 120 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 121 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_fast_left
-# 122 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 121 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_fast_down
-# 123 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 122 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
-# 126 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 125 "data/maps/RibCave_SecretRoom/scripts.pory"
 LeftGuyRunsAway:
-# 127 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 126 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 126 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 126 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 126 "data/maps/RibCave_SecretRoom/scripts.pory"
+	walk_fast_down
+# 126 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_fast_down
 # 127 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 127 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 127 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 127 "data/maps/RibCave_SecretRoom/scripts.pory"
-	walk_fast_down
-# 128 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_fast_right
-# 129 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 128 "data/maps/RibCave_SecretRoom/scripts.pory"
 	walk_fast_down
-# 130 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 129 "data/maps/RibCave_SecretRoom/scripts.pory"
 	step_end
 
 RibCave_Pokeball::
-# 182 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 181 "data/maps/RibCave_SecretRoom/scripts.pory"
 	lock
-# 183 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 182 "data/maps/RibCave_SecretRoom/scripts.pory"
 	msgbox JaysPkmn, MSGBOX_AUTOCLOSE
-# 184 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 183 "data/maps/RibCave_SecretRoom/scripts.pory"
 	removeobject 2
-# 185 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 184 "data/maps/RibCave_SecretRoom/scripts.pory"
 	setflag FLAG_POKEBALL_RIBCAVE
-# 186 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 185 "data/maps/RibCave_SecretRoom/scripts.pory"
 	setvar VAR_CANDLEWAX_CITY_JAY, 2
-# 187 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 186 "data/maps/RibCave_SecretRoom/scripts.pory"
 	releaseall
 	end
 
 
 WhyAreYouNotOutside::
-# 133 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 132 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "What are you doing here, go back \n"
 	.string "to the entrance!$"
 
 YourTurnOutside::
-# 138 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 137 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "I've been there for hours, why don't \n"
 	.string "you go for a bit?$"
 
 GuardingThePokemon::
-# 143 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 142 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "Because I'm guarding the POKéMON, and \n"
 	.string "you're guarding the cave! \p"
 	.string "We've been over this!$"
 
 NotSupposedToBeHere::
-# 149 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 148 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "Hey! We don't know you!\p"
 	.string "You're not supposed to be here!$"
 
 NotGettingBack::
-# 154 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 153 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "You're not getting that POKéMON\n"
 	.string "back!$"
 
 CantBeatUsBoth::
-# 159 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 158 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "Well, you can't beat us both!$"
 
 OutOfTheWay::
-# 163 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 162 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "Ugh just get out of my way… $"
 
 MindYourBusiness::
-# 167 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 166 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "You, mind your own business and go \n"
 	.string "away!$"
 
 LetsGetOutOfHere::
-# 172 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 171 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "Whatever, let's get out of here… $"
 
 ForgetThePkmn::
-# 176 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 175 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "Argh forget about the POKéMON, it's \n"
 	.string "not worth it! $"
 
 JaysPkmn::
-# 191 "data/maps/RibCave_SecretRoom/scripts.pory"
+# 190 "data/maps/RibCave_SecretRoom/scripts.pory"
 	.string "It's Jay's POKéMON! \p"
 	.string "He'll be thrilled to have it back. \p"
 	.string "He's waiting outside of the cave, in \n"

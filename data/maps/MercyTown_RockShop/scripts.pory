@@ -25,9 +25,38 @@ text ExplainRocks{
     "Come back"
 }
 
+text NoticeMegaRing{
+    "Hello! \p"
+    "I sell rocks! \p"
+    "Oh! is this a Mega-Ring? \p"
+    "Then you must be interested in Mega \n"
+    "Stones! \p"
+    "I only have one to spare right now, \n"
+    "but I'm feeling generous so here you \l"
+    "go!$"
+}
+
+text ExplainMegaStones{
+    "If you have an Ampharos and give it \n"
+    "this stone to hold, you'll be able to \l"
+    "Mega-Evolve it! \p"
+    "Mega-Stones are rare and not every \n"
+    "POKéMON can Mega-Evolve, but they are \l"
+    "worth the search!$"
+}
+
+
 script RockSellerDude{
     lock 
     faceplayer
+    if (var(VAR_SAILORTOWN_NORA)==2){
+        msgbox(NoticeMegaRing)
+        giveitem(ITEM_AMPHAROSITE)
+        msgbox(ExplainMegaStones, MSGBOX_AUTOCLOSE)
+        setvar(VAR_SAILORTOWN_NORA, 3)
+        release
+        end
+    }
     message(SellRocks)
     waitmessage
     pokemart(RockMart)

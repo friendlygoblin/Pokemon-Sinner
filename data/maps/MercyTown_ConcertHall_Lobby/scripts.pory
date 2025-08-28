@@ -16,7 +16,8 @@ script CMATHall_Spraggy{
         msgbox(SpraggyPostBattle_CMAT, MSGBOX_AUTOCLOSE)
         }
     else{
-        trainerbattle_single(TRAINER_SPRAGGY, SpraggyIntro_CMAT, SpraggyDefeated_CMAT)
+        msgbox(SpraggyIntro_CMAT, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_SPRAGGY, format("We look alike, don't we?"))
         msgbox(SpraggyPostBattle_CMAT, MSGBOX_AUTOCLOSE)
         }
     releaseall
@@ -28,10 +29,6 @@ text SpraggyIntro_CMAT {
     "No, that's not me, I'm just dressed \n"
     "up as her! \p"
     "Let me show you my costume! $"
-}
-
-text SpraggyDefeated_CMAT{
-    "We look alike, don't we? $"
 }
 
 text SpraggyPostBattle_CMAT{

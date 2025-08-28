@@ -99,34 +99,50 @@ SBI_Sign::
 
 
 SBI_ChaiseLongue::
-# 166 "data/maps/SecondBestIsland/scripts.pory"
+# 164 "data/maps/SecondBestIsland/scripts.pory"
 	lock
-# 167 "data/maps/SecondBestIsland/scripts.pory"
+# 165 "data/maps/SecondBestIsland/scripts.pory"
 	msgbox SBI_TakeABreak, MSGBOX_YESNO
-# 168 "data/maps/SecondBestIsland/scripts.pory"
+# 166 "data/maps/SecondBestIsland/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq SBI_ChaiseLongue_2
 SBI_ChaiseLongue_1:
-# 177 "data/maps/SecondBestIsland/scripts.pory"
+# 175 "data/maps/SecondBestIsland/scripts.pory"
 	releaseall
 	end
 
 SBI_ChaiseLongue_2:
-# 169 "data/maps/SecondBestIsland/scripts.pory"
+# 167 "data/maps/SecondBestIsland/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 170 "data/maps/SecondBestIsland/scripts.pory"
+# 168 "data/maps/SecondBestIsland/scripts.pory"
 	playfanfare MUS_HEAL
-# 171 "data/maps/SecondBestIsland/scripts.pory"
+# 169 "data/maps/SecondBestIsland/scripts.pory"
 	waitfanfare
-# 172 "data/maps/SecondBestIsland/scripts.pory"
+# 170 "data/maps/SecondBestIsland/scripts.pory"
 	special HealPlayerParty
-# 173 "data/maps/SecondBestIsland/scripts.pory"
+# 171 "data/maps/SecondBestIsland/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 174 "data/maps/SecondBestIsland/scripts.pory"
+# 172 "data/maps/SecondBestIsland/scripts.pory"
 	setrespawn HEAL_LOCATION_SECOND_BEST_ISLAND
-# 175 "data/maps/SecondBestIsland/scripts.pory"
+# 173 "data/maps/SecondBestIsland/scripts.pory"
 	msgbox SBI_ChaiseLongue_Text_0, MSGBOX_AUTOCLOSE
 	goto SBI_ChaiseLongue_1
+
+
+SBI_Swimmer1::
+# 186 "data/maps/SecondBestIsland/scripts.pory"
+	trainerbattle_single TRAINER_BEVERLY, SBI_Swimmer1_Text_0, SBI_Swimmer1_Text_1
+# 187 "data/maps/SecondBestIsland/scripts.pory"
+	msgbox SBI_Swimmer1_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
+SBI_Swimmer2::
+# 191 "data/maps/SecondBestIsland/scripts.pory"
+	trainerbattle_single TRAINER_IMANI, SBI_Swimmer2_Text_0, SBI_Swimmer2_Text_1
+# 192 "data/maps/SecondBestIsland/scripts.pory"
+	msgbox SBI_Swimmer2_Text_2, MSGBOX_AUTOCLOSE
+	return
 
 
 SBI_Rachel_Text_0:
@@ -142,9 +158,38 @@ SBI_Piplup_Text_0:
 	.string "PIPLUP: Pipip!$"
 
 SBI_ChaiseLongue_Text_0:
-# 175 "data/maps/SecondBestIsland/scripts.pory"
+# 173 "data/maps/SecondBestIsland/scripts.pory"
 	.string "You and your POKéMON wake up feeling\n"
 	.string "well rested.$"
+
+SBI_Swimmer1_Text_0:
+# 186 "data/maps/SecondBestIsland/scripts.pory"
+	.string "Of course I know there's an island over\n"
+	.string "there!\p"
+	.string "But I'm training to swim faster!$"
+
+SBI_Swimmer1_Text_1:
+# 186 "data/maps/SecondBestIsland/scripts.pory"
+	.string "Time for a little break…$"
+
+SBI_Swimmer1_Text_2:
+# 187 "data/maps/SecondBestIsland/scripts.pory"
+	.string "I'm jealous of Water Type POKéMON,\n"
+	.string "swimming is so easy for them…$"
+
+SBI_Swimmer2_Text_0:
+# 191 "data/maps/SecondBestIsland/scripts.pory"
+	.string "I'm gonna swim across the ocean!$"
+
+SBI_Swimmer2_Text_1:
+# 191 "data/maps/SecondBestIsland/scripts.pory"
+	.string "Maybe I'll start with a shorter\n"
+	.string "distance…$"
+
+SBI_Swimmer2_Text_2:
+# 192 "data/maps/SecondBestIsland/scripts.pory"
+	.string "You should learn to swim, in case your\n"
+	.string "POKéMON can't carry you.$"
 
 SBI_RachelWannaBattle::
 # 47 "data/maps/SecondBestIsland/scripts.pory"
@@ -217,7 +262,7 @@ SBI_LyricsChorus::
 	.string "Second best! $"
 
 SBI_LyricsVerse2::
-# 134 "data/maps/SecondBestIsland/scripts.pory"
+# 133 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Oh against your bathroom tiles \n"
 	.string "Your back goes on for miles… \p"
 	.string "I'm losing my mind! \p"
@@ -229,7 +274,7 @@ SBI_LyricsVerse2::
 	.string "… staaairs! $"
 
 SBI_LyricsOutro::
-# 147 "data/maps/SecondBestIsland/scripts.pory"
+# 145 "data/maps/SecondBestIsland/scripts.pory"
 	.string "What do I do to be better for you? \p"
 	.string "What do I do to be better for you? \p"
 	.string "What do I do to be better for you? \p"
@@ -247,7 +292,7 @@ SBI_LyricsOutro::
 	.string "Don't want to need to go back! $"
 
 SBI_TakeABreak::
-# 181 "data/maps/SecondBestIsland/scripts.pory"
+# 179 "data/maps/SecondBestIsland/scripts.pory"
 	.string "This looks like a nice spot to take \n"
 	.string "a break. \p"
 	.string "Would you like to take a nap?$"

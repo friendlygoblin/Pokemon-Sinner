@@ -1,0 +1,156 @@
+mapscripts NightingaleCity_Pub_Back_MapScripts {}
+
+const BrianMay = 2
+const Emily = 1
+
+script NCPub_BrianEmilyConvo{
+    lock
+
+    applymovement(Emily, Common_Movement_WalkInPlaceLeft)
+    waitmovement(0)
+    msgbox(NCPub_EmilyInvite, MSGBOX_AUTOCLOSE)
+    applymovement(BrianMay, Common_Movement_WalkInPlaceRight)
+    waitmovement(0)
+    msgbox(NCPub_BrianAccept, MSGBOX_AUTOCLOSE)
+    applymovement(Emily, ExcitedEmily_NoEmote)
+    waitmovement(0)
+    msgbox(NCPub_EmilyThankYou, MSGBOX_AUTOCLOSE)
+
+    applymovement(BrianMay, Common_Movement_FaceDown)
+    setobjectmovementtype(BrianMay, MOVEMENT_TYPE_FACE_DOWN)
+    applymovement(Emily, NCPub_EmilyLeaves1)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
+    waitmovement(Emily)
+    msgbox(NCPub_EmilyHappy, MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, NCPub_PlayerMoveAside)
+    waitmovement(0)
+    applymovement(Emily, NCPub_EmilyLeaves2)
+    waitmovement(0)    
+
+    removeobject(Emily)
+    setvar(VAR_NIGHTINGALECITY_PUB, 1)
+    setflag(FLAG_NIGHTINGALECITY_BACK_EMILY)
+    release
+    end
+}
+
+text NCPub_EmilyInvite{
+    "EMILY: … and you're a huge inspiration \n"
+    "for the band and I so I had to invite \l"
+    "you to our first show in Mirror City! $"
+}
+
+text NCPub_BrianAccept{
+    "BRIAN MAY: It would be an honour to \n"
+    "be there! \p"
+    "I've been listening to your work, it \n"
+    "sounds like music has a bright future. \p"
+    "And I've heard of the challenge thing \n"
+    "you do, it sounds fun! \p"
+    "Rock is in good hands with you people. $"
+}
+
+text NCPub_EmilyThankYou{
+    "EMILY: Thank you! \p"
+    "We will keep you a good spot for sure! \p"
+    "Well I should go now, thank you so much \n"
+    "for everything! $"
+}
+
+text NCPub_EmilyHappy{
+    "EMILY: {PLAYER}! \p"
+    "Brian May accepted my invitation, he'll \n"
+    "be in Mirror City! \p"
+    "I have to go tell the others, see ya! $" 
+}
+
+movement NCPub_EmilyLeaves1{
+    walk_right
+    walk_down * 3
+    walk_left
+    step_end
+}
+
+movement NCPub_PlayerMoveAside{
+    walk_left
+    face_right
+    step_end
+}
+
+movement NCPub_EmilyLeaves2{
+    walk_left
+    walk_down
+    step_end
+}
+
+script NCPub_BrianMayBattle{
+    lock
+    faceplayer
+
+    //if(defeated(TRAINER_BRIANMAY)){  
+    //    msgbox(BrianMay_WordAboutTLDP, MSGBOX_AUTOCLOSE)
+    //    }
+    //else{
+        msgbox(BrianMayHall_BrianMayBattleIntro, MSGBOX_YESNO)
+        if(var(VAR_RESULT)==YES){
+            trainerbattle_no_intro(TRAINER_BRIANMAY,  format("You're a champion, my friend."))
+            call(BrianMayGiveBadge)
+        }
+        else{
+            msgbox(format("Very well, another time then!$"))
+        }
+    //    }
+    releaseall
+    end
+}
+
+script BrianMayGiveBadge{
+    msgbox(BrianMayHall_BrianMayGiveBadge, MSGBOX_AUTOCLOSE)
+    message(format("Received the CHAMPION BADGE from BRIAN MAY!"))
+    waitmessage
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    setflag(FLAG_BADGE07_GET)
+    setflag(FLAG_DEFEATED_MOSSDEEP_GYM)
+    msgbox(BrianMayBadgePerks, MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+text BrianMayHall_BrianMayBattleIntro{
+    "BRIAN MAY: Hello, are you a friend of \n"
+    "Emily's? \p"
+    "Oh, a fan of hers! \p"
+    "I see, are you going to see The Last \n"
+    "Dinner Party in Mirror City too? \p"
+    "I'll see you there, then. \p"
+    "You know, I really like their idea of \n"
+    "challenging their fans. \p"
+    "I haven't battled in a little while, I \n"
+    "was focused on keeping my guitar skills \l"
+    "sharp instead. \p"
+    "Why don't we spar together? \n"
+    "It would be good training for you! $"
+}
+
+text BrianMayHall_BrianMayGiveBadge{
+    "BRIAN MAY: Impressive! \p"
+    "The Last Dinner Party will have to \n"
+    "prepare for you. \p"
+    "I have a little something for you, as \n"
+    "a souvenir. \p"
+}
+
+text BrianMayBadgePerks{
+    "We used to give those to our close \n"
+    "friends so they could attend our shows \l"
+    "for free. \p"
+    "You can keep it, for good luck against \n"
+    "the band.$"
+}
+
+text BrianMay_WordAboutTLDP{
+    "BRIAN MAY: Both rock music and POKéMON \n"
+    "battles have bright days ahead of them. \p"
+    "It's good, it shows people still know \n"
+    "how to have fun! $"
+}

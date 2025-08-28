@@ -1,0 +1,31 @@
+mapscripts Route10_MapScripts {}
+
+script Route10_SwimmerF {
+    trainerbattle_single(TRAINER_DENISE, format("The water is so warm, you should come swim!"), format("Not everyone likes swimming I guess… "))
+    msgbox(format("The water is the perfect temperature here! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route10_SwimmerM {
+    trainerbattle_single(TRAINER_LUIS, format("I can hold my breath for a minute!"), format("Gasp! "))
+    msgbox(format("The longest I've held my breath is a minute and six seconds! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route10_BattleGirl {
+    trainerbattle_single(TRAINER_LAURA, format("My POKéMON are growing stronger! "), format("I have to grow stronger, too. "))
+    msgbox(format("There's no secret, the only way to get stronger is to train! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route10_Tuber {
+    trainerbattle_single(TRAINER_AUSTINA, format("I put a message in a bottle and put it out to sea."), format("Maybe it got lost… "))
+    msgbox(format("Maybe if I keep throwing messages in bottles I'll make new friends… "), MSGBOX_AUTOCLOSE)
+}
+
+script Route10_SchoolGirl {
+    trainerbattle_single(TRAINER_GEORGIE, format("I found this bottle with a message in it.\pDid you send it?"), format("Must be from someone else, then… "))
+    msgbox(format("I wonder who sent this message, maybe I could become their friend… "), MSGBOX_AUTOCLOSE)
+}
+
+script Route10_Psychic {
+    trainerbattle_single(TRAINER_PRESTON, format("The repetitive sound of the sea enhances my powers, I'm unstoppable!"), format("Maybe the sea enhances your powers too… "))
+    msgbox(format("The waves are so relaxing it makes it easy to focus.\pMoore focus means more power! "), MSGBOX_AUTOCLOSE)
+}

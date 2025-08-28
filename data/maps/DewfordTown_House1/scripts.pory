@@ -6,10 +6,10 @@ DewfordTown_House1_MapScripts::
 script FurgeTown_House1_EventScript_Man{
 	lock
 	faceplayer
-	if(var(VAR_FURGETOWN_HONEY)==0){
+	if(!flag(FLAG_FURGETOWN_HONEY)){
 		msgbox(FurgeTown_House1_GiveHoney, MSGBOX_AUTOCLOSE)
 		giveitem(ITEM_HONEY)
-		setvar(VAR_FURGETOWN_HONEY, 1)
+		setflag(FLAG_FURGETOWN_HONEY)
 	}
 	msgbox(FurgeTown_House1_HoneyGiven, MSGBOX_AUTOCLOSE)
 	end

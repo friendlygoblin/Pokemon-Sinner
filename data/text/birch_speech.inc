@@ -1,13 +1,12 @@
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
 	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is Amy, but everyone\n"
-	.string "calls me PARLOUR CHEF\p"
+	.string "I'm Goblin, I'm a Parlour Chef but \n"
+	.string "also a big POKéMON nerd and TLDP Fan!\p"
 	.string "$"
 
 gText_Birch_Pokemon::
 	.string "This is what we call a “POKéMON.”\p"
-	.string "\n"
 	.string "$"
 
 gText_Birch_MainSpeech::
@@ -17,15 +16,15 @@ gText_Birch_MainSpeech::
 	.string "at times as friendly playmates, and\l"
 	.string "at times as cooperative workmates.\p"
 	.string "And sometimes, we band together\n"
-	.string "and battle others like us.\p"
+	.string "and battle others like us!\p"
 	.string "Some people are really good at this,\n"
 	.string "like The Last Dinner Party.\p"
 	.string "They have a show coming up,\n"
 	.string "and they are cordially inviting \l"
 	.string "whoever beats them all in POKéMON \l"
-	.string "battle.\p"
-	.string "You strike me as a motivated fan,\n"
-	.string "how about you try your luck?\p"
+	.string "battle!\p"
+	.string "I'm definitely gonna try to challenge,\n"
+	.string "them, how about you?\p"
 	.string "Who knows, you might succeed!\p"
 	.string "$"
 
@@ -34,20 +33,19 @@ gText_Birch_AndYouAre::
 	.string "yourself...$"
 
 gText_Birch_BoyOrGirl::
-	.string "Are you a boy?\n"
-	.string "Or are you a girl?\l"
-	.string "Not that it really matters...$"
+	.string "What style are you more into?\n"
+	.string "That's like super important… $"
 
 gText_Birch_WhatsYourName::
 	.string "All right.\n"
-	.string "What's your name?$"
+	.string "And uh…  what's your name?$"
 
 gText_Birch_SoItsPlayer::
-	.string "So it's {PLAYER}{KUN}?$"
+	.string "So it's {PLAYER}?$"
 
 gText_Birch_YourePlayer::
 	.string "Ah, okay!\p"
-	.string "You're the {PLAYER}{KUN} who's been a fan\n"
+	.string "You're the {PLAYER} who's been a fan\n"
 	.string "for a while.\p"
 	.string "I get it now!\p"
 	.string "$"

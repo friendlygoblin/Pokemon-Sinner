@@ -1,0 +1,250 @@
+mapscripts MirrorCity_ConcertHall_Lounge1_MapScripts {}
+
+const Hozier = 1
+const Florence = 2
+const StVincent = 3
+const Chappell = 4
+const CMAT = 5
+const Marina = 6
+const BrianMay = 7
+
+script MCCH_LoungeHozier{
+    lock
+    faceplayer
+    msgbox(LoungeHozier_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeHozier_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_HOZIER_2, format("Either way, it ends… "))
+        msgbox(LoungeHozier_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeHozier_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Hozier, Common_Movement_FaceLeft)
+    release
+    end
+}
+
+text LoungeHozier_OfferBattle{
+    "HOZIER: Oh, hello young friend! \p"
+    "You've come a long way, that's great! \p"
+    "Would you like to tell me about your \n"
+    "travels over a friendly battle? \p"
+    "Consider it training before you face \n"
+    "The Last Dinner Party. $"
+    }
+
+text LoungeHozier_RefuseBattle{
+    "Very well, perhaps another time… $"
+    }
+
+text LoungeHozier_AcceptBattle{
+    "Let's do it then, don't hold back! $"
+    }
+
+text LoungeHozier_PostBattle{
+    "How incredible, you were phenomenal \n"
+    "as you were the first time we met! \p"
+    "I wish you the best of luck against \n"
+    "The Last Dinner Party, even if you \l"
+    "may not need it. $"
+}
+
+script MCCH_LoungeFlorence{
+    lock
+    faceplayer
+    msgbox(LoungeFlorence_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeFlorence_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_FLORENCE_2, format("Oh, tell me it's not over yet… "))
+        msgbox(LoungeFlorence_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeFlorence_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Florence, Common_Movement_FaceRight)
+    release
+    end
+}
+
+text LoungeFlorence_OfferBattle{
+    "FLORENCE: Here you are! \p"
+    "I knew you had the drive to reach great \n"
+    "heights. \p"
+    "I saw it in you. \p"
+    "Now, would you like to warm up with me \n"
+    "before facing The Last Dinner Party ?$"
+    }
+
+text LoungeFlorence_RefuseBattle{
+    "It's alright, come back if you change\n"
+    "your mind. $"
+    }
+
+text LoungeFlorence_AcceptBattle{
+    "Show me everything you have! $"
+    }
+
+text LoungeFlorence_PostBattle{
+    "I knew you'd grown strong but you \n"
+    "exceeded all my expectations! \p"
+    "Keep it up, love! $"
+}
+
+script MCCH_LoungeStVincent{
+    lock
+    faceplayer
+    msgbox(LoungeStVincent_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeStVincent_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_STVINCENT_2, format("Down and out… "))
+        msgbox(LoungeStVincent_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeStVincent_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(StVincent, Common_Movement_FaceLeft)
+    release
+    end
+}
+
+text LoungeStVincent_OfferBattle{
+    "ST.VINCENT: Yes, what do you want? \p"
+    "Oh, it's you! \p"
+    "So this is it, you're challenging The \n"
+    "Last Dinner Party today? \p"
+    "Do you feel ready? \p"
+    "I can help you prepare if you want. $"
+    }
+
+text LoungeStVincent_RefuseBattle{
+    "You're all prepared already? \n"
+    "That's great! \p"
+    "I'll be hanging out here until the \n"
+    "show starts if you change your mind. $"
+    }
+
+text LoungeStVincent_AcceptBattle{
+    "Here we go, give it all away! $"
+    }
+
+text LoungeStVincent_PostBattle{
+    "Good job, just as good as last time! \p"
+    "Go on, go get'em! \p"
+    "The whole world's watching you! $"
+}
+
+script MCCH_LoungeChappell{
+    lock
+    faceplayer
+    msgbox(LoungeChappell_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeChappell_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_CHAPPELL_2, format("You're hot to go! "))
+        msgbox(LoungeChappell_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeChappell_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Chappell, Common_Movement_FaceUp)
+    release
+    end
+}
+
+text LoungeChappell_OfferBattle{
+    "CHAPPELL: Well, if it isn't the cunty \p"
+    "one from the Sunday Cave! \p"
+    "You've come to challenge The Last  \n"
+    "Dinner Party? \p"
+    "How fun! \p"
+    "Warm up with me first! $"
+    }
+
+text LoungeChappell_RefuseBattle{
+    "No? \p"
+    "No fun…  \p"
+    "Well, good luck anyway. $"
+    }
+
+text LoungeChappell_AcceptBattle{
+    "Let's go, get it hot! $"
+    }
+
+text LoungeChappell_PostBattle{
+    "Wow, as fun as last time! \p"
+    "Go show'em how iconic you are! $"
+}
+
+script MCCH_LoungeCMAT{
+    lock
+    faceplayer
+    msgbox(LoungeCMAT_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeCMAT_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_CMAT_2, format("I'm fine, no really, I'm fine… "))
+        msgbox(LoungeCMAT_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeCMAT_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(CMAT, Common_Movement_FaceDown)
+    release
+    end
+}
+
+text LoungeCMAT_OfferBattle{
+    "CMAT: Oh it's you again! \p"
+    "Fancy a rematch? \n"
+    "Pass the time while we wait for TLDP? $"
+    }
+
+text LoungeCMAT_RefuseBattle{
+    "That's okay, I'm here if you need\n"
+    "me… $"
+    }
+
+text LoungeCMAT_AcceptBattle{
+    "Great! Make this interesting, okay? $"
+    }
+
+text LoungeCMAT_PostBattle{
+    "That was certainly entertaining! \p"
+    "Enjoy the show, have fun! $"
+}
+
+script MCCH_LoungeMarina{
+    lock
+    faceplayer
+    msgbox(LoungeMarina_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeMarina_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_MARINA_2, format("I'm fine, no really, I'm fine… "))
+        msgbox(LoungeMarina_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeMarina_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Marina, Common_Movement_FaceDown)
+    release
+    end
+}
+
+text LoungeMarina_OfferBattle{
+    "CMAT: Oh it's you again! \p"
+    "Fancy a rematch? \n"
+    "Pass the time while we wait for TLDP? $"
+    }
+
+text LoungeMarina_RefuseBattle{
+    "That's okay, I'm here if you need\n"
+    "me… $"
+    }
+
+text LoungeMarina_AcceptBattle{
+    "Great! Make this interesting, okay? $"
+    }
+
+text LoungeMarina_PostBattle{
+    "That was certainly entertaining! \p"
+    "Enjoy the show, have fun! $"
+}

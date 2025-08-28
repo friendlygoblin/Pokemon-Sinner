@@ -1,0 +1,34 @@
+mapscripts Route9_MapScripts {}
+
+script Route9_Fisherman1 {
+    trainerbattle_single(TRAINER_JONAH, format("A good bait will catch you the best POKéMON!"), format("And strong trainers, apparently… "))
+    msgbox(format("You gotta fish to learn to fish! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route9_AromaLady {
+    trainerbattle_single(TRAINER_ROSE_1, format("My POKéMON all evolved thanks to a strange stone!"), format("Oh… "), GiveSunStone)
+    msgbox(format("POKéMON that evolved are stronger but they learn moves more slowly."), MSGBOX_AUTOCLOSE)
+}
+
+script Route9_SchoolBoy {
+    trainerbattle_single(TRAINER_PAUL, format("The cable car is fascinating, I wonder if they take interns… "), format("Fascinating… "))
+    msgbox(format("I want to be an engineer and work on the cable car when I grow up."), MSGBOX_AUTOCLOSE)
+}
+
+script Route9_Runner {
+    trainerbattle_single(TRAINER_KYRA, format("Running in water is so hard, but if I get better at it I'll be even faster on land!"), format("My POKéMON doesn't like running in water… "))
+    msgbox(format("You really gotta be good at everything when you're a triathlete! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route9_Birdkeeper {
+    trainerbattle_single(TRAINER_HUGH, format("Take flight! \nMy BIRD POKéMON!$"), format("You can land now… "))
+    msgbox(format("The stronger my POKéMON get, the longer they can fly. "), MSGBOX_AUTOCLOSE)
+}
+
+script GiveSunStone{
+    msgbox(format("Maybe this will make some of your POKéMON evolve too… "))
+    giveitem(ITEM_SUN_STONE)
+    msgbox(format("POKéMON that evolved are stronger but they learn moves more slowly."))
+    release
+    end
+}

@@ -1095,8 +1095,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/EcstasyTown/scripts.inc"
 
-	.include "data/maps/Route1_Bis/scripts.inc"
-
 	.include "data/maps/EcstasyTown_BigHouse/scripts.inc"
 
 	.include "data/maps/EcstasyTown_LittleHouse/scripts.inc"
@@ -1120,7 +1118,6 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route3/scripts.inc"
 
 	.include "data/maps/Caesar_Tunnel/scripts.inc"
-
 
 	.include "data/maps/FurgeTown/scripts.inc"
 
@@ -1195,3 +1192,45 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MercyTown_RockShop/scripts.inc"
 
 	.include "data/maps/PortraitTown_ConcertHall_Lobby/scripts.inc"
+
+	.include "data/maps/Route9/scripts.inc"
+
+	.include "data/maps/SailorTown/scripts.inc"
+
+	.include "data/maps/Route10/scripts.inc"
+
+	.include "data/maps/NightingaleCity/scripts.inc"
+
+	.include "data/maps/Route11/scripts.inc"
+
+	.include "data/maps/NightingaleCity_Pub/scripts.inc"
+
+	.include "data/maps/NightingaleCity_Pub_Back/scripts.inc"
+
+	.include "data/maps/MirrorLake/scripts.inc"
+
+	.include "data/maps/MirrorLake_Cave/scripts.inc"
+
+	.include "data/maps/MirrorLake_Cave_Entrance/scripts.inc"
+
+	.include "data/maps/Route12/scripts.inc"
+
+	.include "data/maps/VictoryRoad_Gate/scripts.inc"
+
+	.include "data/maps/VictoryRoad_1/scripts.inc"
+
+	.include "data/maps/VictoryRoad_2/scripts.inc"
+
+	.include "data/maps/VictoryRoad_3/scripts.inc"
+
+	.include "data/maps/VictoryRoad_4/scripts.inc"
+
+	.include "data/maps/MirrorCity/scripts.inc"
+
+	.include "data/maps/MirrorCity_ConcertHall/scripts.inc"
+
+	.include "data/maps/MirrorCity_ConcertHall_Lobby/scripts.inc"
+
+	.include "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.inc"
+
+	.include "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.inc"

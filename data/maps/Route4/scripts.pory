@@ -9,3 +9,13 @@ script Route4_Youngster{
     trainerbattle_single(TRAINER_BILLY, format("Should I…\nOr shouldn't I?\pOkay, sure, I will battle!$"), format("So I shouldn't have battled…"))
     msgbox(format("You're a lot stronger than you look, you know."), MSGBOX_AUTOCLOSE)
 }
+
+script Route4_Fisherman{
+    trainerbattle_single(TRAINER_CLAUDE, format("Shhhhh, I'm fishing! $"), format("My catch got away…"))
+    msgbox(format("You have to be really patient and quiet when you're fishing."), MSGBOX_AUTOCLOSE)
+}
+
+script Route4_Collector{
+    trainerbattle_single(TRAINER_ED, format("I only collect cool POKéMON.$"), format("Ah! My precious POKéMON!"))
+    msgbox(format("You travel a lot, you must see a lot of cool POKéMON.\pI'm jealous."), MSGBOX_AUTOCLOSE)
+}
