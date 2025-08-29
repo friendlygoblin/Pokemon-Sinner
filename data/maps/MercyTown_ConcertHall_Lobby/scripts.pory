@@ -37,3 +37,59 @@ text SpraggyPostBattle_CMAT{
     "I'm a huge fan of hers so I'm really \n"
     "happy to be here!$"
 }
+
+script CMATHall_Talia{
+    lock
+    faceplayer
+    if(defeated(TRAINER_CMAT)){
+        msgbox(TaliaPostBattle_CMAT, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(TaliaIntro_CMAT, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_TALIA_2, format("I did the home and the family maker… "))
+        msgbox(TaliaPostBattle_CMAT, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text TaliaIntro_CMAT {
+    "TALIA: Can't wait to see CMAT!\p"
+    "Why don't you help me review lyrics? \p"
+    "I did the butcher, I did the baker… $"
+}
+
+text TaliaPostBattle_CMAT{
+    "TALIA: I'm more than ready for the \n"
+    "show! \p"
+    "I'm really hoping I'll get barricade… $"
+}
+
+script CMATHall_Bear{
+    lock
+    faceplayer
+    if(defeated(TRAINER_CMAT)){
+        msgbox(BearPostBattle_CMAT, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(BearIntro_CMAT, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_BEAR, format("Do you think she'll get the reference? "))
+        msgbox(BearPostBattle_CMAT, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text BearIntro_CMAT {
+    "BEAR: I'm gonna challenge CMAT!\p"
+    "I need to come up with a good \n"
+    "catchphrase…  \p"
+    "How about: 'Do you wanna be a \n"
+    "cowboy baby? Then saddle up!' $"
+}
+
+text BearPostBattle_CMAT{
+    "BEAR: CMAT's gonna be tough to beat \n"
+    "but I've been training! \p"
+    "I'm still a bit nervous… $"
+}

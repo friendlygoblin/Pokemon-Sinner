@@ -269,7 +269,7 @@ text MCCH_Abi_PostBattleSpeech{
 	"guestlist, I can't wait to see you on \l"
 	"the front row!\p"
 	"Now all we need to do is add you\n"
-	"to the…$"
+	"to the… $"
 }
 
 movement PlayerGetIntoPosition{

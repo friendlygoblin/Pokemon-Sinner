@@ -8,7 +8,7 @@ script Route2_Jay{
 }
 
 script Route2_Jay_PostBattle{
-    msgbox(Jay_PostBattle)
+    msgbox(Jay_PostBattle, MSGBOX_AUTOCLOSE)
     delay(40)
     applymovement(Jay, JayLeaves_Route2)
     waitmovement(0)

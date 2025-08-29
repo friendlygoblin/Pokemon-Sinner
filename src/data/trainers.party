@@ -1041,6 +1041,14 @@ Whimsicott
 Level: 22
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
+Houndoom
+Level: 22
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
+
+Mimikyu
+Level: 22
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
+
 === TRAINER_GABBY_AND_TY_2 ===
 Name: GABBY & TY
 Class: Interviewer
@@ -5034,15 +5042,15 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Yellow
 
-Wooper
+Wooper (M)
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Skrelp
+Skrelp (F)
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Cubone @ Oran Berry
+Cubone (M) @ Oran Berry
 Level: 14
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -5333,7 +5341,7 @@ Medicham
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_KAREN_1 === /*Used on Route 2*/
+=== TRAINER_PAULINE === /*Used on Route 2*/
 Name: PAULINE
 Class: School Kid
 Pic: School Kid F
@@ -5343,7 +5351,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Munchlax (M)
-Level: 8
+Level: 7
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_GEORGIE === /*Used on Route 10*/
@@ -6054,7 +6062,7 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Shinx
 Level: 7
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
@@ -6185,7 +6193,19 @@ Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint
 
 Umbreon
-Level: 27
+Level: 24
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+
+Houndour
+Level: 24
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+
+Zorua
+Level: 24
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+
+Poochyena
+Level: 24
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_AIDEN ===
@@ -7178,16 +7198,24 @@ IVs: 19 HP / 19 Atk / 19 Def / 19 SpA / 19 SpD / 19 Spe
 
 === TRAINER_TALIA ===
 Name: TALIA
-Class: Triathlete
-Pic: Swimming Triathlete F
+Class: Rival
+Pic: Talia
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Staryu
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Vulpix (M)
+Level: 17
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Flabebe (F)  
+Level: 17
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Eevee (F)
+Level: 17
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_KATELYN_1 ===
 Name: KATELYN
@@ -7219,31 +7247,47 @@ Staryu
 Level: 33
 IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
 
-=== TRAINER_KATELYN_2 ===
-Name: KATELYN
-Class: Triathlete
-Pic: Swimming Triathlete F
+=== TRAINER_TALIA_2 ===
+Name: TALIA
+Class: Picnicker
+Pic: Talia
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Staryu
-Level: 39
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Vulpix (M)
+Level: 24
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-=== TRAINER_KATELYN_3 ===
-Name: KATELYN
-Class: Triathlete
-Pic: Swimming Triathlete F
+Floette (F)  
+Level: 24
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Eevee (F)
+Level: 24
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+=== TRAINER_TALIA_3 ===
+Name: TALIA
+Class: TLDP Fan
+Pic: Talia
 Gender: Female
 Music: Swimmer
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Staryu
-Level: 42
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Ninetales (M)
+Level: 37
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Florges (F)  
+Level: 37
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+
+Sylveon (F)
+Level: 37
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 === TRAINER_KATELYN_4 ===
 Name: KATELYN
@@ -8673,15 +8717,15 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Wooper
-Level: 26
+Level: 24
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Phanpy
-Level: 26
+Level: 24
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 Scraggy
-Level: 26
+Level: 24
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_CAROL === /*Used on Route 6*/
@@ -14491,17 +14535,25 @@ Items: Full Restore / Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Wooper
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Quagsire (M)
+Level: 42
+IVs: 20 HP / 20 Atk / 30 Def / 20 SpA / 30 SpD / 20 Spe
 
-Skrelp
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Dragalgae (F)
+Level: 42
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 
-Marowak @ Oran Berry
-Level: 14
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Sandslash
+Level: 42
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
+Sawsbuck-Summer
+Level: 42
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
+Marowak (M) @ Sitrus Berry
+Level: 44
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
 === TRAINER_BRAWLY_3 ===
 Name: BRAWLY

@@ -391,8 +391,8 @@
 #define TRAINER_TALIA                       385
 #define TRAINER_KATELYN_1                   386
 #define TRAINER_ALLISON                     387
-#define TRAINER_KATELYN_2                   388
-#define TRAINER_KATELYN_3                   389
+#define TRAINER_TALIA_2                     388
+#define TRAINER_TALIA_3                     389
 #define TRAINER_KATELYN_4                   390
 #define TRAINER_KATELYN_5                   391
 #define TRAINER_NICOLAS_1                   392

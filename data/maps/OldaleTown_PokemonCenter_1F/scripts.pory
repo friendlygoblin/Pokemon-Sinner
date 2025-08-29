@@ -7,7 +7,7 @@ OldaleTown_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 OldaleTown_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_OLDALE_TOWN
+	setrespawn HEAL_LOCATION_ECSTASY_TOWN
 	call Common_EventScript_UpdateBrineyLocation
 	end
 
@@ -29,8 +29,11 @@ OldaleTown_PokemonCenter_1F_EventScript_Boy::
 
 
 OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC:
-	.string "That PC in the corner there is\n"
-	.string "for any POKéMON TRAINER to use.\p"
+	.string "If you catch a POKéMON but don't have \n"
+	.string "any more room in your party, it will \l"
+	.string "be sent to the PC.\p"
+	.string "The one in the corner there is for \n"
+	.string "any POKéMON Trainer to use.\p"
 	.string "Naturally, that means you're welcome\n"
 	.string "to use it, too.$"
 

@@ -218,33 +218,82 @@ script MCCH_LoungeMarina{
     msgbox(LoungeMarina_OfferBattle, MSGBOX_YESNO)
     if(var(VAR_RESULT)==YES){
         msgbox(LoungeMarina_AcceptBattle, MSGBOX_AUTOCLOSE)
-        trainerbattle_no_intro(TRAINER_MARINA_2, format("I'm fine, no really, I'm fine… "))
+        trainerbattle_no_intro(TRAINER_MARINA_2, format("Nobody can stop you! "))
         msgbox(LoungeMarina_PostBattle, MSGBOX_AUTOCLOSE)
     }
     else{
         msgbox(LoungeMarina_RefuseBattle, MSGBOX_AUTOCLOSE)
     }
-    applymovement(Marina, Common_Movement_FaceDown)
+    applymovement(Marina, Common_Movement_FaceRight)
     release
     end
 }
 
 text LoungeMarina_OfferBattle{
-    "CMAT: Oh it's you again! \p"
-    "Fancy a rematch? \n"
-    "Pass the time while we wait for TLDP? $"
+    "MARINA: Oh, hello! \p"
+    "Yes, I remember you said your goal \n"
+    "was to challenge TLDP. \p"
+    "I'm here to see them too. \p"
+    "Why don't we rematch while we're \n"
+    "waiting?$"
     }
 
 text LoungeMarina_RefuseBattle{
-    "That's okay, I'm here if you need\n"
-    "me… $"
+    "Maybe later, that's okay! $"
     }
 
 text LoungeMarina_AcceptBattle{
-    "Great! Make this interesting, okay? $"
+    "Perfect! And be cuntissimo like last\n"
+    "time! $"
     }
 
 text LoungeMarina_PostBattle{
-    "That was certainly entertaining! \p"
-    "Enjoy the show, have fun! $"
+    "That confirms what I thought, you're \n"
+    "really something special! \p"
+    "Now go show them that! \p"
+    "But remember, rule number one is that"
+    "you gotta have fun! $"
+}
+
+script MCCH_LoungeBrianMay{
+    lock
+    faceplayer
+    msgbox(LoungeBrianMay_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeBrianMay_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_BRIANMAY_2, format("Nobody can stop you! "))
+        msgbox(LoungeBrianMay_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeBrianMay_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(BrianMay, Common_Movement_FaceDown)
+    release
+    end
+}
+
+text LoungeBrianMay_OfferBattle{
+    "BRIAN MAY: Hello! \p"
+    "You're the young one from the pub,\n"
+    "the fan of Emily's, aren't you? \p"
+    "I told Emily I'd be here so here I am! \p"
+    "Since you're here to challenge the band,\n"
+    "why don't you show me your strategy?$"
+    }
+
+text LoungeBrianMay_RefuseBattle{
+    "Oh that's alright, I'm sure you have \n"
+    "a great plan. \p"
+    "I'll be cheering you on! $"
+    }
+
+text LoungeBrianMay_AcceptBattle{
+    "Let's go! $"
+    }
+
+text LoungeBrianMay_PostBattle{
+    "How brilliant, I'm sure The Last Dinner \n"
+    "Party will have a lot of fun with you! \p"
+    "I wish you the best of luck against \n"
+    "them, go rock them! $"
 }

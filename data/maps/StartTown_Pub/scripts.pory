@@ -362,8 +362,8 @@ text ChooseOne{
     "Well, I love chatting but I don't want \n"
     "the others to leave without me.\p"
     "We have a show in Candlewax City, we're\n"
-    "opening for someone very special before \l"
-    "settling down at our new spot. \p"
+    "opening for someone very special \l"
+    "before settling down at our new spot. \p"
     "See you there!$"
 }
 

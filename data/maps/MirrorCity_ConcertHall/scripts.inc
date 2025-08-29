@@ -540,7 +540,7 @@ MCCH_Abi_PostBattleSpeech::
 	.string "guestlist, I can't wait to see you on \l"
 	.string "the front row!\p"
 	.string "Now all we need to do is add you\n"
-	.string "to the…$"
+	.string "to the… $"
 
 Goblin_SomeAdvice::
 # 323 "data/maps/MirrorCity_ConcertHall/scripts.pory"
