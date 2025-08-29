@@ -14380,63 +14380,63 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_SAWSBUCK"
               },
               {
-                "min_level": 27,
+                "min_level": 28,
                 "max_level": 29,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_TROPIUS"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_NONE"
               },
               {
-                "min_level": 27,
-                "max_level": 29,
+                "min_level": 28,
+                "max_level": 30,
                 "species": "SPECIES_NONE"
               }
             ]

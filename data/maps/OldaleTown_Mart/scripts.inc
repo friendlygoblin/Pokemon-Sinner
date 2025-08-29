@@ -121,13 +121,13 @@ OldaleTown_Mart_Text_PokeBallsAreSoldOut:
 # 61 "data/maps/OldaleTown_Mart/scripts.pory"
 	.string "The clerk says they're all sold out.\n"
 # 62 "data/maps/OldaleTown_Mart/scripts.pory"
-	.string "I can't buy any POKé BALLS.$"
+	.string "I can't buy any Poké Balls.$"
 # 63 "data/maps/OldaleTown_Mart/scripts.pory"
 
 # 64 "data/maps/OldaleTown_Mart/scripts.pory"
 OldaleTown_Mart_Text_ImGoingToBuyPokeBalls:
 # 65 "data/maps/OldaleTown_Mart/scripts.pory"
-	.string "I'm going to buy a bunch of POKé BALLS\n"
+	.string "I'm going to buy a bunch of Poké Balls\n"
 # 66 "data/maps/OldaleTown_Mart/scripts.pory"
 	.string "and catch a bunch of POKéMON!$"
 # 67 "data/maps/OldaleTown_Mart/scripts.pory"
@@ -141,4 +141,4 @@ OldaleTown_Mart_Text_RestoreHPWithPotion:
 # 71 "data/maps/OldaleTown_Mart/scripts.pory"
 	.string "To prevent your POKéMON from fainting,\n"
 # 72 "data/maps/OldaleTown_Mart/scripts.pory"
-	.string "restore its HP with a POTION.$"
+	.string "restore its HP with a Potion.$"

@@ -47,7 +47,7 @@ script Route2_Hiker {
 }
 
 script Route2_SchoolGirl {
-    trainerbattle_single(TRAINER_KAREN_1, format("I did my school presentation about my POKéMON!"), format("But I got a good grade… "))
+    trainerbattle_single(TRAINER_PAULINE, format("I did my school presentation about my POKéMON!"), format("But I got a good grade… "))
     msgbox(format("Munchlax helped me prepare my presentation!\pHe's my best friend!"), MSGBOX_AUTOCLOSE)
 }
 

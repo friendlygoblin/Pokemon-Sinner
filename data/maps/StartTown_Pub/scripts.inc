@@ -926,8 +926,8 @@ ChooseOne::
 	.string "Well, I love chatting but I don't want \n"
 	.string "the others to leave without me.\p"
 	.string "We have a show in Candlewax City, we're\n"
-	.string "opening for someone very special before \l"
-	.string "settling down at our new spot. \p"
+	.string "opening for someone very special \l"
+	.string "before settling down at our new spot. \p"
 	.string "See you there!$"
 
 NoraDex::

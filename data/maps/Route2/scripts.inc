@@ -12,7 +12,7 @@ Route2_Jay::
 
 Route2_Jay_PostBattle::
 # 11 "data/maps/Route2/scripts.pory"
-	msgbox Jay_PostBattle
+	msgbox Jay_PostBattle, MSGBOX_AUTOCLOSE
 # 12 "data/maps/Route2/scripts.pory"
 	delay 40
 # 13 "data/maps/Route2/scripts.pory"
@@ -55,7 +55,7 @@ Route2_Hiker::
 
 Route2_SchoolGirl::
 # 50 "data/maps/Route2/scripts.pory"
-	trainerbattle_single TRAINER_KAREN_1, Route2_SchoolGirl_Text_0, Route2_SchoolGirl_Text_1
+	trainerbattle_single TRAINER_PAULINE, Route2_SchoolGirl_Text_0, Route2_SchoolGirl_Text_1
 # 51 "data/maps/Route2/scripts.pory"
 	msgbox Route2_SchoolGirl_Text_2, MSGBOX_AUTOCLOSE
 	return

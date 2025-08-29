@@ -161,7 +161,7 @@ MCCH_LoungeMarina::
 	msgbox LoungeMarina_RefuseBattle, MSGBOX_AUTOCLOSE
 MCCH_LoungeMarina_1:
 # 227 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
-	applymovement 6, Common_Movement_FaceDown
+	applymovement 6, Common_Movement_FaceRight
 # 228 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
 	release
 	end
@@ -170,10 +170,39 @@ MCCH_LoungeMarina_2:
 # 220 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
 	msgbox LoungeMarina_AcceptBattle, MSGBOX_AUTOCLOSE
 # 221 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
-	trainerbattle_no_intro TRAINER_MARINA_2, MCCH_LoungeCMAT_Text_0
+	trainerbattle_no_intro TRAINER_MARINA_2, MCCH_LoungeMarina_Text_0
 # 222 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
 	msgbox LoungeMarina_PostBattle, MSGBOX_AUTOCLOSE
 	goto MCCH_LoungeMarina_1
+
+
+MCCH_LoungeBrianMay::
+# 259 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	lock
+# 260 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	faceplayer
+# 261 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	msgbox LoungeBrianMay_OfferBattle, MSGBOX_YESNO
+# 262 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq MCCH_LoungeBrianMay_2
+# 268 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	msgbox LoungeBrianMay_RefuseBattle, MSGBOX_AUTOCLOSE
+MCCH_LoungeBrianMay_1:
+# 270 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	applymovement 7, Common_Movement_FaceDown
+# 271 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	release
+	end
+
+MCCH_LoungeBrianMay_2:
+# 263 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	msgbox LoungeBrianMay_AcceptBattle, MSGBOX_AUTOCLOSE
+# 264 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	trainerbattle_no_intro TRAINER_BRIANMAY_2, MCCH_LoungeMarina_Text_0
+# 265 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	msgbox LoungeBrianMay_PostBattle, MSGBOX_AUTOCLOSE
+	goto MCCH_LoungeBrianMay_1
 
 
 MCCH_LoungeHozier_Text_0:
@@ -195,6 +224,10 @@ MCCH_LoungeChappell_Text_0:
 MCCH_LoungeCMAT_Text_0:
 # 184 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
 	.string "I'm fine, no really, I'm fine…$"
+
+MCCH_LoungeMarina_Text_0:
+# 221 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	.string "Nobody can stop you!$"
 
 LoungeHozier_OfferBattle::
 # 28 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
@@ -317,20 +350,52 @@ LoungeCMAT_PostBattle::
 
 LoungeMarina_OfferBattle::
 # 232 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
-	.string "CMAT: Oh it's you again! \p"
-	.string "Fancy a rematch? \n"
-	.string "Pass the time while we wait for TLDP? $"
+	.string "MARINA: Oh, hello! \p"
+	.string "Yes, I remember you said your goal \n"
+	.string "was to challenge TLDP. \p"
+	.string "I'm here to see them too. \p"
+	.string "Why don't we rematch while we're \n"
+	.string "waiting?$"
 
 LoungeMarina_RefuseBattle::
-# 238 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
-	.string "That's okay, I'm here if you need\n"
-	.string "me… $"
+# 241 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	.string "Maybe later, that's okay! $"
 
 LoungeMarina_AcceptBattle::
-# 243 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
-	.string "Great! Make this interesting, okay? $"
+# 245 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	.string "Perfect! And be cuntissimo like last\n"
+	.string "time! $"
 
 LoungeMarina_PostBattle::
-# 247 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
-	.string "That was certainly entertaining! \p"
-	.string "Enjoy the show, have fun! $"
+# 250 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	.string "That confirms what I thought, you're \n"
+	.string "really something special! \p"
+	.string "Now go show them that! \p"
+	.string "But remember, rule number one is that"
+	.string "you gotta have fun! $"
+
+LoungeBrianMay_OfferBattle::
+# 275 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	.string "BRIAN MAY: Hello! \p"
+	.string "You're the young one from the pub,\n"
+	.string "the fan of Emily's, aren't you? \p"
+	.string "I told Emily I'd be here so here I am! \p"
+	.string "Since you're here to challenge the band,\n"
+	.string "why don't you show me your strategy?$"
+
+LoungeBrianMay_RefuseBattle::
+# 284 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	.string "Oh that's alright, I'm sure you have \n"
+	.string "a great plan. \p"
+	.string "I'll be cheering you on! $"
+
+LoungeBrianMay_AcceptBattle::
+# 290 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	.string "Let's go! $"
+
+LoungeBrianMay_PostBattle::
+# 294 "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.pory"
+	.string "How brilliant, I'm sure The Last Dinner \n"
+	.string "Party will have a lot of fun with you! \p"
+	.string "I wish you the best of luck against \n"
+	.string "them, go rock them! $"

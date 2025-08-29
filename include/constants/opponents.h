@@ -283,7 +283,7 @@
 #define TRAINER_JERRY_3                     277
 #define TRAINER_JERRY_4                     278
 #define TRAINER_JERRY_5                     279
-#define TRAINER_KAREN_1                     280
+#define TRAINER_PAULINE                     280
 #define TRAINER_GEORGIE                     281
 #define TRAINER_KATIE_2                     282
 #define TRAINER_KAREN_3                     283

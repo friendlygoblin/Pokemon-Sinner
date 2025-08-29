@@ -17,7 +17,7 @@ OldaleTown_PokemonCenter_1F_MapScripts::
 # 9 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 OldaleTown_PokemonCenter_1F_OnTransition:
 # 10 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	setrespawn HEAL_LOCATION_OLDALE_TOWN
+	setrespawn HEAL_LOCATION_ECSTASY_TOWN
 # 11 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	call Common_EventScript_UpdateBrineyLocation
 # 12 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
@@ -61,22 +61,28 @@ OldaleTown_PokemonCenter_1F_EventScript_Boy::
 # 31 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC:
 # 32 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	.string "That PC in the corner there is\n"
+	.string "If you catch a POKéMON but don't have \n"
 # 33 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	.string "for any POKéMON TRAINER to use.\p"
+	.string "any more room in your party, it will \l"
 # 34 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	.string "Naturally, that means you're welcome\n"
+	.string "be sent to the PC.\p"
 # 35 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	.string "to use it, too.$"
+	.string "The one in the corner there is for \n"
 # 36 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-
+	.string "any POKéMON Trainer to use.\p"
 # 37 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat:
+	.string "Naturally, that means you're welcome\n"
 # 38 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	.string "POKéMON CENTERS are great!\p"
+	.string "to use it, too.$"
 # 39 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	.string "You can use their services as much\n"
+
 # 40 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
-	.string "as you like, and it's all for free.\l"
+OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat:
 # 41 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	.string "POKéMON CENTERS are great!\p"
+# 42 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	.string "You can use their services as much\n"
+# 43 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
+	.string "as you like, and it's all for free.\l"
+# 44 "data/maps/OldaleTown_PokemonCenter_1F/scripts.pory"
 	.string "You never have to worry!$"

@@ -587,13 +587,13 @@ Route116_EventScript_Janice::
 # 294 "data/maps/Route116/scripts.pory"
 Route116_EventScript_Karen::
 # 295 "data/maps/Route116/scripts.pory"
-	trainerbattle_single TRAINER_KAREN_1, Route116_Text_KarenIntro, Route116_Text_KarenDefeat, Route116_EventScript_TryRegisterKarenAfterBattle
+	trainerbattle_single TRAINER_PAULINE, Route116_Text_KarenIntro, Route116_Text_KarenDefeat, Route116_EventScript_TryRegisterKarenAfterBattle
 # 296 "data/maps/Route116/scripts.pory"
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 # 297 "data/maps/Route116/scripts.pory"
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_RematchKaren
 # 298 "data/maps/Route116/scripts.pory"
-	setvar VAR_0x8004, TRAINER_KAREN_1
+	setvar VAR_0x8004, TRAINER_PAULINE
 # 299 "data/maps/Route116/scripts.pory"
 	specialvar VAR_RESULT, IsTrainerRegistered
 # 300 "data/maps/Route116/scripts.pory"
@@ -625,7 +625,7 @@ Route116_EventScript_RegisterKarenAfterBattle::
 # 313 "data/maps/Route116/scripts.pory"
 	msgbox Route116_Text_KarenRegister2, MSGBOX_DEFAULT
 # 314 "data/maps/Route116/scripts.pory"
-	register_matchcall TRAINER_KAREN_1
+	register_matchcall TRAINER_PAULINE
 # 315 "data/maps/Route116/scripts.pory"
 	release
 # 316 "data/maps/Route116/scripts.pory"
@@ -649,7 +649,7 @@ Route116_EventScript_RegisterKaren::
 # 325 "data/maps/Route116/scripts.pory"
 	msgbox Route116_Text_KarenRegister1, MSGBOX_DEFAULT
 # 326 "data/maps/Route116/scripts.pory"
-	register_matchcall TRAINER_KAREN_1
+	register_matchcall TRAINER_PAULINE
 # 327 "data/maps/Route116/scripts.pory"
 	release
 # 328 "data/maps/Route116/scripts.pory"
@@ -659,7 +659,7 @@ Route116_EventScript_RegisterKaren::
 # 330 "data/maps/Route116/scripts.pory"
 Route116_EventScript_RematchKaren::
 # 331 "data/maps/Route116/scripts.pory"
-	trainerbattle_rematch TRAINER_KAREN_1, Route116_Text_KarenRematchIntro, Route116_Text_KarenRematchDefeat
+	trainerbattle_rematch TRAINER_PAULINE, Route116_Text_KarenRematchIntro, Route116_Text_KarenRematchDefeat
 # 332 "data/maps/Route116/scripts.pory"
 	msgbox Route116_Text_KarenPostRematch, MSGBOX_AUTOCLOSE
 # 333 "data/maps/Route116/scripts.pory"
