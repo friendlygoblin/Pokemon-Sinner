@@ -11,10 +11,11 @@ script StVincentHall_Wren{
     lock
     faceplayer
     if(defeated(TRAINER_STVINCENT)){
-        msgbox(WrenPostBattle_StVincent, MSGBOX_AUTOCLOSE)
+        msgbox(format("WREN: That was such a great battle!\pSt.Vincent was amazing of course, but you were really cool too!"), MSGBOX_AUTOCLOSE)
         }
     else{
-        trainerbattle_single(TRAINER_WREN_2, WrenIntro_StVincent, WrenDefeated_StVincent)
+        msgbox(WrenIntro_StVincent, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_WREN_2, WrenDefeated_StVincent)
         msgbox(WrenPostBattle_StVincent, MSGBOX_AUTOCLOSE)
         }
     releaseall
@@ -24,7 +25,7 @@ script StVincentHall_Wren{
 text WrenIntro_StVincent {
     "WREN: {PLAYER}!\p"
     "Are you here to challenge St.Vincent? \p"
-    "I'm sure you got this, but I gotta \n"
+    "I'm sure you got this, but I gotta tell\n"
     "you, she's super strong! \p"
     "How about you warm up with me? $"
 }
@@ -38,6 +39,39 @@ text WrenPostBattle_StVincent{
     "St.Vincent had a challenge! \p"
     "I'll definitely come see you battle \n"
     "with her!$"
+}
+
+script StVincentHall_Ann{
+    lock
+    faceplayer
+    if(defeated(TRAINER_STVINCENT)){
+        msgbox(format("ANN: Wow, what a show!\pAlmost as good as an actual concert!"), MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(AnnIntro_StVincent, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_ANN, AnnDefeated_StVincent)
+        msgbox(AnnPostBattle_StVincent, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text AnnIntro_StVincent {
+    "ANN: Hi, I'm Ann!\p"
+    "I wanted to see St.Vincent play, but \n"
+    "she's only taking challenges at the \l"
+    "moment. \p"
+    "That's okay, I'll just watch her \n"
+    "battle! $"
+}
+
+text AnnDefeated_StVincent{
+    "I still wish I could see her play… $"
+}
+
+text AnnPostBattle_StVincent{
+    "ANN: So you're challenging St.Vincent? \p"
+    "Then I'll be seeing you battling too! $"
 }
 
 script StVincentHall_Receptionist{

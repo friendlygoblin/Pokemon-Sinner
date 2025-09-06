@@ -467,13 +467,13 @@ CSCM_FossilScientist_5:
 	goto CSCM_FossilScientist_1
 
 
-# 222 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+# 223 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 CSCM_ScientistLeaves:
-# 223 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	walk_up
-# 223 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+# 224 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	walk_up
 # 224 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+	walk_up
+# 225 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	step_end
 
 CSCM_ChooseFossil_Text_0:
@@ -569,34 +569,35 @@ CSCM_WelcomeToHistoryFloor::
 	.string "This floor is dedicated to history. \p"
 	.string "And I am in charge of our very special \n"
 	.string "fossil resurection program! \p"
-	.string "If you a fossil, I can study it and \n"
-	.string "turn it back into a POKéMON for you!$"
+	.string "If you find a fossil, I can study it \n"
+	.string "and turn it back into a POKéMON \l"
+	.string "for you!$"
 
 CSCM_NoFossils::
-# 193 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+# 194 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	.string "Oh, it doesn't look like you have any \n"
 	.string "fossils. \p"
 	.string "Come back another time!$"
 
 CSCM_JustGaveFossil::
-# 199 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+# 200 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	.string "Oooh what a pretty fossil! \p"
 	.string "I'll go take care of it right away! \p"
 	.string "Come back later! $"
 
 CSCM_NoFossilGiven::
-# 205 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+# 206 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	.string "Oh, okay, no fossil for today then. \p"
 	.string "Come back when you change your mind!$"
 
 CSCM_AlreadyWorkingOnFossil::
-# 210 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+# 211 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	.string "I'm working on your fossil! \p"
 	.string "I'll be done soon but not yet. \p"
 	.string "Come back later!$"
 
 CSCM_FinishedYourFossil::
-# 216 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+# 217 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	.string "I finished restoring your fossil! \p"
 	.string "Here, a beautiful and healthy POKéMON \n"
 	.string "for you! $"

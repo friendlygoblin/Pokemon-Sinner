@@ -53,7 +53,7 @@ script Route6_Picnicker {
 }
 
 text Route6_Picnicker_BattleIntro {
-    "The Crystal Stream is so relaxing to, \n"
+    "The Crystal Stream is so relaxing to \n"
     "look at! \p"
     "I'm in the mood for a POKéMON battle!$"
 }

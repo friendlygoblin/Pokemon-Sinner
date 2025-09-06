@@ -1,1 +1,35 @@
 mapscripts VictoryRoad_Gate_MapScripts {}
+
+script VRG_HealPokemon{
+    lock
+    msgbox(format("The road ahead is full of trainers wanting to challenge The Last Dinner Party.\pThey'll want to train against you, let your POKéMON rest before you go."))
+    fadescreen(FADE_TO_BLACK)
+    special(HealPlayerParty)
+    playfanfare(MUS_HEAL)
+    waitfanfare
+    fadescreen(FADE_FROM_BLACK)
+    msgbox(format("Good luck, come back here if you need to heal your team."))
+    release
+    end
+}
+
+mart VRG_Mart{
+    ITEM_POKE_BALL
+    ITEM_ULTRA_BALL
+    ITEM_SUPER_POTION
+    ITEM_HYPER_POTION
+    ITEM_MAX_POTION
+    ITEM_FULL_HEAL
+    ITEM_FULL_RESTORE
+    ITEM_REVIVE
+}
+
+script VRG_MartGuy{
+    lock
+    msgbox(format("The road ahead is full of trainers wanting to challenge The Last Dinner Party."))
+    message(format("We offer a stock of medicine, have a look."))
+    pokemart(VRG_Mart)
+    msgbox(format("Good luck!"))
+    release
+    end
+}

@@ -30,7 +30,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route110_EventScript_GiveItemfinder",
+      "script": "Godzilland_GiveItemFinder",
       "flag": "0"
     },
     {
@@ -43,12 +43,12 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Godzilland_LittleGirl",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 14,
+      "x": 15,
       "y": 22,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
@@ -56,7 +56,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Godzilland_Sailor",
       "flag": "0"
     }
   ],
@@ -70,7 +70,7 @@
     },
     {
       "x": 21,
-      "y": 16,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
@@ -102,6 +102,13 @@
       "elevation": 0,
       "dest_map": "MAP_FALLARBOR_TOWN_MOVE_RELEARNERS_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_GODZILLAND_DEV_HOUSE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -110,10 +117,10 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 21,
+      "x": 20,
       "y": 19,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Godzilland_CitySign"
     },
     {
@@ -121,7 +128,7 @@
       "x": 23,
       "y": 35,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Godzilland_Route5Sign"
     },
     {
@@ -129,7 +136,7 @@
       "x": 12,
       "y": 21,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Godzilland_HarbourSign"
     },
     {
@@ -139,6 +146,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Godzilland_ConcertHallSign"
+    },
+    {
+      "type": "sign",
+      "x": 37,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "Godzilland_DevHouseSign"
     }
   ]
 }

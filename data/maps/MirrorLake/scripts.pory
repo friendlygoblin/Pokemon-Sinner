@@ -1,1 +1,320 @@
 mapscripts MirrorLake_MapScripts {}
+
+const Amy = 3
+const Abi = 7
+const Abi2 = 8
+
+script MirrorLake_Route11Sign{
+    lock
+    msgbox(format("{DOWN_ARROW}: Route 11. \pTo Nightingale City."))
+    release
+    end
+}
+
+script MirrorLake_Route12Sign{
+    lock
+    msgbox(format("{RIGHT_ARROW}: Route 12. \pTo Mirror City."))
+    release
+    end
+}
+
+script MirrorLake_Girl1{
+    lock
+    faceplayer
+    if(flag(FLAG_BADGE08_GET)){
+        msgbox(format("The strange noises stopped!\pI can finally read by the lake again in peace!"))
+    }
+    else{
+        msgbox(format("I usually come here to read by the lake but the strange noises are making the place really spooky."))
+    }
+    release
+    end
+}
+
+script MirrorLake_Boy1{
+    lock
+    faceplayer
+    if(flag(FLAG_BADGE08_GET)){
+        msgbox(format("The lake is back to its normal level of mystery!"))
+    }
+    else{
+        msgbox(format("This lake has always been mysterious, but it's been even worse lately."))
+    }
+    release
+    end
+}
+
+script MirrorLake_Gir2{
+    lock
+    faceplayer
+    if(flag(FLAG_BADGE08_GET)){
+        msgbox(format("So, what was it?"))
+    }
+    else{
+        msgbox(format("I think the noise might come from the waterfall.\pBut you need to Surf to investigate… "))
+    }
+    release
+    end
+}
+
+script MirrorLake_Boy2{
+    lock
+    faceplayer
+    if(flag(FLAG_BADGE08_GET)){
+        msgbox(format("Oh, it wasn't that weird person after all?"))
+    }
+    else{
+        msgbox(format("There's a strange girl hanging out on a tiny island in the middle of the lake.\pI wonder if she's responsible for the weird sounds."))
+    }
+    release
+    end
+}
+
+script MirrorLake_LittleGirl{
+    lock
+    faceplayer
+    if(flag(FLAG_BADGE08_GET)){
+        msgbox(format("So it really was a musician? \pI knew it!"))
+    }
+    else{
+        msgbox(format("You know, it sounds more like music than noise. \pMaybe a musician's behind it all!"))
+    }
+    release
+    end
+}
+
+script MirrorLake_Yapgob{
+    lock
+    faceplayer
+    if(defeated(TRAINER_YAPGOB)){
+        msgbox(format("The TLDP challenge in Mirror City?\pYes, yes! I'll be there!"))
+    }    
+    else{
+        msgbox(format("YAPGOB: The strange noises? \pNo, that's not me… \pI wish!"), MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_YAPGOB, format("Did I still spook you?"))
+        msgbox(format("I love to hang out on my little island to listen to music in peace. \pI'm not bothering anyone."))
+    }
+    release
+    end
+}
+
+script MirrorLake_AmyAbiInvestigating{
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, MirrorLake_PlayerWalkUp)
+    waitmovement(0)
+
+//conversation between Amy and Abi
+    applymovement(Amy, Common_Movement_WalkInPlaceRight)
+    waitmovement(0)
+    msgbox(format("AMY: … no idea what-$"), MSGBOX_AUTOCLOSE)
+
+//they notice player
+    applymovement(Amy, MirrorLake_AmyNoticePlayer)
+    waitmovement(0)
+    msgbox(MirrorLake_AmyHiPlayer, MSGBOX_AUTOCLOSE)
+    applymovement(Abi, Common_Movement_WalkInPlaceLeft)
+    applymovement(Amy, Common_Movement_WalkInPlaceRight)
+    waitmovement(0)
+    msgbox(format("ABIGAIL: Oh we've met before, Amy."), MSGBOX_AUTOCLOSE)
+    applymovement(Abi, WalkInPlaceDown)
+    applymovement(Amy, Common_Movement_FaceDown)
+    waitmovement(Abi)
+    msgbox(MirrorLake_AbiWereInvestigating, MSGBOX_AUTOCLOSE)
+    applymovement(Amy, WalkInPlaceDown)
+    msgbox(MirrorLake_SolveItForParlourZine, MSGBOX_AUTOCLOSE)
+    applymovement(Abi, Common_Movement_WalkInPlaceLeft)
+    applymovement(Amy, Common_Movement_WalkInPlaceRight)
+    waitmovement(0)
+    msgbox(MirrorLake_AbiLeaveYouToIt, MSGBOX_AUTOCLOSE)
+    applymovement(Abi, WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(MirrorLake_AbiTellMeAllAboutIt, MSGBOX_AUTOCLOSE)
+
+//Abi leaves
+    applymovement(Abi, MirrorLake_AbiLeaves1)
+    waitmovement(0)
+    removeobject(Abi)
+    setflag(FLAG_MIRRORLAKE_ABI)
+    applymovement(Amy, WalkInPlaceDown)
+    waitmovement(0)
+    msgbox(format("AMY: Do let me know if you find anything!"), MSGBOX_AUTOCLOSE)
+    setobjectmovementtype(Amy, MOVEMENT_TYPE_LOOK_AROUND)
+    setvar(VAR_MIRRORLAKE_INVESTIGATION,1)
+    setvar(VAR_MIRRORLAKE_ABIEXIT, 1)
+
+    release
+    end
+}
+
+script MirrorLake_Amy{
+    lock
+    faceplayer
+    if(flag(FLAG_BADGE08_GET)){
+        msgbox(MirrorLake_AmyFindAnything, MSGBOX_AUTOCLOSE)
+        applymovement(Amy, MirrorLake_AmyShocked)
+        msgbox(MirrorLake_AmyDavidBowie, MSGBOX_AUTOCLOSE)
+        fadescreen(FADE_TO_BLACK)
+        removeobject(Amy)
+        playse(SE_EXIT)
+        waitse
+        setflag(FLAG_MIRRORLAKE_AMY)
+        fadescreen(FADE_FROM_BLACK)
+    }
+    else{
+        msgbox(format("AMY: If we crack this case, the next ParlourZine issue's gonna be legendary!"))
+    }
+    release
+    end
+}
+
+script MirrorLake_AbiCatchUp1{
+    if(flag(FLAG_BADGE08_GET)){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+        waitmovement(0)
+        addobject(Abi2)
+        applymovement(Abi2, MirrorLake_AbiCatchUpToPlayer1)
+        waitmovement(0)
+        msgbox(MirrorLake_AbiSoWhatWasIt, MSGBOX_AUTOCLOSE)
+        applymovement(Abi2, MirrorLake_AbiLeavesAgain1)
+        waitmovement(0)
+        removeobject(Abi2)
+        setvar(VAR_MIRRORLAKE_ABIEXIT, 1)
+        release
+        end
+    }
+    else{
+        setvar(VAR_MIRRORLAKE_ABIEXIT, 1)
+        release
+        end
+    }
+}
+
+script MirrorLake_AbiCatchUp2{
+    if(flag(FLAG_BADGE08_GET)){
+        lock
+        applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
+        waitmovement(0)
+        addobject(Abi2)
+        applymovement(Abi2, MirrorLake_AbiCatchUpToPlayer2)
+        waitmovement(0)
+        msgbox(MirrorLake_AbiSoWhatWasIt, MSGBOX_AUTOCLOSE)
+        applymovement(Abi2, MirrorLake_AbiLeavesAgain2)
+        waitmovement(0)
+        removeobject(Abi2)
+        setvar(VAR_MIRRORLAKE_ABIEXIT, 1)
+        release
+        end
+    }
+    else{
+        setvar(VAR_MIRRORLAKE_ABIEXIT, 1)
+        release
+        end
+    }
+}
+
+movement MirrorLake_PlayerWalkUp{
+    walk_up * 3
+    step_end
+}
+
+movement MirrorLake_AmyNoticePlayer{
+    emote_exclamation_mark
+    face_down
+    step_end
+}
+
+movement MirrorLake_AbiLeaves1{
+    walk_up
+    walk_right * 7
+    step_end
+}
+
+movement MirrorLake_AmyShocked{
+    emote_exclamation_mark
+    step_end
+}
+
+movement MirrorLake_AbiCatchUpToPlayer1{
+    walk_right * 2
+    walk_down * 2
+    walk_right * 5
+    step_end
+}
+
+movement MirrorLake_AbiCatchUpToPlayer2{
+    walk_right * 2
+    walk_down * 3
+    walk_right * 5
+    step_end
+}
+
+movement MirrorLake_AbiLeavesAgain1{
+    walk_down
+    walk_right * 2
+    step_end
+}
+
+movement MirrorLake_AbiLeavesAgain2{
+    walk_up
+    walk_right * 2
+    step_end
+}
+
+text MirrorLake_AmyHiPlayer{
+    "AMY: {PLAYER}! What brings you here?\p"
+    "This is Abigail, from the Last Dinner \n"
+    "Party!  $"
+}
+
+text MirrorLake_AbiWereInvestigating{
+    "ABIGAIL: I was on my way to Mirror \n"
+    "City when I heard strange sounds \l"
+    "coming from the lake. \p"
+    "Amy arrived shortly after I did.$"
+}
+
+text MirrorLake_SolveItForParlourZine{
+    "AMY: I need to crack this case for \n"
+    "ParlourZine, our readers love a good\l"
+    "mystery! \p"
+    "Maybe asking around would be a good \n"
+    "start… $"
+}
+
+text MirrorLake_AbiLeaveYouToIt{
+    "ABIGAIL: Now that the investigations \n"
+    "are in good hands, I'll leave you to it!$"
+}
+
+text MirrorLake_AbiTellMeAllAboutIt{
+    "{PLAYER}… you'll tell me all about it \n"
+    "in Mirror City, won't you?$"
+}
+
+text MirrorLake_AmyFindAnything{
+    "AMY: So, find anything? \p"
+    "A musician's… ghost? Are you sure? $"
+}
+
+text MirrorLake_AmyDavidBowie{
+    "DAVID BOWIE?? \p"
+    "This is HUGE, {PLAYER}! \p"
+    "I better run back to ParlourZine HQ \n"
+    "stat! \p"
+    "Thanks, good luck, goodbye! $"
+}
+
+text MirrorLake_AbiSoWhatWasIt{
+    "ABIGAIL: Hey, wait! \p"
+    "I heard the noise stopped, did you \n"
+    "have anything to do with it? \p"
+    "… … … \p"
+    "David Bowie?! \p"
+    "Really? You're not messsing with me, \n"
+    "are you?\p"
+    "No way, do you have any idea how much \n"
+    "he influenced us as a band? \p"
+    "I have to tell the others, thanks for \n"
+    "catching me up!$"
+}

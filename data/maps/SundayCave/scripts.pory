@@ -42,7 +42,7 @@ text SundayCave_Scientist1_PleaseHelp{
 script SundayCave_Scientist2 {
     lock
     faceplayer    
-    if(var(VAR_SUNDAYCAVE_STATE)==3){
+    if(var(VAR_SUNDAYCAVE_STATE)==4){
         trainerbattle_single(TRAINER_TAYLOR, SundayCave_Scientist2_BattleIntro, SundayCave_Scientist2_Defeated)
         msgbox(SundayCave_Scientist2_PostBattle, MSGBOX_AUTOCLOSE)
         }
@@ -84,7 +84,7 @@ text SundayCave_Scientist2_PleaseHelp{
 script SundayCave_MachineGuy {
     lock
     faceplayer    
-    if(var(VAR_SUNDAYCAVE_STATE)==3){
+    if(var(VAR_SUNDAYCAVE_STATE)==4){
         if(var(VAR_SUNDAYCAVE_MACHINEGUY)==0){
         msgbox(SundayCave_MachineGuy_ImpidimpsCleared)
 

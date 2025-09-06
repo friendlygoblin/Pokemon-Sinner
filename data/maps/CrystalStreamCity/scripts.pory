@@ -4,7 +4,7 @@ mapscripts CrystalStreamCity_MapScripts {
 
 script CSCCH_FlagStuff{
     setflag(FLAG_LIZZIE_ROUTE6)
-    if(var(VAR_SUNDAYCAVE_STATE)==0){
+    if(var(VAR_SUNDAYCAVE_STATE)==4){
         setflag(FLAG_CSCCH_CHAPPELLDOOR)
     }
 }

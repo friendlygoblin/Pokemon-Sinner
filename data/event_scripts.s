@@ -1234,3 +1234,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MirrorCity_ConcertHall_Lounge1/scripts.inc"
 
 	.include "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.inc"
+
+	.include "data/maps/Godzilland_DevHouse/scripts.inc"
+
+	.include "data/maps/CandlewaxCity_BikeShop/scripts.inc"
+
+	.include "data/maps/VictoryRoad_5/scripts.inc"

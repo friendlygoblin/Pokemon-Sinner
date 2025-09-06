@@ -21,6 +21,11 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Elle;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Norah;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bear;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Talia;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Toto;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Meggo;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gosia;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tilly;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NinjaBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Twin;
@@ -291,6 +296,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_NORAH] =                    &gObjectEventGraphicsInfo_Norah,
     [OBJ_EVENT_GFX_BEAR] =                     &gObjectEventGraphicsInfo_Bear,
     [OBJ_EVENT_GFX_TALIA] =                    &gObjectEventGraphicsInfo_Talia,
+    [OBJ_EVENT_GFX_TOTO] =                     &gObjectEventGraphicsInfo_Toto,
+    [OBJ_EVENT_GFX_CAL] =                      &gObjectEventGraphicsInfo_Cal,
+    [OBJ_EVENT_GFX_MEGGO] =                    &gObjectEventGraphicsInfo_Meggo,
+    [OBJ_EVENT_GFX_GOSIA] =                    &gObjectEventGraphicsInfo_Gosia,
+    [OBJ_EVENT_GFX_TILLY] =                    &gObjectEventGraphicsInfo_Tilly,
 
     [OBJ_EVENT_GFX_NINJA_BOY] =                &gObjectEventGraphicsInfo_NinjaBoy,
     [OBJ_EVENT_GFX_TWIN] =                     &gObjectEventGraphicsInfo_Twin,

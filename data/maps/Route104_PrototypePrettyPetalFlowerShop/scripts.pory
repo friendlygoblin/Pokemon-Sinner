@@ -3,3 +3,55 @@ Route104_PrototypePrettyPetalFlowerShop_MapScripts::
 	.byte 0
 
 `
+mart FlowerShop_Mart{
+	ITEM_LUM_BERRY
+	ITEM_ORAN_BERRY
+	ITEM_SITRUS_BERRY
+	ITEM_LEPPA_BERRY
+	ITEM_BIG_ROOT
+	ITEM_REVIVAL_HERB
+	ITEM_LEAF_STONE
+}
+
+script FlowerShop_Clerk{
+    lock
+    message(format("Welcome to the Nightingale City Flower Shop!\pHow can I help you?"))
+    waitmessage
+    pokemart(FlowerShop_Mart)
+    msgbox(format("Have a nice day!"))
+    release
+    end
+}
+
+script FlowerShop_Skitty{
+	lock
+	faceplayer
+	playmoncry(SPECIES_SKITTY, CRY_MODE_NORMAL)
+	msgbox(format("SKITTY: Meeow!"))
+	waitmoncry
+	release
+	end
+}
+
+script FlowerShop_Man{
+	lock
+	faceplayer
+	if(flag(FLAG_RECEIVED_MIRACLE_SEED)){
+		msgbox(format("I love Grass Type POKéMON!\pI found that when I give them a certain item, their Grass Type moves are stronger."))
+	}
+	else{
+		msgbox(format("I love Grass Type POKéMON!\pI found that when I give them a certain item, their Grass Type moves are stronger.\pHere, I'm feeling generous!"))
+		giveitem(ITEM_MIRACLE_SEED)
+		setflag(FLAG_RECEIVED_MIRACLE_SEED)
+	}
+	release
+	end
+}
+
+script FlowerShop_Girl{
+	lock
+	faceplayer
+	msgbox(format("Berries can be very useful.\pAnd also very tasty!"), MSGBOX_AUTOCLOSE)
+	release
+	end
+}

@@ -519,7 +519,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Brenae,             OBJ_EVENT_PAL_TAG_BRENAE},
     {gObjectEventPal_Nora,               OBJ_EVENT_PAL_TAG_NORA},
     {gObjectEventPal_Aiden,              OBJ_EVENT_PAL_TAG_AIDEN},
-    {gObjectEventPal_Nina,               OBJ_EVENT_PAL_TAG_NINA},
+    {gObjectEventPal_Toto,               OBJ_EVENT_PAL_TAG_TOTO},
     {gObjectEventPal_Ness,               OBJ_EVENT_PAL_TAG_NESS},
     {gObjectEventPal_Yap,                OBJ_EVENT_PAL_TAG_YAP},
     {gObjectEventPal_Rachel,             OBJ_EVENT_PAL_TAG_RACHEL},
@@ -545,7 +545,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Bowie,              OBJ_EVENT_PAL_TAG_BOWIE},
     {gObjectEventPal_Wawas,              OBJ_EVENT_PAL_TAG_WAWAS},
     {gObjectEventPal_Bear,               OBJ_EVENT_PAL_TAG_BEAR},
-
+    {gObjectEventPal_Meggo,              OBJ_EVENT_PAL_TAG_MEGGO},
+    {gObjectEventPal_Gosia,              OBJ_EVENT_PAL_TAG_GOSIA},
+    {gObjectEventPal_Meinth,             OBJ_EVENT_PAL_TAG_MEINTH},
     
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},

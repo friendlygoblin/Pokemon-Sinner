@@ -1175,7 +1175,7 @@
       "id": "LAYOUT_ROUTE114_LANETTES_HOUSE",
       "name": "Route114_LanettesHouse_Layout",
       "width": 11,
-      "height": 8,
+      "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/Route114_LanettesHouse/border.bin",
@@ -5015,7 +5015,7 @@
       "id": "LAYOUT_VICTORY_ROAD_2",
       "name": "VictoryRoad_2_Layout",
       "width": 30,
-      "height": 50,
+      "height": 54,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Lavaridge",
       "border_filepath": "data/layouts/VictoryRoad_2/border.bin",
@@ -5044,7 +5044,7 @@
     {
       "id": "LAYOUT_MIRROR_CITY",
       "name": "MirrorCity_Layout",
-      "width": 30,
+      "width": 34,
       "height": 30,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_Rustboro",
@@ -5090,6 +5090,36 @@
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/MirrorCity_ConcertHall_Lounge2/border.bin",
       "blockdata_filepath": "data/layouts/MirrorCity_ConcertHall_Lounge2/map.bin"
+    },
+    {
+      "id": "LAYOUT_GODZILLAND_DEV_HOUSE",
+      "name": "Godzilland_DevHouse_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/Godzilland_DevHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Godzilland_DevHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_CANDLEWAX_CITY_BIKE_SHOP",
+      "name": "CandlewaxCity_BikeShop_Layout",
+      "width": 14,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BikeShop",
+      "border_filepath": "data/layouts/CandlewaxCity_BikeShop/border.bin",
+      "blockdata_filepath": "data/layouts/CandlewaxCity_BikeShop/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_5",
+      "name": "VictoryRoad_5_Layout",
+      "width": 21,
+      "height": 20,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/VictoryRoad_5/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoad_5/map.bin"
     }
   ]
 }

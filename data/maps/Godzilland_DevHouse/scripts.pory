@@ -1,0 +1,125 @@
+mapscripts Godzilland_DevHouse_MapScripts {}
+
+script DevHouse_ScriptGoblin{
+    lock
+    faceplayer
+    msgbox(format("GOBLIN: I'm working on scripting every event in the game!\pLike this dialogue for example… \pIt's a lot of work."), MSGBOX_AUTOCLOSE)
+    applymovement(1, Common_Movement_FaceUp)
+    waitmovement(0)
+    release
+    end
+}
+
+script DevHouse_MapGoblin{
+    lock
+    faceplayer
+    msgbox(format("GOBLIN: My job is to create maps!\pIt's a bit like painting, but with stamps… \pSomething like that."), MSGBOX_AUTOCLOSE)
+    applymovement(2, Common_Movement_FaceUp)
+    waitmovement(0)
+    release
+    end
+}
+
+script DevHouse_TestGoblin{
+    lock
+    faceplayer
+    msgbox(format("GOBLIN: I'm testing the game, it's probably the most fun part of the job!\pI take notes of things to improve and bugs to fix, testing is very important!"), MSGBOX_AUTOCLOSE)
+    applymovement(3, Common_Movement_FaceUp)
+    waitmovement(0)
+    release
+    end
+}
+
+script DevHouse_SmallSpriteGoblin{
+    lock
+    faceplayer
+    msgbox(format("GOBLIN: I'm desiging overworld sprites!\pThey're the ones you're seeing right now, my colleague is working on the battle ones."), MSGBOX_AUTOCLOSE)
+    applymovement(4, Common_Movement_FaceRight)
+    waitmovement(0)
+    release
+    end
+}
+
+script DevHouse_BigSpriteGoblin{
+    lock
+    faceplayer
+    msgbox(format("GOBLIN: Look, I'm making everyone's big sprites!\pThey're the ones you see in battle, I'm making some for every artist, guest, and fan you'll meet!"), MSGBOX_AUTOCLOSE)
+    applymovement(5, Common_Movement_FaceLeft)
+    waitmovement(0)
+    release
+    end
+}
+
+script DevHouse_TeamBuilderGoblin{
+    lock
+    faceplayer
+    msgbox(format("GOBLIN: I'm the team builder.\pI build everyone's POKéMON teams.\pIt's tricky, I need to make them balanced to keep the game fun to play."), MSGBOX_AUTOCLOSE)
+    applymovement(10, Common_Movement_FaceLeft)
+    waitmovement(0)
+    release
+    end
+}
+
+script DevHouse_ConsultantGoblin{
+    lock
+    faceplayer
+    msgbox(format("GOBLIN: I'm the contact person!\pBuilding teams is hard, so my job is to find outside help.\pIt's harder to build teams for artists we're less familiar with, so sometimes I have to find consultants.\pI'm also the one who reaches out to the artists themselves to tell them about the project!"), MSGBOX_AUTOCLOSE)
+    applymovement(6, Common_Movement_FaceRight)
+    waitmovement(0)
+    release
+    end
+}
+
+script DevHouse_Interview{
+    lock
+    msgbox(format("It looks like Amy is interviewing Goblin about POKéMON Sinner."), MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script DevHouse_BugGoblin{
+    lock
+    faceplayer
+    switch(var(VAR_GODZILLAND_PORYGON)){
+        case 0:
+            msgbox(format("GOBLIN: There's a bug! There's a bug!\pI don't know what's happening but I can't even access my work anymore!\pMy computer is the one closest to the door, I just don't have the strength to keep fighting with it… "))
+            setvar(VAR_GODZILLAND_PORYGON, 1)
+        case 1:
+            msgbox(format("GOBLIN: My computer is the one closest to the door, I just don't have the strength to keep fighting with it… "))
+        case 2:
+            msgbox(format("GOBLIN: A Porygon? God, not again!\pIt happens all the time, but I can usually spot them… \pThanks for your help! Here, for you!"))
+            giveitem(ITEM_RARE_CANDY)
+            msgbox(format("GOBLIN: I guess I should go back to work now… \pMmmh, but I really need a nap… "))
+            setvar(VAR_GODZILLAND_PORYGON, 3)
+        case 3:
+            msgbox(format("GOBLIN: I'm in charge of researching the POKéMON species we're implementing. \pBut right now, I really need a nap… "))
+    }
+    release
+    end
+}
+
+script DevHouse_Porygon{
+    lock
+        switch(var(VAR_GODZILLAND_PORYGON)){
+        case 0:
+            msgbox(format("The screen is displaying weird colours."))
+        case 1:
+            msgbox(format("The screen is displaying weird colours.\pDo you want to try pressing a key?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT)==YES){
+                msgbox(format("You press a random key.\pThe computer doesn't seem to like that!"))
+                setwildbattle(SPECIES_PORYGON, 18)
+                dowildbattle
+                msgbox(format("With the POKéMON gone, the computer is rebooting… \pGoblin will be happy!"))
+                setvar(VAR_GODZILLAND_PORYGON, 2)
+            }
+            else{
+                msgbox(format("You decide to leave the computer alone."))
+            }
+        case 2:
+                msgbox(format("With the POKéMON gone, the computer is rebooting… \pGoblin will be happy!"))
+        case 3:
+                msgbox(format("It looks like Goblin's been researching POKéMON species… "))
+    }
+    release
+    end
+}

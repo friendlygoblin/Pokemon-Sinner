@@ -2,7 +2,7 @@
   "id": "MAP_BIG_DOG_ISLAND_CAVE_3F",
   "name": "BigDogIsland_Cave_3F",
   "layout": "LAYOUT_BIG_DOG_ISLAND_CAVE_3F",
-  "music": "MUS_DUMMY",
+  "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

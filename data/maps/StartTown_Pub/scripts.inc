@@ -647,9 +647,9 @@ PickStarter_2_1:
 
 PickStarter_2_2:
 # 395 "data/maps/StartTown_Pub/scripts.pory"
-	showmonpic SPECIES_CYNDAQUIL, 10, 3
+	showmonpic SPECIES_TORCHIC, 10, 3
 # 396 "data/maps/StartTown_Pub/scripts.pory"
-	playmoncry SPECIES_CYNDAQUIL, CRY_MODE_NORMAL
+	playmoncry SPECIES_TORCHIC, CRY_MODE_NORMAL
 # 397 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_2_Text_0, MSGBOX_YESNO
 # 398 "data/maps/StartTown_Pub/scripts.pory"
@@ -661,7 +661,7 @@ PickStarter_2_2:
 
 PickStarter_2_5:
 # 399 "data/maps/StartTown_Pub/scripts.pory"
-	givemon SPECIES_CYNDAQUIL, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_LEER
+	givemon SPECIES_TORCHIC, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_LEER
 # 401 "data/maps/StartTown_Pub/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 402 "data/maps/StartTown_Pub/scripts.pory"
@@ -753,9 +753,9 @@ PickStarter_1_1:
 
 PickStarter_1_2:
 # 460 "data/maps/StartTown_Pub/scripts.pory"
-	showmonpic SPECIES_CHESPIN, 10, 3
+	showmonpic SPECIES_BULBASAUR, 10, 3
 # 461 "data/maps/StartTown_Pub/scripts.pory"
-	playmoncry SPECIES_CHESPIN, CRY_MODE_NORMAL
+	playmoncry SPECIES_BULBASAUR, CRY_MODE_NORMAL
 # 462 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_1_Text_0, MSGBOX_YESNO
 # 463 "data/maps/StartTown_Pub/scripts.pory"
@@ -767,7 +767,7 @@ PickStarter_1_2:
 
 PickStarter_1_5:
 # 464 "data/maps/StartTown_Pub/scripts.pory"
-	givemon SPECIES_CHESPIN, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL
+	givemon SPECIES_BULBASAUR, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL
 # 466 "data/maps/StartTown_Pub/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
 # 467 "data/maps/StartTown_Pub/scripts.pory"
@@ -844,11 +844,11 @@ NoraGiveDex_Text_0:
 
 PickStarter_2_Text_0:
 # 397 "data/maps/StartTown_Pub/scripts.pory"
-	.string "Do you want to choose \nFire type Cyndaquil?$"
+	.string "Do you want to choose \nFire type Torchic?$"
 
 PickStarter_2_Text_1:
 # 402 "data/maps/StartTown_Pub/scripts.pory"
-	.string "Received Cyndaquil!$"
+	.string "Received Torchic!$"
 
 PickStarter_2_Text_2:
 # 419 "data/maps/StartTown_Pub/scripts.pory"
@@ -865,15 +865,15 @@ PickStarter_3_Text_1:
 
 PickStarter_1_Text_0:
 # 462 "data/maps/StartTown_Pub/scripts.pory"
-	.string "Do you want to choose \nGrass type Chespin?$"
+	.string "Do you want to choose \nGrass type Bulbasaur?$"
 
 PickStarter_1_Text_1:
 # 467 "data/maps/StartTown_Pub/scripts.pory"
-	.string "Received Chespin!$"
+	.string "Received Bulbasaur!$"
 
 Barista_Text_0:
 # 492 "data/maps/StartTown_Pub/scripts.pory"
-	.string "Welcome to the Two Legged Dog, what \ncan I get for you?$"
+	.string "Welcome to the Two-Legged Dog, what \ncan I get for you?$"
 
 YouJustGotHere::
 # 315 "data/maps/StartTown_Pub/scripts.pory"

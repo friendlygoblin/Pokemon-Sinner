@@ -2,7 +2,7 @@
   "id": "MAP_BIG_DOG_ISLAND_HIDDEN_HOUSE",
   "name": "BigDogIsland_HiddenHouse",
   "layout": "LAYOUT_BIG_DOG_ISLAND_HIDDEN_HOUSE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_VERDANTURF",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

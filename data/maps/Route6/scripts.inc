@@ -113,7 +113,7 @@ Route6_LizzieBlockWayBack::
 
 Route6_Picnicker_BattleIntro::
 # 55 "data/maps/Route6/scripts.pory"
-	.string "The Crystal Stream is so relaxing to, \n"
+	.string "The Crystal Stream is so relaxing to \n"
 	.string "look at! \p"
 	.string "I'm in the mood for a POKéMON battle!$"
 

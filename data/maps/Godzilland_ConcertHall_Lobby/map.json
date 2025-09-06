@@ -2,7 +2,7 @@
   "id": "MAP_GODZILLAND_CONCERT_HALL_LOBBY",
   "name": "Godzilland_ConcertHall_Lobby",
   "layout": "LAYOUT_GODZILLAND_CONCERT_HALL_LOBBY",
-  "music": "MUS_DUMMY",
+  "music": "MUS_GYM",
   "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -38,6 +38,19 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "StVincentHall_Wren",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ANN",
+      "x": 10,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "StVincentHall_Ann",
       "flag": "0"
     }
   ],

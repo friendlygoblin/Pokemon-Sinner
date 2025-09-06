@@ -87,10 +87,10 @@ script NCPub_BrianMayBattle{
     lock
     faceplayer
 
-    //if(defeated(TRAINER_BRIANMAY)){  
-    //    msgbox(BrianMay_WordAboutTLDP, MSGBOX_AUTOCLOSE)
-    //    }
-    //else{
+    if(defeated(TRAINER_BRIANMAY)){  
+        msgbox(BrianMay_WordAboutTLDP, MSGBOX_AUTOCLOSE)
+        }
+    else{
         msgbox(BrianMayHall_BrianMayBattleIntro, MSGBOX_YESNO)
         if(var(VAR_RESULT)==YES){
             trainerbattle_no_intro(TRAINER_BRIANMAY,  format("You're a champion, my friend."))
@@ -99,14 +99,14 @@ script NCPub_BrianMayBattle{
         else{
             msgbox(format("Very well, another time then!$"))
         }
-    //    }
+        }
     releaseall
     end
 }
 
 script BrianMayGiveBadge{
     msgbox(BrianMayHall_BrianMayGiveBadge, MSGBOX_AUTOCLOSE)
-    message(format("Received the CHAMPION BADGE from BRIAN MAY!"))
+    message(format("Received the RHAPSODY BADGE from BRIAN MAY!"))
     waitmessage
     call(Common_EventScript_PlayGymBadgeFanfare)
     setflag(FLAG_BADGE07_GET)
@@ -126,8 +126,8 @@ text BrianMayHall_BrianMayBattleIntro{
     "You know, I really like their idea of \n"
     "challenging their fans. \p"
     "I haven't battled in a little while, I \n"
-    "was focused on keeping my guitar skills \l"
-    "sharp instead. \p"
+    "was focused on keeping my guitar \l"
+    "skills sharp instead. \p"
     "Why don't we spar together? \n"
     "It would be good training for you! $"
 }
@@ -137,13 +137,13 @@ text BrianMayHall_BrianMayGiveBadge{
     "The Last Dinner Party will have to \n"
     "prepare for you. \p"
     "I have a little something for you, as \n"
-    "a souvenir. \p"
+    "a souvenir. $"
 }
 
 text BrianMayBadgePerks{
     "We used to give those to our close \n"
-    "friends so they could attend our shows \l"
-    "for free. \p"
+    "friends so they could attend our \l"
+    "shows for free. \p"
     "You can keep it, for good luck against \n"
     "the band.$"
 }

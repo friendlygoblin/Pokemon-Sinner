@@ -6,3 +6,48 @@ script NightingaleCity_PubSign{
     release
     end
 }
+
+script NightingaleCity_CitySign{
+    lock
+    msgbox(format("Welcome to Nightingale City! \pDance to the sound of the waves!"))
+    release
+    end
+}
+
+script NightingaleCity_Route10Sign{
+    lock
+    msgbox(format("{DOWN_ARROW}: Route 10 \pTo Sailor Town."))
+    release
+    end
+}
+
+script NightingaleCity_Route11Sign{
+    lock
+    msgbox(format("{UP_ARROW}: Route 11 \pTo Mirror Lake."))
+    release
+    end
+}
+
+script NightingaleCity_BugCatcher{
+    lock
+    faceplayer
+    msgbox(format("We don't have a Concert Hall here, but artists sometimes stop by the Nightingale Pub.\pI think I just spotted a famous guitarist in there!"))
+    release
+    end
+}
+
+script NightingaleCity_Elle{
+    lock
+    faceplayer
+    msgbox(NightingaleCity_ElleMoved)
+    release
+    end
+}
+
+text NightingaleCity_ElleMoved{
+    "ELLE: I used to live in Ecstasy Town. \p"
+    "My old neighbour used to pretend to \n"
+    "throw bricks at my house. \p"
+    "I'm still getting used to him not being \n"
+    "here!$"
+}

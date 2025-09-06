@@ -2,7 +2,7 @@
   "id": "MAP_GODZILLAND_CONCERT_HALL",
   "name": "Godzilland_ConcertHall",
   "layout": "LAYOUT_GODZILLAND_CONCERT_HALL",
-  "music": "MUS_DUMMY",
+  "music": "MUS_GYM",
   "region_map_section": "MAPSEC_LAVARIDGE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -43,7 +43,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_WREN",
       "x": 7,
-      "y": 3,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,

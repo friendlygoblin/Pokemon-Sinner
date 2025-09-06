@@ -45,6 +45,8 @@ script Route8_MusicVideo{
             applymovement(Harv,Route8_HarvGoBackToInitial)
             applymovement(OBJ_EVENT_ID_PLAYER, Route8_PlayerGetIntoPosition)
             waitmovement(0)
+            applymovement(OBJ_EVENT_ID_FOLLOWER, GetFollowerIntoPlace)
+            waitmovement(0)
             call(PictureParlourBattle)
         }
     }
@@ -62,10 +64,10 @@ script PictureParlourBattle{//Don't forget to change levels back to 27
     lockall
     msgbox(Route8_HarvAction, MSGBOX_AUTOCLOSE)
     trainerbattle_double(TRAINER_PICTURE_PARLOUR, format("KATHERINE: Thanks for helping us out!\pELLA: We definitely owe you one!"), format("KATHERINE: What Lumiere had in mind was you! \pELLA: Yeah, that was a real motion picture!"), Route8_HarvNotEnoughPkmn, PostPictureParlourBattle)
-    setvar(VAR_ROUTE8_MUSICVIDEO, 2)
 }
 
 script PostPictureParlourBattle{
+    setvar(VAR_ROUTE8_MUSICVIDEO, 2)
     applymovement(Katherine, WalkInPlaceDown)
     waitmovement(0)
     msgbox(Route8_KatherinePostBattle)
@@ -80,7 +82,14 @@ script Route8_Harv{
     lock
     faceplayer
     if(var(VAR_ROUTE8_MUSICVIDEO)==2){
-        msgbox(format("HARV FROST: Thank you so much for your help, you were fantastic!"))
+        if(flag(FLAG_RECEIVED_HM_FLY)){
+             msgbox(format("HARV FROST: Thank you so much for your help, you were fantastic!"))
+        }
+        else{
+            msgbox(format("HARV FROST: Thank you so much for your help, you were fantastic!\pHere, have this as payment for your efforts."))
+            giveitem(ITEM_HM02)
+            setflag(FLAG_RECEIVED_HM_FLY)
+        }
     }
     else{
         msgbox(Route8_HarvPlayerCameBack, MSGBOX_YESNO)
@@ -135,6 +144,13 @@ script Route8_Ella{
     }
     release
     end
+}
+
+movement GetFollowerIntoPlace{
+    walk_up
+    walk_right
+    face_up
+    step_end
 }
 
 movement Route8_ManRunAway1{

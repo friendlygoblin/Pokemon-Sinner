@@ -4,15 +4,16 @@ script GiveSurf{
     lock
     faceplayer
     if(flag(FLAG_BADGE03_GET)){
-        if(flag(FLAG_RECEIVED_HM_SURF)){
-            msgbox(SurfStory_GiveSurf, MSGBOX_AUTOCLOSE)
-            giveitem(ITEM_HM03)
-            setflag(FLAG_RECEIVED_HM_SURF)
-            msgbox(ExplainSurf, MSGBOX_AUTOCLOSE)
-            }
-        else{
-            msgbox(ExplainSurf, MSGBOX_AUTOCLOSE)
-        }
+        msgbox(SurfStory_GiveSurf, MSGBOX_AUTOCLOSE)
+        giveitem(ITEM_HM03)
+        msgbox(ExplainSurf, MSGBOX_AUTOCLOSE)
+        fadescreen(FADE_TO_BLACK)
+        removeobject(1)
+        setflag(FLAG_RECEIVED_HM_SURF)
+        playse(SE_EXIT)
+        waitse
+        fadescreen(FADE_FROM_BLACK)
+
     }
     else{
         msgbox(SurfStory_CantSurfYet, MSGBOX_AUTOCLOSE)
@@ -22,33 +23,36 @@ script GiveSurf{
 }
 
 text SurfStory_GiveSurf{
-    "Have you ever been on a sinking \n"
-    "ship? \p"
-    "I have, and let me tell you, I wouldn't \n"
-    "be here if it weren't for my POKéMON. \p"
-    "I'd recently taught it the move Surf and \n"
-    "it saved my life! \p"
-    "So here, take this! I'll help you I'm sure!$"
+    "GEORGIA: Hello, {PLAYER}! \p"
+    "Are you enjoying Godzilland? \n"
+    "I'm just visiting before we have our\l"
+    "first show in Mirror City.\p"
+    "I basically grew up in the sea, you \n"
+    "know. \p"
+    "Next step for you should be Crystal \n"
+    "Stream City, right? \p"
+    "Here, take this! It'll help you I'm \n"
+    "sure!$"
 }
 
 text SurfStory_CantSurfYet{
-    "Have you ever been on a sinking \n"
-    "ship? \p"
-    "I have, and let me tell you, I wouldn't \n"
-    "be here if it weren't for my POKéMON. \p"
-    "I'd recently taught it the move Surf \n"
-    "and it saved my life! \p"
-    "Hmm, you need a certain level of skill \n"
-    "to be able to use this move. \p"
-    "Come back when you have a third artist \n"
-    "badge! $"
+    "GEORGIA: Hello, {PLAYER}! \p"
+    "Have you visited the Godzilland concert \n"
+    "Hall? \p"
+    "St.Vincent has a challenge much like  \n"
+    "ours, I'm sure you'd have fun there! \p"
+    "We're huge fans of hers, Emily was very \n"
+    "inspired by her when writing Sinner.$"
 }
 
 text ExplainSurf{
     "The move Surf will allow one of your \n"
     "POKéMON to carry you across water. \p"
     "It's really useful to travel without a \n"
-    "boat, just watch out for wild POKéMON! $"
+    "boat, just watch out for wild POKéMON! \p"
+    "Well, I'm gonna go now.\n"
+    "Rehearsals and everything… See you in \l"
+    "Mirror City!$"
 }
 
 script Route5_SwimmerF {

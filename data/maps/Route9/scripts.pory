@@ -21,8 +21,16 @@ script Route9_Runner {
 }
 
 script Route9_Birdkeeper {
-    trainerbattle_single(TRAINER_HUGH, format("Take flight! \nMy BIRD POKéMON!$"), format("You can land now… "))
+    trainerbattle_single(TRAINER_HUGH, format("Take flight! \nMy BIRD POKéMON!$"), format("You can land now… "), GiveAerialAce)
     msgbox(format("The stronger my POKéMON get, the longer they can fly. "), MSGBOX_AUTOCLOSE)
+}
+
+script GiveAerialAce{
+    lock
+    msgbox(format("My POKéMON fly high, and they hit hard!\pI taught them this cool move, and since you won I want you to have it too!"))
+    giveitem(ITEM_TM40)
+    release
+    end
 }
 
 script GiveSunStone{

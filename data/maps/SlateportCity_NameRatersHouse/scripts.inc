@@ -129,7 +129,7 @@ SlateportCity_NameRatersHouse_EventScript_NewNameDifferent::
 # 65 "data/maps/SlateportCity_NameRatersHouse/scripts.pory"
 SlateportCity_NameRatersHouse_Text_PleasedToRateMonNickname:
 # 66 "data/maps/SlateportCity_NameRatersHouse/scripts.pory"
-	.string "Hi, hi! I'm the NAME RATER!\n"
+	.string "TOTO: Hi, hi! I'm Toto!\n"
 # 67 "data/maps/SlateportCity_NameRatersHouse/scripts.pory"
 	.string "I'm the fortune-teller of names!\p"
 # 68 "data/maps/SlateportCity_NameRatersHouse/scripts.pory"

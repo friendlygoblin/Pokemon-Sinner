@@ -6,12 +6,42 @@ script MarinaHall_Ann{
     lock
     faceplayer
     if(defeated(TRAINER_MARINA)){
-        msgbox(format("ANN: You won against Marina?\pNo way!"), MSGBOX_AUTOCLOSE)
+        msgbox(format("ANN: I thought you couldn't break a diamond… but you've done it!"), MSGBOX_AUTOCLOSE)
         }
     else{
         msgbox(format("ANN: I'll win this for Cowboy Lizzie!"),MSGBOX_AUTOCLOSE)
-        trainerbattle_no_intro(TRAINER_ANN,  format("Cowboy Lizzie lives on… even without me."))
+        trainerbattle_no_intro(TRAINER_ANN_2,  format("Cowboy Lizzie lives on… even without me."))
         msgbox(format("ANN: I thought you couldn't break a diamond… but you've done it!"), MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+script MarinaHall_Brenae{
+    lock
+    faceplayer
+    if(defeated(TRAINER_MARINA)){
+        msgbox(format("GOSIA: You won against Marina?\pNo way!"), MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(format("GOSIA: I'm one of Marina's biggest fans, ask me anything about her!"),MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_GOSIA,  format("I'm so excited to see Marina I wasn't completely focused."))
+        msgbox(format("GOSIA: Come to me if you have any question about Marina!"), MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+script MarinaHall_Gosia{
+    lock
+    faceplayer
+    if(defeated(TRAINER_MARINA)){
+        msgbox(format("GOSIA: You won against Marina?\pNo way!"), MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(format("GOSIA: I'm one of Marina's biggest fans, ask me anything about her!"),MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_GOSIA,  format("I'm so excited to see Marina I wasn't completely focused."))
+        msgbox(format("GOSIA: Come to me if you have any question about Marina!"), MSGBOX_AUTOCLOSE)
         }
     releaseall
     end

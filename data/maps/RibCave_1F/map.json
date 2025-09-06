@@ -107,6 +107,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 31,
+      "y": 4,
+      "elevation": 0,
+      "item": "ITEM_OLD_AMBER",
+      "flag": "FLAG_RIBCAVE_OLD_AMBER"
+    }
   ]
 }

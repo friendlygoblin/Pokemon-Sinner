@@ -1,1 +1,145 @@
 mapscripts VictoryRoad_1_MapScripts {}
+
+script VictoryRoad_Jay{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Jay_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_JAY_2, format("I think you can win against TLDP!"))
+        msgbox(VictoryRoad_Jay_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Saving your strength? That's smart, I'll be training here if you change your mind."))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Jay_BattleIntro{
+    "JAY: {PLAYER}, it's been so long! \p"
+    "I knew I'd see you here, we're almost \n"
+    "in Mirror City! \p"
+    "I'm so much stronger than the first \n"
+    "time we met, let me show you! $"
+}
+
+text VictoryRoad_Jay_PostBattle{
+    "JAY: If I can't win against you now, \n"
+    "I'll stand no chance against the band. \p"
+    "I'll train here a bit longer, but you \n"
+    "go get'em! $"
+}
+
+script VictoryRoad_Grace{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Grace_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_GRACE_3, format("Yes, I think you're ready!"))
+        msgbox(VictoryRoad_Grace_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("You're almost there, I'll be here to train with you if you need to."))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Grace_BattleIntro{
+    "GRACE: {PLAYER}! \p"
+    "So this is it, huh? \n"
+    "TLDP's at the end of this road! \p"
+    "Show me how far you've come! $"
+}
+
+text VictoryRoad_Grace_PostBattle{
+    "GRACE: Wow, {PLAYER}…  \p"
+    "I still remember our first battle in \n"
+    "Prelude Town, like it was yesterday… \p"
+    "You got this, you can totally win! $"
+}
+
+script VictoryRoad_Nina{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Nina_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_NINA_2, format("I think you can win against TLDP!"))
+        msgbox(VictoryRoad_Nina_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("I'll stay here for a bit, come back if you wanna spar!"))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Nina_BattleIntro{
+    "NINA: I'm preparing to battle TLDP! \p"
+    "I heard they're super strong, let's \n"
+    "prepare together! $"
+}
+
+text VictoryRoad_Nina_PostBattle{
+    "NINA: Well, it looks like you're closer \n"
+    "to being ready than I am. \p"
+    "I'll get there soon though! $"
+}
+
+script VictoryRoad_Julie{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Julie_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_JULIE_2, format("I think you can win against TLDP!"))
+        msgbox(VictoryRoad_Julie_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("That's okay, maybe it'll come back later… "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Julie_BattleIntro{
+    "JULIE: I don't even remember how I \n"
+    "discovered TLDP… \p"
+    "Maybe I'll remember better after a \n"
+    "POKéMON battle! $"
+}
+
+text VictoryRoad_Julie_PostBattle{
+    "JULIE: I still don't remember how I, \n"
+    "discovered TLDP, but I'm still excited \l"
+    "to see them! $"
+}
+
+script VictoryRoad_Steff{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Steff_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_STEFF_3, format("Good thing POKéMON Centers are free… "))
+        msgbox(VictoryRoad_Steff_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Alright, as you wish."))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Steff_BattleIntro{
+    "STEFF: It was so expensive to get here\n"
+    "but it was so worth it! \p"
+    "I can't wait to battle with TLDP, how \n"
+    "about you? \p"
+    "We could prepare together!$"
+}
+
+text VictoryRoad_Steff_PostBattle{
+    "STEFF: I spent all my money on TLDP, \n"
+    "and I'm ready to give them my POKéMON \l"
+    "too! \p"
+    "… I'm very normal about this band… $"
+}

@@ -6,7 +6,7 @@ script SailorTown_SwimmerF {
 }
 
 script SailorTown_Nora{
-    lock
+    lockall
     faceplayer
     switch(var(VAR_SAILORTOWN_NORA)){
         case 0:
@@ -16,11 +16,12 @@ script SailorTown_Nora{
         case 2:
             msgbox(format("NORA: Thank you so much for getting my lens back!\pHave fun with the Mega-Ring!"))
     }
-    release
+    releaseall
     end
 }
 
 script NoraAskForHelp{
+    lock
     msgbox(SailorTown_NoraHi, MSGBOX_AUTOCLOSE)
 
     special(SpawnCameraObject)
@@ -39,18 +40,33 @@ script NoraAskForHelp{
 }
 
 script NoraMegaRing{
+    lock
     msgbox(SailorTown_NoraThankyou)
     giveitem(ITEM_MEGA_RING)
     msgbox(SailorTown_NoraThisIsMegaRing, MSGBOX_AUTOCLOSE)
+    setvar(VAR_SAILORTOWN_NORA, 2)
+    setflag(FLAG_RECEIVED_MEGARING)
+}
+
+script SailorTown_Lens{
+    lock
+    msgbox(format("That looks like Nora's camera lens!\pShe'll be happy to have it back."))
+    playfanfare(MUS_OBTAIN_ITEM)
+    waitfanfare
+    setflag(FLAG_SAILORTOWN_LENS)
+    removeobject(1)
+    setvar(VAR_SAILORTOWN_NORA, 1)
+    release
+    end
 }
 
 text SailorTown_NoraHi{
-    "NORA: Oh, {PLAYER}!"
+    "NORA: Oh, {PLAYER}!\p"
     "I wasn't expecting to see you here, \n"
     "what have you been up to? \p"
     "… … … \p"
-    "Oh wow, you've really won six artist \n"
-    "challenges? \p"
+    "Oh wow, you've really been challenging\n"
+    "artists? And winning? \p"
     "Me? Oh, well actually I'm in a bit of \n"
     "a tricky situation. $"
 }
@@ -73,8 +89,8 @@ text SailorTown_NoraHelp{
 text SailorTown_NoraThankyou{
     "NORA: My lens! You got it! \p"
     "Thank you so much !\p"
-    "I promised you something cool, here \n"
-    "you go!$"
+    "Here, something super cool for you! \n"
+    "I insist!$"
 }
 
 text SailorTown_NoraThisIsMegaRing{
@@ -83,7 +99,7 @@ text SailorTown_NoraThisIsMegaRing{
     "Basically they'll take a new temporary \n"
     "form that makes them stronger.\p"
     "They need to hold a Mega-Stone that's \n"
-    "specific to their species, though. $"
+    "specific to their species, though. \p"
     "The stones are pretty rare, you kind \n"
     "of have to look around to find them. \p"
     "I heard of a guy who sells rocks in \n"
@@ -93,13 +109,13 @@ text SailorTown_NoraThisIsMegaRing{
 }
 
 movement SailorTown_CameraToLens{
-    walk_fast_left * 10
+    walk_fast_left * 9
     walk_diag_southwest * 7
     step_end
 }
 
 movement SailorTown_CameraBack{
     walk_diag_northeast * 7
-    walk_fast_right * 10
+    walk_fast_right * 9
     step_end
 }

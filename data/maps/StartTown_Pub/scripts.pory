@@ -392,14 +392,14 @@ text NoraDex{
 script PickStarter_2{
     lockall
     if(var(VAR_LITTLEROOT_INTRO_STATE)==0){
-    showmonpic(SPECIES_CYNDAQUIL, 10,3)
-    playmoncry(SPECIES_CYNDAQUIL, CRY_MODE_NORMAL)
-    msgbox("Do you want to choose \nFire type Cyndaquil?", MSGBOX_YESNO)
+    showmonpic(SPECIES_TORCHIC, 10,3)
+    playmoncry(SPECIES_TORCHIC, CRY_MODE_NORMAL)
+    msgbox("Do you want to choose \nFire type Torchic?", MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
-            givemon(SPECIES_CYNDAQUIL, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_TACKLE, move2 = MOVE_LEER)
+            givemon(SPECIES_TORCHIC, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_TACKLE, move2 = MOVE_LEER)
 
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("Received Cyndaquil!")
+                msgbox("Received Torchic!")
                 call(NicknamePartyMon)
                 removeobject(Pokeball2)
                 setflag(FLAG_POKEBALL_1)
@@ -457,14 +457,14 @@ script PickStarter_3{
 script PickStarter_1{
     lockall
     if(var(VAR_LITTLEROOT_INTRO_STATE)==0){
-    showmonpic(SPECIES_CHESPIN, 10,3)
-    playmoncry(SPECIES_CHESPIN, CRY_MODE_NORMAL)
-    msgbox("Do you want to choose \nGrass type Chespin?", MSGBOX_YESNO)
+    showmonpic(SPECIES_BULBASAUR, 10,3)
+    playmoncry(SPECIES_BULBASAUR, CRY_MODE_NORMAL)
+    msgbox("Do you want to choose \nGrass type Bulbasaur?", MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
-            givemon(SPECIES_CHESPIN, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL)
+            givemon(SPECIES_BULBASAUR, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL)
 
                 playfanfare(MUS_OBTAIN_ITEM)
-                msgbox("Received Chespin!$")
+                msgbox("Received Bulbasaur!$")
                 call(NicknamePartyMon)
                 removeobject(Pokeball1)
                 setflag(FLAG_POKEBALL_1)
@@ -489,7 +489,7 @@ script PickStarter_1{
 
 script Barista{
     lock
-    message("Welcome to the Two Legged Dog, what \ncan I get for you?")
+    message("Welcome to the Two-Legged Dog, what \ncan I get for you?")
     waitmessage
     pokemart(MartBar)
     msgbox(BaristaThanks)

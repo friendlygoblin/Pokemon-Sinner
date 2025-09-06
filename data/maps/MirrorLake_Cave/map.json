@@ -2,7 +2,7 @@
   "id": "MAP_MIRROR_LAKE_CAVE",
   "name": "MirrorLake_Cave",
   "layout": "LAYOUT_MIRROR_LAKE_CAVE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_PETALBURG",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

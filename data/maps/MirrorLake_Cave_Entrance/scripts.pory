@@ -7,7 +7,8 @@ script BowieHall_Katie{
         msgbox(KatiePostBattle_Bowie, MSGBOX_AUTOCLOSE)
         }
     else{
-        trainerbattle_single(TRAINER_KATIE_2, KatieIntro_Bowie, KatieDefeated_Bowie)
+        msgbox(KatieIntro_Bowie, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_KATIE_2, KatieDefeated_Bowie)
         msgbox(KatiePostBattle_Bowie, MSGBOX_AUTOCLOSE)
         }
     releaseall
@@ -31,4 +32,52 @@ text KatiePostBattle_Bowie{
     "KATIE: I think it's coming from the other  \n"
     "room, but I can't get past that big \l"
     "rock blocking the way.$"
+}
+
+script BowieHall_Aux{
+    lock
+    faceplayer
+    if(defeated(TRAINER_BOWIE)){
+        msgbox(KatiePostBattle_Bowie, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(AuxIntro_Bowie, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_AUX, AuxDefeated_Bowie)
+        msgbox(AuxPostBattle_Bowie, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text AuxIntro_Bowie {
+    "AUX: I hear some noise… could it be \n"
+    "'Godzilla' playing? \p"
+    "Either way, I’m not letting you get \n"
+    "there first! $"
+}
+
+text AuxDefeated_Bowie{
+    "Ooh… I should've known better… \n"
+    "I should've done more… $"
+}
+
+text AuxPostBattle_Bowie{
+    "AUX: Hey… have you already listened \n"
+    "to 'Godzilla' today? It’s a banger!  $"
+}
+
+script MirrorLakeCave_Rock{
+    lock
+    msgbox(format("A rock is blocking the rest of the cave.\pDo you want to push it?"), MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(format("{PLAYER} pushed the rock aside."))
+        fadescreen(FADE_TO_BLACK)
+        removeobject(3)
+        playse(SE_EXIT)
+        waitse
+        setflag(FLAG_MIRROR_CAVE_ROCK)
+        fadescreen(FADE_FROM_BLACK)
+    }
+    release
+    end
 }

@@ -115,6 +115,13 @@
     }
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 2,
+      "y": 13,
+      "elevation": 0,
+      "item": "ITEM_BEEDRILLITE",
+      "flag": "FLAG_ROUTE1_BEEDRILLITE"
+    }
   ]
 }

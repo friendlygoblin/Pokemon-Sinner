@@ -2,7 +2,7 @@
   "id": "MAP_MIRROR_LAKE_CAVE_ENTRANCE",
   "name": "MirrorLake_Cave_Entrance",
   "layout": "LAYOUT_MIRROR_LAKE_CAVE_ENTRANCE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -24,7 +24,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "BowieHall_Katie",
       "flag": "0"
     },
     {
@@ -37,11 +37,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "BowieHall_Aux",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
       "x": 7,
       "y": 2,
       "elevation": 0,
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "EventScript_RockSmash",
+      "script": "MirrorLakeCave_Rock",
       "flag": "FLAG_MIRROR_CAVE_ROCK"
     }
   ],

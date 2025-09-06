@@ -38,6 +38,8 @@ BowieGiveBadge::
 # 22 "data/maps/MirrorLake_Cave/scripts.pory"
 	msgbox BowieBadgePerks, MSGBOX_AUTOCLOSE
 # 23 "data/maps/MirrorLake_Cave/scripts.pory"
+	setvar VAR_MIRRORLAKE_ABIEXIT, 0
+# 24 "data/maps/MirrorLake_Cave/scripts.pory"
 	releaseall
 	end
 
@@ -57,7 +59,7 @@ BowieGiveBadge_Text_2:
 	.string "BOWIE!$"
 
 BowieHall_BowieBattleIntro::
-# 27 "data/maps/MirrorLake_Cave/scripts.pory"
+# 28 "data/maps/MirrorLake_Cave/scripts.pory"
 	.string "???: … … … \p"
 	.string "Who are you, and why are you here? \p"
 	.string "… … … \p"
@@ -69,11 +71,11 @@ BowieHall_BowieBattleIntro::
 	.string "mean? $"
 
 BowieHall_BowieLostBattle::
-# 39 "data/maps/MirrorLake_Cave/scripts.pory"
+# 40 "data/maps/MirrorLake_Cave/scripts.pory"
 	.string "It ain't easy to get to heaven… $"
 
 BowieBadgePerks::
-# 43 "data/maps/MirrorLake_Cave/scripts.pory"
+# 44 "data/maps/MirrorLake_Cave/scripts.pory"
 	.string "This badge makes you feel stronger \n"
 	.string "somehow. \p"
 	.string "You feel like any POKéMON could listen \n"

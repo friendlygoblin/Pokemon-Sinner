@@ -2,7 +2,7 @@
   "id": "MAP_BIG_DOG_ISLAND_CAVE",
   "name": "BigDogIsland_Cave",
   "layout": "LAYOUT_BIG_DOG_ISLAND_CAVE",
-  "music": "MUS_DUMMY",
+  "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -74,6 +74,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 15,
+      "y": 9,
+      "elevation": 0,
+      "item": "ITEM_EVERSTONE",
+      "flag": "FLAG_HIDDEN_ITEM_GRANITE_CAVE_B2F_EVERSTONE_1"
+    }
   ]
 }

@@ -25,18 +25,16 @@ RustboroCity_House2_EventScript_LittleGirl::
 # 13 "data/maps/RustboroCity_House2/scripts.pory"
 RustboroCity_House2_Text_TrainerSchoolExcellent:
 # 14 "data/maps/RustboroCity_House2/scripts.pory"
-	.string "The TRAINER'S SCHOOL is excellent.\p"
+	.string "We are big music fans in this house!\p"
 # 15 "data/maps/RustboroCity_House2/scripts.pory"
-	.string "If you study there, you could even\n"
+	.string "So naturally, we were thrilled to see\n"
 # 16 "data/maps/RustboroCity_House2/scripts.pory"
-	.string "become a GYM LEADER.$"
+	.string "Hozier settling here.$"
 # 17 "data/maps/RustboroCity_House2/scripts.pory"
 
 # 18 "data/maps/RustboroCity_House2/scripts.pory"
 RustboroCity_House2_Text_RoxanneKnowsALot:
 # 19 "data/maps/RustboroCity_House2/scripts.pory"
-	.string "ROXANNE, the GYM LEADER, really knows\n"
+	.string "Hozier knows a lot about POKéMON.\p"
 # 20 "data/maps/RustboroCity_House2/scripts.pory"
-	.string "a lot about POKéMON.\p"
-# 21 "data/maps/RustboroCity_House2/scripts.pory"
-	.string "She's really strong, too!$"
+	.string "He's really strong, too!$"

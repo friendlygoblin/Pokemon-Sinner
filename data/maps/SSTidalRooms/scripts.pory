@@ -82,9 +82,9 @@ script ShipRoomsGarret{
 	msgbox(GarretPostBattle, MSGBOX_AUTOCLOSE)
 	end}
 
-script ShipRoomsNaomi{
-	trainerbattle_single(TRAINER_NAOMI, NaomiIntro, NaomiDefeat)
-	msgbox(NaomiPostBattle, MSGBOX_AUTOCLOSE)
+script ShipRoomsTalia{
+	trainerbattle_single(TRAINER_TALIA, TaliaIntro, TaliaDefeat)
+	msgbox(TaliaPostBattle, MSGBOX_AUTOCLOSE)
 	end}
 
 text TakeRestOnBed{
@@ -199,22 +199,19 @@ text GarretPostBattle{
 	"A yacht for me and POKéMON!$"
 	}
 
-text NaomiIntro{
-	"Oh, you're such an adorable TRAINER.\n"
-	"Would you like to have tea?\l"
-	"Or would you rather battle?$"
+text TaliaIntro{
+	"TALIA: I love live music so much I'm\n"
+	"ready to travel all over the world! $"
 	}
 
-text NaomiDefeat{
-	"I see.\n"
-	"You're the active sort.$"
+text TaliaDefeat{
+	"You too? $"
 	}
 
-text NaomiPostBattle{
-	"A world cruise on a luxury liner has its\n"
-	"charms, I must say…\p"
-	"But, I will admit there is an appealing\n"
-	"side to touring HOENN by ferry.$"
+text TaliaPostBattle{
+	"TALIA: It gets a little bit expensive\n"
+	"travelling to show, but it's so worth \l"
+	"it!$"
 	}
 
 text NotSuspiciousTakeThis{

@@ -11349,7 +11349,7 @@
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CATERPIE"
+                "species": "SPECIES_VENONAT"
               }
             ]
           }
@@ -11783,7 +11783,7 @@
               {
                 "min_level": 12,
                 "max_level": 13,
-                "species": "SPECIES_BULBASAUR"
+                "species": "SPECIES_TREECKO"
               },
               {
                 "min_level": 12,
@@ -12790,12 +12790,12 @@
               {
                 "min_level": 17,
                 "max_level": 19,
-                "species": "SPECIES_HOUNDOUR"
+                "species": "SPECIES_GROWLITHE_HISUI"
               },
               {
                 "min_level": 18,
                 "max_level": 20,
-                "species": "SPECIES_HOUNDOOM"
+                "species": "SPECIES_GROWLITHE_HISUI"
               },
               {
                 "min_level": 18,
@@ -12981,9 +12981,9 @@
                 "species": "SPECIES_SWADLOON"
               },
               {
-                "min_level": 20,
+                "min_level": 19,
                 "max_level": 21,
-                "species": "SPECIES_DIGGERSBY"
+                "species": "SPECIES_PONYTA"
               },
               {
                 "min_level": 19,
@@ -13477,7 +13477,7 @@
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_FLAAFFY"
+                "species": "SPECIES_FROSLASS"
               },
               {
                 "min_level": 23,
@@ -13502,7 +13502,7 @@
               {
                 "min_level": 23,
                 "max_level": 25,
-                "species": "SPECIES_PACHIRISU"
+                "species": "SPECIES_SNOM"
               },
               {
                 "min_level": 23,
@@ -14111,7 +14111,7 @@
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_MEDITITE"
+                "species": "SPECIES_FLAMIGO"
               },
               {
                 "min_level": 28,
@@ -14249,7 +14249,7 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_RHYHORN"
+                "species": "SPECIES_SABLEYE"
               },
               {
                 "min_level": 30,
@@ -14289,7 +14289,7 @@
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_SABLEYE"
+                "species": "SPECIES_DRUDDIGON"
               },
               {
                 "min_level": 30,
@@ -14387,7 +14387,7 @@
               {
                 "min_level": 28,
                 "max_level": 29,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_FLAAFFY"
               },
               {
                 "min_level": 28,
@@ -14397,47 +14397,47 @@
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_PACHIRISU"
               },
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_FROSMOTH"
               },
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_MIMIKYU"
               },
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_ZANGOOSE"
               },
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_GROWLITHE_HISUI"
               },
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_PONYTA_GALAR"
               },
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_VULPIX_ALOLA"
               },
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_DITTO"
               },
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_NONE"
+                "species": "SPECIES_VOLTORB"
               }
             ]
           }

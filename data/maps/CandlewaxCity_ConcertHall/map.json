@@ -35,20 +35,6 @@
       "elevation": 0,
       "dest_map": "MAP_CANDLEWAX_CITY_CONCERT_HALL_LOBBY",
       "dest_warp_id": "2"
-    },
-    {
-      "x": 6,
-      "y": 11,
-      "elevation": 0,
-      "dest_map": "MAP_CANDLEWAX_CITY_CONCERT_HALL_LOBBY",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 8,
-      "y": 11,
-      "elevation": 0,
-      "dest_map": "MAP_CANDLEWAX_CITY_CONCERT_HALL_LOBBY",
-      "dest_warp_id": "2"
     }
   ],
   "coord_events": [

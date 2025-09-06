@@ -210,7 +210,7 @@ Route3_Picknicker::
 
 Route3_SchoolKid::
 # 132 "data/maps/Route3/scripts.pory"
-	trainerbattle_single TRAINER_JERRY_1, Route3_SchoolKid_Text_0, Route3_SchoolKid_Text_1
+	trainerbattle_single TRAINER_JOSH, Route3_SchoolKid_Text_0, Route3_SchoolKid_Text_1
 # 133 "data/maps/Route3/scripts.pory"
 	msgbox Route3_SchoolKid_Text_2, MSGBOX_AUTOCLOSE
 	return

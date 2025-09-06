@@ -46,15 +46,15 @@
       "x": 3,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_BEAUTIFUL_PORT",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_NIGHTINGALE_CITY",
+      "dest_warp_id": "5"
     },
     {
       "x": 4,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_BEAUTIFUL_PORT",
-      "dest_warp_id": "3"
+      "dest_map": "MAP_NIGHTINGALE_CITY",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [

@@ -14,7 +14,7 @@ SCB_ChappellAskForHelp::
 	compare VAR_SUNDAYCAVE_STATE, 3
 	goto_if_eq SCB_ChappellAskForHelp_3
 SCB_ChappellAskForHelp_1:
-# 25 "data/maps/SundayCave_Basement/scripts.pory"
+# 26 "data/maps/SundayCave_Basement/scripts.pory"
 	releaseall
 	end
 
@@ -38,195 +38,219 @@ SCB_ChappellAskForHelp_3:
 	removeobject 1
 # 22 "data/maps/SundayCave_Basement/scripts.pory"
 	fadescreen FADE_FROM_BLACK
+# 23 "data/maps/SundayCave_Basement/scripts.pory"
+	setvar VAR_SUNDAYCAVE_STATE, 4
 	goto SCB_ChappellAskForHelp_1
 
 
 SCB_Impidimp1::
-# 58 "data/maps/SundayCave_Basement/scripts.pory"
-	lock
 # 59 "data/maps/SundayCave_Basement/scripts.pory"
-	faceplayer
+	lock
 # 60 "data/maps/SundayCave_Basement/scripts.pory"
-	playmoncry SPECIES_IMPIDIMP, CRY_MODE_NORMAL
+	faceplayer
 # 61 "data/maps/SundayCave_Basement/scripts.pory"
-	msgbox SCB_Impidimp1_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_IMPIDIMP, CRY_MODE_NORMAL
 # 62 "data/maps/SundayCave_Basement/scripts.pory"
-	waitmoncry
+	msgbox SCB_Impidimp1_Text_0, MSGBOX_AUTOCLOSE
 # 63 "data/maps/SundayCave_Basement/scripts.pory"
-	setwildbattle SPECIES_IMPIDIMP, 22
+	waitmoncry
 # 64 "data/maps/SundayCave_Basement/scripts.pory"
-	dowildbattle
+	setwildbattle SPECIES_IMPIDIMP, 22
 # 65 "data/maps/SundayCave_Basement/scripts.pory"
-	setflag FLAG_SCB_IMPIDIMP_1
+	dowildbattle
 # 66 "data/maps/SundayCave_Basement/scripts.pory"
-	removeobject 2
+	setflag FLAG_SCB_IMPIDIMP_1
 # 67 "data/maps/SundayCave_Basement/scripts.pory"
-	setflag FLAG_SCB_IMPIDIMP_2
+	removeobject 2
 # 68 "data/maps/SundayCave_Basement/scripts.pory"
-	removeobject 3
+	setflag FLAG_SCB_IMPIDIMP_2
 # 69 "data/maps/SundayCave_Basement/scripts.pory"
+	removeobject 3
+# 70 "data/maps/SundayCave_Basement/scripts.pory"
 	compare VAR_SUNDAYCAVE_STATE, 1
 	goto_if_eq SCB_Impidimp1_2
-# 72 "data/maps/SundayCave_Basement/scripts.pory"
+# 73 "data/maps/SundayCave_Basement/scripts.pory"
 	compare VAR_SUNDAYCAVE_STATE, 2
 	goto_if_eq SCB_Impidimp1_3
 SCB_Impidimp1_1:
-# 75 "data/maps/SundayCave_Basement/scripts.pory"
+# 76 "data/maps/SundayCave_Basement/scripts.pory"
 	releaseall
 	end
 
 SCB_Impidimp1_2:
-# 70 "data/maps/SundayCave_Basement/scripts.pory"
+# 71 "data/maps/SundayCave_Basement/scripts.pory"
 	setvar VAR_SUNDAYCAVE_STATE, 2
 	goto SCB_Impidimp1_1
 
 SCB_Impidimp1_3:
-# 73 "data/maps/SundayCave_Basement/scripts.pory"
+# 74 "data/maps/SundayCave_Basement/scripts.pory"
 	setvar VAR_SUNDAYCAVE_STATE, 3
 	goto SCB_Impidimp1_1
 
 
 SCB_Impidimp2::
-# 80 "data/maps/SundayCave_Basement/scripts.pory"
-	lock
 # 81 "data/maps/SundayCave_Basement/scripts.pory"
-	faceplayer
+	lock
 # 82 "data/maps/SundayCave_Basement/scripts.pory"
-	playmoncry SPECIES_IMPIDIMP, CRY_MODE_NORMAL
+	faceplayer
 # 83 "data/maps/SundayCave_Basement/scripts.pory"
-	msgbox SCB_Impidimp1_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_IMPIDIMP, CRY_MODE_NORMAL
 # 84 "data/maps/SundayCave_Basement/scripts.pory"
-	waitmoncry
+	msgbox SCB_Impidimp1_Text_0, MSGBOX_AUTOCLOSE
 # 85 "data/maps/SundayCave_Basement/scripts.pory"
-	setwildbattle SPECIES_IMPIDIMP, 22
+	waitmoncry
 # 86 "data/maps/SundayCave_Basement/scripts.pory"
-	dowildbattle
+	setwildbattle SPECIES_IMPIDIMP, 22
 # 87 "data/maps/SundayCave_Basement/scripts.pory"
-	setflag FLAG_SCB_IMPIDIMP_1
+	dowildbattle
 # 88 "data/maps/SundayCave_Basement/scripts.pory"
-	removeobject 2
+	setflag FLAG_SCB_IMPIDIMP_1
 # 89 "data/maps/SundayCave_Basement/scripts.pory"
-	setflag FLAG_SCB_IMPIDIMP_2
+	removeobject 2
 # 90 "data/maps/SundayCave_Basement/scripts.pory"
-	removeobject 3
+	setflag FLAG_SCB_IMPIDIMP_2
 # 91 "data/maps/SundayCave_Basement/scripts.pory"
+	removeobject 3
+# 92 "data/maps/SundayCave_Basement/scripts.pory"
 	compare VAR_SUNDAYCAVE_STATE, 1
 	goto_if_eq SCB_Impidimp2_2
-# 94 "data/maps/SundayCave_Basement/scripts.pory"
+# 95 "data/maps/SundayCave_Basement/scripts.pory"
 	compare VAR_SUNDAYCAVE_STATE, 2
 	goto_if_eq SCB_Impidimp2_3
 SCB_Impidimp2_1:
-# 97 "data/maps/SundayCave_Basement/scripts.pory"
+# 98 "data/maps/SundayCave_Basement/scripts.pory"
 	releaseall
 	end
 
 SCB_Impidimp2_2:
-# 92 "data/maps/SundayCave_Basement/scripts.pory"
+# 93 "data/maps/SundayCave_Basement/scripts.pory"
 	setvar VAR_SUNDAYCAVE_STATE, 2
 	goto SCB_Impidimp2_1
 
 SCB_Impidimp2_3:
-# 95 "data/maps/SundayCave_Basement/scripts.pory"
+# 96 "data/maps/SundayCave_Basement/scripts.pory"
 	setvar VAR_SUNDAYCAVE_STATE, 3
 	goto SCB_Impidimp2_1
 
 
 SCB_Impidimp3::
-# 102 "data/maps/SundayCave_Basement/scripts.pory"
-	lock
 # 103 "data/maps/SundayCave_Basement/scripts.pory"
-	faceplayer
+	lock
 # 104 "data/maps/SundayCave_Basement/scripts.pory"
-	playmoncry SPECIES_IMPIDIMP, CRY_MODE_NORMAL
+	faceplayer
 # 105 "data/maps/SundayCave_Basement/scripts.pory"
-	msgbox SCB_Impidimp1_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_IMPIDIMP, CRY_MODE_NORMAL
 # 106 "data/maps/SundayCave_Basement/scripts.pory"
-	waitmoncry
+	msgbox SCB_Impidimp1_Text_0, MSGBOX_AUTOCLOSE
 # 107 "data/maps/SundayCave_Basement/scripts.pory"
-	setwildbattle SPECIES_IMPIDIMP, 22
+	waitmoncry
 # 108 "data/maps/SundayCave_Basement/scripts.pory"
-	dowildbattle
+	setwildbattle SPECIES_IMPIDIMP, 22
 # 109 "data/maps/SundayCave_Basement/scripts.pory"
-	setflag FLAG_SCB_IMPIDIMP_3
+	dowildbattle
 # 110 "data/maps/SundayCave_Basement/scripts.pory"
-	removeobject 4
+	setflag FLAG_SCB_IMPIDIMP_3
 # 111 "data/maps/SundayCave_Basement/scripts.pory"
-	setflag FLAG_SCB_IMPIDIMP_4
+	removeobject 4
 # 112 "data/maps/SundayCave_Basement/scripts.pory"
-	removeobject 5
+	setflag FLAG_SCB_IMPIDIMP_4
 # 113 "data/maps/SundayCave_Basement/scripts.pory"
+	removeobject 5
+# 114 "data/maps/SundayCave_Basement/scripts.pory"
 	compare VAR_SUNDAYCAVE_STATE, 1
 	goto_if_eq SCB_Impidimp3_2
-# 116 "data/maps/SundayCave_Basement/scripts.pory"
+# 117 "data/maps/SundayCave_Basement/scripts.pory"
 	compare VAR_SUNDAYCAVE_STATE, 2
 	goto_if_eq SCB_Impidimp3_3
 SCB_Impidimp3_1:
-# 119 "data/maps/SundayCave_Basement/scripts.pory"
+# 120 "data/maps/SundayCave_Basement/scripts.pory"
 	releaseall
 	end
 
 SCB_Impidimp3_2:
-# 114 "data/maps/SundayCave_Basement/scripts.pory"
+# 115 "data/maps/SundayCave_Basement/scripts.pory"
 	setvar VAR_SUNDAYCAVE_STATE, 2
 	goto SCB_Impidimp3_1
 
 SCB_Impidimp3_3:
-# 117 "data/maps/SundayCave_Basement/scripts.pory"
+# 118 "data/maps/SundayCave_Basement/scripts.pory"
 	setvar VAR_SUNDAYCAVE_STATE, 3
 	goto SCB_Impidimp3_1
 
 
 SCB_Impidimp4::
-# 124 "data/maps/SundayCave_Basement/scripts.pory"
-	lock
 # 125 "data/maps/SundayCave_Basement/scripts.pory"
-	faceplayer
+	lock
 # 126 "data/maps/SundayCave_Basement/scripts.pory"
-	playmoncry SPECIES_IMPIDIMP, CRY_MODE_NORMAL
+	faceplayer
 # 127 "data/maps/SundayCave_Basement/scripts.pory"
-	msgbox SCB_Impidimp1_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_IMPIDIMP, CRY_MODE_NORMAL
 # 128 "data/maps/SundayCave_Basement/scripts.pory"
-	waitmoncry
+	msgbox SCB_Impidimp1_Text_0, MSGBOX_AUTOCLOSE
 # 129 "data/maps/SundayCave_Basement/scripts.pory"
-	setwildbattle SPECIES_IMPIDIMP, 22
+	waitmoncry
 # 130 "data/maps/SundayCave_Basement/scripts.pory"
-	dowildbattle
+	setwildbattle SPECIES_IMPIDIMP, 22
 # 131 "data/maps/SundayCave_Basement/scripts.pory"
-	setflag FLAG_SCB_IMPIDIMP_3
+	dowildbattle
 # 132 "data/maps/SundayCave_Basement/scripts.pory"
-	removeobject 4
+	setflag FLAG_SCB_IMPIDIMP_3
 # 133 "data/maps/SundayCave_Basement/scripts.pory"
-	setflag FLAG_SCB_IMPIDIMP_4
+	removeobject 4
 # 134 "data/maps/SundayCave_Basement/scripts.pory"
-	removeobject 5
+	setflag FLAG_SCB_IMPIDIMP_4
 # 135 "data/maps/SundayCave_Basement/scripts.pory"
+	removeobject 5
+# 136 "data/maps/SundayCave_Basement/scripts.pory"
 	compare VAR_SUNDAYCAVE_STATE, 1
 	goto_if_eq SCB_Impidimp4_2
-# 138 "data/maps/SundayCave_Basement/scripts.pory"
+# 139 "data/maps/SundayCave_Basement/scripts.pory"
 	compare VAR_SUNDAYCAVE_STATE, 2
 	goto_if_eq SCB_Impidimp4_3
 SCB_Impidimp4_1:
-# 141 "data/maps/SundayCave_Basement/scripts.pory"
+# 142 "data/maps/SundayCave_Basement/scripts.pory"
 	releaseall
 	end
 
 SCB_Impidimp4_2:
-# 136 "data/maps/SundayCave_Basement/scripts.pory"
+# 137 "data/maps/SundayCave_Basement/scripts.pory"
 	setvar VAR_SUNDAYCAVE_STATE, 2
 	goto SCB_Impidimp4_1
 
 SCB_Impidimp4_3:
-# 139 "data/maps/SundayCave_Basement/scripts.pory"
+# 140 "data/maps/SundayCave_Basement/scripts.pory"
 	setvar VAR_SUNDAYCAVE_STATE, 3
 	goto SCB_Impidimp4_1
 
 
+SundayCave_Absolite::
+# 147 "data/maps/SundayCave_Basement/scripts.pory"
+	goto_if_set FLAG_SCB_ABSOLITE, SundayCave_Absolite_1
+	return
+
+SundayCave_Absolite_1:
+# 148 "data/maps/SundayCave_Basement/scripts.pory"
+	lock
+# 149 "data/maps/SundayCave_Basement/scripts.pory"
+	msgbox SundayCave_Absolite_Text_0
+# 150 "data/maps/SundayCave_Basement/scripts.pory"
+	giveitem ITEM_ABSOLITE
+# 151 "data/maps/SundayCave_Basement/scripts.pory"
+	release
+	end
+
+
 SCB_Impidimp1_Text_0:
-# 61 "data/maps/SundayCave_Basement/scripts.pory"
+# 62 "data/maps/SundayCave_Basement/scripts.pory"
 	.string "IMPIDIMP: Iiiiiiimp!$"
 
+SundayCave_Absolite_Text_0:
+# 149 "data/maps/SundayCave_Basement/scripts.pory"
+	.string "There is something stuck in the drill's\n"
+	.string "tracks.$"
+
 CantTakeCareOfThatAlone::
-# 29 "data/maps/SundayCave_Basement/scripts.pory"
+# 30 "data/maps/SundayCave_Basement/scripts.pory"
 	.string "CHAPPELL: Who are you? \p"
 	.string "Ah, the challenge? \p"
 	.string "It's gonna have to wait, as you can \n"
@@ -239,7 +263,7 @@ CantTakeCareOfThatAlone::
 	.string "them or knock them out I don't care.$"
 
 GoodJobImGoingBack::
-# 42 "data/maps/SundayCave_Basement/scripts.pory"
+# 43 "data/maps/SundayCave_Basement/scripts.pory"
 	.string "CHAPPELL: That should do, they're all \n"
 	.string "gone. \p"
 	.string "Thanks for your help. \p"

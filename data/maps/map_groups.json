@@ -657,6 +657,7 @@
     "VictoryRoad_2",
     "VictoryRoad_3",
     "VictoryRoad_4",
+    "VictoryRoad_5",
     "MirrorCity"
   ],
   "gMapGroup_PreludeRegion_Indoors": [
@@ -666,12 +667,14 @@
     "StartTown_Shelter",
     "EcstasyTown_BigHouse",
     "EcstasyTown_LittleHouse",
+    "CandlewaxCity_BikeShop",
     "CandlewaxCity_ConcertHall",
     "CandlewaxCity_ConcertHall_Lobby",
     "FurgeTown_Shop",
     "FurgeTown_Clearing",
     "BeautifulPort_HarbourLobby",
     "Godzilland_HarbourLobby",
+    "Godzilland_DevHouse",
     "Godzilland_ConcertHall",
     "Godzilland_ConcertHall_Lobby",
     "BigDogIsland_Cave",

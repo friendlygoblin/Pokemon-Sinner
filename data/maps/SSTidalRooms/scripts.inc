@@ -150,11 +150,11 @@ ShipRoomsGarret::
 	end
 
 
-ShipRoomsNaomi::
+ShipRoomsTalia::
 # 86 "data/maps/SSTidalRooms/scripts.pory"
-	trainerbattle_single TRAINER_NAOMI, NaomiIntro, NaomiDefeat
+	trainerbattle_single TRAINER_TALIA, TaliaIntro, TaliaDefeat
 # 87 "data/maps/SSTidalRooms/scripts.pory"
-	msgbox NaomiPostBattle, MSGBOX_AUTOCLOSE
+	msgbox TaliaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -270,26 +270,23 @@ GarretPostBattle::
 	.string "a yacht for me.\l"
 	.string "A yacht for me and POKéMON!$"
 
-NaomiIntro::
+TaliaIntro::
 # 202 "data/maps/SSTidalRooms/scripts.pory"
-	.string "Oh, you're such an adorable TRAINER.\n"
-	.string "Would you like to have tea?\l"
-	.string "Or would you rather battle?$"
+	.string "TALIA: I love live music so much I'm\n"
+	.string "ready to travel all over the world! $"
 
-NaomiDefeat::
-# 208 "data/maps/SSTidalRooms/scripts.pory"
-	.string "I see.\n"
-	.string "You're the active sort.$"
+TaliaDefeat::
+# 207 "data/maps/SSTidalRooms/scripts.pory"
+	.string "You too? $"
 
-NaomiPostBattle::
-# 213 "data/maps/SSTidalRooms/scripts.pory"
-	.string "A world cruise on a luxury liner has its\n"
-	.string "charms, I must say…\p"
-	.string "But, I will admit there is an appealing\n"
-	.string "side to touring HOENN by ferry.$"
+TaliaPostBattle::
+# 211 "data/maps/SSTidalRooms/scripts.pory"
+	.string "TALIA: It gets a little bit expensive\n"
+	.string "travelling to show, but it's so worth \l"
+	.string "it!$"
 
 NotSuspiciousTakeThis::
-# 220 "data/maps/SSTidalRooms/scripts.pory"
+# 217 "data/maps/SSTidalRooms/scripts.pory"
 	.string "Uh… Hi! I… I'm not acting suspicious!\n"
 	.string "Uh… You can have this! For free!\p"
 	.string "It… Honestly, I didn't SNATCH it from\n"
@@ -297,7 +294,7 @@ NotSuspiciousTakeThis::
 	.string "It's clean! You can use it!$"
 
 ExplainSnatch::
-# 228 "data/maps/SSTidalRooms/scripts.pory"
+# 225 "data/maps/SSTidalRooms/scripts.pory"
 	.string "SNATCH steals the beneficial effects\n"
 	.string "of certain moves before they can be\l"
 	.string "used by a foe or ally.$"

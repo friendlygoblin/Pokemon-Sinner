@@ -8,7 +8,7 @@ CSCCH_FlagStuff::
 # 6 "data/maps/CrystalStreamCity/scripts.pory"
 	setflag FLAG_LIZZIE_ROUTE6
 # 7 "data/maps/CrystalStreamCity/scripts.pory"
-	compare VAR_SUNDAYCAVE_STATE, 0
+	compare VAR_SUNDAYCAVE_STATE, 4
 	goto_if_eq CSCCH_FlagStuff_1
 	return
 

@@ -17,7 +17,7 @@ LilycoveCity_PokemonCenter_1F_MapScripts::
 # 9 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 LilycoveCity_PokemonCenter_1F_OnTransition:
 # 10 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	setrespawn HEAL_LOCATION_LILYCOVE_CITY
+	setrespawn HEAL_LOCATION_CRYSTAL_STREAM_CITY
 # 11 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	goto LilycoveCity_PokemonCenter_1F_EventScript_SetLilycoveLadyGfx
 # 12 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"

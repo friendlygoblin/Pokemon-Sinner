@@ -5,6 +5,7 @@ Route111_OldLadysRestStop_MapScripts::
 
 Route111_OldLadysRestStop_OnTransition:
 	setflag FLAG_LANDMARK_OLD_LADY_REST_SHOP
+	setrespawn HEAL_LOCATION_MIRROR_LAKE
 	end
 
 Route111_OldLadysRestStop_EventScript_OldLady::

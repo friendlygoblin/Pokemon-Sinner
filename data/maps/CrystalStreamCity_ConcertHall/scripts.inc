@@ -178,9 +178,11 @@ CSCCH_LizzieLeave1:
 	walk_down
 # 144 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
 	walk_down
-# 144 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
-	walk_down
 # 145 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
+	walk_left
+# 146 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
+	walk_down
+# 147 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
 	step_end
 
 Chappell_DefeatedScript_Text_0:
@@ -225,19 +227,19 @@ Chappell_WordAboutTLDP::
 	.string "Good luck with that, babe. $"
 
 CSCCH_LizzieShortVisit::
-# 148 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
+# 150 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
 	.string "LIZZIE: It was so lovely to meet you, \n"
 	.string "Chappell! \p"
 	.string "Hopefully next time I can stay a bit \n"
 	.string "longer.$"
 
 CSCCH_ChappellYeahDefinitely::
-# 155 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
+# 157 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
 	.string "CHAPPELL: Yeah, and I'd love to visit \n"
 	.string "you and the band in Mirror City!$"
 
 CSCCH_LizzieImAHugeFanToo::
-# 160 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
+# 162 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
 	.string "LIZZIE: Ah, there you are! \p"
 	.string "Thanks for your help earlier! \p"
 	.string "… … … \p"
@@ -245,7 +247,7 @@ CSCCH_LizzieImAHugeFanToo::
 	.string "Before Route 6, I mean.$"
 
 CSCCH_SeeYouLater::
-# 168 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
+# 170 "data/maps/CrystalStreamCity_ConcertHall/scripts.pory"
 	.string "Right! The Two-Legged Dog! \p"
 	.string "Yeah, Abi told me she gave a POKéMON to \n"
 	.string "a fan! \p"

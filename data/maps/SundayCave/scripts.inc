@@ -31,7 +31,7 @@ SundayCave_Scientist2::
 # 44 "data/maps/SundayCave/scripts.pory"
 	faceplayer
 # 45 "data/maps/SundayCave/scripts.pory"
-	compare VAR_SUNDAYCAVE_STATE, 3
+	compare VAR_SUNDAYCAVE_STATE, 4
 	goto_if_eq SundayCave_Scientist2_2
 # 50 "data/maps/SundayCave/scripts.pory"
 	msgbox SundayCave_Scientist2_PleaseHelp, MSGBOX_AUTOCLOSE
@@ -54,7 +54,7 @@ SundayCave_MachineGuy::
 # 86 "data/maps/SundayCave/scripts.pory"
 	faceplayer
 # 87 "data/maps/SundayCave/scripts.pory"
-	compare VAR_SUNDAYCAVE_STATE, 3
+	compare VAR_SUNDAYCAVE_STATE, 4
 	goto_if_eq SundayCave_MachineGuy_2
 # 117 "data/maps/SundayCave/scripts.pory"
 	msgbox SundayCave_MachineGuy_ImpidimpsHere, MSGBOX_AUTOCLOSE

@@ -141,7 +141,9 @@ movement CSCCH_LizzieLeave2{
 
 movement CSCCH_LizzieLeave1{
     walk_right
-    walk_down * 4
+    walk_down * 3
+    walk_left
+    walk_down
     step_end
 }
 

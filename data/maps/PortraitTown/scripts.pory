@@ -27,3 +27,19 @@ script PortraitTown_Route8Sign{
     release
     end
 }
+
+script PortraitTown_Girl{
+    lock
+    faceplayer
+    msgbox(format("It's pretty cold in this town.\pThat's why Ice Type POKéMON thrive here!"))
+    release
+    end
+}
+
+script PortraitTown_Man{
+    lock
+    faceplayer
+    msgbox(format("Marina? Oh no, I'm too old to attend her shows… \pBut my kids aren't, so I go with them!"))
+    release
+    end
+}

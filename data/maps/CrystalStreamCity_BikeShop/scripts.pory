@@ -1,1 +1,86 @@
 mapscripts CrystalStreamCity_BikeShop_MapScripts {}
+
+script CSCBS_Clerk{
+    lock
+    faceplayer
+    switch(var(VAR_BIKESHOPS)){
+        case 0:
+            msgbox(CSCBS_ExplainBikeProblem, MSGBOX_AUTOCLOSE)
+        case 1:
+            msgbox(CSCBS_PlayerBroughtPart, MSGBOX_AUTOCLOSE)
+            fadescreen(FADE_TO_BLACK)
+            playse(SE_BALL)
+            waitse
+            playse(SE_BALL)
+            waitse
+            playse(SE_BIKE_BELL)
+            waitse
+            fadescreen(FADE_FROM_BLACK)
+            msgbox(CSCBS_BikeReady, MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_MACH_BIKE)
+            setvar(VAR_BIKESHOPS, 2)
+            setflag(FLAG_RECEIVED_BIKE)
+
+        case 2:
+            msgbox(format("Oh, hi! How are you liking the bike?\pSay hi to my friend for me if you're ever in Candlewax City again!"), MSGBOX_AUTOCLOSE)
+    }
+    release
+    end
+}
+
+text CSCBS_ExplainBikeProblem{
+    "Hello, are you here to purchase a \n"
+    "bike? \p"
+    "I'm sorry, I'm busy figuring out how \n"
+    "to finish my latest model. \p"
+    "I asked my friend in Candlewax City to \n"
+    "design a custom part but she can't \l"
+    "leave her workshop for too long. \p"
+    "Ugh, I really need that part… \p"
+    "If only someone could help my friend \n"
+    "bring it here… $"
+}
+
+text CSCBS_PlayerBroughtPart{
+    "Hello, are you here to purchase a \n"
+    "bike? \p"
+    "I'm sorry, I'm busy figuring out how \n"
+    "to finish my latest model. \p"
+    "I asked my friend in Candlewax City to \n"
+    "design a custom part but she can't \l"
+    "leave her workshop for too long. \p"
+    "What? You have it here? Gimme, gimme! \p"
+    "Thanks! Just gimme a sec!$"
+}
+
+text CSCBS_BikeReady{
+    "Finished! Oh my, it looks so perfect! \p"
+    "I need to test it now… but I can't \n"
+    "just leave the shop!\p"
+    "Oh, I know! \p"
+    "Why don't you take it, as thanks for \n"
+    "helping me complete it? \p"
+    "Plus that would advertise the shop so \n"
+    "really it's a win-win situation. \p"
+    "Take it, I insist! \p"
+    "The manual's the big red book in the \n"
+    "corner, feel free to have a look!$"
+}
+
+script CSCBS_BikeManual{
+    lock
+    msgbox(BikeManual)
+    release
+    end
+}
+
+text BikeManual{
+    "MACH BIKE MANUAL \p"
+    "Be faster than ever with the MACH BIKE!\p"
+    "The MACH BIKE is speedy, but it can't\n"
+    "stop very quickly.\p"
+    "It gets a little tricky to get around\n"
+    "a corner.\p"
+    "Release the + Control Pad a little\n"
+    "before turning to slow down.$"
+    }

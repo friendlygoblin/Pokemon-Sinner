@@ -1,80 +1,205 @@
 mapscripts Route11_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION : Route11_HideGoblin
+    MAP_SCRIPT_ON_TRANSITION : Route11_HideEmily
 }
 
-const Goblin = 1
+const Emily = 1
 const Snorlax = 2
 
-script Route11_HideGoblin{
-    setflag(FLAG_ROUTE11_GOBLIN)
+script Route11_HideEmily{
+    if(var(VAR_ROUTE11_SNORLAX)==0||var(VAR_ROUTE11_SNORLAX)==3){
+        setflag(FLAG_ROUTE11_EMILY)
+    }
 }
 
 script Route11_Snorlax{
     lock
-    msgbox(format("There is a big sleeping POKéMON blocking the way.\pDo you want to wake it up?"), MSGBOX_YESNO)
-    if(var(VAR_RESULT)==YES){
-        applymovement(OBJ_EVENT_ID_PLAYER, WalkInPlaceUp)
-        waitmovement(0)
-        msgbox(format("You poke at the POKéMON's belly."), MSGBOX_AUTOCLOSE)
-        playmoncry(SPECIES_SNORLAX, CRY_MODE_NORMAL)
-        waitmoncry
-        msgbox(format("The POKéMON woke up!"), MSGBOX_AUTOCLOSE)
-        setwildbattle(SPECIES_SNORLAX, 30)
-        dowildbattle
-        removeobject(Snorlax)
-        setflag(FLAG_ROUTE11_SNORLAX)
+    switch(var(VAR_ROUTE11_SNORLAX)){
+        case 0:
+            msgbox(format("There is a big sleeping POKéMON blocking the way."), MSGBOX_AUTOCLOSE)
+            call(Route11_EmilyToSnorlax)
+        case 1:
+            msgbox(format("There is a big sleeping POKéMON blocking the way."), MSGBOX_AUTOCLOSE)
+        case 2:
+            msgbox(format("The big POKéMON blocking the way is waking up to Emily's music!"), MSGBOX_AUTOCLOSE)
+            setwildbattle(SPECIES_SNORLAX, 30)
+            dowildbattle
+            removeobject(Snorlax)
+            setvar(VAR_ROUTE11_SNORLAX,3)
+            setflag(FLAG_ROUTE11_SNORLAX)
+            applymovement(Emily, WalkInPlaceUp)
+            waitmovement(0)
+            msgbox(Route11_EmilyMoveOn, MSGBOX_AUTOCLOSE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Route11_PlayerMoveAside)
+            waitmovement(0)
+            applymovement(Emily, Route11_EmilyLeavesAfterSnorlax)
+            waitmovement(0)
+            removeobject(Emily)
+            setflag(FLAG_ROUTE11_EMILY)
+        case 3:
+            msgbox(format("DEVELOPPER: Uh that's not normal Snorlax should be gone."))
     }
     release
     end
 }
 
-script Route11_Goblin{
-    lock
+script Route11_EmilyToSnorlax{
+    addobject(Emily)
+    if(var(VAR_ROUTE11_SNORLAX)== 0){
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
     waitmovement(0)
-    addobject(Goblin)
-    applymovement(Goblin, Route11_GobWalksToPlayer)
-    msgbox(Route11_GoblinInvestigating)
-    applymovement(OBJ_EVENT_ID_PLAYER, Route11_PlayerMoveAside)
+    applymovement(Emily, Route11_EmilyWalksToPlayer)
     waitmovement(0)
-    applymovement(Goblin, Route11_GoblinLeaves)
-    waitmovement(0)
-    removeobject(Goblin)
-    setvar(VAR_ROUTE11_GOBLIN, 1)
+    clearflag(FLAG_ROUTE11_EMILY)
+    setobjectxyperm(Emily, 8, 13)
+    setvar(VAR_ROUTE11_SNORLAX, 1)
+    msgbox(Route11_EmilySnorlax)
+    }
+    if(flag(FLAG_BADGE01_GET)&&flag(FLAG_BADGE02_GET)&&flag(FLAG_BADGE03_GET)&&flag(FLAG_BADGE04_GET)&&flag(FLAG_BADGE05_GET)&&flag(FLAG_BADGE06_GET)){
+        msgbox(Route11_EmilyPlaysFlute, MSGBOX_AUTOCLOSE)
+        applymovement(Emily, WalkInPlaceUp)
+        waitmovement(0)
+        setvar(VAR_ROUTE11_SNORLAX, 2)
+    }
+    else{
+        msgbox(Route11_NotEnoughBadges, MSGBOX_AUTOCLOSE)
+        setobjectmovementtype(Emily, MOVEMENT_TYPE_LOOK_AROUND)
+    }
     release
     end   
 }
 
-movement Route11_GobWalksToPlayer{
+script Route11_Emily{
+    lock
+    faceplayer
+    if(var(VAR_ROUTE11_SNORLAX)==1){
+        if(flag(FLAG_BADGE01_GET)&&flag(FLAG_BADGE02_GET)&&flag(FLAG_BADGE03_GET)&&flag(FLAG_BADGE04_GET)&&flag(FLAG_BADGE05_GET)&&flag(FLAG_BADGE06_GET)){
+            msgbox(Route11_FinallyEnoughBadges, MSGBOX_AUTOCLOSE)
+        }
+        else{
+            msgbox(Route11_StillNotEnoughBadges, MSGBOX_AUTOCLOSE)
+        }
+    
+    }
+    elif(var(VAR_ROUTE11_SNORLAX)==2){
+        msgbox(format("EMILY: I'll play the flute while you wake up the POKéMON!"))
+    }
+    release
+    end
+}
+
+movement Route11_EmilyWalksToPlayer{
     walk_up * 4
-    walk_left
-    walk_up * 2
     step_end
 }
 
 movement Route11_PlayerMoveAside{
-    walk_up
+    walk_up *2
     walk_left
     face_right
     step_end
 }
 
-movement Route11_GoblinLeaves{
-    walk_up * 7
+movement Route11_EmilyLeavesAfterSnorlax{
+    walk_up
+    walk_right
+    walk_up * 6
+    walk_right * 4
+    walk_up * 4
     step_end
 }
 
-text Route11_GoblinInvestigating{
-    "GOBLIN: Oh, {PLAYER}! \p"
-    "Are you here to investigate Mirror \n"
-    "Lake? \p"
-    "… … … \p"
-    "Oh, basically people have been talking \n"
-    "about hearing strange noises coming \l"
-    "from the lake area. \p"
-    "I thought I'd look around, maybe it's \n"
-    "a rare POKéMON acting up… \p"
-    "I'd love to stay and spar, but I'm \n"
-    "really excited about this mystery. \p"
-    "Another time, for sure! $"
+text Route11_EmilySnorlax{
+    "EMILY: Oh, {PLAYER}! \p"
+    "Are you trying to get to Mirror Lake? \p"
+    "Hmmm, this big guy sure didn't choose \n"
+    "the best spot to fall asleep… $"
+}
+
+text Route11_NotEnoughBadges{
+    "I'll see if I can find a solution to \n"
+    "make it move. \p"
+    "It might take a while… \p"
+    "There are other artists who have open\n"
+    "challenges like ours, maybe you can \l"
+    "go check them out while I think! \p"
+    "It'll be good training before you face \n"
+    "us, because we won't go down without a \l"
+    "fight!$"
+}
+
+text Route11_FinallyEnoughBadges{
+    "EMILY: You're back! \p"
+    "I think I know how to get rid of that \n"
+    "big guy blocking the road, go have a \l"
+    "look at it and I'll tell you the plan.$"
+}
+
+text Route11_StillNotEnoughBadges{
+    "EMILY: Hey, {PLAYER}! \p"
+    "I still haven't found a way to move \n"
+    "that big POKéMON, sorry. \p"
+    "In the meantime why don't you go train \n"
+    "against other artists, to prepare for \l"
+    "Mirror City?$"
+}
+
+text Route11_EmilyPlaysFlute{
+    "I heard music could help POKéMON wake \n"
+    "up… \p"
+    "I have my flute with me, let's see if \n"
+    "that does anything. \p"
+    "I'll play, you try to make it move!$"
+}
+
+text Route11_EmilyMoveOn{
+    "EMILY: Nice job! \p"
+    "Well, now that the path is clear, I'm \n"
+    "gonna head to Mirror City! \p"
+    "I'll see you there!$"
+}
+
+script Route11_Aiden{
+    lock
+    faceplayer
+    trainerbattle_single(TRAINER_AIDEN,format("AIDEN: I'm here to train for the TLDP challenge!\pYou too?"), format("Hmm, still a long way to go."), Route11_AidenLeaves)
+    release
+    end
+}
+
+script Route11_AidenLeaves{
+    fadescreen(FADE_TO_BLACK)
+    removeobject(3)
+    playse(SE_EXIT)
+    waitse
+    setflag(FLAG_ROUTE11_AIDEN)
+    fadescreen(FADE_FROM_BLACK)
+    release
+    end
+}
+
+script Route11_BirdKeeper {
+    trainerbattle_single(TRAINER_PHIL, format("My bird POKéMON love these woods, and so do I!"), format("It's really nice here, isn't it? "))
+    msgbox(format("I could spend my entire life here. "), MSGBOX_AUTOCLOSE)
+}
+
+script Route11_BattleGirl {
+    trainerbattle_single(TRAINER_CORA, format("My team and I train by hitting thick tree trunks, look how strong we are!"), format("Oh, you're even stronger… "))
+    msgbox(format("It's peaceful here, which is perfect for training. "), MSGBOX_AUTOCLOSE)
+}
+
+script Route11_BugManiac {
+    trainerbattle_single(TRAINER_BRENT, format("Bugs, bugs everywhere! \pI love this place!"), format("I'll go back to looking for bugs… "))
+    msgbox(format("Bug POKéMON are the most fascinating of all! "), MSGBOX_AUTOCLOSE)
+}
+
+script Route11_AromaLady {
+    trainerbattle_single(TRAINER_CELINA, format("I found a strange stone and it made my POKéMON evolve."), format("They all look cuter now! "), GiveShinyStone)
+    msgbox(format("Those evolution stones are so mysterious… "), MSGBOX_AUTOCLOSE)
+}
+
+script GiveShinyStone{
+    msgbox(format("I kept a part of that weird stone, I'd like you to have it."))
+    giveitem(ITEM_SHINY_STONE)
+    release
+    end
 }

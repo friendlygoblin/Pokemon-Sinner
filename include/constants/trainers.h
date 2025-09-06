@@ -132,8 +132,15 @@
 #define TRAINER_PIC_AIDEN              114
 #define TRAINER_PIC_Q                  115
 #define TRAINER_PIC_TALIA              116
+#define TRAINER_PIC_YAPGOB             117
+#define TRAINER_PIC_MEGGO              118
+#define TRAINER_PIC_GOSIA              119
+#define TRAINER_PIC_MEINTH             120
+#define TRAINER_PIC_CAL                121
+#define TRAINER_PIC_GEORGE             122
+#define TRAINER_PIC_TILLY              123
 
-#define TRAINER_PIC_COUNT                 117
+#define TRAINER_PIC_COUNT                 124
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

@@ -35,3 +35,13 @@ movement NCPub_EmilyGoesToBackRoom{
     walk_up * 2
     step_end
 }
+
+script NightingaleCityPub_Barista{
+    lock
+    message("Welcome to the Nightingale Pub, what \ncan I get ya?")
+    waitmessage
+    pokemart(MartBar)
+    msgbox(format("Alright, come back soon!"))
+    release
+    end
+}

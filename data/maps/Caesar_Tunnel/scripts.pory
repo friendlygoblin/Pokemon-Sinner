@@ -1,1 +1,54 @@
 mapscripts Caesar_Tunnel_MapScripts {}
+
+script CaesarTunnel_FossilGuy {
+    lock
+    faceplayer    
+    if(flag(FLAG_CAESARTUNNEL_FOSSIL)){
+            msgbox(CaesarTunnel_TakingBreak, MSGBOX_AUTOCLOSE)
+            
+        }
+        else{
+        msgbox(CaesarTunnel_FoundFossils)
+
+            dynmultipush("Root Fossil", ITEM_ROOT_FOSSIL)
+            dynmultipush("Claw Fossil", ITEM_CLAW_FOSSIL)
+            dynmultipush("None, thanks!", ITEM_NONE)
+            dynmultistack(0, 0, FALSE, 6, FALSE, 3, DYN_MULTICHOICE_CB_NONE)
+            
+            switch(var(VAR_RESULT)){
+                case ITEM_ROOT_FOSSIL:
+                    giveitem(ITEM_ROOT_FOSSIL)
+                    msgbox(CaesarTunnel_TakingBreak, MSGBOX_AUTOCLOSE)
+                    setflag(FLAG_CAESARTUNNEL_FOSSIL)
+                case ITEM_CLAW_FOSSIL:
+                    giveitem(ITEM_CLAW_FOSSIL)
+                    msgbox(CaesarTunnel_TakingBreak, MSGBOX_AUTOCLOSE)
+                    setflag(FLAG_CAESARTUNNEL_FOSSIL)
+                case ITEM_NONE:
+                    msgbox(format("Ah, that's fine… \pI'll stay here for a bit, I can't go any further with both fossils in my bag."), MSGBOX_AUTOCLOSE)
+                default:
+                    msgbox(format("Ah, that's fine… \pI'll stay here for a bit, I can't go any further with both fossils in my bag."), MSGBOX_AUTOCLOSE)
+        }
+    }
+    releaseall
+    end
+}
+
+text CaesarTunnel_FoundFossils{
+    "Huff… huff… I found some fossils during\n"
+    "my travels but they're so heavy… \p"
+    "I wanted to get them to Crystal Stream \n"
+    "City's museum to have them analysed, \l"
+    "but I'll never get there alive carrying \l"
+    "both. \p"
+    "You travel the world too, right?\n"
+    "How about you take one with you? $"
+}
+
+text CaesarTunnel_TakingBreak{
+    "My bag is so much lighter now, thank \n"
+    "you! \p"
+    "I'm taking a break to rest, but I'll \n"
+    "reach the Crystal Stream City Museum \l"
+    "eventually!$"
+}

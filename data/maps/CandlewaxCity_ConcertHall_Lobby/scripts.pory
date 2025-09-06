@@ -50,13 +50,13 @@ script WarpToHozierRoom{
 
 movement PlaceRora1{
     walk_right
-    walk_down * 7
+    walk_down * 6
     face_player
     step_end
 }
 
 movement PlaceRora2{
-    walk_down * 7
+    walk_down * 6
     face_player
     step_end
 }
@@ -99,7 +99,8 @@ script HozierHall_Nina{
         msgbox(NinaPostBattle_Hozier)
         }
     else{
-        trainerbattle_single(TRAINER_NINA, NinaIntro_Hozier, NinaDefeated_Hozier)
+        msgbox(NinaIntro_Hozier, )
+        trainerbattle_no_intro(TRAINER_NINA, NinaDefeated_Hozier)
         msgbox(NinaPostBattle_Hozier)
         }
     
@@ -132,7 +133,8 @@ script HozierHall_Steff{
         msgbox(SteffPostBattle_Hozier)
         }
     else{
-        trainerbattle_single(TRAINER_NINA, SteffIntro_Hozier, SteffDefeated_Hozier)
+        msgbox(SteffIntro_Hozier, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_STEFF, SteffDefeated_Hozier)
         msgbox(SteffPostBattle_Hozier)
         }
     releaseall
@@ -161,7 +163,8 @@ script HozierHall_Wren{
         msgbox(WrenPostBattle_Hozier)
         }
     else{
-        trainerbattle_single(TRAINER_WREN, WrenIntro_Hozier, WrenDefeated_Hozier)
+        msgbox(WrenIntro_Hozier, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_WREN, WrenDefeated_Hozier)
         msgbox(WrenPostBattle_Hozier)
         }
     releaseall

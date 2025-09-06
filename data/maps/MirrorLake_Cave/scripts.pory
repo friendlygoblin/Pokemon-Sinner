@@ -20,6 +20,7 @@ script BowieGiveBadge{
     setflag(FLAG_BADGE08_GET)
     setflag(FLAG_DEFEATED_SOOTOPOLIS_GYM)
     msgbox(BowieBadgePerks, MSGBOX_AUTOCLOSE)
+    setvar(VAR_MIRRORLAKE_ABIEXIT, 0)
     releaseall
     end
 }

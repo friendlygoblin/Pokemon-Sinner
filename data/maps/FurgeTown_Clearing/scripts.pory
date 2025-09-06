@@ -11,7 +11,8 @@ script FlorenceHall_GraceBattle{
         msgbox(FlorenceHall_GracePostBattle_AfterFlorence, MSGBOX_AUTOCLOSE)
         }
     else{
-        trainerbattle_single(TRAINER_GRACE_2,FlorenceHall_GraceBattleIntro, FlorenceHall_GraceLostBattle)
+        msgbox(FlorenceHall_GraceBattleIntro, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_GRACE_2, FlorenceHall_GraceLostBattle)
         msgbox(FlorenceHall_GracePostBattle_BeforeFlorence, MSGBOX_AUTOCLOSE)
         }
     releaseall
@@ -60,7 +61,8 @@ script FlorenceHall_JulieBattle{
         msgbox(FlorenceHall_JuliePostBattle, MSGBOX_AUTOCLOSE)
         }
     else{
-        trainerbattle_single(TRAINER_JULIE,FlorenceHall_JulieBattleIntro, FlorenceHall_JulieLostBattle)
+        msgbox(FlorenceHall_JulieBattleIntro, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_JULIE, FlorenceHall_JulieLostBattle)
         msgbox(FlorenceHall_JuliePostBattle, MSGBOX_AUTOCLOSE)
         }
     releaseall
@@ -79,6 +81,37 @@ text FlorenceHall_JulieLostBattle{
 text FlorenceHall_JuliePostBattle{
     "JULIE: This place is so perfect for \n"
     "Florence's vibe.$"
+}
+
+script FlorenceHallMeggoBattle{
+    lock
+    faceplayer
+
+    if(defeated(TRAINER_FLORENCE)){  
+        msgbox(FlorenceHall_MeggoPostBattle, MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(FlorenceHall_MeggoBattleIntro, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_MEGGO, FlorenceHall_MeggoLostBattle)
+        msgbox(FlorenceHall_MeggoPostBattle, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text FlorenceHall_MeggoBattleIntro{
+    "MEGGO: I'm challenging Florence too!\p"
+    "I could use a warm up, consider your \n"
+    "ship wrecked!$"
+}
+
+text FlorenceHall_MeggoLostBattle{
+    "My scream has been silenced… $"
+}
+
+text FlorenceHall_MeggoPostBattle{
+    "MEGGO: You're challenging artists? \n"
+    "Keep raising it up!$"
 }
 
 script FlorenceHall_FlorenceBattle{

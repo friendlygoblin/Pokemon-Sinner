@@ -31,6 +31,30 @@ NCPub_EmilyGoesToBackRoom:
 # 36 "data/maps/NightingaleCity_Pub/scripts.pory"
 	step_end
 
+NightingaleCityPub_Barista::
+# 40 "data/maps/NightingaleCity_Pub/scripts.pory"
+	lock
+# 41 "data/maps/NightingaleCity_Pub/scripts.pory"
+	message NightingaleCityPub_Barista_Text_0
+# 42 "data/maps/NightingaleCity_Pub/scripts.pory"
+	waitmessage
+# 43 "data/maps/NightingaleCity_Pub/scripts.pory"
+	pokemart MartBar
+# 44 "data/maps/NightingaleCity_Pub/scripts.pory"
+	msgbox NightingaleCityPub_Barista_Text_1
+# 45 "data/maps/NightingaleCity_Pub/scripts.pory"
+	release
+	end
+
+
+NightingaleCityPub_Barista_Text_0:
+# 41 "data/maps/NightingaleCity_Pub/scripts.pory"
+	.string "Welcome to the Nightingale Pub, what \ncan I get ya?$"
+
+NightingaleCityPub_Barista_Text_1:
+# 44 "data/maps/NightingaleCity_Pub/scripts.pory"
+	.string "Alright, come back soon!$"
+
 NCPub_EmilyGreetsPlayer::
 # 18 "data/maps/NightingaleCity_Pub/scripts.pory"
 	.string "EMILY: Hello! \p"

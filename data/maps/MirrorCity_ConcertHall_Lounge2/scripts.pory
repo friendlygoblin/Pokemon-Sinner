@@ -1,1 +1,373 @@
 mapscripts MirrorCity_ConcertHall_Lounge2_MapScripts {}
+
+const Katherine = 1
+const Ella = 2
+const Harv = 3
+const Ale = 4
+const Pau = 5
+const Dany = 6
+const Luvcat = 7
+const Cal = 8
+const Nora = 9
+
+script MCCH_LoungeHarv{
+    lock
+    faceplayer
+    msgbox(LoungeHarv_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeHarv_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_HARV_2, format("Cut!\nWait that's right I'm not at work… "))
+        msgbox(LoungeHarv_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeHarv_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Harv, Common_Movement_FaceUp)
+    release
+    end
+}
+
+text LoungeHarv_OfferBattle{
+    "HARV: Hey, that's my new movie star! \p"
+    "How have you been? \p"
+    "I'm not filming anything today, or \n"
+    "at least not for work. \p"
+    "I'm here to see my friends, The Last \n"
+    "Dinner Party! \p"
+    "We have a minute before the show  \n"
+    "starts, would you like to have a \n"
+    "quick battle? $"
+    }
+
+text LoungeHarv_RefuseBattle{
+    "No worries, you know where to find \n"
+    "me if you change your mind. $"
+    }
+
+text LoungeHarv_AcceptBattle{
+    "Aaand… ACTION! $"
+    }
+
+text LoungeHarv_PostBattle{
+    "You really have a unique style, have \n"
+    "you ever considered being an actor? \p"
+    "I know who to call if I ever need \n"
+    "extras again, until then good luck \l"
+    "against the band! $"
+}
+
+script MCCH_LoungeAle{
+    lock
+    faceplayer
+    msgbox(LoungeAle_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeAle_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_ALEJANDRA, format("… … … "))
+        msgbox(LoungeAle_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeAle_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Ale, Common_Movement_FaceRight)
+    release
+    end
+}
+
+text LoungeAle_OfferBattle{
+    "ALEJANDRA: Hi, have we met before? \p"
+    "No? Thought so…  \p"
+    "I'm Alejandra, I'm in the band The \n"
+    "Warning with my sisters, I play bass. \p"
+    "… … … \p"
+    "Wanna spar to pass the time? $"
+    "We're also big fans of The Last Dinner \n"
+    "Party. \p"
+    }
+
+text LoungeAle_RefuseBattle{
+    "Oh I get it, no problem. $"
+    }
+
+text LoungeAle_AcceptBattle{
+    "Alright, watch out! $"
+    }
+
+text LoungeAle_PostBattle{
+    "Cool! \p"
+    "We're thinking of having our own \n"
+    "challenge too, you know. \p"
+    "You'll be welcome to try it!$"
+
+}
+
+script MCCH_LoungePau{
+    lock
+    faceplayer
+    msgbox(LoungePau_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungePau_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_PAULINA, format("Greedy little… "))
+        msgbox(LoungePau_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungePau_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Pau, Common_Movement_FaceDown)
+    release
+    end
+}
+
+text LoungePau_OfferBattle{
+    "PAULINA: Hi I'm Paulina but my sisters \n"
+    "call me Pau! \p"
+    "I play drums for The Warning we're big \n"
+    "fans of The Last Dinner Party! \p"
+    "Are you here to challenge them? \p"
+    "I heard they're super strong, why don't \n"
+    "you warm up with me?\p"
+    "To be honest I just really wanna move, \n"
+    "I could use a fun battle… $"
+    }
+
+text LoungePau_RefuseBattle{
+    "Oh okay, I'll find something else to \n"
+    "do it's okay. $"
+    }
+
+text LoungePau_AcceptBattle{
+    "You better be good! $"
+    }
+
+text LoungePau_PostBattle{
+    "Well that was fun! \p"
+    "I'm glad I managed to convince my \n"
+    "sisters to set up a fan challenge! \p"
+    "Well, Dany was on board right away, it \n"
+    "was Ale who was hard to convince… \p"
+    "Anyway, good luck against TLDP! $"
+}
+
+script MCCH_LoungeDany{
+    lock
+    faceplayer
+    msgbox(LoungeDany_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeDany_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_DANIELA, format("Do you feel satisfied? "))
+        msgbox(LoungeDany_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeDany_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Dany, Common_Movement_FaceLeft)
+    release
+    end
+}
+
+text LoungeDany_OfferBattle{
+    "DANY: Hi, I'm Dany! \p"
+    "I'm the guitarist and lead singer of \n"
+    "The Warning, we're three sisters from \l"
+    "Mexico and we came to see TLDP! \p"
+    "How about we have a quick battle, for \n"
+    "you to train before you face TLDP and \l"
+    "for me to prepare for our very own \l"
+    "challenge! $"
+    }
+
+text LoungeDany_RefuseBattle{
+    "Awh okay, another time maybe… $"
+    }
+
+text LoungeDany_AcceptBattle{
+    "Yay, let's do this! $"
+    }
+
+text LoungeDany_PostBattle{
+    "Wow that was incredible, I hope we'll \n"
+    "get cool challengers like you! \p"
+    "Have fun at the show and go show'em \n"
+    "you ain't a burnout! $"
+}
+
+script MCCH_LoungeLuvcat{
+    lock
+    faceplayer
+    msgbox(LoungeLuvcat_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeLuvcat_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_LUVCAT, format("I've been damned… "))
+        msgbox(LoungeLuvcat_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeLuvcat_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Luvcat, Common_Movement_FaceRight)
+    release
+    end
+}
+
+text LoungeLuvcat_OfferBattle{
+    "???: Hi, darling! \p"
+    "LUVCAT: I'm Luvcat, I opened for TLDP \n"
+    "a little while ago! \p"
+    "You're here to challenge them, aren't \n"
+    "you? \p"
+    "Would you like to warm up against me? \n"
+    "It'll be fun! $"
+    }
+
+text LoungeLuvcat_RefuseBattle{
+    "No worries, another time… $"
+    }
+
+text LoungeLuvcat_AcceptBattle{
+    "Great, let's go! $"
+    }
+
+text LoungeLuvcat_PostBattle{
+    "My goodness, you're so delicious! \p"
+    "TLDP are gonna love battling with you! \p"
+    "I wish you the best of luck against \n"
+    "The Last Dinner Party, even if you \l"
+    "may not need it. $"
+}
+
+script MCCH_LoungeNora{
+    lock
+    faceplayer
+    msgbox(LoungeNora_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeNora_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_NORA, format("Oh it's gonna be great! "))
+        msgbox(LoungeNora_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeNora_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    release
+    end
+}
+
+text LoungeNora_OfferBattle{
+    "NORA: {PLAYER}, what's up? \p"
+    "So this is it? You're ready for TLDP? \p"
+    "I've seen them prepare, you're gonna \n"
+    "have fun! \p"
+    "To be honest… I'd like to have fun too, \n"
+    "spar with me? $"
+    }
+
+text LoungeNora_RefuseBattle{
+    "That's alright, I should get my equipment\n"
+    "ready anyway, I'll be shooting the show! $"
+    }
+
+text LoungeNora_AcceptBattle{
+    "Let's do it!\n"
+    "And don't hold back! $"
+    }
+
+text LoungeNora_PostBattle{
+    "Wow, you're gonna crush it out there, \n"
+    "and I'm not saying that because you \l"
+    "just beat me! \p"
+    "The band are still killers, but I bet \n"
+    "you'll give us a real show, can't wait \l"
+    "to take pics of that! $"
+}
+
+script MCCH_LoungeKatherine{
+    lock
+    faceplayer
+    msgbox(LoungeKatherine_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeKatherine_AcceptBattle)
+        msgbox(LoungeElla_AcceptBattleFromKatherine, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_PICTURE_PARLOUR_2, format("KATHERINE: Yup, still super cool!\pELLA: You rock! "))
+        msgbox(LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeKatherine_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Katherine, Common_Movement_FaceRight)
+    release
+    end
+}
+
+text LoungeKatherine_OfferBattle{
+    "KATHERINE: Hey, you're the one from the \n"
+    "music video! \p"
+    "You're here for the TLDP challenge? \p"
+    "Ella and I are just here to watch the \n"
+    "show, but that sounds fun!\p"
+    "I know they don't do double battles, \n"
+    "but wanna train with us? $"
+    }
+
+text LoungeKatherine_RefuseBattle{
+    "Bummer, well we'll be waitin' here if \n"
+    "you need us. $"
+    }
+
+text LoungeKatherine_AcceptBattle{
+    "Alright! Ella? $"
+    }
+
+text LoungeKatherine_AcceptBattleFromElla{
+    "KATHERINE: On it!$"
+    }
+
+text LoungeKatherine_PostBattle{
+    "How incredible, you were phenomenal \n"
+    "as you were the first time we met! \p"
+    "I wish you the best of luck against \n"
+    "The Last Dinner Party, even if you \l"
+    "may not need it. $"
+}
+
+script MCCH_LoungeElla{
+    lock
+    faceplayer
+    msgbox(LoungeElla_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeElla_AcceptBattle)
+        msgbox(LoungeKatherine_AcceptBattleFromElla, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_PICTURE_PARLOUR_2, format("KATHERINE: Yup, still super cool!\pELLA: You rock! "))
+        msgbox(LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeElla_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Ella, Common_Movement_FaceDown)
+    release
+    end
+}
+
+text LoungeElla_OfferBattle{
+    "ELLA: Hey, I remember you, you starred \n"
+    "in our music video! \p"
+    "Thanks again for that. \p"
+    "Wanna double battles again, consider \n"
+    "it training for TLDP? $"
+    }
+
+text LoungeElla_RefuseBattle{
+    "That's fine, we'll just chill here  \n"
+    "waitin' for the show to start. $"
+    }
+
+text LoungeElla_AcceptBattle{
+    "Cool! Katherine? $"
+    }
+
+text LoungeElla_AcceptBattleFromKatherine{
+    "ELLA: Be right there!$"
+    }
+
+text LoungeElla_PostBattle{
+    "Hell yeah, that was cool! \p"
+    "Good luck out there, hope you'll \n"
+    "come to us when we're big enough \l"
+    "to have our own challenge! $"
+}

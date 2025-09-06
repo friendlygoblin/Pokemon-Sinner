@@ -2,7 +2,7 @@
   "id": "MAP_CRYSTAL_STREAM_CITY_CONCERT_HALL_LOBBY",
   "name": "CrystalStreamCity_ConcertHall_Lobby",
   "layout": "LAYOUT_CRYSTAL_STREAM_CITY_CONCERT_HALL_LOBBY",
-  "music": "MUS_DUMMY",
+  "music": "MUS_GYM",
   "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

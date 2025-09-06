@@ -2,7 +2,7 @@
   "id": "MAP_MERCY_TOWN_ROCK_SHOP",
   "name": "MercyTown_RockShop",
   "layout": "LAYOUT_MERCY_TOWN_ROCK_SHOP",
-  "music": "MUS_DUMMY",
+  "music": "MUS_RG_GAME_CORNER",
   "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

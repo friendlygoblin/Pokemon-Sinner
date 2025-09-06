@@ -97,8 +97,6 @@ PlaceRora1:
 	walk_down
 # 53 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	walk_down
-# 53 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	walk_down
 # 54 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	face_player
 # 55 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
@@ -106,8 +104,6 @@ PlaceRora1:
 
 # 58 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 PlaceRora2:
-# 59 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	walk_down
 # 59 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	walk_down
 # 59 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
@@ -141,11 +137,13 @@ HozierHall_Nina::
 	checktrainerflag TRAINER_HOZIER
 	goto_if 1, HozierHall_Nina_2
 # 102 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_single TRAINER_NINA, NinaIntro_Hozier, NinaDefeated_Hozier
+	msgbox NinaIntro_Hozier
 # 103 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+	trainerbattle_no_intro TRAINER_NINA, NinaDefeated_Hozier
+# 104 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	msgbox NinaPostBattle_Hozier
 HozierHall_Nina_1:
-# 106 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 107 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	releaseall
 	end
 
@@ -156,47 +154,51 @@ HozierHall_Nina_2:
 
 
 HozierHall_Steff::
-# 129 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	lock
 # 130 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	faceplayer
+	lock
 # 131 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+	faceplayer
+# 132 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	checktrainerflag TRAINER_HOZIER
 	goto_if 1, HozierHall_Steff_2
-# 135 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_single TRAINER_NINA, SteffIntro_Hozier, SteffDefeated_Hozier
 # 136 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+	msgbox SteffIntro_Hozier, MSGBOX_AUTOCLOSE
+# 137 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+	trainerbattle_no_intro TRAINER_STEFF, SteffDefeated_Hozier
+# 138 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	msgbox SteffPostBattle_Hozier
 HozierHall_Steff_1:
-# 138 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 140 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	releaseall
 	end
 
 HozierHall_Steff_2:
-# 132 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 133 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	msgbox SteffPostBattle_Hozier
 	goto HozierHall_Steff_1
 
 
 HozierHall_Wren::
-# 158 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	lock
-# 159 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	faceplayer
 # 160 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+	lock
+# 161 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+	faceplayer
+# 162 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	checktrainerflag TRAINER_HOZIER
 	goto_if 1, HozierHall_Wren_2
-# 164 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_single TRAINER_WREN, WrenIntro_Hozier, WrenDefeated_Hozier
-# 165 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 166 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+	msgbox WrenIntro_Hozier, MSGBOX_AUTOCLOSE
+# 167 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+	trainerbattle_no_intro TRAINER_WREN, WrenDefeated_Hozier
+# 168 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	msgbox WrenPostBattle_Hozier
 HozierHall_Wren_1:
-# 167 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 170 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	releaseall
 	end
 
 HozierHall_Wren_2:
-# 161 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 163 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	msgbox WrenPostBattle_Hozier
 	goto HozierHall_Wren_1
 
@@ -231,40 +233,40 @@ RoraStolenPokemon::
 	.string "Good luck!$"
 
 NinaIntro_Hozier::
-# 110 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 111 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	.string "NINA: The Last Dinner Party were so \n"
 	.string "good! \p"
 	.string "They were the best openers Hozier could \n"
 	.string "ask for!$"
 
 NinaDefeated_Hozier::
-# 117 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 118 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	.string "It's already over?$"
 
 NinaPostBattle_Hozier::
-# 121 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 122 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	.string "NINA: I'm sad Hozier didn't play \n"
 	.string "NFWMB. \p"
 	.string "It's my favourite song of his! \p"
 	.string "I know he never plays it but still…$"
 
 SteffIntro_Hozier::
-# 142 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 144 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	.string "STEFF: The show was so good, I sang so\n"
 	.string "loud I almost passed out… \p"
 	.string "But I would do it again! $"
 
 SteffDefeated_Hozier::
-# 148 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 150 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	.string "Put me back in it…$"
 
 SteffPostBattle_Hozier::
-# 152 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 154 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	.string "STEFF: I don't want to leave just yet. \p"
 	.string "If I leave it'll be over for real.$"
 
 WrenIntro_Hozier::
-# 171 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 174 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	.string "WREN: Oh the show was so magical!\p"
 	.string "I got to see two of my favourite \n"
 	.string "artists in one night! \p"
@@ -272,11 +274,11 @@ WrenIntro_Hozier::
 	.string "the sea! $"
 
 WrenDefeated_Hozier::
-# 179 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 182 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	.string "Now I'm feeling as heavy as the world…$"
 
 WrenPostBattle_Hozier::
-# 183 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
+# 186 "data/maps/CandlewaxCity_ConcertHall_Lobby/scripts.pory"
 	.string "WREN: Hozier played my favourite \n"
 	.string "song! \p"
 	.string "I feel lighter than I have in so much \n"

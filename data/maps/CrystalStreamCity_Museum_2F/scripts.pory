@@ -186,8 +186,9 @@ text CSCM_WelcomeToHistoryFloor{
     "This floor is dedicated to history. \p"
     "And I am in charge of our very special \n"
     "fossil resurection program! \p"
-    "If you a fossil, I can study it and \n"
-    "turn it back into a POKéMON for you!$"
+    "If you find a fossil, I can study it \n"
+    "and turn it back into a POKéMON \l"
+    "for you!$"
 }
 
 text CSCM_NoFossils{

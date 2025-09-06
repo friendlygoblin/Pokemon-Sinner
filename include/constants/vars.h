@@ -50,7 +50,7 @@
 #define VAR_RECYCLE_GOODS                                0x4020
 #define VAR_REPEL_STEP_COUNT                             0x4021
 #define VAR_ICE_STEP_COUNT                               0x4022
-#define VAR_STARTER_MON                             0x4023 // 0=Cyndaquil, 1=Chespin, 2=Mudkip
+#define VAR_STARTER_MON                             0x4023 // 0=Torchic, 1=Bulbasaur, 2=Mudkip
 #define VAR_MIRAGE_RND_H                                 0x4024
 #define VAR_MIRAGE_RND_L                                 0x4025
 #define VAR_SECRET_BASE_MAP                              0x4026
@@ -115,22 +115,23 @@
 #define VAR_OLIVEMOUNT_OLDMAN_EGG                    0x4067
 #define VAR_GODZILLANDHALL_EMILY                     0x4068 
 #define VAR_CSCCH_TRIGGER                            0x406A
-#define VAR_SUNDAYCAVE_STATE                         0x406B //0 = not started, 1 = started, 2 = took down one Impidimp, 3 = took down two Impidimps 
+#define VAR_SUNDAYCAVE_STATE                         0x406B //0 = not started, 1 = started, 2 = took down one Impidimp, 3 = took down two Impidimps, 4 = completed
 #define VAR_SUNDAYCAVE_MACHINEGUY                    0x406C 
 #define VAR_CMATHALL_INTERVIEW                       0x406D 
 #define VAR_ROUTE8_MUSICVIDEO                        0x406E //0 = not started, 1 = talked to Harv Frost, 2 = completed
 #define VAR_MARINAHALL_ABI                           0x4070 
 #define VAR_NIGHTINGALECITY_PUB                      0x4065 
 #define VAR_SAILORTOWN_NORA                          0x4073 //0 = not started, 1 = picked up the lens, 2 = gave it back to Nora, 3 = rock seller guy gave info
-#define VAR_ROUTE11_GOBLIN                           0x4075 
+#define VAR_ROUTE11_SNORLAX                          0x4075 //0 = not started, 1 = talked to Goblin once, 2 = Goblin OK, 3 = dealt with Snorlax
+#define VAR_MIRRORLAKE_INVESTIGATION                 0x407A
+#define VAR_MIRRORLAKE_ABIEXIT                       0x407C 
+#define VAR_MIRROR_CITY_GOBLIN                       0x407D
 #define VAR_MIRROR_CITY_TLDP_PROGRESS                0x4076 //0 = not started, 1 = beat Rora, 2 = beat Emily, 3 = beat Lizzie, 4 = beat Georgia
 #define VAR_MIRROR_CITY_TLDP_TRIGGER                 0x4077 // Always 0, used to trigger the battles
 
-#define VAR_ROUTE125_STATE                               0x4078 // Unused Var
-#define VAR_ROUTE126_STATE                               0x4079 // Unused Var
-#define VAR_ROUTE127_STATE                               0x407A // Unused Var
-#define VAR_ROUTE129_STATE                               0x407C // Unused Var
-#define VAR_ROUTE130_STATE                               0x407D // Unused Var
+#define VAR_GODZILLAND_PORYGON                       0x4078 //0 = not started, 1 = Gob explained the problem, 2 = got rid of Porygon, 3 = completed
+#define VAR_BIKESHOPS                                0x4079 //0 = not started, 1 = talked to the engineer in CwC, 2 = delivered the part
+
 #define VAR_ROUTE131_STATE                               0x407E // Unused Var
 #define VAR_ROUTE132_STATE                               0x407F // Unused Var
 #define VAR_ROUTE133_STATE                               0x4080 // Unused Var

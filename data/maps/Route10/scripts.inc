@@ -92,8 +92,8 @@ Route10_BattleGirl_Text_2:
 
 Route10_Tuber_Text_0:
 # 19 "data/maps/Route10/scripts.pory"
-	.string "I put a message in a bottle and put it\n"
-	.string "out to sea.$"
+	.string "I put a message in a bottle and threw it\n"
+	.string "out to the sea.$"
 
 Route10_Tuber_Text_1:
 # 19 "data/maps/Route10/scripts.pory"

@@ -20,6 +20,7 @@ script SCB_ChappellAskForHelp{
         setflag(FLAG_LIZZIE_ROUTE6)
         removeobject(Chappell)
         fadescreen(FADE_FROM_BLACK)
+        setvar(VAR_SUNDAYCAVE_STATE, 4)
     }
     
     releaseall
@@ -140,4 +141,14 @@ script SCB_Impidimp4{
     }
     releaseall
     end
+}
+
+script SundayCave_Absolite{
+    if(flag(FLAG_SCB_ABSOLITE)){
+        lock
+        msgbox(format("There is something stuck in the drill's tracks."))
+        giveitem(ITEM_ABSOLITE)
+        release
+        end
+    }
 }

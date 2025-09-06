@@ -28,6 +28,29 @@ script Godzilland_ConcertHallSign{
     end
 }
 
+script Godzilland_DevHouseSign{
+    lock
+    msgbox(format("POKéMON Sinner Dev House\pCome meet the Dev Team!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script Godzilland_Sailor{
+    lock
+    faceplayer
+    msgbox(format("Today is my day off, but I still come hang out near the Harbour.\pI'd spend the day on the ferry if I could!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script Godzilland_LittleGirl{
+    lock
+    faceplayer
+    msgbox(format("You come from Prelude Town?\pThat's so far away! You must be a great adventurer!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
 script Godzilland_GiveItemFinder{
     lock
     faceplayer
@@ -38,6 +61,7 @@ script Godzilland_GiveItemFinder{
         msgbox(ExplainHiddenItems)
         giveitem(ITEM_ITEMFINDER)
         msgbox(ExplainItemFinder)
+        setflag(FLAG_GODZILLAND_ITEM_FINDER)
     }
     release
     end
@@ -52,10 +76,10 @@ text ExplainHiddenItems{
 }
 
 text ExplainItemFinder{
-    "It's an Item Finder! \p"
+    "It's a Dowsing Machine! \p"
     "Some treasures are invisible to the \n"
-    "naked eye, but this baby can find! \l"
-    "them for you! \p"
+    "naked eye, but this baby can find them \l"
+    "for you! \p"
     "It emits a sound when you're close \n"
     "to a hidden item! \p"
     "Have fun treasure hunting! $"

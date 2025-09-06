@@ -41,4 +41,6 @@ RustboroCity_Flat2_3F_Text_PresidentsSonAlsoCollectsRareStones:
 # 21 "data/maps/RustboroCity_Flat2_3F/scripts.pory"
 	.string "Hozier is such a nice person!\p"
 # 22 "data/maps/RustboroCity_Flat2_3F/scripts.pory"
-	.string "I see him sometimes when I go shopping.$"
+	.string "I see him sometimes when I go \n"
+# 23 "data/maps/RustboroCity_Flat2_3F/scripts.pory"
+	.string "shopping.$"

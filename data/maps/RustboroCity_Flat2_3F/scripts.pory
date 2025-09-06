@@ -19,6 +19,7 @@ RustboroCity_Flat2_3F_Text_PresidentCollectsRareStones:
 
 RustboroCity_Flat2_3F_Text_PresidentsSonAlsoCollectsRareStones:
 	.string "Hozier is such a nice person!\p"
-	.string "I see him sometimes when I go shopping.$"
+	.string "I see him sometimes when I go \n"
+	.string "shopping.$"
 
 `

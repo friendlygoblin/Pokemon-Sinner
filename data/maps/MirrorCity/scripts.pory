@@ -1,5 +1,7 @@
 mapscripts MirrorCity_MapScripts {}
 
+const Goblin = 1
+
 script MirrorCity_CitySign{
     lock
     msgbox(format("Welcome to Mirror City!\pThe city worth climbing a mountain for!"))
@@ -12,4 +14,74 @@ script MirrorCity_ConcertHallSign{
     msgbox(format("MIRROR CITY CONCERT HALL\p CURRENT RESIDENT: THE LAST DINNER PARTY"))
     release
     end
+}
+
+script MirrorCity_PlaceGoblin1{
+    lock
+    applymovement(Goblin, MirrorCity_Movement_PlaceGoblin1)
+    waitmovement(0)
+    goto(MirrorCity_Goblin)
+}
+
+script MirrorCity_PlaceGoblin2{
+    lock
+    applymovement(Goblin, MirrorCity_Movement_PlaceGoblin2)
+    waitmovement(0)
+    goto(MirrorCity_Goblin)
+}
+
+script MirrorCity_Goblin{
+    msgbox(MirrorCity_GoblinThisIsIt, MSGBOX_AUTOCLOSE)
+    trainerbattle_no_intro(TRAINER_GOBLIN_MIRROR_CITY, MirrorCity_GoblinDefeat)
+    msgbox(MirrorCity_GoblinConcertHallLobby, MSGBOX_AUTOCLOSE)
+    applymovement(Goblin, MirrorCity_GoblinLeave)
+    waitmovement(0)
+    removeobject(Goblin)
+    setflag(FLAG_MIRRORCITY_GOBLIN)
+    setvar(VAR_MIRROR_CITY_GOBLIN, 1)
+    release
+    end
+}
+
+movement MirrorCity_Movement_PlaceGoblin1{
+    walk_down * 5
+    step_end
+}
+
+movement MirrorCity_Movement_PlaceGoblin2{
+    walk_right
+    walk_down * 5
+    step_end
+}
+
+movement MirrorCity_GoblinLeave{
+    walk_up * 5
+    step_end
+}
+
+text MirrorCity_GoblinThisIsIt{
+    "GOBLIN: Hi, {PLAYER}.\p"
+    "So this is it, huh? \p"
+    "We're about to challenge The Last \n"
+    "Dinner Party! \p"
+    "So many other fans are here, did you \n"
+    "see them on Victory Road? \p"
+    "I also saw a bunch of other artists \n"
+    "walk in! \p"
+    "{PLAYER}… \p"
+    "You've come such a long way, and I know \n"
+    "you're probably ready but… \p"
+    "Spar with me before you go in! $"
+}
+
+text MirrorCity_GoblinConcertHallLobby{
+    "GOBLIN: I knew it! \p"
+    "If anyone can win this, it's you! \p"
+    "I'll be preparing my strategy in the \n"
+    "Concert Hall lobby if you need me. $"
+}
+
+text MirrorCity_GoblinDefeat{
+    "Yup, you're ready! \n"
+    "Go show'em who's the real gunslinger!$"
 }

@@ -2,7 +2,7 @@
   "id": "MAP_MERCY_TOWN",
   "name": "MercyTown",
   "layout": "LAYOUT_MERCY_TOWN",
-  "music": "MUS_DUMMY",
+  "music": "MUS_RG_GAME_CORNER",
   "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -92,7 +92,15 @@
       "y": 6,
       "elevation": 0,
       "item": "ITEM_SKULL_FOSSIL",
-      "flag": "FLAG_TEMP_1"
+      "flag": "FLAG_MERCYTOWN_SKULLFOSSIL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_MAWILITE",
+      "flag": "FLAG_MERCYTOWN_MAWILITE"
     }
   ]
 }

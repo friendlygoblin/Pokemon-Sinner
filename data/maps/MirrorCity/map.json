@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 14,
-      "y": 17,
+      "x": 16,
+      "y": 18,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -25,40 +25,40 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_MIRRORCITY_GOBLIN"
     }
   ],
   "warp_events": [
     {
-      "x": 14,
+      "x": 16,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_VICTORY_ROAD_4",
+      "dest_map": "MAP_VICTORY_ROAD_5",
       "dest_warp_id": "1"
     },
     {
-      "x": 15,
+      "x": 17,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_VICTORY_ROAD_4",
+      "dest_map": "MAP_VICTORY_ROAD_5",
       "dest_warp_id": "1"
     },
     {
-      "x": 14,
+      "x": 16,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_MIRROR_CITY_CONCERT_HALL_LOBBY",
       "dest_warp_id": "0"
     },
     {
-      "x": 15,
+      "x": 17,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_MIRROR_CITY_CONCERT_HALL_LOBBY",
       "dest_warp_id": "0"
     },
     {
-      "x": 21,
+      "x": 23,
       "y": 19,
       "elevation": 0,
       "dest_map": "MAP_EVER_GRANDE_CITY_POKEMON_CENTER_1F",
@@ -68,27 +68,27 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 14,
-      "y": 23,
+      "x": 16,
+      "y": 24,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_MIRROR_CITY_GOBLIN",
       "var_value": "0",
-      "script": "NULL"
+      "script": "MirrorCity_PlaceGoblin1"
     },
     {
       "type": "trigger",
-      "x": 15,
-      "y": 23,
+      "x": 17,
+      "y": 24,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_MIRROR_CITY_GOBLIN",
       "var_value": "0",
-      "script": "NULL"
+      "script": "MirrorCity_PlaceGoblin2"
     }
   ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 16,
+      "x": 18,
       "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -96,7 +96,7 @@
     },
     {
       "type": "sign",
-      "x": 13,
+      "x": 15,
       "y": 25,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

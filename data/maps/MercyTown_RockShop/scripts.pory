@@ -1,14 +1,29 @@
 mapscripts MercyTown_RockShop_MapScripts {}
 
-mart RockMart{
+mart RockMart_NoMega{
     ITEM_KINGS_ROCK
     ITEM_EVIOLITE
     ITEM_EVERSTONE
     ITEM_WATER_STONE
-    ITEM_SUN_STONE
-    ITEM_LEAF_STONE
-    ITEM_MOON_STONE
+    ITEM_FIRE_STONE
     ITEM_THUNDER_STONE
+    ITEM_DUSK_STONE
+    ITEM_MOON_STONE
+}
+
+mart RockMart_Mega{
+    ITEM_KINGS_ROCK
+    ITEM_EVIOLITE
+    ITEM_EVERSTONE
+    ITEM_WATER_STONE
+    ITEM_FIRE_STONE
+    ITEM_THUNDER_STONE
+    ITEM_DUSK_STONE
+    ITEM_MOON_STONE
+    ITEM_SHINY_STONE
+    ITEM_ALTARIANITE
+    ITEM_SALAMENCITE
+    ITEM_STEELIXITE
 }
 
 text SellRocks{
@@ -22,7 +37,7 @@ text ExplainRocks{
     "Alright! \p"
     "Rocks are fascinating, some make POKéMON \n"
     "stronger, others make them evolve… \p"
-    "Come back"
+    "Come back soon!$"
 }
 
 text NoticeMegaRing{
@@ -31,18 +46,22 @@ text NoticeMegaRing{
     "Oh! is this a Mega-Ring? \p"
     "Then you must be interested in Mega \n"
     "Stones! \p"
-    "I only have one to spare right now, \n"
-    "but I'm feeling generous so here you \l"
-    "go!$"
+    "Barely anyone is interested in them, \n"
+    "which is beyond me. \p"
+    "So here, for you!$"
 }
 
 text ExplainMegaStones{
-    "If you have an Ampharos and give it \n"
-    "this stone to hold, you'll be able to \l"
-    "Mega-Evolve it! \p"
+    "The last people who came to me asking \n"
+    "about Mega-Stones were… um… \p"
+    "… yes! The Last Dinner Party! \p"
+    "I'm a huge fan, so I gave them some for \n"
+    "free!\p"
     "Mega-Stones are rare and not every \n"
     "POKéMON can Mega-Evolve, but they are \l"
-    "worth the search!$"
+    "worth the search.\p"
+    "My brother sells some in Beautiful Port \n"
+    "if you wanna have a look. $"
 }
 
 
@@ -51,7 +70,14 @@ script RockSellerDude{
     faceplayer
     if (var(VAR_SAILORTOWN_NORA)==2){
         msgbox(NoticeMegaRing)
-        giveitem(ITEM_AMPHAROSITE)
+        switch(var(VAR_STARTER_MON)){
+            case 0:
+                giveitem(ITEM_BLAZIKENITE)
+            case 1:
+                giveitem(ITEM_VENUSAURITE)
+            case 2:
+                giveitem(ITEM_SWAMPERTITE)
+        }
         msgbox(ExplainMegaStones, MSGBOX_AUTOCLOSE)
         setvar(VAR_SAILORTOWN_NORA, 3)
         release
@@ -59,7 +85,9 @@ script RockSellerDude{
     }
     message(SellRocks)
     waitmessage
-    pokemart(RockMart)
+    if(flag(FLAG_RECEIVED_MEGARING)){
+        pokemart(RockMart_NoMega)
+    }
     msgbox(ExplainRocks, MSGBOX_AUTOCLOSE)
     release
     end

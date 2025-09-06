@@ -2,7 +2,7 @@
   "id": "MAP_BIG_DOG_ISLAND",
   "name": "BigDogIsland",
   "layout": "LAYOUT_BIG_DOG_ISLAND",
-  "music": "MUS_DUMMY",
+  "music": "MUS_VERDANTURF",
   "region_map_section": "MAPSEC_VERDANTURF_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

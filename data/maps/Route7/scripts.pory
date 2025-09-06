@@ -8,7 +8,9 @@ script Route7_Goblin{
 
 script Route7_GoblinLeaves {
     lock
-    msgbox(Route7_Goblin_PostBattle, MSGBOX_AUTOCLOSE)
+    msgbox(Route7_Goblin_PostBattle)
+    giveitem(ITEM_TM28)
+    msgbox(format("Well I'm gonna go now, I'll see you later! $"), MSGBOX_AUTOCLOSE)
     applymovement(Goblin, Route7_GobLeaves)
     waitmovement(0)
     removeobject(Goblin)
@@ -19,8 +21,8 @@ script Route7_GoblinLeaves {
 
 text Route7_Goblin_BattleIntro {
     "GOBLIN: {PLAYER}, wait! \p"
-    "What are you doing here? We're super \n"
-    "far from Prelude Town! \p"
+    "How have you been? It's been a \n"
+    "while! \p"
     "… … … \p"
     "Defeated Chappell Roan?? \p"
     "No way! \p"
@@ -28,7 +30,7 @@ text Route7_Goblin_BattleIntro {
 }
 
 text Route7_Goblin_Defeated{
-    "Woah I see! $"
+    "Woah, I see! $"
 }
 
 text Route7_Goblin_PostBattle{
@@ -43,8 +45,8 @@ text Route7_Goblin_PostBattle{
     "Some are rarer than others too so\n"
     "take your time if you don't wanna \l"
     "miss any!\p"
-    "Well I'm gonna go now, I'll see you \n"
-    "later! $"
+    "Here, I have something cool for you.$"
+
 }
 
 movement Route7_GobLeaves {

@@ -21,6 +21,13 @@ script BeautifulPort_PortSign{
     end
 }
 
+script BeautifulPort_TotoSign{
+    lock
+    msgbox(format("Toto's House\pPOKéMON nickname expert!"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
 script BeautifulPort_LighthouseSign{
     lock
     msgbox(format("Lighthouse \pLight up the rocky land's end!"), MSGBOX_AUTOCLOSE)
@@ -73,7 +80,14 @@ script BeautifulPort_Wingull{
 script BeautifulPort_Boatbuilder{
     lock
     faceplayer
-    msgbox(format("I'm a boat builder. \pI build boats. \pI fix boats.\pI love boats!"), MSGBOX_AUTOCLOSE)
+    if(flag(FLAG_RECEIVED_HEAVY_DUTY_BOOTS)){
+        msgbox(format("I'm a boat builder. \pI build boats. \pI fix boats.\pI love boats!"), MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("I'm a boat builder. \pI build boats. \pI fix boats.\pI love boats!\pSafety first!"))
+        giveitem(ITEM_HEAVY_DUTY_BOOTS)
+        setflag(FLAG_RECEIVED_HEAVY_DUTY_BOOTS)
+    }
     releaseall
     end
 }
@@ -109,6 +123,29 @@ mart BeautifulPort_MoveShop{
     ITEM_TM42
     ITEM_TM45
     ITEM_TM46
+}
+
+mart BeautifulPort_MegaStoneShop{
+    ITEM_ALAKAZITE
+    ITEM_GARCHOMPITE
+    ITEM_LOPUNNITE
+    ITEM_METAGROSSITE
+    ITEM_PIDGEOTITE
+}
+
+script BeautifulPort_MegaVendor{
+    lock
+    if(flag(FLAG_RECEIVED_MEGARING)){
+        message(format("I sell very very special stones, look!"))
+        waitmessage
+        pokemart(BeautifulPort_MegaStoneShop)
+        msgbox(format("Come back soon!"))
+    }
+    else{
+        msgbox(format("Um… I'm sorry but my shop isn't ready yet.\pCome back later!"))
+    }
+    release
+    end
 }
 
 script BeautifulPort_SouvenirVendor{

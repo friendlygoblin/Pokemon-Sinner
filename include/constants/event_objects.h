@@ -261,11 +261,16 @@
 #define OBJ_EVENT_GFX_NORAH                   256
 #define OBJ_EVENT_GFX_BEAR                    257
 #define OBJ_EVENT_GFX_TALIA                   258
+#define OBJ_EVENT_GFX_TOTO                    259
+#define OBJ_EVENT_GFX_CAL                     260
+#define OBJ_EVENT_GFX_MEGGO                   261
+#define OBJ_EVENT_GFX_GOSIA                   262
+#define OBJ_EVENT_GFX_TILLY                   263
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        259
+#define NUM_OBJ_EVENT_GFX                        264
 
 
 // These are dynamic object gfx ids.
@@ -407,7 +412,7 @@
 #define OBJ_EVENT_PAL_TAG_BRENAE              0x112C
 #define OBJ_EVENT_PAL_TAG_NORA                0x112D
 #define OBJ_EVENT_PAL_TAG_AIDEN               0x112E
-#define OBJ_EVENT_PAL_TAG_NINA                0x112F //unused
+#define OBJ_EVENT_PAL_TAG_TOTO                0x112F
 #define OBJ_EVENT_PAL_TAG_NESS                0x1130
 #define OBJ_EVENT_PAL_TAG_YAP                 0x1131
 #define OBJ_EVENT_PAL_TAG_RACHEL              0x1132
@@ -432,7 +437,10 @@
 #define OBJ_EVENT_PAL_TAG_AUX                 0x1145
 #define OBJ_EVENT_PAL_TAG_BOWIE               0x1146
 #define OBJ_EVENT_PAL_TAG_WAWAS               0x1147
-#define OBJ_EVENT_PAL_TAG_BEAR               0x1148
+#define OBJ_EVENT_PAL_TAG_BEAR                0x1148
+#define OBJ_EVENT_PAL_TAG_MEGGO               0x1149
+#define OBJ_EVENT_PAL_TAG_GOSIA               0x114A
+#define OBJ_EVENT_PAL_TAG_MEINTH              0x114B
 
 
 #if OW_FOLLOWERS_POKEBALLS

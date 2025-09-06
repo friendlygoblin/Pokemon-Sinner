@@ -13,9 +13,9 @@ MarinaHall_Ann::
 # 12 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	msgbox MarinaHall_Ann_Text_1, MSGBOX_AUTOCLOSE
 # 13 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_no_intro TRAINER_ANN, MarinaHall_Ann_Text_2
+	trainerbattle_no_intro TRAINER_ANN_2, MarinaHall_Ann_Text_2
 # 14 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	msgbox MarinaHall_Ann_Text_3, MSGBOX_AUTOCLOSE
+	msgbox MarinaHall_Ann_Text_0, MSGBOX_AUTOCLOSE
 MarinaHall_Ann_1:
 # 16 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	releaseall
@@ -27,71 +27,121 @@ MarinaHall_Ann_2:
 	goto MarinaHall_Ann_1
 
 
-MarinaHall_Abi::
+MarinaHall_Brenae::
 # 21 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	lock
 # 22 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	applymovement 2, MarinaHall_AbiWalkToPlayer
+	faceplayer
 # 23 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	waitmovement 0
-# 24 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	msgbox MarinaHall_AbiTalkToPlayer, MSGBOX_AUTOCLOSE
-# 25 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, MarinaHall_PlayerMoveAside
-# 26 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	waitmovement 0
+	checktrainerflag TRAINER_MARINA
+	goto_if 1, MarinaHall_Brenae_2
 # 27 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	applymovement 2, MarinaHall_AbiLeaves
+	msgbox MarinaHall_Brenae_Text_1, MSGBOX_AUTOCLOSE
 # 28 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	waitmovement 0
+	trainerbattle_no_intro TRAINER_GOSIA, MarinaHall_Brenae_Text_2
 # 29 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	removeobject 2
-# 30 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	setflag FLAG_MARINAHALL_ABI
+	msgbox MarinaHall_Brenae_Text_3, MSGBOX_AUTOCLOSE
+MarinaHall_Brenae_1:
 # 31 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	releaseall
+	end
+
+MarinaHall_Brenae_2:
+# 24 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	msgbox MarinaHall_Brenae_Text_0, MSGBOX_AUTOCLOSE
+	goto MarinaHall_Brenae_1
+
+
+MarinaHall_Gosia::
+# 36 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	lock
+# 37 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	faceplayer
+# 38 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	checktrainerflag TRAINER_MARINA
+	goto_if 1, MarinaHall_Gosia_2
+# 42 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	msgbox MarinaHall_Brenae_Text_1, MSGBOX_AUTOCLOSE
+# 43 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	trainerbattle_no_intro TRAINER_GOSIA, MarinaHall_Brenae_Text_2
+# 44 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	msgbox MarinaHall_Brenae_Text_3, MSGBOX_AUTOCLOSE
+MarinaHall_Gosia_1:
+# 46 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	releaseall
+	end
+
+MarinaHall_Gosia_2:
+# 39 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	msgbox MarinaHall_Brenae_Text_0, MSGBOX_AUTOCLOSE
+	goto MarinaHall_Gosia_1
+
+
+MarinaHall_Abi::
+# 51 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	lock
+# 52 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	applymovement 2, MarinaHall_AbiWalkToPlayer
+# 53 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	waitmovement 0
+# 54 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	msgbox MarinaHall_AbiTalkToPlayer, MSGBOX_AUTOCLOSE
+# 55 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, MarinaHall_PlayerMoveAside
+# 56 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	waitmovement 0
+# 57 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	applymovement 2, MarinaHall_AbiLeaves
+# 58 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	waitmovement 0
+# 59 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	removeobject 2
+# 60 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	setflag FLAG_MARINAHALL_ABI
+# 61 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	setvar VAR_MARINAHALL_ABI, 1
-# 32 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 62 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	release
 	end
 
 
-# 36 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 66 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 MarinaHall_AbiWalkToPlayer:
-# 37 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 67 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	walk_down
-# 37 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 67 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	walk_down
-# 37 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 67 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	walk_down
-# 37 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 67 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	walk_down
-# 37 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 67 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	walk_down
-# 38 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 68 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	step_end
 
-# 41 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 71 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 MarinaHall_AbiLeaves:
-# 42 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 72 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	walk_down
-# 42 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 72 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	walk_down
-# 43 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 73 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	step_end
 
-# 46 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 76 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 MarinaHall_PlayerMoveAside:
-# 47 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 77 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	walk_right
-# 48 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 78 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	face_left
-# 49 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 79 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	step_end
 
 MarinaHall_Ann_Text_0:
 # 9 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	.string "ANN: You won against Marina?\p"
-	.string "No way!$"
+	.string "ANN: I thought you couldn't break a\n"
+	.string "diamond… but you've done it!$"
 
 MarinaHall_Ann_Text_1:
 # 12 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
@@ -102,13 +152,28 @@ MarinaHall_Ann_Text_2:
 	.string "Cowboy Lizzie lives on… even without\n"
 	.string "me.$"
 
-MarinaHall_Ann_Text_3:
-# 14 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	.string "ANN: I thought you couldn't break a\n"
-	.string "diamond… but you've done it!$"
+MarinaHall_Brenae_Text_0:
+# 24 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	.string "GOSIA: You won against Marina?\p"
+	.string "No way!$"
+
+MarinaHall_Brenae_Text_1:
+# 27 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	.string "GOSIA: I'm one of Marina's biggest fans,\n"
+	.string "ask me anything about her!$"
+
+MarinaHall_Brenae_Text_2:
+# 28 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	.string "I'm so excited to see Marina I wasn't\n"
+	.string "completely focused.$"
+
+MarinaHall_Brenae_Text_3:
+# 29 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	.string "GOSIA: Come to me if you have any\n"
+	.string "question about Marina!$"
 
 MarinaHall_AbiTalkToPlayer::
-# 52 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+# 82 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	.string "ABIGAIL: {PLAYER}! \p"
 	.string "What are you doing here? \p"
 	.string "… … … \p"

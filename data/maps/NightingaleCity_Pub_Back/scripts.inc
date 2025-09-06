@@ -92,11 +92,14 @@ NCPub_BrianMayBattle::
 	lock
 # 88 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
 	faceplayer
+# 90 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
+	checktrainerflag TRAINER_BRIANMAY
+	goto_if 1, NCPub_BrianMayBattle_2
 # 94 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
 	msgbox BrianMayHall_BrianMayBattleIntro, MSGBOX_YESNO
 # 95 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
 	compare VAR_RESULT, YES
-	goto_if_eq NCPub_BrianMayBattle_2
+	goto_if_eq NCPub_BrianMayBattle_5
 # 100 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
 	msgbox NCPub_BrianMayBattle_Text_1
 NCPub_BrianMayBattle_1:
@@ -105,6 +108,11 @@ NCPub_BrianMayBattle_1:
 	end
 
 NCPub_BrianMayBattle_2:
+# 91 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
+	msgbox BrianMay_WordAboutTLDP, MSGBOX_AUTOCLOSE
+	goto NCPub_BrianMayBattle_1
+
+NCPub_BrianMayBattle_5:
 # 96 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
 	trainerbattle_no_intro TRAINER_BRIANMAY, NCPub_BrianMayBattle_Text_0
 # 97 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
@@ -142,7 +150,7 @@ NCPub_BrianMayBattle_Text_1:
 
 BrianMayGiveBadge_Text_0:
 # 109 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
-	.string "Received the CHAMPION BADGE from\n"
+	.string "Received the RHAPSODY BADGE from\n"
 	.string "BRIAN MAY!$"
 
 NCPub_EmilyInvite::
@@ -186,8 +194,8 @@ BrianMayHall_BrianMayBattleIntro::
 	.string "You know, I really like their idea of \n"
 	.string "challenging their fans. \p"
 	.string "I haven't battled in a little while, I \n"
-	.string "was focused on keeping my guitar skills \l"
-	.string "sharp instead. \p"
+	.string "was focused on keeping my guitar \l"
+	.string "skills sharp instead. \p"
 	.string "Why don't we spar together? \n"
 	.string "It would be good training for you! $"
 
@@ -197,13 +205,13 @@ BrianMayHall_BrianMayGiveBadge::
 	.string "The Last Dinner Party will have to \n"
 	.string "prepare for you. \p"
 	.string "I have a little something for you, as \n"
-	.string "a souvenir. \p$"
+	.string "a souvenir. $"
 
 BrianMayBadgePerks::
 # 143 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
 	.string "We used to give those to our close \n"
-	.string "friends so they could attend our shows \l"
-	.string "for free. \p"
+	.string "friends so they could attend our \l"
+	.string "shows for free. \p"
 	.string "You can keep it, for good luck against \n"
 	.string "the band.$"
 

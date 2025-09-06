@@ -14,195 +14,157 @@ Route114_LanettesHouse_OnTransition:
 	setflag FLAG_LANDMARK_LANETTES_HOUSE
 # 8 "data/maps/Route114_LanettesHouse/scripts.pory"
 	end
-# 9 "data/maps/Route114_LanettesHouse/scripts.pory"
 
-# 10 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_EventScript_Lanette::
+ParlourZine_Amy::
 # 11 "data/maps/Route114_LanettesHouse/scripts.pory"
 	lock
 # 12 "data/maps/Route114_LanettesHouse/scripts.pory"
 	faceplayer
 # 13 "data/maps/Route114_LanettesHouse/scripts.pory"
-	goto_if_set FLAG_RECEIVED_DOLL_LANETTE, Route114_LanettesHouse_EventScript_OfferAdvice
+	msgbox ParlourZine_AmyHi
 # 14 "data/maps/Route114_LanettesHouse/scripts.pory"
-	setflag FLAG_SYS_PC_LANETTE
+	applymovement 1, Common_Movement_FaceDown
 # 15 "data/maps/Route114_LanettesHouse/scripts.pory"
-	msgbox Route114_LanettesHouse_Text_EverythingClutteredKeepThis, MSGBOX_DEFAULT
+	waitmovement 0
 # 16 "data/maps/Route114_LanettesHouse/scripts.pory"
-	givedecoration DECOR_LOTAD_DOLL
+	msgbox ParlourZine_Amy_Text_0, MSGBOX_AUTOCLOSE
 # 17 "data/maps/Route114_LanettesHouse/scripts.pory"
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowNoRoomForDecor
+	applymovement 1, Common_Movement_FaceLeft
 # 18 "data/maps/Route114_LanettesHouse/scripts.pory"
-	setflag FLAG_RECEIVED_DOLL_LANETTE
+	waitmovement 0
 # 19 "data/maps/Route114_LanettesHouse/scripts.pory"
 	release
-# 20 "data/maps/Route114_LanettesHouse/scripts.pory"
 	end
-# 21 "data/maps/Route114_LanettesHouse/scripts.pory"
 
-# 22 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_EventScript_OfferAdvice::
-# 23 "data/maps/Route114_LanettesHouse/scripts.pory"
-	msgbox Route114_LanettesHouse_Text_OrganizeYourBoxes, MSGBOX_DEFAULT
-# 24 "data/maps/Route114_LanettesHouse/scripts.pory"
-	release
-# 25 "data/maps/Route114_LanettesHouse/scripts.pory"
-	end
-# 26 "data/maps/Route114_LanettesHouse/scripts.pory"
 
-# 27 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_EventScript_Notebook::
-# 28 "data/maps/Route114_LanettesHouse/scripts.pory"
-	lockall
-# 29 "data/maps/Route114_LanettesHouse/scripts.pory"
-	msgbox Route114_LanettesHouse_Text_ResearchNotesPage1, MSGBOX_YESNO
-# 30 "data/maps/Route114_LanettesHouse/scripts.pory"
-	goto_if_eq VAR_RESULT, YES, Route114_LanettesHouse_EventScript_NotebookPage2
-# 31 "data/maps/Route114_LanettesHouse/scripts.pory"
-	msgbox Route114_LanettesHouse_Text_ClosedTheNotebook, MSGBOX_DEFAULT
+ParlourZine_Rachel::
 # 32 "data/maps/Route114_LanettesHouse/scripts.pory"
-	releaseall
+	lock
 # 33 "data/maps/Route114_LanettesHouse/scripts.pory"
-	end
+	faceplayer
 # 34 "data/maps/Route114_LanettesHouse/scripts.pory"
-
+	msgbox ParlourZine_RachelHi, MSGBOX_AUTOCLOSE
 # 35 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_EventScript_NotebookPage2::
-# 36 "data/maps/Route114_LanettesHouse/scripts.pory"
-	msgbox Route114_LanettesHouse_Text_ResearchNotesPage2, MSGBOX_YESNO
-# 37 "data/maps/Route114_LanettesHouse/scripts.pory"
-	call_if_eq VAR_RESULT, YES, Route114_LanettesHouse_EventScript_NotebookPage3
-# 38 "data/maps/Route114_LanettesHouse/scripts.pory"
-	releaseall
-# 39 "data/maps/Route114_LanettesHouse/scripts.pory"
+	release
 	end
-# 40 "data/maps/Route114_LanettesHouse/scripts.pory"
 
-# 41 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_EventScript_NotebookPage3::
-# 42 "data/maps/Route114_LanettesHouse/scripts.pory"
-	msgbox Route114_LanettesHouse_Text_ResearchNotesPage3, MSGBOX_DEFAULT
-# 43 "data/maps/Route114_LanettesHouse/scripts.pory"
-	return
-# 44 "data/maps/Route114_LanettesHouse/scripts.pory"
 
-# 45 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_EventScript_PC::
-# 46 "data/maps/Route114_LanettesHouse/scripts.pory"
-	msgbox Route114_LanettesHouse_Text_EmailFromBill, MSGBOX_SIGN
-# 47 "data/maps/Route114_LanettesHouse/scripts.pory"
-	end
+ParlourZine_Grace::
 # 48 "data/maps/Route114_LanettesHouse/scripts.pory"
-
+	lock
 # 49 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_Text_EverythingClutteredKeepThis:
+	faceplayer
 # 50 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "LANETTE: Oh! {PLAYER}{KUN}!\p"
+	msgbox ParlourZine_GraceHi, MSGBOX_AUTOCLOSE
 # 51 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "I'm sorry everything is so cluttered…\n"
-# 52 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "When I get engrossed in research,\l"
-# 53 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "things end up this way…\p"
-# 54 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "This is embarrassing… Please keep\n"
-# 55 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "this a secret in exchange for this.$"
-# 56 "data/maps/Route114_LanettesHouse/scripts.pory"
+	release
+	end
 
-# 57 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_Text_OrganizeYourBoxes:
-# 58 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "May I offer advice about my POKéMON\n"
-# 59 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "Storage System?\p"
-# 60 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "You should organize your BOXES so you\n"
-# 61 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "can tell which POKéMON are in them.$"
-# 62 "data/maps/Route114_LanettesHouse/scripts.pory"
 
-# 63 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_Text_ResearchNotesPage1:
-# 64 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "It's LANETTE's research notes.\n"
-# 65 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "There's information about BOXES.\p"
-# 66 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "Design BOXES to hold 30 POKéMON each.\p"
+ParlourZine_Piplup::
 # 67 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "Each TRAINER should be able to store\n"
+	lock
 # 68 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "420 POKéMON on the PC system.\p"
+	applymovement 4, ParlourZine_PiplupJump
 # 69 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "Keep reading?$"
+	playmoncry SPECIES_PIPLUP, CRY_MODE_NORMAL
 # 70 "data/maps/Route114_LanettesHouse/scripts.pory"
-
+	msgbox ParlourZine_PiplupHelps, MSGBOX_AUTOCLOSE
 # 71 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_Text_ResearchNotesPage2:
-# 72 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "A marking system should be added to\n"
-# 73 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "make POKéMON easier to organize.\p"
-# 74 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "The name and wallpaper design of each\n"
+	release
+	end
+
+
 # 75 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "BOX will be made changeable to please\l"
+ParlourZine_PiplupJump:
 # 76 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "the stored POKéMON.\p"
+	jump_in_place_left
+# 76 "data/maps/Route114_LanettesHouse/scripts.pory"
+	jump_in_place_left
 # 77 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "Keep reading?$"
-# 78 "data/maps/Route114_LanettesHouse/scripts.pory"
+	step_end
 
-# 79 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_Text_ResearchNotesPage3:
-# 80 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "When storing a POKéMON, it should be\n"
-# 81 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "sent to the BOX inspected last.\p"
-# 82 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "If that BOX is full, the received\n"
-# 83 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "POKéMON is stored in the next BOX.\p"
-# 84 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "In other words, when a BOX is examined,\n"
-# 85 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "it is automatically selected as the BOX\l"
+ParlourZine_Notes1::
 # 86 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "to which POKéMON are sent.$"
+	lock
 # 87 "data/maps/Route114_LanettesHouse/scripts.pory"
-
+	msgbox ParlourZine_Notes1_Text, MSGBOX_AUTOCLOSE
 # 88 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_Text_ClosedTheNotebook:
-# 89 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "{PLAYER} closed the notebook.$"
-# 90 "data/maps/Route114_LanettesHouse/scripts.pory"
+	release
+	end
 
-# 91 "data/maps/Route114_LanettesHouse/scripts.pory"
-Route114_LanettesHouse_Text_EmailFromBill:
-# 92 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "There's an e-mail from someone on\n"
-# 93 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "the PC.\p"
-# 94 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "“… … … … … … …\p"
-# 95 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "“Your Storage System offers more\n"
-# 96 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "convenience than mine.\p"
-# 97 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "“It has a lot of user-friendly features\n"
-# 98 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "that make it fun and useful, too.\p"
+
+ParlourZine_Notes2::
 # 99 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "“It makes me proud that I played\n"
+	lock
 # 100 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "a part in its development.\p"
+	msgbox ParlourZine_Notes2_Text, MSGBOX_AUTOCLOSE
 # 101 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "“Here's hoping that you'll continue\n"
-# 102 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "research in Storage Systems.\p"
-# 103 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "“From BILL\n"
-# 104 "data/maps/Route114_LanettesHouse/scripts.pory"
-	.string "… … … … … … … …”$"
+	release
+	end
+
+
+ParlourZine_PC::
+# 113 "data/maps/Route114_LanettesHouse/scripts.pory"
+	lock
+# 114 "data/maps/Route114_LanettesHouse/scripts.pory"
+	msgbox ParlourZine_PC_Text, MSGBOX_AUTOCLOSE
+# 115 "data/maps/Route114_LanettesHouse/scripts.pory"
+	release
+	end
+
+
+ParlourZine_Amy_Text_0:
+# 16 "data/maps/Route114_LanettesHouse/scripts.pory"
+	.string "… like the game you're playing right now!$"
+
+ParlourZine_AmyHi::
+# 23 "data/maps/Route114_LanettesHouse/scripts.pory"
+	.string "AMY: Oh hi {PLAYER}! \n"
+	.string "Welcome to the ParlourZine HQ! \p"
+	.string "This is where the magic happens, we \n"
+	.string "work very hard to showcase the best of \l"
+	.string "the Parlour Discord Server…  $"
+
+ParlourZine_RachelHi::
+# 39 "data/maps/Route114_LanettesHouse/scripts.pory"
+	.string "RACHEL: Hi, do you read ParlourZine? \p"
+	.string "In any case, you should really read \n"
+	.string "the editors' notes! \p"
+	.string "I put so much work into those things and \n"
+	.string "NOBODY READS THEM! $"
+
+ParlourZine_GraceHi::
+# 55 "data/maps/Route114_LanettesHouse/scripts.pory"
+	.string "GRACE: Oh, {PLAYER}! \n"
+	.string "Didn't expect to see you here! \p"
+	.string "I joined the ParlourZine editor team! \p"
+	.string "Did you know it was originally called \n"
+	.string "Parlour Times and was a weekly thing? \p"
+	.string "Now there's more time between issues \n"
+	.string "but that means we can make them even \l"
+	.string "cooler!$"
+
+ParlourZine_PiplupHelps::
+# 80 "data/maps/Route114_LanettesHouse/scripts.pory"
+	.string "PIPLUP: Pipipip! \p"
+	.string "Piplup seems very eager to help Rachel.$"
+
+ParlourZine_Notes1_Text::
+# 92 "data/maps/Route114_LanettesHouse/scripts.pory"
+	.string "Some notes for the next issue of \n"
+	.string "ParlourZine. \p"
+	.string "Sounds exciting! $"
+
+ParlourZine_Notes2_Text::
+# 105 "data/maps/Route114_LanettesHouse/scripts.pory"
+	.string "The list of the contributors to the \n"
+	.string "next ParlourZine issue. \p"
+	.string "There are so many of them, this zine \n"
+	.string "really is a big collaborative project!$"
+
+ParlourZine_PC_Text::
+# 119 "data/maps/Route114_LanettesHouse/scripts.pory"
+	.string "The team's inbox is open. \p"
+	.string "There are so many of them, this zine \n"
+	.string "really is a big collaborative project!$"

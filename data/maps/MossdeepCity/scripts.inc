@@ -627,9 +627,9 @@ MossdeepCity_Movement_ScottExitEast:
 # 314 "data/maps/MossdeepCity/scripts.pory"
 MossdeepCity_Text_WantKingsRockStevenGaveMe:
 # 315 "data/maps/MossdeepCity/scripts.pory"
-	.string "I got this from STEVEN, but I don't\n"
+	.string "I got this from my grandma, but I \n"
 # 316 "data/maps/MossdeepCity/scripts.pory"
-	.string "know what it's good for.\p"
+	.string "don't know what it's good for.\p"
 # 317 "data/maps/MossdeepCity/scripts.pory"
 	.string "I think it's called KING'S ROCK.\n"
 # 318 "data/maps/MossdeepCity/scripts.pory"
@@ -645,7 +645,7 @@ MossdeepCity_Text_YouCanKeepIt:
 # 323 "data/maps/MossdeepCity/scripts.pory"
 	.string "You can keep it, but keep it a secret\n"
 # 324 "data/maps/MossdeepCity/scripts.pory"
-	.string "from STEVEN.$"
+	.string "from my grandma.$"
 # 325 "data/maps/MossdeepCity/scripts.pory"
 
 # 326 "data/maps/MossdeepCity/scripts.pory"

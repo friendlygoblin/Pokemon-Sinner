@@ -1,1 +1,180 @@
 mapscripts VictoryRoad_2_MapScripts {}
+
+script VictoryRoad_Spraggy{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Spraggy_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_SPRAGGY_2, format("Okay, I'll train a bit longer… \nBut I'm still winning the challenge!"))
+        msgbox(VictoryRoad_Spraggy_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Ah? No? Well, I'll prepare anywyay."))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Spraggy_BattleIntro{
+    "SPRAGGY: I've seen TLDP many times, \n"
+    "and I'll see them many times more! \p"
+    "Especially since I'm gonna win the \n"
+    "guestlist challenge, and you're gonna \l"
+    "help me prepare! $"
+}
+
+text VictoryRoad_Spraggy_PostBattle{
+    "SPRAGGY: I guess I need to polish my \n"
+    "strategy a bit more. \p"
+    "I'll see you at the shows! $"
+}
+
+script VictoryRoad_Wren{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Wren_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_WREN_3, format("Woah, you totally have your chance!"))
+        msgbox(VictoryRoad_Wren_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Awh, fair.\pI'll be here if you change your mind!"))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Wren_BattleIntro{
+    "WREN: {PLAYER}! Of course you made it \n"
+    "here! \p"
+    "I'm excited to take on the challenge, \n"
+    "wanna train with me? $"
+}
+
+text VictoryRoad_Wren_PostBattle{
+    "WREN: I'm so excited about this, but \n"
+    "I'm also super nervous.\p"
+    "I really need to be sure I'm ready! $"
+}
+
+script VictoryRoad_George{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_George_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_GEORGE_2, format("I wonder if my neighbour will be trying her luck too… "))
+        msgbox(VictoryRoad_George_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Okay, not you too… \pBut I'll be here with Manwhacker and Orbigail if you need me!"))
+    }
+    release
+    end
+}
+
+text VictoryRoad_George_BattleIntro{
+    "GEORGE: I may not have found my old \n"
+    "neighbour, but I got to travel the \l"
+    "world with my POKéMON.\p"
+    "And well, since I'm there might as \n"
+    "well challenge The Last Dinner Party.\p"
+    "And you too? $"
+}
+
+text VictoryRoad_George_PostBattle{
+    "GEORGE: I can't wait to take Orbigail \n"
+    "and Manwhacker to the show, I'm sure \l"
+    "they'll love Abigail! $"
+}
+
+script VictoryRoad_Rachel{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Rachel_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_RACHEL_2, format("They will HAVE to play Second Best, I'm so serious!"))
+        msgbox(VictoryRoad_Rachel_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Okay, well I'll keep thinking about it, come back if you wanna brainstorm!"))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Rachel_BattleIntro{
+    "RACHEL: I hope TLDP play Second Best! \p"
+    "I'll make sure they play it when I \n"
+    "face them! \p"
+    "Wanna help me rehearse how I'm gonna \n"
+    "ask?$"
+}
+
+text VictoryRoad_Rachel_PostBattle{
+    "RACHEL: Should I start by saying I work \n"
+    "for ParlourZine? \p"
+    "Surely they wouldn't refuse to play \n"
+    "Second Best for the press! $"
+}
+
+script VictoryRoad_Meggo{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Meggo_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_MEGGO_2, format("Lay me near the altar of lust… "))
+        msgbox(VictoryRoad_Meggo_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Mmh maybe I'll find something even better… "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Meggo_BattleIntro{
+    "MEGGO: I think I know what I'll say \n"
+    "when I challenge TLDP! \p"
+    "The killer heard your call! \p"
+    "That work? $"
+}
+
+text VictoryRoad_Meggo_PostBattle{
+    "MEGGO: Well, looks like you got this! \p"
+    "Keep burning! $"
+}
+
+script VictoryRoad_Ann{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Ann_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_ANN_3, format("I think you can win against TLDP!"))
+        msgbox(VictoryRoad_Ann_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("That's fine I can pick by myself… "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Ann_BattleIntro{
+    "ANN: I'm gonna ask TLDP to cover a \n"
+    "Marina song! \p"
+    "Wanna help me pick which one over a \n"
+    "quick battle? $"
+}
+
+text VictoryRoad_Ann_PostBattle{
+    "ANN: This is a very important decision, \n"
+    "I need to pick the best Marina song! $"
+}
+
+script VictoryRoad_Elle{
+    lock
+    faceplayer
+    msgbox(format("ELLE: Oh, I'm not here to battle or anything, I just wanna go to the show.\pI think I spotted my old neighbour on the way but he didn't see me."))
+    release
+    end
+}

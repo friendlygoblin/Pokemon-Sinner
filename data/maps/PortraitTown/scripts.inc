@@ -42,6 +42,30 @@ PortraitTown_Route8Sign::
 	end
 
 
+PortraitTown_Girl::
+# 32 "data/maps/PortraitTown/scripts.pory"
+	lock
+# 33 "data/maps/PortraitTown/scripts.pory"
+	faceplayer
+# 34 "data/maps/PortraitTown/scripts.pory"
+	msgbox PortraitTown_Girl_Text_0
+# 35 "data/maps/PortraitTown/scripts.pory"
+	release
+	end
+
+
+PortraitTown_Man::
+# 40 "data/maps/PortraitTown/scripts.pory"
+	lock
+# 41 "data/maps/PortraitTown/scripts.pory"
+	faceplayer
+# 42 "data/maps/PortraitTown/scripts.pory"
+	msgbox PortraitTown_Man_Text_0
+# 43 "data/maps/PortraitTown/scripts.pory"
+	release
+	end
+
+
 PortraitTown_ConcertHallSign_Text_0:
 # 5 "data/maps/PortraitTown/scripts.pory"
 	.string "PORTRAIT TOWN CONCERT HALL\p"
@@ -61,3 +85,15 @@ PortraitTown_CableCarSign_Text_0:
 PortraitTown_Route8Sign_Text_0:
 # 26 "data/maps/PortraitTown/scripts.pory"
 	.string "{DOWN_ARROW}: Route 8, to Mercy Town.$"
+
+PortraitTown_Girl_Text_0:
+# 34 "data/maps/PortraitTown/scripts.pory"
+	.string "It's pretty cold in this town.\p"
+	.string "That's why Ice Type POKéMON thrive\n"
+	.string "here!$"
+
+PortraitTown_Man_Text_0:
+# 42 "data/maps/PortraitTown/scripts.pory"
+	.string "Marina? Oh no, I'm too old to attend her\n"
+	.string "shows…\p"
+	.string "But my kids aren't, so I go with them!$"

@@ -364,6 +364,27 @@ const u32 gTrainerPalette_Q[] = INCBIN_U32("graphics/trainers/front_pics/q.gbapa
 const u32 gTrainerFrontPic_Talia[] = INCBIN_U32("graphics/trainers/front_pics/talia.4bpp.lz");
 const u32 gTrainerPalette_Talia[] = INCBIN_U32("graphics/trainers/front_pics/talia.gbapal.lz");
 
+const u32 gTrainerFrontPic_Yapgob[] = INCBIN_U32("graphics/trainers/front_pics/yapgob.4bpp.lz");
+const u32 gTrainerPalette_Yapgob[] = INCBIN_U32("graphics/trainers/front_pics/yapgob.gbapal.lz");
+
+const u32 gTrainerFrontPic_Meggo[] = INCBIN_U32("graphics/trainers/front_pics/meggo.4bpp.lz");
+const u32 gTrainerPalette_Meggo[] = INCBIN_U32("graphics/trainers/front_pics/meggo.gbapal.lz");
+
+const u32 gTrainerFrontPic_Gosia[] = INCBIN_U32("graphics/trainers/front_pics/gosia.4bpp.lz");
+const u32 gTrainerPalette_Gosia[] = INCBIN_U32("graphics/trainers/front_pics/gosia.gbapal.lz");
+
+const u32 gTrainerFrontPic_Meinth[] = INCBIN_U32("graphics/trainers/front_pics/meinth.4bpp.lz");
+const u32 gTrainerPalette_Meinth[] = INCBIN_U32("graphics/trainers/front_pics/meinth.gbapal.lz");
+
+const u32 gTrainerFrontPic_Cal[] = INCBIN_U32("graphics/trainers/front_pics/cal.4bpp.lz");
+const u32 gTrainerPalette_Cal[] = INCBIN_U32("graphics/trainers/front_pics/cal.gbapal.lz");
+
+const u32 gTrainerFrontPic_George[] = INCBIN_U32("graphics/trainers/front_pics/george.4bpp.lz");
+const u32 gTrainerPalette_George[] = INCBIN_U32("graphics/trainers/front_pics/george.gbapal.lz");
+
+const u32 gTrainerFrontPic_Tilly[] = INCBIN_U32("graphics/trainers/front_pics/tilly.4bpp.lz");
+const u32 gTrainerPalette_Tilly[] = INCBIN_U32("graphics/trainers/front_pics/tilly.gbapal.lz");
+
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
 // gTrainerFrontPic/gTrainerPalette pointers, (e.g "gTrainerFrontPic_Hiker" and "gTrainerPalette_Hiker").
@@ -497,7 +518,13 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(AIDEN, Aiden),
     TRAINER_SPRITE(Q, Q),
     TRAINER_SPRITE(TALIA, Talia),
-    
+    TRAINER_SPRITE(YAPGOB, Yapgob),
+    TRAINER_SPRITE(MEGGO, Meggo),
+    TRAINER_SPRITE(GOSIA, Gosia), 
+    TRAINER_SPRITE(MEINTH, Meinth), 
+    TRAINER_SPRITE(CAL, Cal), 
+    TRAINER_SPRITE(GEORGE, George), 
+    TRAINER_SPRITE(TILLY, Tilly), 
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

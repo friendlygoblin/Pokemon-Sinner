@@ -7,7 +7,7 @@ script Route10_SwimmerF {
 
 script Route10_SwimmerM {
     trainerbattle_single(TRAINER_LUIS, format("I can hold my breath for a minute!"), format("Gasp! "))
-    msgbox(format("The longest I've held my breath is a minute and six seconds! "), MSGBOX_AUTOCLOSE)
+    msgbox(format("The longest I've held my breath is a minute and six seconds!"), MSGBOX_AUTOCLOSE)
 }
 
 script Route10_BattleGirl {
@@ -16,7 +16,7 @@ script Route10_BattleGirl {
 }
 
 script Route10_Tuber {
-    trainerbattle_single(TRAINER_AUSTINA, format("I put a message in a bottle and put it out to sea."), format("Maybe it got lost… "))
+    trainerbattle_single(TRAINER_AUSTINA, format("I put a message in a bottle and threw it out to the sea."), format("Maybe it got lost… "))
     msgbox(format("Maybe if I keep throwing messages in bottles I'll make new friends… "), MSGBOX_AUTOCLOSE)
 }
 

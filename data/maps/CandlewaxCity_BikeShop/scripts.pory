@@ -1,0 +1,35 @@
+mapscripts CandlewaxCity_BikeShop_MapScripts {}
+
+script CwCBS_Scientist{
+    lock
+    faceplayer
+    switch(var(VAR_BIKESHOPS)){
+        case 0:
+            msgbox(CwCBS_ExplainBikeProblem)
+            playfanfare(MUS_OBTAIN_ITEM)
+            message("{PLAYER} received the bike part!")
+            waitfanfare
+            setvar(VAR_BIKESHOPS, 1)
+        case 1:
+            msgbox(format("My friend runs the bike shop in Crystal Stream City, thanks for accepting to take this bike part to her!"), MSGBOX_AUTOCLOSE)
+        case 2:
+            msgbox(format("Oh, you managed to get the part to my friend?\pWait, that's the bike model she was working on!\pIt looks great, I hope you like it!"))
+    }
+    release
+    end
+}
+
+text CwCBS_ExplainBikeProblem{
+    "Hello? \p"
+    "I'm a bit busy right now, I have to \n"
+    "find a way to get this new bike part \l"
+    "to my friend in Crystal Stream City. \p"
+    "She runs the local bike shop, she needs \n"
+    "this new part for her newest model. \p"
+    "It's pretty far away, and I can't leave \n"
+    "the workshop unattended for that long… \p"
+    "Wait, would you help me? \n"
+    "I'll write you a note!\p"
+    "Really? You're such a lifesaver!\p"
+    "Here you go!$"
+}

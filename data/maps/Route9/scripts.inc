@@ -36,20 +36,32 @@ Route9_Runner::
 
 Route9_Birdkeeper::
 # 24 "data/maps/Route9/scripts.pory"
-	trainerbattle_single TRAINER_HUGH, Route9_Birdkeeper_Text_0, Route9_Birdkeeper_Text_1
+	trainerbattle_single TRAINER_HUGH, Route9_Birdkeeper_Text_0, Route9_Birdkeeper_Text_1, GiveAerialAce
 # 25 "data/maps/Route9/scripts.pory"
 	msgbox Route9_Birdkeeper_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
-GiveSunStone::
+GiveAerialAce::
 # 29 "data/maps/Route9/scripts.pory"
-	msgbox GiveSunStone_Text_0
+	lock
 # 30 "data/maps/Route9/scripts.pory"
-	giveitem ITEM_SUN_STONE
+	msgbox GiveAerialAce_Text_0
 # 31 "data/maps/Route9/scripts.pory"
-	msgbox Route9_AromaLady_Text_2
+	giveitem ITEM_TM40
 # 32 "data/maps/Route9/scripts.pory"
+	release
+	end
+
+
+GiveSunStone::
+# 37 "data/maps/Route9/scripts.pory"
+	msgbox GiveSunStone_Text_0
+# 38 "data/maps/Route9/scripts.pory"
+	giveitem ITEM_SUN_STONE
+# 39 "data/maps/Route9/scripts.pory"
+	msgbox Route9_AromaLady_Text_2
+# 40 "data/maps/Route9/scripts.pory"
 	release
 	end
 
@@ -124,7 +136,13 @@ Route9_Birdkeeper_Text_2:
 	.string "The stronger my POKéMON get, the longer\n"
 	.string "they can fly.$"
 
+GiveAerialAce_Text_0:
+# 30 "data/maps/Route9/scripts.pory"
+	.string "My POKéMON fly high, and they hit hard!\p"
+	.string "I taught them this cool move, and since\n"
+	.string "you won I want you to have it too!$"
+
 GiveSunStone_Text_0:
-# 29 "data/maps/Route9/scripts.pory"
+# 37 "data/maps/Route9/scripts.pory"
 	.string "Maybe this will make some of your\n"
 	.string "POKéMON evolve too…$"
