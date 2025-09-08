@@ -236,6 +236,35 @@ MCCH_LoungeElla_2:
 	goto MCCH_LoungeElla_1
 
 
+MCCH_LoungeCal::
+# 376 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	lock
+# 377 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	faceplayer
+# 378 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	msgbox LoungeCal_OfferBattle, MSGBOX_YESNO
+# 379 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq MCCH_LoungeCal_2
+# 385 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	msgbox LoungeCal_RefuseBattle, MSGBOX_AUTOCLOSE
+MCCH_LoungeCal_1:
+# 387 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	applymovement 8, Common_Movement_FaceUp
+# 388 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	release
+	end
+
+MCCH_LoungeCal_2:
+# 380 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	msgbox LoungeCal_AcceptBattle, MSGBOX_AUTOCLOSE
+# 381 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	trainerbattle_no_intro TRAINER_CAL, MCCH_LoungeCal_Text_0
+# 382 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	msgbox LoungeCal_PostBattle, MSGBOX_AUTOCLOSE
+	goto MCCH_LoungeCal_1
+
+
 MCCH_LoungeHarv_Text_0:
 # 19 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "Cut!\n"
@@ -265,6 +294,10 @@ MCCH_LoungeKatherine_Text_0:
 # 287 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "KATHERINE: Yup, still super cool!\p"
 	.string "ELLA: You rock!$"
+
+MCCH_LoungeCal_Text_0:
+# 381 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	.string "Ooh, photogenic!$"
 
 LoungeHarv_OfferBattle::
 # 30 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
@@ -489,3 +522,32 @@ LoungeElla_PostBattle::
 	.string "Good luck out there, hope you'll \n"
 	.string "come to us when we're big enough \l"
 	.string "to have our own challenge! $"
+
+LoungeCal_OfferBattle::
+# 392 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	.string "CAL: Hello, are you here to see The \n"
+	.string "Last Dinner Party? \p"
+	.string "Oh, challenge them? \p"
+	.string "Right, they told me about that, sounds \n"
+	.string "exciting! \p"
+	.string "Hey, what if I took a few pictures of \n"
+	.string "you, immortalise the moment before the \l"
+	.string "big battle? \p"
+	.string "We can have a quick match now so I can \n"
+	.string "get shots in action, what do you say?$"
+
+LoungeCal_RefuseBattle::
+# 405 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	.string "No worries, come back if you change\n"
+	.string "your mind. $"
+
+LoungeCal_AcceptBattle::
+# 410 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	.string "Okay, now just be cool and natural! $"
+
+LoungeCal_PostBattle::
+# 414 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	.string "Hey, nice! I got some good shots \n"
+	.string "there! \p"
+	.string "Have fun, The Last Dinner Party are \n"
+	.string "gonna love your style I'm sure! $"

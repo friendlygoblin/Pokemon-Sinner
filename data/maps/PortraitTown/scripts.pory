@@ -1,4 +1,10 @@
-mapscripts PortraitTown_MapScripts {}
+mapscripts PortraitTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : PortraitTown_Visited
+}
+
+script PortraitTown_Visited{
+    setflag(FLAG_VISITED_FORTREE_CITY)
+}
 
 script PortraitTown_ConcertHallSign{
     lock

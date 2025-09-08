@@ -1700,27 +1700,22 @@ Espeon
 Level: 23
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
-=== TRAINER_WILTON_3 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
+=== TRAINER_NORAH_2 ===
+Name: NORAH
+Class: Picnicker
+Pic: Norah
+Gender: Female
+Music: Female
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Manectric
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Nidoqueen 
+Level: 36
+IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
-Wailmer
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-
-Makuhita
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Espeon
+Level: 36
+IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
 === TRAINER_WILTON_4 ===
 Name: WILTON
@@ -2591,19 +2586,19 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint
 
-Oshawott
+Oshawott (M)
 Level: 16
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Growlithe
+Growlithe (M)
 Level: 16
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Wooper
+Wooper (M)
 Level: 16
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Zorua
+Zorua (M)
 Level: 16
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -2616,19 +2611,19 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Samurott
+Samurott (M)
 Level: 36
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Arcanine
+Arcanine (M)
 Level: 36
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Quagsire
+Quagsire (M)
 Level: 36
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Zoroark
+Zoroark (M)
 Level: 36
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -3663,6 +3658,10 @@ Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint
 
 Shiinotic (F)
+Level: 35
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Lunatone
 Level: 35
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -5098,7 +5097,7 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Skorupi
+Skorupi (M)
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -5106,11 +5105,11 @@ Nidorina
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Noibat
+Noibat (F)
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Seviper @ Sitrus Berry
+Seviper (F) @ Sitrus Berry
 Level: 22
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -5168,12 +5167,12 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Purple
 
-Litwick
+Litwick (F)
 Ability: Flame Body
 Level: 16
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-Misdreavus
+Misdreavus (F)
 Level: 16
 IVs: 15 HP / 10 Atk / 12 Def / 12 SpA / 10 SpD / 10 Spe
 - Astonish
@@ -5185,7 +5184,7 @@ Frillish (F)
 Level: 16
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-Greavard @ Sitrus Berry
+Greavard (M) @ Sitrus Berry
 Level: 18
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -5200,11 +5199,11 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Pink
 
-Dolliv
+Dolliv (F)
 Level: 30
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Steenee
+Steenee (F)
 Level: 30
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -5212,7 +5211,7 @@ Carbink
 Level: 30
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Dragonair @ Sitrus Berry
+Dragonair (F) @ Sitrus Berry
 Level: 32
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -5227,19 +5226,19 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Yellow
 
-Mudbray
+Mudbray (M)
 Level: 27
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Pawmo
+Pawmo (M)
 Level: 27
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Squawkabilly
+Squawkabilly (F)
 Level: 27
 IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
-Arcanine
+Arcanine (M)
 Level: 29
 IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
@@ -5262,11 +5261,11 @@ IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
 - Confusion
 - Flamethrower
 
-Tinkatuff
+Tinkatuff 
 Level: 24
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Ponyta-Galar
+Ponyta-Galar (F)
 Level: 26
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -5723,7 +5722,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Feint Attack
 - Heal Bell
 
-=== TRAINER_MIGUEL_2 ===
+=== TRAINER_BEAR_2 ===
 Name: MIGUEL
 Class: Pokefan
 Pic: Pokefan M
@@ -5736,7 +5735,7 @@ Skitty @ Oran Berry
 Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MIGUEL_3 ===
+=== TRAINER_AUX_2 ===
 Name: MIGUEL
 Class: Pokefan
 Pic: Pokefan M
@@ -6334,25 +6333,23 @@ Mightyena
 Level: 33
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-=== TRAINER_CALVIN_5 ===
-Name: CALVIN
-Class: Youngster
-Pic: Youngster
+=== TRAINER_CAL ===
+Name: CAL 
+Class: Palace Maven
+Pic: Cal
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Swellow
-Level: 34
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Linoone
-Level: 32
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Mightyena
+Haunter
 Level: 36
+EVs: 52 HP/ 100 Def / 100 SpD / 56 Atk
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Haunter
+Level: 36
+EVs: 52 HP/ 100 Def / 100 SpD / 56 Atk
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_EDDIE ===
@@ -14434,7 +14431,7 @@ Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_STVINCENT_2 ===
-Name: STVINCENT
+Name: ST.VINCENT
 Class: Leader
 Pic: Leader Roxanne
 Gender: Female
@@ -14443,37 +14440,25 @@ Items: Full Restore / Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Golem
-Level: 32
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Rollout
-- Magnitude
-- Explosion
+Drapion (M)
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Kabuto @ Sitrus Berry
-Level: 35
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Ice Beam
-- Surf
-- Rock Slide
+Nidoqueen
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Onix
-Level: 35
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Iron Tail
-- Explosion
-- Roar
-- Rock Slide
+Noivern (F)
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Nosepass @ Sitrus Berry
-Level: 37
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Explosion
-- Protect
-- Rock Slide
+Toxapex (F)
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Seviper (F) @ Sitrus Berry
+Level: 42
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_ROXANNE_3 ===
 Name: ROXANNE
@@ -15000,23 +14985,23 @@ Items: Full Restore / Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Lampent
+Lampent (F)
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Mismagius
+Mismagius (F)
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Frillish @ Eviolite
+Frillish (F) @ Eviolite
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Houndstone
+Houndstone (M)
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Milotic
+Milotic (F)
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
@@ -15384,20 +15369,20 @@ Items: Full Restore / Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Risky
 
-Mudsdale
-Level: 40
+Mudsdale (M)
+Level: 41
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Pawmot
-Level: 40
+Pawmot (M)
+Level: 41
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Squawkabilly
-Level: 40
+Squawkabilly (F)
+Level: 41
 IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
-Arcanine
-Level: 42
+Arcanine (M)
+Level: 43
 IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 
 === TRAINER_WINONA_3 ===
@@ -15587,10 +15572,6 @@ AI: Check Bad Move / Try To Faint / Check Viability
 Hatterene
 Level: 40
 IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
-- Wish
-- Play Rough
-- Confusion
-- Flamethrower
 
 Tinkaton
 Level: 40
@@ -15600,7 +15581,11 @@ Florges
 Level: 40
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Rapidash-Galar
+Primarina (F)
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Rapidash-Galar (F)
 Level: 42
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -16093,10 +16078,10 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Ace Pokemon
 Mugshot: Purple
 
-Primeape (M) @ Eviolite
+Primeape (M)
 Ability: Vital Spirit  
 Level: 40 
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe  
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe  
 Jolly Nature  
 - Stealth Rock  
 - Rage Fist  
@@ -16106,7 +16091,7 @@ Jolly Nature
 Flareon (F) @ Heavy-Duty Boots  
 Ability: Flash Fire  
 Level: 40  
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe 
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe 
 Lonely Nature  
 - Flare Blitz  
 - Trailblaze  
@@ -16116,7 +16101,7 @@ Lonely Nature
 Hawlucha (F)
 Ability: Limber  
 Level: 40 
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe 
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe 
 Jolly Nature  
 - Substitute  
 - Throat Chop  
@@ -16126,7 +16111,7 @@ Jolly Nature
 Sharpedo (M) @ Leftovers
 Ability: Speed Boost  
 Level: 40 
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Adamant Nature  
 - Waterfall  
 - Crunch  
@@ -16136,7 +16121,7 @@ Adamant Nature
 Tinkaton (F)  
 Ability: Mold Breaker  
 Level: 40  
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Careful Nature  
 - Gigaton Hammer  
 - Play Rough  
@@ -16146,7 +16131,7 @@ Careful Nature
 Lucario (M)  
 Ability: Inner Focus  
 Level: 42
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Jolly Nature  
 - Extreme Speed  
 - Crunch  

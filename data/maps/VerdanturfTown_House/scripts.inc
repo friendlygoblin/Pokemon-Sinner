@@ -4,47 +4,43 @@
 VerdanturfTown_House_MapScripts::
 # 3 "data/maps/VerdanturfTown_House/scripts.pory"
 	.byte 0
-# 4 "data/maps/VerdanturfTown_House/scripts.pory"
 
-# 5 "data/maps/VerdanturfTown_House/scripts.pory"
-VerdanturfTown_House_EventScript_Woman1::
+BigDogIslandHouse_Woman1::
 # 6 "data/maps/VerdanturfTown_House/scripts.pory"
-	msgbox VerdanturfTown_House_Text_TrainersGatherAtPokemonLeague, MSGBOX_NPC
+	lock
 # 7 "data/maps/VerdanturfTown_House/scripts.pory"
-	end
+	faceplayer
 # 8 "data/maps/VerdanturfTown_House/scripts.pory"
-
-# 9 "data/maps/VerdanturfTown_House/scripts.pory"
-VerdanturfTown_House_EventScript_Woman2::
-# 10 "data/maps/VerdanturfTown_House/scripts.pory"
-	msgbox VerdanturfTown_House_Text_DefeatEliteFourInARow, MSGBOX_NPC
-# 11 "data/maps/VerdanturfTown_House/scripts.pory"
-	end
+	goto_if_set FLAG_ITEM_MT_PYRE_6F_TM_SHADOW_BALL, BigDogIslandHouse_Woman1_2
 # 12 "data/maps/VerdanturfTown_House/scripts.pory"
-
+	msgbox KnowShadowBall
 # 13 "data/maps/VerdanturfTown_House/scripts.pory"
-VerdanturfTown_House_Text_TrainersGatherAtPokemonLeague:
+	giveitem ITEM_TM30
 # 14 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "Far away, deep in EVER GRANDE CITY,\n"
+	msgbox ExplainShadowBall, MSGBOX_AUTOCLOSE
 # 15 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "is the POKéMON LEAGUE.\p"
-# 16 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "The TRAINERS who gather there are\n"
+	setflag FLAG_ITEM_MT_PYRE_6F_TM_SHADOW_BALL
+BigDogIslandHouse_Woman1_1:
 # 17 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "all frighteningly well skilled.$"
-# 18 "data/maps/VerdanturfTown_House/scripts.pory"
+	release
+	end
 
-# 19 "data/maps/VerdanturfTown_House/scripts.pory"
-VerdanturfTown_House_Text_DefeatEliteFourInARow:
-# 20 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "In the POKéMON LEAGUE, I think the\n"
+BigDogIslandHouse_Woman1_2:
+# 9 "data/maps/VerdanturfTown_House/scripts.pory"
+	msgbox ExplainShadowBall, MSGBOX_AUTOCLOSE
+	goto BigDogIslandHouse_Woman1_1
+
+
+KnowShadowBall::
 # 21 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "rules say that you have to battle the\l"
-# 22 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "ELITE FOUR all in a row.\p"
-# 23 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "If you lose to any of them, you have\n"
-# 24 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "to begin your challenge again from the\l"
-# 25 "data/maps/VerdanturfTown_House/scripts.pory"
-	.string "first one.$"
+	.string "I taught my POKéMON a powerful Ghost \n"
+	.string "Type move. \p"
+	.string "And since I'm feeling generous, this \n"
+	.string "is for you!$"
+
+ExplainShadowBall::
+# 28 "data/maps/VerdanturfTown_House/scripts.pory"
+	.string "This move, Shadow Ball, is suuuuper \n"
+	.string "cool! \p"
+	.string "Your POKéMON makes a ball ow darkness \n"
+	.string "and then it goes wooosh BOOM!$"

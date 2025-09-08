@@ -179,6 +179,7 @@
 #define METATILE_Fallarbor_BrownCaveIndent           0x208
 #define METATILE_Fallarbor_BrownCaveOpen             0x210
 #define METATILE_Fallarbor_BrownRockWall             0x265
+#define METATILE_Fallarbor_Door                      0x8A5
 #define METATILE_Fallarbor_Door_BattleTent           0x36C
 #define METATILE_Fallarbor_Door_DarkRoof             0x2F7
 #define METATILE_Fallarbor_Door_LightRoof            0x2A5
@@ -273,10 +274,10 @@
 #define METATILE_Lavaridge_RockWall             0x274
 
 // gTileset_Lilycove
-#define METATILE_Lilycove_Door             0x246
+#define METATILE_Lilycove_Door             0x846
 #define METATILE_Lilycove_Door_DeptStore   0x30C
-#define METATILE_Lilycove_Door_SafariZone  0x32D
-#define METATILE_Lilycove_Door_Wooden      0x28E
+#define METATILE_Lilycove_Door_SafariZone  0x92D
+#define METATILE_Lilycove_Door_Wooden      0x88E
 #define METATILE_Lilycove_Wailmer0         0x290
 #define METATILE_Lilycove_Wailmer0_Alt     0x298
 #define METATILE_Lilycove_Wailmer1         0x291
@@ -431,9 +432,13 @@
 #define METATILE_PokemonCenter_Floor_ShadowTop           0x21E
 #define METATILE_PokemonCenter_Floor_ShadowTop_Alt       0x2DC
 
+// gTileset_PreludeTownTest
+#define METATILE_PreludeTownTest_CalmWater  0x170
+#define METATILE_PreludeTownTest_Door       0x021
+
 // gTileset_Rustboro
-#define METATILE_Rustboro_Door_Gray  0x21F
-#define METATILE_Rustboro_Door_Tan   0x22F
+#define METATILE_Rustboro_Door_Gray  0x81F
+#define METATILE_Rustboro_Door_Tan   0x82F
 
 // gTileset_SecretBase
 #define METATILE_SecretBase_AttractMat_BottomLeft       0x313
@@ -715,11 +720,11 @@
 #define METATILE_Shop_Laptop2_Normal  0x2A5
 
 // gTileset_Slateport
-#define METATILE_Slateport_Door             0x2DC
+#define METATILE_Slateport_Door             0x8DC
 #define METATILE_Slateport_Door_BattleTent  0x393
 
 // gTileset_Sootopolis
-#define METATILE_Sootopolis_Door             0x21E
+#define METATILE_Sootopolis_Door             0x81E
 #define METATILE_Sootopolis_Door_Closed      0x248
 #define METATILE_Sootopolis_Door_PeakedRoof  0x21C
 #define METATILE_Sootopolis_GymDoor_Closed   0x250

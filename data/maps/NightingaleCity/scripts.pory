@@ -1,4 +1,10 @@
-mapscripts NightingaleCity_MapScripts {}
+mapscripts NightingaleCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : NightingaleCity_Visited
+}
+
+script NightingaleCity_Visited{
+    setflag(FLAG_VISITED_LILYCOVE_CITY)
+}
 
 script NightingaleCity_PubSign{
     lock
@@ -31,7 +37,7 @@ script NightingaleCity_Route11Sign{
 script NightingaleCity_BugCatcher{
     lock
     faceplayer
-    msgbox(format("We don't have a Concert Hall here, but artists sometimes stop by the Nightingale Pub.\pI think I just spotted a famous guitarist in there!"))
+    msgbox(format("We don't have a Concert Hall here, \nbut artists sometimes stop by the Nightingale Pub.\pI think I just spotted a famous guitarist in there!"))
     release
     end
 }

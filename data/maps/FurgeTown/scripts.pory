@@ -1,4 +1,10 @@
-mapscripts FurgeTown_MapScripts {}
+mapscripts FurgeTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : FurgeTown_Visited
+}
+
+script FurgeTown_Visited{
+    setflag(FLAG_VISITED_DEWFORD_TOWN)
+}
 
 const LineBoy = 1
 const LineGirl = 2

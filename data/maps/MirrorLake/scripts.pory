@@ -1,4 +1,11 @@
-mapscripts MirrorLake_MapScripts {}
+mapscripts MirrorLake_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : MirrorLake_Visited
+}
+
+script MirrorLake_Visited{
+    setflag(FLAG_VISITED_MOSSDEEP_CITY)
+}
+
 
 const Amy = 3
 const Abi = 7

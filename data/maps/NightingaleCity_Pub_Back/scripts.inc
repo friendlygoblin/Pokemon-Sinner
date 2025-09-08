@@ -218,6 +218,6 @@ BrianMayBadgePerks::
 BrianMay_WordAboutTLDP::
 # 151 "data/maps/NightingaleCity_Pub_Back/scripts.pory"
 	.string "BRIAN MAY: Both rock music and POKéMON \n"
-	.string "battles have bright days ahead of them. \p"
+	.string "battles have bright days ahead of them.\p"
 	.string "It's good, it shows people still know \n"
 	.string "how to have fun! $"

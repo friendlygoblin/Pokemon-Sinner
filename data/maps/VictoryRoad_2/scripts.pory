@@ -5,7 +5,7 @@ script VictoryRoad_Spraggy{
     faceplayer
     msgbox(VictoryRoad_Spraggy_BattleIntro, MSGBOX_YESNO)
     if(var(VAR_RESULT)==YES){
-        trainerbattle_no_intro(TRAINER_SPRAGGY_2, format("Okay, I'll train a bit longer… \nBut I'm still winning the challenge!"))
+        trainerbattle_no_intro(TRAINER_SPRAGGY_2, format("Well? How was it?"))
         msgbox(VictoryRoad_Spraggy_PostBattle, MSGBOX_AUTOCLOSE)
     }
     else{
@@ -16,17 +16,18 @@ script VictoryRoad_Spraggy{
 }
 
 text VictoryRoad_Spraggy_BattleIntro{
-    "SPRAGGY: I've seen TLDP many times, \n"
-    "and I'll see them many times more! \p"
-    "Especially since I'm gonna win the \n"
-    "guestlist challenge, and you're gonna \l"
-    "help me prepare! $"
+    "SPRAGGY: I'm dressed up as CMAT! \p"
+    "She and TLDP are friends, so I thought \n"
+    "it would be funny. \p"
+    "I need to nail my imitation, can I \n"
+    "show you? $"
 }
 
 text VictoryRoad_Spraggy_PostBattle{
-    "SPRAGGY: I guess I need to polish my \n"
-    "strategy a bit more. \p"
-    "I'll see you at the shows! $"
+    "SPRAGGY: I'll rehearse a little bit \n"
+    "more. \p"
+    "I have to get it right, what if CMAT \n"
+    "also shows up?$"
 }
 
 script VictoryRoad_Wren{

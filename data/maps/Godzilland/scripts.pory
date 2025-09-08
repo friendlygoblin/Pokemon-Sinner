@@ -1,4 +1,10 @@
-mapscripts Godzilland_MapScripts {}
+mapscripts Godzilland_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : Godzilland_Visited
+}
+
+script Godzilland_Visited{
+    setflag(FLAG_VISITED_LAVARIDGE_TOWN)
+}
 
 script Godzilland_CitySign{
     lock

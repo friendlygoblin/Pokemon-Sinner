@@ -88,7 +88,7 @@
 #define TRAINER_VITO                         82
 #define TRAINER_OWEN                         83
 #define TRAINER_NORAH                        84
-#define TRAINER_WILTON_3                     85
+#define TRAINER_NORAH_2                      85
 #define TRAINER_WILTON_4                     86
 #define TRAINER_WILTON_5                     87
 #define TRAINER_WARREN                       88
@@ -298,8 +298,8 @@
 #define TRAINER_VICTOR                      292
 #define TRAINER_MIGUEL_1                    293
 #define TRAINER_COLTON                      294
-#define TRAINER_MIGUEL_2                    295
-#define TRAINER_MIGUEL_3                    296
+#define TRAINER_BEAR_2                      295
+#define TRAINER_AUX_2                       296
 #define TRAINER_MIGUEL_4                    297
 #define TRAINER_MIGUEL_5                    298
 #define TRAINER_VICTORIA                    299
@@ -334,7 +334,7 @@
 #define TRAINER_BEAR                        328
 #define TRAINER_AIDEN                       329
 #define TRAINER_Q                           330
-#define TRAINER_CALVIN_5                    331
+#define TRAINER_CAL                         331
 #define TRAINER_EDDIE                       332
 #define TRAINER_ALLEN                       333
 #define TRAINER_TIMMY                       334

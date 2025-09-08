@@ -1,6 +1,10 @@
-mapscripts CandlewaxCity_MapScripts {}
+mapscripts CandlewaxCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : CandlewaxCity_Visited
+}
 
-//Hozier gym leader, mostly Ground Type
+script CandlewaxCity_Visited{
+    setflag(FLAG_VISITED_RUSTBORO_CITY)
+}
 
 const Jay1 = 1
 const Jay2 = 2

@@ -305,70 +305,56 @@ NoraGiveDex::
 # 184 "data/maps/StartTown_Pub/scripts.pory"
 	setflag FLAG_SYS_NATIONAL_DEX
 # 185 "data/maps/StartTown_Pub/scripts.pory"
-	special SetUnlockedPokedexFlags
+	setflag FLAG_ADVENTURE_STARTED
 # 186 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
+	special SetUnlockedPokedexFlags
 # 187 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_INTRO_NORA
+	special EnableNationalPokedex
 # 188 "data/maps/StartTown_Pub/scripts.pory"
-	setvar VAR_OK_TO_LEAVE_PUB, 1
+	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
 # 189 "data/maps/StartTown_Pub/scripts.pory"
-	setvar VAR_CATCHING_TUTORIAL, 0
+	setflag FLAG_INTRO_NORA
 # 190 "data/maps/StartTown_Pub/scripts.pory"
-	applymovement 7, NoraLeaves
+	setvar VAR_OK_TO_LEAVE_PUB, 1
 # 191 "data/maps/StartTown_Pub/scripts.pory"
-	waitmovement 0
+	setvar VAR_CATCHING_TUTORIAL, 0
 # 192 "data/maps/StartTown_Pub/scripts.pory"
-	removeobject 7
+	applymovement 7, NoraLeaves
 # 193 "data/maps/StartTown_Pub/scripts.pory"
-	setrespawn HEAL_LOCATION_START_TOWN_PUB
+	waitmovement 0
 # 194 "data/maps/StartTown_Pub/scripts.pory"
+	removeobject 7
+# 195 "data/maps/StartTown_Pub/scripts.pory"
+	setrespawn HEAL_LOCATION_START_TOWN_PUB
+# 196 "data/maps/StartTown_Pub/scripts.pory"
 	release
 	end
 
 
-# 198 "data/maps/StartTown_Pub/scripts.pory"
-NoraGivePokedex:
-# 199 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 199 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 199 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
 # 200 "data/maps/StartTown_Pub/scripts.pory"
+NoraGivePokedex:
+# 201 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 201 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 201 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 202 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 203 "data/maps/StartTown_Pub/scripts.pory"
-NoraLeaves:
-# 204 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 204 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
 # 205 "data/maps/StartTown_Pub/scripts.pory"
+NoraLeaves:
+# 206 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 206 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 207 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 208 "data/maps/StartTown_Pub/scripts.pory"
+# 210 "data/maps/StartTown_Pub/scripts.pory"
 PlayerWalkToStage1:
-# 209 "data/maps/StartTown_Pub/scripts.pory"
+# 211 "data/maps/StartTown_Pub/scripts.pory"
 	walk_up
-# 209 "data/maps/StartTown_Pub/scripts.pory"
-	walk_up
-# 209 "data/maps/StartTown_Pub/scripts.pory"
-	walk_up
-# 209 "data/maps/StartTown_Pub/scripts.pory"
-	walk_up
-# 210 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 210 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 210 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 210 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 210 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 210 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
 # 211 "data/maps/StartTown_Pub/scripts.pory"
 	walk_up
 # 211 "data/maps/StartTown_Pub/scripts.pory"
@@ -376,28 +362,30 @@ PlayerWalkToStage1:
 # 211 "data/maps/StartTown_Pub/scripts.pory"
 	walk_up
 # 212 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 212 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 212 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 212 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 212 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 212 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 213 "data/maps/StartTown_Pub/scripts.pory"
+	walk_up
+# 213 "data/maps/StartTown_Pub/scripts.pory"
+	walk_up
+# 213 "data/maps/StartTown_Pub/scripts.pory"
+	walk_up
+# 214 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 215 "data/maps/StartTown_Pub/scripts.pory"
+# 217 "data/maps/StartTown_Pub/scripts.pory"
 PlayerWalkToStage2:
-# 216 "data/maps/StartTown_Pub/scripts.pory"
+# 218 "data/maps/StartTown_Pub/scripts.pory"
 	walk_up
-# 216 "data/maps/StartTown_Pub/scripts.pory"
-	walk_up
-# 216 "data/maps/StartTown_Pub/scripts.pory"
-	walk_up
-# 216 "data/maps/StartTown_Pub/scripts.pory"
-	walk_up
-# 217 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 217 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 217 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 217 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 217 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
 # 218 "data/maps/StartTown_Pub/scripts.pory"
 	walk_up
 # 218 "data/maps/StartTown_Pub/scripts.pory"
@@ -405,18 +393,28 @@ PlayerWalkToStage2:
 # 218 "data/maps/StartTown_Pub/scripts.pory"
 	walk_up
 # 219 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 219 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 219 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 219 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 219 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 220 "data/maps/StartTown_Pub/scripts.pory"
+	walk_up
+# 220 "data/maps/StartTown_Pub/scripts.pory"
+	walk_up
+# 220 "data/maps/StartTown_Pub/scripts.pory"
+	walk_up
+# 221 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 222 "data/maps/StartTown_Pub/scripts.pory"
-AuroraLeaves:
-# 223 "data/maps/StartTown_Pub/scripts.pory"
-	walk_in_place_fast_down
 # 224 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
+AuroraLeaves:
 # 225 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 225 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
+	walk_in_place_fast_down
 # 226 "data/maps/StartTown_Pub/scripts.pory"
 	walk_down
 # 227 "data/maps/StartTown_Pub/scripts.pory"
@@ -424,45 +422,45 @@ AuroraLeaves:
 # 227 "data/maps/StartTown_Pub/scripts.pory"
 	walk_left
 # 228 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 229 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 229 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 230 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 231 "data/maps/StartTown_Pub/scripts.pory"
+# 233 "data/maps/StartTown_Pub/scripts.pory"
 EmilyLeaves:
-# 232 "data/maps/StartTown_Pub/scripts.pory"
-	walk_in_place_fast_down
-# 233 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 233 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 233 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
 # 234 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
+	walk_in_place_fast_down
+# 235 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
 # 235 "data/maps/StartTown_Pub/scripts.pory"
 	walk_left
 # 235 "data/maps/StartTown_Pub/scripts.pory"
 	walk_left
 # 236 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 237 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 237 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 238 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 239 "data/maps/StartTown_Pub/scripts.pory"
-LizzieLeaves:
-# 240 "data/maps/StartTown_Pub/scripts.pory"
-	walk_in_place_fast_down
 # 241 "data/maps/StartTown_Pub/scripts.pory"
-	walk_up
+LizzieLeaves:
 # 242 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 242 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 242 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 242 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 242 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
+	walk_in_place_fast_down
 # 243 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
+	walk_up
+# 244 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 244 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 244 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
 # 244 "data/maps/StartTown_Pub/scripts.pory"
 	walk_left
 # 244 "data/maps/StartTown_Pub/scripts.pory"
@@ -473,29 +471,29 @@ LizzieLeaves:
 	walk_left
 # 246 "data/maps/StartTown_Pub/scripts.pory"
 	walk_left
-# 246 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
 # 247 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 248 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 248 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 248 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 249 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 250 "data/maps/StartTown_Pub/scripts.pory"
+# 252 "data/maps/StartTown_Pub/scripts.pory"
 GeorgiaLeaves:
-# 251 "data/maps/StartTown_Pub/scripts.pory"
-	walk_in_place_fast_down
-# 252 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 252 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 252 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 252 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 252 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 252 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
 # 253 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
+	walk_in_place_fast_down
+# 254 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 254 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 254 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 254 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
 # 254 "data/maps/StartTown_Pub/scripts.pory"
 	walk_left
 # 254 "data/maps/StartTown_Pub/scripts.pory"
@@ -506,317 +504,323 @@ GeorgiaLeaves:
 	walk_left
 # 256 "data/maps/StartTown_Pub/scripts.pory"
 	walk_left
-# 256 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
 # 257 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 258 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 258 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 258 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 259 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 260 "data/maps/StartTown_Pub/scripts.pory"
-NoraStartsToLeave:
-# 261 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 261 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 261 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 261 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 261 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 261 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
 # 262 "data/maps/StartTown_Pub/scripts.pory"
-	face_left
+NoraStartsToLeave:
 # 263 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 263 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 263 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 263 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 263 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 263 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 264 "data/maps/StartTown_Pub/scripts.pory"
+	face_left
+# 265 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 266 "data/maps/StartTown_Pub/scripts.pory"
+# 268 "data/maps/StartTown_Pub/scripts.pory"
 AbiStartsToLeave:
-# 267 "data/maps/StartTown_Pub/scripts.pory"
-	walk_in_place_fast_down
-# 268 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 268 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
 # 269 "data/maps/StartTown_Pub/scripts.pory"
-	delay_16
+	walk_in_place_fast_down
 # 270 "data/maps/StartTown_Pub/scripts.pory"
-	emote_exclamation_mark
+	walk_left
+# 270 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
 # 271 "data/maps/StartTown_Pub/scripts.pory"
 	delay_16
 # 272 "data/maps/StartTown_Pub/scripts.pory"
+	emote_exclamation_mark
+# 273 "data/maps/StartTown_Pub/scripts.pory"
+	delay_16
+# 274 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 275 "data/maps/StartTown_Pub/scripts.pory"
+# 277 "data/maps/StartTown_Pub/scripts.pory"
 AbiGoesToPlayer:
-# 276 "data/maps/StartTown_Pub/scripts.pory"
+# 278 "data/maps/StartTown_Pub/scripts.pory"
 	walk_in_place_down
-# 277 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 277 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 277 "data/maps/StartTown_Pub/scripts.pory"
-	walk_right
-# 278 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 278 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
 # 279 "data/maps/StartTown_Pub/scripts.pory"
-	delay_16
-# 280 "data/maps/StartTown_Pub/scripts.pory"
-	walk_in_place_down
-# 281 "data/maps/StartTown_Pub/scripts.pory"
-	step_end
-
-# 284 "data/maps/StartTown_Pub/scripts.pory"
-AbiPokeball1:
-# 285 "data/maps/StartTown_Pub/scripts.pory"
-	walk_up
-# 286 "data/maps/StartTown_Pub/scripts.pory"
-	delay_16
-# 287 "data/maps/StartTown_Pub/scripts.pory"
-	walk_in_place_up
-# 288 "data/maps/StartTown_Pub/scripts.pory"
-	step_end
-
-# 291 "data/maps/StartTown_Pub/scripts.pory"
-AbiNextPokeball:
-# 292 "data/maps/StartTown_Pub/scripts.pory"
-	walk_left
-# 293 "data/maps/StartTown_Pub/scripts.pory"
-	face_up
-# 294 "data/maps/StartTown_Pub/scripts.pory"
-	delay_16
-# 295 "data/maps/StartTown_Pub/scripts.pory"
-	walk_in_place_up
-# 296 "data/maps/StartTown_Pub/scripts.pory"
-	step_end
-
-# 299 "data/maps/StartTown_Pub/scripts.pory"
-AbiBackToPlayer:
-# 300 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 300 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 301 "data/maps/StartTown_Pub/scripts.pory"
 	walk_right
+# 279 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 279 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 280 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 280 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 281 "data/maps/StartTown_Pub/scripts.pory"
+	delay_16
+# 282 "data/maps/StartTown_Pub/scripts.pory"
+	walk_in_place_down
+# 283 "data/maps/StartTown_Pub/scripts.pory"
+	step_end
+
+# 286 "data/maps/StartTown_Pub/scripts.pory"
+AbiPokeball1:
+# 287 "data/maps/StartTown_Pub/scripts.pory"
+	walk_up
+# 288 "data/maps/StartTown_Pub/scripts.pory"
+	delay_16
+# 289 "data/maps/StartTown_Pub/scripts.pory"
+	walk_in_place_up
+# 290 "data/maps/StartTown_Pub/scripts.pory"
+	step_end
+
+# 293 "data/maps/StartTown_Pub/scripts.pory"
+AbiNextPokeball:
+# 294 "data/maps/StartTown_Pub/scripts.pory"
+	walk_left
+# 295 "data/maps/StartTown_Pub/scripts.pory"
+	face_up
+# 296 "data/maps/StartTown_Pub/scripts.pory"
+	delay_16
+# 297 "data/maps/StartTown_Pub/scripts.pory"
+	walk_in_place_up
+# 298 "data/maps/StartTown_Pub/scripts.pory"
+	step_end
+
+# 301 "data/maps/StartTown_Pub/scripts.pory"
+AbiBackToPlayer:
 # 302 "data/maps/StartTown_Pub/scripts.pory"
-	face_right
+	walk_down
+# 302 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
 # 303 "data/maps/StartTown_Pub/scripts.pory"
+	walk_right
+# 304 "data/maps/StartTown_Pub/scripts.pory"
+	face_right
+# 305 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 306 "data/maps/StartTown_Pub/scripts.pory"
-AbiLeaves:
-# 307 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 307 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 307 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 307 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 307 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 307 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 307 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
-# 307 "data/maps/StartTown_Pub/scripts.pory"
-	walk_down
 # 308 "data/maps/StartTown_Pub/scripts.pory"
+AbiLeaves:
+# 309 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 309 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 309 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 309 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 309 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 309 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 309 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 309 "data/maps/StartTown_Pub/scripts.pory"
+	walk_down
+# 310 "data/maps/StartTown_Pub/scripts.pory"
 	step_end
 
-# 311 "data/maps/StartTown_Pub/scripts.pory"
+# 313 "data/maps/StartTown_Pub/scripts.pory"
 Thinks:
-# 312 "data/maps/StartTown_Pub/scripts.pory"
+# 314 "data/maps/StartTown_Pub/scripts.pory"
 	emote_question_mark
 	step_end
 
 PickStarter_2::
-# 393 "data/maps/StartTown_Pub/scripts.pory"
+# 395 "data/maps/StartTown_Pub/scripts.pory"
 	lockall
-# 394 "data/maps/StartTown_Pub/scripts.pory"
+# 396 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_LITTLEROOT_INTRO_STATE, 0
 	goto_if_eq PickStarter_2_2
-# 419 "data/maps/StartTown_Pub/scripts.pory"
+# 421 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_2_Text_2
 PickStarter_2_1:
-# 421 "data/maps/StartTown_Pub/scripts.pory"
+# 423 "data/maps/StartTown_Pub/scripts.pory"
 	releaseall
 	end
 
 PickStarter_2_2:
-# 395 "data/maps/StartTown_Pub/scripts.pory"
-	showmonpic SPECIES_TORCHIC, 10, 3
-# 396 "data/maps/StartTown_Pub/scripts.pory"
-	playmoncry SPECIES_TORCHIC, CRY_MODE_NORMAL
 # 397 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_2_Text_0, MSGBOX_YESNO
+	showmonpic SPECIES_TORCHIC, 10, 3
 # 398 "data/maps/StartTown_Pub/scripts.pory"
+	playmoncry SPECIES_TORCHIC, CRY_MODE_NORMAL
+# 399 "data/maps/StartTown_Pub/scripts.pory"
+	msgbox PickStarter_2_Text_0, MSGBOX_YESNO
+# 400 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PickStarter_2_5
-# 415 "data/maps/StartTown_Pub/scripts.pory"
+# 417 "data/maps/StartTown_Pub/scripts.pory"
 	hidemonpic
 	goto PickStarter_2_1
 
 PickStarter_2_5:
-# 399 "data/maps/StartTown_Pub/scripts.pory"
-	givemon SPECIES_TORCHIC, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_LEER
 # 401 "data/maps/StartTown_Pub/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 402 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_2_Text_1
+	givemon SPECIES_TORCHIC, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_LEER
 # 403 "data/maps/StartTown_Pub/scripts.pory"
-	call NicknamePartyMon
+	playfanfare MUS_OBTAIN_ITEM
 # 404 "data/maps/StartTown_Pub/scripts.pory"
-	removeobject Pokeball2
+	msgbox PickStarter_2_Text_1
 # 405 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_1
+	call NicknamePartyMon
 # 406 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_2
+	removeobject Pokeball2
 # 407 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_3
+	setflag FLAG_POKEBALL_1
 # 408 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_POKEBALL_2
 # 409 "data/maps/StartTown_Pub/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+	setflag FLAG_POKEBALL_3
 # 410 "data/maps/StartTown_Pub/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 411 "data/maps/StartTown_Pub/scripts.pory"
+	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+# 412 "data/maps/StartTown_Pub/scripts.pory"
 	setvar VAR_STARTER_MON, 0
 	goto PickStarter_2_1
 
 
 PickStarter_3::
-# 426 "data/maps/StartTown_Pub/scripts.pory"
+# 428 "data/maps/StartTown_Pub/scripts.pory"
 	lockall
-# 427 "data/maps/StartTown_Pub/scripts.pory"
+# 429 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_LITTLEROOT_INTRO_STATE, 0
 	goto_if_eq PickStarter_3_2
-# 451 "data/maps/StartTown_Pub/scripts.pory"
+# 453 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_2_Text_2
 PickStarter_3_1:
-# 453 "data/maps/StartTown_Pub/scripts.pory"
+# 455 "data/maps/StartTown_Pub/scripts.pory"
 	releaseall
 	end
 
 PickStarter_3_2:
-# 428 "data/maps/StartTown_Pub/scripts.pory"
-	showmonpic SPECIES_MUDKIP, 10, 3
-# 429 "data/maps/StartTown_Pub/scripts.pory"
-	playmoncry SPECIES_MUDKIP, CRY_MODE_NORMAL
 # 430 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_3_Text_0, MSGBOX_YESNO
+	showmonpic SPECIES_MUDKIP, 10, 3
 # 431 "data/maps/StartTown_Pub/scripts.pory"
+	playmoncry SPECIES_MUDKIP, CRY_MODE_NORMAL
+# 432 "data/maps/StartTown_Pub/scripts.pory"
+	msgbox PickStarter_3_Text_0, MSGBOX_YESNO
+# 433 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PickStarter_3_5
-# 447 "data/maps/StartTown_Pub/scripts.pory"
+# 449 "data/maps/StartTown_Pub/scripts.pory"
 	hidemonpic
 	goto PickStarter_3_1
 
 PickStarter_3_5:
-# 432 "data/maps/StartTown_Pub/scripts.pory"
-	givemon SPECIES_MUDKIP, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_GROWL
 # 434 "data/maps/StartTown_Pub/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 435 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_3_Text_1
+	givemon SPECIES_MUDKIP, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_GROWL
 # 436 "data/maps/StartTown_Pub/scripts.pory"
-	call NicknamePartyMon
+	playfanfare MUS_OBTAIN_ITEM
 # 437 "data/maps/StartTown_Pub/scripts.pory"
-	removeobject Pokeball3
+	msgbox PickStarter_3_Text_1
 # 438 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_1
+	call NicknamePartyMon
 # 439 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_2
+	removeobject Pokeball3
 # 440 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_3
+	setflag FLAG_POKEBALL_1
 # 441 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_POKEBALL_2
 # 442 "data/maps/StartTown_Pub/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+	setflag FLAG_POKEBALL_3
 # 443 "data/maps/StartTown_Pub/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 444 "data/maps/StartTown_Pub/scripts.pory"
+	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+# 445 "data/maps/StartTown_Pub/scripts.pory"
 	setvar VAR_STARTER_MON, 2
 	goto PickStarter_3_1
 
 
 PickStarter_1::
-# 458 "data/maps/StartTown_Pub/scripts.pory"
+# 460 "data/maps/StartTown_Pub/scripts.pory"
 	lockall
-# 459 "data/maps/StartTown_Pub/scripts.pory"
+# 461 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_LITTLEROOT_INTRO_STATE, 0
 	goto_if_eq PickStarter_1_2
-# 484 "data/maps/StartTown_Pub/scripts.pory"
+# 486 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_2_Text_2
 PickStarter_1_1:
-# 486 "data/maps/StartTown_Pub/scripts.pory"
+# 488 "data/maps/StartTown_Pub/scripts.pory"
 	releaseall
 	end
 
 PickStarter_1_2:
-# 460 "data/maps/StartTown_Pub/scripts.pory"
-	showmonpic SPECIES_BULBASAUR, 10, 3
-# 461 "data/maps/StartTown_Pub/scripts.pory"
-	playmoncry SPECIES_BULBASAUR, CRY_MODE_NORMAL
 # 462 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_1_Text_0, MSGBOX_YESNO
+	showmonpic SPECIES_BULBASAUR, 10, 3
 # 463 "data/maps/StartTown_Pub/scripts.pory"
+	playmoncry SPECIES_BULBASAUR, CRY_MODE_NORMAL
+# 464 "data/maps/StartTown_Pub/scripts.pory"
+	msgbox PickStarter_1_Text_0, MSGBOX_YESNO
+# 465 "data/maps/StartTown_Pub/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq PickStarter_1_5
-# 480 "data/maps/StartTown_Pub/scripts.pory"
+# 482 "data/maps/StartTown_Pub/scripts.pory"
 	hidemonpic
 	goto PickStarter_1_1
 
 PickStarter_1_5:
-# 464 "data/maps/StartTown_Pub/scripts.pory"
-	givemon SPECIES_BULBASAUR, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL
 # 466 "data/maps/StartTown_Pub/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 467 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox PickStarter_1_Text_1
+	givemon SPECIES_BULBASAUR, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL
 # 468 "data/maps/StartTown_Pub/scripts.pory"
-	call NicknamePartyMon
+	playfanfare MUS_OBTAIN_ITEM
 # 469 "data/maps/StartTown_Pub/scripts.pory"
-	removeobject Pokeball1
+	msgbox PickStarter_1_Text_1
 # 470 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_1
+	call NicknamePartyMon
 # 471 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_2
+	removeobject Pokeball1
 # 472 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_POKEBALL_3
+	setflag FLAG_POKEBALL_1
 # 473 "data/maps/StartTown_Pub/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_POKEBALL_2
 # 474 "data/maps/StartTown_Pub/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+	setflag FLAG_POKEBALL_3
 # 475 "data/maps/StartTown_Pub/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 476 "data/maps/StartTown_Pub/scripts.pory"
+	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+# 477 "data/maps/StartTown_Pub/scripts.pory"
 	setvar VAR_STARTER_MON, 1
 	goto PickStarter_1_1
 
 
 Barista::
-# 491 "data/maps/StartTown_Pub/scripts.pory"
-	lock
-# 492 "data/maps/StartTown_Pub/scripts.pory"
-	message Barista_Text_0
 # 493 "data/maps/StartTown_Pub/scripts.pory"
-	waitmessage
+	lock
 # 494 "data/maps/StartTown_Pub/scripts.pory"
-	pokemart MartBar
+	message Barista_Text_0
 # 495 "data/maps/StartTown_Pub/scripts.pory"
-	msgbox BaristaThanks
+	waitmessage
 # 496 "data/maps/StartTown_Pub/scripts.pory"
+	pokemart MartBar
+# 497 "data/maps/StartTown_Pub/scripts.pory"
+	msgbox BaristaThanks
+# 498 "data/maps/StartTown_Pub/scripts.pory"
 	release
 	end
 
 
 	.align 2
-# 500 "data/maps/StartTown_Pub/scripts.pory"
-MartBar:
-# 501 "data/maps/StartTown_Pub/scripts.pory"
-	.2byte ITEM_BERRY_JUICE
 # 502 "data/maps/StartTown_Pub/scripts.pory"
-	.2byte ITEM_FRESH_WATER
+MartBar:
 # 503 "data/maps/StartTown_Pub/scripts.pory"
-	.2byte ITEM_SODA_POP
+	.2byte ITEM_BERRY_JUICE
 # 504 "data/maps/StartTown_Pub/scripts.pory"
+	.2byte ITEM_FRESH_WATER
+# 505 "data/maps/StartTown_Pub/scripts.pory"
+	.2byte ITEM_SODA_POP
+# 506 "data/maps/StartTown_Pub/scripts.pory"
 	.2byte ITEM_LEMONADE
 	.2byte ITEM_NONE
 
@@ -843,40 +847,40 @@ NoraGiveDex_Text_0:
 	.string "Obtained POKéDEX from Nora!$"
 
 PickStarter_2_Text_0:
-# 397 "data/maps/StartTown_Pub/scripts.pory"
+# 399 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Do you want to choose \nFire type Torchic?$"
 
 PickStarter_2_Text_1:
-# 402 "data/maps/StartTown_Pub/scripts.pory"
+# 404 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Received Torchic!$"
 
 PickStarter_2_Text_2:
-# 419 "data/maps/StartTown_Pub/scripts.pory"
+# 421 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Abigail said to pick one POKéMON.\p"
 	.string "Let's not be greedy.$"
 
 PickStarter_3_Text_0:
-# 430 "data/maps/StartTown_Pub/scripts.pory"
+# 432 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Do you want to choose \nWater type Mudkip?$"
 
 PickStarter_3_Text_1:
-# 435 "data/maps/StartTown_Pub/scripts.pory"
+# 437 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Received Mudkip!$"
 
 PickStarter_1_Text_0:
-# 462 "data/maps/StartTown_Pub/scripts.pory"
+# 464 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Do you want to choose \nGrass type Bulbasaur?$"
 
 PickStarter_1_Text_1:
-# 467 "data/maps/StartTown_Pub/scripts.pory"
+# 469 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Received Bulbasaur!$"
 
 Barista_Text_0:
-# 492 "data/maps/StartTown_Pub/scripts.pory"
+# 494 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Welcome to the Two-Legged Dog, what \ncan I get for you?$"
 
 YouJustGotHere::
-# 315 "data/maps/StartTown_Pub/scripts.pory"
+# 317 "data/maps/StartTown_Pub/scripts.pory"
 	.string "???: You just got here, didn't you?\p"
 	.string "… \p"
 	.string "???: We were just rehearsing, don't \n"
@@ -886,7 +890,7 @@ YouJustGotHere::
 	.string "I'm The Last Dinner Party's lead singer!$"
 
 OhYouKnew::
-# 325 "data/maps/StartTown_Pub/scripts.pory"
+# 327 "data/maps/StartTown_Pub/scripts.pory"
 	.string "You knew?\p"
 	.string "Oh you're a fan!\p"
 	.string "What's your name?\p"
@@ -895,7 +899,7 @@ OhYouKnew::
 	.string "Will we be seeing you in Mirror City? $"
 
 WeAreOnTour::
-# 334 "data/maps/StartTown_Pub/scripts.pory"
+# 336 "data/maps/StartTown_Pub/scripts.pory"
 	.string "What do you mean you didn't know about\n"
 	.string "our residency?\p"
 	.string "Well, we scored a permanent spot at the\n"
@@ -908,7 +912,7 @@ WeAreOnTour::
 	.string "Maybe you should try it!$"
 
 NoPokemon::
-# 347 "data/maps/StartTown_Pub/scripts.pory"
+# 349 "data/maps/StartTown_Pub/scripts.pory"
 	.string "You… don't have any POKéMON?\p"
 	.string "At all??\p"
 	.string "Oh…\p"
@@ -916,7 +920,7 @@ NoPokemon::
 	.string "Okay, I'm not supposed to do that but…$"
 
 ChooseOne::
-# 355 "data/maps/StartTown_Pub/scripts.pory"
+# 357 "data/maps/StartTown_Pub/scripts.pory"
 	.string "I've been trying to find a home for\n"
 	.string "these little ones for ages.\p"
 	.string "Grace and the shelter staff agreed\n"
@@ -931,7 +935,7 @@ ChooseOne::
 	.string "See you there!$"
 
 NoraDex::
-# 370 "data/maps/StartTown_Pub/scripts.pory"
+# 372 "data/maps/StartTown_Pub/scripts.pory"
 	.string "NORA: Hey! I'm Nora, the band's\n"
 	.string "photographer.\p"
 	.string "I see that you're giving Abi a \n"
@@ -953,7 +957,7 @@ NoraDex::
 	.string "want to, but here, take good care of it!$"
 
 BaristaThanks::
-# 507 "data/maps/StartTown_Pub/scripts.pory"
+# 509 "data/maps/StartTown_Pub/scripts.pory"
 	.string "Alright!\p"
 	.string "Oh, and thanks for taking care of\n"
 	.string "one of the POKéMON, it makes it \l"

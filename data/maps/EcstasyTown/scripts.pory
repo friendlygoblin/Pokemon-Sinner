@@ -1,4 +1,10 @@
-mapscripts EcstasyTown_MapScripts {}
+mapscripts EcstasyTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : EcstasyTown_Visited
+}
+
+script EcstasyTown_Visited{
+    setflag(FLAG_VISITED_OLDALE_TOWN)
+}
 
 script EcstasyRoute1Sign{
     lock

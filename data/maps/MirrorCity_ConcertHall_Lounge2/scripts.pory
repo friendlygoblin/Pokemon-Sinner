@@ -371,3 +371,49 @@ text LoungeElla_PostBattle{
     "come to us when we're big enough \l"
     "to have our own challenge! $"
 }
+
+script MCCH_LoungeCal{
+    lock
+    faceplayer
+    msgbox(LoungeCal_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeCal_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_CAL, format("Ooh, photogenic! "))
+        msgbox(LoungeCal_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeCal_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    applymovement(Cal, Common_Movement_FaceUp)
+    release
+    end
+}
+
+text LoungeCal_OfferBattle{
+    "CAL: Hello, are you here to see The \n"
+    "Last Dinner Party? \p"
+    "Oh, challenge them? \p"
+    "Right, they told me about that, sounds \n"
+    "exciting! \p"
+    "Hey, what if I took a few pictures of \n"
+    "you, immortalise the moment before the \l"
+    "big battle? \p"
+    "We can have a quick match now so I can \n"
+    "get shots in action, what do you say?$"
+    }
+
+text LoungeCal_RefuseBattle{
+    "No worries, come back if you change\n"
+    "your mind. $"
+    }
+
+text LoungeCal_AcceptBattle{
+    "Okay, now just be cool and natural! $"
+    }
+
+text LoungeCal_PostBattle{
+    "Hey, nice! I got some good shots \n"
+    "there! \p"
+    "Have fun, The Last Dinner Party are \n"
+    "gonna love your style I'm sure! $"
+}

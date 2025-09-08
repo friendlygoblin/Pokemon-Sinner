@@ -1,16 +1,18 @@
 StartTown_MapScripts::
-# 3 "data/maps/StartTown/scripts.pory"
+# 2 "data/maps/StartTown/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, HidePokeballs
 	.byte 0
 
 
 HidePokeballs::
-# 12 "data/maps/StartTown/scripts.pory"
+# 11 "data/maps/StartTown/scripts.pory"
 	setflag FLAG_POKEBALL_1
-# 13 "data/maps/StartTown/scripts.pory"
+# 12 "data/maps/StartTown/scripts.pory"
 	setflag FLAG_POKEBALL_2
-# 14 "data/maps/StartTown/scripts.pory"
+# 13 "data/maps/StartTown/scripts.pory"
 	setflag FLAG_POKEBALL_3
+# 14 "data/maps/StartTown/scripts.pory"
+	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	end
 
 
@@ -101,7 +103,7 @@ GraceBattle_1:
 # 70 "data/maps/StartTown/scripts.pory"
 	trainerbattle_no_intro TRAINER_GRACE, GraceDefeat
 # 71 "data/maps/StartTown/scripts.pory"
-	msgbox GraceAfterBattle
+	msgbox GraceAfterBattle, MSGBOX_AUTOCLOSE
 # 72 "data/maps/StartTown/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 73 "data/maps/StartTown/scripts.pory"
@@ -115,7 +117,7 @@ GraceBattle_1:
 # 77 "data/maps/StartTown/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 # 78 "data/maps/StartTown/scripts.pory"
-	msgbox GraceDoneHealing
+	msgbox GraceDoneHealing, MSGBOX_AUTOCLOSE
 # 79 "data/maps/StartTown/scripts.pory"
 	applymovement 2, GraceGoesBackToWhereSheWas
 # 80 "data/maps/StartTown/scripts.pory"
@@ -226,41 +228,41 @@ ZigFollowGraceToPlayer:
 # 131 "data/maps/StartTown/scripts.pory"
 	step_end
 
-# 216 "data/maps/StartTown/scripts.pory"
-PlayerWalkDown:
 # 217 "data/maps/StartTown/scripts.pory"
-	walk_down
+PlayerWalkDown:
 # 218 "data/maps/StartTown/scripts.pory"
+	walk_down
+# 219 "data/maps/StartTown/scripts.pory"
 	step_end
 
 Route1Sign::
-# 222 "data/maps/StartTown/scripts.pory"
-	lock
 # 223 "data/maps/StartTown/scripts.pory"
-	msgbox Route1SignText
+	lock
 # 224 "data/maps/StartTown/scripts.pory"
+	msgbox Route1SignText
+# 225 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 
 ShelterSign::
-# 229 "data/maps/StartTown/scripts.pory"
-	lock
 # 230 "data/maps/StartTown/scripts.pory"
-	msgbox ShelterSignText
+	lock
 # 231 "data/maps/StartTown/scripts.pory"
+	msgbox ShelterSignText
+# 232 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 
 Zigzagoon::
-# 236 "data/maps/StartTown/scripts.pory"
-	lock
 # 237 "data/maps/StartTown/scripts.pory"
-	faceplayer
+	lock
 # 238 "data/maps/StartTown/scripts.pory"
-	msgbox Zigzagoon_Text_0
+	faceplayer
 # 239 "data/maps/StartTown/scripts.pory"
+	msgbox Zigzagoon_Text_0
+# 240 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
@@ -282,7 +284,7 @@ Poochyena_Text_0:
 	.string "POOCHYENA: bark!$"
 
 Zigzagoon_Text_0:
-# 238 "data/maps/StartTown/scripts.pory"
+# 239 "data/maps/StartTown/scripts.pory"
 	.string "ZIGZAGOON: … … grr?$"
 
 GraceSeesPokemon::
@@ -300,7 +302,7 @@ GraceBeforeBattle::
 	.string "She also told you about the Guest \n"
 	.string "List challenge?\p"
 	.string "That's so exciting!\p"
-	.string "You'll need training a lot though, do \n"
+	.string "You'll need a lotta training though, do \n"
 	.string "you know how POKéMON battles work?$"
 
 Grace_PlayerKnowsBattle::
@@ -327,8 +329,9 @@ GraceAfterBattle::
 	.string "the challenge. \p"
 	.string "You'll need to train really hard of \n"
 	.string "course, The Last Dinner Party are the \l"
-	.string "best POKéMON trainers in the region.\p"
-	.string "And they're the best band in the world!\p"
+	.string "best POKéMON trainers around.\p"
+	.string "And they're the best band in the \n"
+	.string "world!\p"
 	.string "I know of a few other artists who are \n"
 	.string "doing something similar. \p"
 	.string "Seems to be a new trend… \p"
@@ -339,7 +342,7 @@ GraceAfterBattle::
 	.string "a lot of effort. $"
 
 GraceDoneHealing::
-# 187 "data/maps/StartTown/scripts.pory"
+# 188 "data/maps/StartTown/scripts.pory"
 	.string "GRACE: All done!\p"
 	.string "Well, good luck for whatever's next!\p"
 	.string "You're going to try your luck in \n"
@@ -348,7 +351,7 @@ GraceDoneHealing::
 	.string "See you later! $"
 
 GraceBeforeStarter::
-# 196 "data/maps/StartTown/scripts.pory"
+# 197 "data/maps/StartTown/scripts.pory"
 	.string "GRACE: Hi {PLAYER}{KUN}!\p"
 	.string "The Last Dinner Party are in the\n"
 	.string "pub!\p"
@@ -360,22 +363,22 @@ GraceBeforeStarter::
 	.string "tell me all about it!$"
 
 GraceAfterStarter::
-# 209 "data/maps/StartTown/scripts.pory"
+# 210 "data/maps/StartTown/scripts.pory"
 	.string "GRACE: I can't believe you got your\n"
 	.string "first ever POKéMON from Abigail!\p"
 	.string "I have a feeling you'll do great \n"
 	.string "things, that POKéMON and you!$"
 
 PubSignText::
-# 243 "data/maps/StartTown/scripts.pory"
+# 244 "data/maps/StartTown/scripts.pory"
 	.string "The Two-Legged Dog \p"
 	.string "Fresh Drinks and Fresher Music!$"
 
 Route1SignText::
-# 248 "data/maps/StartTown/scripts.pory"
+# 249 "data/maps/StartTown/scripts.pory"
 	.string "{UP_ARROW} Route 1 \p"
 	.string "Beware of the wild POKéMON!$"
 
 ShelterSignText::
-# 253 "data/maps/StartTown/scripts.pory"
+# 254 "data/maps/StartTown/scripts.pory"
 	.string "Prelude Town POKéMON Shelter $"

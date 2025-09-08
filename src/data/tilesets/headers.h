@@ -889,7 +889,7 @@ const struct Tileset gTileset_PreludeTownTest =
     .palettes = gTilesetPalettes_PreludeTownTest,
     .metatiles = gMetatiles_PreludeTownTest,
     .metatileAttributes = gMetatileAttributes_PreludeTownTest,
-    .callback = NULL,
+    .callback = InitTilesetAnim_General,
 };
 
 const struct Tileset gTileset_PreludeTown_Secondary =

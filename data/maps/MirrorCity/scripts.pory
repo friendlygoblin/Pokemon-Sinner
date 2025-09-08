@@ -32,12 +32,14 @@ script MirrorCity_PlaceGoblin2{
 
 script MirrorCity_Goblin{
     msgbox(MirrorCity_GoblinThisIsIt, MSGBOX_AUTOCLOSE)
+    special(HealPlayerParty)
     trainerbattle_no_intro(TRAINER_GOBLIN_MIRROR_CITY, MirrorCity_GoblinDefeat)
     msgbox(MirrorCity_GoblinConcertHallLobby, MSGBOX_AUTOCLOSE)
     applymovement(Goblin, MirrorCity_GoblinLeave)
     waitmovement(0)
     removeobject(Goblin)
     setflag(FLAG_MIRRORCITY_GOBLIN)
+    setflag(FLAG_VISITED_EVER_GRANDE_CITY)
     setvar(VAR_MIRROR_CITY_GOBLIN, 1)
     release
     end
@@ -71,7 +73,9 @@ text MirrorCity_GoblinThisIsIt{
     "{PLAYER}… \p"
     "You've come such a long way, and I know \n"
     "you're probably ready but… \p"
-    "Spar with me before you go in! $"
+    "Spar with me before you go in! \p"
+    "I'll fix your team up to keep things \n"
+    "fair!$"
 }
 
 text MirrorCity_GoblinConcertHallLobby{

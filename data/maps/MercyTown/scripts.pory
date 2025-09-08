@@ -1,4 +1,10 @@
-mapscripts MercyTown_MapScripts {}
+mapscripts MercyTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : MercyTown_Visited
+}
+
+script MercyTown_Visited{
+    setflag(FLAG_VISITED_MAUVILLE_CITY)
+}
 
 script MercyTown_Route7Sign{
     lock

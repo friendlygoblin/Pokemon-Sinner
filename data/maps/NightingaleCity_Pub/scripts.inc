@@ -35,25 +35,49 @@ NightingaleCityPub_Barista::
 # 40 "data/maps/NightingaleCity_Pub/scripts.pory"
 	lock
 # 41 "data/maps/NightingaleCity_Pub/scripts.pory"
-	message NightingaleCityPub_Barista_Text_0
+	faceplayer
 # 42 "data/maps/NightingaleCity_Pub/scripts.pory"
-	waitmessage
+	message NightingaleCityPub_Barista_Text_0
 # 43 "data/maps/NightingaleCity_Pub/scripts.pory"
-	pokemart MartBar
+	waitmessage
 # 44 "data/maps/NightingaleCity_Pub/scripts.pory"
-	msgbox NightingaleCityPub_Barista_Text_1
+	pokemart MartBar
 # 45 "data/maps/NightingaleCity_Pub/scripts.pory"
+	msgbox NightingaleCityPub_Barista_Text_1
+# 46 "data/maps/NightingaleCity_Pub/scripts.pory"
+	release
+	end
+
+
+NightingaleCityPub_Toto::
+# 51 "data/maps/NightingaleCity_Pub/scripts.pory"
+	lock
+# 52 "data/maps/NightingaleCity_Pub/scripts.pory"
+	faceplayer
+# 53 "data/maps/NightingaleCity_Pub/scripts.pory"
+	msgbox NightingaleCityPub_Toto_Text_0
+# 54 "data/maps/NightingaleCity_Pub/scripts.pory"
 	release
 	end
 
 
 NightingaleCityPub_Barista_Text_0:
-# 41 "data/maps/NightingaleCity_Pub/scripts.pory"
+# 42 "data/maps/NightingaleCity_Pub/scripts.pory"
 	.string "Welcome to the Nightingale Pub, what \ncan I get ya?$"
 
 NightingaleCityPub_Barista_Text_1:
-# 44 "data/maps/NightingaleCity_Pub/scripts.pory"
+# 45 "data/maps/NightingaleCity_Pub/scripts.pory"
 	.string "Alright, come back soon!$"
+
+NightingaleCityPub_Toto_Text_0:
+# 53 "data/maps/NightingaleCity_Pub/scripts.pory"
+	.string "TOTO: Hi, come here often?\p"
+	.string "I'm only stopping by on my way to Mirror\n"
+	.string "City, I'm gonna see The Last Dinner\l"
+	.string "Party.\p"
+	.string "Speaking of, is that Emily Roberts I\n"
+	.string "just saw?\p"
+	.string "How sick!$"
 
 NCPub_EmilyGreetsPlayer::
 # 18 "data/maps/NightingaleCity_Pub/scripts.pory"

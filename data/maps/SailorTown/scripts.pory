@@ -1,4 +1,10 @@
-mapscripts SailorTown_MapScripts {}
+mapscripts SailorTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : SailorTown_Visited
+}
+
+script SailorTown_Visited{
+    setflag(FLAG_VISITED_PACIFIDLOG_TOWN)
+}
 
 script SailorTown_SwimmerF {
     trainerbattle_single(TRAINER_LUIS, format("I can hold my breath for a minute!"), format("Gasp! "))

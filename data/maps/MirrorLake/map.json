@@ -3,7 +3,7 @@
   "name": "MirrorLake",
   "layout": "LAYOUT_MIRROR_LAKE",
   "music": "MUS_B_PALACE",
-  "region_map_section": "MAPSEC_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_MOSSDEEP_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_TOWN",

@@ -1,4 +1,10 @@
-mapscripts BeautifulPort_MapScripts {}
+mapscripts BeautifulPort_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : BeautifulPort_Visited
+}
+
+script BeautifulPort_Visited{
+    setflag(FLAG_VISITED_SLATEPORT_CITY)
+}
 
 script BeautifulPort_CitySign{
     lock

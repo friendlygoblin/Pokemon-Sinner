@@ -38,10 +38,19 @@ movement NCPub_EmilyGoesToBackRoom{
 
 script NightingaleCityPub_Barista{
     lock
+    faceplayer
     message("Welcome to the Nightingale Pub, what \ncan I get ya?")
     waitmessage
     pokemart(MartBar)
     msgbox(format("Alright, come back soon!"))
+    release
+    end
+}
+
+script NightingaleCityPub_Toto{
+    lock
+    faceplayer
+    msgbox(format("TOTO: Hi, come here often?\pI'm only stopping by on my way to Mirror City, I'm gonna see The Last Dinner Party.\pSpeaking of, is that Emily Roberts I just saw?\pHow sick!"))
     release
     end
 }

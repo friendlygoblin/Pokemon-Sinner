@@ -2,9 +2,6 @@ mapscripts Route1_MapScripts {}
 
 const Goblin = 1
 
-const Potion = 3
-const Berry = 4
-
 script Route1_GoblinScript{
     lock
     applymovement(Goblin, Common_Movement_FacePlayer)
@@ -67,7 +64,7 @@ text GobTeachIntro{
     "What? A POKéMON? From Abigail?\p"
     "Cool!\p"
     "Oh! And that's a POKéDEX! \p"
-    "Wow {PLAYER}{KUN}! Look at you, you're\n"
+    "Wow {PLAYER}! Look at you, you're\n"
     "becoming a real POKéMON trainer!\p"
     "Me? \p"
     "Oh I'm just trying to catch some new \n"

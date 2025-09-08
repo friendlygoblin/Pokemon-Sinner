@@ -50,69 +50,73 @@ MirrorCity_Goblin::
 # 34 "data/maps/MirrorCity/scripts.pory"
 	msgbox MirrorCity_GoblinThisIsIt, MSGBOX_AUTOCLOSE
 # 35 "data/maps/MirrorCity/scripts.pory"
-	trainerbattle_no_intro TRAINER_GOBLIN_MIRROR_CITY, MirrorCity_GoblinDefeat
+	special HealPlayerParty
 # 36 "data/maps/MirrorCity/scripts.pory"
-	msgbox MirrorCity_GoblinConcertHallLobby, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_GOBLIN_MIRROR_CITY, MirrorCity_GoblinDefeat
 # 37 "data/maps/MirrorCity/scripts.pory"
-	applymovement 1, MirrorCity_GoblinLeave
+	msgbox MirrorCity_GoblinConcertHallLobby, MSGBOX_AUTOCLOSE
 # 38 "data/maps/MirrorCity/scripts.pory"
-	waitmovement 0
+	applymovement 1, MirrorCity_GoblinLeave
 # 39 "data/maps/MirrorCity/scripts.pory"
-	removeobject 1
+	waitmovement 0
 # 40 "data/maps/MirrorCity/scripts.pory"
-	setflag FLAG_MIRRORCITY_GOBLIN
+	removeobject 1
 # 41 "data/maps/MirrorCity/scripts.pory"
-	setvar VAR_MIRROR_CITY_GOBLIN, 1
+	setflag FLAG_MIRRORCITY_GOBLIN
 # 42 "data/maps/MirrorCity/scripts.pory"
+	setflag FLAG_VISITED_EVER_GRANDE_CITY
+# 43 "data/maps/MirrorCity/scripts.pory"
+	setvar VAR_MIRROR_CITY_GOBLIN, 1
+# 44 "data/maps/MirrorCity/scripts.pory"
 	release
 	end
 
 
-# 46 "data/maps/MirrorCity/scripts.pory"
-MirrorCity_Movement_PlaceGoblin1:
-# 47 "data/maps/MirrorCity/scripts.pory"
-	walk_down
-# 47 "data/maps/MirrorCity/scripts.pory"
-	walk_down
-# 47 "data/maps/MirrorCity/scripts.pory"
-	walk_down
-# 47 "data/maps/MirrorCity/scripts.pory"
-	walk_down
-# 47 "data/maps/MirrorCity/scripts.pory"
-	walk_down
 # 48 "data/maps/MirrorCity/scripts.pory"
+MirrorCity_Movement_PlaceGoblin1:
+# 49 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 49 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 49 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 49 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 49 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 50 "data/maps/MirrorCity/scripts.pory"
 	step_end
 
-# 51 "data/maps/MirrorCity/scripts.pory"
+# 53 "data/maps/MirrorCity/scripts.pory"
 MirrorCity_Movement_PlaceGoblin2:
-# 52 "data/maps/MirrorCity/scripts.pory"
-	walk_right
-# 53 "data/maps/MirrorCity/scripts.pory"
-	walk_down
-# 53 "data/maps/MirrorCity/scripts.pory"
-	walk_down
-# 53 "data/maps/MirrorCity/scripts.pory"
-	walk_down
-# 53 "data/maps/MirrorCity/scripts.pory"
-	walk_down
-# 53 "data/maps/MirrorCity/scripts.pory"
-	walk_down
 # 54 "data/maps/MirrorCity/scripts.pory"
+	walk_right
+# 55 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 55 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 55 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 55 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 55 "data/maps/MirrorCity/scripts.pory"
+	walk_down
+# 56 "data/maps/MirrorCity/scripts.pory"
 	step_end
 
-# 57 "data/maps/MirrorCity/scripts.pory"
-MirrorCity_GoblinLeave:
-# 58 "data/maps/MirrorCity/scripts.pory"
-	walk_up
-# 58 "data/maps/MirrorCity/scripts.pory"
-	walk_up
-# 58 "data/maps/MirrorCity/scripts.pory"
-	walk_up
-# 58 "data/maps/MirrorCity/scripts.pory"
-	walk_up
-# 58 "data/maps/MirrorCity/scripts.pory"
-	walk_up
 # 59 "data/maps/MirrorCity/scripts.pory"
+MirrorCity_GoblinLeave:
+# 60 "data/maps/MirrorCity/scripts.pory"
+	walk_up
+# 60 "data/maps/MirrorCity/scripts.pory"
+	walk_up
+# 60 "data/maps/MirrorCity/scripts.pory"
+	walk_up
+# 60 "data/maps/MirrorCity/scripts.pory"
+	walk_up
+# 60 "data/maps/MirrorCity/scripts.pory"
+	walk_up
+# 61 "data/maps/MirrorCity/scripts.pory"
 	step_end
 
 MirrorCity_CitySign_Text_0:
@@ -127,7 +131,7 @@ MirrorCity_ConcertHallSign_Text_0:
 	.string "PARTY$"
 
 MirrorCity_GoblinThisIsIt::
-# 62 "data/maps/MirrorCity/scripts.pory"
+# 64 "data/maps/MirrorCity/scripts.pory"
 	.string "GOBLIN: Hi, {PLAYER}.\p"
 	.string "So this is it, huh? \p"
 	.string "We're about to challenge The Last \n"
@@ -139,16 +143,18 @@ MirrorCity_GoblinThisIsIt::
 	.string "{PLAYER}… \p"
 	.string "You've come such a long way, and I know \n"
 	.string "you're probably ready but… \p"
-	.string "Spar with me before you go in! $"
+	.string "Spar with me before you go in! \p"
+	.string "I'll fix your team up to keep things \n"
+	.string "fair!$"
 
 MirrorCity_GoblinConcertHallLobby::
-# 77 "data/maps/MirrorCity/scripts.pory"
+# 81 "data/maps/MirrorCity/scripts.pory"
 	.string "GOBLIN: I knew it! \p"
 	.string "If anyone can win this, it's you! \p"
 	.string "I'll be preparing my strategy in the \n"
 	.string "Concert Hall lobby if you need me. $"
 
 MirrorCity_GoblinDefeat::
-# 84 "data/maps/MirrorCity/scripts.pory"
+# 88 "data/maps/MirrorCity/scripts.pory"
 	.string "Yup, you're ready! \n"
 	.string "Go show'em who's the real gunslinger!$"

@@ -1,1 +1,182 @@
 mapscripts VictoryRoad_3_MapScripts {}
+
+script VictoryRoad_Katie{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Katie_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_KATIE_3, format("Maybe I should  give them the portraits before battling?"))
+        msgbox(VictoryRoad_Katie_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Oh I get it, you also have to get ready… "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Katie_BattleIntro{
+    "KATIE: I drew a bunch of portraits \n"
+    "of The Last Dinner Party! \p"
+    "I'll hand them over after battling \n"
+    "the band but I'm so nervous… \p"
+    "Can I practice with you first? $"
+}
+
+text VictoryRoad_Katie_PostBattle{
+    "KATIE: Okay, I'll just be cool and\n"
+    "give them the portraits…  \p"
+    "How hard can it be? $"
+}
+
+script VictoryRoad_Norah{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Norah_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_NORAH_2, format("They will HAVE to play Second Best, I'm so serious!"))
+        msgbox(VictoryRoad_Norah_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Oh alright, I'll just keep training here for a bit."))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Norah_BattleIntro{
+    "NORAH: I heard many other artists \n"
+    "will be in Mirror City… "
+    "What if we can challenge them too? \p"
+    "Oh, I need to train even harder just \n"
+    "in case! \p"
+    "Wanna help?$"
+}
+
+text VictoryRoad_Norah_PostBattle{
+    "NORAH: Do you think artists spar with \n"
+    "each other? \p"
+    "I would kill to see that! $"
+}
+
+script VictoryRoad_Talia{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Talia_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_TALIA_3, format("Okay, I'll train a bit longer… \nBut I'm still winning the challenge!"))
+        msgbox(VictoryRoad_Talia_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Ah? No? Well, I'll prepare anywyay."))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Talia_BattleIntro{
+    "TALIA: I've seen TLDP many times, \n"
+    "and I'll see them many times more! \p"
+    "Especially since I'm gonna win the \n"
+    "guestlist challenge, and you're gonna \l"
+    "help me prepare! $"
+}
+
+text VictoryRoad_Talia_PostBattle{
+    "TALIA: I guess I need to polish my \n"
+    "strategy a bit more. \p"
+    "I'll see you at the shows! $"
+}
+
+script VictoryRoad_Yapgob{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Yapgob_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_YAPGOB_2, format("You defeated the almighty Goblin King? How??"))
+        msgbox(VictoryRoad_Yapgob_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Oh, okay."))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Yapgob_BattleIntro{
+    "YAPGOB: I left my island in the middle \n"
+    "of Mirror Lake to go see TLDP! \p"
+    "I know it's gonna be worth it, but if \n"
+    "I win the challenge, even better!\p"
+    "Would you like to train with me? $"
+}
+
+text VictoryRoad_Yapgob_PostBattle{
+    "YAPGOB: I wonder what the band's teams \n"
+    "look like. \p"
+    "Do you think they'll have Big Dog \n"
+    "POKéMON? $"
+}
+
+script VictoryRoad_Toto{
+    lock
+    faceplayer
+    msgbox(format("TOTO: I'm not gonna battle the band, I'm just here for the music. \pI wonder if they gave nicknames to their POKéMON… "))
+    release
+    end
+}
+
+script VictoryRoad_Aux{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Aux_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_AUX_2, format("What if I lose? Should I still ask?"))
+        msgbox(VictoryRoad_Aux_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("No? You're right, it should come from me… "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Aux_BattleIntro{
+    "AUX: If I win, I'll ask TLDP to \n"
+    "play Godzilla! \p"
+    "Now how am I gonna word it…  \p"
+    "Brainstorm with me over a battle! $"
+}
+
+text VictoryRoad_Aux_PostBattle{
+    "AUX: I love Godzilla so much, I need \n"
+    "to hear it live! $"
+}
+
+script VictoryRoad_Bear{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Bear_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_BEAR_2, format("What can I say, I'm a Big Dog fan!"))
+        msgbox(VictoryRoad_Bear_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Awh that's okay.\pI'm gonna win the challenge with my dog POKéMON, you know!"))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Bear_BattleIntro{
+    "BEAR: I visited Big Dog Island when \n"
+    "I found out TLDP went there! \p"
+    "I caught my POKéMON there, wanna see \n"
+    "them? $"
+}
+
+text VictoryRoad_Bear_PostBattle{
+    "BEAR: Have you been to Big Dog Island? \p"
+    "I really liked it there, and I love \p"
+    "the song Big Dog too! $"
+}

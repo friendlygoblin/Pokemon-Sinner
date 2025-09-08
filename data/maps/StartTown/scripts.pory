@@ -1,5 +1,4 @@
 mapscripts StartTown_MapScripts {
-
     MAP_SCRIPT_ON_TRANSITION: HidePokeballs
 }
 
@@ -12,6 +11,7 @@ script HidePokeballs{
     setflag(FLAG_POKEBALL_1)
     setflag(FLAG_POKEBALL_2)
     setflag(FLAG_POKEBALL_3)
+    setflag(FLAG_VISITED_LITTLEROOT_TOWN)
     end
 }
 
@@ -68,14 +68,14 @@ script GraceBattle{
         msgbox(Grace_PlayerNoBattle)
         }
     trainerbattle_no_intro(TRAINER_GRACE, GraceDefeat)
-    msgbox(GraceAfterBattle)
+    msgbox(GraceAfterBattle, MSGBOX_AUTOCLOSE)
     fadescreen(FADE_TO_BLACK)
     playfanfare(MUS_HEAL)
     waitfanfare
     special(HealPlayerParty)
     setrespawn(HEAL_LOCATION_START_TOWN)
     fadescreen(FADE_FROM_BLACK)
-    msgbox(GraceDoneHealing)
+    msgbox(GraceDoneHealing, MSGBOX_AUTOCLOSE)
     applymovement(Grace, GraceGoesBackToWhereSheWas)
     waitmovement(0)
     applymovement(Zig, ZigFollowsGraceBack)
@@ -145,7 +145,7 @@ text GraceBeforeBattle{
     "She also told you about the Guest \n"
     "List challenge?\p"
     "That's so exciting!\p"
-    "You'll need training a lot though, do \n"
+    "You'll need a lotta training though, do \n"
     "you know how POKéMON battles work?$"
 }
 
@@ -172,8 +172,9 @@ text GraceAfterBattle{
     "the challenge. \p"
     "You'll need to train really hard of \n"
     "course, The Last Dinner Party are the \l"
-    "best POKéMON trainers in the region.\p"
-    "And they're the best band in the world!\p"
+    "best POKéMON trainers around.\p"
+    "And they're the best band in the \n"
+    "world!\p"
     "I know of a few other artists who are \n"
     "doing something similar. \p"
     "Seems to be a new trend… \p"
