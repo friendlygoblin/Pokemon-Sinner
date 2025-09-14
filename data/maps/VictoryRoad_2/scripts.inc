@@ -152,14 +152,39 @@ VictoryRoad_Ann_2:
 	goto VictoryRoad_Ann_1
 
 
-VictoryRoad_Elle::
-# 176 "data/maps/VictoryRoad_2/scripts.pory"
-	lock
+VictoryRoad_Chantal::
 # 177 "data/maps/VictoryRoad_2/scripts.pory"
-	faceplayer
+	lock
 # 178 "data/maps/VictoryRoad_2/scripts.pory"
-	msgbox VictoryRoad_Elle_Text_0
+	faceplayer
 # 179 "data/maps/VictoryRoad_2/scripts.pory"
+	msgbox VictoryRoad_Chantal_BattleIntro, MSGBOX_YESNO
+# 180 "data/maps/VictoryRoad_2/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq VictoryRoad_Chantal_2
+# 185 "data/maps/VictoryRoad_2/scripts.pory"
+	msgbox VictoryRoad_Chantal_Text_1
+VictoryRoad_Chantal_1:
+# 187 "data/maps/VictoryRoad_2/scripts.pory"
+	release
+	end
+
+VictoryRoad_Chantal_2:
+# 181 "data/maps/VictoryRoad_2/scripts.pory"
+	trainerbattle_no_intro TRAINER_CHANTAL_2, VictoryRoad_Chantal_Text_0
+# 182 "data/maps/VictoryRoad_2/scripts.pory"
+	msgbox VictoryRoad_Chantal_PostBattle, MSGBOX_AUTOCLOSE
+	goto VictoryRoad_Chantal_1
+
+
+VictoryRoad_Elle::
+# 204 "data/maps/VictoryRoad_2/scripts.pory"
+	lock
+# 205 "data/maps/VictoryRoad_2/scripts.pory"
+	faceplayer
+# 206 "data/maps/VictoryRoad_2/scripts.pory"
+	msgbox VictoryRoad_Elle_Text_0
+# 207 "data/maps/VictoryRoad_2/scripts.pory"
 	release
 	end
 
@@ -219,8 +244,17 @@ VictoryRoad_Ann_Text_1:
 # 157 "data/maps/VictoryRoad_2/scripts.pory"
 	.string "That's fine I can pick by myself…$"
 
+VictoryRoad_Chantal_Text_0:
+# 181 "data/maps/VictoryRoad_2/scripts.pory"
+	.string "Do you think they'll accept?$"
+
+VictoryRoad_Chantal_Text_1:
+# 185 "data/maps/VictoryRoad_2/scripts.pory"
+	.string "That's alright, I'll be practicing here if\n"
+	.string "you change your mind…$"
+
 VictoryRoad_Elle_Text_0:
-# 178 "data/maps/VictoryRoad_2/scripts.pory"
+# 206 "data/maps/VictoryRoad_2/scripts.pory"
 	.string "ELLE: Oh, I'm not here to battle or\n"
 	.string "anything, I just wanna go to the show.\p"
 	.string "I think I spotted my old neighbour on\n"
@@ -305,5 +339,18 @@ VictoryRoad_Ann_BattleIntro::
 
 VictoryRoad_Ann_PostBattle::
 # 170 "data/maps/VictoryRoad_2/scripts.pory"
-	.string "ANN: This is a very important decision, \n"
-	.string "I need to pick the best Marina song! $"
+	.string "ANN: I also hope Lizzie will dress up as \n"
+	.string "a cowboy, I've drawn too much cowboy \l"
+	.string "Lizzie art to not see it happen! $"
+
+VictoryRoad_Chantal_BattleIntro::
+# 191 "data/maps/VictoryRoad_2/scripts.pory"
+	.string "CHANTAL: I brought my favourite TLDP \n"
+	.string "record for the band to sign! \p"
+	.string "Can I show you how I'm planning to \p"
+	.string "ask them? $"
+
+VictoryRoad_Chantal_PostBattle::
+# 198 "data/maps/VictoryRoad_2/scripts.pory"
+	.string "CHANTAL: I collect records, I have so \p"
+	.string "many variants already! $"

@@ -3,6 +3,8 @@
 
 void StartDodrioBerryPicking(u16 partyId, void (*exitCallback)(void));
 void IsDodrioInParty(void);
+void IsFennekinInParty(void);
+void IsPorygonInParty(void);
 void ShowDodrioBerryPickingRecords(void);
 
 #endif // GUARD_DODRIO_BERRY_PICKING_H

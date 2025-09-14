@@ -147,7 +147,7 @@ FastCurrentsHopeYouEnjoyVoyage::
 HopeYouEnjoyVoyage::
 # 93 "data/maps/SSTidalCorridor/scripts.pory"
 	.string "We hope you enjoy your voyage on\n"
-	.string "our ferry.$"
+	.string "The Interlude.$"
 
 MadeLandInBPort::
 # 98 "data/maps/SSTidalCorridor/scripts.pory"
@@ -161,6 +161,7 @@ MadeLandInGodzilland::
 
 CanRestInCabin2::
 # 108 "data/maps/SSTidalCorridor/scripts.pory"
+	.string "Welcome aboard The Interlude!\p"
 	.string "It'll be some time before we make land,\n"
 	.string "I reckon.\p"
 	.string "You can rest up in your cabin if you'd\n"
@@ -169,44 +170,44 @@ CanRestInCabin2::
 	.string "I can attest to how comfy it is!$"
 
 VisitOtherCabins::
-# 117 "data/maps/SSTidalCorridor/scripts.pory"
+# 118 "data/maps/SSTidalCorridor/scripts.pory"
 	.string "Go visit other cabins.\n"
 	.string "Trainers bored of the boat trip will\l"
 	.string "be itching to battle.$"
 
 EnjoyYourCruise::
-# 123 "data/maps/SSTidalCorridor/scripts.pory"
+# 124 "data/maps/SSTidalCorridor/scripts.pory"
 	.string "Enjoy your cruise!$"
 
 HorizonSpreadsBeyondPorthole::
-# 127 "data/maps/SSTidalCorridor/scripts.pory"
+# 128 "data/maps/SSTidalCorridor/scripts.pory"
 	.string "The horizon spreads beyond\n"
 	.string "the porthole.$"
 
 WelcomeAboard::
-# 132 "data/maps/SSTidalCorridor/scripts.pory"
-	.string "Welcome aboard, {PLAYER}!\p"
+# 133 "data/maps/SSTidalCorridor/scripts.pory"
+	.string "Welcome aboard!\p"
 	.string "I'm the captain of The Interlude!\p"
 	.string "Thank you for sailing with us, feel free \n"
 	.string "to explore the ship and meet the other \l"
 	.string "passengers!$"
 
 Peeko::
-# 140 "data/maps/SSTidalCorridor/scripts.pory"
+# 141 "data/maps/SSTidalCorridor/scripts.pory"
 	.string "PEEKO: Reeee eeeee…$"
 
 ShipCorridor_Text_Cabin1::
-# 143 "data/maps/SSTidalCorridor/scripts.pory"
+# 144 "data/maps/SSTidalCorridor/scripts.pory"
 	.string "Cabin 1$"
 
 ShipCorridor_Text_Cabin2::
-# 146 "data/maps/SSTidalCorridor/scripts.pory"
+# 147 "data/maps/SSTidalCorridor/scripts.pory"
 	.string "Cabin 2$"
 
 ShipCorridor_Text_Cabin3::
-# 150 "data/maps/SSTidalCorridor/scripts.pory"
+# 151 "data/maps/SSTidalCorridor/scripts.pory"
 	.string "Cabin 3$"
 
 ShipCorridor_Text_Cabin4::
-# 154 "data/maps/SSTidalCorridor/scripts.pory"
+# 155 "data/maps/SSTidalCorridor/scripts.pory"
 	.string "Cabin 4$"

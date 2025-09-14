@@ -1,8 +1,8 @@
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you waiting!\p"
 	.string "Welcome to the world of POKéMON!\p"
-	.string "I'm Goblin, I'm a Parlour Chef but \n"
-	.string "also a big POKéMON nerd and TLDP Fan!\p"
+	.string "I'm Goblin, big POKéMON nerd and even \n"
+	.string "bigger The Last Dinner Party Fan!\p"
 	.string "$"
 
 gText_Birch_Pokemon::
@@ -10,15 +10,12 @@ gText_Birch_Pokemon::
 	.string "$"
 
 gText_Birch_MainSpeech::
-	.string "This world is widely inhabited by\n"
-	.string "creatures known as POKéMON.\p"
-	.string "We humans live alongside POKéMON,\n"
-	.string "at times as friendly playmates, and\l"
-	.string "at times as cooperative workmates.\p"
+	.string "People live alongside POKéMON, and live\n"
+	.string "plenty of adventures with them.\p"
 	.string "And sometimes, we band together\n"
 	.string "and battle others like us!\p"
 	.string "Some people are really good at this,\n"
-	.string "like The Last Dinner Party.\p"
+	.string "like TLDP.\p"
 	.string "They have a show coming up, and they \n"
 	.string "are cordially inviting whoever beats \l"
 	.string "them all in POKéMON battle!\p"
@@ -36,8 +33,7 @@ gText_Birch_BoyOrGirl::
 	.string "That's like super important… $"
 
 gText_Birch_WhatsYourName::
-	.string "All right.\n"
-	.string "And uh…  what's your name?$"
+	.string "What's your name?$"
 
 gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}?$"

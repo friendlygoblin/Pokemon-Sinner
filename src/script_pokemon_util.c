@@ -464,6 +464,15 @@ u32 ScriptGiveMon(u16 species, u8 level, u16 item)
     return ScriptGiveMonParameterized(0, PARTY_SIZE, species, level, item, ITEM_POKE_BALL, NUM_NATURES, NUM_ABILITY_PERSONALITY, MON_GENDERLESS, evs, ivs, moves, FALSE, FALSE, NUMBER_OF_MON_TYPES);
 }
 
+void DeleteChosenPartyMon(void)
+{
+    if (gSpecialVar_0x8004 != PARTY_SIZE)
+    {
+        ZeroMonData(&gPlayerParty[gSpecialVar_0x8004]);
+        CompactPartySlots();
+    }
+}
+
 #define PARSE_FLAG(n, default_) (flags & (1 << (n))) ? VarGet(ScriptReadHalfword(ctx)) : (default_)
 
 /* Give or create a mon to either player or opponent

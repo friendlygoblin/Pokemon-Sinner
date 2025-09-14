@@ -121,7 +121,7 @@ text VictoryRoad_Yapgob_PostBattle{
 script VictoryRoad_Toto{
     lock
     faceplayer
-    msgbox(format("TOTO: I'm not gonna battle the band, I'm just here for the music. \pI wonder if they gave nicknames to their POKéMON… "))
+    msgbox(format("TOTO: I'm not gonna challenge the band, I'm just here for the music. \pI wonder if they gave nicknames to their POKéMON… "))
     release
     end
 }
@@ -144,7 +144,7 @@ script VictoryRoad_Aux{
 text VictoryRoad_Aux_BattleIntro{
     "AUX: If I win, I'll ask TLDP to \n"
     "play Godzilla! \p"
-    "Now how am I gonna word it…  \p"
+    "Now how am I gonna word it… \p"
     "Brainstorm with me over a battle! $"
 }
 
@@ -177,6 +177,34 @@ text VictoryRoad_Bear_BattleIntro{
 
 text VictoryRoad_Bear_PostBattle{
     "BEAR: Have you been to Big Dog Island? \p"
-    "I really liked it there, and I love \p"
+    "I really liked it there, and I love \n"
     "the song Big Dog too! $"
+}
+
+script VictoryRoad_Q{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Q_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_Q_2, format("Not quite ready yet… "))
+        msgbox(VictoryRoad_Q_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("I'll find someone else to train with, then…  "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Q_BattleIntro{
+    "Q: I've been listening to The Last \n"
+    "Dinner Party's music on a loop for \l"
+    "months! \p"
+    "I can't wait to face them, can I battle \p"
+    "with you to be sure I'm ready? $"
+}
+
+text VictoryRoad_Q_PostBattle{
+    "Q: I guess I'll prepare a bit longer \p"
+    "while listening to the band…  $"
 }

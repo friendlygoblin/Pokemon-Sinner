@@ -127,6 +127,31 @@ VictoryRoad_Steff_2:
 	goto VictoryRoad_Steff_1
 
 
+VictoryRoad_Brenae::
+# 148 "data/maps/VictoryRoad_1/scripts.pory"
+	lock
+# 149 "data/maps/VictoryRoad_1/scripts.pory"
+	faceplayer
+# 150 "data/maps/VictoryRoad_1/scripts.pory"
+	msgbox VictoryRoad_Brenae_BattleIntro, MSGBOX_YESNO
+# 151 "data/maps/VictoryRoad_1/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq VictoryRoad_Brenae_2
+# 156 "data/maps/VictoryRoad_1/scripts.pory"
+	msgbox VictoryRoad_Brenae_Text_1
+VictoryRoad_Brenae_1:
+# 158 "data/maps/VictoryRoad_1/scripts.pory"
+	release
+	end
+
+VictoryRoad_Brenae_2:
+# 152 "data/maps/VictoryRoad_1/scripts.pory"
+	trainerbattle_no_intro TRAINER_BRENAE_2, VictoryRoad_Brenae_Text_0
+# 153 "data/maps/VictoryRoad_1/scripts.pory"
+	msgbox VictoryRoad_Brenae_PostBattle, MSGBOX_AUTOCLOSE
+	goto VictoryRoad_Brenae_1
+
+
 VictoryRoad_Jay_Text_0:
 # 8 "data/maps/VictoryRoad_1/scripts.pory"
 	.string "I think you can win against TLDP!$"
@@ -163,6 +188,14 @@ VictoryRoad_Steff_Text_0:
 VictoryRoad_Steff_Text_1:
 # 126 "data/maps/VictoryRoad_1/scripts.pory"
 	.string "Alright, as you wish.$"
+
+VictoryRoad_Brenae_Text_0:
+# 152 "data/maps/VictoryRoad_1/scripts.pory"
+	.string "So nervous…$"
+
+VictoryRoad_Brenae_Text_1:
+# 156 "data/maps/VictoryRoad_1/scripts.pory"
+	.string "I'll practice with my POKéMON then…$"
 
 VictoryRoad_Jay_BattleIntro::
 # 18 "data/maps/VictoryRoad_1/scripts.pory"
@@ -232,3 +265,15 @@ VictoryRoad_Steff_PostBattle::
 	.string "and I'm ready to give them my POKéMON \l"
 	.string "too! \p"
 	.string "… I'm very normal about this band… $"
+
+VictoryRoad_Brenae_BattleIntro::
+# 162 "data/maps/VictoryRoad_1/scripts.pory"
+	.string "BRENAE: I'm so nervous and excited \n"
+	.string "about seeing The Last Dinner Party! \p"
+	.string "Can I practice what I'm gonna say to \p"
+	.string "them with you? $"
+
+VictoryRoad_Brenae_PostBattle::
+# 169 "data/maps/VictoryRoad_1/scripts.pory"
+	.string "BRENAE: I love this band so much, I'm \p"
+	.string "shaking! $"

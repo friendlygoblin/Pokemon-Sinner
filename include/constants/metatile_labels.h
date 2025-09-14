@@ -179,10 +179,9 @@
 #define METATILE_Fallarbor_BrownCaveIndent           0x208
 #define METATILE_Fallarbor_BrownCaveOpen             0x210
 #define METATILE_Fallarbor_BrownRockWall             0x265
-#define METATILE_Fallarbor_Door                      0x8A5
-#define METATILE_Fallarbor_Door_BattleTent           0x36C
+#define METATILE_Fallarbor_Door_BattleTent           0x96C
 #define METATILE_Fallarbor_Door_DarkRoof             0x2F7
-#define METATILE_Fallarbor_Door_LightRoof            0x2A5
+#define METATILE_Fallarbor_Door_LightRoof            0x8A5
 #define METATILE_Fallarbor_NormalGrass               0x212
 #define METATILE_Fallarbor_RedCaveEntrance_Bottom    0x34F
 #define METATILE_Fallarbor_RedCaveEntrance_Top       0x347
@@ -259,6 +258,7 @@
 #define METATILE_InsideOfTruck_ExitLight_Top           0x208
 
 // gTileset_InsideShip
+#define METATILE_InsideShip_Door                        0x82B
 #define METATILE_InsideShip_DoorIndent_Locked           0x234
 #define METATILE_InsideShip_DoorIndent_Unlocked         0x21A
 #define METATILE_InsideShip_IntactDoor_Bottom_Interior  0x297
@@ -435,6 +435,9 @@
 // gTileset_PreludeTownTest
 #define METATILE_PreludeTownTest_CalmWater  0x170
 #define METATILE_PreludeTownTest_Door       0x021
+
+// gTileset_PreludeTown_Secondary
+#define METATILE_PreludeTown_Secondary_Door  0x869
 
 // gTileset_Rustboro
 #define METATILE_Rustboro_Door_Gray  0x81F
@@ -783,6 +786,9 @@
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
+
+// gTileset_prelude_town
+#define METATILE_prelude_town_Door  0x909
 
 // Other
 #define METATILE_RSMossdeepGym_RedArrow_Down   0x205

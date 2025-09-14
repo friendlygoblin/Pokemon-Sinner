@@ -4,7 +4,7 @@ Route2_MapScripts::
 
 Route2_Jay::
 # 6 "data/maps/Route2/scripts.pory"
-	trainerbattle_single TRAINER_SAWYER_1, Jay_BattleIntro, Jay_Defeated, Route2_Jay_PostBattle
+	trainerbattle_single TRAINER_JAY, Jay_BattleIntro, Jay_Defeated, Route2_Jay_PostBattle
 # 7 "data/maps/Route2/scripts.pory"
 	goto Route2_Jay_PostBattle
 	return

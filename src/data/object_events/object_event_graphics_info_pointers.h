@@ -8,10 +8,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jay;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ann;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Wren;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Julie;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Piplup;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Katie;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rockruff;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Impidimp;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Spraggy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PPElla;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PPKatherine;
@@ -26,6 +23,11 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Meggo;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gosia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tilly;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Waris;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Morpheus;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Q;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chantal;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Nat;
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NinjaBoy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Twin;
@@ -283,10 +285,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ANN] =                      &gObjectEventGraphicsInfo_Ann,
     [OBJ_EVENT_GFX_WREN] =                     &gObjectEventGraphicsInfo_Wren,
     [OBJ_EVENT_GFX_JULIE] =                    &gObjectEventGraphicsInfo_Julie,
-    [OBJ_EVENT_GFX_PIPLUP] =                   &gObjectEventGraphicsInfo_Piplup,
     [OBJ_EVENT_GFX_KATIE] =                    &gObjectEventGraphicsInfo_Katie,
-    [OBJ_EVENT_GFX_ROCKRUFF] =                 &gObjectEventGraphicsInfo_Rockruff,
-    [OBJ_EVENT_GFX_IMPIDIMP] =                 &gObjectEventGraphicsInfo_Impidimp,
     [OBJ_EVENT_GFX_SPRAGGY] =                  &gObjectEventGraphicsInfo_Spraggy,
     [OBJ_EVENT_GFX_PPELLA] =                   &gObjectEventGraphicsInfo_PPElla,
     [OBJ_EVENT_GFX_PPKATHERINE] =              &gObjectEventGraphicsInfo_PPKatherine,
@@ -301,6 +300,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_MEGGO] =                    &gObjectEventGraphicsInfo_Meggo,
     [OBJ_EVENT_GFX_GOSIA] =                    &gObjectEventGraphicsInfo_Gosia,
     [OBJ_EVENT_GFX_TILLY] =                    &gObjectEventGraphicsInfo_Tilly,
+    [OBJ_EVENT_GFX_WARIS] =                    &gObjectEventGraphicsInfo_Waris,
+    [OBJ_EVENT_GFX_MORPHEUS] =                 &gObjectEventGraphicsInfo_Morpheus,
+    [OBJ_EVENT_GFX_Q] =                        &gObjectEventGraphicsInfo_Q,
+    [OBJ_EVENT_GFX_CHANTAL] =                  &gObjectEventGraphicsInfo_Chantal,
+    [OBJ_EVENT_GFX_NAT] =                      &gObjectEventGraphicsInfo_Nat,
 
     [OBJ_EVENT_GFX_NINJA_BOY] =                &gObjectEventGraphicsInfo_NinjaBoy,
     [OBJ_EVENT_GFX_TWIN] =                     &gObjectEventGraphicsInfo_Twin,

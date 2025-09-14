@@ -385,6 +385,21 @@ const u32 gTrainerPalette_George[] = INCBIN_U32("graphics/trainers/front_pics/ge
 const u32 gTrainerFrontPic_Tilly[] = INCBIN_U32("graphics/trainers/front_pics/tilly.4bpp.lz");
 const u32 gTrainerPalette_Tilly[] = INCBIN_U32("graphics/trainers/front_pics/tilly.gbapal.lz");
 
+const u32 gTrainerFrontPic_Brenae[] = INCBIN_U32("graphics/trainers/front_pics/brenae.4bpp.lz");
+const u32 gTrainerPalette_Brenae[] = INCBIN_U32("graphics/trainers/front_pics/brenae.gbapal.lz");
+
+const u32 gTrainerFrontPic_Waris[] = INCBIN_U32("graphics/trainers/front_pics/waris.4bpp.lz");
+const u32 gTrainerPalette_Waris[] = INCBIN_U32("graphics/trainers/front_pics/waris.gbapal.lz");
+
+const u32 gTrainerFrontPic_Morpheus[] = INCBIN_U32("graphics/trainers/front_pics/morpheus.4bpp.lz");
+const u32 gTrainerPalette_Morpheus[] = INCBIN_U32("graphics/trainers/front_pics/morpheus.gbapal.lz");
+
+const u32 gTrainerFrontPic_Ness[] = INCBIN_U32("graphics/trainers/front_pics/ness.4bpp.lz");
+const u32 gTrainerPalette_Ness[] = INCBIN_U32("graphics/trainers/front_pics/ness.gbapal.lz");
+
+const u32 gTrainerFrontPic_Chantal[] = INCBIN_U32("graphics/trainers/front_pics/chantal.4bpp.lz");
+const u32 gTrainerPalette_Chantal[] = INCBIN_U32("graphics/trainers/front_pics/chantal.gbapal.lz");
+
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
 // gTrainerFrontPic/gTrainerPalette pointers, (e.g "gTrainerFrontPic_Hiker" and "gTrainerPalette_Hiker").
@@ -525,6 +540,11 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(CAL, Cal), 
     TRAINER_SPRITE(GEORGE, George), 
     TRAINER_SPRITE(TILLY, Tilly), 
+    TRAINER_SPRITE(BRENAE, Brenae), 
+    TRAINER_SPRITE(WARIS, Waris), 
+    TRAINER_SPRITE(MORPHEUS, Morpheus), 
+    TRAINER_SPRITE(NESS, Ness), 
+    TRAINER_SPRITE(CHANTAL, Chantal), 
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

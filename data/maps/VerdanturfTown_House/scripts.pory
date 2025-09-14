@@ -31,3 +31,13 @@ text ExplainShadowBall{
 	"Your POKéMON makes a ball ow darkness \n"
 	"and then it goes wooosh BOOM!$"
 }
+
+script BDI_Greavard{
+    lock
+    faceplayer
+	playmoncry(SPECIES_GREAVARD, CRY_MODE_NORMAL)
+	waitmoncry
+    msgbox(format("GREAVARD: Woof!"))
+    release
+    end
+}

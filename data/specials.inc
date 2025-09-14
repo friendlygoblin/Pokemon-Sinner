@@ -439,6 +439,8 @@ gSpecials::
 	def_special IsPokemonJumpSpeciesInParty
 	def_special ShowPokemonJumpRecords
 	def_special IsDodrioInParty
+	def_special IsFennekinInParty
+	def_special IsPorygonInParty
 	def_special ShowDodrioBerryPickingRecords
 	def_special OffsetCameraForBattle
 	def_special GetDeptStoreDefaultFloorChoice
@@ -554,3 +556,5 @@ gSpecials::
 	def_special Script_GetChosenMonDefensiveEVs
 	def_special Script_GetChosenMonOffensiveIVs
 	def_special Script_GetChosenMonDefensiveIVs
+	def_special DeleteChosenPartyMon
+	

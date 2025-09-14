@@ -107,6 +107,11 @@ text Route6_Youngster_PostBattle{
     "like you! $"
 }
 
+script Route6_DragonTamer {
+    trainerbattle_single(TRAINER_AARON, format("You're not ready for the power of my dragons!"), format("Okay, maybe you were ready…"))
+    msgbox(format("No POKéMON type is cooler than Dragon!\pExcept maybe Ice?"), MSGBOX_AUTOCLOSE)
+}
+
 script PoolSign{
     lock
     msgbox(format("Public Pools \pSoak in the Crystal Stream!"))

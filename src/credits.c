@@ -90,13 +90,13 @@ static EWRAM_DATA struct CreditsData *sCreditsData = {0};
 static const u16 sCredits_Pal[] = INCBIN_U16("graphics/credits/credits.gbapal");
 static const u32 sCreditsCopyrightEnd_Gfx[] = INCBIN_U32("graphics/credits/the_end_copyright.4bpp.lz");
 
-static void SpriteCB_CreditsMonBg(struct Sprite *);
+//static void SpriteCB_CreditsMonBg(struct Sprite *);
 static void Task_WaitPaletteFade(u8);
 static void Task_CreditsMain(u8);
 static void Task_ReadyBikeScene(u8);
 static void Task_SetBikeScene(u8);
-static void Task_LoadShowMons(u8);
-static void Task_ReadyShowMons(u8);
+//static void Task_LoadShowMons(u8);
+//static void Task_ReadyShowMons(u8);
 static void Task_CreditsTheEnd1(u8);
 static void Task_CreditsTheEnd2(u8);
 static void Task_CreditsTheEnd3(u8);
@@ -107,7 +107,7 @@ static void Task_CreditsSoftReset(u8);
 static void ResetGpuAndVram(void);
 static void Task_UpdatePage(u8);
 static u8 CheckChangeScene(u8, u8);
-static void Task_ShowMons(u8);
+//static void Task_ShowMons(u8);
 static void Task_CycleSceneryPalette(u8);
 static void Task_BikeScene(u8);
 static bool8 LoadBikeScene(u8 data, u8);
@@ -116,8 +116,8 @@ static void LoadTheEndScreen(u16, u16, u16);
 static void DrawTheEnd(u16, u16);
 static void SpriteCB_Player(struct Sprite *);
 static void SpriteCB_Rival(struct Sprite *);
-static u8 CreateCreditsMonSprite(u16, s16, s16, u16);
-static void DeterminePokemonToShow(void);
+//static u8 CreateCreditsMonSprite(u16, s16, s16, u16);
+//static void DeterminePokemonToShow(void);
 
 static const u8 sTheEnd_LetterMap_T[] =
 {
@@ -324,7 +324,7 @@ static const union AnimCmd *const sAnims_MonBg[] =
     [POS_RIGHT]  = sAnim_MonBg_Blue,
 };
 
-static const struct SpriteTemplate sSpriteTemplate_CreditsMonBg =
+/*static const struct SpriteTemplate sSpriteTemplate_CreditsMonBg =
 {
     .tileTag = TAG_MON_BG,
     .paletteTag = TAG_MON_BG,
@@ -333,7 +333,7 @@ static const struct SpriteTemplate sSpriteTemplate_CreditsMonBg =
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_CreditsMonBg,
-};
+};*/
 
 static void VBlankCB_Credits(void)
 {
@@ -451,11 +451,11 @@ void CB2_StartCreditsSequence(void)
     sUsedSpeedUp = FALSE;
     sCreditsData = AllocZeroed(sizeof(struct CreditsData));
 
-    DeterminePokemonToShow();
+    //DeterminePokemonToShow();
 
-    sCreditsData->imgCounter = 0;
+    /*sCreditsData->imgCounter = 0;
     sCreditsData->nextImgPos = POS_LEFT;
-    sCreditsData->currShownMon = 0;
+    sCreditsData->currShownMon = 0;*/
 
     sSavedTaskId = taskId;
 }
@@ -491,14 +491,14 @@ static void Task_CreditsMain(u8 taskId)
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_ReadyBikeScene;
     }
-    else if (gTasks[taskId].tNextMode == MODE_SHOW_MONS)
+    /*else if (gTasks[taskId].tNextMode == MODE_SHOW_MONS)
     {
         // Start a Pokémon interlude
         gTasks[taskId].tCurrentMode = mode;
         gTasks[taskId].tNextMode = MODE_NONE;
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_ReadyShowMons;
-    }
+    }*/
 }
 
 static void Task_ReadyBikeScene(u8 taskId)
@@ -524,7 +524,7 @@ static void Task_SetBikeScene(u8 taskId)
     }
 }
 
-static void Task_ReadyShowMons(u8 taskId)
+/*static void Task_ReadyShowMons(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
@@ -596,7 +596,7 @@ static void Task_LoadShowMons(u8 taskId)
         gTasks[taskId].func = Task_WaitPaletteFade;
         break;
     }
-}
+}*/
 
 static void Task_CreditsTheEnd1(u8 taskId)
 {
@@ -827,76 +827,15 @@ static void Task_UpdatePage(u8 taskId)
 
 #undef tDelay
 
-#define PAGE_INTERVAL (PAGE_COUNT / 9) // 9 scenes (5 bike scenes, 4 Pokémon interludes)
-
 static u8 CheckChangeScene(u8 page, u8 taskId)
 {
     // Starts with bike + ocean + morning (SCENE_OCEAN_MORNING)
-
-    if (page == PAGE_INTERVAL * 1)
-    {
-        // Pokémon interlude
-        gTasks[taskId].tNextMode = MODE_SHOW_MONS;
-    }
-
-    if (page == PAGE_INTERVAL * 2)
-    {
-        // Bike + ocean + sunset
-        gTasks[taskId].tSceneNum = SCENE_OCEAN_SUNSET;
-        gTasks[taskId].tNextMode = MODE_BIKE_SCENE;
-    }
-
-    if (page == PAGE_INTERVAL * 3)
-    {
-        // Pokémon interlude
-        gTasks[taskId].tNextMode = MODE_SHOW_MONS;
-    }
-
-    if (page == PAGE_INTERVAL * 4)
-    {
-        // Bike + forest + sunset
-        gTasks[taskId].tSceneNum = SCENE_FOREST_RIVAL_ARRIVE;
-        gTasks[taskId].tNextMode = MODE_BIKE_SCENE;
-    }
-
-    if (page == PAGE_INTERVAL * 5)
-    {
-        // Pokémon interlude
-        gTasks[taskId].tNextMode = MODE_SHOW_MONS;
-    }
-
-    if (page == PAGE_INTERVAL * 6)
-    {
-        // Bike + forest + sunset
-        gTasks[taskId].tSceneNum = SCENE_FOREST_CATCH_RIVAL;
-        gTasks[taskId].tNextMode = MODE_BIKE_SCENE;
-    }
-
-    if (page == PAGE_INTERVAL * 7)
-    {
-        // Pokémon interlude
-        gTasks[taskId].tNextMode = MODE_SHOW_MONS;
-    }
-
-    if (page == PAGE_INTERVAL * 8)
-    {
-        // Bike + town + night
-        gTasks[taskId].tSceneNum = SCENE_CITY_NIGHT;
-        gTasks[taskId].tNextMode = MODE_BIKE_SCENE;
-    }
-
-    if (gTasks[taskId].tNextMode != MODE_NONE)
-    {
-        // Returns true if changed
-        return TRUE;
-    }
-
     return FALSE;
 }
 
 #define tDelay data[3]
 
-static void Task_ShowMons(u8 taskId)
+/*static void Task_ShowMons(u8 taskId)
 {
     u8 spriteId;
 
@@ -943,7 +882,7 @@ static void Task_ShowMons(u8 taskId)
             gTasks[taskId].tState = 1;
         break;
     }
-}
+}*/
 
 #undef tMainTaskId
 #undef tDelay
@@ -1275,14 +1214,14 @@ static void ResetCreditsTasks(u8 taskId)
         DestroyTask(gTasks[taskId].tTaskId_SceneryPal);
         gTasks[taskId].tTaskId_SceneryPal = 0;
     }
-
+/*
     // Destroy Task_ShowMons, if running
     if (gTasks[taskId].tTaskId_ShowMons != 0)
     {
         DestroyTask(gTasks[taskId].tTaskId_ShowMons);
         gTasks[taskId].tTaskId_ShowMons = 0;
     }
-
+*/
     gIntroCredits_MovingSceneryState = INTROCRED_SCENERY_DESTROY;
 }
 
@@ -1422,7 +1361,7 @@ static void SpriteCB_Rival(struct Sprite *sprite)
 #define sPosition data[1]
 #define sSpriteId data[6]
 
-static void SpriteCB_CreditsMon(struct Sprite *sprite)
+/*static void SpriteCB_CreditsMon(struct Sprite *sprite)
 {
     if (gIntroCredits_MovingSceneryState != INTROCRED_SCENERY_NORMAL)
     {
@@ -1631,4 +1570,4 @@ static void DeterminePokemonToShow(void)
         }
     }
     sCreditsData->numMonToShow = NUM_MON_SLIDES;
-}
+}*/

@@ -3,10 +3,133 @@ Route114_LanettesHouse_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route114_LanettesHouse_OnTransition
 	.byte 0
 
-Route114_LanettesHouse_OnTransition:
-	setflag FLAG_LANDMARK_LANETTES_HOUSE
-	end
 `
+const Amy = 1
+const Lizzie = 5
+
+script Route114_LanettesHouse_OnTransition{
+	setflag(FLAG_LANDMARK_LANETTES_HOUSE)
+	end
+}
+
+script ParlourZine_Lizzie{
+	lock
+	applymovement(Lizzie, Common_Movement_WalkInPlaceLeft)
+	waitmovement(0)
+	msgbox(ParlourZine_LizzieBeingInterviewed, MSGBOX_AUTOCLOSE)
+	applymovement(Lizzie, ParlourZine_LizzieNoticePlayer)
+	waitmovement(0)
+	msgbox(ParlourZine_LizzieWeWereFinishing, MSGBOX_AUTOCLOSE)
+	applymovement(Amy, Common_Movement_WalkInPlaceRight)
+	waitmovement(0)
+	msgbox(ParlourZine_AmyWhyDontUAsk)
+	dynmultipush("Question about soup", 1)
+	dynmultipush("Question about stone", 2)
+	dynmultipush("Question about sins", 3)
+	dynmultipush("Question about shoes", 4)
+	dynmultistack(0, 0, FALSE, 6, FALSE, 3, DYN_MULTICHOICE_CB_NONE)
+	applymovement(Lizzie, Common_Movement_WalkInPlaceRight)
+	waitmovement(0)
+	switch(var(VAR_RESULT)){
+		case 1:
+			msgbox(ParlourZine_QuestionAboutSoup, MSGBOX_AUTOCLOSE)
+		case 2:
+			msgbox(ParlourZine_QuestionAboutStone, MSGBOX_AUTOCLOSE)
+		case 3:
+			msgbox(ParlourZine_QuestionAboutSins, MSGBOX_AUTOCLOSE)
+		case 4:
+			msgbox(ParlourZine_QuestionAboutShoes, MSGBOX_AUTOCLOSE)
+		default:
+		msgbox(ParlourZine_QuestionAboutSoup, MSGBOX_AUTOCLOSE)
+	}
+	applymovement(Amy, Common_Movement_WalkInPlaceRight)
+	applymovement(Lizzie, Common_Movement_FaceLeft)
+	waitmovement(0)
+	msgbox(ParlourZine_AmyThatsAll, MSGBOX_AUTOCLOSE)
+	applymovement(Lizzie, Common_Movement_WalkInPlaceLeft)
+	waitmovement(0)
+	msgbox(ParlourZine_LizzieIllLeave, MSGBOX_AUTOCLOSE)
+	applymovement(OBJ_EVENT_ID_PLAYER, ParlourZine_PlayerMoveAside)
+	waitmovement(0)
+	applymovement(Lizzie, ParlourZine_LizzieLeaves)
+	waitmovement(0)
+	removeobject(Lizzie)
+	setflag(FLAG_PARLOURZINE_LIZZIE)
+	setflag(FLAG_LIZZIE_INTERVIEW_COMPLETED)
+	release
+	end
+
+}
+
+text ParlourZine_LizzieBeingInterviewed{
+	"LIZZIE: Thanks for having me, Amy. \p"
+	"It's an honour of being featured in \n"
+	"ParlourZine!$"
+}
+
+text ParlourZine_QuestionAboutSoup{
+	"LIZZIE: What soup I would like to be? \p"
+	"Soup!$"
+}
+
+text ParlourZine_QuestionAboutStone{
+	"LIZZIE: What stone I would like to be? \p"
+	"I think I'll pick cobblestone.$"
+}
+
+text ParlourZine_QuestionAboutSins{
+	"LIZZIE: What is my biggest sin? \p"
+	"Being fucking gay.$"
+}
+
+text ParlourZine_QuestionAboutShoes{
+	"LIZZIE: Weirdest thing I've ever \n"
+	"found in my shoe? \p"
+	"A dead Rattata for sure.$"
+}
+
+text ParlourZine_LizzieWeWereFinishing{
+	"LIZZIE: Hi, {PLAYER}! \p"
+	"I was finishing my interview with Amy, \n"
+	"I hope you'll read it in ParlourZine!$"
+}
+
+text ParlourZine_AmyWhyDontUAsk{
+	"AMY: Hey {PLAYER}, since you're here, \n"
+	"is there a question you want to ask \l"
+	"Lizzie before they leave?$"
+}
+
+text ParlourZine_AmyThatsAll{
+	"AMY: Thank you for everything, Lizzie! \p"
+	"And {PLAYER}, for the final question.$"
+}
+
+text ParlourZine_LizzieIllLeave{
+	"LIZZIE: Well, if you have everything \n"
+	"you need, I'll be on my way now. \p"
+	"I'll see you both in Mirror City!$"
+}
+
+movement ParlourZine_PlayerMoveAside{
+	walk_up
+	face_down
+	step_end
+}
+
+movement ParlourZine_LizzieNoticePlayer{
+	emote_exclamation_mark
+	delay_16
+	walk_in_place_right
+	step_end
+}
+
+movement ParlourZine_LizzieLeaves{
+	walk_right * 2
+	walk_down * 3
+	step_end
+}
+
 script ParlourZine_Amy{
 	lock
 	faceplayer
@@ -14,7 +137,7 @@ script ParlourZine_Amy{
 	applymovement(1, Common_Movement_FaceDown)
 	waitmovement(0)
 	msgbox(format("… like the game you're playing right now!"), MSGBOX_AUTOCLOSE)
-	applymovement(1, Common_Movement_FaceLeft)
+	applymovement(1, Common_Movement_FaceRight)
 	waitmovement(0)
 	release
 	end
@@ -24,8 +147,8 @@ text ParlourZine_AmyHi{
 	"AMY: Oh hi {PLAYER}! \n"
 	"Welcome to the ParlourZine HQ! \p"
 	"This is where the magic happens, we \n"
-	"work very hard to showcase the best of \l"
-	"the Parlour Discord Server…  $"
+	"work very hard to showcase the best \l"
+	"of the Parlour Discord Server…  $"
 }
 
 script ParlourZine_Rachel{
@@ -118,6 +241,6 @@ script ParlourZine_PC{
 
 text ParlourZine_PC_Text{
 	"The team's inbox is open. \p"
-	"There are so many of them, this zine \n"
+	"There are so many messages, this zine \n"
 	"really is a big collaborative project!$"
 }

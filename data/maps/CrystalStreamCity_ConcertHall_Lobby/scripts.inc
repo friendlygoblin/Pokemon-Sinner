@@ -66,6 +66,31 @@ ChappellHall_Norah_2:
 	goto ChappellHall_Norah_1
 
 
+ChappellHall_Chantal::
+# 80 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	lock
+# 81 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	faceplayer
+# 82 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	checktrainerflag TRAINER_CHAPPELL
+	goto_if 1, ChappellHall_Chantal_2
+# 86 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	msgbox ChantalIntro_Chappell, MSGBOX_AUTOCLOSE
+# 87 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	trainerbattle_no_intro TRAINER_NORAH, ChappellHall_Chantal_Text_1
+# 88 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	msgbox ChantalPostBattle_Chappell, MSGBOX_AUTOCLOSE
+ChappellHall_Chantal_1:
+# 90 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	releaseall
+	end
+
+ChappellHall_Chantal_2:
+# 83 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	msgbox ChappellHall_Chantal_Text_0, MSGBOX_AUTOCLOSE
+	goto ChappellHall_Chantal_1
+
+
 ChappellHall_Steff_Text_0:
 # 31 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
 	.string "How exciting!$"
@@ -78,6 +103,15 @@ ChappellHall_Norah_Text_0:
 ChappellHall_Norah_Text_1:
 # 61 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
 	.string "Is the show starting yet?$"
+
+ChappellHall_Chantal_Text_0:
+# 83 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	.string "CHANTAL: You beat Chappell Roan?\p"
+	.string "Did she give you an autograph?$"
+
+ChappellHall_Chantal_Text_1:
+# 87 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	.string "Would she sign it even if I lose?$"
 
 CSCCH_ExplainChappellNotHere::
 # 12 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
@@ -115,3 +149,14 @@ NorahPostBattle_Chappell::
 # 74 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
 	.string "NORAH: I'm so impatient, I just know\n"
 	.string "the show's gonna be insane! $"
+
+ChantalIntro_Chappell::
+# 94 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	.string "CHANTAL: Do you think Chappell will \n"
+	.string "sign my record if I win against her? $"
+
+ChantalPostBattle_Chappell::
+# 99 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
+	.string "CHANTAL: I have way too many versions\n"
+	.string "of Midwest Princess, but they're all \l"
+	.string "worth it! $"

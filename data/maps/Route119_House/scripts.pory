@@ -6,12 +6,12 @@ Route119_House_EventScript_Woman::
 	msgbox Route119_House_Text_RumorAboutCaveOfOrigin, MSGBOX_NPC
 	end
 
-Route119_House_EventScript_Wingull::
+Route119_House_EventScript_Lillipup::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
-	msgbox Route119_House_Text_Wingull, MSGBOX_DEFAULT
+	playmoncry SPECIES_LILLIPUP, CRY_MODE_NORMAL
+	msgbox Route119_House_Text_Lillipup, MSGBOX_DEFAULT
 	waitmoncry
 	release
 	end
@@ -25,7 +25,7 @@ Route119_House_Text_RumorAboutCaveOfOrigin:
 	.string "kind of thing, but I like a calm \l"
 	.string "environment better.$"
 
-Route119_House_Text_Wingull:
-	.string "WINGULL: Pihyoh!$"
+Route119_House_Text_Lillipup:
+	.string "LILLIPUP: Yip!$"
 
 `

@@ -78,6 +78,33 @@ MCCH_Sign::
 	end
 
 
+MCCH_LoungeGoblin::
+# 59 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	lock
+# 60 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	faceplayer
+# 61 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	msgbox LoungeGoblin_OfferBattle, MSGBOX_YESNO
+# 62 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq MCCH_LoungeGoblin_2
+# 68 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	msgbox LoungeGoblin_RefuseBattle, MSGBOX_AUTOCLOSE
+MCCH_LoungeGoblin_1:
+# 70 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	release
+	end
+
+MCCH_LoungeGoblin_2:
+# 63 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	msgbox LoungeGoblin_AcceptBattle, MSGBOX_AUTOCLOSE
+# 64 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	trainerbattle_no_intro TRAINER_GOBLIN_MIRROR_CITY, MCCH_LoungeGoblin_Text_0
+# 65 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	msgbox LoungeGoblin_PostBattle, MSGBOX_AUTOCLOSE
+	goto MCCH_LoungeGoblin_1
+
+
 MCCH_LobbyMan_Text_0:
 # 9 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
 	.string "Very well, good luck!$"
@@ -102,6 +129,10 @@ MCCH_Sign_Text_0:
 	.string "{LEFT_ARROW}{RIGHT_ARROW}: VIP Lounges\p"
 	.string "{UP_ARROW}: Concert Hall$"
 
+MCCH_LoungeGoblin_Text_0:
+# 64 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	.string "Hey, not bad!$"
+
 MCCH_ReadyForChallenge::
 # 21 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
 	.string "The Last Dinner Party are waiting for \n"
@@ -111,3 +142,25 @@ MCCH_ReadyForChallenge::
 	.string "If you go in now, you won't be able \n"
 	.string "come back here until you win or lose. \p"
 	.string "Are you ready? $"
+
+LoungeGoblin_OfferBattle::
+# 74 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	.string "GOBLIN: Hello again! \p"
+	.string "Need more practice before facing the band ?$"
+
+LoungeGoblin_RefuseBattle::
+# 79 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	.string "It's alright, come back if you change\n"
+	.string "your mind. $"
+
+LoungeGoblin_AcceptBattle::
+# 84 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	.string "Be right there, then!\n"
+	.string "And I won't hold back! $"
+
+LoungeGoblin_PostBattle::
+# 89 "data/maps/MirrorCity_ConcertHall_Lobby/scripts.pory"
+	.string "GOBLIN: Looks like you got this! \p"
+	.string "Oh, but if you want a tip, sending out \n"
+	.string "the right POKéMON right away might save \l"
+	.string "your life! $"

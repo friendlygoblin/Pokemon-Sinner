@@ -206,3 +206,43 @@ VerdanturfTown_FriendshipRatersHouse_Text_DetestsYou:
 VerdanturfTown_FriendshipRatersHouse_Text_Pikachu:
 # 104 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
 	.string "PIKACHU: Pika pika!$"
+
+NightingaleCity_GiveReturn::
+# 108 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	lock
+# 109 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	faceplayer
+# 110 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	goto_if_set FLAG_RECEIVED_TM_RETURN, NightingaleCity_GiveReturn_2
+# 114 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	msgbox NightingaleCity_GiveReturn_Text_1
+# 115 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	giveitem ITEM_TM27
+# 116 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	msgbox NightingaleCity_GiveReturn_Text_2
+NightingaleCity_GiveReturn_1:
+# 118 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	release
+	end
+
+NightingaleCity_GiveReturn_2:
+# 111 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	msgbox NightingaleCity_GiveReturn_Text_0, MSGBOX_AUTOCLOSE
+	goto NightingaleCity_GiveReturn_1
+
+
+NightingaleCity_GiveReturn_Text_0:
+# 111 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	.string "The more your POKéMON likes you, the\n"
+	.string "stronger Return is!$"
+
+NightingaleCity_GiveReturn_Text_1:
+# 114 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	.string "Friendship with POKéMON is important!\p"
+	.string "For example, there's a move that gets\n"
+	.string "stronger when your POKéMON loves you.\p"
+	.string "Here!$"
+
+NightingaleCity_GiveReturn_Text_2:
+# 116 "data/maps/VerdanturfTown_FriendshipRatersHouse/scripts.pory"
+	.string "Our POKéMON are our friends!$"

@@ -81,7 +81,7 @@ Gender: Male
 Music: Male
 Double Battle: No
 
-=== TRAINER_SAWYER_1 ===
+=== TRAINER_JAY ===
 Name: JAY
 Class: TLDP Fan
 Pic: Jay
@@ -147,9 +147,10 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Setup First Turn
 
-Breloom (F)
+Breloom (M)
 Ability: Effect Spore  
-Level: 40   
+Level: 38
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe   
 Impish Nature  
 - Leech Seed  
 - Thunder Punch  
@@ -158,16 +159,18 @@ Impish Nature
 
 Gyarados (M)
 Ability: Intimidate  
-Level: 40  
+Level: 38
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe  
 Adamant Nature  
 - Ice Fang  
 - Earthquake  
 - Waterfall  
-- Dragon Dance  
+- Scary Face  
 
 Ampharos (F)
 Ability: Static  
-Level: 40      
+Level: 38
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe      
 Quiet Nature  
 - Thunderbolt  
 - Ice Punch  
@@ -176,7 +179,8 @@ Quiet Nature
 
 Altaria (F)
 Ability: Natural Cure  
-Level: 40      
+Level: 38
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe      
 Naughty Nature   
 - Flamethrower  
 - Moonblast  
@@ -185,7 +189,8 @@ Naughty Nature
 
 Tyranitar (M)
 Ability: Sand Stream  
-Level: 40
+Level: 38
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 Quiet Nature  
 - Iron Head  
 - Aerial Ace  
@@ -193,11 +198,12 @@ Quiet Nature
 - Body Slam  
 
 Typhlosion (M) @ Sitrus Berry
-Ability: Flash Fire  
-Level: 42   
+Ability: Blaze 
+Level: 40
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe   
 Rash Nature  
 - Flamethrower  
-- Earthquake  
+- Body Slam  
 - Solar Beam  
 - Sunny Day  
 
@@ -1232,56 +1238,64 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 - Roost
 - Drill Peck
 
-=== TRAINER_LOLA_3 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
+=== TRAINER_AMY_2 ===
+Name: AMY
+Class: Interviewer
+Pic: Amy
 Gender: Female
-Music: Girl
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Golisopod
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Volcarona
+Level: 36
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LOLA_4 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
+=== TRAINER_BRENAE ===
+Name: BRENAE
+Class: Picnicker
+Pic: Brenae
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Marill
-Level: 32
+Eevee (F)
+Level: 28
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Marill
-Level: 32
+Buneary (F)
+Level: 28
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-=== TRAINER_LOLA_5 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
+Hattrem
+Level: 28
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== TRAINER_BRENAE_2 ===
+Name: BRENAE
+Class: TLDP Fan
+Pic: Brenae
 Gender: Female
 Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Azumarill
+Eevee (F)
 Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Azumarill
+Buneary (F)
 Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Hatterene
+Level: 35
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_RICKY_1 ===
 Name: RICKY
@@ -1330,56 +1344,69 @@ Marill
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_RICKY_2 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+=== TRAINER_WARIS ===
+Name: WARIS
+Class: Factory Head
+Pic: Waris
 Gender: Male
-Music: Girl
+Music: Suspicious
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Linoone
-Level: 27
+Haunter (M)
+Level: 28
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
 
-=== TRAINER_RICKY_3 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+Crobat
+Level: 28
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Mareanie
+Level: 28
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== TRAINER_WARIS_2 ===
+Name: WARIS
+Class: TLDP Fan
+Pic: Waris
 Gender: Male
-Music: Girl
+Music: Suspicious
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Linoone
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
+Gengar (M)
+Level: 37
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_RICKY_4 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
+Crobat
+Level: 37
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Toxapex
+Level: 37
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== TRAINER_MORPHEUS ===
+Name: MORPHEUS
+Class: TLDP Fan
+Pic: Morpheus
 Gender: Male
-Music: Girl
+Music: Suspicious
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Linoone
-Level: 33
+Porygon
+Level: 37
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
+
+Porygon2
+Ability: Download
+Level: 37
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Porygon-Z
+Level: 37
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_RICKY_5 ===
 Name: RICKY
@@ -2225,22 +2252,26 @@ Litten
 Level: 37
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_VALERIE_4 ===
-Name: VALERIE
-Class: Hex Maniac
-Pic: Hex Maniac
+=== TRAINER_BRENAE_3 ===
+Name: BRENAE
+Class: TLDP Fan
+Pic: Brenae
 Gender: Female
-Music: Suspicious
+Music: Girl
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Spoink
-Level: 40
+Eevee (F)
+Level: 35
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Sableye
-Level: 40
+Buneary (F)
+Level: 35
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Hatterene
+Level: 35
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_VALERIE_5 ===
 Name: VALERIE
@@ -2775,7 +2806,7 @@ Venusaur
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_WINSTON_4 ===
+=== TRAINER_AIDEN_2 ===
 Name: WINSTON
 Class: Rich Boy
 Pic: Rich Boy
@@ -5361,11 +5392,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint
 
-Relicanth
+Relicanth (M)
 Level: 34
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Relicanth
+Relicanth (M)
 Level: 34
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -5723,30 +5754,46 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Heal Bell
 
 === TRAINER_BEAR_2 ===
-Name: MIGUEL
-Class: Pokefan
-Pic: Pokefan M
+Name: BEAR
+Class: Picnicker
+Pic: Bear
 Gender: Male
-Music: Twins
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Skitty @ Oran Berry
-Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Umbreon (M)
+Level: 37
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+
+Houndour (M)
+Level: 37
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+
+Zoroark (M)
+Level: 37
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
+
+Mightyena (M)
+Level: 37
+IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_AUX_2 ===
-Name: MIGUEL
-Class: Pokefan
-Pic: Pokefan M
+Name: AUX
+Class: Picnicker
+Pic: Aux
 Gender: Male
-Music: Twins
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint
 
-Skitty @ Oran Berry
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Relicanth (M)
+Level: 36
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Relicanth (M)
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MIGUEL_4 ===
 Name: MIGUEL
@@ -6275,19 +6322,19 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint
 
-Umbreon
+Umbreon (M)
 Level: 24
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
-Houndour
+Houndour (M)
 Level: 24
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
-Zorua
+Zorua (M)
 Level: 24
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
-Poochyena
+Poochyena (M)
 Level: 24
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
@@ -6300,37 +6347,41 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint / Ace Pokemon
 
-Vulpix (M)
-Level: 34
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Ninetales (M)
+Level: 36
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 Sandslash (F)
-Level: 34
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Level: 36
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Gligar (M)
-Level: 34
+Gliscor (M)
+Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_Q ===
 Name: Q
-Class: Rival
+Class: TLDP Fan
 Pic: Q
 Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint
 
-Swellow
-Level: 31
+Lillipup
+Level: 22
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Linoone
-Level: 29
+Lillipup
+Level: 22
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-Mightyena
-Level: 33
+Lillipup
+Level: 22
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Amaura
+Level: 22
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_CAL ===
@@ -6662,75 +6713,67 @@ Tentacruel
 Level: 25
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_ELLIOT_2 ===
-Name: ELLIOT
-Class: Fisherman
-Pic: Fisherman
+=== TRAINER_Q_2 ===
+Name: Q
+Class: TLDP Fan
+Pic: Q
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Check Viability / Try To Faint
+
+Lillipup
+Level: 37
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Herdier
+Level: 37
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Stoutland
+Level: 37
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Aurorus
+Level: 37
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_CHANTAL ===
+Name: CHANTAL
+Class: Picnicker
+Pic: Chantal
 Gender: Male
 Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Tentacool
+Bulbasaur
 Level: 24
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Gyarados
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Ivysaur
+Level: 24
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Gyarados
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_ELLIOT_3 ===
-Name: ELLIOT
-Class: Fisherman
-Pic: Fisherman
+=== TRAINER_CHANTAL_2 ===
+Name: CHANTAL
+Class: Picnicker
+Pic: Chantal
 Gender: Male
 Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Gyarados
-Level: 29
+Bulbasaur
+Level: 36
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Carvanha
-Level: 26
+Ivysaur
+Level: 36
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-Tentacool
-Level: 26
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Gyarados
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_ELLIOT_4 ===
-Name: ELLIOT
-Class: Fisherman
-Pic: Fisherman
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Gyarados
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Carvanha
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Tentacruel
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Gyarados
-Level: 31
+Venusaur
+Level: 36
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_ELLIOT_5 ===
@@ -6791,7 +6834,7 @@ Gyarados
 Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_JACOB ===
+=== TRAINER_JACOB === /*Used on Route 4*/
 Name: JACOB
 Class: Triathlete
 Pic: Cycling Triathlete M
@@ -6801,16 +6844,16 @@ Double Battle: No
 AI: Check Bad Move
 
 Voltorb
-Level: 6
+Level: 16
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 Voltorb
-Level: 6
+Level: 16
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 Magnemite
-Level: 14
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Level: 17
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_ANTHONY ===
 Name: ANTHONY
@@ -7071,7 +7114,15 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint
 
-Doduo
+Piplup (M)
+Level: 28
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Lycanroc-Dusk (F)
+Level: 28
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Tinkatuff
 Level: 28
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
@@ -7084,12 +7135,20 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint
 
-Doduo
-Level: 31
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+Piplup (M)
+Level: 37
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_MARIA_4 ===
-Name: MARIA
+Lycanroc-Dusk (F)
+Level: 37
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Tinkaton
+Level: 38
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== TRAINER_NESS ===
+Name: NESS
 Class: Triathlete
 Pic: Running Triathlete F
 Gender: Female
@@ -7396,7 +7455,7 @@ Starmie
 Level: 48
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_NICOLAS_1 ===
+=== TRAINER_NICOLAS_1 === 
 Name: NICOLAS
 Class: Dragon Tamer
 Pic: Dragon Tamer
@@ -7489,7 +7548,7 @@ Shelgon @ Dragon Fang
 Level: 49
 IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
 
-=== TRAINER_AARON ===
+=== TRAINER_AARON === /*Used on Route 6*/
 Name: AARON
 Class: Dragon Tamer
 Pic: Dragon Tamer
@@ -7499,16 +7558,16 @@ Double Battle: No
 AI: Check Bad Move
 
 Bagon
-Level: 26
-IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
+Level: 21
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 Dratini
-Level: 26
-IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
+Level: 21
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 Frigibax
-Level: 26
-IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
+Level: 21
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_PERRY === /*Used on Big Dog Island*/
 Name: PERRY

@@ -21,12 +21,12 @@ script MarinaHall_Brenae{
     lock
     faceplayer
     if(defeated(TRAINER_MARINA)){
-        msgbox(format("GOSIA: You won against Marina?\pNo way!"), MSGBOX_AUTOCLOSE)
+        msgbox(format("BRENAE: So, how was Marina?\pI bet she was amazing!"), MSGBOX_AUTOCLOSE)
         }
     else{
-        msgbox(format("GOSIA: I'm one of Marina's biggest fans, ask me anything about her!"),MSGBOX_AUTOCLOSE)
-        trainerbattle_no_intro(TRAINER_GOSIA,  format("I'm so excited to see Marina I wasn't completely focused."))
-        msgbox(format("GOSIA: Come to me if you have any question about Marina!"), MSGBOX_AUTOCLOSE)
+        msgbox(format("BRENAE: I get nervous before concerts, and I'm challenging Marina so it's even worse this time!"),MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_BRENAE,  format("Mmh, I'm still nervous… "))
+        msgbox(format("BRENAE: I can't wait to see Marina, I hope I don't liquefy when I face her… "), MSGBOX_AUTOCLOSE)
         }
     releaseall
     end

@@ -7,6 +7,13 @@ const Katherine = 4
 const Harv = 5
 const Man = 6
 
+script Route8_Bag{
+    lock
+    msgbox(format("The bag is full of filming supplies."))
+    release
+    end
+}
+
 script Route8_MusicVideo{
     lock
 
@@ -60,10 +67,12 @@ script Route8_MusicVideo{
     end
 }
 
-script PictureParlourBattle{//Don't forget to change levels back to 27
+script PictureParlourBattle{
     lockall
     msgbox(Route8_HarvAction, MSGBOX_AUTOCLOSE)
     trainerbattle_double(TRAINER_PICTURE_PARLOUR, format("KATHERINE: Thanks for helping us out!\pELLA: We definitely owe you one!"), format("KATHERINE: What Lumiere had in mind was you! \pELLA: Yeah, that was a real motion picture!"), Route8_HarvNotEnoughPkmn, PostPictureParlourBattle)
+    removeobject(12)
+    setflag(FLAG_ROUTE8_BAG)
 }
 
 script PostPictureParlourBattle{

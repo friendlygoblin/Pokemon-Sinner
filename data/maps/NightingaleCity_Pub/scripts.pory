@@ -54,3 +54,18 @@ script NightingaleCityPub_Toto{
     release
     end
 }
+
+script NightingalePub_Tilly{
+    lock
+    faceplayer
+    if(defeated(TRAINER_BRIANMAY)){
+        msgbox(format("TILLY: Brian May let you battle with him? \pCool, that's unusual!"), MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(format("TILLY: Brian May comes here so often he has his own room at the back.\pHe doesn't really do POKéMON battles anymore, but I sure do!"),MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_TILLY,  format("Love a fun bar fight!"))
+        msgbox(format("TILLY: That was fun, and we didn't even make a mess!"), MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}

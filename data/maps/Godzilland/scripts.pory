@@ -96,3 +96,35 @@ text FindAnyTreasures{
     "I hope you're finding a lot of cool \n"
     "items!$"
 }
+
+script Godzilland_Morpheus{
+    lock
+    faceplayer
+    if(flag(FLAG_GODZILLAND_UPGRADE)){
+        msgbox(format("MORPHEUS: Isn't it fascinating that you can upgrade a POKéMON like you'd update an app?"), MSGBOX_AUTOCLOSE)
+    }
+    else{
+        special(IsPorygonInParty)
+        if(var(VAR_RESULT)==TRUE){
+            msgbox(Godzilland_MorpheusUpgrade)
+            giveitem(ITEM_UP_GRADE)
+            msgbox(Godzilland_MorpheusSmootherPorygon, MSGBOX_AUTOCLOSE)
+            setflag(FLAG_GODZILLAND_UPGRADE)
+        }
+        else{
+            msgbox(format("MORPHEUS: I like to drop by the developpers' house to give them ideas.\pBrainstorming is fun!"))
+        }
+    }
+}
+
+text Godzilland_MorpheusUpgrade{
+    "MORPHEUS: Oh, what a beautiful Porygon! \p"
+    "I love these POKéMON so much, did you \n"
+    "know you could upgrade them? \p"
+    "All you need is this!$"
+}
+
+text Godzilland_MorpheusSmootherPorygon{
+    "MORPHEUS: That'll make your Porygon \n"
+    "smoother and smarter!$"
+}

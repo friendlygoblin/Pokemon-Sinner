@@ -114,6 +114,7 @@
 #define VAR_FLORENCE_GEORGIA_SCENE                   0x4066 
 #define VAR_OLIVEMOUNT_OLDMAN_EGG                    0x4067
 #define VAR_GODZILLANDHALL_EMILY                     0x4068 
+#define VAR_BDI_DOG                                  0x407E //0 = not started, 1 = talked to Rora, 2 = took the dog, 3 = exchanged for another pokemon
 #define VAR_CSCCH_TRIGGER                            0x406A
 #define VAR_SUNDAYCAVE_STATE                         0x406B //0 = not started, 1 = started, 2 = took down one Impidimp, 3 = took down two Impidimps, 4 = completed
 #define VAR_SUNDAYCAVE_MACHINEGUY                    0x406C 
@@ -132,7 +133,6 @@
 #define VAR_GODZILLAND_PORYGON                       0x4078 //0 = not started, 1 = Gob explained the problem, 2 = got rid of Porygon, 3 = completed
 #define VAR_BIKESHOPS                                0x4079 //0 = not started, 1 = talked to the engineer in CwC, 2 = delivered the part
 
-#define VAR_ROUTE131_STATE                               0x407E // Unused Var
 #define VAR_ROUTE132_STATE                               0x407F // Unused Var
 #define VAR_ROUTE133_STATE                               0x4080 // Unused Var
 #define VAR_ROUTE134_STATE                               0x4081 // Unused Var

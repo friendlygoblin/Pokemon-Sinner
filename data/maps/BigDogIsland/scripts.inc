@@ -44,6 +44,52 @@ BDI_BattleGirl::
 	return
 
 
+BDI_Woman::
+# 31 "data/maps/BigDogIsland/scripts.pory"
+	lock
+# 32 "data/maps/BigDogIsland/scripts.pory"
+	faceplayer
+# 33 "data/maps/BigDogIsland/scripts.pory"
+	msgbox BDI_Woman_Text_0
+# 34 "data/maps/BigDogIsland/scripts.pory"
+	release
+	end
+
+
+BDI_Man::
+# 39 "data/maps/BigDogIsland/scripts.pory"
+	lock
+# 40 "data/maps/BigDogIsland/scripts.pory"
+	faceplayer
+# 41 "data/maps/BigDogIsland/scripts.pory"
+	msgbox BDI_Man_Text_0
+# 42 "data/maps/BigDogIsland/scripts.pory"
+	release
+	end
+
+
+BDI_TuberBoy::
+# 47 "data/maps/BigDogIsland/scripts.pory"
+	lock
+# 48 "data/maps/BigDogIsland/scripts.pory"
+	faceplayer
+# 49 "data/maps/BigDogIsland/scripts.pory"
+	msgbox BDI_TuberBoy_Text_0
+# 50 "data/maps/BigDogIsland/scripts.pory"
+	release
+	end
+
+
+BDI_Sign::
+# 55 "data/maps/BigDogIsland/scripts.pory"
+	lock
+# 56 "data/maps/BigDogIsland/scripts.pory"
+	msgbox BDI_Sign_Text_0
+# 57 "data/maps/BigDogIsland/scripts.pory"
+	release
+	end
+
+
 BDI_Fisherman_Text_0:
 # 11 "data/maps/BigDogIsland/scripts.pory"
 	.string "I know this place is famous for the dog\n"
@@ -99,3 +145,27 @@ BDI_BattleGirl_Text_2:
 # 27 "data/maps/BigDogIsland/scripts.pory"
 	.string "I came to this island to focus on myself\n"
 	.string "and my POKéMON.$"
+
+BDI_Woman_Text_0:
+# 33 "data/maps/BigDogIsland/scripts.pory"
+	.string "I never go in the cave.\p"
+	.string "I've seen people go in, and I think\n"
+	.string "someone lives on the other side.\p"
+	.string "I'm still to scared to try.$"
+
+BDI_Man_Text_0:
+# 41 "data/maps/BigDogIsland/scripts.pory"
+	.string "I couldn't pick a better place to retire.\p"
+	.string "It's just me and the wild dogs!$"
+
+BDI_TuberBoy_Text_0:
+# 49 "data/maps/BigDogIsland/scripts.pory"
+	.string "The POKéMON on our island are all\n"
+	.string "canines.\p"
+	.string "I wonder if there's a cat island…$"
+
+BDI_Sign_Text_0:
+# 56 "data/maps/BigDogIsland/scripts.pory"
+	.string "Welcome to Big Dog Island!\p"
+	.string "So sweet your absence will feel like\n"
+	.string "violence!$"

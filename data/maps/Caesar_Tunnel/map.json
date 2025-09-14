@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "CaesarTunnel_FossilGuy",
       "flag": "0"
     }
   ],
@@ -48,6 +48,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 14,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_ROCKY_HELMET",
+      "flag": "FLAG_CAESARTUNNEL_ROCKY_HELMET"
+    }
   ]
 }

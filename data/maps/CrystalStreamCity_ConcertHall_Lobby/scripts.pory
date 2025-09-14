@@ -75,3 +75,29 @@ text NorahPostBattle_Chappell{
     "NORAH: I'm so impatient, I just know\n"
     "the show's gonna be insane! $"
 }
+
+script ChappellHall_Chantal{
+    lock
+    faceplayer
+    if(defeated(TRAINER_CHAPPELL)){
+        msgbox(format("CHANTAL: You beat Chappell Roan? \pDid she give you an autograph?$"), MSGBOX_AUTOCLOSE)
+        }
+    else{
+        msgbox(ChantalIntro_Chappell, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_NORAH, format("Would she sign it even if I lose?"))
+        msgbox(ChantalPostBattle_Chappell, MSGBOX_AUTOCLOSE)
+        }
+    releaseall
+    end
+}
+
+text ChantalIntro_Chappell {
+    "CHANTAL: Do you think Chappell will \n"
+    "sign my record if I win against her? $"
+    }
+
+text ChantalPostBattle_Chappell{
+    "CHANTAL: I have way too many versions\n"
+    "of Midwest Princess, but they're all \l"
+    "worth it! $"
+}

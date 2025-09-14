@@ -668,6 +668,7 @@
 #define MAP_MIRROR_CITY_CONCERT_HALL_LOBBY         (36 | (35 << 8))
 #define MAP_MIRROR_CITY_CONCERT_HALL_LOUNGE1       (37 | (35 << 8))
 #define MAP_MIRROR_CITY_CONCERT_HALL_LOUNGE2       (38 | (35 << 8))
+#define MAP_INTERLUDE_UPPER_DECK                   (39 | (35 << 8))
 
 #define MAP_GROUPS_COUNT 36
 

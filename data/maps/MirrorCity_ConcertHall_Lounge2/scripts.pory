@@ -35,7 +35,7 @@ text LoungeHarv_OfferBattle{
     "I'm here to see my friends, The Last \n"
     "Dinner Party! \p"
     "We have a minute before the show  \n"
-    "starts, would you like to have a \n"
+    "starts, would you like to have a \l"
     "quick battle? $"
     }
 
@@ -227,10 +227,7 @@ text LoungeLuvcat_AcceptBattle{
 
 text LoungeLuvcat_PostBattle{
     "My goodness, you're so delicious! \p"
-    "TLDP are gonna love battling with you! \p"
-    "I wish you the best of luck against \n"
-    "The Last Dinner Party, even if you \l"
-    "may not need it. $"
+    "TLDP are gonna love battling with you! $"
 }
 
 script MCCH_LoungeNora{
@@ -319,11 +316,9 @@ text LoungeKatherine_AcceptBattleFromElla{
     }
 
 text LoungeKatherine_PostBattle{
-    "How incredible, you were phenomenal \n"
-    "as you were the first time we met! \p"
-    "I wish you the best of luck against \n"
-    "The Last Dinner Party, even if you \l"
-    "may not need it. $"
+    "Just as cool as on set! \p"
+    "You'll come visit us if we set up our\n"
+    "own challenge, will ya? $"
 }
 
 script MCCH_LoungeElla{

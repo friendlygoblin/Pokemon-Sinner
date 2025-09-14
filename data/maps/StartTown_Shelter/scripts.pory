@@ -1,1 +1,124 @@
 mapscripts StartTown_Shelter_MapScripts {}
+
+script Shelter_Staff{
+    lock
+    if(var(VAR_BDI_DOG)==2){
+        special(IsFennekinInParty)
+        if(var(VAR_RESULT)==TRUE){
+            msgbox(Shelter_StaffRoraCalled, MSGBOX_AUTOCLOSE)
+            call(Shelter_PickFennekin)
+        }
+        else{
+            msgbox(Shelter_StaffRoraCalledNoFennekin, MSGBOX_AUTOCLOSE)
+        }
+    }
+    else{
+        msgbox(format("I love my job here, I get to take care of cute POKéMON all day!"))
+    }
+    release
+    end
+}
+
+script Shelter_PickFennekin{
+    special(ChoosePartyMon)
+    waitstate
+    if(var(VAR_0x8004)==PARTY_NOTHING_CHOSEN){
+        setvar(VAR_BDI_DOG, 3)
+        msgbox(Shelter_StaffKeepFennekin, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        specialvar(VAR_RESULT, ScriptGetPartyMonSpecies)
+        if(var(VAR_RESULT)==SPECIES_FENNEKIN){
+            msgbox(Shelter_CuteLittleOne)
+            dynmultipush("Charmander", SPECIES_CHARMANDER)
+            dynmultipush("Squirtle", SPECIES_SQUIRTLE)
+            dynmultipush("Chikorita", SPECIES_CHIKORITA)
+            dynmultipush("Cyndaquil", SPECIES_CYNDAQUIL)
+            dynmultipush("Totodile", SPECIES_TOTODILE)
+            dynmultipush("Treecko", SPECIES_TREECKO)
+            dynmultipush("Turtwig", SPECIES_TURTWIG)
+            dynmultipush("Chimchar", SPECIES_CHIMCHAR)
+            dynmultipush("Piplup", SPECIES_PIPLUP)
+            dynmultipush("Snivy", SPECIES_SNIVY)
+            dynmultipush("Oshawott", SPECIES_OSHAWOTT)
+            dynmultipush("Tepig", SPECIES_TEPIG)
+            dynmultipush("Chespin", SPECIES_CHESPIN)
+            dynmultipush("Froakie", SPECIES_FROAKIE)
+            dynmultipush("None, thanks!", SPECIES_NONE)
+            dynmultistack(0, 0, FALSE, 6, FALSE, 3, DYN_MULTICHOICE_CB_NONE)
+            if(var(VAR_RESULT)==SPECIES_NONE){
+                msgbox(Shelter_StaffKeepFennekin, MSGBOX_AUTOCLOSE)
+            }
+            else{
+                special(DeleteChosenPartyMon)
+                givemon(VAR_RESULT, 5, gender = MON_MALE)
+                msgbox(Shelter_StaffGoGetIt, MSGBOX_AUTOCLOSE)
+                applymovement(3, ShelterStaff_GoToBackAndReturn)
+                waitmovement(0)
+                playmoncry(VAR_RESULT, CRY_MODE_NORMAL)
+                waitmoncry
+                playfanfare(MUS_CAUGHT)
+                msgbox(format("Here you go, take care!"))
+
+            }
+            setvar(VAR_BDI_DOG, 3)
+        }
+        else{
+            msgbox(Shelter_ThatsNotTheRightOne, MSGBOX_AUTOCLOSE)
+        }
+    }
+}
+
+movement ShelterStaff_GoToBackAndReturn{
+    walk_right
+    walk_up
+    set_invisible
+    delay_16 * 3
+    set_visible
+    walk_down
+    walk_left
+    face_down
+    step_end
+}
+
+
+text Shelter_StaffRoraCalled{
+    "Hi {PLAYER}, I got a call from Aurora \n"
+    "from The Last Dinner Party about you \l"
+    "bringing a POKéMON here? \p"
+    "Look, you can leave it here but we \n"
+    "don't have endless space so you'll \l"
+    "have to take another one with you. \p"
+    "Now, show me the little one.$"
+}
+
+text Shelter_StaffRoraCalledNoFennekin{
+    "Hi {PLAYER}, I got a call from Aurora \n"
+    "from The Last Dinner Party about you \l"
+    "bringing a POKéMON here? \p"
+    "Where is it, do you not have it with \n"
+    "you?$"
+}
+
+text Shelter_StaffKeepFennekin{
+    "So you've decided to keep this \n"
+    "POKéMON? \p"
+    "I think it's a good idea, it'll be \n"
+    "happy with you.$"
+}
+
+text Shelter_ThatsNotTheRightOne{
+    "Um, it doesn't look like what Aurora \n"
+    "talked about. \p"
+    "Are you sure that's the one?$"
+}
+
+text Shelter_CuteLittleOne{
+    "Aw, it's so cute! \p"
+    "Okay, now which POKéMON will you take \n"
+    "to make room here?$"
+}
+
+text Shelter_StaffGoGetIt{
+    "Okay, I'll go get him for you! $"
+}

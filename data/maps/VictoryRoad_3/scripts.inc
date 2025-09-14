@@ -164,6 +164,31 @@ VictoryRoad_Bear_2:
 	goto VictoryRoad_Bear_1
 
 
+VictoryRoad_Q::
+# 185 "data/maps/VictoryRoad_3/scripts.pory"
+	lock
+# 186 "data/maps/VictoryRoad_3/scripts.pory"
+	faceplayer
+# 187 "data/maps/VictoryRoad_3/scripts.pory"
+	msgbox VictoryRoad_Q_BattleIntro, MSGBOX_YESNO
+# 188 "data/maps/VictoryRoad_3/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq VictoryRoad_Q_2
+# 193 "data/maps/VictoryRoad_3/scripts.pory"
+	msgbox VictoryRoad_Q_Text_1
+VictoryRoad_Q_1:
+# 195 "data/maps/VictoryRoad_3/scripts.pory"
+	release
+	end
+
+VictoryRoad_Q_2:
+# 189 "data/maps/VictoryRoad_3/scripts.pory"
+	trainerbattle_no_intro TRAINER_Q_2, VictoryRoad_Q_Text_0
+# 190 "data/maps/VictoryRoad_3/scripts.pory"
+	msgbox VictoryRoad_Q_PostBattle, MSGBOX_AUTOCLOSE
+	goto VictoryRoad_Q_1
+
+
 VictoryRoad_Katie_Text_0:
 # 8 "data/maps/VictoryRoad_3/scripts.pory"
 	.string "Maybe I should give them the portraits\n"
@@ -203,8 +228,8 @@ VictoryRoad_Yapgob_Text_1:
 
 VictoryRoad_Toto_Text_0:
 # 124 "data/maps/VictoryRoad_3/scripts.pory"
-	.string "TOTO: I'm not gonna battle the band, I'm\n"
-	.string "just here for the music.\p"
+	.string "TOTO: I'm not gonna challenge the band,\n"
+	.string "I'm just here for the music.\p"
 	.string "I wonder if they gave nicknames to\n"
 	.string "their POKéMON…$"
 
@@ -226,6 +251,15 @@ VictoryRoad_Bear_Text_1:
 	.string "Awh that's okay.\p"
 	.string "I'm gonna win the challenge with my dog\n"
 	.string "POKéMON, you know!$"
+
+VictoryRoad_Q_Text_0:
+# 189 "data/maps/VictoryRoad_3/scripts.pory"
+	.string "Not quite ready yet…$"
+
+VictoryRoad_Q_Text_1:
+# 193 "data/maps/VictoryRoad_3/scripts.pory"
+	.string "I'll find someone else to train with,\n"
+	.string "then…$"
 
 VictoryRoad_Katie_BattleIntro::
 # 18 "data/maps/VictoryRoad_3/scripts.pory"
@@ -289,7 +323,7 @@ VictoryRoad_Aux_BattleIntro::
 # 144 "data/maps/VictoryRoad_3/scripts.pory"
 	.string "AUX: If I win, I'll ask TLDP to \n"
 	.string "play Godzilla! \p"
-	.string "Now how am I gonna word it…  \p"
+	.string "Now how am I gonna word it… \p"
 	.string "Brainstorm with me over a battle! $"
 
 VictoryRoad_Aux_PostBattle::
@@ -307,5 +341,18 @@ VictoryRoad_Bear_BattleIntro::
 VictoryRoad_Bear_PostBattle::
 # 178 "data/maps/VictoryRoad_3/scripts.pory"
 	.string "BEAR: Have you been to Big Dog Island? \p"
-	.string "I really liked it there, and I love \p"
+	.string "I really liked it there, and I love \n"
 	.string "the song Big Dog too! $"
+
+VictoryRoad_Q_BattleIntro::
+# 199 "data/maps/VictoryRoad_3/scripts.pory"
+	.string "Q: I've been listening to The Last \n"
+	.string "Dinner Party's music on a loop for \l"
+	.string "months! \p"
+	.string "I can't wait to face them, can I battle \p"
+	.string "with you to be sure I'm ready? $"
+
+VictoryRoad_Q_PostBattle::
+# 207 "data/maps/VictoryRoad_3/scripts.pory"
+	.string "Q: I guess I'll prepare a bit longer \p"
+	.string "while listening to the band…  $"

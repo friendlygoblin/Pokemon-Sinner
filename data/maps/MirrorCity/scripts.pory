@@ -89,3 +89,27 @@ text MirrorCity_GoblinDefeat{
     "Yup, you're ready! \n"
     "Go show'em who's the real gunslinger!$"
 }
+
+script MirrorCity_Ness{
+    lock
+    faceplayer
+    msgbox(MirrorCity_NessText, MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+text MirrorCity_NessText{
+    "NESS: You're here to take on the band \n"
+    "too? \p"
+    "I made it all the way to Lizzie but \n"
+    "then they stomped me! \p"
+    "I gotta rethink my strategy…$"
+}
+
+script MirrorCity_Nat{
+    lock
+    faceplayer
+    msgbox(format("NATALIE: Everyone I saw on the way here is so well dressed, "), MSGBOX_AUTOCLOSE)
+    release
+    end
+}

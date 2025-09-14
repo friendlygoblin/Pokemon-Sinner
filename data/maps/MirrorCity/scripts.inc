@@ -119,6 +119,30 @@ MirrorCity_GoblinLeave:
 # 61 "data/maps/MirrorCity/scripts.pory"
 	step_end
 
+MirrorCity_Ness::
+# 94 "data/maps/MirrorCity/scripts.pory"
+	lock
+# 95 "data/maps/MirrorCity/scripts.pory"
+	faceplayer
+# 96 "data/maps/MirrorCity/scripts.pory"
+	msgbox MirrorCity_NessText, MSGBOX_AUTOCLOSE
+# 97 "data/maps/MirrorCity/scripts.pory"
+	release
+	end
+
+
+MirrorCity_Nat::
+# 110 "data/maps/MirrorCity/scripts.pory"
+	lock
+# 111 "data/maps/MirrorCity/scripts.pory"
+	faceplayer
+# 112 "data/maps/MirrorCity/scripts.pory"
+	msgbox MirrorCity_Nat_Text_0, MSGBOX_AUTOCLOSE
+# 113 "data/maps/MirrorCity/scripts.pory"
+	release
+	end
+
+
 MirrorCity_CitySign_Text_0:
 # 7 "data/maps/MirrorCity/scripts.pory"
 	.string "Welcome to Mirror City!\p"
@@ -129,6 +153,11 @@ MirrorCity_ConcertHallSign_Text_0:
 	.string "MIRROR CITY CONCERT HALL\p"
 	.string "CURRENT RESIDENT: THE LAST DINNER\n"
 	.string "PARTY$"
+
+MirrorCity_Nat_Text_0:
+# 112 "data/maps/MirrorCity/scripts.pory"
+	.string "NATALIE: Everyone I saw on the way\n"
+	.string "here is so well dressed,$"
 
 MirrorCity_GoblinThisIsIt::
 # 64 "data/maps/MirrorCity/scripts.pory"
@@ -158,3 +187,11 @@ MirrorCity_GoblinDefeat::
 # 88 "data/maps/MirrorCity/scripts.pory"
 	.string "Yup, you're ready! \n"
 	.string "Go show'em who's the real gunslinger!$"
+
+MirrorCity_NessText::
+# 101 "data/maps/MirrorCity/scripts.pory"
+	.string "NESS: You're here to take on the band \n"
+	.string "too? \p"
+	.string "I made it all the way to Lizzie but \n"
+	.string "then they stomped me! \p"
+	.string "I gotta rethink my strategy…$"

@@ -61,6 +61,31 @@ NightingaleCityPub_Toto::
 	end
 
 
+NightingalePub_Tilly::
+# 59 "data/maps/NightingaleCity_Pub/scripts.pory"
+	lock
+# 60 "data/maps/NightingaleCity_Pub/scripts.pory"
+	faceplayer
+# 61 "data/maps/NightingaleCity_Pub/scripts.pory"
+	checktrainerflag TRAINER_BRIANMAY
+	goto_if 1, NightingalePub_Tilly_2
+# 65 "data/maps/NightingaleCity_Pub/scripts.pory"
+	msgbox NightingalePub_Tilly_Text_1, MSGBOX_AUTOCLOSE
+# 66 "data/maps/NightingaleCity_Pub/scripts.pory"
+	trainerbattle_no_intro TRAINER_TILLY, NightingalePub_Tilly_Text_2
+# 67 "data/maps/NightingaleCity_Pub/scripts.pory"
+	msgbox NightingalePub_Tilly_Text_3, MSGBOX_AUTOCLOSE
+NightingalePub_Tilly_1:
+# 69 "data/maps/NightingaleCity_Pub/scripts.pory"
+	releaseall
+	end
+
+NightingalePub_Tilly_2:
+# 62 "data/maps/NightingaleCity_Pub/scripts.pory"
+	msgbox NightingalePub_Tilly_Text_0, MSGBOX_AUTOCLOSE
+	goto NightingalePub_Tilly_1
+
+
 NightingaleCityPub_Barista_Text_0:
 # 42 "data/maps/NightingaleCity_Pub/scripts.pory"
 	.string "Welcome to the Nightingale Pub, what \ncan I get ya?$"
@@ -78,6 +103,28 @@ NightingaleCityPub_Toto_Text_0:
 	.string "Speaking of, is that Emily Roberts I\n"
 	.string "just saw?\p"
 	.string "How sick!$"
+
+NightingalePub_Tilly_Text_0:
+# 62 "data/maps/NightingaleCity_Pub/scripts.pory"
+	.string "TILLY: Brian May let you battle with\n"
+	.string "him?\p"
+	.string "Cool, that's unusual!$"
+
+NightingalePub_Tilly_Text_1:
+# 65 "data/maps/NightingaleCity_Pub/scripts.pory"
+	.string "TILLY: Brian May comes here so often he\n"
+	.string "has his own room at the back.\p"
+	.string "He doesn't really do POKéMON battles\n"
+	.string "anymore, but I sure do!$"
+
+NightingalePub_Tilly_Text_2:
+# 66 "data/maps/NightingaleCity_Pub/scripts.pory"
+	.string "Love a fun bar fight!$"
+
+NightingalePub_Tilly_Text_3:
+# 67 "data/maps/NightingaleCity_Pub/scripts.pory"
+	.string "TILLY: That was fun, and we didn't even\n"
+	.string "make a mess!$"
 
 NCPub_EmilyGreetsPlayer::
 # 18 "data/maps/NightingaleCity_Pub/scripts.pory"

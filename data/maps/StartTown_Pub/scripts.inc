@@ -667,7 +667,7 @@ PickStarter_2_5:
 # 401 "data/maps/StartTown_Pub/scripts.pory"
 	givemon SPECIES_TORCHIC, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_LEER
 # 403 "data/maps/StartTown_Pub/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_CAUGHT
 # 404 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_2_Text_1
 # 405 "data/maps/StartTown_Pub/scripts.pory"
@@ -720,7 +720,7 @@ PickStarter_3_5:
 # 434 "data/maps/StartTown_Pub/scripts.pory"
 	givemon SPECIES_MUDKIP, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_TACKLE, move2 = MOVE_GROWL
 # 436 "data/maps/StartTown_Pub/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_CAUGHT
 # 437 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_3_Text_1
 # 438 "data/maps/StartTown_Pub/scripts.pory"
@@ -773,7 +773,7 @@ PickStarter_1_5:
 # 466 "data/maps/StartTown_Pub/scripts.pory"
 	givemon SPECIES_BULBASAUR, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL, move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL
 # 468 "data/maps/StartTown_Pub/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_CAUGHT
 # 469 "data/maps/StartTown_Pub/scripts.pory"
 	msgbox PickStarter_1_Text_1
 # 470 "data/maps/StartTown_Pub/scripts.pory"

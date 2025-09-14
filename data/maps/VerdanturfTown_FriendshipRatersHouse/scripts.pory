@@ -104,3 +104,17 @@ VerdanturfTown_FriendshipRatersHouse_Text_Pikachu:
 	.string "PIKACHU: Pika pika!$"
 
 `
+script NightingaleCity_GiveReturn{
+	lock
+	faceplayer
+	if(flag(FLAG_RECEIVED_TM_RETURN)){
+		msgbox(format("The more your POKéMON likes you, the stronger Return is!"), MSGBOX_AUTOCLOSE)
+	}
+	else{
+		msgbox(format("Friendship with POKéMON is important!\pFor example, there's a move that gets stronger when your POKéMON loves you.\pHere!"))
+		giveitem(ITEM_TM27)
+		msgbox(format("Our POKéMON are our friends!"))
+	}
+	release
+	end
+}

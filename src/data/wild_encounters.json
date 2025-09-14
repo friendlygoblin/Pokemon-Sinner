@@ -12636,7 +12636,7 @@
               {
                 "min_level": 17,
                 "max_level": 17,
-                "species": "SPECIES_ROCKRUFF"
+                "species": "SPECIES_ROCKRUFF_OWN_TEMPO"
               },
               {
                 "min_level": 18,
@@ -12810,7 +12810,7 @@
               {
                 "min_level": 17,
                 "max_level": 17,
-                "species": "SPECIES_ROCKRUFF"
+                "species": "SPECIES_ROCKRUFF_OWN_TEMPO"
               },
               {
                 "min_level": 17,
@@ -12909,7 +12909,7 @@
               {
                 "min_level": 17,
                 "max_level": 17,
-                "species": "SPECIES_ROCKRUFF"
+                "species": "SPECIES_ROCKRUFF_OWN_TEMPO"
               },
               {
                 "min_level": 17,

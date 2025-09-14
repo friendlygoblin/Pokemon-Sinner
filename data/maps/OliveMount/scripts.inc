@@ -64,7 +64,7 @@ OliveMount_Fisherman_1:
 
 OliveMount_Fisherman_2:
 # 34 "data/maps/OliveMount/scripts.pory"
-	msgbox ExplainFishing
+	msgbox ExplainFishing, MSGBOX_AUTOCLOSE
 	goto OliveMount_Fisherman_1
 
 

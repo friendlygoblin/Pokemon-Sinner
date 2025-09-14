@@ -26,3 +26,34 @@ script BDI_BattleGirl{
     trainerbattle_single(TRAINER_JOCELYN, format("My team and I train hard in the cave!$"), format("I guess we need more training…"))
     msgbox(format("I came to this island to focus on myself and my POKéMON."), MSGBOX_AUTOCLOSE)
 }
+
+script BDI_Woman{
+    lock
+    faceplayer
+    msgbox(format("I never go in the cave.\pI've seen people go in, and I think someone lives on the other side. \pI'm still to scared to try."))
+    release
+    end
+}
+
+script BDI_Man{
+    lock
+    faceplayer
+    msgbox(format("I couldn't pick a better place to retire.\pIt's just me and the wild dogs!"))
+    release
+    end
+}
+
+script BDI_TuberBoy{
+    lock
+    faceplayer
+    msgbox(format("The POKéMON on our island are all canines.\pI wonder if there's a cat island… "))
+    release
+    end
+}
+
+script BDI_Sign{
+    lock
+    msgbox(format("Welcome to Big Dog Island!\pSo sweet your absence will feel like violence!"))
+    release
+    end
+}

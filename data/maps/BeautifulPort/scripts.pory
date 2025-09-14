@@ -4,6 +4,7 @@ mapscripts BeautifulPort_MapScripts {
 
 script BeautifulPort_Visited{
     setflag(FLAG_VISITED_SLATEPORT_CITY)
+    setvar(VAR_GODZILLAND_PORYGON, 0)
 }
 
 script BeautifulPort_CitySign{
@@ -112,6 +113,7 @@ mart BeautifulPort_SouvenirShop{
     ITEM_UTILITY_UMBRELLA
     ITEM_MYSTIC_WATER
     ITEM_AIR_BALLOON
+    ITEM_LINKING_CORD
 }
 
 mart BeautifulPort_PokeballShop{
@@ -123,12 +125,14 @@ mart BeautifulPort_PokeballShop{
 }
 
 mart BeautifulPort_MoveShop{
-    ITEM_TM06
-    ITEM_TM09
-    ITEM_TM39
-    ITEM_TM42
-    ITEM_TM45
-    ITEM_TM46
+    ITEM_TM06 // Toxic
+    ITEM_TM09 // Bullet Seed
+    ITEM_TM13 // Ice Beam
+    ITEM_TM39 // Rock Tomb
+    ITEM_TM42 // Facade
+    ITEM_TM45 // Attract
+    ITEM_TM46 // Thief
+    ITEM_TM47 // Steel Wing
 }
 
 mart BeautifulPort_MegaStoneShop{

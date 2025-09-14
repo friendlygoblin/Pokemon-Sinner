@@ -34,7 +34,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_AZURILL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(AZURILL)",
       "x": 38,
       "y": 12,
       "elevation": 0,
@@ -47,7 +47,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SKITTY",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SKITTY)",
       "x": 34,
       "y": 14,
       "elevation": 0,
@@ -60,7 +60,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TOGEPI_DOLL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TOGEPI)",
       "x": 40,
       "y": 7,
       "elevation": 0,
@@ -201,6 +201,19 @@
       "trainer_sight_or_berry_tree_id": "ITEM_NUGGET",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_112_NUGGET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 7,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_SHELL_BELL",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_OLIVEMOUNT_SHELL_BELL"
     }
   ],
   "warp_events": [

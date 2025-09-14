@@ -1,1 +1,6 @@
 mapscripts BigDogIsland_Cave_MapScripts {}
+
+script BDI_Q{
+    trainerbattle_single(TRAINER_Q, format("Q: I love Lillipups so much, when I found out there was an island with a bunch of them on it I had to see it!"), format("Oh… "))
+    msgbox(format("Q: I wonder if there's a link between this island and The Last Dinner Party's song… "))
+}

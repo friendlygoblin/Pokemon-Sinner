@@ -31,6 +31,26 @@ BigDogIslandHouse_Woman1_2:
 	goto BigDogIslandHouse_Woman1_1
 
 
+BDI_Greavard::
+# 36 "data/maps/VerdanturfTown_House/scripts.pory"
+	lock
+# 37 "data/maps/VerdanturfTown_House/scripts.pory"
+	faceplayer
+# 38 "data/maps/VerdanturfTown_House/scripts.pory"
+	playmoncry SPECIES_GREAVARD, CRY_MODE_NORMAL
+# 39 "data/maps/VerdanturfTown_House/scripts.pory"
+	waitmoncry
+# 40 "data/maps/VerdanturfTown_House/scripts.pory"
+	msgbox BDI_Greavard_Text_0
+# 41 "data/maps/VerdanturfTown_House/scripts.pory"
+	release
+	end
+
+
+BDI_Greavard_Text_0:
+# 40 "data/maps/VerdanturfTown_House/scripts.pory"
+	.string "GREAVARD: Woof!$"
+
 KnowShadowBall::
 # 21 "data/maps/VerdanturfTown_House/scripts.pory"
 	.string "I taught my POKéMON a powerful Ghost \n"

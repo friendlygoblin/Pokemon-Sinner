@@ -1,1 +1,32 @@
 mapscripts SundayCave_Exit_MapScripts {}
+
+script SundayCave_Waris{
+    trainerbattle_single(TRAINER_WARIS, format("WARIS: I love caves, no one bothers me here and I get to listen to music \lwhile I work!"), format("Cave is my vibes, yes!"), GiveGengarite)
+    goto(GiveGengarite)
+    release
+    end
+}
+
+script GiveGengarite{
+    lock
+    faceplayer
+    if(checkitem(ITEM_MEGA_RING)){
+        if(flag(FLAG_RECEIVED_GENGARITE)){
+            msgbox(format("WARIS: The Last Dinner Party is the best band to listen to in a cave!"))
+        }
+        else{
+            msgbox(SundayCave_WarisIsThatMegaRing)
+            giveitem(ITEM_GENGARITE)
+            setflag(FLAG_RECEIVED_GENGARITE)
+            msgbox(format("WARIS: I hope you'll find it useful!"), MSGBOX_AUTOCLOSE)
+        }
+    }
+    release
+    end
+}
+text SundayCave_WarisIsThatMegaRing{
+    "WARIS: Hey, is this a Mega-Ring?\p"
+    "I don't have one of these so I can't \n"
+    "use this stone I found. \p"
+    "Here, you should take it.$"
+}

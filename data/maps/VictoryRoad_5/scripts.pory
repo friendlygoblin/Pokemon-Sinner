@@ -1,1 +1,110 @@
 mapscripts VictoryRoad_5_MapScripts {}
+
+script VictoryRoad_Tilly{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Tilly_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_TILLY_2, format("Is it show time yet?"))
+        msgbox(VictoryRoad_Tilly_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Guess I'll just wait here and try not to go insane… "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Tilly_BattleIntro{
+    "TILLY: I can't wait to hear Emily's \n"
+    "guitar solos! \p"
+    "I can't wait at all, wanna battle to \n"
+    "pass the time? $"
+}
+
+text VictoryRoad_Tilly_PostBattle{
+    "TILLY: What if the band plays during \n"
+    "battles? \p"
+    "I'll get distracted for sure…  $"
+}
+
+script VictoryRoad_Gosia{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Gosia_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_GOSIA_2, format("So, did I look cool?"))
+        msgbox(VictoryRoad_Gosia_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Ah, that's okay I guess, I'll just practice here."))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Gosia_BattleIntro{
+    "GOSIA: What if Marina shows up to \n"
+    "watch TLDP battle? \p"
+    "I'll need to look cool, can I show \n"
+    "you how I fight? $"
+}
+
+text VictoryRoad_Gosia_PostBattle{
+    "GOSIA: Imagine Marina and TLDP in the \n"
+    "same room…  \p"
+    "I'm so excited! $"
+}
+
+script VictoryRoad_Waris{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Waris_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_WARIS_2, format("Oh wow… "))
+        msgbox(VictoryRoad_Waris_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("I get it, the band's right there go for it! "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Waris_BattleIntro{
+    "WARIS: I didn't know you had to cross\n"
+    "a cave to get to Mirror City. \p"
+    "I love that, I love caves! \p"
+    "The way out is just over there, but \n"
+    "do you wanna have a quick battle?$"
+}
+
+text VictoryRoad_Waris_PostBattle{
+    "WARIS: I hope TLDP are well prepared! $"
+}
+
+script VictoryRoad_Morpheus{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Morpheus_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_MORPHEUS, format("End of line… "))
+        msgbox(VictoryRoad_Morpheus_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Alright then. "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Morpheus_BattleIntro{
+    "MORPHEUS: I'll give it my best, I'll \n"
+    "be Caesar on a TV screen! \p"
+    "Let me show you! $"
+}
+
+text VictoryRoad_Morpheus_PostBattle{
+    "MORPHEUS: The band are tough, the only \n"
+    "way to win is to survive. $"
+}

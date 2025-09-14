@@ -38,7 +38,7 @@ MarinaHall_Brenae::
 # 27 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	msgbox MarinaHall_Brenae_Text_1, MSGBOX_AUTOCLOSE
 # 28 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_no_intro TRAINER_GOSIA, MarinaHall_Brenae_Text_2
+	trainerbattle_no_intro TRAINER_BRENAE, MarinaHall_Brenae_Text_2
 # 29 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	msgbox MarinaHall_Brenae_Text_3, MSGBOX_AUTOCLOSE
 MarinaHall_Brenae_1:
@@ -61,11 +61,11 @@ MarinaHall_Gosia::
 	checktrainerflag TRAINER_MARINA
 	goto_if 1, MarinaHall_Gosia_2
 # 42 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	msgbox MarinaHall_Brenae_Text_1, MSGBOX_AUTOCLOSE
+	msgbox MarinaHall_Gosia_Text_1, MSGBOX_AUTOCLOSE
 # 43 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_no_intro TRAINER_GOSIA, MarinaHall_Brenae_Text_2
+	trainerbattle_no_intro TRAINER_GOSIA, MarinaHall_Gosia_Text_2
 # 44 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	msgbox MarinaHall_Brenae_Text_3, MSGBOX_AUTOCLOSE
+	msgbox MarinaHall_Gosia_Text_3, MSGBOX_AUTOCLOSE
 MarinaHall_Gosia_1:
 # 46 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	releaseall
@@ -73,7 +73,7 @@ MarinaHall_Gosia_1:
 
 MarinaHall_Gosia_2:
 # 39 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	msgbox MarinaHall_Brenae_Text_0, MSGBOX_AUTOCLOSE
+	msgbox MarinaHall_Gosia_Text_0, MSGBOX_AUTOCLOSE
 	goto MarinaHall_Gosia_1
 
 
@@ -154,21 +154,41 @@ MarinaHall_Ann_Text_2:
 
 MarinaHall_Brenae_Text_0:
 # 24 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	.string "GOSIA: You won against Marina?\p"
-	.string "No way!$"
+	.string "BRENAE: So, how was Marina?\p"
+	.string "I bet she was amazing!$"
 
 MarinaHall_Brenae_Text_1:
 # 27 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	.string "GOSIA: I'm one of Marina's biggest fans,\n"
-	.string "ask me anything about her!$"
+	.string "BRENAE: I get nervous before concerts,\n"
+	.string "and I'm challenging Marina so it's even\l"
+	.string "worse this time!$"
 
 MarinaHall_Brenae_Text_2:
 # 28 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	.string "I'm so excited to see Marina I wasn't\n"
-	.string "completely focused.$"
+	.string "Mmh, I'm still nervous…$"
 
 MarinaHall_Brenae_Text_3:
 # 29 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	.string "BRENAE: I can't wait to see Marina, I\n"
+	.string "hope I don't liquefy when I face her…$"
+
+MarinaHall_Gosia_Text_0:
+# 39 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	.string "GOSIA: You won against Marina?\p"
+	.string "No way!$"
+
+MarinaHall_Gosia_Text_1:
+# 42 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	.string "GOSIA: I'm one of Marina's biggest fans,\n"
+	.string "ask me anything about her!$"
+
+MarinaHall_Gosia_Text_2:
+# 43 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
+	.string "I'm so excited to see Marina I wasn't\n"
+	.string "completely focused.$"
+
+MarinaHall_Gosia_Text_3:
+# 44 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	.string "GOSIA: Come to me if you have any\n"
 	.string "question about Marina!$"
 

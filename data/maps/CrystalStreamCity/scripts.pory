@@ -8,6 +8,12 @@ script CSCCH_FlagStuff{
     if(var(VAR_SUNDAYCAVE_STATE)==4){
         setflag(FLAG_CSCCH_CHAPPELLDOOR)
     }
+    if(flag(FLAG_CHAPPELLHALL_LIZZIE)==TRUE && flag(FLAG_LIZZIE_INTERVIEW_COMPLETED)==FALSE){
+        clearflag(FLAG_PARLOURZINE_LIZZIE)
+        }
+    else{
+        setflag(FLAG_PARLOURZINE_LIZZIE)
+    }
 }
 
 script CrystalStreamCity_Sign{
@@ -27,6 +33,78 @@ script CSCCH_Sign{
 script MuseumSign{
     lock
     msgbox(format("Sinner Museum \pArt and history all in one place!"))
+    releaseall
+    end
+}
+
+script ParlourZineSign{
+    lock
+    msgbox(format("ParlourZine HQ\pExclusive interview with very special guest in next issue!"))
+    releaseall
+    end
+}
+
+script BikeSign{
+    lock
+    msgbox(format("Crystal Stream City Bike Shop \pJust ride!"))
+    releaseall
+    end
+}
+
+script CSC_OldLady{
+    lock
+    faceplayer
+    if (flag(FLAG_RECEIVED_TM_AERIAL_ACE)){
+        msgbox(format("That move, Aerial Ace, got me many victories back in my prime.\pI know it'll be useful to you too!"))
+    }
+    else{
+        msgbox(format("You know, I was a great POKéMON trainer back in the day.\pI won many battles thanks to a strong move!\pHere, you're a POKéMON Trainer so you'll know how to use this!"))
+        giveitem(ITEM_TM40)
+        setflag(FLAG_RECEIVED_TM_AERIAL_ACE)
+        msgbox(format("That move, Aerial Ace, got me many victories back in my prime.\pI know it'll be useful to you too!"))
+    }
+    releaseall
+    end
+}
+
+script CSC_ParlourZineGirl{
+    lock
+    faceplayer
+    msgbox(format("The editors of ParlourZine work here!\pThey're planning an interview with someone very special, but they made me promise not to tell who it is.\pI can just say they're suuuuper cool!"))
+    releaseall
+    end
+}
+
+script CSC_OceanGirl{
+    lock
+    faceplayer
+    msgbox(format("Oh, you come from the sea?\pI wish I could swim or had a POKéMON that knows Surf, I'd love to visit the islands over there."))
+    releaseall
+    end
+}
+
+script CSC_MuseumBoy{
+    lock
+    faceplayer
+    msgbox(format("The Museum has a special program where they turn your fossils into POKéMON!\pIt's not magic, it's science!"))
+    releaseall
+    end
+}
+
+script CSC_ChappellGirl{
+    lock
+    faceplayer
+    msgbox(format("When I grow up, I wanna be just like Chappell Roan!"))
+    releaseall
+    end
+}
+
+script CSC_Azurill{
+    lock
+    faceplayer
+    playmoncry(SPECIES_AZURILL, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("AZURILL: Riiii!"))
     releaseall
     end
 }

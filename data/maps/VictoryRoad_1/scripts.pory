@@ -143,3 +143,30 @@ text VictoryRoad_Steff_PostBattle{
     "too! \p"
     "… I'm very normal about this band… $"
 }
+
+script VictoryRoad_Brenae{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Brenae_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_BRENAE_2, format("So nervous… "))
+        msgbox(VictoryRoad_Brenae_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("I'll practice with my POKéMON then… "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Brenae_BattleIntro{
+    "BRENAE: I'm so nervous and excited \n"
+    "about seeing The Last Dinner Party! \p"
+    "Can I practice what I'm gonna say to \p"
+    "them with you? $"
+}
+
+text VictoryRoad_Brenae_PostBattle{
+    "BRENAE: I love this band so much, I'm \p"
+    "shaking! $"
+}

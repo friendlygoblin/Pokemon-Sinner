@@ -3,7 +3,7 @@ mapscripts Route2_MapScripts {}
 const Jay = 1
 
 script Route2_Jay{
-	trainerbattle_single(TRAINER_SAWYER_1, Jay_BattleIntro, Jay_Defeated, Route2_Jay_PostBattle)
+	trainerbattle_single(TRAINER_JAY, Jay_BattleIntro, Jay_Defeated, Route2_Jay_PostBattle)
 	goto(Route2_Jay_PostBattle)
 }
 

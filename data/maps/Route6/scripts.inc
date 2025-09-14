@@ -79,18 +79,40 @@ Route6_Youngster::
 	return
 
 
-PoolSign::
+Route6_DragonTamer::
 # 111 "data/maps/Route6/scripts.pory"
-	lock
+	trainerbattle_single TRAINER_AARON, Route6_DragonTamer_Text_0, Route6_DragonTamer_Text_1
 # 112 "data/maps/Route6/scripts.pory"
+	msgbox Route6_DragonTamer_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
+PoolSign::
+# 116 "data/maps/Route6/scripts.pory"
+	lock
+# 117 "data/maps/Route6/scripts.pory"
 	msgbox PoolSign_Text_0
-# 113 "data/maps/Route6/scripts.pory"
+# 118 "data/maps/Route6/scripts.pory"
 	releaseall
 	end
 
 
-PoolSign_Text_0:
+Route6_DragonTamer_Text_0:
+# 111 "data/maps/Route6/scripts.pory"
+	.string "You're not ready for the power of my\n"
+	.string "dragons!$"
+
+Route6_DragonTamer_Text_1:
+# 111 "data/maps/Route6/scripts.pory"
+	.string "Okay, maybe you were ready…$"
+
+Route6_DragonTamer_Text_2:
 # 112 "data/maps/Route6/scripts.pory"
+	.string "No POKéMON type is cooler than Dragon!\p"
+	.string "Except maybe Ice?$"
+
+PoolSign_Text_0:
+# 117 "data/maps/Route6/scripts.pory"
 	.string "Public Pools\p"
 	.string "Soak in the Crystal Stream!$"
 

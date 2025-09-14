@@ -148,6 +148,7 @@ movement JayRunsInPlace{
 
 script PlaceJay_HozierHall_1{
     lock
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
     applymovement(Jay2, JayGoesToPlayer_HozierHall1)
     waitmovement(0)
     goto(JayGivesShoes)
@@ -155,6 +156,7 @@ script PlaceJay_HozierHall_1{
 
 script PlaceJay_HozierHall_2{
     lock
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft)
     applymovement(Jay2, JayGoesToPlayer_HozierHall2)
     waitmovement(0)
     goto(JayGivesShoes)
@@ -239,21 +241,28 @@ script CandlewaxCity_HallSign{
 
 script CandlewaxCity_RibCaveSign{
     lock
-    msgbox(format("{UP_ARROW} Rib Cave\p Gateway to Ecstasy Town."))
+    msgbox(format("{UP_ARROW} Rib Cave\pGateway to Ecstasy Town."))
     releaseall
     end
 }
 
 script CandlewaxCity_CitySign{
     lock
-    msgbox(format("Welcome to Candlewax City!\p A lively city with the prettiest pavement in the world."))
+    msgbox(format("Welcome to Candlewax City!\pWhere you can be whatever you set out to be."))
+    releaseall
+    end
+}
+
+script CandlewaxCity_BikeSign{
+    lock
+    msgbox(format("Candlewax City Bike Workshop\pMore innovation, faster bikes."))
     releaseall
     end
 }
 
 script CandlewaxCity_TunnelSign{
     lock
-    msgbox(format("{DOWN_ARROW}: Caesar Tunnel\p To Route 3 and Furge Town."))
+    msgbox(format("{DOWN_ARROW}: Caesar Tunnel\pTo Route 3 and Furge Town."))
     releaseall
     end
 }
@@ -266,10 +275,18 @@ script CandlewaxCity_Girl{
     end
 }
 
+script CandlewaxCity_Man{
+    lock
+    faceplayer
+    msgbox(format("My cousin bought a bike that was designed here in Candlewax City.\pEven her Ponyta struggles to keep up with her."), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
 script CandlewaxCity_KirliaGirl{
     lock
     faceplayer
-    msgbox(format("I'm so glad Concert Halls allow POKéMON!\pI couldn't imagine seeing my favourite artists without Kirlia!"), MSGBOX_AUTOCLOSE)
+    msgbox(format("I'm so glad Concert Halls allow POKéMON!\pI couldn't imagine seeing my favourite artists without Kirlia…"), MSGBOX_AUTOCLOSE)
     releaseall
     end
 }
@@ -278,7 +295,7 @@ script CandlewaxCity_Kirlia{
     lock
     faceplayer
     playmoncry(SPECIES_KIRLIA, CRY_MODE_NORMAL)
-    msgbox(format("Krrrr!"), MSGBOX_AUTOCLOSE)
+    msgbox(format("KIRLIA: Krrrr!"), MSGBOX_AUTOCLOSE)
     waitmoncry
     releaseall
     end

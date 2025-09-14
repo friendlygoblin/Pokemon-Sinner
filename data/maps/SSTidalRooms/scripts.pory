@@ -50,13 +50,13 @@ script ShipRoomsBed{
 	end}
 
 script ShipRoomsMeinth{
-	trainerbattle_single(TRAINER_COLTON, MeinthIntro, MeinthDefeat)
+	trainerbattle_single(TRAINER_MEINTH, MeinthIntro, MeinthDefeat)
 	msgbox(MeinthPostBattle, MSGBOX_AUTOCLOSE)
 	end}
 
-script ShipRoomsMicah{
-	trainerbattle_single(TRAINER_MICAH, MicahIntro, MicahDefeat)
-	msgbox(MicahPostBattle, MSGBOX_AUTOCLOSE)
+script ShipRoomsBrenae{
+	trainerbattle_single(TRAINER_BRENAE, BrenaeIntro, BrenaeDefeat)
+	msgbox(BrenaePostBattle, MSGBOX_AUTOCLOSE)
 	end}
 
 script ShipRoomsGeorge{
@@ -97,7 +97,7 @@ text WeveArrived{
 	}
 
 text MeinthIntro{
-	"I often sail to Godzilland.\p"
+	"MEINTH: I often sail to Godzilland.\p"
 	"I enjoy attending St Vincent's,\n"
 	"shows you see.$"
 	}
@@ -107,20 +107,21 @@ text MeinthDefeat{
 	}
 
 text MeinthPostBattle{
-	"I get so excited imagining what kinds\n"
-	"of POKéMON I'll get to see in the next\l"
-	"show. The anticipation of it thrills!$"
+	"MEINTH: Travelling for concerts is \n"
+	"part of the fun, especially when you \l"
+	"meet nice people on the way!$"
 	}
 
-text MicahIntro{
-	"Are your friends strong?$"
+text BrenaeIntro{
+	"BRENAE: I find the boat's movement \n"
+	"soothing, don't you?$"
 	}
 
-text MicahDefeat{
+text BrenaeDefeat{
 	"Your friends are, indeed, strong.$"
 	}
 
-text MicahPostBattle{
+text BrenaePostBattle{
 	"Friends need not be human.\n"
 	"For me, POKéMON are treasured friends!$"
 	}
@@ -210,14 +211,14 @@ text TaliaDefeat{
 
 text TaliaPostBattle{
 	"TALIA: It gets a little bit expensive\n"
-	"travelling to show, but it's so worth \l"
+	"travelling to shows, but it's so worth \l"
 	"it!$"
 	}
 
 text NotSuspiciousTakeThis{
 	"Uh… Hi! I… I'm not acting suspicious!\n"
 	"Uh… You can have this! For free!\p"
-	"It… Honestly, I didn't SNATCH it from\n"
+	"It… Honestly, I didn't snatch it from\n"
 	"someone! I'd never do such a thing!\l"
 	"It's clean! You can use it!$"
 	}
@@ -228,3 +229,41 @@ text ExplainSnatch{
 	"used by a foe or ally.$"
 	}
 
+script TrashBinTrubbish1{
+	lock
+	if(flag(FLAG_TEMP_1)){
+		msgbox(format("It's empty."), MSGBOX_AUTOCLOSE)
+	}
+	else{
+		msgbox(format("Something's moving at the bottom of the bin!"), MSGBOX_AUTOCLOSE)
+		setwildbattle(SPECIES_TRUBBISH, 16, ITEM_LEFTOVERS)
+		dowildbattle
+		setflag(FLAG_TEMP_1)
+	}
+}
+
+script TrashBinTrubbish2{
+	lock
+	if(flag(FLAG_TEMP_2)){
+		msgbox(format("It's empty."), MSGBOX_AUTOCLOSE)
+	}
+	else{
+		msgbox(format("Something's moving at the bottom of the bin!"), MSGBOX_AUTOCLOSE)
+		setwildbattle(SPECIES_TRUBBISH, 16, ITEM_BLACK_SLUDGE)
+		dowildbattle
+		setflag(FLAG_TEMP_2)
+	}
+}
+
+script TrashBinTrubbish3{
+	lock
+	if(flag(FLAG_TEMP_3)){
+		msgbox(format("It's empty."), MSGBOX_AUTOCLOSE)
+	}
+	else{
+		msgbox(format("Something's moving at the bottom of the bin!"), MSGBOX_AUTOCLOSE)
+		setwildbattle(SPECIES_TRUBBISH, 16, ITEM_LEFTOVERS)
+		dowildbattle
+		setflag(FLAG_TEMP_3)
+	}
+}

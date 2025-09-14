@@ -54,3 +54,41 @@ script MCCH_Sign{
     release
     end
 }
+
+script MCCH_LoungeGoblin{
+    lock
+    faceplayer
+    msgbox(LoungeGoblin_OfferBattle, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        msgbox(LoungeGoblin_AcceptBattle, MSGBOX_AUTOCLOSE)
+        trainerbattle_no_intro(TRAINER_GOBLIN_MIRROR_CITY, format("Hey, not bad! "))
+        msgbox(LoungeGoblin_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(LoungeGoblin_RefuseBattle, MSGBOX_AUTOCLOSE)
+    }
+    release
+    end
+}
+
+text LoungeGoblin_OfferBattle{
+    "GOBLIN: Hello again! \p"
+    "Need more practice before facing the band ?$"
+    }
+
+text LoungeGoblin_RefuseBattle{
+    "It's alright, come back if you change\n"
+    "your mind. $"
+    }
+
+text LoungeGoblin_AcceptBattle{
+    "Be right there, then!\n"
+    "And I won't hold back! $"
+    }
+
+text LoungeGoblin_PostBattle{
+    "GOBLIN: Looks like you got this! \p"
+    "Oh, but if you want a tip, sending out \n"
+    "the right POKéMON right away might save \l"
+    "your life! $"
+}

@@ -247,10 +247,10 @@
 #define OBJ_EVENT_GFX_ANN                     242
 #define OBJ_EVENT_GFX_WREN                    243
 #define OBJ_EVENT_GFX_JULIE                   244
-#define OBJ_EVENT_GFX_PIPLUP                  245
+#define OBJ_EVENT_GFX_WARIS                   245
 #define OBJ_EVENT_GFX_KATIE                   246
-#define OBJ_EVENT_GFX_ROCKRUFF                247
-#define OBJ_EVENT_GFX_IMPIDIMP                248
+#define OBJ_EVENT_GFX_MORPHEUS                247
+#define OBJ_EVENT_GFX_Q                       248
 #define OBJ_EVENT_GFX_SPRAGGY                 249
 #define OBJ_EVENT_GFX_PPELLA                  250
 #define OBJ_EVENT_GFX_PPKATHERINE             251
@@ -266,11 +266,13 @@
 #define OBJ_EVENT_GFX_MEGGO                   261
 #define OBJ_EVENT_GFX_GOSIA                   262
 #define OBJ_EVENT_GFX_TILLY                   263
+#define OBJ_EVENT_GFX_CHANTAL                 264
+#define OBJ_EVENT_GFX_NAT                     265
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        264
+#define NUM_OBJ_EVENT_GFX                        266
 
 
 // These are dynamic object gfx ids.
@@ -424,11 +426,11 @@
 #define OBJ_EVENT_PAL_TAG_FLORENCE            0x1138
 #define OBJ_EVENT_PAL_TAG_JULIE               0x1139
 #define OBJ_EVENT_PAL_TAG_STVINCENT           0x113A
-#define OBJ_EVENT_PAL_TAG_PIPLUP              0x113B
+#define OBJ_EVENT_PAL_TAG_MORPHEUS            0x113B 
 #define OBJ_EVENT_PAL_TAG_KATIE               0x113C
-#define OBJ_EVENT_PAL_TAG_ROCKRUFF            0x113D
+#define OBJ_EVENT_PAL_TAG_Q                   0x113D 
 #define OBJ_EVENT_PAL_TAG_CHAPPELL            0x113E
-#define OBJ_EVENT_PAL_TAG_IMPIDIMP            0x113F
+#define OBJ_EVENT_PAL_TAG_NAT                 0x113F
 #define OBJ_EVENT_PAL_TAG_MARINA              0x1140
 #define OBJ_EVENT_PAL_TAG_SPRAGGY             0x1141
 #define OBJ_EVENT_PAL_TAG_PICTUREPARLOUR      0x1142

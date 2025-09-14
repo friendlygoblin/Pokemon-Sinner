@@ -6,6 +6,7 @@ const Rachel = 1
 const Piplup = 2 
 
 script SBI_ResetRachel {
+    setvar(VAR_GODZILLAND_PORYGON, 0)
     setflag(FLAG_VISITED_FALLARBOR_TOWN)
     clearflag(FLAG_SBI_RACHEL)
 }

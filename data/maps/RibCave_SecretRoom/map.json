@@ -28,11 +28,11 @@
       "flag": "FLAG_RIGHTGUY_RIBCAVE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LILLIPUP)",
       "x": 10,
       "y": 8,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -75,6 +75,21 @@
     }
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 15,
+      "y": 9,
+      "elevation": 0,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_ITEM_AQUA_HIDEOUT_B1F_NUGGET"
+    },
+    {
+      "type": "hidden_item",
+      "x": 6,
+      "y": 10,
+      "elevation": 0,
+      "item": "ITEM_LEFTOVERS",
+      "flag": "FLAG_HIDDEN_ITEM_SS_TIDAL_LOWER_DECK_LEFTOVERS"
+    }
   ]
 }

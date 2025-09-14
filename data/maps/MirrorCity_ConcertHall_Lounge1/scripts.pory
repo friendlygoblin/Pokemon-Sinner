@@ -70,8 +70,7 @@ script MCCH_LoungeFlorence{
 text LoungeFlorence_OfferBattle{
     "FLORENCE: Here you are! \p"
     "I knew you had the drive to reach great \n"
-    "heights. \p"
-    "I saw it in you. \p"
+    "heights, I saw it in you. \p"
     "Now, would you like to warm up with me \n"
     "before facing The Last Dinner Party ?$"
     }
@@ -152,7 +151,7 @@ script MCCH_LoungeChappell{
 }
 
 text LoungeChappell_OfferBattle{
-    "CHAPPELL: Well, if it isn't the cunty \p"
+    "CHAPPELL: Well, if it isn't the cunty \n"
     "one from the Sunday Cave! \p"
     "You've come to challenge The Last  \n"
     "Dinner Party? \p"

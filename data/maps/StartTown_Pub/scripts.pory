@@ -400,7 +400,7 @@ script PickStarter_2{
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_TORCHIC, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_TACKLE, move2 = MOVE_LEER)
 
-                playfanfare(MUS_OBTAIN_ITEM)
+                playfanfare(MUS_CAUGHT)
                 msgbox("Received Torchic!")
                 call(NicknamePartyMon)
                 removeobject(Pokeball2)
@@ -433,7 +433,7 @@ script PickStarter_3{
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_MUDKIP, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_TACKLE, move2 = MOVE_GROWL)
 
-                playfanfare(MUS_OBTAIN_ITEM)
+                playfanfare(MUS_CAUGHT)
                 msgbox("Received Mudkip!$")
                 call(NicknamePartyMon)
                 removeobject(Pokeball3)
@@ -465,7 +465,7 @@ script PickStarter_1{
         if(var(VAR_RESULT) == YES){
             givemon(SPECIES_BULBASAUR, 5, item = ITEM_NONE, ball = ITEM_POKE_BALL , move1 = MOVE_VINE_WHIP, move2 = MOVE_GROWL)
 
-                playfanfare(MUS_OBTAIN_ITEM)
+                playfanfare(MUS_CAUGHT)
                 msgbox("Received Bulbasaur!$")
                 call(NicknamePartyMon)
                 removeobject(Pokeball1)

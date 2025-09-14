@@ -4,7 +4,7 @@
 #include "constants/battle_partner.h"
 
 #define TRAINER_NONE                          0
-#define TRAINER_SAWYER_1                      1
+#define TRAINER_JAY                           1
 #define TRAINER_GOBLIN_ROUTE_3                2
 #define TRAINER_GOBLIN_ROUTE_7                3
 #define TRAINER_GOBLIN_MIRROR_CITY            4
@@ -64,15 +64,15 @@
 #define TRAINER_AUSTINA                      58
 #define TRAINER_GWEN                         59
 #define TRAINER_RACHEL_2                     60
-#define TRAINER_LOLA_3                       61
-#define TRAINER_LOLA_4                       62
-#define TRAINER_LOLA_5                       63
+#define TRAINER_AMY_2                        61
+#define TRAINER_BRENAE                       62
+#define TRAINER_BRENAE_2                     63
 #define TRAINER_RICKY_1                      64
 #define TRAINER_SIMON                        65
 #define TRAINER_CHARLIE                      66
-#define TRAINER_RICKY_2                      67
-#define TRAINER_RICKY_3                      68
-#define TRAINER_RICKY_4                      69
+#define TRAINER_WARIS                        67
+#define TRAINER_WARIS_2                      68
+#define TRAINER_MORPHEUS                     69
 #define TRAINER_RICKY_5                      70
 #define TRAINER_RANDALL                      71
 #define TRAINER_PARKER                       72
@@ -115,7 +115,7 @@
 #define TRAINER_TASHA                       109
 #define TRAINER_TILLY                       110
 #define TRAINER_TILLY_2                     111
-#define TRAINER_VALERIE_4                   112
+#define TRAINER_BRENAE_3                    112
 #define TRAINER_VALERIE_5                   113
 #define TRAINER_CINDY_1                     114
 #define TRAINER_DAPHNE                      115
@@ -144,13 +144,13 @@
 #define TRAINER_GARRET                      138
 #define TRAINER_MEINTH                      139
 #define TRAINER_MEINTH_2                    140
-#define TRAINER_WINSTON_4                   141
+#define TRAINER_AIDEN_2                     141
 #define TRAINER_WINSTON_5                   142
 #define TRAINER_STEVE_1                     143
 #define TRAINER_THALIA_1                    144
 #define TRAINER_MARK                        145
 #define TRAINER_GRUNT_MT_CHIMNEY_1          146
-#define TRAINER_GEORGE_2                     147
+#define TRAINER_GEORGE_2                    147
 #define TRAINER_STEVE_3                     148
 #define TRAINER_STEVE_4                     149
 #define TRAINER_STEVE_5                     150
@@ -349,9 +349,9 @@
 #define TRAINER_BARNY                       343
 #define TRAINER_WADE                        344
 #define TRAINER_CARTER                      345
-#define TRAINER_ELLIOT_2                    346
-#define TRAINER_ELLIOT_3                    347
-#define TRAINER_ELLIOT_4                    348
+#define TRAINER_Q_2                         346
+#define TRAINER_CHANTAL                     347
+#define TRAINER_CHANTAL_2                   348
 #define TRAINER_ELLIOT_5                    349
 #define TRAINER_RONALD                      350
 #define TRAINER_JACOB                       351
@@ -375,7 +375,7 @@
 #define TRAINER_MARIA_1                     369
 #define TRAINER_GOSIA                       370
 #define TRAINER_GOSIA_2                     371
-#define TRAINER_MARIA_4                     372
+#define TRAINER_NESS                        372
 #define TRAINER_MARIA_5                     373
 #define TRAINER_CAMDEN                      374
 #define TRAINER_DEMETRIUS                   375

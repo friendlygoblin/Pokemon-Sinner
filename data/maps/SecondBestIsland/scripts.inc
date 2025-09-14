@@ -6,195 +6,197 @@ SecondBestIsland_MapScripts::
 
 SBI_ResetRachel::
 # 9 "data/maps/SecondBestIsland/scripts.pory"
-	setflag FLAG_VISITED_FALLARBOR_TOWN
+	setvar VAR_GODZILLAND_PORYGON, 0
 # 10 "data/maps/SecondBestIsland/scripts.pory"
+	setflag FLAG_VISITED_FALLARBOR_TOWN
+# 11 "data/maps/SecondBestIsland/scripts.pory"
 	clearflag FLAG_SBI_RACHEL
 	return
 
 
 SBI_Rachel::
-# 14 "data/maps/SecondBestIsland/scripts.pory"
-	lock
 # 15 "data/maps/SecondBestIsland/scripts.pory"
-	faceplayer
+	lock
 # 16 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_RachelWannaBattle, MSGBOX_YESNO
+	faceplayer
 # 17 "data/maps/SecondBestIsland/scripts.pory"
+	msgbox SBI_RachelWannaBattle, MSGBOX_YESNO
+# 18 "data/maps/SecondBestIsland/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq SBI_Rachel_2
-# 21 "data/maps/SecondBestIsland/scripts.pory"
+# 22 "data/maps/SecondBestIsland/scripts.pory"
 	msgbox SBI_RachelNoBattle
 SBI_Rachel_1:
-# 23 "data/maps/SecondBestIsland/scripts.pory"
+# 24 "data/maps/SecondBestIsland/scripts.pory"
 	release
 	end
 
 SBI_Rachel_2:
-# 18 "data/maps/SecondBestIsland/scripts.pory"
+# 19 "data/maps/SecondBestIsland/scripts.pory"
 	trainerbattle_single TRAINER_RACHEL, SBI_RachelYesBattle, SBI_Rachel_Text_0, SBI_RachelPostBattle
 	goto SBI_Rachel_1
 
 
 SBI_RachelPostBattle::
-# 28 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_RachelPostBattleText, MSGBOX_AUTOCLOSE
 # 29 "data/maps/SecondBestIsland/scripts.pory"
-	applymovement 2, PiplupJump
+	msgbox SBI_RachelPostBattleText, MSGBOX_AUTOCLOSE
 # 30 "data/maps/SecondBestIsland/scripts.pory"
-	playmoncry SPECIES_PIPLUP, CRY_MODE_NORMAL
+	applymovement 2, PiplupJump
 # 31 "data/maps/SecondBestIsland/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_PIPLUP, CRY_MODE_NORMAL
 # 32 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_RachelPostBattle_Text_0
+	waitmoncry
 # 33 "data/maps/SecondBestIsland/scripts.pory"
-	setflag FLAG_SBI_RACHEL
+	msgbox SBI_RachelPostBattle_Text_0
 # 34 "data/maps/SecondBestIsland/scripts.pory"
+	setflag FLAG_SBI_RACHEL
+# 35 "data/maps/SecondBestIsland/scripts.pory"
 	release
 	end
 
 
 SBI_Piplup::
-# 39 "data/maps/SecondBestIsland/scripts.pory"
-	lock
 # 40 "data/maps/SecondBestIsland/scripts.pory"
-	faceplayer
+	lock
 # 41 "data/maps/SecondBestIsland/scripts.pory"
-	playmoncry SPECIES_PIPLUP, CRY_MODE_NORMAL
+	faceplayer
 # 42 "data/maps/SecondBestIsland/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_PIPLUP, CRY_MODE_NORMAL
 # 43 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_Piplup_Text_0
+	waitmoncry
 # 44 "data/maps/SecondBestIsland/scripts.pory"
+	msgbox SBI_Piplup_Text_0
+# 45 "data/maps/SecondBestIsland/scripts.pory"
 	release
 	end
 
 
-# 80 "data/maps/SecondBestIsland/scripts.pory"
+# 81 "data/maps/SecondBestIsland/scripts.pory"
 PiplupJump:
-# 81 "data/maps/SecondBestIsland/scripts.pory"
-	jump_in_place_right
-# 81 "data/maps/SecondBestIsland/scripts.pory"
+# 82 "data/maps/SecondBestIsland/scripts.pory"
 	jump_in_place_right
 # 82 "data/maps/SecondBestIsland/scripts.pory"
+	jump_in_place_right
+# 83 "data/maps/SecondBestIsland/scripts.pory"
 	step_end
 
 SBI_Sign::
-# 86 "data/maps/SecondBestIsland/scripts.pory"
-	lock
 # 87 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_LyricsIntro
+	lock
 # 88 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_LyricsVerse1
+	msgbox SBI_LyricsIntro
 # 89 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_LyricsChorus
+	msgbox SBI_LyricsVerse1
 # 90 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_LyricsVerse2
-# 91 "data/maps/SecondBestIsland/scripts.pory"
 	msgbox SBI_LyricsChorus
+# 91 "data/maps/SecondBestIsland/scripts.pory"
+	msgbox SBI_LyricsVerse2
 # 92 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_LyricsOutro
+	msgbox SBI_LyricsChorus
 # 93 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_LyricsChorus, MSGBOX_AUTOCLOSE
+	msgbox SBI_LyricsOutro
 # 94 "data/maps/SecondBestIsland/scripts.pory"
+	msgbox SBI_LyricsChorus, MSGBOX_AUTOCLOSE
+# 95 "data/maps/SecondBestIsland/scripts.pory"
 	releaseall
 	end
 
 
 SBI_ChaiseLongue::
-# 165 "data/maps/SecondBestIsland/scripts.pory"
-	lock
 # 166 "data/maps/SecondBestIsland/scripts.pory"
-	msgbox SBI_TakeABreak, MSGBOX_YESNO
+	lock
 # 167 "data/maps/SecondBestIsland/scripts.pory"
+	msgbox SBI_TakeABreak, MSGBOX_YESNO
+# 168 "data/maps/SecondBestIsland/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq SBI_ChaiseLongue_2
 SBI_ChaiseLongue_1:
-# 176 "data/maps/SecondBestIsland/scripts.pory"
+# 177 "data/maps/SecondBestIsland/scripts.pory"
 	releaseall
 	end
 
 SBI_ChaiseLongue_2:
-# 168 "data/maps/SecondBestIsland/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 169 "data/maps/SecondBestIsland/scripts.pory"
-	playfanfare MUS_HEAL
+	fadescreen FADE_TO_BLACK
 # 170 "data/maps/SecondBestIsland/scripts.pory"
-	waitfanfare
+	playfanfare MUS_HEAL
 # 171 "data/maps/SecondBestIsland/scripts.pory"
-	special HealPlayerParty
+	waitfanfare
 # 172 "data/maps/SecondBestIsland/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	special HealPlayerParty
 # 173 "data/maps/SecondBestIsland/scripts.pory"
-	setrespawn HEAL_LOCATION_SECOND_BEST_ISLAND
+	fadescreen FADE_FROM_BLACK
 # 174 "data/maps/SecondBestIsland/scripts.pory"
+	setrespawn HEAL_LOCATION_SECOND_BEST_ISLAND
+# 175 "data/maps/SecondBestIsland/scripts.pory"
 	msgbox SBI_ChaiseLongue_Text_0, MSGBOX_AUTOCLOSE
 	goto SBI_ChaiseLongue_1
 
 
 SBI_Swimmer1::
-# 187 "data/maps/SecondBestIsland/scripts.pory"
-	trainerbattle_single TRAINER_BEVERLY, SBI_Swimmer1_Text_0, SBI_Swimmer1_Text_1
 # 188 "data/maps/SecondBestIsland/scripts.pory"
+	trainerbattle_single TRAINER_BEVERLY, SBI_Swimmer1_Text_0, SBI_Swimmer1_Text_1
+# 189 "data/maps/SecondBestIsland/scripts.pory"
 	msgbox SBI_Swimmer1_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 SBI_Swimmer2::
-# 192 "data/maps/SecondBestIsland/scripts.pory"
-	trainerbattle_single TRAINER_IMANI, SBI_Swimmer2_Text_0, SBI_Swimmer2_Text_1
 # 193 "data/maps/SecondBestIsland/scripts.pory"
+	trainerbattle_single TRAINER_IMANI, SBI_Swimmer2_Text_0, SBI_Swimmer2_Text_1
+# 194 "data/maps/SecondBestIsland/scripts.pory"
 	msgbox SBI_Swimmer2_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 SBI_Rachel_Text_0:
-# 18 "data/maps/SecondBestIsland/scripts.pory"
+# 19 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Ain't it nice?$"
 
 SBI_RachelPostBattle_Text_0:
-# 32 "data/maps/SecondBestIsland/scripts.pory"
+# 33 "data/maps/SecondBestIsland/scripts.pory"
 	.string "PIPLUP: Pip!$"
 
 SBI_Piplup_Text_0:
-# 43 "data/maps/SecondBestIsland/scripts.pory"
+# 44 "data/maps/SecondBestIsland/scripts.pory"
 	.string "PIPLUP: Pipip!$"
 
 SBI_ChaiseLongue_Text_0:
-# 174 "data/maps/SecondBestIsland/scripts.pory"
+# 175 "data/maps/SecondBestIsland/scripts.pory"
 	.string "You and your POKéMON wake up feeling\n"
 	.string "well rested.$"
 
 SBI_Swimmer1_Text_0:
-# 187 "data/maps/SecondBestIsland/scripts.pory"
+# 188 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Of course I know there's an island over\n"
 	.string "there!\p"
 	.string "But I'm training to swim faster!$"
 
 SBI_Swimmer1_Text_1:
-# 187 "data/maps/SecondBestIsland/scripts.pory"
+# 188 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Time for a little break…$"
 
 SBI_Swimmer1_Text_2:
-# 188 "data/maps/SecondBestIsland/scripts.pory"
+# 189 "data/maps/SecondBestIsland/scripts.pory"
 	.string "I'm jealous of Water Type POKéMON,\n"
 	.string "swimming is so easy for them…$"
 
 SBI_Swimmer2_Text_0:
-# 192 "data/maps/SecondBestIsland/scripts.pory"
+# 193 "data/maps/SecondBestIsland/scripts.pory"
 	.string "I'm gonna swim across the ocean!$"
 
 SBI_Swimmer2_Text_1:
-# 192 "data/maps/SecondBestIsland/scripts.pory"
+# 193 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Maybe I'll start with a shorter\n"
 	.string "distance…$"
 
 SBI_Swimmer2_Text_2:
-# 193 "data/maps/SecondBestIsland/scripts.pory"
+# 194 "data/maps/SecondBestIsland/scripts.pory"
 	.string "You should learn to swim, in case your\n"
 	.string "POKéMON can't carry you.$"
 
 SBI_RachelWannaBattle::
-# 48 "data/maps/SecondBestIsland/scripts.pory"
+# 49 "data/maps/SecondBestIsland/scripts.pory"
 	.string "RACHEL: Oh hi! \p"
 	.string "Welcome to Second Best Island! \p"
 	.string "Did you know The Last Dinner Party wrote \n"
@@ -208,25 +210,25 @@ SBI_RachelWannaBattle::
 	.string "Can we spar? Please? $"
 
 SBI_RachelYesBattle::
-# 62 "data/maps/SecondBestIsland/scripts.pory"
+# 63 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Yay! Let's do this!$"
 
 SBI_RachelNoBattle::
-# 66 "data/maps/SecondBestIsland/scripts.pory"
+# 67 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Awh that's okay… \p"
 	.string "I'll just listen to Second Best in my \n"
 	.string "corner. \p"
 	.string "Come back if you change your mind!$"
 
 SBI_RachelPostBattleText::
-# 73 "data/maps/SecondBestIsland/scripts.pory"
+# 74 "data/maps/SecondBestIsland/scripts.pory"
 	.string "RACHEL: That was fun! \p"
 	.string "Almost as fun as Second Best! \p"
 	.string "Feel free to look around here and \n"
 	.string "enjoy the island!$"
 
 SBI_LyricsIntro::
-# 98 "data/maps/SecondBestIsland/scripts.pory"
+# 99 "data/maps/SecondBestIsland/scripts.pory"
 	.string "SECOND BEST \p"
 	.string "Now the days grow long \n"
 	.string "And your hands and tears \l"
@@ -243,7 +245,7 @@ SBI_LyricsIntro::
 	.string "Don't want to need to go back! $"
 
 SBI_LyricsVerse1::
-# 114 "data/maps/SecondBestIsland/scripts.pory"
+# 115 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Chewing gum and white wine, \n"
 	.string "Your cold answer's mine… \p"
 	.string "I'm wasting my time. \p"
@@ -253,7 +255,7 @@ SBI_LyricsVerse1::
 	.string "I feel like I've left you behind. $"
 
 SBI_LyricsChorus::
-# 123 "data/maps/SecondBestIsland/scripts.pory"
+# 124 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Ain't it nice? \p"
 	.string "Second best! \p"
 	.string "Ain't it good? \p"
@@ -264,7 +266,7 @@ SBI_LyricsChorus::
 	.string "Second best! $"
 
 SBI_LyricsVerse2::
-# 134 "data/maps/SecondBestIsland/scripts.pory"
+# 135 "data/maps/SecondBestIsland/scripts.pory"
 	.string "Oh against your bathroom tiles \n"
 	.string "Your back goes on for miles… \p"
 	.string "I'm losing my mind! \p"
@@ -276,7 +278,7 @@ SBI_LyricsVerse2::
 	.string "… staaairs! $"
 
 SBI_LyricsOutro::
-# 146 "data/maps/SecondBestIsland/scripts.pory"
+# 147 "data/maps/SecondBestIsland/scripts.pory"
 	.string "What do I do to be better for you? \p"
 	.string "What do I do to be better for you? \p"
 	.string "What do I do to be better for you? \p"
@@ -294,7 +296,7 @@ SBI_LyricsOutro::
 	.string "Don't want to need to go back! $"
 
 SBI_TakeABreak::
-# 180 "data/maps/SecondBestIsland/scripts.pory"
+# 181 "data/maps/SecondBestIsland/scripts.pory"
 	.string "This looks like a nice spot to take \n"
 	.string "a break. \p"
 	.string "Would you like to take a nap?$"

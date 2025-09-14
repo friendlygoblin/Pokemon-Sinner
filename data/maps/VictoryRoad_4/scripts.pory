@@ -1,1 +1,86 @@
 mapscripts VictoryRoad_4_MapScripts {}
+
+script VictoryRoad_Amy{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Amy_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_AMY_2, format("Noted!"))
+        msgbox(VictoryRoad_Amy_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("What a shame, our readers love you!"))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Amy_BattleIntro{
+    "AMY: {PLAYER}! Are you on your way \n"
+    "to Mirror City? \p"
+    "Why am I even asking, of course you \n"
+    "are! \p"
+    "Would you answer a few questions for \n"
+    "ParlourZine as a promising challenger?$"
+}
+
+text VictoryRoad_Amy_PostBattle{
+    "AMY: Our readers loved you in our last \n"
+    "issue, they'll love you in this one! \p"
+    "Good luck against TLDP! $"
+}
+
+script VictoryRoad_Aiden{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Aiden_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_AIDEN_2, format("Oh, I think I know… "))
+        msgbox(VictoryRoad_Aiden_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("I'll figure it out, maybe I could ask them to tour close to my home… "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Aiden_BattleIntro{
+    "AIDEN: What am I even gonna say \n"
+    "to TLDP when I challenge them? \p"
+    "Any ideas? $"
+}
+
+text VictoryRoad_Aiden_PostBattle{
+    "AIDEN: I'll ask TLDP to tour close to \n"
+    "where I live, it took me forever to \l"
+    "get here! $"
+}
+
+script VictoryRoad_Meinth{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Meinth_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_MEINTH_2, format("Well, I won't lose against the band… "))
+        msgbox(VictoryRoad_Meinth_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Awh that's okay.\pI'm gonna win the challenge with my dog POKéMON, you know!"))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Meinth_BattleIntro{
+    "MEINTH: I travelled for so long to \n"
+    "get here, I'll win against TLDP! \p"
+    "I can always use more training, what \n"
+    "do you say? $"
+}
+
+text VictoryRoad_Meinth_PostBattle{
+    "MEINTH: I'm ready to travel anywhere for \n"
+    "The Last Dinner Party, especially if I\l"
+    "don't have to pay for tickets.  $"
+}

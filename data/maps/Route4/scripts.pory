@@ -19,3 +19,8 @@ script Route4_Collector{
     trainerbattle_single(TRAINER_ED, format("I only collect cool POKéMON.$"), format("Ah! My precious POKéMON!"))
     msgbox(format("You travel a lot, you must see a lot of cool POKéMON.\pI'm jealous."), MSGBOX_AUTOCLOSE)
 }
+
+script Route4_Cyclist{
+    trainerbattle_single(TRAINER_JACOB, format("There's nothing better than zooming on a bike!$"), format("Winning a battle is probably nice too… "))
+    msgbox(format("I'll never get tired of bike rides with my POKéMON."), MSGBOX_AUTOCLOSE)
+}

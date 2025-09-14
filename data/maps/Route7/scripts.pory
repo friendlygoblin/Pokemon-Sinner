@@ -1,6 +1,8 @@
 mapscripts Route7_MapScripts {}
 
 const Goblin = 1
+const Rora = 8
+const Cal = 9
 
 script Route7_Goblin{
     trainerbattle_single(TRAINER_GOBLIN_ROUTE_7, Route7_Goblin_BattleIntro, Route7_Goblin_Defeated, Route7_GoblinLeaves)
@@ -85,3 +87,103 @@ script Route7_Picnicker {
     msgbox(format("My POKéMON are the prettiest, but I love discovering new ones."), MSGBOX_AUTOCLOSE)
 }
 
+script Route7_Rora{
+    lock
+    faceplayer
+    msgbox(Rora_SomethingMissing)
+    applymovement(Rora, WalkInPlaceDown)
+    waitmovement(0)
+    release
+    end
+}
+
+script Route7_Cal{
+    lock
+    faceplayer
+    msgbox(Cal_NeedAProp)
+    if(checkitem(ITEM_SILK_SCARF)){
+        msgbox(Cal_YouHaveProp, MSGBOX_YESNO)
+        if(var(VAR_RESULT)==YES){
+            msgbox(Cal_LetsTry, MSGBOX_AUTOCLOSE)
+            applymovement(Rora, Common_Movement_FaceDown)
+            setobjectmovementtype(Rora, MOVEMENT_TYPE_FACE_DOWN)
+            applymovement(Cal, Cal_GiveScarfToRora)
+            waitmovement(0)
+            fadescreen(FADE_TO_BLACK)
+            delay(20)
+            fadescreen(FADE_FROM_BLACK)
+            msgbox(Cal_LastOne, MSGBOX_AUTOCLOSE)
+            faceplayer
+            msgbox(Cal_Thanks)
+            giveitem(ITEM_RARE_CANDY)
+            applymovement(Rora, WalkInPlaceDown)
+            msgbox(Rora_Thanks, MSGBOX_AUTOCLOSE)
+            fadescreen(FADE_TO_BLACK)
+            playse(SE_EXIT)
+            waitse
+            removeobject(Rora)
+            removeobject(Cal)
+            setflag(FLAG_ROUTE7_PHOTOSHOOT)
+            fadescreen(FADE_FROM_BLACK)
+        }
+        else{
+            msgbox(format("Never mind, then.\nWe'll figure it out."))
+        }
+    }
+    else{
+        msgbox("Some kind of scarf? \nI don't know… $", MSGBOX_AUTOCLOSE)
+    }
+    release
+    end
+}
+
+movement Cal_GiveScarfToRora{
+    walk_in_place_up
+    step_end
+}
+
+text Rora_SomethingMissing{
+    "AURORA: Hey, {PLAYER}!\p"
+    "I'm in the middle of a photoshoot with \n"
+    "Cal, to promote our Mirror City shows. \p"
+    "We got some good shots but I don't \n"
+    "know, something's missing… \p"
+    "Well, I should get back to it. $"
+}
+
+text Rora_Thanks{
+    "AURORA: Thank you, {PLAYER}! \p"
+    "Now that we're done with this we should \n"
+    "go. \p"
+    "I'll see you in Mirror City! $"
+}
+
+text Cal_NeedAProp{
+    "CAL: Hi, I'm Cal McIntyre, director \n"
+    "and photographer. \p"
+    "I love working with The Last Dinner \n"
+    "Party but something's off today. \p"
+    "I think we're missing something, like \n"
+    "a prop or an accessory that would tie \l"
+    "everything together. $"
+}
+
+text Cal_YouHaveProp{
+    "Wait, is that a Silk Scarf? \n"
+    "Can we use it? We'll give it back!$"
+}
+
+text Cal_LetsTry{
+    "Thank you! \n"
+    "Now let's see… $"
+}
+
+text Cal_LastOne{
+    "CAL: And just a last one… \n"
+    "Perfect! $"
+}
+
+text Cal_Thanks{
+    "Thank you so much, here's your scarf \n"
+    "and here's a thank you gift! $"
+}

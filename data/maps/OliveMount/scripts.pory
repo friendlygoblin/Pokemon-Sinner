@@ -31,7 +31,7 @@ script OliveMount_Fisherman{
     lock
     faceplayer
     if(flag(FLAG_RECEIVED_SUPER_ROD)){
-        msgbox(ExplainFishing)
+        msgbox(ExplainFishing, MSGBOX_AUTOCLOSE)
     }
     else{
         msgbox(format("If you win, I'll give you something super cool!"))

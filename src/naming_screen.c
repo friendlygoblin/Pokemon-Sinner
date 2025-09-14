@@ -1773,7 +1773,7 @@ static void DummyGenderIcon(void)
 static const u8 sGenderColors[2][3] =
 {
     {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_BLUE, TEXT_COLOR_BLUE},
-    {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_RED, TEXT_COLOR_RED}
+    {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_RED, TEXT_COLOR_BLUE}
 };
 
 static void DrawGenderIcon(void)

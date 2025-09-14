@@ -1240,3 +1240,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/CandlewaxCity_BikeShop/scripts.inc"
 
 	.include "data/maps/VictoryRoad_5/scripts.inc"
+
+	.include "data/maps/Interlude_UpperDeck/scripts.inc"

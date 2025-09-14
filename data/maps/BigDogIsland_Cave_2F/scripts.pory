@@ -1,1 +1,164 @@
 mapscripts BigDogIsland_Cave_2F_MapScripts {}
+
+const Dog = 2
+const Rora = 3
+
+script BDI_Fossil{
+    lock
+    msgbox(format("It looks like this rock contains two fossils. \pYou only have space in your bag for one, which one do you pick?"))
+
+        dynmultipush("Skull Fossil", ITEM_SKULL_FOSSIL)
+        dynmultipush("Armor Fossil", ITEM_ARMOR_FOSSIL)
+        dynmultipush("None, thanks!", ITEM_NONE)
+        dynmultistack(0, 0, FALSE, 6, FALSE, 3, DYN_MULTICHOICE_CB_NONE)
+        
+        switch(var(VAR_RESULT)){
+            case ITEM_SKULL_FOSSIL:
+                giveitem(ITEM_SKULL_FOSSIL)
+                removeobject(1)
+                setflag(FLAG_BDI_FOSSILS)
+            case ITEM_ARMOR_FOSSIL:
+                giveitem(ITEM_ARMOR_FOSSIL)
+                removeobject(1)
+                setflag(FLAG_BDI_FOSSILS)
+            case ITEM_NONE:
+                release
+                end
+            default:
+                release
+                end
+    }
+    release
+    end
+}
+
+script BDI_Rora{
+    lock
+    faceplayer
+    if(var(VAR_BDI_DOG)==0){
+        setvar(VAR_BDI_DOG, 1)
+        msgbox(BDI_RoraWhatchaDoingHere, MSGBOX_AUTOCLOSE)
+        applymovement(Rora, BDI_RoraLookAtDogThenBack)
+        waitmovement(0)
+        msgbox(BDI_RoraDogHurt, MSGBOX_YESNO)
+        if(var(VAR_RESULT)==YES){
+            specialvar(VAR_RESULT, CalculatePlayerPartyCount)
+            if(var(VAR_RESULT)==PARTY_SIZE){
+                msgbox(BDI_RoraNotEnoughSpace, MSGBOX_AUTOCLOSE)           
+            }
+            else{
+                msgbox(BDI_RoraTakeDog, MSGBOX_AUTOCLOSE)
+                removeobject(Dog)
+                setflag(FLAG_BDI_DOG)
+                givemon(SPECIES_FENNEKIN, 5)
+                setvar(VAR_BDI_DOG, 2)
+                msgbox(BDI_RoraLeaves)
+            }
+        }
+        else{
+            msgbox(BDI_RoraLeaveBerries, MSGBOX_AUTOCLOSE)
+        }
+        fadescreen(FADE_TO_BLACK)
+        playse(SE_EXIT)
+        waitse
+        setflag(FLAG_BDI_RORA)
+        removeobject(Rora)
+        fadescreen(FADE_FROM_BLACK)
+    }
+    release
+    end
+}
+
+movement BDI_RoraLookAtDogThenBack{
+    walk_in_place_right
+    delay_16
+    face_player
+    step_end
+}
+
+script BDI_Dog{
+    lock
+    faceplayer
+    switch(var(VAR_BDI_DOG)){
+        case 0:
+            playmoncry(SPECIES_FENNEKIN, CRY_MODE_WEAK)
+            msgbox(format("This poor POKéMON looks hurt."))
+            waitmoncry
+        case 1:
+            playmoncry(SPECIES_FENNEKIN, CRY_MODE_WEAK)
+            msgbox(format("Aurora couldn't stay but she's counting on you to take care of the POKéMON.\pTake it in now?"), MSGBOX_YESNO)
+            if(var(VAR_RESULT)==YES){
+            specialvar(VAR_RESULT, CalculatePlayerPartyCount)
+            if(var(VAR_RESULT)==PARTY_SIZE){
+                msgbox(format("There isn't enough space in your party. \pBetter come back after making room."), MSGBOX_AUTOCLOSE)            
+                }
+            else{
+                msgbox(format("The POKéMON seems to be happy to go with you!"), MSGBOX_AUTOCLOSE)
+                setflag(FLAG_BDI_DOG)
+                removeobject(Dog)
+                givemon(SPECIES_FENNEKIN, 5, ITEM_ORAN_BERRY)
+                setvar(VAR_BDI_DOG, 2)
+                }
+            }
+        case 2:
+            msgbox(format("uhhhh this shouldn't be possible"))
+        case 3:
+            msgbox(format("uhhhh this shouldn't be possible"))
+    
+    }
+    release
+    end
+}
+
+
+
+text BDI_RoraWhatchaDoingHere{
+    "AURORA: {PLAYER}? What are you doing \n"
+    "here? \p"
+    "You know what, that's not important \n"
+    "right now. $"
+}
+
+text BDI_RoraLeaveBerries{
+    "AURORA: Hmm… and I can't take it with\n"
+    "me… \p"
+    "I'll leave some berries here so it can \n"
+    "hopefully get better on its own. \p"
+    "I have to get going now, I hope it'll \n"
+    "be okay.$"
+}
+
+text BDI_RoraDogHurt{
+    "See, I was visiting the island when I\n"
+    "heard noise in the cave, and I found \l"
+    "this little one. \p"
+    "I think it's hurt, I couldn't just \n"
+    "leave it alone. \p"
+    "Maybe you could take it to the Prelude \n"
+    "Town shelter, they'll be able to take \l"
+    "proper care of it. \p"
+    "What do you say? $"
+}
+
+text BDI_RoraNotEnoughSpace{
+    "Great! \p"
+    "Oh… your team is full. \p"
+    "Come back when you've made space, I \n"
+    "can't stay forever so I'll leave \l"
+    "some berries here. \p"
+    "There's a POKéMON Centre with a PC \n"
+    "outside the cave, I trust you! $"
+}
+
+text BDI_RoraTakeDog{
+    "Perfect! \n"
+    "Here, thank you for doing this. \p"
+    "I know it's the second time a TLDP \n"
+    "member is asking you to take a \l"
+    "POKéMON in, so really thank you.$"
+}
+
+text BDI_RoraLeaves{
+    "AURORA: I have to go now, see you in \n"
+    "Mirror City! $"
+}

@@ -92,7 +92,7 @@ text FastCurrentsHopeYouEnjoyVoyage{
 
 text HopeYouEnjoyVoyage{
 	"We hope you enjoy your voyage on\n"
-	"our ferry.$"
+	"The Interlude.$"
 	}
 
 text MadeLandInBPort{
@@ -106,6 +106,7 @@ text MadeLandInGodzilland{
 	}
 
 text CanRestInCabin2{
+	"Welcome aboard The Interlude!\p"
 	"It'll be some time before we make land,\n"
 	"I reckon.\p"
 	"You can rest up in your cabin if you'd\n"
@@ -130,7 +131,7 @@ text HorizonSpreadsBeyondPorthole{
 	}
 
 text WelcomeAboard{
-	"Welcome aboard, {PLAYER}!\p"
+	"Welcome aboard!\p"
 	"I'm the captain of The Interlude!\p"
 	"Thank you for sailing with us, feel free \n"
 	"to explore the ship and meet the other \l"

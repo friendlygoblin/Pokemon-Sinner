@@ -172,6 +172,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "DevHouse_Porygon"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "item": "ITEM_DUBIOUS_DISC",
+      "flag": "FLAG_GODZILLAND_DUBIOUS_DISC"
     }
   ]
 }

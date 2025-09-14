@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ParlourZine_Amy",
-      "flag": "FLAG_HIDE_LANETTES_HOUSE_LANETTE"
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
@@ -54,7 +54,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PIPLUP",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PIPLUP)",
       "x": 4,
       "y": 2,
       "elevation": 0,
@@ -76,8 +76,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "ParlourZine_Lizzie",
+      "flag": "FLAG_PARLOURZINE_LIZZIE"
     }
   ],
   "warp_events": [

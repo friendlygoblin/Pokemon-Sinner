@@ -34,6 +34,14 @@ Route4_Collector::
 	return
 
 
+Route4_Cyclist::
+# 24 "data/maps/Route4/scripts.pory"
+	trainerbattle_single TRAINER_JACOB, Route4_Cyclist_Text_0, Route4_Cyclist_Text_1
+# 25 "data/maps/Route4/scripts.pory"
+	msgbox Route4_Cyclist_Text_2, MSGBOX_AUTOCLOSE
+	return
+
+
 Route4_Picnicker_Text_0:
 # 4 "data/maps/Route4/scripts.pory"
 	.string "This route is pretty empty, I can get\n"
@@ -89,3 +97,17 @@ Route4_Collector_Text_2:
 	.string "You travel a lot, you must see a lot of\n"
 	.string "cool POKéMON.\p"
 	.string "I'm jealous.$"
+
+Route4_Cyclist_Text_0:
+# 24 "data/maps/Route4/scripts.pory"
+	.string "There's nothing better than zooming on\n"
+	.string "a bike!$"
+
+Route4_Cyclist_Text_1:
+# 24 "data/maps/Route4/scripts.pory"
+	.string "Winning a battle is probably nice too…$"
+
+Route4_Cyclist_Text_2:
+# 25 "data/maps/Route4/scripts.pory"
+	.string "I'll never get tired of bike rides with\n"
+	.string "my POKéMON.$"

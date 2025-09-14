@@ -13,7 +13,7 @@ const Florence = 4
 
 script FurgeTown_Sign{
     lock
-    msgbox(format("Welcome to Furge Town!\pEnjoy the peace of the forest!"), MSGBOX_AUTOCLOSE)
+    msgbox(format("Welcome to Furge Town!\pLet the trees swallow you!"), MSGBOX_AUTOCLOSE)
     releaseall
     end
 }
@@ -35,6 +35,40 @@ script FurgeTown_CampSign{
 script FurgeTown_FlorenceSign{
     lock
     msgbox(format("FURGE TOWN CONCERT CLEARING\pCURRENT RESIDENT: FLORENCE WELCH\p(not done yet)"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script FurgeTown_VespiquenGirl{
+    lock
+    faceplayer
+    msgbox(format("My dad befriended the Combees, and I befriended their Vespiquen! \p"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script FurgeTown_Vespiquen{
+    lock
+    faceplayer
+    playmoncry(SPECIES_VESPIQUEN, CRY_MODE_NORMAL)
+    waitmoncry
+    msgbox(format("VESPIQUEN: Zzzzzzz. \p"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script FurgeTown_OldWoman{
+    lock
+    faceplayer
+    msgbox(format("A little while ago, a band of five eccentric musicians came here and wrote a song. \pI'm not sure how it goes, something about becoming a forest? \p"), MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script FurgeTown_Man{
+    lock
+    faceplayer
+    msgbox(format("I came here because I wanted to be closer to nature. \pI think I picked the right town!"), MSGBOX_AUTOCLOSE)
     releaseall
     end
 }

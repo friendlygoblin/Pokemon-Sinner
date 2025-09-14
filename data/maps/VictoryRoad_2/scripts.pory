@@ -168,8 +168,36 @@ text VictoryRoad_Ann_BattleIntro{
 }
 
 text VictoryRoad_Ann_PostBattle{
-    "ANN: This is a very important decision, \n"
-    "I need to pick the best Marina song! $"
+    "ANN: I also hope Lizzie will dress up as \n"
+    "a cowboy, I've drawn too much cowboy \l"
+    "Lizzie art to not see it happen! $"
+}
+
+script VictoryRoad_Chantal{
+    lock
+    faceplayer
+    msgbox(VictoryRoad_Chantal_BattleIntro, MSGBOX_YESNO)
+    if(var(VAR_RESULT)==YES){
+        trainerbattle_no_intro(TRAINER_CHANTAL_2, format("Do you think they'll accept? "))
+        msgbox(VictoryRoad_Chantal_PostBattle, MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("That's alright, I'll be practicing here if you change your mind… "))
+    }
+    release
+    end
+}
+
+text VictoryRoad_Chantal_BattleIntro{
+    "CHANTAL: I brought my favourite TLDP \n"
+    "record for the band to sign! \p"
+    "Can I show you how I'm planning to \p"
+    "ask them? $"
+}
+
+text VictoryRoad_Chantal_PostBattle{
+    "CHANTAL: I collect records, I have so \p"
+    "many variants already! $"
 }
 
 script VictoryRoad_Elle{

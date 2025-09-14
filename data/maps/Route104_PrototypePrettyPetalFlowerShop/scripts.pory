@@ -11,6 +11,7 @@ mart FlowerShop_Mart{
 	ITEM_BIG_ROOT
 	ITEM_REVIVAL_HERB
 	ITEM_LEAF_STONE
+	ITEM_TM19
 }
 
 script FlowerShop_Clerk{
