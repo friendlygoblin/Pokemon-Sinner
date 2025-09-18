@@ -81,7 +81,7 @@ MissedTheGig::
 # 55 "data/maps/StartTown_Pub/scripts.pory"
 	waitmovement 0
 # 56 "data/maps/StartTown_Pub/scripts.pory"
-	setobjectxy 7, 12, 12
+	setobjectxyperm 7, 12, 12
 # 57 "data/maps/StartTown_Pub/scripts.pory"
 	setobjectmovementtype 7, MOVEMENT_TYPE_FACE_LEFT
 # 61 "data/maps/StartTown_Pub/scripts.pory"

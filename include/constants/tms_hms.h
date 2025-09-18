@@ -52,7 +52,22 @@
     F(SKILL_SWAP) \
     F(SNATCH) \
     F(OVERHEAT) \
-    F(DAZZLING_GLEAM)
+    F(DAZZLING_GLEAM)\
+    F(ICE_PUNCH)\
+    F(THUNDER_PUNCH)\
+    F(FIRE_PUNCH)\
+    F(ROLLOUT)\
+    F(PLAY_ROUGH)\
+    F(ROOST)\
+    F(CLOSE_COMBAT)\
+    F(CRUNCH)\
+    F(MOONBLAST)\
+    F(DARK_PULSE)\
+    F(DRAIN_PUNCH)\
+    F(AQUA_TAIL)\
+    F(VOLT_SWITCH)\
+    F(BUG_BUZZ)
+
 
 #define FOREACH_HM(F) \
     F(CUT) \

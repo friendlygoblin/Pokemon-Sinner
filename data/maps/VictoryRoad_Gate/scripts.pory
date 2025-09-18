@@ -22,6 +22,8 @@ mart VRG_Mart{
     ITEM_FULL_HEAL
     ITEM_FULL_RESTORE
     ITEM_REVIVE
+    ITEM_TM61
+    ITEM_TM64
 }
 
 script VRG_MartGuy{

@@ -213,6 +213,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "RightDeadTree"
+    },
+    {
+      "type": "hidden_item",
+      "x": 46,
+      "y": 10,
+      "elevation": 0,
+      "item": "ITEM_REVIVAL_HERB",
+      "flag": "FLAG_ITEM_ROUTE_123_REVIVAL_HERB"
     }
   ]
 }

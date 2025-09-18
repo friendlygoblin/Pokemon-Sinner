@@ -78,8 +78,16 @@ script Route7_Cyclist {
 }
 
 script Route7_BlackBelt {
-    trainerbattle_single(TRAINER_KOJI_1, format("Patience, focus, discipline… \pI can't lose!"), format("Huh? "))
+    trainerbattle_single(TRAINER_KOJI_1, format("Patience, focus, discipline… \pI can't lose!"), format("Huh? "), GiveDrainPunch)
     msgbox(format("Training against different opponents makes you stronger! "), MSGBOX_AUTOCLOSE)
+}
+
+script GiveDrainPunch{
+    msgbox(format("You look strong, you deserve to know my favourite move."))
+    giveitem(ITEM_TM53)
+    msgbox(format("This move is great! Inflicts damage and drains your opponent's health so you can fight longer!"), MSGBOX_AUTOCLOSE)
+    release
+    end
 }
 
 script Route7_Picnicker {

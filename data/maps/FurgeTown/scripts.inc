@@ -329,13 +329,11 @@ FurgeTown_FlorenceSign_Text_0:
 FurgeTown_VespiquenGirl_Text_0:
 # 45 "data/maps/FurgeTown/scripts.pory"
 	.string "My dad befriended the Combees, and I\n"
-	.string "befriended their Vespiquen!\p"
-	.string "$"
+	.string "befriended their Vespiquen!$"
 
 FurgeTown_Vespiquen_Text_0:
 # 55 "data/maps/FurgeTown/scripts.pory"
-	.string "VESPIQUEN: Zzzzzzz.\p"
-	.string "$"
+	.string "VESPIQUEN: Zzzzzzz.$"
 
 FurgeTown_OldWoman_Text_0:
 # 63 "data/maps/FurgeTown/scripts.pory"
@@ -343,8 +341,7 @@ FurgeTown_OldWoman_Text_0:
 	.string "eccentric musicians came here and\l"
 	.string "wrote a song.\p"
 	.string "I'm not sure how it goes, something\n"
-	.string "about becoming a forest?\p"
-	.string "$"
+	.string "about becoming a forest?$"
 
 FurgeTown_Man_Text_0:
 # 71 "data/maps/FurgeTown/scripts.pory"

@@ -53,26 +53,12 @@ script EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame{
 	setvar(VAR_TEMP_1, 1)
 	call(EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags)
 	checkplayergender
-	if(var(VAR_RESULT)==MALE){
-		goto(EverGrandeCity_HallOfFame_EventScript_GameClearMale)
-		}
-	else{
-		goto(EverGrandeCity_HallOfFame_EventScript_GameClearFemale)
-		}
-	end
-}
-
-script EverGrandeCity_HallOfFame_EventScript_GameClearMale{
-	setrespawn(HEAL_LOCATION_EVERGRANDECITY_DEMOSTARTER)
-	fadescreenspeed(FADE_TO_BLACK, 24)
-	special(GameClear)
-	waitstate
-	releaseall
+	goto(EverGrandeCity_HallOfFame_EventScript_GameClearFemale)
 	end
 }
 
 script EverGrandeCity_HallOfFame_EventScript_GameClearFemale{
-	setrespawn(HEAL_LOCATION_EVERGRANDECITY_DEMOSTARTER)
+	setrespawn(HEAL_LOCATION_START_TOWN)
 	fadescreenspeed(FADE_TO_BLACK, 24)
 	special(GameClear)
 	waitstate

@@ -43,20 +43,24 @@ VRG_Mart:
 	.2byte ITEM_FULL_RESTORE
 # 24 "data/maps/VictoryRoad_Gate/scripts.pory"
 	.2byte ITEM_REVIVE
+# 25 "data/maps/VictoryRoad_Gate/scripts.pory"
+	.2byte ITEM_TM61
+# 26 "data/maps/VictoryRoad_Gate/scripts.pory"
+	.2byte ITEM_TM64
 	.2byte ITEM_NONE
 
 VRG_MartGuy::
-# 28 "data/maps/VictoryRoad_Gate/scripts.pory"
-	lock
-# 29 "data/maps/VictoryRoad_Gate/scripts.pory"
-	msgbox VRG_MartGuy_Text_0
 # 30 "data/maps/VictoryRoad_Gate/scripts.pory"
-	message VRG_MartGuy_Text_1
+	lock
 # 31 "data/maps/VictoryRoad_Gate/scripts.pory"
-	pokemart VRG_Mart
+	msgbox VRG_MartGuy_Text_0
 # 32 "data/maps/VictoryRoad_Gate/scripts.pory"
-	msgbox VRG_MartGuy_Text_2
+	message VRG_MartGuy_Text_1
 # 33 "data/maps/VictoryRoad_Gate/scripts.pory"
+	pokemart VRG_Mart
+# 34 "data/maps/VictoryRoad_Gate/scripts.pory"
+	msgbox VRG_MartGuy_Text_2
+# 35 "data/maps/VictoryRoad_Gate/scripts.pory"
 	release
 	end
 
@@ -75,16 +79,16 @@ VRG_HealPokemon_Text_1:
 	.string "heal your team.$"
 
 VRG_MartGuy_Text_0:
-# 29 "data/maps/VictoryRoad_Gate/scripts.pory"
+# 31 "data/maps/VictoryRoad_Gate/scripts.pory"
 	.string "The road ahead is full of trainers\n"
 	.string "wanting to challenge The Last Dinner\l"
 	.string "Party.$"
 
 VRG_MartGuy_Text_1:
-# 30 "data/maps/VictoryRoad_Gate/scripts.pory"
+# 32 "data/maps/VictoryRoad_Gate/scripts.pory"
 	.string "We offer a stock of medicine, have a\n"
 	.string "look.$"
 
 VRG_MartGuy_Text_2:
-# 32 "data/maps/VictoryRoad_Gate/scripts.pory"
+# 34 "data/maps/VictoryRoad_Gate/scripts.pory"
 	.string "Good luck!$"

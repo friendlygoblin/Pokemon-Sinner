@@ -83,9 +83,10 @@ movement ShelterStaff_GoToBackAndReturn{
 
 
 text Shelter_StaffRoraCalled{
-    "Hi {PLAYER}, I got a call from Aurora \n"
-    "from The Last Dinner Party about you \l"
-    "bringing a POKéMON here? \p"
+    "Hi {PLAYER}!\p"
+    "I got a call from Aurora from The Last \n"
+    "Dinner Party about you bringing a \l"
+    "POKéMON here? \p"
     "Look, you can leave it here but we \n"
     "don't have endless space so you'll \l"
     "have to take another one with you. \p"
@@ -93,9 +94,10 @@ text Shelter_StaffRoraCalled{
 }
 
 text Shelter_StaffRoraCalledNoFennekin{
-    "Hi {PLAYER}, I got a call from Aurora \n"
-    "from The Last Dinner Party about you \l"
-    "bringing a POKéMON here? \p"
+    "Hi {PLAYER}!\p"
+    "I got a call from Aurora from The Last \n"
+    "Dinner Party about you bringing a \l"
+    "POKéMON here? \p"
     "Where is it, do you not have it with \n"
     "you?$"
 }

@@ -133,6 +133,7 @@ mart BeautifulPort_MoveShop{
     ITEM_TM45 // Attract
     ITEM_TM46 // Thief
     ITEM_TM47 // Steel Wing
+    ITEM_TM55 // Rollout
 }
 
 mart BeautifulPort_MegaStoneShop{

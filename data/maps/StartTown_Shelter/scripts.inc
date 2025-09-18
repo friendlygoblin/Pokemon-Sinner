@@ -220,41 +220,43 @@ Shelter_PickFennekin_Text_15:
 
 Shelter_StaffRoraCalled::
 # 85 "data/maps/StartTown_Shelter/scripts.pory"
-	.string "Hi {PLAYER}, I got a call from Aurora \n"
-	.string "from The Last Dinner Party about you \l"
-	.string "bringing a POKéMON here? \p"
+	.string "Hi {PLAYER}!\p"
+	.string "I got a call from Aurora from The Last \n"
+	.string "Dinner Party about you bringing a \l"
+	.string "POKéMON here? \p"
 	.string "Look, you can leave it here but we \n"
 	.string "don't have endless space so you'll \l"
 	.string "have to take another one with you. \p"
 	.string "Now, show me the little one.$"
 
 Shelter_StaffRoraCalledNoFennekin::
-# 95 "data/maps/StartTown_Shelter/scripts.pory"
-	.string "Hi {PLAYER}, I got a call from Aurora \n"
-	.string "from The Last Dinner Party about you \l"
-	.string "bringing a POKéMON here? \p"
+# 96 "data/maps/StartTown_Shelter/scripts.pory"
+	.string "Hi {PLAYER}!\p"
+	.string "I got a call from Aurora from The Last \n"
+	.string "Dinner Party about you bringing a \l"
+	.string "POKéMON here? \p"
 	.string "Where is it, do you not have it with \n"
 	.string "you?$"
 
 Shelter_StaffKeepFennekin::
-# 103 "data/maps/StartTown_Shelter/scripts.pory"
+# 105 "data/maps/StartTown_Shelter/scripts.pory"
 	.string "So you've decided to keep this \n"
 	.string "POKéMON? \p"
 	.string "I think it's a good idea, it'll be \n"
 	.string "happy with you.$"
 
 Shelter_ThatsNotTheRightOne::
-# 110 "data/maps/StartTown_Shelter/scripts.pory"
+# 112 "data/maps/StartTown_Shelter/scripts.pory"
 	.string "Um, it doesn't look like what Aurora \n"
 	.string "talked about. \p"
 	.string "Are you sure that's the one?$"
 
 Shelter_CuteLittleOne::
-# 116 "data/maps/StartTown_Shelter/scripts.pory"
+# 118 "data/maps/StartTown_Shelter/scripts.pory"
 	.string "Aw, it's so cute! \p"
 	.string "Okay, now which POKéMON will you take \n"
 	.string "to make room here?$"
 
 Shelter_StaffGoGetIt::
-# 122 "data/maps/StartTown_Shelter/scripts.pory"
+# 124 "data/maps/StartTown_Shelter/scripts.pory"
 	.string "Okay, I'll go get him for you! $"

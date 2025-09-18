@@ -50,6 +50,56 @@ MercyTown_WelcomeToMercyTownSign::
 	end
 
 
+MercyTown_Girl::
+# 38 "data/maps/MercyTown/scripts.pory"
+	lock
+# 39 "data/maps/MercyTown/scripts.pory"
+	faceplayer
+# 40 "data/maps/MercyTown/scripts.pory"
+	msgbox MercyTown_Girl_Text_0
+# 41 "data/maps/MercyTown/scripts.pory"
+	release
+	end
+
+
+MercyTown_Boy::
+# 46 "data/maps/MercyTown/scripts.pory"
+	lock
+# 47 "data/maps/MercyTown/scripts.pory"
+	faceplayer
+# 48 "data/maps/MercyTown/scripts.pory"
+	msgbox MercyTown_Boy_Text_0
+# 49 "data/maps/MercyTown/scripts.pory"
+	release
+	end
+
+
+MercyTown_Worker::
+# 54 "data/maps/MercyTown/scripts.pory"
+	lock
+# 55 "data/maps/MercyTown/scripts.pory"
+	faceplayer
+# 56 "data/maps/MercyTown/scripts.pory"
+	msgbox MercyTown_Worker_Text_0
+# 57 "data/maps/MercyTown/scripts.pory"
+	release
+	end
+
+
+MercyTown_Primeape::
+# 62 "data/maps/MercyTown/scripts.pory"
+	lock
+# 63 "data/maps/MercyTown/scripts.pory"
+	faceplayer
+# 64 "data/maps/MercyTown/scripts.pory"
+	playmoncry SPECIES_PRIMEAPE, CRY_MODE_NORMAL
+# 65 "data/maps/MercyTown/scripts.pory"
+	msgbox MercyTown_Primeape_Text_0
+# 66 "data/maps/MercyTown/scripts.pory"
+	release
+	end
+
+
 MercyTown_Route7Sign_Text_0:
 # 11 "data/maps/MercyTown/scripts.pory"
 	.string "{DOWN_ARROW}: Route 7\p"
@@ -70,3 +120,30 @@ MercyTown_WelcomeToMercyTownSign_Text_0:
 	.string "Welcome to Mercy Town!\p"
 	.string "A stop on the road, take a break and\n"
 	.string "rest your feet.$"
+
+MercyTown_Girl_Text_0:
+# 40 "data/maps/MercyTown/scripts.pory"
+	.string "You know that song 'My Lady Of Mercy'?\p"
+	.string "It came out shortly after the band\n"
+	.string "that wrote it stopped by our town.\p"
+	.string "I wonder if it's referring to someone\n"
+	.string "from here…$"
+
+MercyTown_Boy_Text_0:
+# 48 "data/maps/MercyTown/scripts.pory"
+	.string "People actually stop here now that\n"
+	.string "CMAT is in town!\p"
+	.string "People just used to cross the town but\n"
+	.string "never took the time to stop.\p"
+	.string "It wasn't great for business.$"
+
+MercyTown_Worker_Text_0:
+# 56 "data/maps/MercyTown/scripts.pory"
+	.string "CMAT liked it so much here that she had\n"
+	.string "the Concert Hall built so she could\l"
+	.string "stay!\p"
+	.string "Primeape and I helped build it!$"
+
+MercyTown_Primeape_Text_0:
+# 65 "data/maps/MercyTown/scripts.pory"
+	.string "PRIMEAPE: rraah!$"

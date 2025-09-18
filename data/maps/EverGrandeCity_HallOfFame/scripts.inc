@@ -105,93 +105,70 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 # 55 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	checkplayergender
 # 56 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	compare VAR_RESULT, MALE
-	goto_if_eq EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame_2
-# 60 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	goto EverGrandeCity_HallOfFame_EventScript_GameClearFemale
-EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame_1:
-	end
-
-EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame_2:
-# 57 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	goto EverGrandeCity_HallOfFame_EventScript_GameClearMale
-	goto EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame_1
-
-
-EverGrandeCity_HallOfFame_EventScript_GameClearMale::
-# 66 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	setrespawn HEAL_LOCATION_EVERGRANDECITY_DEMOSTARTER
-# 67 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	fadescreenspeed FADE_TO_BLACK, 24
-# 68 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	special GameClear
-# 69 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	waitstate
-# 70 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	releaseall
 	end
 
 
 EverGrandeCity_HallOfFame_EventScript_GameClearFemale::
-# 75 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	setrespawn HEAL_LOCATION_EVERGRANDECITY_DEMOSTARTER
-# 76 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 61 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	setrespawn HEAL_LOCATION_START_TOWN
+# 62 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	fadescreenspeed FADE_TO_BLACK, 24
-# 77 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 63 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	special GameClear
-# 78 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 64 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	waitstate
-# 79 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 65 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	releaseall
 	end
 
 
-# 83 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 69 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 Turn_Alter_Left:
-# 84 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 70 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	face_left
 	step_end
 
-# 86 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 72 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 Turn_Alter_Right:
-# 87 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 73 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	face_right
 	step_end
 
-# 90 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 76 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1:
+# 77 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
+# 78 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
+# 79 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
+# 80 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
+# 81 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
+# 82 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
+# 83 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	step_end
+
+# 86 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2:
+# 87 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
+# 88 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
+# 89 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
+# 90 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+	walk_up
 # 91 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	walk_up
 # 92 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 93 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 94 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 95 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 96 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 97 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	step_end
-
-# 100 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2:
-# 101 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 102 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 103 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 104 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 105 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	walk_up
-# 106 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	step_end
 
 EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions::
-# 109 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 95 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	.string "ABIGAIL: Now…\p"
 	.string "It is here that our SPECIAL GUESTS\n"
 	.string "are recorded.\p"
@@ -206,7 +183,7 @@ EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions::
 	.string "DINNER GUEST LIST!$"
 
 EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames::
-# 124 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
+# 110 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	.string "ABIGAIL: Come on, let's record your\n"
 	.string "name as a fan who triumphed over us,\l"
 	.string "The Last Dinner Party themselves,\l"

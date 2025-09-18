@@ -35,3 +35,32 @@ movement GetOutOfBed{
     walk_left
     step_end
 }
+
+script PlayerHouse_Computer{
+    lock
+    if(flag(FLAG_IS_CHAMPION)){
+        msgbox(PlayerHouse_ChampionMail)
+    }
+    else{
+        msgbox(PlayerHouse_MailingList, MSGBOX_AUTOCLOSE)
+    }
+    release
+    end
+}
+
+text PlayerHouse_MailingList{
+    "You're on The Last Dinner Party's\n"
+    "mailing list.\p"
+    "The latest message says 'Come challenge\n" 
+    "us for the best prize of all!'.$"
+}
+
+text PlayerHouse_ChampionMail{
+    "The Last Dinner Party sent you an \n"
+    "email!\p"
+    "'Congratulations, {PLAYER}!\n"
+    "You were phenomenal, we had a lot of \l"
+    "fun battling with you!\p"
+    "You are welcome to all of our shows, \n"
+    "and to spar with us anytime you like!'$"
+}

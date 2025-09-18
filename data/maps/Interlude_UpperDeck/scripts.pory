@@ -1,1 +1,9 @@
 mapscripts Interlude_UpperDeck_MapScripts {}
+
+script InterludeRooftop_Ness{
+    lock
+    faceplayer
+    msgbox(format("NESS: Most people on the boat want to battle, I came up here because it's more peaceful."))
+    release
+    end
+}

@@ -5115,7 +5115,7 @@
       "id": "LAYOUT_VICTORY_ROAD_5",
       "name": "VictoryRoad_5_Layout",
       "width": 21,
-      "height": 20,
+      "height": 26,
       "primary_tileset": "gTileset_Caves_Primary",
       "secondary_tileset": "gTileset_Caves_Secondary",
       "border_filepath": "data/layouts/VictoryRoad_5/border.bin",
@@ -5130,6 +5130,16 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/Interlude_UpperDeck/border.bin",
       "blockdata_filepath": "data/layouts/Interlude_UpperDeck/map.bin"
+    },
+    {
+      "id": "LAYOUT_GJUHA_CAVE",
+      "name": "GjuhaCave_Layout",
+      "width": 25,
+      "height": 20,
+      "primary_tileset": "gTileset_Caves_Primary",
+      "secondary_tileset": "gTileset_Caves_Secondary",
+      "border_filepath": "data/layouts/GjuhaCave/border.bin",
+      "blockdata_filepath": "data/layouts/GjuhaCave/map.bin"
     }
   ]
 }

@@ -8,22 +8,6 @@ LilycoveCity_PokemonCenter_1F_MapScripts::
 
 LilycoveCity_PokemonCenter_1F_OnTransition:
 	setrespawn HEAL_LOCATION_CRYSTAL_STREAM_CITY
-	goto LilycoveCity_PokemonCenter_1F_EventScript_SetLilycoveLadyGfx
-	end
-
-@ SetLilycoveLadyGfx returns TRUE if its the Contest Lady
-LilycoveCity_PokemonCenter_1F_EventScript_SetLilycoveLadyGfx::
-	special SetLilycoveLadyGfx
-	goto_if_eq VAR_RESULT, FALSE, LilycoveCity_PokemonCenter_1F_EventScript_HideContestLadyMon
-	goto_if_eq VAR_RESULT, TRUE, LilycoveCity_PokemonCenter_1F_EventScript_ShowContestLadyMon
-	end
-
-LilycoveCity_PokemonCenter_1F_EventScript_HideContestLadyMon::
-	setflag FLAG_HIDE_LILYCOVE_POKEMON_CENTER_CONTEST_LADY_MON
-	end
-
-LilycoveCity_PokemonCenter_1F_EventScript_ShowContestLadyMon::
-	clearflag FLAG_HIDE_LILYCOVE_POKEMON_CENTER_CONTEST_LADY_MON
 	end
 
 LilycoveCity_PokemonCenter_1F_EventScript_Nurse::
@@ -41,13 +25,7 @@ LilycoveCity_PokemonCenter_1F_EventScript_Boy::
 LilycoveCity_PokemonCenter_1F_EventScript_Maniac::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE07_GET, LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone
 	msgbox LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels, MSGBOX_DEFAULT
-	release
-	end
-
-LilycoveCity_PokemonCenter_1F_EventScript_ManiacBadTeamGone::
-	msgbox LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels, MSGBOX_DEFAULT
 	release
 	end
 
@@ -58,13 +36,25 @@ LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon:
 	.string "trade POKéMON with people far away.$"
 
 LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels:
-	.string "I've been hearing about some rotten\n"
-	.string "scoundrels who steal POKéMON and rip\l"
-	.string "off METEORITES.$"
-
-LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels:
-	.string "Those rotten scoundrels who steal\n"
-	.string "POKéMON and rip off METEORITES…\p"
-	.string "I haven't seen them around recently.$"
+	.string "There are so many things to do in\n"
+	.string "Crystal Stream City, you just can't\l"
+	.string "get bored!$"
 
 `
+
+script BugBuzzGirl{
+    lock
+    faceplayer
+    if(flag(FLAG_RECEIVED_TM_BUG_BUZZ)){
+        msgbox(format("Bug POKéMON are just as good as the other types!"), MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("People think Bug POKéMON are weak, but that's just not true.\pThey have strong moves too, like this one!"))
+        giveitem(ITEM_TM65)
+        msgbox("Bug POKéMON are just as good as the other types!")
+        setflag(FLAG_RECEIVED_TM_BUG_BUZZ)
+    }
+    release
+    end
+}
+

@@ -8,7 +8,6 @@ OldaleTown_PokemonCenter_1F_MapScripts::
 
 OldaleTown_PokemonCenter_1F_OnTransition:
 	setrespawn HEAL_LOCATION_ECSTASY_TOWN
-	call Common_EventScript_UpdateBrineyLocation
 	end
 
 OldaleTown_PokemonCenter_1F_EventScript_Nurse::
@@ -43,6 +42,19 @@ OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat:
 	.string "as you like, and it's all for free.\l"
 	.string "You never have to worry!$"
 
-
-
 `
+script RestMan{
+    lock
+    faceplayer
+    if(flag(FLAG_RECEIVED_TM_REST)){
+        msgbox(format("So important… to get some Rest…"), MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("POKéMON need rest just like us. Here, this may help."))
+        giveitem(ITEM_TM44)
+        msgbox("So important… to get some Rest…")
+        setflag(FLAG_RECEIVED_TM_REST)
+    }
+    release
+    end
+}

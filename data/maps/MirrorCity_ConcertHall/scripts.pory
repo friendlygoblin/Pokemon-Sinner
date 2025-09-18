@@ -104,7 +104,7 @@ script MCCH_TLDPBattles{
             applymovement(Georgia, BandMemberGetIntoPosition)
             waitmovement(0)
             msgbox(MCCH_Georgia_IntroSpeech, MSGBOX_DEFAULT)		  
-            trainerbattle_no_intro(TRAINER_WALLACE, MCCH_Georgia_Defeat)
+            trainerbattle_no_intro(TRAINER_DRAKE, MCCH_Georgia_Defeat)
             msgbox(MCCH_Georgia_PostBattleSpeech, MSGBOX_AUTOCLOSE)
 
             applymovement(OBJ_EVENT_ID_PLAYER, PlayerGoBackToSide)
@@ -125,7 +125,7 @@ script MCCH_TLDPBattles{
             applymovement(Abi, BandMemberGetIntoPosition)
             waitmovement(0)
             msgbox(MCCH_Abi_IntroSpeech, MSGBOX_DEFAULT)		  
-            trainerbattle_no_intro(TRAINER_DRAKE, MCCH_Abi_Defeat)
+            trainerbattle_no_intro(TRAINER_WALLACE, MCCH_Abi_Defeat)
             msgbox(MCCH_Abi_PostBattleSpeech, MSGBOX_AUTOCLOSE)
 
             call(MCCH_GoblinShowsUp)

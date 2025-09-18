@@ -48,6 +48,13 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 4,
+      "y": 4,
+      "elevation": 0,
+      "item": "ITEM_TM54",
+      "flag": "FLAG_TM54_SUNDAYCAVE"
+    }
   ]
 }

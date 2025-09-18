@@ -114,6 +114,14 @@
       "elevation": 0,
       "item": "ITEM_OLD_AMBER",
       "flag": "FLAG_RIBCAVE_OLD_AMBER"
+    },
+    {
+      "type": "hidden_item",
+      "x": 14,
+      "y": 14,
+      "elevation": 0,
+      "item": "ITEM_HARD_STONE",
+      "flag": "FLAG_RIBCAVE_HARD_ROCK"
     }
   ]
 }

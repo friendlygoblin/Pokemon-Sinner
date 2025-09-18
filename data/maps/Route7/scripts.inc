@@ -91,115 +91,127 @@ Route7_Cyclist::
 
 Route7_BlackBelt::
 # 81 "data/maps/Route7/scripts.pory"
-	trainerbattle_single TRAINER_KOJI_1, Route7_BlackBelt_Text_0, Route7_BlackBelt_Text_1
+	trainerbattle_single TRAINER_KOJI_1, Route7_BlackBelt_Text_0, Route7_BlackBelt_Text_1, GiveDrainPunch
 # 82 "data/maps/Route7/scripts.pory"
 	msgbox Route7_BlackBelt_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
-Route7_Picnicker::
+GiveDrainPunch::
 # 86 "data/maps/Route7/scripts.pory"
-	trainerbattle_single TRAINER_MARTHA, Route7_Picnicker_Text_0, Route7_Picnicker_Text_1
+	msgbox GiveDrainPunch_Text_0
 # 87 "data/maps/Route7/scripts.pory"
+	giveitem ITEM_TM53
+# 88 "data/maps/Route7/scripts.pory"
+	msgbox GiveDrainPunch_Text_1, MSGBOX_AUTOCLOSE
+# 89 "data/maps/Route7/scripts.pory"
+	release
+	end
+
+
+Route7_Picnicker::
+# 94 "data/maps/Route7/scripts.pory"
+	trainerbattle_single TRAINER_MARTHA, Route7_Picnicker_Text_0, Route7_Picnicker_Text_1
+# 95 "data/maps/Route7/scripts.pory"
 	msgbox Route7_Picnicker_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 Route7_Rora::
-# 91 "data/maps/Route7/scripts.pory"
+# 99 "data/maps/Route7/scripts.pory"
 	lock
-# 92 "data/maps/Route7/scripts.pory"
+# 100 "data/maps/Route7/scripts.pory"
 	faceplayer
-# 93 "data/maps/Route7/scripts.pory"
+# 101 "data/maps/Route7/scripts.pory"
 	msgbox Rora_SomethingMissing
-# 94 "data/maps/Route7/scripts.pory"
+# 102 "data/maps/Route7/scripts.pory"
 	applymovement 8, WalkInPlaceDown
-# 95 "data/maps/Route7/scripts.pory"
+# 103 "data/maps/Route7/scripts.pory"
 	waitmovement 0
-# 96 "data/maps/Route7/scripts.pory"
+# 104 "data/maps/Route7/scripts.pory"
 	release
 	end
 
 
 Route7_Cal::
-# 101 "data/maps/Route7/scripts.pory"
+# 109 "data/maps/Route7/scripts.pory"
 	lock
-# 102 "data/maps/Route7/scripts.pory"
+# 110 "data/maps/Route7/scripts.pory"
 	faceplayer
-# 103 "data/maps/Route7/scripts.pory"
+# 111 "data/maps/Route7/scripts.pory"
 	msgbox Cal_NeedAProp
 	checkitem ITEM_SILK_SCARF
 # 0 "data/maps/Route7/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne Route7_Cal_2
-# 134 "data/maps/Route7/scripts.pory"
+# 142 "data/maps/Route7/scripts.pory"
 	msgbox Route7_Cal_Text_1, MSGBOX_AUTOCLOSE
 Route7_Cal_1:
-# 136 "data/maps/Route7/scripts.pory"
+# 144 "data/maps/Route7/scripts.pory"
 	release
 	end
 
 Route7_Cal_2:
-# 105 "data/maps/Route7/scripts.pory"
+# 113 "data/maps/Route7/scripts.pory"
 	msgbox Cal_YouHaveProp, MSGBOX_YESNO
-# 106 "data/maps/Route7/scripts.pory"
+# 114 "data/maps/Route7/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq Route7_Cal_5
-# 130 "data/maps/Route7/scripts.pory"
+# 138 "data/maps/Route7/scripts.pory"
 	msgbox Route7_Cal_Text_0
 	goto Route7_Cal_1
 
 Route7_Cal_5:
-# 107 "data/maps/Route7/scripts.pory"
-	msgbox Cal_LetsTry, MSGBOX_AUTOCLOSE
-# 108 "data/maps/Route7/scripts.pory"
-	applymovement 8, Common_Movement_FaceDown
-# 109 "data/maps/Route7/scripts.pory"
-	setobjectmovementtype 8, MOVEMENT_TYPE_FACE_DOWN
-# 110 "data/maps/Route7/scripts.pory"
-	applymovement 9, Cal_GiveScarfToRora
-# 111 "data/maps/Route7/scripts.pory"
-	waitmovement 0
-# 112 "data/maps/Route7/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 113 "data/maps/Route7/scripts.pory"
-	delay 20
-# 114 "data/maps/Route7/scripts.pory"
-	fadescreen FADE_FROM_BLACK
 # 115 "data/maps/Route7/scripts.pory"
-	msgbox Cal_LastOne, MSGBOX_AUTOCLOSE
+	msgbox Cal_LetsTry, MSGBOX_AUTOCLOSE
 # 116 "data/maps/Route7/scripts.pory"
-	faceplayer
+	applymovement 8, Common_Movement_FaceDown
 # 117 "data/maps/Route7/scripts.pory"
-	msgbox Cal_Thanks
+	setobjectmovementtype 8, MOVEMENT_TYPE_FACE_DOWN
 # 118 "data/maps/Route7/scripts.pory"
-	giveitem ITEM_RARE_CANDY
+	applymovement 9, Cal_GiveScarfToRora
 # 119 "data/maps/Route7/scripts.pory"
-	applymovement 8, WalkInPlaceDown
+	waitmovement 0
 # 120 "data/maps/Route7/scripts.pory"
-	msgbox Rora_Thanks, MSGBOX_AUTOCLOSE
-# 121 "data/maps/Route7/scripts.pory"
 	fadescreen FADE_TO_BLACK
+# 121 "data/maps/Route7/scripts.pory"
+	delay 20
 # 122 "data/maps/Route7/scripts.pory"
-	playse SE_EXIT
+	fadescreen FADE_FROM_BLACK
 # 123 "data/maps/Route7/scripts.pory"
-	waitse
+	msgbox Cal_LastOne, MSGBOX_AUTOCLOSE
 # 124 "data/maps/Route7/scripts.pory"
-	removeobject 8
+	faceplayer
 # 125 "data/maps/Route7/scripts.pory"
-	removeobject 9
+	msgbox Cal_Thanks
 # 126 "data/maps/Route7/scripts.pory"
-	setflag FLAG_ROUTE7_PHOTOSHOOT
+	giveitem ITEM_RARE_CANDY
 # 127 "data/maps/Route7/scripts.pory"
+	applymovement 8, WalkInPlaceDown
+# 128 "data/maps/Route7/scripts.pory"
+	msgbox Rora_Thanks, MSGBOX_AUTOCLOSE
+# 129 "data/maps/Route7/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 130 "data/maps/Route7/scripts.pory"
+	playse SE_EXIT
+# 131 "data/maps/Route7/scripts.pory"
+	waitse
+# 132 "data/maps/Route7/scripts.pory"
+	removeobject 8
+# 133 "data/maps/Route7/scripts.pory"
+	removeobject 9
+# 134 "data/maps/Route7/scripts.pory"
+	setflag FLAG_ROUTE7_PHOTOSHOOT
+# 135 "data/maps/Route7/scripts.pory"
 	fadescreen FADE_FROM_BLACK
 	goto Route7_Cal_1
 
 
-# 140 "data/maps/Route7/scripts.pory"
+# 148 "data/maps/Route7/scripts.pory"
 Cal_GiveScarfToRora:
-# 141 "data/maps/Route7/scripts.pory"
+# 149 "data/maps/Route7/scripts.pory"
 	walk_in_place_up
-# 142 "data/maps/Route7/scripts.pory"
+# 150 "data/maps/Route7/scripts.pory"
 	step_end
 
 Route7_GoblinLeaves_Text_0:
@@ -282,28 +294,39 @@ Route7_BlackBelt_Text_2:
 	.string "Training against different opponents\n"
 	.string "makes you stronger!$"
 
-Route7_Picnicker_Text_0:
+GiveDrainPunch_Text_0:
 # 86 "data/maps/Route7/scripts.pory"
+	.string "You look strong, you deserve to know my\n"
+	.string "favourite move.$"
+
+GiveDrainPunch_Text_1:
+# 88 "data/maps/Route7/scripts.pory"
+	.string "This move is great! Inflicts damage and\n"
+	.string "drains your opponent's health so you\l"
+	.string "can fight longer!$"
+
+Route7_Picnicker_Text_0:
+# 94 "data/maps/Route7/scripts.pory"
 	.string "My favourite thing about travelling is\n"
 	.string "seeing all the pretty POKéMON\l"
 	.string "everywhere!$"
 
 Route7_Picnicker_Text_1:
-# 86 "data/maps/Route7/scripts.pory"
+# 94 "data/maps/Route7/scripts.pory"
 	.string "Ohh your POKéMON are so pretty!$"
 
 Route7_Picnicker_Text_2:
-# 87 "data/maps/Route7/scripts.pory"
+# 95 "data/maps/Route7/scripts.pory"
 	.string "My POKéMON are the prettiest, but I\n"
 	.string "love discovering new ones.$"
 
 Route7_Cal_Text_0:
-# 130 "data/maps/Route7/scripts.pory"
+# 138 "data/maps/Route7/scripts.pory"
 	.string "Never mind, then.\n"
 	.string "We'll figure it out.$"
 
 Route7_Cal_Text_1:
-# 134 "data/maps/Route7/scripts.pory"
+# 142 "data/maps/Route7/scripts.pory"
 	.string "Some kind of scarf? \nI don't know… $"
 
 Route7_Goblin_BattleIntro::
@@ -336,7 +359,7 @@ Route7_Goblin_PostBattle::
 	.string "Here, I have something cool for you.$"
 
 Rora_SomethingMissing::
-# 145 "data/maps/Route7/scripts.pory"
+# 153 "data/maps/Route7/scripts.pory"
 	.string "AURORA: Hey, {PLAYER}!\p"
 	.string "I'm in the middle of a photoshoot with \n"
 	.string "Cal, to promote our Mirror City shows. \p"
@@ -345,14 +368,14 @@ Rora_SomethingMissing::
 	.string "Well, I should get back to it. $"
 
 Rora_Thanks::
-# 154 "data/maps/Route7/scripts.pory"
+# 162 "data/maps/Route7/scripts.pory"
 	.string "AURORA: Thank you, {PLAYER}! \p"
 	.string "Now that we're done with this we should \n"
 	.string "go. \p"
 	.string "I'll see you in Mirror City! $"
 
 Cal_NeedAProp::
-# 161 "data/maps/Route7/scripts.pory"
+# 169 "data/maps/Route7/scripts.pory"
 	.string "CAL: Hi, I'm Cal McIntyre, director \n"
 	.string "and photographer. \p"
 	.string "I love working with The Last Dinner \n"
@@ -362,21 +385,21 @@ Cal_NeedAProp::
 	.string "everything together. $"
 
 Cal_YouHaveProp::
-# 171 "data/maps/Route7/scripts.pory"
+# 179 "data/maps/Route7/scripts.pory"
 	.string "Wait, is that a Silk Scarf? \n"
 	.string "Can we use it? We'll give it back!$"
 
 Cal_LetsTry::
-# 176 "data/maps/Route7/scripts.pory"
+# 184 "data/maps/Route7/scripts.pory"
 	.string "Thank you! \n"
 	.string "Now let's see… $"
 
 Cal_LastOne::
-# 181 "data/maps/Route7/scripts.pory"
+# 189 "data/maps/Route7/scripts.pory"
 	.string "CAL: And just a last one… \n"
 	.string "Perfect! $"
 
 Cal_Thanks::
-# 186 "data/maps/Route7/scripts.pory"
+# 194 "data/maps/Route7/scripts.pory"
 	.string "Thank you so much, here's your scarf \n"
 	.string "and here's a thank you gift! $"

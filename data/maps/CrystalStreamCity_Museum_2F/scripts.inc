@@ -476,6 +476,16 @@ CSCM_ScientistLeaves:
 # 225 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	step_end
 
+Museum_Fossil::
+# 229 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+	lock
+# 230 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+	msgbox Museum_Fossil_Text_0
+# 231 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+	release
+	end
+
+
 CSCM_ChooseFossil_Text_0:
 # 16 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	.string "Root Fossil$"
@@ -561,6 +571,10 @@ CSCM_GiveFossil_Text_9:
 CSCM_GiveFossil_Text_10:
 # 161 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
 	.string "Come back if you find more fossils!$"
+
+Museum_Fossil_Text_0:
+# 230 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
+	.string "It's a POKéMON fossil.\pThe researchers don't know what species it is yet.$"
 
 CSCM_WelcomeToHistoryFloor::
 # 183 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"

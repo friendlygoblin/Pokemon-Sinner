@@ -184,7 +184,7 @@ MCCH_TLDPBattles_5:
 # 106 "data/maps/MirrorCity_ConcertHall/scripts.pory"
 	msgbox MCCH_Georgia_IntroSpeech, MSGBOX_DEFAULT
 # 107 "data/maps/MirrorCity_ConcertHall/scripts.pory"
-	trainerbattle_no_intro TRAINER_WALLACE, MCCH_Georgia_Defeat
+	trainerbattle_no_intro TRAINER_DRAKE, MCCH_Georgia_Defeat
 # 108 "data/maps/MirrorCity_ConcertHall/scripts.pory"
 	msgbox MCCH_Georgia_PostBattleSpeech, MSGBOX_AUTOCLOSE
 # 110 "data/maps/MirrorCity_ConcertHall/scripts.pory"
@@ -223,7 +223,7 @@ MCCH_TLDPBattles_6:
 # 127 "data/maps/MirrorCity_ConcertHall/scripts.pory"
 	msgbox MCCH_Abi_IntroSpeech, MSGBOX_DEFAULT
 # 128 "data/maps/MirrorCity_ConcertHall/scripts.pory"
-	trainerbattle_no_intro TRAINER_DRAKE, MCCH_Abi_Defeat
+	trainerbattle_no_intro TRAINER_WALLACE, MCCH_Abi_Defeat
 # 129 "data/maps/MirrorCity_ConcertHall/scripts.pory"
 	msgbox MCCH_Abi_PostBattleSpeech, MSGBOX_AUTOCLOSE
 # 131 "data/maps/MirrorCity_ConcertHall/scripts.pory"

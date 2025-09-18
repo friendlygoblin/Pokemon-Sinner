@@ -129,7 +129,6 @@
 #define VAR_MIRROR_CITY_GOBLIN                       0x407D
 #define VAR_MIRROR_CITY_TLDP_PROGRESS                0x4076 //0 = not started, 1 = beat Rora, 2 = beat Emily, 3 = beat Lizzie, 4 = beat Georgia
 #define VAR_MIRROR_CITY_TLDP_TRIGGER                 0x4077 // Always 0, used to trigger the battles
-
 #define VAR_GODZILLAND_PORYGON                       0x4078 //0 = not started, 1 = Gob explained the problem, 2 = got rid of Porygon, 3 = completed
 #define VAR_BIKESHOPS                                0x4079 //0 = not started, 1 = talked to the engineer in CwC, 2 = delivered the part
 

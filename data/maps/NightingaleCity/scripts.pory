@@ -20,6 +20,13 @@ script NightingaleCity_CitySign{
     end
 }
 
+script NightingaleCity_FlowerShopSign{
+    lock
+    msgbox(format("Nightingale City Flower Shop \pNothing matters but flowers!"))
+    release
+    end
+}
+
 script NightingaleCity_Route10Sign{
     lock
     msgbox(format("{DOWN_ARROW}: Route 10 \pTo Sailor Town."))
@@ -56,4 +63,22 @@ text NightingaleCity_ElleMoved{
     "throw bricks at my house. \p"
     "I'm still getting used to him not being \n"
     "here!$"
+}
+
+script NightingaleCity_Sailor{
+    lock
+    faceplayer
+    msgbox(format("The other day I heard a song on the radio that went 'A sailor and a nightingale'.\pI do remember some band stopped by this town a while ago, I wonder if Nighty and I inspired them somehow…"))
+    release
+    end
+}
+
+script NightingaleCity_Nighty{
+    lock
+    faceplayer
+    playmoncry(SPECIES_CORVISQUIRE, CRY_MODE_NORMAL)
+    msgbox(format("Nighty: eek eeek!"))
+    waitmoncry
+    release
+    end
 }

@@ -260,6 +260,13 @@ script CandlewaxCity_BikeSign{
     end
 }
 
+script CandlewaxCity_SchoolSign{
+    lock
+    msgbox(format("Candlewax City POKéMON School\pOpen to all, come learn the basics of POKéMON training!"))
+    releaseall
+    end
+}
+
 script CandlewaxCity_TunnelSign{
     lock
     msgbox(format("{DOWN_ARROW}: Caesar Tunnel\pTo Route 3 and Furge Town."))

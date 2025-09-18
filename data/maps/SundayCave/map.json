@@ -146,6 +146,21 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 22,
+      "elevation": 0,
+      "item": "ITEM_SOFT_SAND",
+      "flag": "FLAG_RECEIVED_SOFT_SAND"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_HIDDEN_ITEM_MT_PYRE_EXTERIOR_ULTRA_BALL"
+    }
   ]
 }

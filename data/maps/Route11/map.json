@@ -152,6 +152,14 @@
       "elevation": 0,
       "item": "ITEM_REVIVE",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_109_REVIVE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 0,
+      "y": 27,
+      "elevation": 0,
+      "item": "ITEM_POISON_BARB",
+      "flag": "FLAG_ROUTE11_POISON_BARB"
     }
   ]
 }

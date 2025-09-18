@@ -140,8 +140,9 @@
 #define METATILE_Contest_WallShadow          0x221
 
 // gTileset_Dewford
-#define METATILE_Dewford_Door              0x225
+#define METATILE_Dewford_Door              0x825
 #define METATILE_Dewford_Door_BattleTower  0x25D
+#define METATILE_Dewford_Door_Sliding      0x8FB
 
 // gTileset_EliteFour
 #define METATILE_EliteFour_EntryDoor_ClosedBottom    0x20E
@@ -435,6 +436,7 @@
 // gTileset_PreludeTownTest
 #define METATILE_PreludeTownTest_CalmWater  0x170
 #define METATILE_PreludeTownTest_Door       0x021
+#define METATILE_PreludeTownTest_Door_Gym   0x1CD
 
 // gTileset_PreludeTown_Secondary
 #define METATILE_PreludeTown_Secondary_Door  0x869

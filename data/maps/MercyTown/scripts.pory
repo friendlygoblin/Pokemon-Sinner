@@ -33,3 +33,36 @@ script MercyTown_WelcomeToMercyTownSign{
     release
     end
 }
+
+script MercyTown_Girl{
+    lock
+    faceplayer
+    msgbox(format("You know that song 'My Lady Of Mercy'?\pIt came out shortly after the band that wrote it stopped by our town.\pI wonder if it's referring to someone from here…"))
+    release
+    end
+}
+
+script MercyTown_Boy{
+    lock
+    faceplayer
+    msgbox(format("People actually stop here now that CMAT is in town!\pPeople just used to cross the town but never took the time to stop.\pIt wasn't great for business."))
+    release
+    end
+}
+
+script MercyTown_Worker{
+    lock
+    faceplayer
+    msgbox(format("CMAT liked it so much here that she had the Concert Hall built so she could stay!\pPrimeape and I helped build it!"))
+    release
+    end
+}
+
+script MercyTown_Primeape{
+    lock
+    faceplayer
+    playmoncry(SPECIES_PRIMEAPE, CRY_MODE_NORMAL)
+    msgbox(format("PRIMEAPE: rraah!"))
+    release
+    end
+}

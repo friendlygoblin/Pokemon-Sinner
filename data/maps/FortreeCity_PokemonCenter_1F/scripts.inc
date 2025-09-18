@@ -60,3 +60,46 @@ FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav:
 	.string "It can't be just because of the bricks \n"
 # 31 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
 	.string "I've never actually thrown, right? $"
+
+VoltSwitchKid::
+# 36 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	lock
+# 37 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	faceplayer
+# 38 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	goto_if_set FLAG_RECEIVED_TM_VOLT_SWITCH, VoltSwitchKid_2
+# 42 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	msgbox VoltSwitchKid_Text_1
+# 43 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	giveitem ITEM_TM64
+# 44 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	msgbox VoltSwitchKid_Text_2
+# 45 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	setflag FLAG_RECEIVED_TM_VOLT_SWITCH
+VoltSwitchKid_1:
+# 47 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	release
+	end
+
+VoltSwitchKid_2:
+# 39 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	msgbox VoltSwitchKid_Text_0, MSGBOX_AUTOCLOSE
+	goto VoltSwitchKid_1
+
+
+VoltSwitchKid_Text_0:
+# 39 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	.string "Switching POKéMON at the right moment\n"
+	.string "can be the key to winning a battle!$"
+
+VoltSwitchKid_Text_1:
+# 42 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	.string "Sometimes, switching POKéMON is the\n"
+	.string "only way to win a battle.\p"
+	.string "But switching costs a turn, meaning you\n"
+	.string "can't attack your opponent.\p"
+	.string "Unless you use this!$"
+
+VoltSwitchKid_Text_2:
+# 44 "data/maps/FortreeCity_PokemonCenter_1F/scripts.pory"
+	.string "Volt Switch allows your POKéMON to attack and switch with another in the same turn!$"

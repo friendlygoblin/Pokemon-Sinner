@@ -199,6 +199,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE114_LANETTES_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_GJUHA_CAVE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

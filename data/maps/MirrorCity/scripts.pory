@@ -109,7 +109,7 @@ text MirrorCity_NessText{
 script MirrorCity_Nat{
     lock
     faceplayer
-    msgbox(format("NATALIE: Everyone I saw on the way here is so well dressed, "), MSGBOX_AUTOCLOSE)
+    msgbox(format("NATALIE: Everyone I saw on the way here is so well dressed!"), MSGBOX_AUTOCLOSE)
     release
     end
 }

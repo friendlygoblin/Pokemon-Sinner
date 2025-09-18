@@ -50,15 +50,15 @@ DevHouse_TestGoblin::
 	end
 
 
-DevHouse_SmallSpriteGoblin::
+DevHouse_DevAmy::
 # 34 "data/maps/Godzilland_DevHouse/scripts.pory"
 	lock
 # 35 "data/maps/Godzilland_DevHouse/scripts.pory"
 	faceplayer
 # 36 "data/maps/Godzilland_DevHouse/scripts.pory"
-	msgbox DevHouse_SmallSpriteGoblin_Text_0, MSGBOX_AUTOCLOSE
+	msgbox DevHouse_DevAmy_Text_0, MSGBOX_AUTOCLOSE
 # 37 "data/maps/Godzilland_DevHouse/scripts.pory"
-	applymovement 4, Common_Movement_FaceRight
+	applymovement 11, Common_Movement_FaceUp
 # 38 "data/maps/Godzilland_DevHouse/scripts.pory"
 	waitmovement 0
 # 39 "data/maps/Godzilland_DevHouse/scripts.pory"
@@ -66,15 +66,15 @@ DevHouse_SmallSpriteGoblin::
 	end
 
 
-DevHouse_BigSpriteGoblin::
+DevHouse_SmallSpriteGoblin::
 # 44 "data/maps/Godzilland_DevHouse/scripts.pory"
 	lock
 # 45 "data/maps/Godzilland_DevHouse/scripts.pory"
 	faceplayer
 # 46 "data/maps/Godzilland_DevHouse/scripts.pory"
-	msgbox DevHouse_BigSpriteGoblin_Text_0, MSGBOX_AUTOCLOSE
+	msgbox DevHouse_SmallSpriteGoblin_Text_0, MSGBOX_AUTOCLOSE
 # 47 "data/maps/Godzilland_DevHouse/scripts.pory"
-	applymovement 5, Common_Movement_FaceLeft
+	applymovement 4, Common_Movement_FaceRight
 # 48 "data/maps/Godzilland_DevHouse/scripts.pory"
 	waitmovement 0
 # 49 "data/maps/Godzilland_DevHouse/scripts.pory"
@@ -82,15 +82,15 @@ DevHouse_BigSpriteGoblin::
 	end
 
 
-DevHouse_TeamBuilderGoblin::
+DevHouse_BigSpriteGoblin::
 # 54 "data/maps/Godzilland_DevHouse/scripts.pory"
 	lock
 # 55 "data/maps/Godzilland_DevHouse/scripts.pory"
 	faceplayer
 # 56 "data/maps/Godzilland_DevHouse/scripts.pory"
-	msgbox DevHouse_TeamBuilderGoblin_Text_0, MSGBOX_AUTOCLOSE
+	msgbox DevHouse_BigSpriteGoblin_Text_0, MSGBOX_AUTOCLOSE
 # 57 "data/maps/Godzilland_DevHouse/scripts.pory"
-	applymovement 10, Common_Movement_FaceLeft
+	applymovement 5, Common_Movement_FaceLeft
 # 58 "data/maps/Godzilland_DevHouse/scripts.pory"
 	waitmovement 0
 # 59 "data/maps/Godzilland_DevHouse/scripts.pory"
@@ -98,15 +98,15 @@ DevHouse_TeamBuilderGoblin::
 	end
 
 
-DevHouse_ConsultantGoblin::
+DevHouse_TeamBuilderGoblin::
 # 64 "data/maps/Godzilland_DevHouse/scripts.pory"
 	lock
 # 65 "data/maps/Godzilland_DevHouse/scripts.pory"
 	faceplayer
 # 66 "data/maps/Godzilland_DevHouse/scripts.pory"
-	msgbox DevHouse_ConsultantGoblin_Text_0, MSGBOX_AUTOCLOSE
+	msgbox DevHouse_TeamBuilderGoblin_Text_0, MSGBOX_AUTOCLOSE
 # 67 "data/maps/Godzilland_DevHouse/scripts.pory"
-	applymovement 6, Common_Movement_FaceRight
+	applymovement 10, Common_Movement_FaceLeft
 # 68 "data/maps/Godzilland_DevHouse/scripts.pory"
 	waitmovement 0
 # 69 "data/maps/Godzilland_DevHouse/scripts.pory"
@@ -114,118 +114,134 @@ DevHouse_ConsultantGoblin::
 	end
 
 
-DevHouse_Interview::
+DevHouse_ConsultantGoblin::
 # 74 "data/maps/Godzilland_DevHouse/scripts.pory"
 	lock
 # 75 "data/maps/Godzilland_DevHouse/scripts.pory"
-	msgbox DevHouse_Interview_Text_0, MSGBOX_AUTOCLOSE
+	faceplayer
 # 76 "data/maps/Godzilland_DevHouse/scripts.pory"
+	msgbox DevHouse_ConsultantGoblin_Text_0, MSGBOX_AUTOCLOSE
+# 77 "data/maps/Godzilland_DevHouse/scripts.pory"
+	applymovement 6, Common_Movement_FaceRight
+# 78 "data/maps/Godzilland_DevHouse/scripts.pory"
+	waitmovement 0
+# 79 "data/maps/Godzilland_DevHouse/scripts.pory"
+	release
+	end
+
+
+DevHouse_Interview::
+# 84 "data/maps/Godzilland_DevHouse/scripts.pory"
+	lock
+# 85 "data/maps/Godzilland_DevHouse/scripts.pory"
+	msgbox DevHouse_Interview_Text_0, MSGBOX_AUTOCLOSE
+# 86 "data/maps/Godzilland_DevHouse/scripts.pory"
 	release
 	end
 
 
 DevHouse_BugGoblin::
-# 81 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 91 "data/maps/Godzilland_DevHouse/scripts.pory"
 	lock
-# 82 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 92 "data/maps/Godzilland_DevHouse/scripts.pory"
 	faceplayer
-# 83 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 93 "data/maps/Godzilland_DevHouse/scripts.pory"
 	switch VAR_GODZILLAND_PORYGON
-# 84 "data/maps/Godzilland_DevHouse/scripts.pory"
-	case 0, DevHouse_BugGoblin_3
-# 87 "data/maps/Godzilland_DevHouse/scripts.pory"
-	case 1, DevHouse_BugGoblin_4
-# 89 "data/maps/Godzilland_DevHouse/scripts.pory"
-	case 2, DevHouse_BugGoblin_5
 # 94 "data/maps/Godzilland_DevHouse/scripts.pory"
+	case 0, DevHouse_BugGoblin_3
+# 97 "data/maps/Godzilland_DevHouse/scripts.pory"
+	case 1, DevHouse_BugGoblin_4
+# 99 "data/maps/Godzilland_DevHouse/scripts.pory"
+	case 2, DevHouse_BugGoblin_5
+# 104 "data/maps/Godzilland_DevHouse/scripts.pory"
 	case 3, DevHouse_BugGoblin_6
 DevHouse_BugGoblin_1:
-# 97 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 107 "data/maps/Godzilland_DevHouse/scripts.pory"
 	release
 	end
 
 DevHouse_BugGoblin_3:
-# 85 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 95 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_BugGoblin_Text_0
-# 86 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 96 "data/maps/Godzilland_DevHouse/scripts.pory"
 	setvar VAR_GODZILLAND_PORYGON, 1
 	goto DevHouse_BugGoblin_1
 
 DevHouse_BugGoblin_4:
-# 88 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 98 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_BugGoblin_Text_1
 	goto DevHouse_BugGoblin_1
 
 DevHouse_BugGoblin_5:
-# 90 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 100 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_BugGoblin_Text_2
-# 91 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 101 "data/maps/Godzilland_DevHouse/scripts.pory"
 	giveitem ITEM_RARE_CANDY
-# 92 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 102 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_BugGoblin_Text_3
-# 93 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 103 "data/maps/Godzilland_DevHouse/scripts.pory"
 	setvar VAR_GODZILLAND_PORYGON, 3
 	goto DevHouse_BugGoblin_1
 
 DevHouse_BugGoblin_6:
-# 95 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 105 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_BugGoblin_Text_4
 	goto DevHouse_BugGoblin_1
 
 
 DevHouse_Porygon::
-# 102 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 112 "data/maps/Godzilland_DevHouse/scripts.pory"
 	lock
-# 103 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 113 "data/maps/Godzilland_DevHouse/scripts.pory"
 	switch VAR_GODZILLAND_PORYGON
-# 104 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 114 "data/maps/Godzilland_DevHouse/scripts.pory"
 	case 0, DevHouse_Porygon_3
-# 106 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 116 "data/maps/Godzilland_DevHouse/scripts.pory"
 	case 1, DevHouse_Porygon_4
-# 118 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 128 "data/maps/Godzilland_DevHouse/scripts.pory"
 	case 2, DevHouse_Porygon_5
-# 120 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 130 "data/maps/Godzilland_DevHouse/scripts.pory"
 	case 3, DevHouse_Porygon_6
 DevHouse_Porygon_1:
-# 123 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 133 "data/maps/Godzilland_DevHouse/scripts.pory"
 	release
 	end
 
 DevHouse_Porygon_3:
-# 105 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 115 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_Porygon_Text_0
 	goto DevHouse_Porygon_1
 
 DevHouse_Porygon_4:
-# 107 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 117 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_Porygon_Text_1, MSGBOX_YESNO
-# 108 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 118 "data/maps/Godzilland_DevHouse/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq DevHouse_Porygon_7
-# 116 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 126 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_Porygon_Text_4
 	goto DevHouse_Porygon_1
 
 DevHouse_Porygon_5:
-# 119 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 129 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_Porygon_Text_3
 	goto DevHouse_Porygon_1
 
 DevHouse_Porygon_6:
-# 121 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 131 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_Porygon_Text_5
 	goto DevHouse_Porygon_1
 
 DevHouse_Porygon_7:
-# 109 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 119 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_Porygon_Text_2
-# 110 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 120 "data/maps/Godzilland_DevHouse/scripts.pory"
 	setwildbattle SPECIES_PORYGON, 18
-# 111 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 121 "data/maps/Godzilland_DevHouse/scripts.pory"
 	dowildbattle
-# 112 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 122 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_Porygon_Text_3
-# 113 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 123 "data/maps/Godzilland_DevHouse/scripts.pory"
 	setvar VAR_GODZILLAND_PORYGON, 2
 	goto DevHouse_Porygon_1
 
@@ -251,15 +267,24 @@ DevHouse_TestGoblin_Text_0:
 	.string "I take notes of things to improve and\n"
 	.string "bugs to fix, testing is very important!$"
 
-DevHouse_SmallSpriteGoblin_Text_0:
+DevHouse_DevAmy_Text_0:
 # 36 "data/maps/Godzilland_DevHouse/scripts.pory"
+	.string "AMY: I did the heavy lifting on the demo\n"
+	.string "of the game, but I've let Goblin take\l"
+	.string "over since I've been busy with\l"
+	.string "ParlourZine.\p"
+	.string "I still give a hand here and there\n"
+	.string "whenever I can.$"
+
+DevHouse_SmallSpriteGoblin_Text_0:
+# 46 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "GOBLIN: I'm desiging overworld sprites!\p"
 	.string "They're the ones you're seeing right\n"
 	.string "now, my colleague is working on the\l"
 	.string "battle ones.$"
 
 DevHouse_BigSpriteGoblin_Text_0:
-# 46 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 56 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "GOBLIN: Look, I'm making everyone's big\n"
 	.string "sprites!\p"
 	.string "They're the ones you see in battle, I'm\n"
@@ -267,14 +292,14 @@ DevHouse_BigSpriteGoblin_Text_0:
 	.string "and fan you'll meet!$"
 
 DevHouse_TeamBuilderGoblin_Text_0:
-# 56 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 66 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "GOBLIN: I'm the team builder.\p"
 	.string "I build everyone's POKéMON teams.\p"
 	.string "It's tricky, I need to make them\n"
 	.string "balanced to keep the game fun to play.$"
 
 DevHouse_ConsultantGoblin_Text_0:
-# 66 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 76 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "GOBLIN: I'm the contact person!\p"
 	.string "Building teams is hard, so my job is to\n"
 	.string "find outside help.\p"
@@ -286,12 +311,12 @@ DevHouse_ConsultantGoblin_Text_0:
 	.string "the project!$"
 
 DevHouse_Interview_Text_0:
-# 75 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 85 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "It looks like Amy is interviewing Goblin\n"
 	.string "about POKéMON Sinner.$"
 
 DevHouse_BugGoblin_Text_0:
-# 85 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 95 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "GOBLIN: There's a bug! There's a bug!\p"
 	.string "I don't know what's happening but I\n"
 	.string "can't even access my work anymore!\p"
@@ -300,55 +325,55 @@ DevHouse_BugGoblin_Text_0:
 	.string "keep fighting with it…$"
 
 DevHouse_BugGoblin_Text_1:
-# 88 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 98 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "GOBLIN: My computer is the one closest\n"
 	.string "to the door, I just don't have the\l"
 	.string "strength to keep fighting with it…$"
 
 DevHouse_BugGoblin_Text_2:
-# 90 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 100 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "GOBLIN: A Porygon? God, not again!\p"
 	.string "It happens all the time, but I can\n"
 	.string "usually spot them…\p"
 	.string "Thanks for your help! Here, for you!$"
 
 DevHouse_BugGoblin_Text_3:
-# 92 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 102 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "GOBLIN: I guess I should go back to\n"
 	.string "work now…\p"
 	.string "Mmmh, but I really need a nap…$"
 
 DevHouse_BugGoblin_Text_4:
-# 95 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 105 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "GOBLIN: I'm in charge of researching\n"
 	.string "the POKéMON species we're implementing.\p"
 	.string "But right now, I really need a nap…$"
 
 DevHouse_Porygon_Text_0:
-# 105 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 115 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "The screen is displaying weird colours.$"
 
 DevHouse_Porygon_Text_1:
-# 107 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 117 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "The screen is displaying weird colours.\p"
 	.string "Do you want to try pressing a key?$"
 
 DevHouse_Porygon_Text_2:
-# 109 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 119 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "You press a random key.\p"
 	.string "The computer doesn't seem to like that!$"
 
 DevHouse_Porygon_Text_3:
-# 112 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 122 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "With the POKéMON gone, the computer is\n"
 	.string "rebooting…\p"
 	.string "Goblin will be happy!$"
 
 DevHouse_Porygon_Text_4:
-# 116 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 126 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "You decide to leave the computer alone.$"
 
 DevHouse_Porygon_Text_5:
-# 121 "data/maps/Godzilland_DevHouse/scripts.pory"
+# 131 "data/maps/Godzilland_DevHouse/scripts.pory"
 	.string "It looks like Goblin's been researching\n"
 	.string "POKéMON species…$"

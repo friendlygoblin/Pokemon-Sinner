@@ -53,7 +53,7 @@ script MissedTheGig{
     setflag(FLAG_INTRO_GEORGIA)
     applymovement(Nora, NoraStartsToLeave)
     waitmovement(0)
-    setobjectxy(Nora,12,12)
+    setobjectxyperm(Nora,12,12)
     setobjectmovementtype(Nora, MOVEMENT_TYPE_FACE_LEFT)
     
 

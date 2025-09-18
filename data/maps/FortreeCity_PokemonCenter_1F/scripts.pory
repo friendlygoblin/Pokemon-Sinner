@@ -31,3 +31,20 @@ FortreeCity_PokemonCenter_1F_Text_DoYouKnowAboutPokenav:
 	.string "I've never actually thrown, right? $"
 
 `
+
+script VoltSwitchKid{
+    lock
+    faceplayer
+    if(flag(FLAG_RECEIVED_TM_VOLT_SWITCH)){
+        msgbox(format("Switching POKéMON at the right moment can be the key to winning a battle!"), MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("Sometimes, switching POKéMON is the only way to win a battle.\pBut switching costs a turn, meaning you can't attack your opponent.\pUnless you use this!"))
+        giveitem(ITEM_TM64)
+        msgbox("Volt Switch allows your POKéMON to attack and switch with another in the same turn!")
+        setflag(FLAG_RECEIVED_TM_VOLT_SWITCH)
+    }
+    release
+    end
+}
+

@@ -1242,3 +1242,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/VictoryRoad_5/scripts.inc"
 
 	.include "data/maps/Interlude_UpperDeck/scripts.inc"
+
+	.include "data/maps/GjuhaCave/scripts.inc"

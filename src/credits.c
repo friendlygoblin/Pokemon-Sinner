@@ -39,7 +39,7 @@ enum {
 enum {
     MODE_NONE,
     MODE_BIKE_SCENE,
-    MODE_SHOW_MONS,
+    MODE_CONCERT,
 };
 
 #define tState data[0]
@@ -51,7 +51,6 @@ enum {
 #define tTaskId_ShowMons   data[3] // ID for Task_ShowMons
 #define tEndCredits        data[4]
 #define tPlayerSpriteId    data[5]
-#define tRivalSpriteId     data[6]
 #define tSceneNum          data[7]
 // data[8]-[10] are unused
 #define tNextMode          data[11]
@@ -115,7 +114,6 @@ static void ResetCreditsTasks(u8);
 static void LoadTheEndScreen(u16, u16, u16);
 static void DrawTheEnd(u16, u16);
 static void SpriteCB_Player(struct Sprite *);
-static void SpriteCB_Rival(struct Sprite *);
 //static u8 CreateCreditsMonSprite(u16, s16, s16, u16);
 //static void DeterminePokemonToShow(void);
 
@@ -241,36 +239,6 @@ static const union AnimCmd *const sAnims_Player[] =
     sAnim_Player_LookForward,
 };
 
-static const union AnimCmd sAnim_Rival_Slow[] =
-{
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_FRAME(64, 8),
-    ANIMCMD_FRAME(128, 8),
-    ANIMCMD_FRAME(192, 8),
-    ANIMCMD_JUMP(0),
-};
-
-static const union AnimCmd sAnim_Rival_Fast[] =
-{
-    ANIMCMD_FRAME(0, 4),
-    ANIMCMD_FRAME(64, 4),
-    ANIMCMD_FRAME(128, 4),
-    ANIMCMD_FRAME(192, 4),
-    ANIMCMD_JUMP(0),
-};
-
-static const union AnimCmd sAnim_Rival_Still[] =
-{
-    ANIMCMD_FRAME(0, 4),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd *const sAnims_Rival[] =
-{
-    sAnim_Rival_Slow,
-    sAnim_Rival_Fast,
-    sAnim_Rival_Still,
-};
 
 #define MONBG_OFFSET (MON_PIC_SIZE * 3)
 static const struct SpriteSheet sSpriteSheet_MonBg[] = {
@@ -888,7 +856,6 @@ static u8 CheckChangeScene(u8 page, u8 taskId)
 #undef tDelay
 
 #define tPlayer data[2]
-#define tRival  data[3]
 #define tDelay  data[4]
 #define tSinIdx data[5]
 
@@ -926,7 +893,6 @@ static void Task_BikeScene(u8 taskId)
         break;
     case 3:
         gSprites[gTasks[taskId].tPlayer].data[0] = 3;
-        gSprites[gTasks[taskId].tRival].data[0] = 1;
         gTasks[taskId].tDelay = 120;
         gTasks[taskId].tState++;
         break;
@@ -957,7 +923,6 @@ static void Task_BikeScene(u8 taskId)
         gTasks[taskId].tState = 50;
         break;
     case 10:
-        gSprites[gTasks[taskId].tRival].data[0] = 2;
         gTasks[taskId].tState = 50;
         break;
     case 20:
@@ -966,7 +931,6 @@ static void Task_BikeScene(u8 taskId)
         break;
     case 30:
         gSprites[gTasks[taskId].tPlayer].data[0] = 5;
-        gSprites[gTasks[taskId].tRival].data[0] = 3;
         gTasks[taskId].tState = 50;
         break;
     case 50:
@@ -981,8 +945,6 @@ static void Task_BikeScene(u8 taskId)
 
 static void Task_CycleSceneryPalette(u8 taskId)
 {
-    s16 bikeTaskId;
-
     switch (gTasks[taskId].tState)
     {
     default:
@@ -1000,36 +962,6 @@ static void Task_CycleSceneryPalette(u8 taskId)
     case SCENE_OCEAN_SUNSET:
         CycleSceneryPalette(0);
         break;
-    case SCENE_FOREST_RIVAL_ARRIVE:
-        if (gTasks[taskId].tTimer != TIMER_STOP)
-        {
-            bikeTaskId = gTasks[gTasks[taskId].tMainTaskId].tTaskId_BikeScene;
-
-            // Floor to multiple of 128
-            if ((gTasks[bikeTaskId].tSinIdx & -128) == 640)
-            {
-                gTasks[bikeTaskId].tState = 1;
-                gTasks[taskId].tTimer = TIMER_STOP;
-            }
-        }
-        CycleSceneryPalette(1);
-        break;
-    case SCENE_FOREST_CATCH_RIVAL:
-        if (gTasks[taskId].tTimer != TIMER_STOP)
-        {
-
-            if (gTasks[taskId].tTimer == 584)
-            {
-                gTasks[gTasks[gTasks[taskId].tMainTaskId].tTaskId_BikeScene].tState = 10;
-                gTasks[taskId].tTimer = TIMER_STOP;
-            }
-            else
-            {
-                gTasks[taskId].tTimer++;
-            }
-        }
-        CycleSceneryPalette(1);
-        break;
     case SCENE_CITY_NIGHT:
         CycleSceneryPalette(2);
         break;
@@ -1042,58 +974,25 @@ static void SetBikeScene(u8 scene, u8 taskId)
     {
     case SCENE_OCEAN_MORNING:
         gSprites[gTasks[taskId].tPlayerSpriteId].invisible = FALSE;
-        gSprites[gTasks[taskId].tRivalSpriteId].invisible = FALSE;
+        
         gSprites[gTasks[taskId].tPlayerSpriteId].x = DISPLAY_WIDTH + 32;
-        gSprites[gTasks[taskId].tRivalSpriteId].x = DISPLAY_WIDTH + 32;
+        
         gSprites[gTasks[taskId].tPlayerSpriteId].y = 46;
-        gSprites[gTasks[taskId].tRivalSpriteId].y = 46;
+        
         gSprites[gTasks[taskId].tPlayerSpriteId].data[0] = 0;
-        gSprites[gTasks[taskId].tRivalSpriteId].data[0] = 0;
+        
         gTasks[taskId].tTaskId_BgScenery = CreateBicycleBgAnimationTask(0, 0x2000, 0x20, 8);
         break;
     case SCENE_OCEAN_SUNSET:
         gSprites[gTasks[taskId].tPlayerSpriteId].invisible = FALSE;
-        gSprites[gTasks[taskId].tRivalSpriteId].invisible = FALSE;
+        
         gSprites[gTasks[taskId].tPlayerSpriteId].x = 120;
-        gSprites[gTasks[taskId].tRivalSpriteId].x = DISPLAY_WIDTH + 32;
+        
         gSprites[gTasks[taskId].tPlayerSpriteId].y = 46;
-        gSprites[gTasks[taskId].tRivalSpriteId].y = 46;
+        
         gSprites[gTasks[taskId].tPlayerSpriteId].data[0] = 0;
-        gSprites[gTasks[taskId].tRivalSpriteId].data[0] = 0;
+        ;
         gTasks[taskId].tTaskId_BgScenery = CreateBicycleBgAnimationTask(0, 0x2000, 0x20, 8);
-        break;
-    case SCENE_FOREST_RIVAL_ARRIVE:
-        gSprites[gTasks[taskId].tPlayerSpriteId].invisible = FALSE;
-        gSprites[gTasks[taskId].tRivalSpriteId].invisible = FALSE;
-        gSprites[gTasks[taskId].tPlayerSpriteId].x = 120;
-        gSprites[gTasks[taskId].tRivalSpriteId].x = DISPLAY_WIDTH + 32;
-        gSprites[gTasks[taskId].tPlayerSpriteId].y = 46;
-        gSprites[gTasks[taskId].tRivalSpriteId].y = 46;
-        gSprites[gTasks[taskId].tPlayerSpriteId].data[0] = 0;
-        gSprites[gTasks[taskId].tRivalSpriteId].data[0] = 0;
-        gTasks[taskId].tTaskId_BgScenery = CreateBicycleBgAnimationTask(1, 0x2000, 0x200, 8);
-        break;
-    case SCENE_FOREST_CATCH_RIVAL:
-        gSprites[gTasks[taskId].tPlayerSpriteId].invisible = FALSE;
-        gSprites[gTasks[taskId].tRivalSpriteId].invisible = FALSE;
-        gSprites[gTasks[taskId].tPlayerSpriteId].x = 120;
-        gSprites[gTasks[taskId].tRivalSpriteId].x = -32;
-        gSprites[gTasks[taskId].tPlayerSpriteId].y = 46;
-        gSprites[gTasks[taskId].tRivalSpriteId].y = 46;
-        gSprites[gTasks[taskId].tPlayerSpriteId].data[0] = 0;
-        gSprites[gTasks[taskId].tRivalSpriteId].data[0] = 0;
-        gTasks[taskId].tTaskId_BgScenery = CreateBicycleBgAnimationTask(1, 0x2000, 0x200, 8);
-        break;
-    case SCENE_CITY_NIGHT:
-        gSprites[gTasks[taskId].tPlayerSpriteId].invisible = FALSE;
-        gSprites[gTasks[taskId].tRivalSpriteId].invisible = FALSE;
-        gSprites[gTasks[taskId].tPlayerSpriteId].x = 88;
-        gSprites[gTasks[taskId].tRivalSpriteId].x = 152;
-        gSprites[gTasks[taskId].tPlayerSpriteId].y = 46;
-        gSprites[gTasks[taskId].tRivalSpriteId].y = 46;
-        gSprites[gTasks[taskId].tPlayerSpriteId].data[0] = 0;
-        gSprites[gTasks[taskId].tRivalSpriteId].data[0] = 0;
-        gTasks[taskId].tTaskId_BgScenery = CreateBicycleBgAnimationTask(2, 0x2000, 0x200, 8);
         break;
     }
 
@@ -1106,17 +1005,14 @@ static void SetBikeScene(u8 scene, u8 taskId)
     gTasks[gTasks[taskId].tTaskId_BikeScene].tState = 0;
     gTasks[gTasks[taskId].tTaskId_BikeScene].data[1] = taskId; // data[1] is never read
     gTasks[gTasks[taskId].tTaskId_BikeScene].tPlayer = gTasks[taskId].tPlayerSpriteId;
-    gTasks[gTasks[taskId].tTaskId_BikeScene].tRival = gTasks[taskId].tRivalSpriteId;
+    
     gTasks[gTasks[taskId].tTaskId_BikeScene].tDelay = 0;
 
-    if (scene == SCENE_FOREST_RIVAL_ARRIVE)
-        gTasks[gTasks[taskId].tTaskId_BikeScene].tSinIdx = 69;
 }
 
 #undef tTimer
 #undef tDelay
 #undef tSinIdx
-#undef tRival
 #undef tPlayer
 
 static bool8 LoadBikeScene(u8 scene, u8 taskId)
@@ -1147,27 +1043,8 @@ static bool8 LoadBikeScene(u8 scene, u8 taskId)
         gMain.state++;
         break;
     case 2:
-        if (gSaveBlock2Ptr->playerGender == MALE)
-        {
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsBrendan);
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsRivalMay);
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsBicycle);
-            LoadSpritePalettes(gSpritePalettes_Credits);
 
-            spriteId = CreateIntroBrendanSprite(120, 46);
-            gTasks[taskId].tPlayerSpriteId = spriteId;
-            gSprites[spriteId].callback = SpriteCB_Player;
-            gSprites[spriteId].anims = sAnims_Player;
-
-            spriteId = CreateIntroMaySprite(DISPLAY_WIDTH + 32, 46);
-            gTasks[taskId].tRivalSpriteId = spriteId;
-            gSprites[spriteId].callback = SpriteCB_Rival;
-            gSprites[spriteId].anims = sAnims_Rival;
-        }
-        else
-        {
             LoadCompressedSpriteSheet(gSpriteSheet_CreditsMay);
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsRivalBrendan);
             LoadCompressedSpriteSheet(gSpriteSheet_CreditsBicycle);
             LoadSpritePalettes(gSpritePalettes_Credits);
 
@@ -1176,11 +1053,7 @@ static bool8 LoadBikeScene(u8 scene, u8 taskId)
             gSprites[spriteId].callback = SpriteCB_Player;
             gSprites[spriteId].anims = sAnims_Player;
 
-            spriteId = CreateIntroBrendanSprite(DISPLAY_WIDTH + 32, 46);
-            gTasks[taskId].tRivalSpriteId = spriteId;
-            gSprites[spriteId].callback = SpriteCB_Rival;
-            gSprites[spriteId].anims = sAnims_Rival;
-        };
+
         gMain.state++;
         break;
     case 3:
@@ -1321,42 +1194,6 @@ static void SpriteCB_Player(struct Sprite *sprite)
     }
 }
 
-static void SpriteCB_Rival(struct Sprite *sprite)
-{
-    if (gIntroCredits_MovingSceneryState != INTROCRED_SCENERY_NORMAL)
-    {
-        DestroySprite(sprite);
-        return;
-    }
-
-    switch (sprite->sState)
-    {
-    case 0:
-        sprite->y2 = 0;
-        StartSpriteAnimIfDifferent(sprite, 0);
-        break;
-    case 1:
-        if (sprite->x > 200)
-            StartSpriteAnimIfDifferent(sprite, 1);
-        else
-            StartSpriteAnimIfDifferent(sprite, 2);
-        if (sprite->x > -32)
-            sprite->x -= 2;
-        sprite->y2 = -gIntroCredits_MovingSceneryVOffset;
-        break;
-    case 2:
-        sprite->data[7]++;
-        StartSpriteAnimIfDifferent(sprite, 0);
-        if ((sprite->data[7] & 3) == 0)
-            sprite->x++;
-        break;
-    case 3:
-        StartSpriteAnimIfDifferent(sprite, 0);
-        if (sprite->x > -32)
-            sprite->x--;
-        break;
-    }
-}
 
 #define sPosition data[1]
 #define sSpriteId data[6]

@@ -340,88 +340,98 @@ CandlewaxCity_BikeSign::
 	end
 
 
-CandlewaxCity_TunnelSign::
+CandlewaxCity_SchoolSign::
 # 264 "data/maps/CandlewaxCity/scripts.pory"
 	lock
 # 265 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_TunnelSign_Text_0
+	msgbox CandlewaxCity_SchoolSign_Text_0
 # 266 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
-CandlewaxCity_Girl::
+CandlewaxCity_TunnelSign::
 # 271 "data/maps/CandlewaxCity/scripts.pory"
 	lock
 # 272 "data/maps/CandlewaxCity/scripts.pory"
-	faceplayer
+	msgbox CandlewaxCity_TunnelSign_Text_0
 # 273 "data/maps/CandlewaxCity/scripts.pory"
+	releaseall
+	end
+
+
+CandlewaxCity_Girl::
+# 278 "data/maps/CandlewaxCity/scripts.pory"
+	lock
+# 279 "data/maps/CandlewaxCity/scripts.pory"
+	faceplayer
+# 280 "data/maps/CandlewaxCity/scripts.pory"
 	msgbox CandlewaxCity_Girl_Text_0, MSGBOX_AUTOCLOSE
-# 274 "data/maps/CandlewaxCity/scripts.pory"
+# 281 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Man::
-# 279 "data/maps/CandlewaxCity/scripts.pory"
+# 286 "data/maps/CandlewaxCity/scripts.pory"
 	lock
-# 280 "data/maps/CandlewaxCity/scripts.pory"
+# 287 "data/maps/CandlewaxCity/scripts.pory"
 	faceplayer
-# 281 "data/maps/CandlewaxCity/scripts.pory"
+# 288 "data/maps/CandlewaxCity/scripts.pory"
 	msgbox CandlewaxCity_Man_Text_0, MSGBOX_AUTOCLOSE
-# 282 "data/maps/CandlewaxCity/scripts.pory"
+# 289 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_KirliaGirl::
-# 287 "data/maps/CandlewaxCity/scripts.pory"
+# 294 "data/maps/CandlewaxCity/scripts.pory"
 	lock
-# 288 "data/maps/CandlewaxCity/scripts.pory"
+# 295 "data/maps/CandlewaxCity/scripts.pory"
 	faceplayer
-# 289 "data/maps/CandlewaxCity/scripts.pory"
+# 296 "data/maps/CandlewaxCity/scripts.pory"
 	msgbox CandlewaxCity_KirliaGirl_Text_0, MSGBOX_AUTOCLOSE
-# 290 "data/maps/CandlewaxCity/scripts.pory"
+# 297 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Kirlia::
-# 295 "data/maps/CandlewaxCity/scripts.pory"
+# 302 "data/maps/CandlewaxCity/scripts.pory"
 	lock
-# 296 "data/maps/CandlewaxCity/scripts.pory"
+# 303 "data/maps/CandlewaxCity/scripts.pory"
 	faceplayer
-# 297 "data/maps/CandlewaxCity/scripts.pory"
+# 304 "data/maps/CandlewaxCity/scripts.pory"
 	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
-# 298 "data/maps/CandlewaxCity/scripts.pory"
+# 305 "data/maps/CandlewaxCity/scripts.pory"
 	msgbox CandlewaxCity_Kirlia_Text_0, MSGBOX_AUTOCLOSE
-# 299 "data/maps/CandlewaxCity/scripts.pory"
+# 306 "data/maps/CandlewaxCity/scripts.pory"
 	waitmoncry
-# 300 "data/maps/CandlewaxCity/scripts.pory"
+# 307 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Hiker::
-# 305 "data/maps/CandlewaxCity/scripts.pory"
+# 312 "data/maps/CandlewaxCity/scripts.pory"
 	lock
-# 306 "data/maps/CandlewaxCity/scripts.pory"
+# 313 "data/maps/CandlewaxCity/scripts.pory"
 	faceplayer
-# 307 "data/maps/CandlewaxCity/scripts.pory"
+# 314 "data/maps/CandlewaxCity/scripts.pory"
 	msgbox CandlewaxCity_Hiker_Text_0
-# 308 "data/maps/CandlewaxCity/scripts.pory"
+# 315 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Worker::
-# 313 "data/maps/CandlewaxCity/scripts.pory"
+# 320 "data/maps/CandlewaxCity/scripts.pory"
 	lock
-# 314 "data/maps/CandlewaxCity/scripts.pory"
+# 321 "data/maps/CandlewaxCity/scripts.pory"
 	faceplayer
-# 315 "data/maps/CandlewaxCity/scripts.pory"
+# 322 "data/maps/CandlewaxCity/scripts.pory"
 	msgbox CandlewaxCity_Worker_Text_0
-# 316 "data/maps/CandlewaxCity/scripts.pory"
+# 323 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
@@ -451,35 +461,41 @@ CandlewaxCity_BikeSign_Text_0:
 	.string "Candlewax City Bike Workshop\p"
 	.string "More innovation, faster bikes.$"
 
-CandlewaxCity_TunnelSign_Text_0:
+CandlewaxCity_SchoolSign_Text_0:
 # 265 "data/maps/CandlewaxCity/scripts.pory"
+	.string "Candlewax City POKéMON School\p"
+	.string "Open to all, come learn the basics of\n"
+	.string "POKéMON training!$"
+
+CandlewaxCity_TunnelSign_Text_0:
+# 272 "data/maps/CandlewaxCity/scripts.pory"
 	.string "{DOWN_ARROW}: Caesar Tunnel\p"
 	.string "To Route 3 and Furge Town.$"
 
 CandlewaxCity_Girl_Text_0:
-# 273 "data/maps/CandlewaxCity/scripts.pory"
+# 280 "data/maps/CandlewaxCity/scripts.pory"
 	.string "The pattern on the pavement is the\n"
 	.string "pride of Candlewax City!$"
 
 CandlewaxCity_Man_Text_0:
-# 281 "data/maps/CandlewaxCity/scripts.pory"
+# 288 "data/maps/CandlewaxCity/scripts.pory"
 	.string "My cousin bought a bike that was\n"
 	.string "designed here in Candlewax City.\p"
 	.string "Even her Ponyta struggles to keep up\n"
 	.string "with her.$"
 
 CandlewaxCity_KirliaGirl_Text_0:
-# 289 "data/maps/CandlewaxCity/scripts.pory"
+# 296 "data/maps/CandlewaxCity/scripts.pory"
 	.string "I'm so glad Concert Halls allow POKéMON!\p"
 	.string "I couldn't imagine seeing my favourite\n"
 	.string "artists without Kirlia…$"
 
 CandlewaxCity_Kirlia_Text_0:
-# 298 "data/maps/CandlewaxCity/scripts.pory"
+# 305 "data/maps/CandlewaxCity/scripts.pory"
 	.string "KIRLIA: Krrrr!$"
 
 CandlewaxCity_Hiker_Text_0:
-# 307 "data/maps/CandlewaxCity/scripts.pory"
+# 314 "data/maps/CandlewaxCity/scripts.pory"
 	.string "Route 3 is on the other side of that\n"
 	.string "tunnel.\p"
 	.string "It's more of a forest path actually, I\n"
@@ -487,7 +503,7 @@ CandlewaxCity_Hiker_Text_0:
 	.string "I don't like forests.$"
 
 CandlewaxCity_Worker_Text_0:
-# 315 "data/maps/CandlewaxCity/scripts.pory"
+# 322 "data/maps/CandlewaxCity/scripts.pory"
 	.string "We're finishing up some minor works in\n"
 	.string "the Tunnel, come back later.\p"
 	.string "Why don't you go pass the time at the\n"

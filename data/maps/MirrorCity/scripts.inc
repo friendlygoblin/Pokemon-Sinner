@@ -157,7 +157,7 @@ MirrorCity_ConcertHallSign_Text_0:
 MirrorCity_Nat_Text_0:
 # 112 "data/maps/MirrorCity/scripts.pory"
 	.string "NATALIE: Everyone I saw on the way\n"
-	.string "here is so well dressed,$"
+	.string "here is so well dressed!$"
 
 MirrorCity_GoblinThisIsIt::
 # 64 "data/maps/MirrorCity/scripts.pory"

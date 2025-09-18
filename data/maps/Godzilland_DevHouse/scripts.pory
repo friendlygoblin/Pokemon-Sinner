@@ -30,6 +30,16 @@ script DevHouse_TestGoblin{
     end
 }
 
+script DevHouse_DevAmy{
+    lock
+    faceplayer
+    msgbox(format("AMY: I did the heavy lifting on the demo of the game, but I've let Goblin take over since I've been busy with ParlourZine.\pI still give a hand here and there whenever I can."), MSGBOX_AUTOCLOSE)
+    applymovement(11, Common_Movement_FaceUp)
+    waitmovement(0)
+    release
+    end
+}
+
 script DevHouse_SmallSpriteGoblin{
     lock
     faceplayer

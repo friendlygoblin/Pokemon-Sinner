@@ -57,7 +57,7 @@ static const u8 sCreditsText_Artwork[]                        = _("Artwork");
 static const u8 sCreditsText_LeadProgrammer[]                 = _("Lead Programmer");*/
 static const u8 sCreditsText_SpriteDesign[]                   = _("Lead Graphic Artist");
 static const u8 sCreditsText_FlorenceConsultant[]             = _("Florence Consultant");
-static const u8 sCreditsText_StVincentConsultants[]            = _("St.Vincent Consultants");
+static const u8 sCreditsText_StVincentConsultants[]           = _("St.Vincent Consultants");
 static const u8 sCreditsText_ChappellConsultant[]             = _("Chappell Roan Consultant");
 static const u8 sCreditsText_CMATConsultant[]                 = _("CMAT Consultant");
 static const u8 sCreditsText_MarinaConsultants[]               = _("Marina Consultants");
@@ -437,12 +437,12 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Director,
         &sCreditsEntry_Programmers,
         &sCreditsEntry_SpriteDesign,
-        _,
-        &sCreditsEntry_Goblin
+        &sCreditsEntry_Goblin,
+        _
     },
         [PAGE_BRAINSTORMING] = {
         &sCreditsEntry_GameDesigners,
-        _,
+        &sCreditsEntry_Amy,
         &sCreditsEntry_Goblin,
         &sCreditsEntry_Morpheus,
         _
@@ -453,39 +453,39 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Goblin,
         _,
         _
-    },
-        [PAGE_SPRITE_DESIGN] = {
+        },
+    [PAGE_SPRITE_DESIGN] = {
         _,
         &sCreditsEntry_Goblin,
         _,
         _
-    },*/
+        },*/
         [PAGE_MAP_DESIGN] = {
-        _,
-        &sCreditsEntry_MapDesign,
-        &sCreditsEntry_Amy,
-        &sCreditsEntry_Goblin,
-        _
-    },
-/*      [PAGE_MUSIC_COMPOSITION] = {
-        &sCreditsEntry_MusicComposition,
-        &sCreditsEntry_Goblin,
-        &sCreditsEntry_Mal,
-        &sCreditsEntry_Meinth,
-        _
+            _,
+            &sCreditsEntry_MapDesign,
+            &sCreditsEntry_Amy,
+            &sCreditsEntry_Goblin,
+            _
+        },
+        /*      [PAGE_MUSIC_COMPOSITION] = {
+            &sCreditsEntry_MusicComposition,
+            &sCreditsEntry_Goblin,
+            &sCreditsEntry_Mal,
+            &sCreditsEntry_Meinth,
+            _
     },*/
         [PAGE_TEST_VOLUNTEERS] = {
-        &sCreditsEntry_TestVolunteers,
-        &sCreditsEntry_Amy,
-        &sCreditsEntry_Meggo,
-        &sCreditsEntry_Morpheus,
-        _
-    },
+            &sCreditsEntry_TestVolunteers,
+            _,
+            &sCreditsEntry_Meggo,
+            &sCreditsEntry_Morpheus,
+            _
+        },
         [PAGE_FLORENCE_CONSULTANT] = {
-        &sCreditsEntry_FlorenceConsultant,
-        _,
-        &sCreditsEntry_Rachel,
-        _,
+            &sCreditsEntry_FlorenceConsultant,
+            _,
+            &sCreditsEntry_Rachel,
+            _,
         _
         
     },

@@ -118,6 +118,32 @@ SundayCave_MachineGuy_11:
 	goto SundayCave_MachineGuy_1
 
 
+SundayCave_FacadeScientist::
+# 155 "data/maps/SundayCave/scripts.pory"
+	lock
+# 156 "data/maps/SundayCave/scripts.pory"
+	faceplayer
+# 157 "data/maps/SundayCave/scripts.pory"
+	goto_if_set FLAG_RECEIVED_TM_FACADE, SundayCave_FacadeScientist_2
+# 161 "data/maps/SundayCave/scripts.pory"
+	msgbox SundayCave_FacadeScientist_Text_1
+# 162 "data/maps/SundayCave/scripts.pory"
+	giveitem ITEM_TM42
+# 163 "data/maps/SundayCave/scripts.pory"
+	msgbox SundayCave_FacadeScientist_Text_2
+# 164 "data/maps/SundayCave/scripts.pory"
+	setflag FLAG_RECEIVED_TM_FACADE
+SundayCave_FacadeScientist_1:
+# 166 "data/maps/SundayCave/scripts.pory"
+	release
+	end
+
+SundayCave_FacadeScientist_2:
+# 158 "data/maps/SundayCave/scripts.pory"
+	msgbox SundayCave_FacadeScientist_Text_0, MSGBOX_AUTOCLOSE
+	goto SundayCave_FacadeScientist_1
+
+
 SundayCave_MachineGuy_Text_0:
 # 91 "data/maps/SundayCave/scripts.pory"
 	.string "Jaw Fossil$"
@@ -134,6 +160,24 @@ SundayCave_MachineGuy_Text_3:
 # 106 "data/maps/SundayCave/scripts.pory"
 	.string "Oh okay, come back later if you change\n"
 	.string "your mind!$"
+
+SundayCave_FacadeScientist_Text_0:
+# 158 "data/maps/SundayCave/scripts.pory"
+	.string "People lose all sorts of things in\n"
+	.string "caves.\p"
+	.string "It's a bit annoying for those who are\n"
+	.string "trying to work here.$"
+
+SundayCave_FacadeScientist_Text_1:
+# 161 "data/maps/SundayCave/scripts.pory"
+	.string "I found this TM but I won't be using it.\p"
+	.string "You do POKéMON battles, right?\n"
+	.string "Here, you're more likely to use it than\l"
+	.string "me.$"
+
+SundayCave_FacadeScientist_Text_2:
+# 163 "data/maps/SundayCave/scripts.pory"
+	.string "I'm not sure what move it is, something about being stronger when affected by status…$"
 
 SundayCave_Scientist1_BattleIntro::
 # 17 "data/maps/SundayCave/scripts.pory"

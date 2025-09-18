@@ -5,3 +5,80 @@ mapscripts CrystalStreamCity_Museum_MapScripts {
 script CSCM_BringBackScientist{
     clearflag(FLAG_CSC_MUSEUM_SCIENTIST)
 }
+
+script CSCM_Abi{
+    lock
+    faceplayer
+    msgbox(Museum_AbiWereVisiting, MSGBOX_AUTOCLOSE)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(1)
+    setflag(FLAG_CSCM_ABI)
+    playse(SE_EXIT)
+    waitse
+    fadescreen(FADE_FROM_BLACK)
+    release
+    end
+}
+
+text Museum_AbiWereVisiting{
+    "ABIGAIL: {PLAYER}, hi!\n"
+    "What are you up to? \p"
+    "Me? Oh, I'm just visiting the Museum, \n"
+    "we have a bit of time off before our \l"
+    "first Mirror City show.\p"
+    "I really like Crystal Stream City, we \n"
+    "all do. \p"
+    "We wrote Sinner around the time we \n"
+    "first visited it, you know!\p"
+    "Well, I think I'm done here, I'll see  \n"
+    "if Lizzie is done with whatever they're\l"
+    "doing.\p"
+    "It was nice seeing you, bye!$"
+}
+
+script Museum_Girl{
+    lock
+    faceplayer
+    msgbox(format("I love this Museum, and I'm so happy it's free because that means I can visit every day!"))
+    release
+    end
+}
+
+script Museum_OldLady{
+    lock
+    faceplayer
+    msgbox(format("Those statues are beautiful, I'd love to see the POKéMON they're based on."))
+    release
+    end
+}
+
+script Museum_Starly{
+    lock
+    faceplayer
+    playmoncry(SPECIES_STARLY, CRY_MODE_NORMAL)
+    msgbox(format("STARLY: Piiip!"))
+    release
+    end
+}
+
+script Museum_Boy{
+    lock
+    faceplayer
+    msgbox(format("My ultimate life goal is to discover somethig and have it exposed here!"))
+    release
+    end
+}
+
+script Museum_Statue{
+    lock
+    msgbox("It's a statue of an ancient POKéMON")
+    release
+    end
+}
+
+script Museum_StoneTable{
+    lock
+    msgbox("It's stone slab with texts in an ancient language on it.")
+    release
+    end
+}

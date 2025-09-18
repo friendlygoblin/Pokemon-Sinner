@@ -33,8 +33,12 @@ mart MCCH_MerchStand_Items{
     ITEM_MAX_POTION
     ITEM_FULL_HEAL
     ITEM_FULL_RESTORE
+    ITEM_REVIVE
     ITEM_MAX_REVIVE
     ITEM_ELIXIR
+    ITEM_TM02
+    ITEM_TM60
+    ITEM_TM62
 }
 
 script MCCH_MerchStand{
@@ -73,7 +77,8 @@ script MCCH_LoungeGoblin{
 
 text LoungeGoblin_OfferBattle{
     "GOBLIN: Hello again! \p"
-    "Need more practice before facing the band ?$"
+    "Need more practice before facing \n"
+    "the band ?$"
     }
 
 text LoungeGoblin_RefuseBattle{
@@ -89,6 +94,6 @@ text LoungeGoblin_AcceptBattle{
 text LoungeGoblin_PostBattle{
     "GOBLIN: Looks like you got this! \p"
     "Oh, but if you want a tip, sending out \n"
-    "the right POKéMON right away might save \l"
-    "your life! $"
+    "the right POKéMON right away might \l"
+    "save your life! $"
 }

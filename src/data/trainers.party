@@ -2807,18 +2807,25 @@ Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_AIDEN_2 ===
-Name: WINSTON
-Class: Rich Boy
-Pic: Rich Boy
+Name: AIDEN
+Class: TLDP Fan
+Pic: Aiden
 Gender: Male
-Music: Rich
-Items: Full Restore
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Check Viability / Try To Faint / Ace Pokemon
 
-Linoone @ Nugget
-Level: 33
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ninetales (M)
+Level: 36
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Sandslash (F)
+Level: 36
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
+
+Gliscor (M)
+Level: 36
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_WINSTON_5 ===
 Name: WINSTON
@@ -4846,7 +4853,7 @@ Mugshot: Purple
 
 Mawile (F)  
 Ability: Sheer Force  
-Level: 43  
+Level: 41  
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Adamant Nature  
 - Rock Slide  
@@ -4856,7 +4863,7 @@ Adamant Nature
 
 Honchkrow (M)  
 Ability: Moxie  
-Level: 43      
+Level: 41      
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Jolly Nature  
 - Aerial Ace 
@@ -4866,7 +4873,7 @@ Jolly Nature
 
 Shiinotic (M) 
 Ability: Effect Spore  
-Level: 43   
+Level: 41   
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Bold Nature  
 - Spore  
@@ -4876,7 +4883,7 @@ Bold Nature
 
 Chandelure (M)  
 Ability: Flame Body  
-Level: 43  
+Level: 41  
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Timid Nature   
 - Shadow Ball  
@@ -4886,7 +4893,7 @@ Timid Nature
 
 Snorlax (M) @ Leftovers
 Ability: Thick Fat  
-Level: 43  
+Level: 41  
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Timid Nature  
 - Curse
@@ -4896,7 +4903,7 @@ Timid Nature
 
 Houndoom (F) @ Houndoominite  
 Ability: Flash Fire  
-Level: 45   
+Level: 43   
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Timid Nature  
 - Nasty Plot  
@@ -4917,7 +4924,7 @@ Mugshot: Yellow
 
 Zebstrika (M) 
 Ability: Lightning Rod  
-Level: 44    
+Level: 42    
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe  
 Timid Nature    
 - Thunderbolt  
@@ -4927,7 +4934,7 @@ Timid Nature
 
 Mew @ Leftovers  
 Ability: Unaware  
-Level: 44   
+Level: 42   
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe 
 Bold Nature  
 - Spikes  
@@ -4937,7 +4944,7 @@ Bold Nature
 
 Jolteon (F) 
 Ability: Quick Feet  
-Level: 44  
+Level: 42  
 Timid Nature  
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe 
 - Yawn  
@@ -4947,7 +4954,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 Toxtricity-Low-Key (M)  
 Ability: Punk Rock  
-Level: 44   
+Level: 42   
 Modest Nature  
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Psychic Noise 
@@ -4957,7 +4964,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 Toxtricity (F)  
 Ability: Punk Rock  
-Level: 44  
+Level: 42  
 Timid Nature  
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe   
 - Boomburst  
@@ -4967,7 +4974,8 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 Manectric @ Manectite  
 Ability: Lightning Rod  
-Level: 46   
+Shiny: Yes
+Level: 44   
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe  
 Timid Nature  
 - Charge  
@@ -4988,7 +4996,7 @@ Mugshot: Blue
 
 Gliscor (M) 
 Ability: Hyper Cutter 
-Level: 45  
+Level: 43  
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Jolly Nature  
 - Earthquake  
@@ -4998,17 +5006,17 @@ Jolly Nature
 
 Braviary (M) @ Heavy-Duty Boots  
 Ability: Defiant  
-Level: 45   
+Level: 43   
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Jolly Nature  
-- Brave Bird  
+- Aerial Ace  
 - Close Combat  
 - Roost  
-- Bulk Up  
+- Hone Claws  
 
 Skarmory (F) 
 Ability: Sturdy  
-Level: 45  
+Level: 43  
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Bold Nature  
 - Iron Defense  
@@ -5018,27 +5026,27 @@ Bold Nature
 
 Togekiss (F)  
 Ability: Serene Grace  
-Level: 45   
+Level: 43   
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Timid Nature   
 - Dazzling Gleam 
 - Air Slash  
 - Flamethrower  
-- Wish  
+- Psybeam  
 
 Mewtwo  
 Ability: Pressure
-Level: 45   
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Level: 43   
+IVs: 0 HP / 0 Atk / 4 Def / 0 SpA / 4 SpD / 0 Spe
 Modest Nature  
-- Calm Mind  
-- Drain Punch  
-- Psychic
+- Bulk Up  
+- Brick Break  
+- Zen Headbutt
 - Disable  
 
 Altaria (F) @ Altarianite  
 Ability: Cloud Nine  
-Level: 47    
+Level: 45    
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Adamant Nature  
 - Draco Meteor 
@@ -5059,7 +5067,7 @@ Mugshot: Blue
 
 Politoed (M) 
 Ability: Drizzle  
-Level: 46    
+Level: 44    
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Calm Nature  
 - Protect  
@@ -5069,7 +5077,7 @@ Calm Nature
 
 Primarina (F)  
 Ability: Torrent  
-Level: 46  
+Level: 44  
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Modest Nature   
 - Hydro Pump  
@@ -5079,7 +5087,7 @@ Modest Nature
 
 Milotic (F)
 Ability: Marvel Scale
-Level: 46    
+Level: 44    
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Bold Nature   
 - Hex  
@@ -5089,7 +5097,7 @@ Bold Nature
 
 Aurorus (F)  
 Ability: Refrigerate  
-Level: 46   
+Level: 44   
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Modest Nature  
 - Facade  
@@ -5099,7 +5107,7 @@ Modest Nature
 
 Dhelmise @ Colbur Berry  
 Ability: Steelworker  
-Level: 46    
+Level: 44    
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Adamant Nature  
 - Power Whip  
@@ -5109,13 +5117,13 @@ Adamant Nature
 
 Gyarados @ Gyaradosite  
 Ability: Intimidate  
-Level: 48  
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Level: 46  
+IVs: 4 HP / 0 Atk / 4 Def / 4 SpA / 4 SpD / 0 Spe
 Shiny: Yes  
 Jolly Nature  
 - Bounce
 - Crunch  
-- Waterfall  
+- Surf  
 - Earthquake  
 
 === TRAINER_STVINCENT ===
@@ -6348,15 +6356,15 @@ Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint / Ace Pokemon
 
 Ninetales (M)
-Level: 36
+Level: 33
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 Sandslash (F)
-Level: 36
+Level: 33
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
 Gliscor (M)
-Level: 36
+Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_Q ===
@@ -6458,7 +6466,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALLACE ===
 Name: ABIGAIL 
-Class: Champion
+Class: Elite Four
 Pic: Champion Wallace
 Gender: Female
 Music: Male
@@ -6469,8 +6477,8 @@ Mugshot: Purple
 
 Trevenant (M)  
 Ability: Natural Cure  
-Level: 48  
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+Level: 46  
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 14 SpD / 4 Spe
 Brave Nature  
 - Dark Pulse  
 - Earthquake  
@@ -6479,8 +6487,8 @@ Brave Nature
 
 Corviknight (F)  
 Ability: Pressure  
-Level: 48  
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe 
+Level: 46  
+IVs: 4 HP / 4 Atk / 14 Def / 4 SpA / 24 SpD / 4 Spe 
 Impish Nature  
 - Drill Peck  
 - Iron Head  
@@ -6489,10 +6497,9 @@ Impish Nature
 
 Eevee (F)  @ Eviolite
 Ability: Adaptability
-Level: 48   
-Shiny: Yes   
+Level: 48      
 EVs: 4 Def / 252 SpA / 252 Spe
-IVs: 4 HP / 4 Atk / 20 Def / 4 SpA / 20 SpD / 4 Spe
+IVs: 24 HP / 4 Atk / 20 Def / 4 SpA / 20 SpD / 4 Spe
 Timid Nature   
 - Stored Power  
 - Wish  
@@ -6501,7 +6508,7 @@ Timid Nature
 
 Meloetta-Pirouette  
 Ability: Serene Grace  
-Level: 48   
+Level: 46   
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Jolly Nature  
 - Play Rough  
@@ -6513,7 +6520,7 @@ Wooper (M) @ Eviolite
 Ability: Damp  
 Level: 48    
 EVs: 160 HP / 164 Atk / 152 Def / 28 Spe 
-IVs: 4 HP / 4 Atk / 20 Def / 4 SpA / 14 SpD / 4 Spe 
+IVs: 24 HP / 4 Atk / 20 Def / 4 SpA / 14 SpD / 4 Spe 
 Brave Nature  
 - Avalanche  
 - Earthquake  
@@ -7137,15 +7144,15 @@ AI: Check Bad Move / Check Viability / Try To Faint
 
 Piplup (M)
 Level: 37
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
 Lycanroc-Dusk (F)
 Level: 37
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
 Tinkaton
 Level: 38
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
 === TRAINER_NESS ===
 Name: NESS
@@ -16140,7 +16147,7 @@ Mugshot: Purple
 Primeape (M)
 Ability: Vital Spirit  
 Level: 40 
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe  
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe  
 Jolly Nature  
 - Stealth Rock  
 - Rage Fist  
@@ -16150,7 +16157,7 @@ Jolly Nature
 Flareon (F) @ Heavy-Duty Boots  
 Ability: Flash Fire  
 Level: 40  
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe 
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe 
 Lonely Nature  
 - Flare Blitz  
 - Trailblaze  
@@ -16160,7 +16167,7 @@ Lonely Nature
 Hawlucha (F)
 Ability: Limber  
 Level: 40 
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe 
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe 
 Jolly Nature  
 - Substitute  
 - Throat Chop  
@@ -16170,7 +16177,7 @@ Jolly Nature
 Sharpedo (M) @ Leftovers
 Ability: Speed Boost  
 Level: 40 
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Adamant Nature  
 - Waterfall  
 - Crunch  
@@ -16180,7 +16187,7 @@ Adamant Nature
 Tinkaton (F)  
 Ability: Mold Breaker  
 Level: 40  
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Careful Nature  
 - Gigaton Hammer  
 - Play Rough  
@@ -16190,7 +16197,7 @@ Careful Nature
 Lucario (M)  
 Ability: Inner Focus  
 Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Jolly Nature  
 - Extreme Speed  
 - Crunch  
@@ -16237,7 +16244,7 @@ Mugshot: Blue
 Lapras (F) @ Shell Bell
 Ability: Shell Armor
 Level: 40  
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Lonely Nature  
 - Earthquake 
 - Iron Head 
@@ -16247,7 +16254,7 @@ Lonely Nature
 Serperior (F)
 Ability: Contrary  
 Level: 40   
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe 
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe 
 Timid Nature   
 - Leaf Storm  
 - Leech Seed  
@@ -16257,7 +16264,7 @@ Timid Nature
 Mimikyu (M) 
 Ability: Disguise  
 Level: 40      
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Jolly Nature  
 - Destiny Bond  
 - Shadow Claw 
@@ -16267,7 +16274,7 @@ Jolly Nature
 Ceruledge (M)
 Ability: Flash Fire 
 Level: 40   
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Jolly Nature  
 - Light Screen  
 - Bitter Blade  
@@ -16277,7 +16284,7 @@ Jolly Nature
 Hydreigon (M)
 Ability: Levitate  
 Level: 40  
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Timid Nature   
 - Nasty Plot  
 - Zen Headbutt  
@@ -16287,7 +16294,7 @@ Timid Nature
 Houndoom (F)
 Ability: Flash Fire  
 Level: 42   
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Hasty Nature  
 - Nasty Plot  
 - Flamethrower 
@@ -16321,7 +16328,7 @@ Mugshot: Yellow
 Toxtricity (F) @ Air Balloon  
 Ability: Punk Rock  
 Level: 40    
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe 
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe 
 Bold Nature   
 - Boomburst  
 - Overdrive  
@@ -16331,7 +16338,7 @@ Bold Nature
 Dragonite (M)  
 Ability: Inner Focus  
 Level: 40   
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 Adamant Nature  
 - Dragon Dance  
 - Iron Head  
@@ -16341,7 +16348,7 @@ Adamant Nature
 Ninetales (F)  
 Ability: Flash Fire  
 Level: 40   
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe 
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe 
 Timid Nature    
 - Flamethrower  
 - Energy Ball  
@@ -16351,7 +16358,7 @@ Timid Nature
 Dachsbun (M)  
 Ability: Well-Baked Body  
 Level: 40   
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe 
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe 
 Impish Nature  
 - Protect  
 - Wish  
@@ -16361,7 +16368,7 @@ Impish Nature
 Ludicolo (M)  
 Ability: Swift Swim  
 Level: 40    
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe 
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe 
 Modest Nature    
 - Rain Dance  
 - Giga Drain  
@@ -16371,7 +16378,7 @@ Modest Nature
 Ampharos (F) 
 Ability: Mold Breaker  
 Level: 42   
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe 
+IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe 
 Timid Nature   
 - Thunderbolt  
 - Meteor Beam  

@@ -597,7 +597,7 @@ Common_Text_LookCloserAtMap:
 # 299 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
 	.string "{PLAYER} took a closer look at the\n"
 # 300 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
-	.string "HOENN region map.$"
+	.string "region map.$"
 # 301 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
 
 # 302 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"

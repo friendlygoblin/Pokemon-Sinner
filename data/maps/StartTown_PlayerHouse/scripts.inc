@@ -63,6 +63,24 @@ GetOutOfBed:
 # 36 "data/maps/StartTown_PlayerHouse/scripts.pory"
 	step_end
 
+PlayerHouse_Computer::
+# 40 "data/maps/StartTown_PlayerHouse/scripts.pory"
+	lock
+# 41 "data/maps/StartTown_PlayerHouse/scripts.pory"
+	goto_if_set FLAG_IS_CHAMPION, PlayerHouse_Computer_2
+# 45 "data/maps/StartTown_PlayerHouse/scripts.pory"
+	msgbox PlayerHouse_MailingList, MSGBOX_AUTOCLOSE
+PlayerHouse_Computer_1:
+# 47 "data/maps/StartTown_PlayerHouse/scripts.pory"
+	release
+	end
+
+PlayerHouse_Computer_2:
+# 42 "data/maps/StartTown_PlayerHouse/scripts.pory"
+	msgbox PlayerHouse_ChampionMail
+	goto PlayerHouse_Computer_1
+
+
 Bed_Text_0:
 # 5 "data/maps/StartTown_PlayerHouse/scripts.pory"
 	.string "This is your bed.\pDo you want to take a nap?$"
@@ -76,3 +94,20 @@ Bed_Text_2:
 # 18 "data/maps/StartTown_PlayerHouse/scripts.pory"
 	.string "You and your POKéMON wake up well\n"
 	.string "rested!$"
+
+PlayerHouse_MailingList::
+# 51 "data/maps/StartTown_PlayerHouse/scripts.pory"
+	.string "You're on The Last Dinner Party's\n"
+	.string "mailing list.\p"
+	.string "The latest message says 'Come challenge\n"
+	.string "us for the best prize of all!'.$"
+
+PlayerHouse_ChampionMail::
+# 58 "data/maps/StartTown_PlayerHouse/scripts.pory"
+	.string "The Last Dinner Party sent you an \n"
+	.string "email!\p"
+	.string "'Congratulations, {PLAYER}!\n"
+	.string "You were phenomenal, we had a lot of \l"
+	.string "fun battling with you!\p"
+	.string "You are welcome to all of our shows, \n"
+	.string "and to spar with us anytime you like!'$"

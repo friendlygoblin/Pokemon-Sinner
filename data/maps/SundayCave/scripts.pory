@@ -150,3 +150,19 @@ text SundayCave_MachineGuy_FindFossils{
     "find more things like strange stones \l"
     "that have different effects on POKéMON.$"
     }
+
+script SundayCave_FacadeScientist{
+    lock
+    faceplayer
+    if(flag(FLAG_RECEIVED_TM_FACADE)){
+        msgbox(format("People lose all sorts of things in caves.\pIt's a bit annoying for those who are trying to work here."), MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(format("I found this TM but I won't be using it. \pYou do POKéMON battles, right?\nHere, you're more likely to use it than me."))
+        giveitem(ITEM_TM42)
+        msgbox("I'm not sure what move it is, something about being stronger when affected by status…")
+        setflag(FLAG_RECEIVED_TM_FACADE)
+    }
+    release
+    end
+}
