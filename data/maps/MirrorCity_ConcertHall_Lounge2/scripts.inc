@@ -184,83 +184,103 @@ MCCH_LoungeKatherine::
 # 281 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq MCCH_LoungeKatherine_2
-# 288 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 294 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeKatherine_RefuseBattle, MSGBOX_AUTOCLOSE
 MCCH_LoungeKatherine_1:
-# 290 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 296 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	applymovement 1, Common_Movement_FaceRight
-# 291 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 297 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	release
 	end
 
 MCCH_LoungeKatherine_2:
 # 282 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
-	msgbox LoungeKatherine_AcceptBattle
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
 # 283 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq MCCH_LoungeKatherine_5
+# 287 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	msgbox LoungeKatherine_AcceptBattle
+# 288 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeElla_AcceptBattleFromKatherine, MSGBOX_AUTOCLOSE
-# 284 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
-	trainerbattle_no_intro TRAINER_PICTURE_PARLOUR_2, MCCH_LoungeKatherine_Text_0
-# 285 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 289 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	trainerbattle_no_intro TRAINER_PICTURE_PARLOUR_2, MCCH_LoungeKatherine_Text_1
+# 290 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE
+	goto MCCH_LoungeKatherine_1
+
+MCCH_LoungeKatherine_5:
+# 284 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	msgbox MCCH_LoungeKatherine_Text_0
 	goto MCCH_LoungeKatherine_1
 
 
 MCCH_LoungeElla::
-# 325 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 331 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	lock
-# 326 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 332 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	faceplayer
-# 327 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 333 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeElla_OfferBattle, MSGBOX_YESNO
-# 328 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 334 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq MCCH_LoungeElla_2
-# 335 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 347 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeElla_RefuseBattle, MSGBOX_AUTOCLOSE
 MCCH_LoungeElla_1:
-# 337 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 349 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	applymovement 2, Common_Movement_FaceDown
-# 338 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 350 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	release
 	end
 
 MCCH_LoungeElla_2:
-# 329 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 335 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
+# 336 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq MCCH_LoungeElla_5
+# 340 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeElla_AcceptBattle
-# 330 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 341 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeKatherine_AcceptBattleFromElla, MSGBOX_AUTOCLOSE
-# 331 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
-	trainerbattle_no_intro TRAINER_PICTURE_PARLOUR_2, MCCH_LoungeKatherine_Text_0
-# 332 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 342 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	trainerbattle_no_intro TRAINER_PICTURE_PARLOUR_2, MCCH_LoungeKatherine_Text_1
+# 343 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE
+	goto MCCH_LoungeElla_1
+
+MCCH_LoungeElla_5:
+# 337 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	msgbox MCCH_LoungeElla_Text_0
 	goto MCCH_LoungeElla_1
 
 
 MCCH_LoungeCal::
-# 371 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 383 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	lock
-# 372 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 384 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	faceplayer
-# 373 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 385 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeCal_OfferBattle, MSGBOX_YESNO
-# 374 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 386 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq MCCH_LoungeCal_2
-# 380 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 392 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeCal_RefuseBattle, MSGBOX_AUTOCLOSE
 MCCH_LoungeCal_1:
-# 382 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 394 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	applymovement 8, Common_Movement_FaceUp
-# 383 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 395 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	release
 	end
 
 MCCH_LoungeCal_2:
-# 375 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 387 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeCal_AcceptBattle, MSGBOX_AUTOCLOSE
-# 376 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 388 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	trainerbattle_no_intro TRAINER_CAL, MCCH_LoungeCal_Text_0
-# 377 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 389 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	msgbox LoungeCal_PostBattle, MSGBOX_AUTOCLOSE
 	goto MCCH_LoungeCal_1
 
@@ -292,11 +312,25 @@ MCCH_LoungeNora_Text_0:
 
 MCCH_LoungeKatherine_Text_0:
 # 284 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	.string "Wait, we only do double battles and you\n"
+	.string "only have one POKéMON…\p"
+	.string "Come back when you have at least two on\n"
+	.string "your team!$"
+
+MCCH_LoungeKatherine_Text_1:
+# 289 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "KATHERINE: Yup, still super cool!\p"
 	.string "ELLA: You rock!$"
 
+MCCH_LoungeElla_Text_0:
+# 337 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+	.string "Wait, we only do double battles and you\n"
+	.string "only have one POKéMON…\p"
+	.string "That wouldn't be fair, come back with\n"
+	.string "more POKéMON, we'll wait right here.$"
+
 MCCH_LoungeCal_Text_0:
-# 376 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 388 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "Ooh, photogenic!$"
 
 LoungeHarv_OfferBattle::
@@ -462,7 +496,7 @@ LoungeNora_PostBattle::
 	.string "to take pics of that! $"
 
 LoungeKatherine_OfferBattle::
-# 295 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 301 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "KATHERINE: Hey, you're the one from the \n"
 	.string "music video! \p"
 	.string "You're here for the TLDP challenge? \p"
@@ -472,26 +506,26 @@ LoungeKatherine_OfferBattle::
 	.string "but wanna train with us? $"
 
 LoungeKatherine_RefuseBattle::
-# 305 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 311 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "Bummer, well we'll be waitin' here if \n"
 	.string "you need us. $"
 
 LoungeKatherine_AcceptBattle::
-# 310 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 316 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "Alright! Ella? $"
 
 LoungeKatherine_AcceptBattleFromElla::
-# 314 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 320 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "KATHERINE: On it!$"
 
 LoungeKatherine_PostBattle::
-# 318 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 324 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "Just as cool as on set! \p"
 	.string "You'll come visit us if we set up our\n"
 	.string "own challenge, will ya? $"
 
 LoungeElla_OfferBattle::
-# 342 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 354 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "ELLA: Hey, I remember you, you starred \n"
 	.string "in our music video! \p"
 	.string "Thanks again for that. \p"
@@ -499,27 +533,27 @@ LoungeElla_OfferBattle::
 	.string "it training for TLDP? $"
 
 LoungeElla_RefuseBattle::
-# 350 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 362 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "That's fine, we'll just chill here  \n"
 	.string "waitin' for the show to start. $"
 
 LoungeElla_AcceptBattle::
-# 355 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 367 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "Cool! Katherine? $"
 
 LoungeElla_AcceptBattleFromKatherine::
-# 359 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 371 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "ELLA: Be right there!$"
 
 LoungeElla_PostBattle::
-# 363 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 375 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "Hell yeah, that was cool! \p"
 	.string "Good luck out there, hope you'll \n"
 	.string "come to us when we're big enough \l"
 	.string "to have our own challenge! $"
 
 LoungeCal_OfferBattle::
-# 387 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 399 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "CAL: Hello, are you here to see The \n"
 	.string "Last Dinner Party? \p"
 	.string "Oh, challenge them? \p"
@@ -532,16 +566,16 @@ LoungeCal_OfferBattle::
 	.string "get shots in action, what do you say?$"
 
 LoungeCal_RefuseBattle::
-# 400 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 412 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "No worries, come back if you change\n"
 	.string "your mind. $"
 
 LoungeCal_AcceptBattle::
-# 405 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 417 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "Okay, now just be cool and natural! $"
 
 LoungeCal_PostBattle::
-# 409 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
+# 421 "data/maps/MirrorCity_ConcertHall_Lounge2/scripts.pory"
 	.string "Hey, nice! I got some good shots \n"
 	.string "there! \p"
 	.string "Have fun, The Last Dinner Party are \n"

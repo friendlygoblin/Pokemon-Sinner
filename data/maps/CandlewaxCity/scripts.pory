@@ -277,7 +277,7 @@ script CandlewaxCity_TunnelSign{
 script CandlewaxCity_Girl{
     lock
     faceplayer
-    msgbox(format("The pattern on the pavement is the pride of Candlewax City!"), MSGBOX_AUTOCLOSE)
+    msgbox(format("The pattern on the pavement is the pride of Candlewax City!\pDo you think that's what The Last Dinner Party reference when they say 'There is candlewax melting in my veins'?"), MSGBOX_AUTOCLOSE)
     releaseall
     end
 }

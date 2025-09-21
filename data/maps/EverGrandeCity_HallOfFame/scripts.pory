@@ -36,13 +36,17 @@ script EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame{
 	applymovement(LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterRight)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft)
 	waitmovement(0)
-	applymovement(3,Turn_Alter_Left)
-	applymovement(4,Turn_Alter_Left)
-	applymovement(2,Turn_Alter_Right)
-	applymovement(5,Turn_Alter_Right)
+	applymovement(3,Turn_Altar_Left)
+	applymovement(4,Turn_Altar_Left)
+	applymovement(2,Turn_Altar_Right)
+	applymovement(5,Turn_Altar_Right)
 	waitmovement(0)
-	msgbox(EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames, MSGBOX_DEFAULT)
-	closemessage
+	msgbox(EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames, MSGBOX_AUTOCLOSE)
+	applymovement(3,Turn_Altar_Left)
+	applymovement(4,Turn_Altar_Left)
+	applymovement(2,Turn_Altar_Right)
+	applymovement(5,Turn_Altar_Right)
+	waitmovement(0)
 	applymovement(LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp)
 	waitmovement(0)
@@ -52,7 +56,6 @@ script EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame{
 	delay(40)
 	setvar(VAR_TEMP_1, 1)
 	call(EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags)
-	checkplayergender
 	goto(EverGrandeCity_HallOfFame_EventScript_GameClearFemale)
 	end
 }
@@ -66,11 +69,17 @@ script EverGrandeCity_HallOfFame_EventScript_GameClearFemale{
 	end
 }
 
-movement Turn_Alter_Left{
+movement Turn_Altar_Left{
 	face_left
+	step_end
 }
-movement Turn_Alter_Right{
+movement Turn_Altar_Right{
 	face_right
+	step_end
+}
+movement Turn_Altar_Up{
+	face_up
+	step_end
 }
 
 movement EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1{

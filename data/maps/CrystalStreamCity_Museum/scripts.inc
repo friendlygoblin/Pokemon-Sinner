@@ -122,7 +122,7 @@ Museum_Starly_Text_0:
 Museum_Boy_Text_0:
 # 67 "data/maps/CrystalStreamCity_Museum/scripts.pory"
 	.string "My ultimate life goal is to discover\n"
-	.string "somethig and have it exposed here!$"
+	.string "something and have it exposed here!$"
 
 Museum_Statue_Text_0:
 # 74 "data/maps/CrystalStreamCity_Museum/scripts.pory"
@@ -130,7 +130,8 @@ Museum_Statue_Text_0:
 
 Museum_StoneTable_Text_0:
 # 81 "data/maps/CrystalStreamCity_Museum/scripts.pory"
-	.string "It's stone slab with texts in an ancient language on it.$"
+	.string "It's stone slab with texts in an ancient\n"
+	.string "language on it.$"
 
 Museum_AbiWereVisiting::
 # 23 "data/maps/CrystalStreamCity_Museum/scripts.pory"

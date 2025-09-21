@@ -574,7 +574,9 @@ CSCM_GiveFossil_Text_10:
 
 Museum_Fossil_Text_0:
 # 230 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"
-	.string "It's a POKéMON fossil.\pThe researchers don't know what species it is yet.$"
+	.string "It's a POKéMON fossil.\p"
+	.string "The researchers don't know what\n"
+	.string "species it is yet.$"
 
 CSCM_WelcomeToHistoryFloor::
 # 183 "data/maps/CrystalStreamCity_Museum_2F/scripts.pory"

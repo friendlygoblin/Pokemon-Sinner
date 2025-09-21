@@ -471,6 +471,7 @@
     "SSTidalCorridor",
     "SSTidalLowerDeck",
     "SSTidalRooms",
+    "Interlude_UpperDeck",
     "BattlePyramidSquare01",
     "BattlePyramidSquare02",
     "BattlePyramidSquare03",
@@ -681,6 +682,7 @@
     "BigDogIsland_Cave_2F",
     "BigDogIsland_Cave_3F",
     "BigDogIsland_HiddenHouse",
+    "GjuhaCave",
     "CrystalStreamCity_Museum",
     "CrystalStreamCity_Museum_2F",
     "CrystalStreamCity_ConcertHall",
@@ -699,8 +701,6 @@
     "MirrorCity_ConcertHall",
     "MirrorCity_ConcertHall_Lobby",
     "MirrorCity_ConcertHall_Lounge1",
-    "MirrorCity_ConcertHall_Lounge2",
-    "Interlude_UpperDeck",
-    "GjuhaCave"
+    "MirrorCity_ConcertHall_Lounge2"
   ]
 }

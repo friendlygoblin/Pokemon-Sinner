@@ -113,13 +113,13 @@ PictureParlourBattle::
 # 74 "data/maps/Route8/scripts.pory"
 	removeobject 12
 # 75 "data/maps/Route8/scripts.pory"
+	setvar VAR_ROUTE8_MUSICVIDEO, 2
+# 76 "data/maps/Route8/scripts.pory"
 	setflag FLAG_ROUTE8_BAG
 	return
 
 
 PostPictureParlourBattle::
-# 79 "data/maps/Route8/scripts.pory"
-	setvar VAR_ROUTE8_MUSICVIDEO, 2
 # 80 "data/maps/Route8/scripts.pory"
 	applymovement 4, WalkInPlaceDown
 # 81 "data/maps/Route8/scripts.pory"

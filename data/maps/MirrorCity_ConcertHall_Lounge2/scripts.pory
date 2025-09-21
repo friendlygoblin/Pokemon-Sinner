@@ -279,10 +279,16 @@ script MCCH_LoungeKatherine{
     faceplayer
     msgbox(LoungeKatherine_OfferBattle, MSGBOX_YESNO)
     if(var(VAR_RESULT)==YES){
-        msgbox(LoungeKatherine_AcceptBattle)
-        msgbox(LoungeElla_AcceptBattleFromKatherine, MSGBOX_AUTOCLOSE)
-        trainerbattle_no_intro(TRAINER_PICTURE_PARLOUR_2, format("KATHERINE: Yup, still super cool!\pELLA: You rock! "))
-        msgbox(LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE)
+        specialvar(VAR_RESULT, CalculatePlayerPartyCount)
+        if(var(VAR_RESULT)==1){
+            msgbox(format("Wait, we only do double battles and you only have one POKéMON… \pCome back when you have at least two on your team!"))
+        }
+        else{
+            msgbox(LoungeKatherine_AcceptBattle)
+            msgbox(LoungeElla_AcceptBattleFromKatherine, MSGBOX_AUTOCLOSE)
+            trainerbattle_no_intro(TRAINER_PICTURE_PARLOUR_2, format("KATHERINE: Yup, still super cool!\pELLA: You rock! "))
+            msgbox(LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE)
+        }
     }
     else{
         msgbox(LoungeKatherine_RefuseBattle, MSGBOX_AUTOCLOSE)
@@ -326,10 +332,16 @@ script MCCH_LoungeElla{
     faceplayer
     msgbox(LoungeElla_OfferBattle, MSGBOX_YESNO)
     if(var(VAR_RESULT)==YES){
-        msgbox(LoungeElla_AcceptBattle)
-        msgbox(LoungeKatherine_AcceptBattleFromElla, MSGBOX_AUTOCLOSE)
-        trainerbattle_no_intro(TRAINER_PICTURE_PARLOUR_2, format("KATHERINE: Yup, still super cool!\pELLA: You rock! "))
-        msgbox(LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE)
+        specialvar(VAR_RESULT, CalculatePlayerPartyCount)
+        if(var(VAR_RESULT)==1){
+            msgbox(format("Wait, we only do double battles and you only have one POKéMON… \pThat wouldn't be fair, come back with more POKéMON, we'll wait right here."))
+        }
+        else{
+            msgbox(LoungeElla_AcceptBattle)
+            msgbox(LoungeKatherine_AcceptBattleFromElla, MSGBOX_AUTOCLOSE)
+            trainerbattle_no_intro(TRAINER_PICTURE_PARLOUR_2, format("KATHERINE: Yup, still super cool!\pELLA: You rock! "))
+            msgbox(LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE)
+        }
     }
     else{
         msgbox(LoungeElla_RefuseBattle, MSGBOX_AUTOCLOSE)

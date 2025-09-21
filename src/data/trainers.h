@@ -434,7 +434,7 @@ F_TRAINER_FEMALE |
 #line 249
             .gender = TRAINER_MON_FEMALE,
 #line 251
-            .iv = TRAINER_PARTY_IVS(20, 20, 20, 20, 20, 20),
+            .iv = TRAINER_PARTY_IVS(20, 20, 24, 20, 20, 20),
 #line 250
             .lvl = 42,
             .nature = NATURE_HARDY,
@@ -2513,7 +2513,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 1059
-            .species = SPECIES_MIMIKYU,
+            .species = SPECIES_MANKEY,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1061
             .iv = TRAINER_PARTY_IVS(11, 11, 11, 11, 11, 11),
@@ -2550,7 +2550,7 @@ F_TRAINER_FEMALE |
             .species = SPECIES_KROOKODILE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1074
-            .iv = TRAINER_PARTY_IVS(1, 1, 1, 1, 1, 1),
+            .iv = TRAINER_PARTY_IVS(10, 10, 10, 10, 10, 10),
 #line 1073
             .lvl = 40,
             .nature = NATURE_HARDY,
@@ -2561,7 +2561,7 @@ F_TRAINER_FEMALE |
             .species = SPECIES_WHIMSICOTT,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1078
-            .iv = TRAINER_PARTY_IVS(1, 1, 1, 1, 1, 1),
+            .iv = TRAINER_PARTY_IVS(10, 10, 10, 10, 10, 10),
 #line 1077
             .lvl = 40,
             .nature = NATURE_HARDY,
@@ -2580,7 +2580,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 1084
-            .species = SPECIES_MIMIKYU,
+            .species = SPECIES_PRIMEAPE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1086
             .iv = TRAINER_PARTY_IVS(11, 11, 11, 11, 11, 11),
@@ -12222,13 +12222,13 @@ F_TRAINER_FEMALE |
         {
             {
 #line 4854
-            .species = SPECIES_MAWILE,
+            .species = SPECIES_UMBREON,
 #line 4854
             .gender = TRAINER_MON_FEMALE,
 #line 4857
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(4, 14, 8, 4, 24, 4),
 #line 4855
-            .ability = ABILITY_SHEER_FORCE,
+            .ability = ABILITY_SYNCHRONIZE,
 #line 4856
             .lvl = 41,
 #line 4858
@@ -12236,10 +12236,10 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 4859
-                MOVE_ROCK_SLIDE,
-                MOVE_PLAY_ROUGH,
-                MOVE_SUCKER_PUNCH,
-                MOVE_KNOCK_OFF,
+                MOVE_LASH_OUT,
+                MOVE_WISH,
+                MOVE_TOXIC,
+                MOVE_ALLURING_VOICE,
             },
             },
             {
@@ -12248,7 +12248,7 @@ F_TRAINER_FEMALE |
 #line 4864
             .gender = TRAINER_MON_MALE,
 #line 4867
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 14),
 #line 4865
             .ability = ABILITY_MOXIE,
 #line 4866
@@ -12270,7 +12270,7 @@ F_TRAINER_FEMALE |
 #line 4874
             .gender = TRAINER_MON_MALE,
 #line 4877
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 14),
 #line 4875
             .ability = ABILITY_EFFECT_SPORE,
 #line 4876
@@ -12340,7 +12340,7 @@ F_TRAINER_FEMALE |
 #line 4904
             .heldItem = ITEM_HOUNDOOMINITE,
 #line 4907
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(4, 4, 14, 4, 4, 4),
 #line 4905
             .ability = ABILITY_FLASH_FIRE,
 #line 4906
@@ -12390,7 +12390,7 @@ F_TRAINER_FEMALE |
 #line 4925
             .gender = TRAINER_MON_MALE,
 #line 4928
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(4, 4, 14, 14, 4, 4),
 #line 4926
             .ability = ABILITY_LIGHTNING_ROD,
 #line 4927
@@ -12435,7 +12435,7 @@ F_TRAINER_FEMALE |
 #line 4945
             .gender = TRAINER_MON_FEMALE,
 #line 4949
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(4, 4, 4, 14, 4, 4),
 #line 4946
             .ability = ABILITY_QUICK_FEET,
 #line 4947
@@ -12456,8 +12456,10 @@ F_TRAINER_FEMALE |
             .species = SPECIES_TOXTRICITY_LOW_KEY,
 #line 4955
             .gender = TRAINER_MON_MALE,
+#line 4955
+            .heldItem = ITEM_AIR_BALLOON,
 #line 4959
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(4, 4, 24, 14, 4, 4),
 #line 4956
             .ability = ABILITY_PUNK_ROCK,
 #line 4957
@@ -12478,8 +12480,10 @@ F_TRAINER_FEMALE |
             .species = SPECIES_TOXTRICITY,
 #line 4965
             .gender = TRAINER_MON_FEMALE,
+#line 4965
+            .heldItem = ITEM_THROAT_SPRAY,
 #line 4969
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(4, 4, 14, 24, 4, 4),
 #line 4966
             .ability = ABILITY_PUNK_ROCK,
 #line 4967
@@ -12717,7 +12721,7 @@ F_TRAINER_FEMALE |
 #line 5068
             .gender = TRAINER_MON_MALE,
 #line 5071
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(14, 14, 14, 14, 14, 14),
 #line 5069
             .ability = ABILITY_DRIZZLE,
 #line 5070
@@ -12739,7 +12743,7 @@ F_TRAINER_FEMALE |
 #line 5078
             .gender = TRAINER_MON_FEMALE,
 #line 5081
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(14, 4, 4, 4, 4, 14),
 #line 5079
             .ability = ABILITY_TORRENT,
 #line 5080
@@ -12761,7 +12765,7 @@ F_TRAINER_FEMALE |
 #line 5088
             .gender = TRAINER_MON_FEMALE,
 #line 5091
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 14, 4),
 #line 5089
             .ability = ABILITY_MARVEL_SCALE,
 #line 5090
@@ -12783,7 +12787,7 @@ F_TRAINER_FEMALE |
 #line 5098
             .gender = TRAINER_MON_FEMALE,
 #line 5101
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(24, 4, 24, 4, 4, 14),
 #line 5099
             .ability = ABILITY_REFRIGERATE,
 #line 5100
@@ -12829,7 +12833,7 @@ F_TRAINER_FEMALE |
 #line 5118
             .heldItem = ITEM_GYARADOSITE,
 #line 5121
-            .iv = TRAINER_PARTY_IVS(4, 0, 4, 0, 4, 4),
+            .iv = TRAINER_PARTY_IVS(14, 0, 4, 0, 4, 4),
 #line 5119
             .ability = ABILITY_INTIMIDATE,
 #line 5120
@@ -16124,9 +16128,9 @@ F_TRAINER_FEMALE |
     [TRAINER_CAL] =
     {
 #line 6396
-        .trainerName = _("CAL"),
+        .trainerName = _("McINTYRE"),
 #line 6397
-        .trainerClass = TRAINER_CLASS_PALACE_MAVEN,
+        .trainerClass = TRAINER_CLASS_SALON_MAIDEN,
 #line 6398
         .trainerPic = TRAINER_PIC_CAL,
         .encounterMusic_gender = 
@@ -16148,7 +16152,7 @@ F_TRAINER_FEMALE |
 #line 6407
             .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
 #line 6405
-            .lvl = 36,
+            .lvl = 41,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
@@ -16161,7 +16165,7 @@ F_TRAINER_FEMALE |
 #line 6412
             .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
 #line 6410
-            .lvl = 36,
+            .lvl = 41,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
@@ -16333,7 +16337,7 @@ F_TRAINER_FEMALE |
 #line 6478
             .gender = TRAINER_MON_MALE,
 #line 6481
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 14),
+            .iv = TRAINER_PARTY_IVS(14, 4, 14, 4, 4, 14),
 #line 6479
             .ability = ABILITY_NATURAL_CURE,
 #line 6480
@@ -16355,7 +16359,7 @@ F_TRAINER_FEMALE |
 #line 6488
             .gender = TRAINER_MON_FEMALE,
 #line 6491
-            .iv = TRAINER_PARTY_IVS(4, 4, 14, 4, 4, 24),
+            .iv = TRAINER_PARTY_IVS(24, 4, 14, 4, 4, 24),
 #line 6489
             .ability = ABILITY_PRESSURE,
 #line 6490
@@ -16381,7 +16385,7 @@ F_TRAINER_FEMALE |
 #line 6501
             .ev = TRAINER_PARTY_EVS(0, 0, 4, 252, 252, 0),
 #line 6502
-            .iv = TRAINER_PARTY_IVS(24, 4, 20, 4, 4, 20),
+            .iv = TRAINER_PARTY_IVS(24, 4, 20, 4, 4, 24),
 #line 6499
             .ability = ABILITY_ADAPTABILITY,
 #line 6500
@@ -16402,7 +16406,7 @@ F_TRAINER_FEMALE |
             .species = SPECIES_MELOETTA_PIROUETTE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 6512
-            .iv = TRAINER_PARTY_IVS(4, 4, 4, 4, 4, 4),
+            .iv = TRAINER_PARTY_IVS(14, 4, 14, 4, 4, 14),
 #line 6510
             .ability = ABILITY_SERENE_GRACE,
 #line 6511
@@ -16428,7 +16432,7 @@ F_TRAINER_FEMALE |
 #line 6522
             .ev = TRAINER_PARTY_EVS(160, 164, 152, 28, 0, 0),
 #line 6523
-            .iv = TRAINER_PARTY_IVS(24, 4, 20, 4, 4, 14),
+            .iv = TRAINER_PARTY_IVS(24, 4, 31, 4, 4, 31),
 #line 6520
             .ability = ABILITY_DAMP,
 #line 6521

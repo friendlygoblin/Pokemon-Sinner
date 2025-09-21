@@ -131,6 +131,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParlourZine_Notes1"
+    },
+    {
+      "type": "hidden_item",
+      "x": 0,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_LINKING_CORD",
+      "flag": "FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_6_KEY"
     }
   ]
 }

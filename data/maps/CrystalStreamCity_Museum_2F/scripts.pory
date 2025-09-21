@@ -227,7 +227,7 @@ movement CSCM_ScientistLeaves{
 
 script Museum_Fossil{
     lock
-    msgbox("It's a POKéMON fossil.\pThe researchers don't know what species it is yet.")
+    msgbox(format("It's a POKéMON fossil.\pThe researchers don't know what species it is yet."))
     release
     end
 }

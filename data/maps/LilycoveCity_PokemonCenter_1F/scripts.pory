@@ -46,12 +46,12 @@ script BugBuzzGirl{
     lock
     faceplayer
     if(flag(FLAG_RECEIVED_TM_BUG_BUZZ)){
-        msgbox(format("Bug POKéMON are just as good as the other types!"), MSGBOX_AUTOCLOSE)
+        msgbox("Bug POKéMON are just as good as the \nother types!$", MSGBOX_AUTOCLOSE)
     }
     else{
         msgbox(format("People think Bug POKéMON are weak, but that's just not true.\pThey have strong moves too, like this one!"))
         giveitem(ITEM_TM65)
-        msgbox("Bug POKéMON are just as good as the other types!")
+        msgbox("Bug POKéMON are just as good as the \nother types!$")
         setflag(FLAG_RECEIVED_TM_BUG_BUZZ)
     }
     release

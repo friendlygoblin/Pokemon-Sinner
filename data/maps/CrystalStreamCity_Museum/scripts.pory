@@ -64,21 +64,21 @@ script Museum_Starly{
 script Museum_Boy{
     lock
     faceplayer
-    msgbox(format("My ultimate life goal is to discover somethig and have it exposed here!"))
+    msgbox(format("My ultimate life goal is to discover something and have it exposed here!"))
     release
     end
 }
 
 script Museum_Statue{
     lock
-    msgbox("It's a statue of an ancient POKéMON")
+    msgbox(format("It's a statue of an ancient POKéMON"))
     release
     end
 }
 
 script Museum_StoneTable{
     lock
-    msgbox("It's stone slab with texts in an ancient language on it.")
+    msgbox(format("It's stone slab with texts in an ancient language on it."))
     release
     end
 }

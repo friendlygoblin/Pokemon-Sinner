@@ -93,7 +93,7 @@ BugBuzzGirl::
 # 53 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	giveitem ITEM_TM65
 # 54 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	msgbox BugBuzzGirl_Text_2
+	msgbox BugBuzzGirl_Text_0
 # 55 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
 	setflag FLAG_RECEIVED_TM_BUG_BUZZ
 BugBuzzGirl_1:
@@ -109,8 +109,7 @@ BugBuzzGirl_2:
 
 BugBuzzGirl_Text_0:
 # 49 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	.string "Bug POKéMON are just as good as the\n"
-	.string "other types!$"
+	.string "Bug POKéMON are just as good as the \nother types!$"
 
 BugBuzzGirl_Text_1:
 # 52 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
@@ -118,7 +117,3 @@ BugBuzzGirl_Text_1:
 	.string "that's just not true.\p"
 	.string "They have strong moves too, like this\n"
 	.string "one!$"
-
-BugBuzzGirl_Text_2:
-# 54 "data/maps/LilycoveCity_PokemonCenter_1F/scripts.pory"
-	.string "Bug POKéMON are just as good as the other types!$"

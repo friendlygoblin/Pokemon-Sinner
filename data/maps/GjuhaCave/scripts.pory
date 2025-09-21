@@ -1,1 +1,9 @@
 mapscripts GjuhaCave_MapScripts {}
+
+script GjuhaCave_Scientist{
+    lock
+    faceplayer
+    msgbox(format("This cave is a bit of a mystery.\pWe don't know why it's so cold in here, but at least it's convenient in summer."))
+    release
+    end
+}

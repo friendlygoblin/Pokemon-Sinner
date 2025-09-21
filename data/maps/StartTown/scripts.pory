@@ -96,7 +96,9 @@ script ShelterStaff{
 script Poochyena{
     lock
     applymovement(Pooch, Common_Movement_FacePlayer)
+    playmoncry(SPECIES_POOCHYENA, CRY_MODE_NORMAL)
     msgbox(format("POOCHYENA: bark!"))
+    waitmoncry
     release
     end
 }
@@ -236,7 +238,9 @@ script ShelterSign{
 script Zigzagoon{
     lock
     faceplayer
+    playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
     msgbox(format("ZIGZAGOON: … … grr?"))
+    waitmoncry
     release
     end
 }

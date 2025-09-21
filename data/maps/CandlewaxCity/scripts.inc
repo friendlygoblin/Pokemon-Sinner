@@ -475,7 +475,11 @@ CandlewaxCity_TunnelSign_Text_0:
 CandlewaxCity_Girl_Text_0:
 # 280 "data/maps/CandlewaxCity/scripts.pory"
 	.string "The pattern on the pavement is the\n"
-	.string "pride of Candlewax City!$"
+	.string "pride of Candlewax City!\p"
+	.string "Do you think that's what The Last\n"
+	.string "Dinner Party reference when they say\l"
+	.string "'There is candlewax melting in my\l"
+	.string "veins'?$"
 
 CandlewaxCity_Man_Text_0:
 # 288 "data/maps/CandlewaxCity/scripts.pory"

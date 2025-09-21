@@ -34,105 +34,117 @@ OliveMount_SchoolGirl::
 	return
 
 
-DayCareSign::
+OliveMount_LittleGirl::
 # 24 "data/maps/OliveMount/scripts.pory"
 	lock
 # 25 "data/maps/OliveMount/scripts.pory"
-	msgbox DayCareSign_Text_0, MSGBOX_AUTOCLOSE
+	faceplayer
 # 26 "data/maps/OliveMount/scripts.pory"
+	msgbox OliveMount_LittleGirl_Text_0
+# 27 "data/maps/OliveMount/scripts.pory"
+	release
+	end
+
+
+DayCareSign::
+# 32 "data/maps/OliveMount/scripts.pory"
+	lock
+# 33 "data/maps/OliveMount/scripts.pory"
+	msgbox DayCareSign_Text_0, MSGBOX_AUTOCLOSE
+# 34 "data/maps/OliveMount/scripts.pory"
 	releaseall
 	end
 
 
 OliveMount_Fisherman::
-# 31 "data/maps/OliveMount/scripts.pory"
-	lock
-# 32 "data/maps/OliveMount/scripts.pory"
-	faceplayer
-# 33 "data/maps/OliveMount/scripts.pory"
-	goto_if_set FLAG_RECEIVED_SUPER_ROD, OliveMount_Fisherman_2
-# 37 "data/maps/OliveMount/scripts.pory"
-	msgbox OliveMount_Fisherman_Text_0
-# 38 "data/maps/OliveMount/scripts.pory"
-	trainerbattle_no_intro TRAINER_ANDREW, OliveMount_Fisherman_Text_1
 # 39 "data/maps/OliveMount/scripts.pory"
+	lock
+# 40 "data/maps/OliveMount/scripts.pory"
+	faceplayer
+# 41 "data/maps/OliveMount/scripts.pory"
+	goto_if_set FLAG_RECEIVED_SUPER_ROD, OliveMount_Fisherman_2
+# 45 "data/maps/OliveMount/scripts.pory"
+	msgbox OliveMount_Fisherman_Text_0
+# 46 "data/maps/OliveMount/scripts.pory"
+	trainerbattle_no_intro TRAINER_ANDREW, OliveMount_Fisherman_Text_1
+# 47 "data/maps/OliveMount/scripts.pory"
 	goto GiveFishingRod
 OliveMount_Fisherman_1:
-# 41 "data/maps/OliveMount/scripts.pory"
-	releaseall
+# 49 "data/maps/OliveMount/scripts.pory"
+	release
 	end
 
 OliveMount_Fisherman_2:
-# 34 "data/maps/OliveMount/scripts.pory"
+# 42 "data/maps/OliveMount/scripts.pory"
 	msgbox ExplainFishing, MSGBOX_AUTOCLOSE
 	goto OliveMount_Fisherman_1
 
 
 GiveFishingRod::
-# 46 "data/maps/OliveMount/scripts.pory"
+# 54 "data/maps/OliveMount/scripts.pory"
 	msgbox GiveFishingRod_Text_0, MSGBOX_AUTOCLOSE
-# 47 "data/maps/OliveMount/scripts.pory"
+# 55 "data/maps/OliveMount/scripts.pory"
 	giveitem ITEM_SUPER_ROD
-# 48 "data/maps/OliveMount/scripts.pory"
+# 56 "data/maps/OliveMount/scripts.pory"
 	setflag FLAG_RECEIVED_SUPER_ROD
-# 49 "data/maps/OliveMount/scripts.pory"
+# 57 "data/maps/OliveMount/scripts.pory"
 	msgbox ExplainFishing, MSGBOX_AUTOCLOSE
-# 50 "data/maps/OliveMount/scripts.pory"
-	releaseall
+# 58 "data/maps/OliveMount/scripts.pory"
+	release
 	end
 
 
 OliveMount_OldMan::
-# 63 "data/maps/OliveMount/scripts.pory"
+# 71 "data/maps/OliveMount/scripts.pory"
 	lock
-# 64 "data/maps/OliveMount/scripts.pory"
+# 72 "data/maps/OliveMount/scripts.pory"
 	faceplayer
-# 65 "data/maps/OliveMount/scripts.pory"
+# 73 "data/maps/OliveMount/scripts.pory"
 	compare VAR_OLIVEMOUNT_OLDMAN_EGG, 0
 	goto_if_eq OliveMount_OldMan_2
-# 89 "data/maps/OliveMount/scripts.pory"
+# 97 "data/maps/OliveMount/scripts.pory"
 	msgbox OldMan_HowIsMyEgg, MSGBOX_AUTOCLOSE
 OliveMount_OldMan_1:
-# 91 "data/maps/OliveMount/scripts.pory"
-	releaseall
+# 99 "data/maps/OliveMount/scripts.pory"
+	release
 	end
 
 OliveMount_OldMan_2:
-# 66 "data/maps/OliveMount/scripts.pory"
+# 74 "data/maps/OliveMount/scripts.pory"
 	msgbox OldMan_AreYouATrainer, MSGBOX_YESNO
-# 67 "data/maps/OliveMount/scripts.pory"
+# 75 "data/maps/OliveMount/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq OliveMount_OldMan_5
-# 83 "data/maps/OliveMount/scripts.pory"
+# 91 "data/maps/OliveMount/scripts.pory"
 	msgbox OliveMount_OldMan_Text_3, MSGBOX_AUTOCLOSE
-# 84 "data/maps/OliveMount/scripts.pory"
-	releaseall
+# 92 "data/maps/OliveMount/scripts.pory"
+	release
 	end
 
 OliveMount_OldMan_5:
-# 68 "data/maps/OliveMount/scripts.pory"
+# 76 "data/maps/OliveMount/scripts.pory"
 	msgbox OliveMount_OldMan_Text_0, MSGBOX_AUTOCLOSE
-# 69 "data/maps/OliveMount/scripts.pory"
+# 77 "data/maps/OliveMount/scripts.pory"
 	specialvar VAR_RESULT, CalculatePlayerPartyCount
-# 70 "data/maps/OliveMount/scripts.pory"
+# 78 "data/maps/OliveMount/scripts.pory"
 	compare VAR_RESULT, PARTY_SIZE
 	goto_if_eq OliveMount_OldMan_8
-# 74 "data/maps/OliveMount/scripts.pory"
+# 82 "data/maps/OliveMount/scripts.pory"
 	giveegg SPECIES_EEVEE
-# 75 "data/maps/OliveMount/scripts.pory"
+# 83 "data/maps/OliveMount/scripts.pory"
 	playfanfare MUS_OBTAIN_ITEM
-# 76 "data/maps/OliveMount/scripts.pory"
+# 84 "data/maps/OliveMount/scripts.pory"
 	message OliveMount_OldMan_Text_2
-# 77 "data/maps/OliveMount/scripts.pory"
+# 85 "data/maps/OliveMount/scripts.pory"
 	waitmessage
-# 78 "data/maps/OliveMount/scripts.pory"
+# 86 "data/maps/OliveMount/scripts.pory"
 	msgbox OldMan_AcceptEgg, MSGBOX_AUTOCLOSE
-# 79 "data/maps/OliveMount/scripts.pory"
+# 87 "data/maps/OliveMount/scripts.pory"
 	setvar VAR_OLIVEMOUNT_OLDMAN_EGG, 1
 	goto OliveMount_OldMan_1
 
 OliveMount_OldMan_8:
-# 71 "data/maps/OliveMount/scripts.pory"
+# 79 "data/maps/OliveMount/scripts.pory"
 	msgbox OliveMount_OldMan_Text_1
 	goto OliveMount_OldMan_1
 
@@ -199,46 +211,52 @@ OliveMount_SchoolGirl_Text_2:
 	.string "rain so they don't come hang out here…\p"
 	.string "But I still have my POKéMON with me!$"
 
+OliveMount_LittleGirl_Text_0:
+# 26 "data/maps/OliveMount/scripts.pory"
+	.string "So many rocks, so much seaweed down\n"
+	.string "there…\n"
+	.string "I wouldn't want to fall!$"
+
 DayCareSign_Text_0:
-# 25 "data/maps/OliveMount/scripts.pory"
+# 33 "data/maps/OliveMount/scripts.pory"
 	.string "POKéMON Day Care\p"
 	.string "We take care of your POKéMON for you!$"
 
 OliveMount_Fisherman_Text_0:
-# 37 "data/maps/OliveMount/scripts.pory"
+# 45 "data/maps/OliveMount/scripts.pory"
 	.string "If you win, I'll give you something super\n"
 	.string "cool!$"
 
 OliveMount_Fisherman_Text_1:
-# 38 "data/maps/OliveMount/scripts.pory"
+# 46 "data/maps/OliveMount/scripts.pory"
 	.string "Alright, alright you win…$"
 
 GiveFishingRod_Text_0:
-# 46 "data/maps/OliveMount/scripts.pory"
+# 54 "data/maps/OliveMount/scripts.pory"
 	.string "You won, so here you go:$"
 
 OliveMount_OldMan_Text_0:
-# 68 "data/maps/OliveMount/scripts.pory"
+# 76 "data/maps/OliveMount/scripts.pory"
 	.string "Brilliant!$"
 
 OliveMount_OldMan_Text_1:
-# 71 "data/maps/OliveMount/scripts.pory"
+# 79 "data/maps/OliveMount/scripts.pory"
 	.string "Oh, uh…\p"
 	.string "It looks like your party's full.\p"
 	.string "Come back when you've made room,\n"
 	.string "please.$"
 
 OliveMount_OldMan_Text_2:
-# 76 "data/maps/OliveMount/scripts.pory"
+# 84 "data/maps/OliveMount/scripts.pory"
 	.string "Obtained EGG from the old man!$"
 
 OliveMount_OldMan_Text_3:
-# 83 "data/maps/OliveMount/scripts.pory"
+# 91 "data/maps/OliveMount/scripts.pory"
 	.string "Oh, alright…\p"
 	.string "Well come back if you change your mind.$"
 
 ExplainFishing::
-# 54 "data/maps/OliveMount/scripts.pory"
+# 62 "data/maps/OliveMount/scripts.pory"
 	.string "Fishing is simple: just find some \n"
 	.string "water, cast your line, and wait for \l"
 	.string "a POKéMON to bite!\p"
@@ -246,7 +264,7 @@ ExplainFishing::
 	.string "get away…$"
 
 OldMan_AreYouATrainer::
-# 95 "data/maps/OliveMount/scripts.pory"
+# 103 "data/maps/OliveMount/scripts.pory"
 	.string "Hello, are you a POKéMON trainer?\p"
 	.string "… … …\p"
 	.string "Ah perfect! \p"
@@ -258,7 +276,7 @@ OldMan_AreYouATrainer::
 	.string "Would you take care of it for me?$"
 
 OldMan_AcceptEgg::
-# 107 "data/maps/OliveMount/scripts.pory"
+# 115 "data/maps/OliveMount/scripts.pory"
 	.string "Here you go! \p"
 	.string "I heard eggs hatch after spending some \n"
 	.string "time with a loving trainer and healthy  \l"
@@ -266,7 +284,7 @@ OldMan_AcceptEgg::
 	.string "I trust you to take good care of it!$"
 
 OldMan_HowIsMyEgg::
-# 115 "data/maps/OliveMount/scripts.pory"
+# 123 "data/maps/OliveMount/scripts.pory"
 	.string "Hello! \p"
 	.string "How is the egg doing?\p"
 	.string "… … …\p"

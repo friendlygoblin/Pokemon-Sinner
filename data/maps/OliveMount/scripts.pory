@@ -20,6 +20,14 @@ script OliveMount_SchoolGirl{
     msgbox(format("My friends from school don't like the rain so they don't come hang out here…\p But I still have my POKéMON with me!"), MSGBOX_AUTOCLOSE)
 }
 
+script OliveMount_LittleGirl{
+    lock
+    faceplayer
+    msgbox(format("So many rocks, so much seaweed down there…\nI wouldn't want to fall!"))
+    release
+    end
+}
+
 script DayCareSign{
     lock
     msgbox(format("POKéMON Day Care\pWe take care of your POKéMON for you!"), MSGBOX_AUTOCLOSE)
@@ -38,7 +46,7 @@ script OliveMount_Fisherman{
         trainerbattle_no_intro(TRAINER_ANDREW, format("Alright, alright you win…"))
         goto(GiveFishingRod)
     }
-    releaseall
+    release
     end
 }
 
@@ -47,7 +55,7 @@ script GiveFishingRod{
     giveitem(ITEM_SUPER_ROD)
     setflag(FLAG_RECEIVED_SUPER_ROD)
     msgbox(ExplainFishing, MSGBOX_AUTOCLOSE)
-    releaseall
+    release
     end
 }
 
@@ -81,14 +89,14 @@ script OliveMount_OldMan{
         }
         else{
             msgbox(format("Oh, alright…\pWell come back if you change your mind."), MSGBOX_AUTOCLOSE)
-            releaseall
+            release
             end
         }
     }
     else{
         msgbox(OldMan_HowIsMyEgg, MSGBOX_AUTOCLOSE)
     }
-    releaseall
+    release
     end
 }
 

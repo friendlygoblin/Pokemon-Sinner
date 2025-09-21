@@ -248,7 +248,7 @@ AI: Check Bad Move / Setup First Turn / Check Viability / Try To Faint
 
 Snorlax (F)
 Level: 42
-IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+IVs: 20 HP / 20 Atk / 24 Def / 20 SpA / 20 SpD / 20 Spe
 
 Celebi
 Level: 42
@@ -1056,7 +1056,7 @@ Houndoom
 Level: 26
 IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
-Mimikyu
+Mankey
 Level: 26
 IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
@@ -1071,17 +1071,17 @@ AI: Check Bad Move / Check Viability / Try To Faint
 
 Krookodile
 Level: 40
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Whimsicott
 Level: 40
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
 Houndoom
 Level: 40
 IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
-Mimikyu
+Primeape
 Level: 40
 IVs: 11 HP / 11 Atk / 11 Def / 11 SpA / 11 SpD / 11 Spe
 
@@ -4851,20 +4851,20 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability / Setup First Turn / Ace Pokemon
 Mugshot: Purple
 
-Mawile (F)  
-Ability: Sheer Force  
+Umbreon (F)  
+Ability: Synchronize  
 Level: 41  
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 4 HP / 14 Atk / 8 Def / 24 SpA / 4 SpD / 4 Spe
 Adamant Nature  
-- Rock Slide  
-- Play Rough  
-- Sucker Punch  
-- Knock Off  
+- Lash Out  
+- Wish  
+- Toxic  
+- Alluring Voice
 
 Honchkrow (M)  
 Ability: Moxie  
 Level: 41      
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 14 SpD / 4 Spe
 Jolly Nature  
 - Aerial Ace 
 - Sucker Punch  
@@ -4874,7 +4874,7 @@ Jolly Nature
 Shiinotic (M) 
 Ability: Effect Spore  
 Level: 41   
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 14 SpD / 4 Spe
 Bold Nature  
 - Spore  
 - Strength Sap  
@@ -4904,7 +4904,7 @@ Timid Nature
 Houndoom (F) @ Houndoominite  
 Ability: Flash Fire  
 Level: 43   
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 4 HP / 4 Atk / 14 Def / 4 SpA / 4 SpD / 4 Spe
 Timid Nature  
 - Nasty Plot  
 - Flamethrower  
@@ -4925,7 +4925,7 @@ Mugshot: Yellow
 Zebstrika (M) 
 Ability: Lightning Rod  
 Level: 42    
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe  
+IVs: 4 HP / 4 Atk / 14 Def / 4 SpA / 4 SpD / 14 Spe  
 Timid Nature    
 - Thunderbolt  
 - Volt Switch  
@@ -4946,27 +4946,27 @@ Jolteon (F)
 Ability: Quick Feet  
 Level: 42  
 Timid Nature  
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe 
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 14 Spe 
 - Yawn  
 - Thunder
 - Quick Attack 
 - Trailblaze
 
-Toxtricity-Low-Key (M)  
+Toxtricity-Low-Key (M) @ Air Balloon
 Ability: Punk Rock  
 Level: 42   
 Modest Nature  
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 4 HP / 4 Atk / 24 Def / 4 SpA / 4 SpD / 14 Spe
 - Psychic Noise 
 - Hyper Voice  
 - Overdrive  
 - Poison Jab  
 
-Toxtricity (F)  
+Toxtricity (F) @ Throat Spray
 Ability: Punk Rock  
 Level: 42  
 Timid Nature  
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe   
+IVs: 4 HP / 4 Atk / 14 Def / 4 SpA / 4 SpD / 24 Spe   
 - Boomburst  
 - Overdrive  
 - Volt Switch  
@@ -5068,7 +5068,7 @@ Mugshot: Blue
 Politoed (M) 
 Ability: Drizzle  
 Level: 44    
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 Calm Nature  
 - Protect  
 - Scald  
@@ -5078,7 +5078,7 @@ Calm Nature
 Primarina (F)  
 Ability: Torrent  
 Level: 44  
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 14 HP / 4 Atk / 4 Def / 4 SpA / 14 SpD / 4 Spe
 Modest Nature   
 - Hydro Pump  
 - Moonblast  
@@ -5088,7 +5088,7 @@ Modest Nature
 Milotic (F)
 Ability: Marvel Scale
 Level: 44    
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 4 HP / 4 Atk / 4 Def / 14 SpA / 4 SpD / 4 Spe
 Bold Nature   
 - Hex  
 - Hydro Pump 
@@ -5098,7 +5098,7 @@ Bold Nature
 Aurorus (F)  
 Ability: Refrigerate  
 Level: 44   
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 24 HP / 4 Atk / 24 Def / 4 SpA / 14 SpD / 4 Spe
 Modest Nature  
 - Facade  
 - Frost Breath  
@@ -5118,7 +5118,7 @@ Adamant Nature
 Gyarados @ Gyaradosite  
 Ability: Intimidate  
 Level: 46  
-IVs: 4 HP / 0 Atk / 4 Def / 4 SpA / 4 SpD / 0 Spe
+IVs: 14 HP / 0 Atk / 4 Def / 4 SpA / 4 SpD / 0 Spe
 Shiny: Yes  
 Jolly Nature  
 - Bounce
@@ -6393,8 +6393,8 @@ Level: 22
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 === TRAINER_CAL ===
-Name: CAL 
-Class: Palace Maven
+Name: McINTYRE 
+Class: Salon Maiden
 Pic: Cal
 Gender: Male
 Music: Male
@@ -6402,12 +6402,12 @@ Double Battle: No
 AI: Check Bad Move / Check Viability / Try To Faint
 
 Haunter
-Level: 36
+Level: 41
 EVs: 52 HP/ 100 Def / 100 SpD / 56 Atk
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 Haunter
-Level: 36
+Level: 41
 EVs: 52 HP/ 100 Def / 100 SpD / 56 Atk
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -6478,7 +6478,7 @@ Mugshot: Purple
 Trevenant (M)  
 Ability: Natural Cure  
 Level: 46  
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 14 SpD / 4 Spe
+IVs: 14 HP / 4 Atk / 14 Def / 4 SpA / 14 SpD / 4 Spe
 Brave Nature  
 - Dark Pulse  
 - Earthquake  
@@ -6488,7 +6488,7 @@ Brave Nature
 Corviknight (F)  
 Ability: Pressure  
 Level: 46  
-IVs: 4 HP / 4 Atk / 14 Def / 4 SpA / 24 SpD / 4 Spe 
+IVs: 24 HP / 4 Atk / 14 Def / 4 SpA / 24 SpD / 4 Spe 
 Impish Nature  
 - Drill Peck  
 - Iron Head  
@@ -6499,7 +6499,7 @@ Eevee (F)  @ Eviolite
 Ability: Adaptability
 Level: 48      
 EVs: 4 Def / 252 SpA / 252 Spe
-IVs: 24 HP / 4 Atk / 20 Def / 4 SpA / 20 SpD / 4 Spe
+IVs: 24 HP / 4 Atk / 20 Def / 4 SpA / 24 SpD / 4 Spe
 Timid Nature   
 - Stored Power  
 - Wish  
@@ -6509,7 +6509,7 @@ Timid Nature
 Meloetta-Pirouette  
 Ability: Serene Grace  
 Level: 46   
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+IVs: 14 HP / 4 Atk / 14 Def / 4 SpA / 14 SpD / 4 Spe
 Jolly Nature  
 - Play Rough  
 - Drain Punch  
@@ -6520,7 +6520,7 @@ Wooper (M) @ Eviolite
 Ability: Damp  
 Level: 48    
 EVs: 160 HP / 164 Atk / 152 Def / 28 Spe 
-IVs: 24 HP / 4 Atk / 20 Def / 4 SpA / 14 SpD / 4 Spe 
+IVs: 24 HP / 4 Atk / 31 Def / 4 SpA / 31 SpD / 4 Spe 
 Brave Nature  
 - Avalanche  
 - Earthquake  
