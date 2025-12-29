@@ -116,22 +116,25 @@ Godzilland_Morpheus::
 # 102 "data/maps/Godzilland/scripts.pory"
 	faceplayer
 # 103 "data/maps/Godzilland/scripts.pory"
-	goto_if_set FLAG_GODZILLAND_UPGRADE, Godzilland_Morpheus_1
+	goto_if_set FLAG_GODZILLAND_UPGRADE, Godzilland_Morpheus_2
 # 107 "data/maps/Godzilland/scripts.pory"
 	special IsPorygonInParty
 # 108 "data/maps/Godzilland/scripts.pory"
 	compare VAR_RESULT, TRUE
-	goto_if_eq Godzilland_Morpheus_4
+	goto_if_eq Godzilland_Morpheus_5
 # 115 "data/maps/Godzilland/scripts.pory"
-	msgbox Godzilland_Morpheus_Text_1
-	return
-
+	msgbox Godzilland_Morpheus_Text_1, MSGBOX_AUTOCLOSE
 Godzilland_Morpheus_1:
+# 118 "data/maps/Godzilland/scripts.pory"
+	release
+	end
+
+Godzilland_Morpheus_2:
 # 104 "data/maps/Godzilland/scripts.pory"
 	msgbox Godzilland_Morpheus_Text_0, MSGBOX_AUTOCLOSE
-	return
+	goto Godzilland_Morpheus_1
 
-Godzilland_Morpheus_4:
+Godzilland_Morpheus_5:
 # 109 "data/maps/Godzilland/scripts.pory"
 	msgbox Godzilland_MorpheusUpgrade
 # 110 "data/maps/Godzilland/scripts.pory"
@@ -140,7 +143,7 @@ Godzilland_Morpheus_4:
 	msgbox Godzilland_MorpheusSmootherPorygon, MSGBOX_AUTOCLOSE
 # 112 "data/maps/Godzilland/scripts.pory"
 	setflag FLAG_GODZILLAND_UPGRADE
-	return
+	goto Godzilland_Morpheus_1
 
 
 Godzilland_CitySign_Text_0:
@@ -217,13 +220,13 @@ FindAnyTreasures::
 	.string "items!$"
 
 Godzilland_MorpheusUpgrade::
-# 120 "data/maps/Godzilland/scripts.pory"
+# 122 "data/maps/Godzilland/scripts.pory"
 	.string "MORPHEUS: Oh, what a beautiful Porygon! \p"
 	.string "I love these POKéMON so much, did you \n"
 	.string "know you could upgrade them? \p"
 	.string "All you need is this!$"
 
 Godzilland_MorpheusSmootherPorygon::
-# 127 "data/maps/Godzilland/scripts.pory"
+# 129 "data/maps/Godzilland/scripts.pory"
 	.string "MORPHEUS: That'll make your Porygon \n"
 	.string "smoother and smarter!$"

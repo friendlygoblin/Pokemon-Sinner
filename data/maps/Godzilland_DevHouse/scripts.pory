@@ -64,7 +64,7 @@ script DevHouse_TeamBuilderGoblin{
     lock
     faceplayer
     msgbox(format("GOBLIN: I'm the team builder.\pI build everyone's POKéMON teams.\pIt's tricky, I need to make them balanced to keep the game fun to play."), MSGBOX_AUTOCLOSE)
-    applymovement(10, Common_Movement_FaceLeft)
+    applymovement(6, Common_Movement_FaceLeft)
     waitmovement(0)
     release
     end
@@ -74,7 +74,7 @@ script DevHouse_ConsultantGoblin{
     lock
     faceplayer
     msgbox(format("GOBLIN: I'm the contact person!\pBuilding teams is hard, so my job is to find outside help.\pIt's harder to build teams for artists we're less familiar with, so sometimes I have to find consultants.\pI'm also the one who reaches out to the artists themselves to tell them about the project!"), MSGBOX_AUTOCLOSE)
-    applymovement(6, Common_Movement_FaceRight)
+    applymovement(10, Common_Movement_FaceRight)
     waitmovement(0)
     release
     end

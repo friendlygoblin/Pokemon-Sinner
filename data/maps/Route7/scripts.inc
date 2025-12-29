@@ -185,7 +185,7 @@ Route7_Cal_5:
 # 125 "data/maps/Route7/scripts.pory"
 	msgbox Cal_Thanks
 # 126 "data/maps/Route7/scripts.pory"
-	giveitem ITEM_RARE_CANDY
+	giveitem ITEM_SHINY_CHARM
 # 127 "data/maps/Route7/scripts.pory"
 	applymovement 8, WalkInPlaceDown
 # 128 "data/maps/Route7/scripts.pory"

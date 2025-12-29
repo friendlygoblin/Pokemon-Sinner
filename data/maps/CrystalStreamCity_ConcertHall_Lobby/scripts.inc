@@ -77,7 +77,7 @@ ChappellHall_Chantal::
 # 86 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
 	msgbox ChantalIntro_Chappell, MSGBOX_AUTOCLOSE
 # 87 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_no_intro TRAINER_NORAH, ChappellHall_Chantal_Text_1
+	trainerbattle_no_intro TRAINER_CHANTAL, ChappellHall_Chantal_Text_1
 # 88 "data/maps/CrystalStreamCity_ConcertHall_Lobby/scripts.pory"
 	msgbox ChantalPostBattle_Chappell, MSGBOX_AUTOCLOSE
 ChappellHall_Chantal_1:
@@ -119,7 +119,7 @@ CSCCH_ExplainChappellNotHere::
 	.string "Roan, I'm afraid she's unavailable at \l"
 	.string "the moment. \p"
 	.string "I'm sure why, she said something about\n"
-	.string "investigating the Crystal Stream issue. \p"
+	.string "investigating the Sunday Cave issue. \p"
 	.string "She was headed to the Sunday Cave, to \n"
 	.string "the north of Route 6 if you want to \l"
 	.string "find her.$"

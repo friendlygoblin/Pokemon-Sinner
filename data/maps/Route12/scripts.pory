@@ -1,1 +1,8 @@
 mapscripts Route12_MapScripts {}
+
+script Route12_VictoryRoadSign{
+    lock
+    msgbox(format("{UP_ARROW}: Victory Road\pTo Mirror City!"), MSGBOX_AUTOCLOSE)
+    release
+    end
+}

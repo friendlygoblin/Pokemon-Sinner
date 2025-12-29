@@ -83,13 +83,13 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 # 44 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	msgbox EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames, MSGBOX_AUTOCLOSE
 # 45 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	applymovement 3, Turn_Altar_Left
+	applymovement 3, Turn_Altar_Up
 # 46 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	applymovement 4, Turn_Altar_Left
+	applymovement 4, Turn_Altar_Up
 # 47 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	applymovement 2, Turn_Altar_Right
+	applymovement 2, Turn_Altar_Up
 # 48 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	applymovement 5, Turn_Altar_Right
+	applymovement 5, Turn_Altar_Up
 # 49 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	waitmovement 0
 # 50 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
@@ -111,11 +111,11 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 # 58 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	call EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags
 # 59 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
-	goto EverGrandeCity_HallOfFame_EventScript_GameClearFemale
+	goto EverGrandeCity_HallOfFame_EventScript_GameClear
 	end
 
 
-EverGrandeCity_HallOfFame_EventScript_GameClearFemale::
+EverGrandeCity_HallOfFame_EventScript_GameClear::
 # 64 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"
 	setrespawn HEAL_LOCATION_START_TOWN
 # 65 "data/maps/EverGrandeCity_HallOfFame/scripts.pory"

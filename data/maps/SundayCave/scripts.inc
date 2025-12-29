@@ -177,7 +177,9 @@ SundayCave_FacadeScientist_Text_1:
 
 SundayCave_FacadeScientist_Text_2:
 # 163 "data/maps/SundayCave/scripts.pory"
-	.string "I'm not sure what move it is, something about being stronger when affected by status…$"
+	.string "I'm not sure what move it is, something\n"
+	.string "about being stronger when affected by\l"
+	.string "status…$"
 
 SundayCave_Scientist1_BattleIntro::
 # 17 "data/maps/SundayCave/scripts.pory"

@@ -14,7 +14,7 @@ text CSCCH_ExplainChappellNotHere{
     "Roan, I'm afraid she's unavailable at \l"
     "the moment. \p"
     "I'm sure why, she said something about\n"
-    "investigating the Crystal Stream issue. \p"
+    "investigating the Sunday Cave issue. \p"
     "She was headed to the Sunday Cave, to \n"
     "the north of Route 6 if you want to \l"
     "find her.$"
@@ -84,7 +84,7 @@ script ChappellHall_Chantal{
         }
     else{
         msgbox(ChantalIntro_Chappell, MSGBOX_AUTOCLOSE)
-        trainerbattle_no_intro(TRAINER_NORAH, format("Would she sign it even if I lose?"))
+        trainerbattle_no_intro(TRAINER_CHANTAL, format("Would she sign it even if I lose?"))
         msgbox(ChantalPostBattle_Chappell, MSGBOX_AUTOCLOSE)
         }
     releaseall

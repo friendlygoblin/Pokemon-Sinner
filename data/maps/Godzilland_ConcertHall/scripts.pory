@@ -69,6 +69,10 @@ text StVincent_WordAboutTLDP{
 
 script StVincent_EmilyCutscene{
     lock
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, GodzillandHall_CameraToConv)
+    waitmovement(0)
+    special(RemoveCameraObject)
 //Emily walks in
     addobject(Emily)
     applymovement(Emily, EmilyWalksToStVincent)
@@ -110,6 +114,11 @@ script StVincent_EmilyCutscene{
     removeobject(Emily)
     setvar(VAR_GODZILLANDHALL_EMILY, 1)
 
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, GodzillandHall_CameraBack)
+    waitmovement(0)
+    special(RemoveCameraObject)
+
     releaseall
     end
 }
@@ -131,7 +140,18 @@ movement ExcitedEmily_NoEmote{
 }
 
 movement EmilyLeaves_Godzilland{
-    walk_right * 4
+    walk_right * 3
+    walk_down * 6
+    step_end
+}
+
+movement GodzillandHall_CameraToConv{
+    walk_right * 3
+    step_end
+}
+
+movement GodzillandHall_CameraBack{
+    walk_left * 3
     step_end
 }
 

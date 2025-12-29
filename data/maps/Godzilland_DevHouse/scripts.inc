@@ -106,7 +106,7 @@ DevHouse_TeamBuilderGoblin::
 # 66 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_TeamBuilderGoblin_Text_0, MSGBOX_AUTOCLOSE
 # 67 "data/maps/Godzilland_DevHouse/scripts.pory"
-	applymovement 10, Common_Movement_FaceLeft
+	applymovement 6, Common_Movement_FaceLeft
 # 68 "data/maps/Godzilland_DevHouse/scripts.pory"
 	waitmovement 0
 # 69 "data/maps/Godzilland_DevHouse/scripts.pory"
@@ -122,7 +122,7 @@ DevHouse_ConsultantGoblin::
 # 76 "data/maps/Godzilland_DevHouse/scripts.pory"
 	msgbox DevHouse_ConsultantGoblin_Text_0, MSGBOX_AUTOCLOSE
 # 77 "data/maps/Godzilland_DevHouse/scripts.pory"
-	applymovement 6, Common_Movement_FaceRight
+	applymovement 10, Common_Movement_FaceRight
 # 78 "data/maps/Godzilland_DevHouse/scripts.pory"
 	waitmovement 0
 # 79 "data/maps/Godzilland_DevHouse/scripts.pory"

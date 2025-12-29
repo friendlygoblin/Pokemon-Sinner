@@ -160,7 +160,7 @@ script SundayCave_FacadeScientist{
     else{
         msgbox(format("I found this TM but I won't be using it. \pYou do POKéMON battles, right?\nHere, you're more likely to use it than me."))
         giveitem(ITEM_TM42)
-        msgbox("I'm not sure what move it is, something about being stronger when affected by status…")
+        msgbox(format("I'm not sure what move it is, something about being stronger when affected by status…"))
         setflag(FLAG_RECEIVED_TM_FACADE)
     }
     release

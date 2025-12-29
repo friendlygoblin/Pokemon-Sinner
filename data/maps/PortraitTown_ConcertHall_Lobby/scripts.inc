@@ -38,7 +38,7 @@ MarinaHall_Brenae::
 # 27 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	msgbox MarinaHall_Brenae_Text_1, MSGBOX_AUTOCLOSE
 # 28 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
-	trainerbattle_no_intro TRAINER_BRENAE, MarinaHall_Brenae_Text_2
+	trainerbattle_no_intro TRAINER_BRENAE_2, MarinaHall_Brenae_Text_2
 # 29 "data/maps/PortraitTown_ConcertHall_Lobby/scripts.pory"
 	msgbox MarinaHall_Brenae_Text_3, MSGBOX_AUTOCLOSE
 MarinaHall_Brenae_1:

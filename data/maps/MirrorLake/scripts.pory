@@ -4,6 +4,7 @@ mapscripts MirrorLake_MapScripts {
 
 script MirrorLake_Visited{
     setflag(FLAG_VISITED_MOSSDEEP_CITY)
+    setvar(VAR_GODZILLAND_PORYGON, 0)
 }
 
 

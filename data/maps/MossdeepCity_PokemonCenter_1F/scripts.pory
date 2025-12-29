@@ -7,7 +7,7 @@ MossdeepCity_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 MossdeepCity_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_MOSSDEEP_CITY
+	setrespawn HEAL_LOCATION_SAILOR_TOWN
 	end
 
 MossdeepCity_PokemonCenter_1F_EventScript_Nurse::
@@ -27,10 +27,9 @@ MossdeepCity_PokemonCenter_1F_EventScript_Girl::
 	end
 
 MossdeepCity_PokemonCenter_1F_Text_GymLeaderDuoFormidable:
-	.string "The GYM LEADERS in this town are\n"
-	.string "a formidable duo.\p"
-	.string "Their combination attacks are, like,\n"
-	.string "excellent and wow!$"
+	.string "It's nice that Nightingale City isn't \n"
+	.string "far from here.\p"
+	.string "I sometimes go hang out at its pub.$"
 
 MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves:
 	.string "Depending on the special abilities of\n"

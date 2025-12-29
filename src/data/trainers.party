@@ -343,7 +343,7 @@ Staravia
 Level: 26
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-=== TRAINER_ED ===
+=== TRAINER_ED === /*Used on Route 4*/
 Name: ED
 Class: Collector
 Pic: Collector
@@ -1257,6 +1257,27 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENAE ===
 Name: BRENAE
+Class: TLDP Fan
+Pic: Brenae
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Check Bad Move / Check Viability / Try To Faint
+
+Eevee (F)
+Level: 18
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Buneary (F)
+Level: 18
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+Hattrem
+Level: 18
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== TRAINER_BRENAE_2 ===
+Name: BRENAE
 Class: Picnicker
 Pic: Brenae
 Gender: Female
@@ -1274,27 +1295,6 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
 Hattrem
 Level: 28
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_BRENAE_2 ===
-Name: BRENAE
-Class: TLDP Fan
-Pic: Brenae
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move / Check Viability / Try To Faint
-
-Eevee (F)
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Buneary (F)
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Hatterene
-Level: 35
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_RICKY_1 ===
@@ -6403,11 +6403,13 @@ AI: Check Bad Move / Check Viability / Try To Faint
 
 Haunter
 Level: 41
+Shiny: Yes
 EVs: 52 HP/ 100 Def / 100 SpD / 56 Atk
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 Haunter
 Level: 41
+Shiny: Yes
 EVs: 52 HP/ 100 Def / 100 SpD / 56 Atk
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
@@ -7345,7 +7347,7 @@ IVs: 19 HP / 19 Atk / 19 Def / 19 SpA / 19 SpD / 19 Spe
 
 === TRAINER_TALIA ===
 Name: TALIA
-Class: Rival
+Class: TLDP Fan
 Pic: Talia
 Gender: Female
 Music: Swimmer
@@ -10800,7 +10802,7 @@ Roselia
 Level: 39
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 
-=== TRAINER_JULIO ===
+=== TRAINER_JULIO === /Used on Route 7*/
 Name: JULES
 Class: Triathlete
 Pic: Cycling Triathlete F
@@ -10881,7 +10883,7 @@ Numel
 Level: 22
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_MARC ===
+=== TRAINER_MARC === /*Used in Rib Cave*/
 Name: MARC
 Class: Hiker
 Pic: Hiker
@@ -12812,7 +12814,7 @@ Nosepass
 Level: 34
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_KOJI_1 ===
+=== TRAINER_KOJI_1 === /*Used on Route 7*/
 Name: KOJI
 Class: Black Belt
 Pic: Black Belt

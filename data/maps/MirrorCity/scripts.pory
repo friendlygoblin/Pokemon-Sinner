@@ -1,4 +1,10 @@
-mapscripts MirrorCity_MapScripts {}
+mapscripts MirrorCity_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION : MirrorCity_ResetPorygon
+}
+
+script MirrorCity_ResetPorygon{
+    setvar(VAR_GODZILLAND_PORYGON, 0)
+}
 
 const Goblin = 1
 

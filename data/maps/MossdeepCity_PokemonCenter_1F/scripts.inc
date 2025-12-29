@@ -17,7 +17,7 @@ MossdeepCity_PokemonCenter_1F_MapScripts::
 # 9 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 MossdeepCity_PokemonCenter_1F_OnTransition:
 # 10 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-	setrespawn HEAL_LOCATION_MOSSDEEP_CITY
+	setrespawn HEAL_LOCATION_SAILOR_TOWN
 # 11 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	end
 # 12 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
@@ -57,20 +57,18 @@ MossdeepCity_PokemonCenter_1F_EventScript_Girl::
 # 29 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 MossdeepCity_PokemonCenter_1F_Text_GymLeaderDuoFormidable:
 # 30 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-	.string "The GYM LEADERS in this town are\n"
+	.string "It's nice that Nightingale City isn't \n"
 # 31 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-	.string "a formidable duo.\p"
+	.string "far from here.\p"
 # 32 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-	.string "Their combination attacks are, like,\n"
+	.string "I sometimes go hang out at its pub.$"
 # 33 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
-	.string "excellent and wow!$"
-# 34 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 
-# 35 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 34 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves:
-# 36 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 35 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "Depending on the special abilities of\n"
-# 37 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 36 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "POKéMON, some moves might change\l"
-# 38 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
+# 37 "data/maps/MossdeepCity_PokemonCenter_1F/scripts.pory"
 	.string "or not work at all.$"

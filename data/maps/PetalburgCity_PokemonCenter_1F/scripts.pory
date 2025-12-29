@@ -8,7 +8,6 @@ PetalburgCity_PokemonCenter_1F_MapScripts::
 
 PetalburgCity_PokemonCenter_1F_OnTransition:
 	setrespawn HEAL_LOCATION_NIGHTINGALE_CITY
-	setvar VAR_GODZILLAND_PORYGON, 0
 	end
 
 PetalburgCity_PokemonCenter_1F_EventScript_Nurse::

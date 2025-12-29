@@ -71,12 +71,12 @@ script PictureParlourBattle{
     lockall
     msgbox(Route8_HarvAction, MSGBOX_AUTOCLOSE)
     trainerbattle_double(TRAINER_PICTURE_PARLOUR, format("KATHERINE: Thanks for helping us out!\pELLA: We definitely owe you one!"), format("KATHERINE: What Lumiere had in mind was you! \pELLA: Yeah, that was a real motion picture!"), Route8_HarvNotEnoughPkmn, PostPictureParlourBattle)
-    removeobject(12)
-    setvar(VAR_ROUTE8_MUSICVIDEO, 2)
-    setflag(FLAG_ROUTE8_BAG)
 }
 
 script PostPictureParlourBattle{
+    removeobject(12)
+    setvar(VAR_ROUTE8_MUSICVIDEO, 2)
+    setflag(FLAG_ROUTE8_BAG)
     applymovement(Katherine, WalkInPlaceDown)
     waitmovement(0)
     msgbox(Route8_KatherinePostBattle)

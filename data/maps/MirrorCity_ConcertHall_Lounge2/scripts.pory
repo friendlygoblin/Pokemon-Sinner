@@ -80,8 +80,6 @@ text LoungeAle_OfferBattle{
     "Warning with my sisters, I play bass. \p"
     "… … … \p"
     "Wanna spar to pass the time? $"
-    "We're also big fans of The Last Dinner \n"
-    "Party. \p"
     }
 
 text LoungeAle_RefuseBattle{
@@ -285,6 +283,8 @@ script MCCH_LoungeKatherine{
         }
         else{
             msgbox(LoungeKatherine_AcceptBattle)
+            applymovement(Ella, Common_Movement_FaceDown)
+            waitmovement(0)
             msgbox(LoungeElla_AcceptBattleFromKatherine, MSGBOX_AUTOCLOSE)
             trainerbattle_no_intro(TRAINER_PICTURE_PARLOUR_2, format("KATHERINE: Yup, still super cool!\pELLA: You rock! "))
             msgbox(LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE)
@@ -338,6 +338,8 @@ script MCCH_LoungeElla{
         }
         else{
             msgbox(LoungeElla_AcceptBattle)
+            applymovement(Katherine, Common_Movement_FaceRight)
+            waitmovement(0)
             msgbox(LoungeKatherine_AcceptBattleFromElla, MSGBOX_AUTOCLOSE)
             trainerbattle_no_intro(TRAINER_PICTURE_PARLOUR_2, format("KATHERINE: Yup, still super cool!\pELLA: You rock! "))
             msgbox(LoungeKatherine_PostBattle, MSGBOX_AUTOCLOSE)

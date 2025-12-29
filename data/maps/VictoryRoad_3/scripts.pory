@@ -46,7 +46,7 @@ script VictoryRoad_Norah{
 
 text VictoryRoad_Norah_BattleIntro{
     "NORAH: I heard many other artists \n"
-    "will be in Mirror City… "
+    "will be in Mirror City… \p"
     "What if we can challenge them too? \p"
     "Oh, I need to train even harder just \n"
     "in case! \p"
@@ -200,11 +200,11 @@ text VictoryRoad_Q_BattleIntro{
     "Q: I've been listening to The Last \n"
     "Dinner Party's music on a loop for \l"
     "months! \p"
-    "I can't wait to face them, can I battle \p"
+    "I can't wait to face them, can I battle \n"
     "with you to be sure I'm ready? $"
 }
 
 text VictoryRoad_Q_PostBattle{
-    "Q: I guess I'll prepare a bit longer \p"
+    "Q: I guess I'll prepare a bit longer \n"
     "while listening to the band…  $"
 }

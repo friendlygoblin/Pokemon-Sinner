@@ -66,10 +66,12 @@ RockSellerDude::
 	waitmessage
 # 88 "data/maps/MercyTown_RockShop/scripts.pory"
 	goto_if_set FLAG_RECEIVED_MEGARING, RockSellerDude_5
-RockSellerDude_4:
-# 91 "data/maps/MercyTown_RockShop/scripts.pory"
-	msgbox ExplainRocks, MSGBOX_AUTOCLOSE
 # 92 "data/maps/MercyTown_RockShop/scripts.pory"
+	pokemart RockMart_NoMega
+RockSellerDude_4:
+# 94 "data/maps/MercyTown_RockShop/scripts.pory"
+	msgbox ExplainRocks, MSGBOX_AUTOCLOSE
+# 95 "data/maps/MercyTown_RockShop/scripts.pory"
 	release
 	end
 
@@ -79,12 +81,12 @@ RockSellerDude_2:
 # 73 "data/maps/MercyTown_RockShop/scripts.pory"
 	switch VAR_STARTER_MON
 # 74 "data/maps/MercyTown_RockShop/scripts.pory"
-	case 0, RockSellerDude_9
+	case 0, RockSellerDude_10
 # 76 "data/maps/MercyTown_RockShop/scripts.pory"
-	case 1, RockSellerDude_10
+	case 1, RockSellerDude_11
 # 78 "data/maps/MercyTown_RockShop/scripts.pory"
-	case 2, RockSellerDude_11
-RockSellerDude_7:
+	case 2, RockSellerDude_12
+RockSellerDude_8:
 # 81 "data/maps/MercyTown_RockShop/scripts.pory"
 	msgbox ExplainMegaStones, MSGBOX_AUTOCLOSE
 # 82 "data/maps/MercyTown_RockShop/scripts.pory"
@@ -95,33 +97,33 @@ RockSellerDude_7:
 
 RockSellerDude_5:
 # 89 "data/maps/MercyTown_RockShop/scripts.pory"
-	pokemart RockMart_NoMega
+	pokemart RockMart_Mega
 	goto RockSellerDude_4
 
-RockSellerDude_9:
+RockSellerDude_10:
 # 75 "data/maps/MercyTown_RockShop/scripts.pory"
 	giveitem ITEM_BLAZIKENITE
-	goto RockSellerDude_7
-
-RockSellerDude_10:
-# 77 "data/maps/MercyTown_RockShop/scripts.pory"
-	giveitem ITEM_VENUSAURITE
-	goto RockSellerDude_7
+	goto RockSellerDude_8
 
 RockSellerDude_11:
+# 77 "data/maps/MercyTown_RockShop/scripts.pory"
+	giveitem ITEM_VENUSAURITE
+	goto RockSellerDude_8
+
+RockSellerDude_12:
 # 79 "data/maps/MercyTown_RockShop/scripts.pory"
 	giveitem ITEM_SWAMPERTITE
-	goto RockSellerDude_7
+	goto RockSellerDude_8
 
 
 RockShop_LittleGirl::
-# 97 "data/maps/MercyTown_RockShop/scripts.pory"
-	lock
-# 98 "data/maps/MercyTown_RockShop/scripts.pory"
-	faceplayer
-# 99 "data/maps/MercyTown_RockShop/scripts.pory"
-	msgbox DadSellsRocks, MSGBOX_AUTOCLOSE
 # 100 "data/maps/MercyTown_RockShop/scripts.pory"
+	lock
+# 101 "data/maps/MercyTown_RockShop/scripts.pory"
+	faceplayer
+# 102 "data/maps/MercyTown_RockShop/scripts.pory"
+	msgbox DadSellsRocks, MSGBOX_AUTOCLOSE
+# 103 "data/maps/MercyTown_RockShop/scripts.pory"
 	releaseall
 	end
 
@@ -165,7 +167,7 @@ ExplainMegaStones::
 	.string "if you wanna have a look. $"
 
 DadSellsRocks::
-# 104 "data/maps/MercyTown_RockShop/scripts.pory"
+# 107 "data/maps/MercyTown_RockShop/scripts.pory"
 	.string "My dad loves rocks so much. \p"
 	.string "He finds most of them in the Sunday \n"
 	.string "Cave. \p"

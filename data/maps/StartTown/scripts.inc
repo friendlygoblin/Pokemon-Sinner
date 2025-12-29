@@ -13,296 +13,298 @@ HidePokeballs::
 	setflag FLAG_POKEBALL_3
 # 14 "data/maps/StartTown/scripts.pory"
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
+# 15 "data/maps/StartTown/scripts.pory"
+	setvar VAR_GODZILLAND_PORYGON, 0
 	end
 
 
 PubSign::
-# 19 "data/maps/StartTown/scripts.pory"
-	lock
 # 20 "data/maps/StartTown/scripts.pory"
-	msgbox PubSignText
+	lock
 # 21 "data/maps/StartTown/scripts.pory"
+	msgbox PubSignText
+# 22 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 
 WalkBack::
-# 26 "data/maps/StartTown/scripts.pory"
-	lock
 # 27 "data/maps/StartTown/scripts.pory"
-	msgbox WalkBack_Text_0
+	lock
 # 28 "data/maps/StartTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkDown
+	msgbox WalkBack_Text_0
 # 29 "data/maps/StartTown/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkDown
 # 30 "data/maps/StartTown/scripts.pory"
+	waitmovement 0
+# 31 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 
 GraceScript::
-# 35 "data/maps/StartTown/scripts.pory"
-	lock
 # 36 "data/maps/StartTown/scripts.pory"
-	faceplayer
+	lock
 # 37 "data/maps/StartTown/scripts.pory"
+	faceplayer
+# 38 "data/maps/StartTown/scripts.pory"
 	compare VAR_LITTLEROOT_INTRO_STATE, 0
 	goto_if_eq GraceScript_2
-# 41 "data/maps/StartTown/scripts.pory"
+# 42 "data/maps/StartTown/scripts.pory"
 	msgbox GraceAfterStarter
 GraceScript_1:
-# 43 "data/maps/StartTown/scripts.pory"
-	applymovement 2, Common_Movement_FaceLeft
 # 44 "data/maps/StartTown/scripts.pory"
-	waitmovement 0
+	applymovement 2, Common_Movement_FaceLeft
 # 45 "data/maps/StartTown/scripts.pory"
+	waitmovement 0
+# 46 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 GraceScript_2:
-# 38 "data/maps/StartTown/scripts.pory"
+# 39 "data/maps/StartTown/scripts.pory"
 	msgbox GraceBeforeStarter
 	goto GraceScript_1
 
 
 GraceBattle::
-# 50 "data/maps/StartTown/scripts.pory"
-	lock
 # 51 "data/maps/StartTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+	lock
 # 52 "data/maps/StartTown/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 # 53 "data/maps/StartTown/scripts.pory"
-	addobject 2
+	waitmovement 0
 # 54 "data/maps/StartTown/scripts.pory"
-	applymovement 2, GraceWalkToPlayer
+	addobject 2
 # 55 "data/maps/StartTown/scripts.pory"
-	waitmovement 0
+	applymovement 2, GraceWalkToPlayer
 # 56 "data/maps/StartTown/scripts.pory"
-	applymovement 1, ZigFollowGraceToPlayer
+	waitmovement 0
 # 57 "data/maps/StartTown/scripts.pory"
-	waitmovement 0
+	applymovement 1, ZigFollowGraceToPlayer
 # 58 "data/maps/StartTown/scripts.pory"
-	msgbox GraceSeesPokemon
-# 59 "data/maps/StartTown/scripts.pory"
-	delay 20
-# 60 "data/maps/StartTown/scripts.pory"
-	applymovement 2, Common_Movement_ExclamationMark
-# 61 "data/maps/StartTown/scripts.pory"
 	waitmovement 0
-# 62 "data/maps/StartTown/scripts.pory"
+# 59 "data/maps/StartTown/scripts.pory"
+	msgbox GraceSeesPokemon
+# 60 "data/maps/StartTown/scripts.pory"
 	delay 20
+# 61 "data/maps/StartTown/scripts.pory"
+	applymovement 2, Common_Movement_ExclamationMark
+# 62 "data/maps/StartTown/scripts.pory"
+	waitmovement 0
 # 63 "data/maps/StartTown/scripts.pory"
-	msgbox GraceBeforeBattle, MSGBOX_YESNO
+	delay 20
 # 64 "data/maps/StartTown/scripts.pory"
+	msgbox GraceBeforeBattle, MSGBOX_YESNO
+# 65 "data/maps/StartTown/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq GraceBattle_2
-# 68 "data/maps/StartTown/scripts.pory"
+# 69 "data/maps/StartTown/scripts.pory"
 	msgbox Grace_PlayerNoBattle
 GraceBattle_1:
-# 70 "data/maps/StartTown/scripts.pory"
-	trainerbattle_no_intro TRAINER_GRACE, GraceDefeat
 # 71 "data/maps/StartTown/scripts.pory"
-	msgbox GraceAfterBattle, MSGBOX_AUTOCLOSE
+	trainerbattle_no_intro TRAINER_GRACE, GraceDefeat
 # 72 "data/maps/StartTown/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	msgbox GraceAfterBattle, MSGBOX_AUTOCLOSE
 # 73 "data/maps/StartTown/scripts.pory"
-	playfanfare MUS_HEAL
+	fadescreen FADE_TO_BLACK
 # 74 "data/maps/StartTown/scripts.pory"
-	waitfanfare
+	playfanfare MUS_HEAL
 # 75 "data/maps/StartTown/scripts.pory"
-	special HealPlayerParty
+	waitfanfare
 # 76 "data/maps/StartTown/scripts.pory"
-	setrespawn HEAL_LOCATION_START_TOWN
+	special HealPlayerParty
 # 77 "data/maps/StartTown/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	setrespawn HEAL_LOCATION_START_TOWN
 # 78 "data/maps/StartTown/scripts.pory"
-	msgbox GraceDoneHealing, MSGBOX_AUTOCLOSE
+	fadescreen FADE_FROM_BLACK
 # 79 "data/maps/StartTown/scripts.pory"
-	applymovement 2, GraceGoesBackToWhereSheWas
+	msgbox GraceDoneHealing, MSGBOX_AUTOCLOSE
 # 80 "data/maps/StartTown/scripts.pory"
-	waitmovement 0
+	applymovement 2, GraceGoesBackToWhereSheWas
 # 81 "data/maps/StartTown/scripts.pory"
-	applymovement 1, ZigFollowsGraceBack
-# 82 "data/maps/StartTown/scripts.pory"
 	waitmovement 0
+# 82 "data/maps/StartTown/scripts.pory"
+	applymovement 1, ZigFollowsGraceBack
 # 83 "data/maps/StartTown/scripts.pory"
-	setvar VAR_LITTLEROOT_INTRO_STATE, 2
+	waitmovement 0
 # 84 "data/maps/StartTown/scripts.pory"
+	setvar VAR_LITTLEROOT_INTRO_STATE, 2
+# 85 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 GraceBattle_2:
-# 65 "data/maps/StartTown/scripts.pory"
+# 66 "data/maps/StartTown/scripts.pory"
 	msgbox Grace_PlayerKnowsBattle
 	goto GraceBattle_1
 
 
 ShelterStaff::
-# 89 "data/maps/StartTown/scripts.pory"
-	lock
 # 90 "data/maps/StartTown/scripts.pory"
-	applymovement 4, Common_Movement_FacePlayer
+	lock
 # 91 "data/maps/StartTown/scripts.pory"
-	msgbox ShelterStaff_Text_0
+	applymovement 4, Common_Movement_FacePlayer
 # 92 "data/maps/StartTown/scripts.pory"
+	msgbox ShelterStaff_Text_0
+# 93 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 
 Poochyena::
-# 97 "data/maps/StartTown/scripts.pory"
-	lock
 # 98 "data/maps/StartTown/scripts.pory"
-	applymovement 3, Common_Movement_FacePlayer
+	lock
 # 99 "data/maps/StartTown/scripts.pory"
-	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
+	applymovement 3, Common_Movement_FacePlayer
 # 100 "data/maps/StartTown/scripts.pory"
-	msgbox Poochyena_Text_0
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
 # 101 "data/maps/StartTown/scripts.pory"
-	waitmoncry
+	msgbox Poochyena_Text_0
 # 102 "data/maps/StartTown/scripts.pory"
+	waitmoncry
+# 103 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 
-# 106 "data/maps/StartTown/scripts.pory"
-GraceWalkToPlayer:
 # 107 "data/maps/StartTown/scripts.pory"
+GraceWalkToPlayer:
+# 108 "data/maps/StartTown/scripts.pory"
 	walk_up
-# 108 "data/maps/StartTown/scripts.pory"
-	walk_left
-# 108 "data/maps/StartTown/scripts.pory"
-	walk_left
-# 108 "data/maps/StartTown/scripts.pory"
-	walk_left
-# 108 "data/maps/StartTown/scripts.pory"
+# 109 "data/maps/StartTown/scripts.pory"
 	walk_left
 # 109 "data/maps/StartTown/scripts.pory"
+	walk_left
+# 109 "data/maps/StartTown/scripts.pory"
+	walk_left
+# 109 "data/maps/StartTown/scripts.pory"
+	walk_left
+# 110 "data/maps/StartTown/scripts.pory"
 	step_end
 
-# 112 "data/maps/StartTown/scripts.pory"
-GraceGoesBackToWhereSheWas:
 # 113 "data/maps/StartTown/scripts.pory"
+GraceGoesBackToWhereSheWas:
+# 114 "data/maps/StartTown/scripts.pory"
 	walk_down
-# 114 "data/maps/StartTown/scripts.pory"
-	walk_right
-# 114 "data/maps/StartTown/scripts.pory"
-	walk_right
-# 114 "data/maps/StartTown/scripts.pory"
-	walk_right
-# 114 "data/maps/StartTown/scripts.pory"
+# 115 "data/maps/StartTown/scripts.pory"
 	walk_right
 # 115 "data/maps/StartTown/scripts.pory"
-	face_left
+	walk_right
+# 115 "data/maps/StartTown/scripts.pory"
+	walk_right
+# 115 "data/maps/StartTown/scripts.pory"
+	walk_right
 # 116 "data/maps/StartTown/scripts.pory"
+	face_left
+# 117 "data/maps/StartTown/scripts.pory"
 	step_end
 
-# 119 "data/maps/StartTown/scripts.pory"
-ZigFollowsGraceBack:
 # 120 "data/maps/StartTown/scripts.pory"
-	walk_left
+ZigFollowsGraceBack:
 # 121 "data/maps/StartTown/scripts.pory"
-	delay_16
+	walk_left
 # 122 "data/maps/StartTown/scripts.pory"
-	walk_in_place_left
-# 123 "data/maps/StartTown/scripts.pory"
 	delay_16
+# 123 "data/maps/StartTown/scripts.pory"
+	walk_in_place_left
 # 124 "data/maps/StartTown/scripts.pory"
+	delay_16
+# 125 "data/maps/StartTown/scripts.pory"
 	walk_fast_down
-# 125 "data/maps/StartTown/scripts.pory"
-	walk_fast_right
-# 125 "data/maps/StartTown/scripts.pory"
-	walk_fast_right
-# 125 "data/maps/StartTown/scripts.pory"
+# 126 "data/maps/StartTown/scripts.pory"
 	walk_fast_right
 # 126 "data/maps/StartTown/scripts.pory"
-	face_right
+	walk_fast_right
+# 126 "data/maps/StartTown/scripts.pory"
+	walk_fast_right
 # 127 "data/maps/StartTown/scripts.pory"
+	face_right
+# 128 "data/maps/StartTown/scripts.pory"
 	step_end
 
-# 130 "data/maps/StartTown/scripts.pory"
-ZigFollowGraceToPlayer:
 # 131 "data/maps/StartTown/scripts.pory"
+ZigFollowGraceToPlayer:
+# 132 "data/maps/StartTown/scripts.pory"
 	walk_fast_up
-# 132 "data/maps/StartTown/scripts.pory"
-	walk_fast_left
-# 132 "data/maps/StartTown/scripts.pory"
+# 133 "data/maps/StartTown/scripts.pory"
 	walk_fast_left
 # 133 "data/maps/StartTown/scripts.pory"
+	walk_fast_left
+# 134 "data/maps/StartTown/scripts.pory"
 	step_end
 
-# 219 "data/maps/StartTown/scripts.pory"
-PlayerWalkDown:
 # 220 "data/maps/StartTown/scripts.pory"
-	walk_down
+PlayerWalkDown:
 # 221 "data/maps/StartTown/scripts.pory"
+	walk_down
+# 222 "data/maps/StartTown/scripts.pory"
 	step_end
 
 Route1Sign::
-# 225 "data/maps/StartTown/scripts.pory"
-	lock
 # 226 "data/maps/StartTown/scripts.pory"
-	msgbox Route1SignText
+	lock
 # 227 "data/maps/StartTown/scripts.pory"
+	msgbox Route1SignText
+# 228 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 
 ShelterSign::
-# 232 "data/maps/StartTown/scripts.pory"
-	lock
 # 233 "data/maps/StartTown/scripts.pory"
-	msgbox ShelterSignText
+	lock
 # 234 "data/maps/StartTown/scripts.pory"
+	msgbox ShelterSignText
+# 235 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 
 Zigzagoon::
-# 239 "data/maps/StartTown/scripts.pory"
-	lock
 # 240 "data/maps/StartTown/scripts.pory"
-	faceplayer
+	lock
 # 241 "data/maps/StartTown/scripts.pory"
-	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
+	faceplayer
 # 242 "data/maps/StartTown/scripts.pory"
-	msgbox Zigzagoon_Text_0
+	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
 # 243 "data/maps/StartTown/scripts.pory"
-	waitmoncry
+	msgbox Zigzagoon_Text_0
 # 244 "data/maps/StartTown/scripts.pory"
+	waitmoncry
+# 245 "data/maps/StartTown/scripts.pory"
 	release
 	end
 
 
 WalkBack_Text_0:
-# 27 "data/maps/StartTown/scripts.pory"
+# 28 "data/maps/StartTown/scripts.pory"
 	.string "It's best not to go out there without a\n"
 	.string "POKéMON.$"
 
 ShelterStaff_Text_0:
-# 91 "data/maps/StartTown/scripts.pory"
+# 92 "data/maps/StartTown/scripts.pory"
 	.string "Working at the shelter is great, but it's\n"
 	.string "tiring.\p"
 	.string "Grace gives me a hand though, and\n"
 	.string "that's nice!$"
 
 Poochyena_Text_0:
-# 100 "data/maps/StartTown/scripts.pory"
+# 101 "data/maps/StartTown/scripts.pory"
 	.string "POOCHYENA: bark!$"
 
 Zigzagoon_Text_0:
-# 242 "data/maps/StartTown/scripts.pory"
+# 243 "data/maps/StartTown/scripts.pory"
 	.string "ZIGZAGOON: … … grr?$"
 
 GraceSeesPokemon::
-# 136 "data/maps/StartTown/scripts.pory"
+# 137 "data/maps/StartTown/scripts.pory"
 	.string "GRACE: {PLAYER}{KUN}!\p"
 	.string "How was the band ? Did you get to \n"
 	.string "meet them?$"
 
 GraceBeforeBattle::
-# 142 "data/maps/StartTown/scripts.pory"
+# 143 "data/maps/StartTown/scripts.pory"
 	.string "Where's that POKéMON from?\p"
 	.string "What?\p"
 	.string "Abigail gave it to you?\p"
@@ -314,23 +316,23 @@ GraceBeforeBattle::
 	.string "you know how POKéMON battles work?$"
 
 Grace_PlayerKnowsBattle::
-# 154 "data/maps/StartTown/scripts.pory"
+# 155 "data/maps/StartTown/scripts.pory"
 	.string "Perfect! \p"
 	.string "Let's see what you can do, then!$"
 
 Grace_PlayerNoBattle::
-# 159 "data/maps/StartTown/scripts.pory"
+# 160 "data/maps/StartTown/scripts.pory"
 	.string "Oh that's okay, you have plenty \n"
 	.string "of time to learn! \p"
 	.string "The best way to learn is to practice! \p"
 	.string "Like this!$"
 
 GraceDefeat::
-# 166 "data/maps/StartTown/scripts.pory"
+# 167 "data/maps/StartTown/scripts.pory"
 	.string "You're a natural!$"
 
 GraceAfterBattle::
-# 170 "data/maps/StartTown/scripts.pory"
+# 171 "data/maps/StartTown/scripts.pory"
 	.string "You really got the hang of it quickly!\p"
 	.string "It's still super early but I have a \n"
 	.string "feeling you might have a chance at \l"
@@ -350,7 +352,7 @@ GraceAfterBattle::
 	.string "a lot of effort. $"
 
 GraceDoneHealing::
-# 190 "data/maps/StartTown/scripts.pory"
+# 191 "data/maps/StartTown/scripts.pory"
 	.string "GRACE: All done!\p"
 	.string "Well, good luck for whatever's next!\p"
 	.string "You're going to try your luck in \n"
@@ -359,7 +361,7 @@ GraceDoneHealing::
 	.string "See you later! $"
 
 GraceBeforeStarter::
-# 199 "data/maps/StartTown/scripts.pory"
+# 200 "data/maps/StartTown/scripts.pory"
 	.string "GRACE: Hi {PLAYER}{KUN}!\p"
 	.string "The Last Dinner Party are in the\n"
 	.string "pub!\p"
@@ -371,22 +373,22 @@ GraceBeforeStarter::
 	.string "tell me all about it!$"
 
 GraceAfterStarter::
-# 212 "data/maps/StartTown/scripts.pory"
+# 213 "data/maps/StartTown/scripts.pory"
 	.string "GRACE: I can't believe you got your\n"
 	.string "first ever POKéMON from Abigail!\p"
 	.string "I have a feeling you'll do great \n"
 	.string "things, that POKéMON and you!$"
 
 PubSignText::
-# 248 "data/maps/StartTown/scripts.pory"
+# 249 "data/maps/StartTown/scripts.pory"
 	.string "The Two-Legged Dog \p"
 	.string "Fresh Drinks and Fresher Music!$"
 
 Route1SignText::
-# 253 "data/maps/StartTown/scripts.pory"
+# 254 "data/maps/StartTown/scripts.pory"
 	.string "{UP_ARROW} Route 1 \p"
 	.string "Beware of the wild POKéMON!$"
 
 ShelterSignText::
-# 258 "data/maps/StartTown/scripts.pory"
+# 259 "data/maps/StartTown/scripts.pory"
 	.string "Prelude Town POKéMON Shelter $"

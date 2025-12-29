@@ -112,9 +112,11 @@ script Godzilland_Morpheus{
             setflag(FLAG_GODZILLAND_UPGRADE)
         }
         else{
-            msgbox(format("MORPHEUS: I like to drop by the developpers' house to give them ideas.\pBrainstorming is fun!"))
+            msgbox(format("MORPHEUS: I like to drop by the developpers' house to give them ideas.\pBrainstorming is fun!"), MSGBOX_AUTOCLOSE)
         }
     }
+    release
+    end
 }
 
 text Godzilland_MorpheusUpgrade{

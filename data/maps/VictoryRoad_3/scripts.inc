@@ -278,7 +278,7 @@ VictoryRoad_Katie_PostBattle::
 VictoryRoad_Norah_BattleIntro::
 # 47 "data/maps/VictoryRoad_3/scripts.pory"
 	.string "NORAH: I heard many other artists \n"
-	.string "will be in Mirror City… "
+	.string "will be in Mirror City… \p"
 	.string "What if we can challenge them too? \p"
 	.string "Oh, I need to train even harder just \n"
 	.string "in case! \p"
@@ -349,10 +349,10 @@ VictoryRoad_Q_BattleIntro::
 	.string "Q: I've been listening to The Last \n"
 	.string "Dinner Party's music on a loop for \l"
 	.string "months! \p"
-	.string "I can't wait to face them, can I battle \p"
+	.string "I can't wait to face them, can I battle \n"
 	.string "with you to be sure I'm ready? $"
 
 VictoryRoad_Q_PostBattle::
 # 207 "data/maps/VictoryRoad_3/scripts.pory"
-	.string "Q: I guess I'll prepare a bit longer \p"
+	.string "Q: I guess I'll prepare a bit longer \n"
 	.string "while listening to the band…  $"

@@ -146,7 +146,7 @@ VictoryRoad_Brenae_1:
 
 VictoryRoad_Brenae_2:
 # 152 "data/maps/VictoryRoad_1/scripts.pory"
-	trainerbattle_no_intro TRAINER_BRENAE_2, VictoryRoad_Brenae_Text_0
+	trainerbattle_no_intro TRAINER_BRENAE_3, VictoryRoad_Brenae_Text_0
 # 153 "data/maps/VictoryRoad_1/scripts.pory"
 	msgbox VictoryRoad_Brenae_PostBattle, MSGBOX_AUTOCLOSE
 	goto VictoryRoad_Brenae_1

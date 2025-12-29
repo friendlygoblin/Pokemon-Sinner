@@ -370,7 +370,7 @@ LoungeMarina_PostBattle::
 	.string "That confirms what I thought, you're \n"
 	.string "really something special! \p"
 	.string "Now go show them that! \p"
-	.string "But remember, rule number one is that"
+	.string "But remember, rule number one is that\n"
 	.string "you gotta have fun! $"
 
 LoungeBrianMay_OfferBattle::

@@ -190,6 +190,36 @@ SailorTown_CameraBack:
 # 126 "data/maps/SailorTown/scripts.pory"
 	step_end
 
+SailorTown_CitySign::
+# 130 "data/maps/SailorTown/scripts.pory"
+	lock
+# 131 "data/maps/SailorTown/scripts.pory"
+	msgbox SailorTown_CitySign_Text_0, MSGBOX_AUTOCLOSE
+# 132 "data/maps/SailorTown/scripts.pory"
+	release
+	end
+
+
+SailorTown_Route9Sign::
+# 137 "data/maps/SailorTown/scripts.pory"
+	lock
+# 138 "data/maps/SailorTown/scripts.pory"
+	msgbox SailorTown_Route9Sign_Text_0, MSGBOX_AUTOCLOSE
+# 139 "data/maps/SailorTown/scripts.pory"
+	release
+	end
+
+
+SailorTown_Route10Sign::
+# 144 "data/maps/SailorTown/scripts.pory"
+	lock
+# 145 "data/maps/SailorTown/scripts.pory"
+	msgbox SailorTown_Route10Sign_Text_0, MSGBOX_AUTOCLOSE
+# 146 "data/maps/SailorTown/scripts.pory"
+	release
+	end
+
+
 SailorTown_SwimmerF_Text_0:
 # 10 "data/maps/SailorTown/scripts.pory"
 	.string "I can hold my breath for a minute!$"
@@ -213,6 +243,21 @@ SailorTown_Lens_Text_0:
 # 59 "data/maps/SailorTown/scripts.pory"
 	.string "That looks like Nora's camera lens!\p"
 	.string "She'll be happy to have it back.$"
+
+SailorTown_CitySign_Text_0:
+# 131 "data/maps/SailorTown/scripts.pory"
+	.string "Welcome to Sailor Town!\p"
+	.string "Relax like nothing matters!$"
+
+SailorTown_Route9Sign_Text_0:
+# 138 "data/maps/SailorTown/scripts.pory"
+	.string "{LEFT_ARROW}: Route 9\p"
+	.string "To Portrait Town$"
+
+SailorTown_Route10Sign_Text_0:
+# 145 "data/maps/SailorTown/scripts.pory"
+	.string "{UP_ARROW}: Route 10\p"
+	.string "To Nightingale City$"
 
 SailorTown_NoraHi::
 # 69 "data/maps/SailorTown/scripts.pory"

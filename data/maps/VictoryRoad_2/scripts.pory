@@ -191,12 +191,12 @@ script VictoryRoad_Chantal{
 text VictoryRoad_Chantal_BattleIntro{
     "CHANTAL: I brought my favourite TLDP \n"
     "record for the band to sign! \p"
-    "Can I show you how I'm planning to \p"
+    "Can I show you how I'm planning to \n"
     "ask them? $"
 }
 
 text VictoryRoad_Chantal_PostBattle{
-    "CHANTAL: I collect records, I have so \p"
+    "CHANTAL: I collect records, I have so \n"
     "many variants already! $"
 }
 

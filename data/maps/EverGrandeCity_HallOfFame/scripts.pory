@@ -42,10 +42,10 @@ script EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame{
 	applymovement(5,Turn_Altar_Right)
 	waitmovement(0)
 	msgbox(EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames, MSGBOX_AUTOCLOSE)
-	applymovement(3,Turn_Altar_Left)
-	applymovement(4,Turn_Altar_Left)
-	applymovement(2,Turn_Altar_Right)
-	applymovement(5,Turn_Altar_Right)
+	applymovement(3,Turn_Altar_Up)
+	applymovement(4,Turn_Altar_Up)
+	applymovement(2,Turn_Altar_Up)
+	applymovement(5,Turn_Altar_Up)
 	waitmovement(0)
 	applymovement(LOCALID_WALLACE, Common_Movement_WalkInPlaceFasterUp)
 	applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp)
@@ -56,11 +56,11 @@ script EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame{
 	delay(40)
 	setvar(VAR_TEMP_1, 1)
 	call(EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags)
-	goto(EverGrandeCity_HallOfFame_EventScript_GameClearFemale)
+	goto(EverGrandeCity_HallOfFame_EventScript_GameClear)
 	end
 }
 
-script EverGrandeCity_HallOfFame_EventScript_GameClearFemale{
+script EverGrandeCity_HallOfFame_EventScript_GameClear{
 	setrespawn(HEAL_LOCATION_START_TOWN)
 	fadescreenspeed(FADE_TO_BLACK, 24)
 	special(GameClear)

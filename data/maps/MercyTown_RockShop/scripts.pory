@@ -86,6 +86,9 @@ script RockSellerDude{
     message(SellRocks)
     waitmessage
     if(flag(FLAG_RECEIVED_MEGARING)){
+        pokemart(RockMart_Mega)
+    }
+    else{
         pokemart(RockMart_NoMega)
     }
     msgbox(ExplainRocks, MSGBOX_AUTOCLOSE)

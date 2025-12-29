@@ -17,7 +17,7 @@ PacifidlogTown_PokemonCenter_1F_MapScripts::
 # 9 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 PacifidlogTown_PokemonCenter_1F_OnTransition:
 # 10 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
-	setrespawn HEAL_LOCATION_PACIFIDLOG_TOWN
+	setrespawn HEAL_LOCATION_BIG_DOG_ISLAND
 # 11 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"
 	end
 # 12 "data/maps/PacifidlogTown_PokemonCenter_1F/scripts.pory"

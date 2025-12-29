@@ -123,7 +123,7 @@ script Route7_Cal{
             msgbox(Cal_LastOne, MSGBOX_AUTOCLOSE)
             faceplayer
             msgbox(Cal_Thanks)
-            giveitem(ITEM_RARE_CANDY)
+            giveitem(ITEM_SHINY_CHARM)
             applymovement(Rora, WalkInPlaceDown)
             msgbox(Rora_Thanks, MSGBOX_AUTOCLOSE)
             fadescreen(FADE_TO_BLACK)

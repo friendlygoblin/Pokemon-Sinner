@@ -25,7 +25,7 @@ script MarinaHall_Brenae{
         }
     else{
         msgbox(format("BRENAE: I get nervous before concerts, and I'm challenging Marina so it's even worse this time!"),MSGBOX_AUTOCLOSE)
-        trainerbattle_no_intro(TRAINER_BRENAE,  format("Mmh, I'm still nervous… "))
+        trainerbattle_no_intro(TRAINER_BRENAE_2,  format("Mmh, I'm still nervous… "))
         msgbox(format("BRENAE: I can't wait to see Marina, I hope I don't liquefy when I face her… "), MSGBOX_AUTOCLOSE)
         }
     releaseall

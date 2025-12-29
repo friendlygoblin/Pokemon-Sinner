@@ -7,6 +7,7 @@ enum
     PAGE_BRAINSTORMING,
     PAGE_MAP_DESIGN,
     PAGE_TEST_VOLUNTEERS,
+    PAGE_DEBUG,
     PAGE_FLORENCE_CONSULTANT,
     PAGE_STVINCENT_CONSULTANTS,
     PAGE_CHAPPELL_CONSULTANT,
@@ -43,6 +44,7 @@ static const u8 sCreditsText_ParametricDesigners[]            = _("Parametric De
 static const u8 sCreditsText_PokedexText[]                    = _("POKéDEX Text");
 static const u8 sCreditsText_EnvAndToolPgrms[]                = _("Environment & Tool Programmers");*/
 static const u8 sCreditsText_TestVolunteers[]                 = _("Test Volunteers");
+static const u8 sCreditsText_Debug[]                          = _("Debug");
 static const u8 sCreditsText_SpecialThanks[]                  = _("Special Thanks");
 /*static const u8 sCreditsText_Coordinators[]                   = _("Coordinators");
 static const u8 sCreditsText_Producers[]                      = _("Producers");
@@ -70,7 +72,7 @@ static const u8 sCreditsText_TLDP[]                           = _("The Last Dinn
 static const u8 sCreditsText_TheParlour[]                     = _("The Parlour");
 static const u8 sCreditsText_Aiden[]                          = _("Aiden");
 static const u8 sCreditsText_Amy[]                            = _("Amy");
-static const u8 sCreditsText_Anika[]                          = _("Anika");
+static const u8 sCreditsText_Quali[]                          = _("Quali");
 static const u8 sCreditsText_Brenae[]                         = _("Brenae");
 static const u8 sCreditsText_Goblin[]                         = _("Goblin");
 static const u8 sCreditsText_Mal[]                            = _("Mal");
@@ -234,6 +236,7 @@ static const struct CreditsEntry sCreditsEntry_ParametricDesigners              
 static const struct CreditsEntry sCreditsEntry_PokedexText                      = {11,  TRUE, sCreditsText_PokedexText};
 static const struct CreditsEntry sCreditsEntry_EnvAndToolPgrms                  = { 6,  TRUE, sCreditsText_EnvAndToolPgrms};*/
 static const struct CreditsEntry sCreditsEntry_TestVolunteers                   = {11,  TRUE, sCreditsText_TestVolunteers};
+static const struct CreditsEntry sCreditsEntry_Debug                            = {11,  TRUE, sCreditsText_Debug};
 static const struct CreditsEntry sCreditsEntry_SpecialThanks                    = {10,  TRUE, sCreditsText_SpecialThanks};
 /*static const struct CreditsEntry sCreditsEntry_Coordinators                     = {11,  TRUE, sCreditsText_Coordinators};
 static const struct CreditsEntry sCreditsEntry_Producers                        = {11,  TRUE, sCreditsText_Producers};
@@ -260,7 +263,7 @@ static const struct CreditsEntry sCreditsEntry_TLDP                             
 static const struct CreditsEntry sCreditsEntry_TheParlour                       = {11, FALSE, sCreditsText_TheParlour};
 static const struct CreditsEntry sCreditsEntry_Aiden                            = {11, FALSE, sCreditsText_Aiden};
 static const struct CreditsEntry sCreditsEntry_Amy                              = {11, FALSE, sCreditsText_Amy};
-static const struct CreditsEntry sCreditsEntry_Anika                            = {11, FALSE, sCreditsText_Anika};
+static const struct CreditsEntry sCreditsEntry_Quali                            = {11, FALSE, sCreditsText_Quali};
 static const struct CreditsEntry sCreditsEntry_Brenae                           = {11, FALSE, sCreditsText_Brenae};
 static const struct CreditsEntry sCreditsEntry_Goblin                           = {11, FALSE, sCreditsText_Goblin};
 static const struct CreditsEntry sCreditsEntry_Mal                              = {11, FALSE, sCreditsText_Mal};
@@ -479,6 +482,13 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
             _,
             &sCreditsEntry_Meggo,
             &sCreditsEntry_Morpheus,
+            _
+        },
+        [PAGE_DEBUG] = {
+            &sCreditsEntry_Debug,
+            _,
+            &sCreditsEntry_Quali,
+            _,
             _
         },
         [PAGE_FLORENCE_CONSULTANT] = {

@@ -46,129 +46,177 @@ StVincentGiveBadge::
 StVincent_EmilyCutscene::
 # 71 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	lock
+# 72 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	special SpawnCameraObject
 # 73 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	addobject 2
+	applymovement OBJ_EVENT_ID_CAMERA, GodzillandHall_CameraToConv
 # 74 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	applymovement 2, EmilyWalksToStVincent
-# 75 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	waitmovement 0
-# 76 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	applymovement 1, Common_Movement_FaceRight
+# 75 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	special RemoveCameraObject
+# 77 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	addobject 2
+# 78 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	applymovement 2, EmilyWalksToStVincent
 # 79 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	waitmovement 0
 # 80 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	msgbox StVincent_EmilyYoureHere, MSGBOX_AUTOCLOSE
-# 81 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	applymovement 2, Common_Movement_WalkInPlaceLeft
-# 82 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	waitmovement 0
+	applymovement 1, Common_Movement_FaceRight
 # 83 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	delay 20
+	waitmovement 0
 # 84 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	msgbox Emily_WasInTheArea, MSGBOX_AUTOCLOSE
+	msgbox StVincent_EmilyYoureHere, MSGBOX_AUTOCLOSE
 # 85 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	applymovement 1, Common_Movement_WalkInPlaceRight
+	applymovement 2, Common_Movement_WalkInPlaceLeft
 # 86 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	waitmovement 0
 # 87 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	delay 20
 # 88 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	msgbox StVincent_GotSomethingForYou, MSGBOX_AUTOCLOSE
+	msgbox Emily_WasInTheArea, MSGBOX_AUTOCLOSE
 # 89 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	applymovement 2, ExcitedEmily
+	applymovement 1, Common_Movement_WalkInPlaceRight
 # 90 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	waitmovement 0
 # 91 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	delay 20
 # 92 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	msgbox Emily_ThatsBeautiful, MSGBOX_AUTOCLOSE
+	msgbox StVincent_GotSomethingForYou, MSGBOX_AUTOCLOSE
 # 93 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	applymovement 1, Common_Movement_WalkInPlaceRight
+	applymovement 2, ExcitedEmily
 # 94 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	waitmovement 0
 # 95 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	delay 20
 # 96 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	msgbox StVincent_AllYours, MSGBOX_AUTOCLOSE
+	msgbox Emily_ThatsBeautiful, MSGBOX_AUTOCLOSE
 # 97 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	applymovement 2, ExcitedEmily_NoEmote
+	applymovement 1, Common_Movement_WalkInPlaceRight
 # 98 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	waitmovement 0
 # 99 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	delay 20
 # 100 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	msgbox Emily_ThankYouSoMuch, MSGBOX_AUTOCLOSE
+	msgbox StVincent_AllYours, MSGBOX_AUTOCLOSE
 # 101 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	applymovement 1, Common_Movement_WalkInPlaceRight
+	applymovement 2, ExcitedEmily_NoEmote
 # 102 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	waitmovement 0
 # 103 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	delay 20
 # 104 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	msgbox StVincent_ByeEmily, MSGBOX_AUTOCLOSE
+	msgbox Emily_ThankYouSoMuch, MSGBOX_AUTOCLOSE
 # 105 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	applymovement 1, Common_Movement_WalkInPlaceRight
+# 106 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	waitmovement 0
+# 107 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	delay 20
 # 108 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	applymovement 2, EmilyLeaves_Godzilland
+	msgbox StVincent_ByeEmily, MSGBOX_AUTOCLOSE
 # 109 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	waitmovement 0
-# 110 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	removeobject 2
-# 111 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	setvar VAR_GODZILLANDHALL_EMILY, 1
+	delay 20
+# 112 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	applymovement 2, EmilyLeaves_Godzilland
 # 113 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	waitmovement 0
+# 114 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	removeobject 2
+# 115 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	setvar VAR_GODZILLANDHALL_EMILY, 1
+# 117 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	special SpawnCameraObject
+# 118 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	applymovement OBJ_EVENT_ID_CAMERA, GodzillandHall_CameraBack
+# 119 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	waitmovement 0
+# 120 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	special RemoveCameraObject
+# 122 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	releaseall
 	end
 
 
-# 117 "data/maps/Godzilland_ConcertHall/scripts.pory"
-EmilyWalksToStVincent:
-# 118 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_left
-# 118 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_left
-# 118 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_left
-# 119 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	step_end
-
-# 122 "data/maps/Godzilland_ConcertHall/scripts.pory"
-ExcitedEmily:
-# 123 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	emote_exclamation_mark
-# 124 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	delay_16
-# 124 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	delay_16
-# 125 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_in_place_fast_left
-# 125 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_in_place_fast_left
-# 125 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_in_place_fast_left
 # 126 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	step_end
-
+EmilyWalksToStVincent:
+# 127 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_left
+# 127 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_left
+# 127 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_left
 # 128 "data/maps/Godzilland_ConcertHall/scripts.pory"
-ExcitedEmily_NoEmote:
-# 129 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_in_place_fast_left
-# 129 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_in_place_fast_left
-# 130 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	step_end
 
+# 131 "data/maps/Godzilland_ConcertHall/scripts.pory"
+ExcitedEmily:
+# 132 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	emote_exclamation_mark
 # 133 "data/maps/Godzilland_ConcertHall/scripts.pory"
-EmilyLeaves_Godzilland:
+	delay_16
+# 133 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	delay_16
 # 134 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_right
+	walk_in_place_fast_left
 # 134 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_right
+	walk_in_place_fast_left
 # 134 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_right
-# 134 "data/maps/Godzilland_ConcertHall/scripts.pory"
-	walk_right
+	walk_in_place_fast_left
 # 135 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	step_end
+
+# 137 "data/maps/Godzilland_ConcertHall/scripts.pory"
+ExcitedEmily_NoEmote:
+# 138 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_in_place_fast_left
+# 138 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_in_place_fast_left
+# 139 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	step_end
+
+# 142 "data/maps/Godzilland_ConcertHall/scripts.pory"
+EmilyLeaves_Godzilland:
+# 143 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_right
+# 143 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_right
+# 143 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_right
+# 144 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_down
+# 144 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_down
+# 144 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_down
+# 144 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_down
+# 144 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_down
+# 144 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_down
+# 145 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	step_end
+
+# 148 "data/maps/Godzilland_ConcertHall/scripts.pory"
+GodzillandHall_CameraToConv:
+# 149 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_right
+# 149 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_right
+# 149 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_right
+# 150 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	step_end
+
+# 153 "data/maps/Godzilland_ConcertHall/scripts.pory"
+GodzillandHall_CameraBack:
+# 154 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_left
+# 154 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_left
+# 154 "data/maps/Godzilland_ConcertHall/scripts.pory"
+	walk_left
+# 155 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	step_end
 
 StVincentGiveBadge_Text_0:
@@ -214,23 +262,23 @@ StVincent_WordAboutTLDP::
 	.string "be cheering for you! $"
 
 StVincent_EmilyYoureHere::
-# 138 "data/maps/Godzilland_ConcertHall/scripts.pory"
+# 158 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	.string "ST.VINCENT: Emily hi!\p"
 	.string "I didn't know you were visiting! $"
 
 Emily_WasInTheArea::
-# 143 "data/maps/Godzilland_ConcertHall/scripts.pory"
+# 163 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	.string "EMILY: Well, I was in the area so I \n"
 	.string "thought I'd come say hi. $"
 
 StVincent_GotSomethingForYou::
-# 148 "data/maps/Godzilland_ConcertHall/scripts.pory"
+# 168 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	.string "ST.VINCENT: Perfect timing, I've just \n"
 	.string "received this for you. \p"
 	.string "Thought you'd like it in this colour! $"
 
 Emily_ThatsBeautiful::
-# 154 "data/maps/Godzilland_ConcertHall/scripts.pory"
+# 174 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	.string "EMILY: What?? \p"
 	.string "It's so beautiful I don't know what\n"
 	.string "to say! \p"
@@ -238,17 +286,17 @@ Emily_ThatsBeautiful::
 	.string "but this… $"
 
 StVincent_AllYours::
-# 162 "data/maps/Godzilland_ConcertHall/scripts.pory"
+# 182 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	.string "ST.VINCENT: It's all yours! \p"
 	.string "Have fun with it, I know you'll turn it\n"
 	.string "into a legendary instrument!$"
 
 Emily_ThankYouSoMuch::
-# 168 "data/maps/Godzilland_ConcertHall/scripts.pory"
+# 188 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	.string "EMILY: I sure will! \p"
 	.string "Thank you so much, I should go now but \n"
 	.string "I hope I'll see you again soon! $"
 
 StVincent_ByeEmily::
-# 174 "data/maps/Godzilland_ConcertHall/scripts.pory"
+# 194 "data/maps/Godzilland_ConcertHall/scripts.pory"
 	.string "ST.VINCENT: I hope so too, goodbye Emily!$"

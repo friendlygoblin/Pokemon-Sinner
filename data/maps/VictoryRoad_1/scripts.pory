@@ -149,7 +149,7 @@ script VictoryRoad_Brenae{
     faceplayer
     msgbox(VictoryRoad_Brenae_BattleIntro, MSGBOX_YESNO)
     if(var(VAR_RESULT)==YES){
-        trainerbattle_no_intro(TRAINER_BRENAE_2, format("So nervous… "))
+        trainerbattle_no_intro(TRAINER_BRENAE_3, format("So nervous… "))
         msgbox(VictoryRoad_Brenae_PostBattle, MSGBOX_AUTOCLOSE)
     }
     else{

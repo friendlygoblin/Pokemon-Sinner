@@ -4,6 +4,7 @@ mapscripts PortraitTown_MapScripts {
 
 script PortraitTown_Visited{
     setflag(FLAG_VISITED_FORTREE_CITY)
+    setvar(VAR_GODZILLAND_PORYGON, 0)
 }
 
 script PortraitTown_ConcertHallSign{

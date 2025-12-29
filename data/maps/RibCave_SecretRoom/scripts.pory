@@ -1,6 +1,4 @@
-mapscripts RibCave_SecretRoom_MapScripts {
-    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE : RibCave_BadGuysArguing
-}
+mapscripts RibCave_SecretRoom_MapScripts {}
 
 const LeftGuy = 3
 const RightGuy = 1

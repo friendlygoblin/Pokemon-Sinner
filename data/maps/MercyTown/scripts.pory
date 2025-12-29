@@ -4,6 +4,7 @@ mapscripts MercyTown_MapScripts {
 
 script MercyTown_Visited{
     setflag(FLAG_VISITED_MAUVILLE_CITY)
+    setvar(VAR_GODZILLAND_PORYGON, 0)
 }
 
 script MercyTown_Route7Sign{

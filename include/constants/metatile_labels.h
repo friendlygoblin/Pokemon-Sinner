@@ -5,9 +5,8 @@
 #define METATILE_BattleArena_Door  0x21B
 
 // gTileset_BattleDome
-#define METATILE_BattleDome_Door_Corridor       0x25E
 #define METATILE_BattleDome_Door_Lobby          0x209
-#define METATILE_BattleDome_Door_PreBattleRoom  0x20A
+#define METATILE_BattleDome_Door_PreBattleRoom  0x80A
 
 // gTileset_BattleFrontier
 #define METATILE_BattleFrontier_CorridorOpenDoor_Bottom  0x20F
@@ -37,7 +36,7 @@
 #define METATILE_BattleFrontierOutsideWest_Door_Sliding        0x396
 
 // gTileset_BattlePalace
-#define METATILE_BattlePalace_Door  0x219
+#define METATILE_BattlePalace_Door  0x819
 
 // gTileset_BattlePike
 #define METATILE_BattlePike_CurtainFrames_Start   0x201
@@ -391,6 +390,7 @@
 #define METATILE_Pacifidlog_SubmergedLogs_VerticalTop          0x25A
 
 // gTileset_Petalburg
+#define METATILE_Petalburg_Door             0x848
 #define METATILE_Petalburg_Door_BirchsLab   0x249
 #define METATILE_Petalburg_Door_Littleroot  0x248
 #define METATILE_Petalburg_Door_Oldale      0x287

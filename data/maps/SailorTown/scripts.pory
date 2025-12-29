@@ -125,3 +125,24 @@ movement SailorTown_CameraBack{
     walk_fast_right * 9
     step_end
 }
+
+script SailorTown_CitySign{
+    lock
+    msgbox(format("Welcome to Sailor Town!\pRelax like nothing matters!"), MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script SailorTown_Route9Sign{
+    lock
+    msgbox(format("{LEFT_ARROW}: Route 9\pTo Portrait Town"), MSGBOX_AUTOCLOSE)
+    release
+    end
+}
+
+script SailorTown_Route10Sign{
+    lock
+    msgbox(format("{UP_ARROW}: Route 10\pTo Nightingale City"), MSGBOX_AUTOCLOSE)
+    release
+    end
+}

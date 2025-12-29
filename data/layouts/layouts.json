@@ -4955,7 +4955,7 @@
       "id": "LAYOUT_MIRROR_LAKE",
       "name": "MirrorLake_Layout",
       "width": 50,
-      "height": 42,
+      "height": 43,
       "primary_tileset": "gTileset_PreludeTownTest",
       "secondary_tileset": "gTileset_prelude_town",
       "border_filepath": "data/layouts/MirrorLake/border.bin",

@@ -4,6 +4,7 @@ mapscripts NightingaleCity_MapScripts {
 
 script NightingaleCity_Visited{
     setflag(FLAG_VISITED_LILYCOVE_CITY)
+    setvar(VAR_GODZILLAND_PORYGON, 0)
 }
 
 script NightingaleCity_PubSign{

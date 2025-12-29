@@ -1,10 +1,4 @@
-mapscripts SundayCave_Exit_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: SundayCave_ResetPorygon
-}
-
-script SundayCave_ResetPorygon{
-    setvar(VAR_GODZILLAND_PORYGON, 0)
-}
+mapscripts SundayCave_Exit_MapScripts {}
 
 script SundayCave_Waris{
     trainerbattle_single(TRAINER_WARIS, format("WARIS: I love caves, no one bothers me here and I get to listen to music \lwhile I work!"), format("Cave is my vibes, yes!"), GiveGengarite)

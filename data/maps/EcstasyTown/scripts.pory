@@ -4,6 +4,7 @@ mapscripts EcstasyTown_MapScripts {
 
 script EcstasyTown_Visited{
     setflag(FLAG_VISITED_OLDALE_TOWN)
+    setvar(VAR_GODZILLAND_PORYGON, 0)
 }
 
 script EcstasyRoute1Sign{

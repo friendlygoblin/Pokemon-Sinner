@@ -250,7 +250,7 @@ text LoungeMarina_PostBattle{
     "That confirms what I thought, you're \n"
     "really something special! \p"
     "Now go show them that! \p"
-    "But remember, rule number one is that"
+    "But remember, rule number one is that\n"
     "you gotta have fun! $"
 }
 

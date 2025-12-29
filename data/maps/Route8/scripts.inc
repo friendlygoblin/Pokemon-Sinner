@@ -110,16 +110,16 @@ PictureParlourBattle::
 	msgbox Route8_HarvAction, MSGBOX_AUTOCLOSE
 # 73 "data/maps/Route8/scripts.pory"
 	trainerbattle_double TRAINER_PICTURE_PARLOUR, PictureParlourBattle_Text_0, PictureParlourBattle_Text_1, Route8_HarvNotEnoughPkmn, PostPictureParlourBattle
-# 74 "data/maps/Route8/scripts.pory"
-	removeobject 12
-# 75 "data/maps/Route8/scripts.pory"
-	setvar VAR_ROUTE8_MUSICVIDEO, 2
-# 76 "data/maps/Route8/scripts.pory"
-	setflag FLAG_ROUTE8_BAG
 	return
 
 
 PostPictureParlourBattle::
+# 77 "data/maps/Route8/scripts.pory"
+	removeobject 12
+# 78 "data/maps/Route8/scripts.pory"
+	setvar VAR_ROUTE8_MUSICVIDEO, 2
+# 79 "data/maps/Route8/scripts.pory"
+	setflag FLAG_ROUTE8_BAG
 # 80 "data/maps/Route8/scripts.pory"
 	applymovement 4, WalkInPlaceDown
 # 81 "data/maps/Route8/scripts.pory"

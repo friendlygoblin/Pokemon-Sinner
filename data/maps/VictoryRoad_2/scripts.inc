@@ -347,10 +347,10 @@ VictoryRoad_Chantal_BattleIntro::
 # 191 "data/maps/VictoryRoad_2/scripts.pory"
 	.string "CHANTAL: I brought my favourite TLDP \n"
 	.string "record for the band to sign! \p"
-	.string "Can I show you how I'm planning to \p"
+	.string "Can I show you how I'm planning to \n"
 	.string "ask them? $"
 
 VictoryRoad_Chantal_PostBattle::
 # 198 "data/maps/VictoryRoad_2/scripts.pory"
-	.string "CHANTAL: I collect records, I have so \p"
+	.string "CHANTAL: I collect records, I have so \n"
 	.string "many variants already! $"

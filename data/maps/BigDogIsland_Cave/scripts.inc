@@ -6,7 +6,7 @@ BDI_Q::
 # 4 "data/maps/BigDogIsland_Cave/scripts.pory"
 	trainerbattle_single TRAINER_Q, BDI_Q_Text_0, BDI_Q_Text_1
 # 5 "data/maps/BigDogIsland_Cave/scripts.pory"
-	msgbox BDI_Q_Text_2
+	msgbox BDI_Q_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 

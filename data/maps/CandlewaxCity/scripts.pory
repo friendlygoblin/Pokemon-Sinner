@@ -4,6 +4,7 @@ mapscripts CandlewaxCity_MapScripts {
 
 script CandlewaxCity_Visited{
     setflag(FLAG_VISITED_RUSTBORO_CITY)
+    setvar(VAR_GODZILLAND_PORYGON, 0)
 }
 
 const Jay1 = 1

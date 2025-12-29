@@ -5,6 +5,7 @@ mapscripts BigDogIsland_MapScripts {
 script ClearKatieFlag{
     setflag(FLAG_VISITED_VERDANTURF_TOWN)
     clearflag(FLAG_BDI_KATIE)
+    setvar(VAR_GODZILLAND_PORYGON, 0)
     }
 
 script BDI_Fisherman {

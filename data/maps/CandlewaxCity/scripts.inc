@@ -7,473 +7,475 @@ CandlewaxCity_MapScripts::
 CandlewaxCity_Visited::
 # 6 "data/maps/CandlewaxCity/scripts.pory"
 	setflag FLAG_VISITED_RUSTBORO_CITY
+# 7 "data/maps/CandlewaxCity/scripts.pory"
+	setvar VAR_GODZILLAND_PORYGON, 0
 	return
 
 
 PlaceJay::
-# 13 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 14 "data/maps/CandlewaxCity/scripts.pory"
+	lock
+# 15 "data/maps/CandlewaxCity/scripts.pory"
 	compare VAR_CANDLEWAX_CITY_JAY, 0
 	goto_if_eq PlaceJay_2
-# 17 "data/maps/CandlewaxCity/scripts.pory"
+# 18 "data/maps/CandlewaxCity/scripts.pory"
 	compare VAR_CANDLEWAX_CITY_JAY, 2
 	goto_if_eq PlaceJay_3
-# 21 "data/maps/CandlewaxCity/scripts.pory"
+# 22 "data/maps/CandlewaxCity/scripts.pory"
 	goto JayNotYetRescued
 PlaceJay_1:
-# 24 "data/maps/CandlewaxCity/scripts.pory"
+# 25 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 PlaceJay_2:
-# 15 "data/maps/CandlewaxCity/scripts.pory"
+# 16 "data/maps/CandlewaxCity/scripts.pory"
 	goto JayHelpPlease
 	goto PlaceJay_1
 
 PlaceJay_3:
-# 18 "data/maps/CandlewaxCity/scripts.pory"
+# 19 "data/maps/CandlewaxCity/scripts.pory"
 	goto JayPkmnRescued
 	goto PlaceJay_1
 
 
 JayPkmnRescued::
-# 29 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 30 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 1, Common_Movement_ExclamationMark
+	lock
 # 31 "data/maps/CandlewaxCity/scripts.pory"
-	waitmovement 0
+	applymovement 1, Common_Movement_ExclamationMark
 # 32 "data/maps/CandlewaxCity/scripts.pory"
-	delay 20
+	waitmovement 0
 # 33 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 1, JayRunsToPlayer
+	delay 20
 # 34 "data/maps/CandlewaxCity/scripts.pory"
-	waitmovement 0
+	applymovement 1, JayRunsToPlayer
 # 35 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox JayMadeIt, MSGBOX_AUTOCLOSE
-# 36 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 1, JayLeaves
-# 37 "data/maps/CandlewaxCity/scripts.pory"
 	waitmovement 0
+# 36 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox JayMadeIt, MSGBOX_AUTOCLOSE
+# 37 "data/maps/CandlewaxCity/scripts.pory"
+	applymovement 1, JayLeaves
 # 38 "data/maps/CandlewaxCity/scripts.pory"
-	removeobject 1
+	waitmovement 0
 # 39 "data/maps/CandlewaxCity/scripts.pory"
-	setflag FLAG_JAY_CANDLEWAXCITY
+	removeobject 1
 # 40 "data/maps/CandlewaxCity/scripts.pory"
-	setflag FLAG_JAY_HOZIER_HALL
+	setflag FLAG_JAY_CANDLEWAXCITY
 # 41 "data/maps/CandlewaxCity/scripts.pory"
-	setvar VAR_CANDLEWAX_CITY_TRIGGER, 1
+	setflag FLAG_JAY_HOZIER_HALL
 # 42 "data/maps/CandlewaxCity/scripts.pory"
+	setvar VAR_CANDLEWAX_CITY_TRIGGER, 1
+# 43 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Jay::
-# 47 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 48 "data/maps/CandlewaxCity/scripts.pory"
-	faceplayer
+	lock
 # 49 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox JayDescribesBadGuys
+	faceplayer
 # 50 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox JayDescribesBadGuys
+# 51 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 JayHelpPlease::
-# 55 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 56 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 1, Common_Movement_ExclamationMark
+	lock
 # 57 "data/maps/CandlewaxCity/scripts.pory"
-	waitmovement 0
+	applymovement 1, Common_Movement_ExclamationMark
 # 58 "data/maps/CandlewaxCity/scripts.pory"
-	delay 20
+	waitmovement 0
 # 59 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 1, JayRunsToPlayer
+	delay 20
 # 60 "data/maps/CandlewaxCity/scripts.pory"
-	waitmovement 0
+	applymovement 1, JayRunsToPlayer
 # 61 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox JayStolenPokemon, MSGBOX_AUTOCLOSE
-# 62 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 1, JayRunsInPlace
-# 63 "data/maps/CandlewaxCity/scripts.pory"
 	waitmovement 0
+# 62 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox JayStolenPokemon, MSGBOX_AUTOCLOSE
+# 63 "data/maps/CandlewaxCity/scripts.pory"
+	applymovement 1, JayRunsInPlace
 # 64 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox JayDescribesBadGuys
+	waitmovement 0
 # 65 "data/maps/CandlewaxCity/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	msgbox JayDescribesBadGuys
 # 66 "data/maps/CandlewaxCity/scripts.pory"
-	playfanfare MUS_HEAL
+	fadescreen FADE_TO_BLACK
 # 67 "data/maps/CandlewaxCity/scripts.pory"
-	waitfanfare
+	playfanfare MUS_HEAL
 # 68 "data/maps/CandlewaxCity/scripts.pory"
-	special HealPlayerParty
+	waitfanfare
 # 69 "data/maps/CandlewaxCity/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	special HealPlayerParty
 # 70 "data/maps/CandlewaxCity/scripts.pory"
-	setvar VAR_CANDLEWAX_CITY_JAY, 1
+	fadescreen FADE_FROM_BLACK
 # 71 "data/maps/CandlewaxCity/scripts.pory"
-	setflag FLAG_GUARD_RIBCAVE
+	setvar VAR_CANDLEWAX_CITY_JAY, 1
 # 72 "data/maps/CandlewaxCity/scripts.pory"
-	setobjectxy 1, 18, 6
+	setflag FLAG_GUARD_RIBCAVE
 # 73 "data/maps/CandlewaxCity/scripts.pory"
+	setobjectxy 1, 18, 6
+# 74 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 JayNotYetRescued::
-# 78 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 79 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox JayWhatAboutPokemon, MSGBOX_AUTOCLOSE
+	lock
 # 80 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 1, JayRunsInPlace
+	msgbox JayWhatAboutPokemon, MSGBOX_AUTOCLOSE
 # 81 "data/maps/CandlewaxCity/scripts.pory"
-	waitmovement 0
+	applymovement 1, JayRunsInPlace
 # 82 "data/maps/CandlewaxCity/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	waitmovement 0
 # 83 "data/maps/CandlewaxCity/scripts.pory"
-	playfanfare MUS_HEAL
+	fadescreen FADE_TO_BLACK
 # 84 "data/maps/CandlewaxCity/scripts.pory"
-	waitfanfare
+	playfanfare MUS_HEAL
 # 85 "data/maps/CandlewaxCity/scripts.pory"
-	special HealPlayerParty
+	waitfanfare
 # 86 "data/maps/CandlewaxCity/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	special HealPlayerParty
 # 87 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox JayDescribesBadGuys
+	fadescreen FADE_FROM_BLACK
 # 88 "data/maps/CandlewaxCity/scripts.pory"
-	setvar VAR_CANDLEWAX_CITY_JAY, 1
+	msgbox JayDescribesBadGuys
 # 89 "data/maps/CandlewaxCity/scripts.pory"
-	setflag FLAG_GUARD_RIBCAVE
+	setvar VAR_CANDLEWAX_CITY_JAY, 1
 # 90 "data/maps/CandlewaxCity/scripts.pory"
-	setobjectxy 1, 18, 6
+	setflag FLAG_GUARD_RIBCAVE
 # 91 "data/maps/CandlewaxCity/scripts.pory"
+	setobjectxy 1, 18, 6
+# 92 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
-# 133 "data/maps/CandlewaxCity/scripts.pory"
+# 134 "data/maps/CandlewaxCity/scripts.pory"
 JayLeaves:
-# 134 "data/maps/CandlewaxCity/scripts.pory"
-	walk_down
-# 134 "data/maps/CandlewaxCity/scripts.pory"
-	walk_down
-# 134 "data/maps/CandlewaxCity/scripts.pory"
-	walk_down
-# 134 "data/maps/CandlewaxCity/scripts.pory"
-	walk_down
-# 134 "data/maps/CandlewaxCity/scripts.pory"
-	walk_down
-# 134 "data/maps/CandlewaxCity/scripts.pory"
-	walk_down
-# 134 "data/maps/CandlewaxCity/scripts.pory"
+# 135 "data/maps/CandlewaxCity/scripts.pory"
 	walk_down
 # 135 "data/maps/CandlewaxCity/scripts.pory"
+	walk_down
+# 135 "data/maps/CandlewaxCity/scripts.pory"
+	walk_down
+# 135 "data/maps/CandlewaxCity/scripts.pory"
+	walk_down
+# 135 "data/maps/CandlewaxCity/scripts.pory"
+	walk_down
+# 135 "data/maps/CandlewaxCity/scripts.pory"
+	walk_down
+# 135 "data/maps/CandlewaxCity/scripts.pory"
+	walk_down
+# 136 "data/maps/CandlewaxCity/scripts.pory"
 	step_end
 
-# 138 "data/maps/CandlewaxCity/scripts.pory"
+# 139 "data/maps/CandlewaxCity/scripts.pory"
 JayRunsToPlayer:
-# 139 "data/maps/CandlewaxCity/scripts.pory"
-	walk_fast_right
-# 139 "data/maps/CandlewaxCity/scripts.pory"
-	walk_fast_right
-# 139 "data/maps/CandlewaxCity/scripts.pory"
+# 140 "data/maps/CandlewaxCity/scripts.pory"
 	walk_fast_right
 # 140 "data/maps/CandlewaxCity/scripts.pory"
-	walk_fast_up
+	walk_fast_right
 # 140 "data/maps/CandlewaxCity/scripts.pory"
-	walk_fast_up
-# 140 "data/maps/CandlewaxCity/scripts.pory"
+	walk_fast_right
+# 141 "data/maps/CandlewaxCity/scripts.pory"
 	walk_fast_up
 # 141 "data/maps/CandlewaxCity/scripts.pory"
+	walk_fast_up
+# 141 "data/maps/CandlewaxCity/scripts.pory"
+	walk_fast_up
+# 142 "data/maps/CandlewaxCity/scripts.pory"
 	step_end
 
-# 144 "data/maps/CandlewaxCity/scripts.pory"
+# 145 "data/maps/CandlewaxCity/scripts.pory"
 JayRunsInPlace:
-# 145 "data/maps/CandlewaxCity/scripts.pory"
-	walk_in_place_fast_up
-# 145 "data/maps/CandlewaxCity/scripts.pory"
+# 146 "data/maps/CandlewaxCity/scripts.pory"
 	walk_in_place_fast_up
 # 146 "data/maps/CandlewaxCity/scripts.pory"
+	walk_in_place_fast_up
+# 147 "data/maps/CandlewaxCity/scripts.pory"
 	step_end
 
 PlaceJay_HozierHall_1::
-# 150 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 151 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	lock
 # 152 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 2, JayGoesToPlayer_HozierHall1
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 # 153 "data/maps/CandlewaxCity/scripts.pory"
-	waitmovement 0
+	applymovement 2, JayGoesToPlayer_HozierHall1
 # 154 "data/maps/CandlewaxCity/scripts.pory"
+	waitmovement 0
+# 155 "data/maps/CandlewaxCity/scripts.pory"
 	goto JayGivesShoes
 	return
 
 
 PlaceJay_HozierHall_2::
-# 158 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 159 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	lock
 # 160 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 2, JayGoesToPlayer_HozierHall2
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 # 161 "data/maps/CandlewaxCity/scripts.pory"
-	waitmovement 0
+	applymovement 2, JayGoesToPlayer_HozierHall2
 # 162 "data/maps/CandlewaxCity/scripts.pory"
+	waitmovement 0
+# 163 "data/maps/CandlewaxCity/scripts.pory"
 	goto JayGivesShoes
 	return
 
 
 JayGivesShoes::
-# 166 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox Jay_SeeHozier, MSGBOX_AUTOCLOSE
 # 167 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 2, Common_Movement_ExclamationMark
+	msgbox Jay_SeeHozier, MSGBOX_AUTOCLOSE
 # 168 "data/maps/CandlewaxCity/scripts.pory"
-	waitmovement 0
+	applymovement 2, Common_Movement_ExclamationMark
 # 169 "data/maps/CandlewaxCity/scripts.pory"
-	delay 20
-# 170 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox Jay_WonAgainstHozier, MSGBOX_AUTOCLOSE
-# 171 "data/maps/CandlewaxCity/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 172 "data/maps/CandlewaxCity/scripts.pory"
-	message JayGivesShoes_Text_0
-# 173 "data/maps/CandlewaxCity/scripts.pory"
-	waitfanfare
-# 174 "data/maps/CandlewaxCity/scripts.pory"
-	setflag FLAG_RECEIVED_RUNNING_SHOES
-# 175 "data/maps/CandlewaxCity/scripts.pory"
-	setflag FLAG_SYS_B_DASH
-# 176 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox Jay_ExplainRunningShoes, MSGBOX_AUTOCLOSE
-# 177 "data/maps/CandlewaxCity/scripts.pory"
-	applymovement 2, JayLeaves
-# 178 "data/maps/CandlewaxCity/scripts.pory"
 	waitmovement 0
+# 170 "data/maps/CandlewaxCity/scripts.pory"
+	delay 20
+# 171 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox Jay_WonAgainstHozier, MSGBOX_AUTOCLOSE
+# 172 "data/maps/CandlewaxCity/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 173 "data/maps/CandlewaxCity/scripts.pory"
+	message JayGivesShoes_Text_0
+# 174 "data/maps/CandlewaxCity/scripts.pory"
+	waitfanfare
+# 175 "data/maps/CandlewaxCity/scripts.pory"
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+# 176 "data/maps/CandlewaxCity/scripts.pory"
+	setflag FLAG_SYS_B_DASH
+# 177 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox Jay_ExplainRunningShoes, MSGBOX_AUTOCLOSE
+# 178 "data/maps/CandlewaxCity/scripts.pory"
+	applymovement 2, JayLeaves
 # 179 "data/maps/CandlewaxCity/scripts.pory"
-	removeobject 2
+	waitmovement 0
 # 180 "data/maps/CandlewaxCity/scripts.pory"
-	setflag FLAG_JAY_HOZIER_HALL
+	removeobject 2
 # 181 "data/maps/CandlewaxCity/scripts.pory"
-	setflag FLAG_ROUTE3_GOBLIN
+	setflag FLAG_JAY_HOZIER_HALL
 # 182 "data/maps/CandlewaxCity/scripts.pory"
-	setvar VAR_CANDLEWAX_CITY_TRIGGER, 3
+	setflag FLAG_ROUTE3_GOBLIN
 # 183 "data/maps/CandlewaxCity/scripts.pory"
+	setvar VAR_CANDLEWAX_CITY_TRIGGER, 3
+# 184 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
-# 220 "data/maps/CandlewaxCity/scripts.pory"
-JayGoesToPlayer_HozierHall1:
 # 221 "data/maps/CandlewaxCity/scripts.pory"
-	emote_exclamation_mark
+JayGoesToPlayer_HozierHall1:
 # 222 "data/maps/CandlewaxCity/scripts.pory"
+	emote_exclamation_mark
+# 223 "data/maps/CandlewaxCity/scripts.pory"
 	delay_16
-# 223 "data/maps/CandlewaxCity/scripts.pory"
-	walk_right
-# 223 "data/maps/CandlewaxCity/scripts.pory"
-	walk_right
-# 223 "data/maps/CandlewaxCity/scripts.pory"
+# 224 "data/maps/CandlewaxCity/scripts.pory"
 	walk_right
 # 224 "data/maps/CandlewaxCity/scripts.pory"
+	walk_right
+# 224 "data/maps/CandlewaxCity/scripts.pory"
+	walk_right
+# 225 "data/maps/CandlewaxCity/scripts.pory"
 	step_end
 
-# 227 "data/maps/CandlewaxCity/scripts.pory"
-JayGoesToPlayer_HozierHall2:
 # 228 "data/maps/CandlewaxCity/scripts.pory"
-	emote_exclamation_mark
+JayGoesToPlayer_HozierHall2:
 # 229 "data/maps/CandlewaxCity/scripts.pory"
-	delay_16
+	emote_exclamation_mark
 # 230 "data/maps/CandlewaxCity/scripts.pory"
+	delay_16
+# 231 "data/maps/CandlewaxCity/scripts.pory"
 	walk_down
-# 231 "data/maps/CandlewaxCity/scripts.pory"
-	walk_right
-# 231 "data/maps/CandlewaxCity/scripts.pory"
-	walk_right
-# 231 "data/maps/CandlewaxCity/scripts.pory"
+# 232 "data/maps/CandlewaxCity/scripts.pory"
 	walk_right
 # 232 "data/maps/CandlewaxCity/scripts.pory"
+	walk_right
+# 232 "data/maps/CandlewaxCity/scripts.pory"
+	walk_right
+# 233 "data/maps/CandlewaxCity/scripts.pory"
 	step_end
 
 CandlewaxCity_HallSign::
-# 236 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 237 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_HallSign_Text_0
+	lock
 # 238 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_HallSign_Text_0
+# 239 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_RibCaveSign::
-# 243 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 244 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_RibCaveSign_Text_0
+	lock
 # 245 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_RibCaveSign_Text_0
+# 246 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_CitySign::
-# 250 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 251 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_CitySign_Text_0
+	lock
 # 252 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_CitySign_Text_0
+# 253 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_BikeSign::
-# 257 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 258 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_BikeSign_Text_0
+	lock
 # 259 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_BikeSign_Text_0
+# 260 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_SchoolSign::
-# 264 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 265 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_SchoolSign_Text_0
+	lock
 # 266 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_SchoolSign_Text_0
+# 267 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_TunnelSign::
-# 271 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 272 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_TunnelSign_Text_0
+	lock
 # 273 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_TunnelSign_Text_0
+# 274 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Girl::
-# 278 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 279 "data/maps/CandlewaxCity/scripts.pory"
-	faceplayer
+	lock
 # 280 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_Girl_Text_0, MSGBOX_AUTOCLOSE
+	faceplayer
 # 281 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_Girl_Text_0, MSGBOX_AUTOCLOSE
+# 282 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Man::
-# 286 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 287 "data/maps/CandlewaxCity/scripts.pory"
-	faceplayer
+	lock
 # 288 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_Man_Text_0, MSGBOX_AUTOCLOSE
+	faceplayer
 # 289 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_Man_Text_0, MSGBOX_AUTOCLOSE
+# 290 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_KirliaGirl::
-# 294 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 295 "data/maps/CandlewaxCity/scripts.pory"
-	faceplayer
+	lock
 # 296 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_KirliaGirl_Text_0, MSGBOX_AUTOCLOSE
+	faceplayer
 # 297 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_KirliaGirl_Text_0, MSGBOX_AUTOCLOSE
+# 298 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Kirlia::
-# 302 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 303 "data/maps/CandlewaxCity/scripts.pory"
-	faceplayer
+	lock
 # 304 "data/maps/CandlewaxCity/scripts.pory"
-	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
+	faceplayer
 # 305 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_Kirlia_Text_0, MSGBOX_AUTOCLOSE
+	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
 # 306 "data/maps/CandlewaxCity/scripts.pory"
-	waitmoncry
+	msgbox CandlewaxCity_Kirlia_Text_0, MSGBOX_AUTOCLOSE
 # 307 "data/maps/CandlewaxCity/scripts.pory"
+	waitmoncry
+# 308 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Hiker::
-# 312 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 313 "data/maps/CandlewaxCity/scripts.pory"
-	faceplayer
+	lock
 # 314 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_Hiker_Text_0
+	faceplayer
 # 315 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_Hiker_Text_0
+# 316 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 CandlewaxCity_Worker::
-# 320 "data/maps/CandlewaxCity/scripts.pory"
-	lock
 # 321 "data/maps/CandlewaxCity/scripts.pory"
-	faceplayer
+	lock
 # 322 "data/maps/CandlewaxCity/scripts.pory"
-	msgbox CandlewaxCity_Worker_Text_0
+	faceplayer
 # 323 "data/maps/CandlewaxCity/scripts.pory"
+	msgbox CandlewaxCity_Worker_Text_0
+# 324 "data/maps/CandlewaxCity/scripts.pory"
 	releaseall
 	end
 
 
 JayGivesShoes_Text_0:
-# 172 "data/maps/CandlewaxCity/scripts.pory"
+# 173 "data/maps/CandlewaxCity/scripts.pory"
 	.string "Jay gave {PLAYER} the RUNNING SHOES!$"
 
 CandlewaxCity_HallSign_Text_0:
-# 237 "data/maps/CandlewaxCity/scripts.pory"
+# 238 "data/maps/CandlewaxCity/scripts.pory"
 	.string "CANDLEWAX CITY CONCERT HALL\p"
 	.string "HOZIER CHALLENGE IS ON$"
 
 CandlewaxCity_RibCaveSign_Text_0:
-# 244 "data/maps/CandlewaxCity/scripts.pory"
+# 245 "data/maps/CandlewaxCity/scripts.pory"
 	.string "{UP_ARROW} Rib Cave\p"
 	.string "Gateway to Ecstasy Town.$"
 
 CandlewaxCity_CitySign_Text_0:
-# 251 "data/maps/CandlewaxCity/scripts.pory"
+# 252 "data/maps/CandlewaxCity/scripts.pory"
 	.string "Welcome to Candlewax City!\p"
 	.string "Where you can be whatever you set out\n"
 	.string "to be.$"
 
 CandlewaxCity_BikeSign_Text_0:
-# 258 "data/maps/CandlewaxCity/scripts.pory"
+# 259 "data/maps/CandlewaxCity/scripts.pory"
 	.string "Candlewax City Bike Workshop\p"
 	.string "More innovation, faster bikes.$"
 
 CandlewaxCity_SchoolSign_Text_0:
-# 265 "data/maps/CandlewaxCity/scripts.pory"
+# 266 "data/maps/CandlewaxCity/scripts.pory"
 	.string "Candlewax City POKéMON School\p"
 	.string "Open to all, come learn the basics of\n"
 	.string "POKéMON training!$"
 
 CandlewaxCity_TunnelSign_Text_0:
-# 272 "data/maps/CandlewaxCity/scripts.pory"
+# 273 "data/maps/CandlewaxCity/scripts.pory"
 	.string "{DOWN_ARROW}: Caesar Tunnel\p"
 	.string "To Route 3 and Furge Town.$"
 
 CandlewaxCity_Girl_Text_0:
-# 280 "data/maps/CandlewaxCity/scripts.pory"
+# 281 "data/maps/CandlewaxCity/scripts.pory"
 	.string "The pattern on the pavement is the\n"
 	.string "pride of Candlewax City!\p"
 	.string "Do you think that's what The Last\n"
@@ -482,24 +484,24 @@ CandlewaxCity_Girl_Text_0:
 	.string "veins'?$"
 
 CandlewaxCity_Man_Text_0:
-# 288 "data/maps/CandlewaxCity/scripts.pory"
+# 289 "data/maps/CandlewaxCity/scripts.pory"
 	.string "My cousin bought a bike that was\n"
 	.string "designed here in Candlewax City.\p"
 	.string "Even her Ponyta struggles to keep up\n"
 	.string "with her.$"
 
 CandlewaxCity_KirliaGirl_Text_0:
-# 296 "data/maps/CandlewaxCity/scripts.pory"
+# 297 "data/maps/CandlewaxCity/scripts.pory"
 	.string "I'm so glad Concert Halls allow POKéMON!\p"
 	.string "I couldn't imagine seeing my favourite\n"
 	.string "artists without Kirlia…$"
 
 CandlewaxCity_Kirlia_Text_0:
-# 305 "data/maps/CandlewaxCity/scripts.pory"
+# 306 "data/maps/CandlewaxCity/scripts.pory"
 	.string "KIRLIA: Krrrr!$"
 
 CandlewaxCity_Hiker_Text_0:
-# 314 "data/maps/CandlewaxCity/scripts.pory"
+# 315 "data/maps/CandlewaxCity/scripts.pory"
 	.string "Route 3 is on the other side of that\n"
 	.string "tunnel.\p"
 	.string "It's more of a forest path actually, I\n"
@@ -507,14 +509,14 @@ CandlewaxCity_Hiker_Text_0:
 	.string "I don't like forests.$"
 
 CandlewaxCity_Worker_Text_0:
-# 322 "data/maps/CandlewaxCity/scripts.pory"
+# 323 "data/maps/CandlewaxCity/scripts.pory"
 	.string "We're finishing up some minor works in\n"
 	.string "the Tunnel, come back later.\p"
 	.string "Why don't you go pass the time at the\n"
 	.string "Concert Hall?$"
 
 JayMadeIt::
-# 95 "data/maps/CandlewaxCity/scripts.pory"
+# 96 "data/maps/CandlewaxCity/scripts.pory"
 	.string "JAY: {PLAYER}! You're okay! \p"
 	.string "My POKéMON… \p"
 	.string "You did it?!\p"
@@ -526,7 +528,7 @@ JayMadeIt::
 	.string "Thank you again, I owe you one!$"
 
 JayStolenPokemon::
-# 107 "data/maps/CandlewaxCity/scripts.pory"
+# 108 "data/maps/CandlewaxCity/scripts.pory"
 	.string "JAY: {PLAYER}! \p"
 	.string "Oh, {PLAYER} I need your help! \p"
 	.string "I was making my way through the cave \n"
@@ -535,7 +537,7 @@ JayStolenPokemon::
 	.string "POKéMON, please help me!\p$"
 
 JayDescribesBadGuys::
-# 116 "data/maps/CandlewaxCity/scripts.pory"
+# 117 "data/maps/CandlewaxCity/scripts.pory"
 	.string "They were dressed like pirates, they \n"
 	.string "ran away before I could do anything!\p"
 	.string "My poor POKéMON, please if anyone can \n"
@@ -544,7 +546,7 @@ JayDescribesBadGuys::
 	.string "have all your chances. $"
 
 JayWhatAboutPokemon::
-# 125 "data/maps/CandlewaxCity/scripts.pory"
+# 126 "data/maps/CandlewaxCity/scripts.pory"
 	.string "JAY: {PLAYER}! Did you get my POKéMON \n"
 	.string "back? \p"
 	.string "Not yet? \p"
@@ -552,7 +554,7 @@ JayWhatAboutPokemon::
 	.string "have all your chances. $"
 
 Jay_SeeHozier::
-# 188 "data/maps/CandlewaxCity/scripts.pory"
+# 189 "data/maps/CandlewaxCity/scripts.pory"
 	.string "JAY: {PLAYER}! \p"
 	.string "Did you get to see Hozier? \p"
 	.string "… … … \p"
@@ -561,7 +563,7 @@ Jay_SeeHozier::
 	.string "the cave, it must have delayed you. $"
 
 Jay_WonAgainstHozier::
-# 197 "data/maps/CandlewaxCity/scripts.pory"
+# 198 "data/maps/CandlewaxCity/scripts.pory"
 	.string "What? You challenged him anyway? \p"
 	.string "And won??\p"
 	.string "Wow, {PLAYER}! \p"
@@ -574,7 +576,7 @@ Jay_WonAgainstHozier::
 	.string "Here, take these! $"
 
 Jay_ExplainRunningShoes::
-# 210 "data/maps/CandlewaxCity/scripts.pory"
+# 211 "data/maps/CandlewaxCity/scripts.pory"
 	.string "These are brand new RUNNING SHOES! \p"
 	.string "I accidentally ordered the wrong size \n"
 	.string "but you're lucky, it looks like they \l"
